@@ -6,15 +6,36 @@
 
 **MM-OptBench: A Solver-Grounded Benchmark for Multimodal Optimization Modeling**
 
+[![Paper: NeurIPS 2026](https://img.shields.io/badge/Paper-NeurIPS%202026-007EC6?style=flat)](#citation)
+[![Dataset: 780 Instances](https://img.shields.io/badge/Dataset-780%20Instances-7B42BC?style=flat)](#dataset)
+[![Problems: 26 Types](https://img.shields.io/badge/Problems-26%20Types-2E8B57?style=flat)](#benchmark)
+[![Python: 3.10+](https://img.shields.io/badge/Python-3.10%2B-3776AB?style=flat&logo=python&logoColor=white)](#local-evaluation)
+[![License: CC BY-SA 4.0](https://img.shields.io/badge/License-CC%20BY--SA%204.0-lightgrey?style=flat)](LICENSE)
+[![visitors](https://visitor-badge.laobi.icu/badge?page_id=ZhongLIFR.MM-OptBench&left_color=%23555555&right_color=%232c3e50)](https://github.com/ZhongLIFR/MM-OptBench)
+
 **NeurIPS 2026 Evaluations and Datasets Track · Poster**
 
 Zhong Li, Qi Huang, Yuxuan Zhu, Mohammad Mohammadi Amiri, Niki van Stein,
 Thomas Bäck, Matthijs van Leeuwen, Zaiwen Wen, and Lincen Yang.
 
-[Overview](#overview) · [Benchmark](#benchmark) · [Results](#results) ·
+[Citation](#citation) · [Overview](#overview) · [Benchmark](#benchmark) · [Results](#results) ·
 [Dataset](#dataset) · [Quick Start](#quick-start) ·
 [Test Prompts](#test-prompts) · [Model Evaluation](#model-evaluation) ·
-[Local Evaluation](#local-evaluation) · [Citation](#citation)
+[Local Evaluation](#local-evaluation) · [License](#license)
+
+## Citation
+
+Please cite MM-OptBench when using the dataset. Download the BibTeX entry:
+[citation.bib](citation.bib).
+
+```bibtex
+@inproceedings{li2026mmoptbench,
+  title={{MM-OptBench}: A Solver-Grounded Benchmark for Multimodal Optimization Modeling},
+  author={Li, Zhong and Huang, Qi and Zhu, Yuxuan and Amiri, Mohammad Mohammadi and van Stein, Niki and B{\"a}ck, Thomas and van Leeuwen, Matthijs and Wen, Zaiwen and Yang, Lincen},
+  booktitle={NeurIPS 2026 Evaluations and Datasets Track},
+  year={2026}
+}
+```
 
 ## Overview
 
@@ -366,16 +387,7 @@ python dataset/location_covering_assignment/bipartite_assignment/easy/ba_e_008/g
 Gurobi-based solves require a suitable Gurobi license. Each script reads its
 local `instance_data.json` and writes `solution_ref.json` in the same directory.
 
-## Citation
+## License
 
-Please cite MM-OptBench when using the dataset. Download the BibTeX entry:
-[citation.bib](citation.bib).
-
-```bibtex
-@inproceedings{li2026mmoptbench,
-  title={{MM-OptBench}: A Solver-Grounded Benchmark for Multimodal Optimization Modeling},
-  author={Li, Zhong and Huang, Qi and Zhu, Yuxuan and Amiri, Mohammad Mohammadi and van Stein, Niki and B{\"a}ck, Thomas and van Leeuwen, Matthijs and Wen, Zaiwen and Yang, Lincen},
-  booktitle={NeurIPS 2026 Evaluations and Datasets Track},
-  year={2026}
-}
-```
+This repository is licensed under [Creative Commons Attribution-ShareAlike 4.0
+International (CC BY-SA 4.0)](LICENSE).
