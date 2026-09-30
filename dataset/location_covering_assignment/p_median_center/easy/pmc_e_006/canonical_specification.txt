@@ -1,0 +1,42 @@
+This is a single-period service-site selection and assignment instance.
+
+Instance ID: pmc_e_006
+Variant: p_median
+Difficulty: easy
+Distance metric: euclidean_rounded_2dp
+p value: 2
+
+Candidate sites:
+- F1: location=(1.6, 8.1)
+- F2: location=(4.4, 7)
+- F3: location=(7.9, 7.8)
+- F4: location=(2.5, 2)
+- F5: location=(7, 2.4)
+
+Demand points:
+- D1: location=(1.2, 8.7), weight=2
+- D2: location=(3.3, 7.6), weight=3
+- D3: location=(8.4, 8.6), weight=4
+- D4: location=(2, 1.2), weight=5
+- D5: location=(6.6, 2), weight=2
+- D6: location=(8.8, 4.9), weight=3
+
+Distance matrix from demand points to candidate sites:
+- D1: F1=0.72, F2=3.62, F3=6.76, F4=6.82, F5=8.56
+- D2: F1=1.77, F2=1.25, F3=4.60, F4=5.66, F5=6.38
+- D3: F1=6.82, F2=4.31, F3=0.94, F4=8.85, F5=6.36
+- D4: F1=6.91, F2=6.28, F3=8.85, F4=0.94, F5=5.14
+- D5: F1=7.89, F2=5.46, F3=5.94, F4=4.10, F5=0.57
+- D6: F1=7.88, F2=4.88, F3=3.04, F4=6.94, F5=3.08
+
+Objective:
+- Minimize the total weighted assignment distance.
+
+Constraints:
+- Exactly 2 candidate sites must be selected.
+- Every demand point must be assigned to exactly one selected site.
+- Every demand point may be assigned to every candidate site.
+
+Visual interpretation:
+- The visual is a single spatial map.
+- The node-attached boxes report the exact coordinates and, when active, demand weights.

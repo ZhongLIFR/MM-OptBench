@@ -1,0 +1,70 @@
+This is a single-period deterministic Parallel Machine Scheduling problem.
+
+Instance ID: pms_m_005
+Variant: parallel_machine_scheduling
+Scenario: parallel_machine_scheduling
+Difficulty: medium
+
+Sets:
+- J: set of jobs
+- M: set of machines
+
+Machine system:
+- Uniformly related parallel machines (Q||)
+- M1: speed_factor=1.0
+- M2: speed_factor=1.15
+- M3: speed_factor=0.9
+- M4: speed_factor=1.25
+- M5: speed_factor=0.85
+
+Jobs:
+- J1: summary_duration=6, weight=1, eligible_machines=['M1', 'M2', 'M3', 'M4', 'M5'], machine_times={ M1:6, M2:6, M3:7, M4:5, M5:8 }
+- J2: summary_duration=7, weight=1, eligible_machines=['M1', 'M2', 'M3', 'M4', 'M5'], machine_times={ M1:7, M2:7, M3:8, M4:6, M5:9 }
+- J3: summary_duration=8, weight=1, eligible_machines=['M1', 'M2', 'M3', 'M4', 'M5'], machine_times={ M1:8, M2:7, M3:9, M4:7, M5:10 }
+- J4: summary_duration=9, weight=1, eligible_machines=['M1', 'M2', 'M3', 'M4', 'M5'], machine_times={ M1:9, M2:8, M3:10, M4:8, M5:11 }
+- J5: summary_duration=10, weight=1, eligible_machines=['M1', 'M2', 'M3', 'M4', 'M5'], machine_times={ M1:10, M2:9, M3:12, M4:8, M5:12 }
+- J6: summary_duration=11, weight=1, eligible_machines=['M1', 'M2', 'M3', 'M4', 'M5'], machine_times={ M1:11, M2:10, M3:13, M4:9, M5:13 }
+- J7: summary_duration=12, weight=1, eligible_machines=['M1', 'M2', 'M3', 'M4', 'M5'], machine_times={ M1:12, M2:11, M3:14, M4:10, M5:15 }
+- J8: summary_duration=13, weight=1, eligible_machines=['M1', 'M2', 'M3', 'M4', 'M5'], machine_times={ M1:13, M2:12, M3:15, M4:11, M5:16 }
+- J9: summary_duration=14, weight=1, eligible_machines=['M1', 'M2', 'M3', 'M4', 'M5'], machine_times={ M1:14, M2:13, M3:16, M4:12, M5:17 }
+- J10: summary_duration=15, weight=1, eligible_machines=['M1', 'M2', 'M3', 'M4', 'M5'], machine_times={ M1:15, M2:14, M3:17, M4:12, M5:18 }
+- J11: summary_duration=16, weight=1, eligible_machines=['M1', 'M2', 'M3', 'M4', 'M5'], machine_times={ M1:16, M2:14, M3:18, M4:13, M5:19 }
+- J12: summary_duration=17, weight=1, eligible_machines=['M1', 'M2', 'M3', 'M4', 'M5'], machine_times={ M1:17, M2:15, M3:19, M4:14, M5:20 }
+- J13: summary_duration=18, weight=1, eligible_machines=['M1', 'M2', 'M3', 'M4', 'M5'], machine_times={ M1:18, M2:16, M3:20, M4:15, M5:22 }
+- J14: summary_duration=19, weight=1, eligible_machines=['M1', 'M2', 'M3', 'M4', 'M5'], machine_times={ M1:19, M2:17, M3:22, M4:16, M5:23 }
+- J15: summary_duration=20, weight=1, eligible_machines=['M1', 'M2', 'M3', 'M4', 'M5'], machine_times={ M1:20, M2:18, M3:23, M4:16, M5:24 }
+- J16: summary_duration=21, weight=1, eligible_machines=['M1', 'M2', 'M3', 'M4', 'M5'], machine_times={ M1:21, M2:19, M3:24, M4:17, M5:25 }
+- J17: summary_duration=22, weight=1, eligible_machines=['M1', 'M2', 'M3', 'M4', 'M5'], machine_times={ M1:22, M2:20, M3:25, M4:18, M5:26 }
+- J18: summary_duration=24, weight=1, eligible_machines=['M1', 'M2', 'M3', 'M4', 'M5'], machine_times={ M1:24, M2:21, M3:27, M4:20, M5:29 }
+- J19: summary_duration=26, weight=1, eligible_machines=['M1', 'M2', 'M3', 'M4', 'M5'], machine_times={ M1:26, M2:23, M3:29, M4:21, M5:31 }
+- J20: summary_duration=28, weight=1, eligible_machines=['M1', 'M2', 'M3', 'M4', 'M5'], machine_times={ M1:28, M2:25, M3:32, M4:23, M5:33 }
+- J21: summary_duration=30, weight=1, eligible_machines=['M1', 'M2', 'M3', 'M4', 'M5'], machine_times={ M1:30, M2:27, M3:34, M4:24, M5:36 }
+- J22: summary_duration=33, weight=1, eligible_machines=['M1', 'M2', 'M3', 'M4', 'M5'], machine_times={ M1:33, M2:29, M3:37, M4:27, M5:39 }
+- J23: summary_duration=36, weight=1, eligible_machines=['M1', 'M2', 'M3', 'M4', 'M5'], machine_times={ M1:36, M2:32, M3:40, M4:29, M5:43 }
+- J24: summary_duration=40, weight=1, eligible_machines=['M1', 'M2', 'M3', 'M4', 'M5'], machine_times={ M1:40, M2:35, M3:45, M4:32, M5:48 }
+
+Decision structure:
+- Each job must be assigned to exactly one eligible machine.
+- Each machine processes assigned jobs sequentially and non-preemptively.
+- No precedence constraints, release dates, due dates, sequence-dependent setups, or multi-period coupling are present.
+
+Objective:
+- Minimize the makespan.
+
+Metadata:
+- number_jobs=24
+- number_machines=5
+- machine_type=Q
+- objective_type=makespan
+- processing_time_regime=heavy_tail_related
+- heterogeneity_level=medium
+- heavy_tail_flag=true
+- seed=505
+- formulation_size=1620
+
+Visual interpretation:
+- Each row corresponds to one job.
+- The center matrix indicates machine compatibility or assignment admissibility.
+- For R-type instances, numbered cells in the center matrix give the exact machine-dependent processing times and blank cells indicate ineligible assignments.
+- The right-hand bar encodes the displayed job-duration cue used in the visual input.
+- The visual does not reveal the chosen assignment, start times, completion order, or objective value.

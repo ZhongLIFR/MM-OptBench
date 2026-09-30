@@ -1,0 +1,25 @@
+A manufacturing system produces multiple products over a sequence of time periods.
+
+The accompanying figures provide all instance-specific data required for the planning problem.
+
+The figures include:
+- the production capacity available in each period,
+- the complete product-by-period demand matrix,
+- the unit production costs,
+- the inventory holding costs,
+- and the fixed setup costs.
+
+In visual_0, rows correspond to products and columns correspond to time periods in the demand matrix, and the period columns align with the capacity bars above them. In visual_1, rows correspond to products and columns correspond to time periods in each cost matrix. Every matrix cell shows the exact numeric value for the corresponding parameter.
+
+The production planning rules are:
+- Demand for each product must be satisfied in the period in which it occurs.
+- Inventory may be carried from one period to the next.
+- Inventory holding cost is charged per unit kept after a period.
+- Producing a product in a period incurs a fixed setup cost whenever production for that product is positive.
+- Unit production costs may vary by product and period.
+- Total production across all products in a period cannot exceed the available period capacity shown in visual_0.
+- Backlogging is not allowed.
+- Initial inventory is zero for all products.
+
+Task:
+Build a mathematical optimization model for this exact instance and provide executable solver code.

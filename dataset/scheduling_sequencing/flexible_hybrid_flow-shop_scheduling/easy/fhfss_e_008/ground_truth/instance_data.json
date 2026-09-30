@@ -1,0 +1,134 @@
+{
+  "instance_id": "fhfss_e_008",
+  "variant": "flexible_hybrid_flow_shop_scheduling",
+  "scenario": "flexible_hybrid_flow_shop_scheduling",
+  "difficulty": "easy",
+  "sets": {
+    "jobs": [
+      "J1",
+      "J2",
+      "J3",
+      "J4",
+      "J5",
+      "J6",
+      "J7",
+      "J8"
+    ],
+    "stages": [
+      "S1",
+      "S2",
+      "S3",
+      "S4"
+    ],
+    "machines_by_stage": {
+      "S1": [
+        "S1M1",
+        "S1M2"
+      ],
+      "S2": [
+        "S2M1"
+      ],
+      "S3": [
+        "S3M1",
+        "S3M2"
+      ],
+      "S4": [
+        "S4M1",
+        "S4M2"
+      ]
+    }
+  },
+  "common_stage_order": [
+    "S1",
+    "S2",
+    "S3",
+    "S4"
+  ],
+  "processing_time": {
+    "J1": {
+      "S1": 4,
+      "S2": 5,
+      "S3": 3,
+      "S4": 4
+    },
+    "J2": {
+      "S1": 5,
+      "S2": 6,
+      "S3": 2,
+      "S4": 5
+    },
+    "J3": {
+      "S1": 6,
+      "S2": 4,
+      "S3": 4,
+      "S4": 3
+    },
+    "J4": {
+      "S1": 4,
+      "S2": 7,
+      "S3": 3,
+      "S4": 5
+    },
+    "J5": {
+      "S1": 5,
+      "S2": 5,
+      "S3": 2,
+      "S4": 4
+    },
+    "J6": {
+      "S1": 3,
+      "S2": 6,
+      "S3": 4,
+      "S4": 3
+    },
+    "J7": {
+      "S1": 7,
+      "S2": 4,
+      "S3": 3,
+      "S4": 6
+    },
+    "J8": {
+      "S1": 6,
+      "S2": 5,
+      "S3": 4,
+      "S4": 2
+    }
+  },
+  "stage_total_load": {
+    "S1": 40,
+    "S2": 42,
+    "S3": 25,
+    "S4": 32
+  },
+  "nominal_load_per_machine": {
+    "S1": 20.0,
+    "S2": 42.0,
+    "S3": 12.5,
+    "S4": 16.0
+  },
+  "visual_layout": {
+    "stage_colors": {
+      "S1": "#dbeafe",
+      "S2": "#dff3e4",
+      "S3": "#fef3c7",
+      "S4": "#f8d8d8"
+    }
+  },
+  "meta_parameters": {
+    "number_jobs": 8,
+    "number_stages": 4,
+    "machines_per_stage": [
+      2,
+      1,
+      2,
+      2
+    ],
+    "group": "C",
+    "bottleneck_pattern": "single_middle_bottleneck",
+    "processing_time_regime": "mixed_light_heavy",
+    "flexibility_level": "mixed_2_1_2_2",
+    "visual_type": "single_visual_combined_stage_architecture_plus_processing_matrix",
+    "seed": 4408,
+    "formulation_size": 741
+  }
+}

@@ -1,0 +1,115 @@
+{
+  "status": "optimal",
+  "objective": 35.72,
+  "objective_exact": 35.72,
+  "runtime_seconds": 0.7607501249294728,
+  "routes": [
+    [
+      "Depot",
+      "C10",
+      "C9",
+      "Depot"
+    ],
+    [
+      "Depot",
+      "C3",
+      "C4",
+      "C2",
+      "C1",
+      "Depot"
+    ],
+    [
+      "Depot",
+      "C8",
+      "C7",
+      "C6",
+      "C5",
+      "Depot"
+    ]
+  ],
+  "route_vehicle_ids": [
+    "V1",
+    "V2",
+    "V3"
+  ],
+  "route_loads": [
+    8,
+    10,
+    10
+  ],
+  "route_costs": [
+    8.62,
+    12.02,
+    15.08
+  ],
+  "num_routes_used": 3,
+  "active_arcs": [
+    [
+      "Depot",
+      "C10",
+      "V1"
+    ],
+    [
+      "C10",
+      "C9",
+      "V1"
+    ],
+    [
+      "C9",
+      "Depot",
+      "V1"
+    ],
+    [
+      "Depot",
+      "C3",
+      "V2"
+    ],
+    [
+      "C3",
+      "C4",
+      "V2"
+    ],
+    [
+      "C4",
+      "C2",
+      "V2"
+    ],
+    [
+      "C2",
+      "C1",
+      "V2"
+    ],
+    [
+      "C1",
+      "Depot",
+      "V2"
+    ],
+    [
+      "Depot",
+      "C8",
+      "V3"
+    ],
+    [
+      "C8",
+      "C7",
+      "V3"
+    ],
+    [
+      "C7",
+      "C6",
+      "V3"
+    ],
+    [
+      "C6",
+      "C5",
+      "V3"
+    ],
+    [
+      "C5",
+      "Depot",
+      "V3"
+    ]
+  ],
+  "capacity_binding_flag": false,
+  "solve_method": "gurobi_mtz_cvrp"
+}

@@ -1,0 +1,53 @@
+{
+  "status": "optimal",
+  "objective_value": 5,
+  "objective_exact": 5,
+  "optimal_path": [
+    1,
+    3,
+    5,
+    7,
+    8
+  ],
+  "selected_arcs": [
+    [
+      1,
+      3
+    ],
+    [
+      3,
+      5
+    ],
+    [
+      5,
+      7
+    ],
+    [
+      7,
+      8
+    ]
+  ],
+  "arc_selection": {
+    "1_2": 0,
+    "1_3": 1,
+    "2_4": 0,
+    "2_5": 0,
+    "3_5": 1,
+    "3_6": 0,
+    "4_7": 0,
+    "5_7": 1,
+    "5_6": 0,
+    "6_7": 0,
+    "7_8": 1
+  },
+  "resource_name": "exposure",
+  "resource_bound": 9,
+  "total_resource": 7,
+  "feasible_path_count": 5,
+  "path_count": 6,
+  "runtime_seconds": 0.018102645874023438,
+  "solve_method": "gurobi_mip_rcsp_single_resource",
+  "solver_used": "Gurobi",
+  "solver": "Gurobi",
+  "solver_policy": "gurobi_first_then_exact_path_enumeration"
+}

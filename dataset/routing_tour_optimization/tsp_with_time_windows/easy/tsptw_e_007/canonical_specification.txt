@@ -1,0 +1,105 @@
+Canonical specification for a deterministic single-vehicle Traveling Salesman Problem with Time Windows (TSPTW) instance.
+
+Interpretation:
+- A single vehicle starts at the depot, visits every customer exactly once, and returns to the depot.
+- The routing graph is complete: travel between every ordered pair of distinct nodes is allowed.
+- Travel times are deterministic and equal the Euclidean distances between displayed coordinates, rounded to 2 decimals.
+- Service at each customer must begin within the customer-specific time window.
+- If the vehicle arrives before the time window opens, it may wait.
+- There are no capacities, multiple vehicles, forbidden arcs, stochastic times, or time-dependent costs.
+
+Sets:
+- Nodes N = ['Depot', 'C1', 'C2', 'C3', 'C4', 'C5', 'C6', 'C7', 'C8', 'C9', 'C10']
+- Customers C = ['C1', 'C2', 'C3', 'C4', 'C5', 'C6', 'C7', 'C8', 'C9', 'C10']
+- Directed arcs A = [(i,j) for i,j in N, i != j]
+
+Coordinates by node:
+- Depot: (5.0, 5.0)
+- C1: (8.1, 4.6)
+- C2: (8.3, 7.1)
+- C3: (6.2, 7.2)
+- C4: (4.1, 8.9)
+- C5: (2.3, 6.9)
+- C6: (2.3, 5.0)
+- C7: (1.5, 3.2)
+- C8: (3.6, 1.2)
+- C9: (6.6, 1.4)
+- C10: (8.6, 3.2)
+
+Service times by node:
+- Depot: 0.00
+- C1: 0.80
+- C2: 0.60
+- C3: 0.60
+- C4: 0.40
+- C5: 1.00
+- C6: 0.80
+- C7: 0.40
+- C8: 0.60
+- C9: 0.80
+- C10: 1.10
+
+Time windows by node [a_i, b_i]:
+- Depot: [0.00, 200.00]
+- C1: [0.07, 7.12]
+- C2: [3.22, 11.37]
+- C3: [5.85, 12.96]
+- C4: [10.79, 13.74]
+- C5: [12.68, 20.63]
+- C6: [16.00, 23.10]
+- C7: [17.72, 24.55]
+- C8: [22.12, 28.67]
+- C9: [26.38, 30.27]
+- C10: [29.22, 34.89]
+
+Complete travel-time matrix c[i,j]:
+- Depot: Depot=0.00, C1=3.13, C2=3.91, C3=2.51, C4=4.00, C5=3.30, C6=2.70, C7=3.94, C8=4.05, C9=3.94, C10=4.02
+- C1: Depot=3.13, C1=0.00, C2=2.51, C3=3.22, C4=5.87, C5=6.24, C6=5.81, C7=6.75, C8=5.64, C9=3.53, C10=1.49
+- C2: Depot=3.91, C1=2.51, C2=0.00, C3=2.10, C4=4.57, C5=6.00, C6=6.36, C7=7.84, C8=7.54, C9=5.95, C10=3.91
+- C3: Depot=2.51, C1=3.22, C2=2.10, C3=0.00, C4=2.70, C5=3.91, C6=4.48, C7=6.17, C8=6.54, C9=5.81, C10=4.66
+- C4: Depot=4.00, C1=5.87, C2=4.57, C3=2.70, C4=0.00, C5=2.69, C6=4.30, C7=6.26, C8=7.72, C9=7.91, C10=7.26
+- C5: Depot=3.30, C1=6.24, C2=6.00, C3=3.91, C4=2.69, C5=0.00, C6=1.90, C7=3.79, C8=5.85, C9=6.98, C10=7.31
+- C6: Depot=2.70, C1=5.81, C2=6.36, C3=4.48, C4=4.30, C5=1.90, C6=0.00, C7=1.97, C8=4.02, C9=5.61, C10=6.55
+- C7: Depot=3.94, C1=6.75, C2=7.84, C3=6.17, C4=6.26, C5=3.79, C6=1.97, C7=0.00, C8=2.90, C9=5.41, C10=7.10
+- C8: Depot=4.05, C1=5.64, C2=7.54, C3=6.54, C4=7.72, C5=5.85, C6=4.02, C7=2.90, C8=0.00, C9=3.01, C10=5.39
+- C9: Depot=3.94, C1=3.53, C2=5.95, C3=5.81, C4=7.91, C5=6.98, C6=5.61, C7=5.41, C8=3.01, C9=0.00, C10=2.69
+- C10: Depot=4.02, C1=1.49, C2=3.91, C3=4.66, C4=7.26, C5=7.31, C6=6.55, C7=7.10, C8=5.39, C9=2.69, C10=0.00
+
+Decision variables:
+- x[i,j] in {0,1}: equals 1 if the vehicle directly travels from node i to node j
+- t[i] >= 0: service-start time at node i
+
+Objective:
+- Minimize total travel time sum_{i != j} c[i,j] * x[i,j].
+
+Constraints:
+- Exactly one outgoing arc from every node.
+- Exactly one incoming arc to every node.
+- Time-propagation constraints linking consecutive visits.
+- Time-window bounds at every node.
+- Connectivity enforced through the time-based formulation.
+
+Big-M parameter:
+- M = 214.01
+
+Metadata:
+- number_customers=10
+- layout_type=radial
+- window_tightness_type=tight
+- service_time_type=longer_select
+- critical_sequence_type=mid_route
+- binding_window_flag=true
+- critical_sequence_flag=true
+- travel_time_rule=euclidean_rounded_2dp
+- visual_type=coordinate_tw_service_node_map_with_cost_rule_box
+- seed=3701
+- group=B
+- formulation_size=275
+
+Visual interpretation:
+- The figure shows one colored marker per node on a Cartesian map.
+- Coordinates are printed next to each node.
+- Each node also shows an exact combined time-window and service-time label.
+- A cost-rule box states how travel times are derived from the plotted coordinates.
+- Complete-graph edges are intentionally omitted to avoid clutter.
+- The visual does not reveal the optimal tour, selected arcs, arrival times, or objective value.

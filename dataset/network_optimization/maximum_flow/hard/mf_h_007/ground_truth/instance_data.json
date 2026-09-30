@@ -1,0 +1,270 @@
+{
+  "problem_type": "maximum_flow_minimum_cut",
+  "nodes": [
+    "1",
+    "2",
+    "3",
+    "4",
+    "5",
+    "6",
+    "7",
+    "8",
+    "9",
+    "10",
+    "11",
+    "12",
+    "13",
+    "14",
+    "15",
+    "16",
+    "17",
+    "18",
+    "19",
+    "20",
+    "21"
+  ],
+  "source": 1,
+  "sink": 21,
+  "arcs": [
+    {
+      "from": "1",
+      "to": "2",
+      "capacity": 20
+    },
+    {
+      "from": "1",
+      "to": "3",
+      "capacity": 18
+    },
+    {
+      "from": "1",
+      "to": "4",
+      "capacity": 16
+    },
+    {
+      "from": "1",
+      "to": "5",
+      "capacity": 14
+    },
+    {
+      "from": "2",
+      "to": "6",
+      "capacity": 16
+    },
+    {
+      "from": "2",
+      "to": "7",
+      "capacity": 16
+    },
+    {
+      "from": "3",
+      "to": "7",
+      "capacity": 13
+    },
+    {
+      "from": "3",
+      "to": "8",
+      "capacity": 11
+    },
+    {
+      "from": "3",
+      "to": "12",
+      "capacity": 9
+    },
+    {
+      "from": "4",
+      "to": "8",
+      "capacity": 13
+    },
+    {
+      "from": "4",
+      "to": "9",
+      "capacity": 17
+    },
+    {
+      "from": "5",
+      "to": "9",
+      "capacity": 11
+    },
+    {
+      "from": "5",
+      "to": "10",
+      "capacity": 18
+    },
+    {
+      "from": "6",
+      "to": "12",
+      "capacity": 8
+    },
+    {
+      "from": "6",
+      "to": "13",
+      "capacity": 11
+    },
+    {
+      "from": "7",
+      "to": "6",
+      "capacity": 3
+    },
+    {
+      "from": "7",
+      "to": "12",
+      "capacity": 12
+    },
+    {
+      "from": "7",
+      "to": "13",
+      "capacity": 11
+    },
+    {
+      "from": "8",
+      "to": "11",
+      "capacity": 9
+    },
+    {
+      "from": "8",
+      "to": "14",
+      "capacity": 9
+    },
+    {
+      "from": "9",
+      "to": "8",
+      "capacity": 6
+    },
+    {
+      "from": "9",
+      "to": "11",
+      "capacity": 9
+    },
+    {
+      "from": "9",
+      "to": "13",
+      "capacity": 9
+    },
+    {
+      "from": "10",
+      "to": "11",
+      "capacity": 9
+    },
+    {
+      "from": "10",
+      "to": "14",
+      "capacity": 8
+    },
+    {
+      "from": "10",
+      "to": "17",
+      "capacity": 8
+    },
+    {
+      "from": "11",
+      "to": "12",
+      "capacity": 2
+    },
+    {
+      "from": "11",
+      "to": "15",
+      "capacity": 5
+    },
+    {
+      "from": "11",
+      "to": "16",
+      "capacity": 6
+    },
+    {
+      "from": "12",
+      "to": "11",
+      "capacity": 2
+    },
+    {
+      "from": "12",
+      "to": "15",
+      "capacity": 3
+    },
+    {
+      "from": "12",
+      "to": "16",
+      "capacity": 6
+    },
+    {
+      "from": "13",
+      "to": "16",
+      "capacity": 3
+    },
+    {
+      "from": "13",
+      "to": "17",
+      "capacity": 3
+    },
+    {
+      "from": "13",
+      "to": "20",
+      "capacity": 7
+    },
+    {
+      "from": "14",
+      "to": "16",
+      "capacity": 3
+    },
+    {
+      "from": "14",
+      "to": "17",
+      "capacity": 7
+    },
+    {
+      "from": "15",
+      "to": "18",
+      "capacity": 10
+    },
+    {
+      "from": "15",
+      "to": "19",
+      "capacity": 8
+    },
+    {
+      "from": "16",
+      "to": "12",
+      "capacity": 3
+    },
+    {
+      "from": "16",
+      "to": "19",
+      "capacity": 7
+    },
+    {
+      "from": "16",
+      "to": "20",
+      "capacity": 11
+    },
+    {
+      "from": "17",
+      "to": "19",
+      "capacity": 9
+    },
+    {
+      "from": "17",
+      "to": "20",
+      "capacity": 11
+    },
+    {
+      "from": "18",
+      "to": "21",
+      "capacity": 22
+    },
+    {
+      "from": "19",
+      "to": "16",
+      "capacity": 5
+    },
+    {
+      "from": "19",
+      "to": "21",
+      "capacity": 32
+    },
+    {
+      "from": "20",
+      "to": "21",
+      "capacity": 31
+    }
+  ]
+}

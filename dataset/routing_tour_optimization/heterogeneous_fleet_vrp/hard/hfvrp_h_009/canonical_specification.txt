@@ -1,0 +1,164 @@
+Canonical specification for a deterministic single-depot Heterogeneous Fleet Vehicle Routing Problem instance.
+
+Interpretation:
+- Each activated vehicle starts at the depot, serves a subset of customers, and returns to the depot.
+- Each customer must be visited exactly once by exactly one activated vehicle.
+- Travel between every pair of distinct nodes is allowed, so the routing graph is complete.
+- Vehicle capacities, fixed activation costs, and per-distance cost multipliers depend on the chosen vehicle.
+- If a vehicle is activated, its fixed activation cost is incurred exactly once.
+- Variable travel cost on arc (i,j) for vehicle k equals alpha_k times the base distance delta[i,j].
+- There are no time windows, multiple depots, split deliveries, stochastic demands, or customer-vehicle incompatibilities.
+- The optimization goal is to minimize total fixed-plus-variable routing cost.
+
+Sets:
+- Nodes N = ['Depot', 'C1', 'C2', 'C3', 'C4', 'C5', 'C6', 'C7', 'C8', 'C9', 'C10', 'C11', 'C12', 'C13', 'C14', 'C15', 'C16', 'C17', 'C18', 'C19', 'C20', 'C21', 'C22']
+- Customer subset C = ['C1', 'C2', 'C3', 'C4', 'C5', 'C6', 'C7', 'C8', 'C9', 'C10', 'C11', 'C12', 'C13', 'C14', 'C15', 'C16', 'C17', 'C18', 'C19', 'C20', 'C21', 'C22']
+- Depot node = Depot
+- Vehicle categories T = ['MI', 'SM', 'MD', 'LG']
+- Available vehicles K = ['MI1', 'SM1', 'SM2', 'MD1', 'MD2', 'MD3', 'LG1']
+- Directed arcs A = [(i,j) for i,j in N, i != j]
+
+Coordinates by node:
+- Depot: (5.000, 5.000)
+- C1: (8.191, 4.983)
+- C2: (8.439, 6.250)
+- C3: (7.705, 6.962)
+- C4: (6.862, 8.836)
+- C5: (5.518, 8.456)
+- C6: (4.489, 8.369)
+- C7: (3.288, 7.645)
+- C8: (1.745, 7.532)
+- C9: (2.123, 6.222)
+- C10: (1.863, 5.095)
+- C11: (1.825, 3.900)
+- C12: (2.282, 2.331)
+- C13: (3.271, 1.761)
+- C14: (4.113, 0.899)
+- C15: (5.676, 2.120)
+- C16: (6.688, 2.432)
+- C17: (7.438, 2.723)
+- C18: (8.494, 3.906)
+- C19: (8.900, 8.100)
+- C20: (0.700, 7.567)
+- C21: (8.800, 2.200)
+- C22: (2.866, 2.900)
+
+Customer demands:
+- Depot: 0
+- C1: 2
+- C2: 2
+- C3: 2
+- C4: 2
+- C5: 2
+- C6: 2
+- C7: 2
+- C8: 2
+- C9: 2
+- C10: 4
+- C11: 2
+- C12: 2
+- C13: 2
+- C14: 3
+- C15: 2
+- C16: 3
+- C17: 2
+- C18: 2
+- C19: 4
+- C20: 2
+- C21: 2
+- C22: 4
+
+Base-distance rule:
+- Base distance between two nodes equals the Euclidean distance between their coordinates, rounded to 2 decimals.
+
+Complete base-distance matrix:
+- Depot: Depot=0.00, C1=3.19, C2=3.66, C3=3.34, C4=4.26, C5=3.49, C6=3.41, C7=3.15, C8=4.12, C9=3.13, C10=3.14, C11=3.36, C12=3.81, C13=3.67, C14=4.20, C15=2.96, C16=3.07, C17=3.34, C18=3.66, C19=4.98, C20=5.01, C21=4.72, C22=2.99
+- C1: Depot=3.19, C1=0.00, C2=1.29, C3=2.04, C4=4.08, C5=4.38, C6=5.02, C7=5.58, C8=6.93, C9=6.19, C10=6.33, C11=6.46, C12=6.48, C13=5.88, C14=5.77, C15=3.81, C16=2.96, C17=2.38, C18=1.12, C19=3.20, C20=7.92, C21=2.85, C22=5.72
+- C2: Depot=3.66, C1=1.29, C2=0.00, C3=1.02, C4=3.03, C5=3.66, C6=4.48, C7=5.34, C8=6.82, C9=6.32, C10=6.68, C11=7.02, C12=7.30, C13=6.85, C14=6.88, C15=4.97, C16=4.20, C17=3.67, C18=2.34, C19=1.91, C20=7.85, C21=4.07, C22=6.50
+- C3: Depot=3.34, C1=2.04, C2=1.02, C3=0.00, C4=2.05, C5=2.65, C6=3.51, C7=4.47, C8=5.99, C9=5.63, C10=6.13, C11=6.63, C12=7.13, C13=6.83, C14=7.05, C15=5.25, C16=4.64, C17=4.25, C18=3.16, C19=1.65, C20=7.03, C21=4.89, C22=6.32
+- C4: Depot=4.26, C1=4.08, C2=3.03, C3=2.05, C4=0.00, C5=1.40, C6=2.42, C7=3.77, C8=5.28, C9=5.41, C10=6.24, C11=7.05, C12=7.96, C13=7.93, C14=8.40, C15=6.82, C16=6.41, C17=6.14, C18=5.19, C19=2.17, C20=6.29, C21=6.91, C22=7.16
+- C5: Depot=3.49, C1=4.38, C2=3.66, C3=2.65, C4=1.40, C5=0.00, C6=1.03, C7=2.37, C8=3.88, C9=4.06, C10=4.97, C11=5.86, C12=6.93, C13=7.06, C14=7.69, C15=6.34, C16=6.14, C17=6.05, C18=5.44, C19=3.40, C20=4.90, C21=7.06, C22=6.16
+- C6: Depot=3.41, C1=5.02, C2=4.48, C3=3.51, C4=2.42, C5=1.03, C6=0.00, C7=1.40, C8=2.87, C9=3.19, C10=4.20, C11=5.20, C12=6.43, C13=6.72, C14=7.48, C15=6.36, C16=6.33, C17=6.37, C18=6.00, C19=4.42, C20=3.87, C21=7.53, C22=5.70
+- C7: Depot=3.15, C1=5.58, C2=5.34, C3=4.47, C4=3.77, C5=2.37, C6=1.40, C7=0.00, C8=1.55, C9=1.84, C10=2.92, C11=4.02, C12=5.41, C13=5.88, C14=6.80, C15=6.02, C16=6.22, C17=6.44, C18=6.41, C19=5.63, C20=2.59, C21=7.75, C22=4.76
+- C8: Depot=4.12, C1=6.93, C2=6.82, C3=5.99, C4=5.28, C5=3.88, C6=2.87, C7=1.55, C8=0.00, C9=1.36, C10=2.44, C11=3.63, C12=5.23, C13=5.97, C14=7.04, C15=6.69, C16=7.10, C17=7.45, C18=7.66, C19=7.18, C20=1.05, C21=8.84, C22=4.77
+- C9: Depot=3.13, C1=6.19, C2=6.32, C3=5.63, C4=5.41, C5=4.06, C6=3.19, C7=1.84, C8=1.36, C9=0.00, C10=1.16, C11=2.34, C12=3.89, C13=4.61, C14=5.68, C15=5.43, C16=5.93, C17=6.36, C18=6.78, C19=7.03, C20=1.96, C21=7.79, C22=3.40
+- C10: Depot=3.14, C1=6.33, C2=6.68, C3=6.13, C4=6.24, C5=4.97, C6=4.20, C7=2.92, C8=2.44, C9=1.16, C10=0.00, C11=1.20, C12=2.80, C13=3.62, C14=4.76, C15=4.84, C16=5.51, C17=6.06, C18=6.74, C19=7.65, C20=2.73, C21=7.52, C22=2.41
+- C11: Depot=3.36, C1=6.46, C2=7.02, C3=6.63, C4=7.05, C5=5.86, C6=5.20, C7=4.02, C8=3.63, C9=2.34, C10=1.20, C11=0.00, C12=1.63, C13=2.58, C14=3.77, C15=4.24, C16=5.08, C17=5.74, C18=6.67, C19=8.23, C20=3.84, C21=7.18, C22=1.44
+- C12: Depot=3.81, C1=6.48, C2=7.30, C3=7.13, C4=7.96, C5=6.93, C6=6.43, C7=5.41, C8=5.23, C9=3.89, C10=2.80, C11=1.63, C12=0.00, C13=1.14, C14=2.32, C15=3.40, C16=4.41, C17=5.17, C18=6.41, C19=8.78, C20=5.47, C21=6.52, C22=0.82
+- C13: Depot=3.67, C1=5.88, C2=6.85, C3=6.83, C4=7.93, C5=7.06, C6=6.72, C7=5.88, C8=5.97, C9=4.61, C10=3.62, C11=2.58, C12=1.14, C13=0.00, C14=1.20, C15=2.43, C16=3.48, C17=4.28, C18=5.65, C19=8.48, C20=6.35, C21=5.55, C22=1.21
+- C14: Depot=4.20, C1=5.77, C2=6.88, C3=7.05, C4=8.40, C5=7.69, C6=7.48, C7=6.80, C8=7.04, C9=5.68, C10=4.76, C11=3.77, C12=2.32, C13=1.20, C14=0.00, C15=1.98, C16=3.00, C17=3.79, C18=5.31, C19=8.65, C20=7.49, C21=4.86, C22=2.36
+- C15: Depot=2.96, C1=3.81, C2=4.97, C3=5.25, C4=6.82, C5=6.34, C6=6.36, C7=6.02, C8=6.69, C9=5.43, C10=4.84, C11=4.24, C12=3.40, C13=2.43, C14=1.98, C15=0.00, C16=1.06, C17=1.86, C18=3.34, C19=6.79, C20=7.38, C21=3.13, C22=2.92
+- C16: Depot=3.07, C1=2.96, C2=4.20, C3=4.64, C4=6.41, C5=6.14, C6=6.33, C7=6.22, C8=7.10, C9=5.93, C10=5.51, C11=5.08, C12=4.41, C13=3.48, C14=3.00, C15=1.06, C16=0.00, C17=0.80, C18=2.33, C19=6.08, C20=7.89, C21=2.12, C22=3.85
+- C17: Depot=3.34, C1=2.38, C2=3.67, C3=4.25, C4=6.14, C5=6.05, C6=6.37, C7=6.44, C8=7.45, C9=6.36, C10=6.06, C11=5.74, C12=5.17, C13=4.28, C14=3.79, C15=1.86, C16=0.80, C17=0.00, C18=1.59, C19=5.57, C20=8.30, C21=1.46, C22=4.58
+- C18: Depot=3.66, C1=1.12, C2=2.34, C3=3.16, C4=5.19, C5=5.44, C6=6.00, C7=6.41, C8=7.66, C9=6.78, C10=6.74, C11=6.67, C12=6.41, C13=5.65, C14=5.31, C15=3.34, C16=2.33, C17=1.59, C18=0.00, C19=4.21, C20=8.61, C21=1.73, C22=5.72
+- C19: Depot=4.98, C1=3.20, C2=1.91, C3=1.65, C4=2.17, C5=3.40, C6=4.42, C7=5.63, C8=7.18, C9=7.03, C10=7.65, C11=8.23, C12=8.78, C13=8.48, C14=8.65, C15=6.79, C16=6.08, C17=5.57, C18=4.21, C19=0.00, C20=8.22, C21=5.90, C22=7.97
+- C20: Depot=5.01, C1=7.92, C2=7.85, C3=7.03, C4=6.29, C5=4.90, C6=3.87, C7=2.59, C8=1.05, C9=1.96, C10=2.73, C11=3.84, C12=5.47, C13=6.35, C14=7.49, C15=7.38, C16=7.89, C17=8.30, C18=8.61, C19=8.22, C20=0.00, C21=9.72, C22=5.15
+- C21: Depot=4.72, C1=2.85, C2=4.07, C3=4.89, C4=6.91, C5=7.06, C6=7.53, C7=7.75, C8=8.84, C9=7.79, C10=7.52, C11=7.18, C12=6.52, C13=5.55, C14=4.86, C15=3.13, C16=2.12, C17=1.46, C18=1.73, C19=5.90, C20=9.72, C21=0.00, C22=5.98
+- C22: Depot=2.99, C1=5.72, C2=6.50, C3=6.32, C4=7.16, C5=6.16, C6=5.70, C7=4.76, C8=4.77, C9=3.40, C10=2.41, C11=1.44, C12=0.82, C13=1.21, C14=2.36, C15=2.92, C16=3.85, C17=4.58, C18=5.72, C19=7.97, C20=5.15, C21=5.98, C22=0.00
+
+Vehicle-category parameters:
+- MI: available_count=1, capacity=6, fixed_activation_cost=0.65, distance_multiplier=1.36
+- SM: available_count=2, capacity=8, fixed_activation_cost=1.35, distance_multiplier=1.20
+- MD: available_count=3, capacity=9, fixed_activation_cost=2.85, distance_multiplier=1.02
+- LG: available_count=1, capacity=12, fixed_activation_cost=6.95, distance_multiplier=0.81
+
+Explicit vehicle parameters:
+- MI1: type=MI, capacity=6, fixed_activation_cost=0.65, distance_multiplier=1.36
+- SM1: type=SM, capacity=8, fixed_activation_cost=1.35, distance_multiplier=1.20
+- SM2: type=SM, capacity=8, fixed_activation_cost=1.35, distance_multiplier=1.20
+- MD1: type=MD, capacity=9, fixed_activation_cost=2.85, distance_multiplier=1.02
+- MD2: type=MD, capacity=9, fixed_activation_cost=2.85, distance_multiplier=1.02
+- MD3: type=MD, capacity=9, fixed_activation_cost=2.85, distance_multiplier=1.02
+- LG1: type=LG, capacity=12, fixed_activation_cost=6.95, distance_multiplier=0.81
+
+Travel-cost definition:
+- For every vehicle k and ordered pair of distinct nodes (i,j), travel_cost[i,j,k] = distance_multiplier[k] * base_distance[i,j].
+
+Decision variables:
+- x[i,j,k] in {0,1}: equals 1 if vehicle k directly travels from node i to node j
+- y[k] in {0,1}: equals 1 if vehicle k is activated
+- u[i,k] >= 0: vehicle-specific MTZ/load helper variable for customer i and vehicle k
+
+Objective:
+- Minimize total fixed activation cost plus total variable travel cost across all activated vehicles.
+
+Constraints:
+- Each customer has exactly one outgoing service arc across the fleet.
+- Each customer has exactly one incoming service arc across the fleet.
+- For each vehicle, flow is conserved at every customer it visits.
+- Depot departure and depot return are each equal to the vehicle-activation variable.
+- The total demand assigned to a vehicle cannot exceed that vehicle's capacity.
+- Vehicle-specific MTZ-style constraints eliminate subtours and enforce capacity-consistent route order.
+- Arc and activation variables are binary; load/helper variables are continuous.
+
+Metadata:
+- number_customers=22
+- number_vehicle_types=4
+- number_available_vehicles=7
+- total_demand=52
+- aggregate_capacity=61
+- utilization_ratio=0.8525
+- layout_type=depot_offset_asymmetric_layout
+- demand_regime=mildly_heavy_tailed_demands
+- fleet_tradeoff_pattern=using_more_small_routes_can_beat_expensive_large_route
+- heterogeneity_pattern=using_more_small_routes_can_beat_expensive_large_route
+- scarce_type_flag=false
+- fixed_cost_flag=true
+- distance_multiplier_flag=true
+- capacity_binding_target=true
+- near_optimal_partition_flag=true
+- hard_readability_format=large_map_with_embedded_exact_node_annotations_and_fleet_table
+- visual_type=composite_map_embedded_node_annotations_and_fleet_table_visual
+- base_distance_type=rounded_euclidean_2dp
+- seed=5409
+- group=C
+- formulation_size=7464
+
+Visual interpretation:
+- The single composite visual is numerically complete.
+- The left panel shows the depot and customer locations on a coordinate plane together with embedded exact node annotations.
+- Each customer annotation on the map provides that customer's exact demand and coordinates.
+- The depot annotation provides the depot coordinates.
+- The upper-right table lists the available vehicle categories and their cost/capacity parameters.
+- The lower-right box states the base-distance and travel-cost rule.
+- The visual does not reveal the selected routes, activated vehicles, objective value, or customer-to-vehicle assignment.

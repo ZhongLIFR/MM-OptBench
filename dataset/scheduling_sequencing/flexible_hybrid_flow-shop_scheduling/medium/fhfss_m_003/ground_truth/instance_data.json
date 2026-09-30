@@ -1,0 +1,149 @@
+{
+  "instance_id": "fhfss_m_003",
+  "variant": "flexible_hybrid_flow_shop_scheduling",
+  "scenario": "flexible_hybrid_flow_shop_scheduling",
+  "difficulty": "medium",
+  "sets": {
+    "jobs": [
+      "J1",
+      "J2",
+      "J3",
+      "J4",
+      "J5",
+      "J6",
+      "J7",
+      "J8",
+      "J9",
+      "J10"
+    ],
+    "stages": [
+      "S1",
+      "S2",
+      "S3",
+      "S4"
+    ],
+    "machines_by_stage": {
+      "S1": [
+        "S1M1",
+        "S1M2"
+      ],
+      "S2": [
+        "S2M1",
+        "S2M2",
+        "S2M3"
+      ],
+      "S3": [
+        "S3M1"
+      ],
+      "S4": [
+        "S4M1",
+        "S4M2"
+      ]
+    }
+  },
+  "common_stage_order": [
+    "S1",
+    "S2",
+    "S3",
+    "S4"
+  ],
+  "processing_time": {
+    "J1": {
+      "S1": 4,
+      "S2": 5,
+      "S3": 8,
+      "S4": 4
+    },
+    "J2": {
+      "S1": 5,
+      "S2": 4,
+      "S3": 7,
+      "S4": 5
+    },
+    "J3": {
+      "S1": 6,
+      "S2": 5,
+      "S3": 9,
+      "S4": 4
+    },
+    "J4": {
+      "S1": 4,
+      "S2": 6,
+      "S3": 8,
+      "S4": 5
+    },
+    "J5": {
+      "S1": 5,
+      "S2": 4,
+      "S3": 10,
+      "S4": 3
+    },
+    "J6": {
+      "S1": 6,
+      "S2": 5,
+      "S3": 7,
+      "S4": 4
+    },
+    "J7": {
+      "S1": 5,
+      "S2": 6,
+      "S3": 8,
+      "S4": 5
+    },
+    "J8": {
+      "S1": 4,
+      "S2": 5,
+      "S3": 9,
+      "S4": 4
+    },
+    "J9": {
+      "S1": 6,
+      "S2": 4,
+      "S3": 8,
+      "S4": 5
+    },
+    "J10": {
+      "S1": 5,
+      "S2": 5,
+      "S3": 10,
+      "S4": 4
+    }
+  },
+  "stage_total_load": {
+    "S1": 50,
+    "S2": 49,
+    "S3": 84,
+    "S4": 43
+  },
+  "nominal_load_per_machine": {
+    "S1": 25.0,
+    "S2": 16.3333,
+    "S3": 84.0,
+    "S4": 21.5
+  },
+  "visual_layout": {
+    "stage_colors": {
+      "S1": "#dbeafe",
+      "S2": "#dff3e4",
+      "S3": "#fef3c7",
+      "S4": "#f8d8d8"
+    }
+  },
+  "meta_parameters": {
+    "number_jobs": 10,
+    "number_stages": 4,
+    "machines_per_stage": [
+      2,
+      3,
+      1,
+      2
+    ],
+    "group": "A",
+    "bottleneck_pattern": "single_late_middle_bottleneck",
+    "processing_time_regime": "third_stage_heavy_with_correlated_neighbors",
+    "flexibility_level": "mixed_2_3_1_2",
+    "visual_type": "single_visual_combined_stage_architecture_plus_processing_matrix",
+    "seed": 5403,
+    "formulation_size": 1281
+  }
+}

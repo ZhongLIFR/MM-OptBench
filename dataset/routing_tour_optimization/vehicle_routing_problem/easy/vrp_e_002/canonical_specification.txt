@@ -1,0 +1,93 @@
+Canonical specification for a deterministic single-depot Capacitated Vehicle Routing Problem instance.
+
+Interpretation:
+- A fleet of identical vehicles starts at the depot, serves customers, and returns to the depot.
+- Each customer must be visited exactly once by exactly one vehicle.
+- Travel between every pair of distinct nodes is allowed, so the routing graph is complete.
+- Vehicle capacity is binding and the total demand served on each route must not exceed the common vehicle capacity.
+- There are no time windows, multiple depots, forbidden arcs, stochastic demands, or split deliveries.
+- The optimization goal is to minimize total routing cost across all used vehicles.
+
+Sets:
+- Nodes N = ['Depot', 'C1', 'C2', 'C3', 'C4', 'C5', 'C6', 'C7', 'C8']
+- Customer subset C = ['C1', 'C2', 'C3', 'C4', 'C5', 'C6', 'C7', 'C8']
+- Depot node = Depot
+- Vehicles V = ['V1', 'V2']
+- Directed arcs A = [(i,j) for i,j in N, i != j]
+
+Coordinates by node:
+- Depot: (5.0, 5.0)
+- C1: (1.6, 7.8)
+- C2: (3.2, 2.0)
+- C3: (4.6, 8.2)
+- C4: (6.8, 1.9)
+- C5: (7.6, 7.4)
+- C6: (8.8, 4.0)
+- C7: (2.1, 5.1)
+- C8: (6.0, 6.0)
+
+Customer demands:
+- Depot: 0
+- C1: 2
+- C2: 4
+- C3: 3
+- C4: 3
+- C5: 4
+- C6: 2
+- C7: 2
+- C8: 4
+
+Fleet parameters:
+- number_vehicles = 2
+- vehicle_capacity = 14
+- vehicles are identical and may be unused
+
+Complete travel-cost matrix:
+- Depot: Depot=0.00, C1=4.40, C2=3.54, C3=3.31, C4=3.72, C5=3.41, C6=3.83, C7=2.87, C8=1.41
+- C1: Depot=4.40, C1=0.00, C2=6.09, C3=3.10, C4=8.16, C5=5.79, C6=7.94, C7=2.71, C8=4.75
+- C2: Depot=3.54, C1=6.09, C2=0.00, C3=6.59, C4=3.47, C5=6.79, C6=5.87, C7=3.29, C8=4.94
+- C3: Depot=3.31, C1=3.10, C2=6.59, C3=0.00, C4=6.51, C5=3.07, C6=5.94, C7=4.03, C8=2.67
+- C4: Depot=3.72, C1=8.16, C2=3.47, C3=6.51, C4=0.00, C5=5.56, C6=2.94, C7=5.83, C8=4.33
+- C5: Depot=3.41, C1=5.79, C2=6.79, C3=3.07, C4=5.56, C5=0.00, C6=3.70, C7=6.19, C8=2.05
+- C6: Depot=3.83, C1=7.94, C2=5.87, C3=5.94, C4=2.94, C5=3.70, C6=0.00, C7=6.54, C8=3.35
+- C7: Depot=2.87, C1=2.71, C2=3.29, C3=4.03, C4=5.83, C5=6.19, C6=6.54, C7=0.00, C8=3.95
+- C8: Depot=1.41, C1=4.75, C2=4.94, C3=2.67, C4=4.33, C5=2.05, C6=3.35, C7=3.95, C8=0.00
+
+Decision variables:
+- x[i,j,v] in {0,1}: equals 1 if vehicle v directly travels from node i to node j
+- u[i]: cumulative load/order helper variable for customer i used in MTZ-style capacity subtour elimination
+
+Objective:
+- Minimize total routing cost sum_v sum_{i != j} c[i,j] * x[i,j,v].
+
+Constraints:
+- Every customer has exactly one outgoing service arc across the fleet.
+- Every customer has exactly one incoming service arc across the fleet.
+- For each vehicle, flow is conserved at every node it visits.
+- Each vehicle can leave the depot at most once and return at most once.
+- The total demand served by each vehicle does not exceed the common capacity.
+- MTZ-style load constraints eliminate subtours and enforce capacity-consistent route order.
+- Arc variables are binary and load/order variables are continuous.
+
+Metadata:
+- number_customers=8
+- number_vehicles=2
+- total_demand=24
+- vehicle_capacity=14
+- layout_type=uniform_random_layout
+- cost_matrix_type=near_euclidean_asymmetric
+- demand_regime=random_moderate_variation
+- capacity_binding_target=true
+- near_optimal_partition_flag=false
+- visual_type=composite_map_and_matrix_visual
+- candidate_edge_k=0
+- seed=2402
+- group=A
+- formulation_size=264
+
+Visual interpretation:
+- The composite visual contains the full instance data in a single image.
+- The left panel shows the depot, customers, coordinates, and demands on a coordinate plane.
+- The right panel gives the fleet parameters and the exact travel-cost matrix.
+- The complete routing graph is defined by the travel-cost matrix.
+- The visual does not reveal the selected vehicle routes, customer-to-vehicle assignment, route order, or objective value.

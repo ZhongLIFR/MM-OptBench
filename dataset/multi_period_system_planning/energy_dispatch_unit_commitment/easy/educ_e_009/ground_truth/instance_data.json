@@ -1,0 +1,71 @@
+{
+  "instance_id": "educ_e_009",
+  "variant": "energy_dispatch_unit_commitment",
+  "scenario": "energy_dispatch_unit_commitment",
+  "difficulty": "easy",
+  "sets": {
+    "generators": [
+      "G1",
+      "G2",
+      "G3",
+      "G4"
+    ],
+    "periods": [
+      "t1",
+      "t2",
+      "t3",
+      "t4",
+      "t5",
+      "t6"
+    ]
+  },
+  "demand": {
+    "t1": 62,
+    "t2": 56,
+    "t3": 50,
+    "t4": 46,
+    "t5": 42,
+    "t6": 36
+  },
+  "cost": {
+    "G1": 8,
+    "G2": 10,
+    "G3": 13,
+    "G4": 18
+  },
+  "startup_cost": {
+    "G1": 70,
+    "G2": 45,
+    "G3": 16,
+    "G4": 10
+  },
+  "pmin": {
+    "G1": 16,
+    "G2": 8,
+    "G3": 0,
+    "G4": 0
+  },
+  "pmax": {
+    "G1": 30,
+    "G2": 20,
+    "G3": 16,
+    "G4": 12
+  },
+  "initial_status": {
+    "G1": 0,
+    "G2": 0,
+    "G3": 0,
+    "G4": 0
+  },
+  "meta_parameters": {
+    "number_periods": 6,
+    "number_units": 4,
+    "demand_pattern": "decreasing_plus_variation",
+    "startup_cost_regime": "low_startup_multiple_peakers",
+    "capacity_regime": "loose_capacity",
+    "peak_load_flag": false,
+    "visual_type": "economics_table_demand_timeline_capacity_ranges",
+    "seed": 809,
+    "formulation_size": 150
+  }
+}

@@ -1,0 +1,36 @@
+A power-system operations instance is specified by the accompanying visual artifacts.
+
+The instance uses three visual files.
+
+visual_0.png:
+- a generator economics table listing each generator together with its marginal generation cost and startup cost.
+
+visual_1.png:
+- a demand timeline showing the exact system demand in every period.
+
+visual_2.png:
+- a generator-capacity chart showing the minimum and maximum output range of each generator.
+
+Operational rules:
+- Each generator may be either off or on in each period.
+- If a generator is on, its output must lie between its minimum and maximum capacity.
+- If a generator is off, its output must be zero.
+- Total generation in each period must exactly match the demand shown in the visuals.
+- Turning a generator on in a period incurs its startup cost if it was off in the immediately preceding period.
+- Ramping limits restrict how much each generator can increase or decrease output between consecutive periods.
+- Minimum up-time and minimum down-time constraints apply to every generator.
+- The initial on/off status before the first period is: G1=on, G2=on, G3=on, G4=off, G5=off, G6=off, G7=off, G8=off.
+- The initial output before the first period is: G1=28, G2=22, G3=16, G4=0, G5=0, G6=0, G7=0, G8=0.
+- The additional temporal parameters are:
+  - G1: RU=12, RD=12, UT=4, DT=3
+  - G2: RU=10, RD=10, UT=3, DT=2
+  - G3: RU=10, RD=10, UT=3, DT=2
+  - G4: RU=10, RD=10, UT=3, DT=2
+  - G5: RU=14, RD=14, UT=2, DT=2
+  - G6: RU=16, RD=16, UT=1, DT=1
+  - G7: RU=16, RD=16, UT=1, DT=1
+  - G8: RU=18, RD=18, UT=1, DT=1
+- No transmission constraints, reserve constraints, stochastic effects, load shedding, or multi-zone structure are included.
+
+Task:
+Build a mathematical optimization model for this exact instance and provide executable solver code.

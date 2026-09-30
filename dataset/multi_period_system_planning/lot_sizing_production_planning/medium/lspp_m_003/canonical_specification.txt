@@ -1,0 +1,70 @@
+Canonical specification for a deterministic medium-level multi-product lot-sizing and production planning instance.
+
+Interpretation:
+- For each product and period, a production quantity may be chosen.
+- Production completed in a period is immediately available to satisfy that period's demand.
+- Unsatisfied demand is not allowed; therefore inventory balance must hold in every period.
+- End-of-period inventory may be carried into the next period and incurs a holding cost.
+- If positive production is chosen for a product in a period, a fixed setup cost is incurred for that product-period.
+- Total production across all products in a period is limited by the shared capacity of that period.
+
+Sets:
+- Products P = ['P1', 'P2', 'P3']
+- Periods T = ['t1', 't2', 't3', 't4', 't5', 't6', 't7', 't8', 't9', 't10', 't11', 't12', 't13', 't14', 't15', 't16']
+
+Initial inventory:
+- P1: 0
+- P2: 0
+- P3: 0
+
+Per-product parameter tables:
+- P1 demand by period: t1=6, t2=8, t3=10, t4=12, t5=7, t6=9, t7=11, t8=13, t9=8, t10=10, t11=12, t12=14, t13=9, t14=11, t15=13, t16=15
+- P1 unit production cost by period: t1=3, t2=3, t3=3, t4=3, t5=4, t6=4, t7=4, t8=4, t9=5, t10=5, t11=5, t12=5, t13=3, t14=3, t15=3, t16=3
+- P1 unit holding cost by period: t1=1, t2=1, t3=1, t4=1, t5=1, t6=1, t7=1, t8=1, t9=2, t10=2, t11=2, t12=2, t13=2, t14=2, t15=2, t16=0
+- P1 fixed setup cost by period: t1=22, t2=26, t3=22, t4=26, t5=22, t6=26, t7=22, t8=26, t9=22, t10=26, t11=22, t12=26, t13=22, t14=26, t15=22, t16=26
+- P1 setup-linking constant M: 168
+- P2 demand by period: t1=7, t2=9, t3=11, t4=8, t5=10, t6=12, t7=9, t8=11, t9=13, t10=10, t11=12, t12=14, t13=11, t14=13, t15=15, t16=12
+- P2 unit production cost by period: t1=4, t2=4, t3=4, t4=4, t5=5, t6=5, t7=5, t8=5, t9=6, t10=6, t11=6, t12=6, t13=4, t14=4, t15=4, t16=4
+- P2 unit holding cost by period: t1=2, t2=2, t3=2, t4=2, t5=2, t6=2, t7=2, t8=2, t9=2, t10=2, t11=2, t12=2, t13=2, t14=2, t15=2, t16=0
+- P2 fixed setup cost by period: t1=28, t2=32, t3=28, t4=32, t5=28, t6=32, t7=28, t8=32, t9=28, t10=32, t11=28, t12=32, t13=28, t14=32, t15=28, t16=32
+- P2 setup-linking constant M: 177
+- P3 demand by period: t1=8, t2=10, t3=7, t4=9, t5=11, t6=8, t7=10, t8=12, t9=9, t10=11, t11=13, t12=10, t13=12, t14=14, t15=11, t16=13
+- P3 unit production cost by period: t1=5, t2=5, t3=5, t4=5, t5=6, t6=6, t7=6, t8=6, t9=7, t10=7, t11=7, t12=7, t13=5, t14=5, t15=5, t16=5
+- P3 unit holding cost by period: t1=1, t2=1, t3=1, t4=1, t5=1, t6=1, t7=1, t8=1, t9=1, t10=1, t11=1, t12=1, t13=1, t14=1, t15=1, t16=0
+- P3 fixed setup cost by period: t1=24, t2=28, t3=24, t4=28, t5=24, t6=28, t7=24, t8=28, t9=24, t10=28, t11=24, t12=28, t13=24, t14=28, t15=24, t16=28
+- P3 setup-linking constant M: 168
+
+Shared capacity by period:
+- t1=33, t2=27, t3=31, t4=24, t5=32, t6=29, t7=35, t8=28, t9=34, t10=31, t11=38, t12=34, t13=36, t14=36, t15=42, t16=39
+
+Decision variables:
+- x[p,t] >= 0: production quantity of product p in period t
+- I[p,t] >= 0: ending inventory of product p after period t
+- y[p,t] in {0,1}: equals 1 if product p is produced in period t
+
+Objective:
+- Minimize total production cost + total inventory holding cost + total fixed setup cost.
+
+Constraints:
+- Inventory balance for every product and period: I[p,t-1] + x[p,t] = d[p,t] + I[p,t], with the given initial inventory at the start of t1.
+- Setup linking for every product and period: x[p,t] <= M[p] * y[p,t].
+- Shared capacity for every period: sum_p x[p,t] <= C[t].
+- Nonnegativity of production and inventory, binary setup variables, and no backlogging.
+
+Metadata:
+- number_periods=16
+- number_products=3
+- demand_regime=correlated_growth_patterns
+- setup_cost_regime=time_dependent_setup_costs
+- capacity_regime=sustained_tight_capacity
+- seasonality_flag=false
+- inventory_pressure_flag=true
+- multi_product_flag=true
+- visual_type=timeline_demand_grid_dual_visual
+- seed=603
+- formulation_size=256
+
+Visual interpretation:
+- visual_0.png shows one capacity bar per period plus the demand matrix with exact numeric demand values.
+- visual_1.png shows the production-cost, holding-cost, and setup-cost matrices with exact numeric parameter values.
+- The visuals do not reveal the optimal production plan, setup pattern, or objective value.

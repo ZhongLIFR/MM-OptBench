@@ -1,0 +1,23 @@
+{
+  "instance_id": "fl_h__001",
+  "difficulty": "hard",
+  "variant_type": "UFL",
+  "number_of_facilities": 8,
+  "number_of_customers": 17,
+  "total_demand": 34,
+  "opening_cost_regime": "verified_safe_geometry",
+  "assignment_cost_regime": "euclidean_clustered_geometry",
+  "demand_pattern": "moderate_uniform",
+  "assignment_graph_density": 0.2941,
+  "structural_extension": "none",
+  "seed": 901,
+  "formulation_size": {
+    "num_binary_y": 8,
+    "num_binary_x": 40,
+    "num_variables_total": 48,
+    "num_constraints_total": 97
+  },
+  "optimal_objective_value": 205.656,
+  "reference_solver_policy": "prefer_gurobi_else_exact_fallback",
+  "reference_solver_used": "gurobi"
+}

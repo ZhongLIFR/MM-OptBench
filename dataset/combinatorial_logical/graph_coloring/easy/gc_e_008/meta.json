@@ -1,0 +1,46 @@
+{
+  "number_of_vertices": 14,
+  "number_of_edges": 36,
+  "number_of_colors": 4,
+  "graph_density": 0.3956,
+  "chromatic_number": 4,
+  "topology_type": "small_clustered_graph",
+  "graph_generator": "planted_coloring_dense_clusters",
+  "seed": 5108,
+  "group": "C",
+  "visual_type": "adjacency_matrix",
+  "formulation_size": 214,
+  "planted_color_groups": [
+    [
+      1,
+      5,
+      9,
+      13
+    ],
+    [
+      2,
+      6,
+      10,
+      14
+    ],
+    [
+      3,
+      7,
+      11
+    ],
+    [
+      4,
+      8,
+      12
+    ]
+  ],
+  "instance_id": "gc_e_008",
+  "variant": "graph_coloring",
+  "scenario": "graph_coloring",
+  "difficulty": "easy",
+  "status": "feasible",
+  "runtime_seconds": 0.002758,
+  "solve_method": "gurobi_milp_graph_coloring_decision",
+  "solver": "Gurobi (MILP)",
+  "visual_checksum_md5": "1447d8444f6f7bf2a430e9e410f76dd9"
+}

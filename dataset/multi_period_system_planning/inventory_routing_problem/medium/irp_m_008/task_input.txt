@@ -1,0 +1,28 @@
+A distribution system must plan periodic replenishment and vehicle movement using the exact data shown in the accompanying visual artifacts.
+
+This instance uses two visual files.
+
+visual_0.png:
+- a depot-customer map showing the exact coordinates of every displayed node,
+- a fleet panel listing the exact number of identical vehicles, the per-vehicle capacity, and the per-vehicle dispatch cost,
+- and a routing-rule panel stating how travel cost is computed from the displayed coordinates.
+
+visual_1.png:
+- a customer inventory table listing the exact initial inventory, maximum storage capacity, and unit holding cost for each customer,
+- a total-demand bar chart showing aggregate demand in each displayed period,
+- and a customer-by-period demand heatmap whose cells contain the exact demand values.
+
+Operational rules:
+- One or more identical vehicles may be dispatched in a period exactly as indicated in the fleet panel.
+- Every dispatched vehicle starts at the depot, may visit a subset of customers, and returns to the depot in the same period.
+- Travel between every pair of distinct nodes is allowed.
+- Travel cost equals the Euclidean distance between the displayed coordinates, rounded to two decimals.
+- A customer may receive inventory in a period only if a dispatched vehicle visits that customer in that same period.
+- At most one vehicle may serve the same customer in the same period.
+- End-of-period inventory is carried across periods and incurs the displayed customer-specific holding cost.
+- End-of-period inventory may not become negative and may not exceed the displayed customer-specific storage capacity.
+- Delivered quantity loaded on a vehicle in a period may not exceed that vehicle's capacity.
+- No multiple depots, stochastic demand, backlogging, time windows, or lost sales are included.
+
+Task:
+Build a mathematical optimization model for this exact instance and provide executable solver code.

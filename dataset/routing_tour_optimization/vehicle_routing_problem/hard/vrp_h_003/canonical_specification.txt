@@ -1,0 +1,114 @@
+Canonical specification for a deterministic single-depot Capacitated Vehicle Routing Problem instance.
+
+Interpretation:
+- A fleet of identical vehicles starts at the depot, serves customers, and returns to the depot.
+- Each customer must be visited exactly once by exactly one vehicle.
+- Travel between every pair of distinct nodes is allowed, so the routing graph is complete.
+- Every active route must satisfy the common vehicle-capacity bound.
+- There are no time windows, multiple depots, forbidden arcs, or stochastic demands.
+- The optimization goal is to minimize total routing cost.
+
+Sets:
+- Nodes N = ['Depot', 'C1', 'C2', 'C3', 'C4', 'C5', 'C6', 'C7', 'C8', 'C9', 'C10', 'C11', 'C12', 'C13', 'C14', 'C15', 'C16', 'C17']
+- Customer subset C = ['C1', 'C2', 'C3', 'C4', 'C5', 'C6', 'C7', 'C8', 'C9', 'C10', 'C11', 'C12', 'C13', 'C14', 'C15', 'C16', 'C17']
+- Depot node = Depot
+- Vehicles V = ['V1', 'V2', 'V3', 'V4']
+- Directed arcs A = [(i,j) for i,j in N, i != j]
+
+Coordinates by node:
+- Depot: (5.00, 5.00)
+- C1: (8.22, 4.73)
+- C2: (8.08, 6.24)
+- C3: (7.11, 7.05)
+- C4: (6.01, 8.87)
+- C5: (4.66, 7.71)
+- C6: (3.52, 7.45)
+- C7: (2.35, 6.68)
+- C8: (2.29, 5.54)
+- C9: (1.07, 4.11)
+- C10: (1.64, 2.86)
+- C11: (3.01, 2.10)
+- C12: (4.52, 2.17)
+- C13: (6.17, 2.23)
+- C14: (7.38, 2.15)
+- C15: (7.91, 3.67)
+- C16: (8.40, 8.00)
+- C17: (1.60, 8.10)
+
+Customer demands:
+- Depot: 0
+- C1: 1
+- C2: 5
+- C3: 3
+- C4: 1
+- C5: 4
+- C6: 1
+- C7: 2
+- C8: 2
+- C9: 1
+- C10: 1
+- C11: 1
+- C12: 5
+- C13: 4
+- C14: 2
+- C15: 3
+- C16: 4
+- C17: 3
+
+Fleet parameters:
+- Number of identical vehicles: 4
+- Common vehicle capacity Q = 13
+
+Complete travel-cost matrix:
+- Depot: Depot=0.00, C1=3.23, C2=3.32, C3=2.94, C4=4.00, C5=2.74, C6=2.87, C7=3.14, C8=2.77, C9=4.03, C10=3.99, C11=3.51, C12=2.87, C13=3.00, C14=3.72, C15=3.20, C16=4.53, C17=4.60
+- C1: Depot=3.23, C1=0.00, C2=1.52, C3=2.57, C4=4.70, C5=4.64, C6=5.44, C7=6.19, C8=5.99, C9=7.18, C10=6.84, C11=5.83, C12=4.50, C13=3.23, C14=2.71, C15=1.10, C16=3.28, C17=7.43
+- C2: Depot=3.32, C1=1.52, C2=0.00, C3=1.26, C4=3.35, C5=3.72, C6=4.72, C7=5.74, C8=5.83, C9=7.33, C10=7.28, C11=6.55, C12=5.41, C13=4.44, C14=4.15, C15=2.58, C16=1.79, C17=6.74
+- C3: Depot=2.94, C1=2.57, C2=1.26, C3=0.00, C4=2.13, C5=2.53, C6=3.62, C7=4.77, C8=5.05, C9=6.72, C10=6.89, C11=6.42, C12=5.52, C13=4.91, C14=4.91, C15=3.47, C16=1.60, C17=5.61
+- C4: Depot=4.00, C1=4.70, C2=3.35, C3=2.13, C4=0.00, C5=1.77, C6=2.87, C7=4.26, C8=4.99, C9=6.86, C10=7.43, C11=7.40, C12=6.86, C13=6.64, C14=6.86, C15=5.54, C16=2.55, C17=4.47
+- C5: Depot=2.74, C1=4.64, C2=3.72, C3=2.53, C4=1.77, C5=0.00, C6=1.18, C7=2.53, C8=3.22, C9=5.09, C10=5.72, C11=5.85, C12=5.55, C13=5.69, C14=6.20, C15=5.19, C16=3.75, C17=3.09
+- C6: Depot=2.87, C1=5.44, C2=4.72, C3=3.62, C4=2.87, C5=1.18, C6=0.00, C7=1.40, C8=2.27, C9=4.14, C10=4.96, C11=5.37, C12=5.38, C13=5.86, C14=6.57, C15=5.80, C16=4.91, C17=2.02
+- C7: Depot=3.14, C1=6.19, C2=5.74, C3=4.77, C4=4.26, C5=2.53, C6=1.40, C7=0.00, C8=1.15, C9=2.87, C10=3.89, C11=4.63, C12=5.01, C13=5.86, C14=6.78, C15=6.32, C16=6.19, C17=1.60
+- C8: Depot=2.77, C1=5.99, C2=5.83, C3=5.05, C4=4.99, C5=3.22, C6=2.27, C7=1.15, C8=0.00, C9=1.88, C10=2.76, C11=3.51, C12=4.04, C13=5.10, C14=6.12, C15=5.93, C16=6.59, C17=2.65
+- C9: Depot=4.03, C1=7.18, C2=7.33, C3=6.72, C4=6.86, C5=5.09, C6=4.14, C7=2.87, C8=1.88, C9=0.00, C10=1.38, C11=2.79, C12=3.96, C13=5.44, C14=6.62, C15=6.86, C16=8.30, C17=4.02
+- C10: Depot=3.99, C1=6.84, C2=7.28, C3=6.89, C4=7.43, C5=5.72, C6=4.96, C7=3.89, C8=2.76, C9=1.38, C10=0.00, C11=1.57, C12=2.97, C13=4.58, C14=5.79, C15=6.33, C16=8.49, C17=5.24
+- C11: Depot=3.51, C1=5.83, C2=6.55, C3=6.42, C4=7.40, C5=5.85, C6=5.37, C7=4.63, C8=3.51, C9=2.79, C10=1.57, C11=0.00, C12=1.51, C13=3.16, C14=4.38, C15=5.15, C16=7.99, C17=6.16
+- C12: Depot=2.87, C1=4.50, C2=5.41, C3=5.52, C4=6.86, C5=5.55, C6=5.38, C7=5.01, C8=4.04, C9=3.96, C10=2.97, C11=1.51, C12=0.00, C13=1.65, C14=2.86, C15=3.71, C16=7.00, C17=6.61
+- C13: Depot=3.00, C1=3.23, C2=4.44, C3=4.91, C4=6.64, C5=5.69, C6=5.86, C7=5.86, C8=5.10, C9=5.44, C10=4.58, C11=3.16, C12=1.65, C13=0.00, C14=1.22, C15=2.26, C16=6.18, C17=7.44
+- C14: Depot=3.72, C1=2.71, C2=4.15, C3=4.91, C4=6.86, C5=6.20, C6=6.57, C7=6.78, C8=6.12, C9=6.62, C10=5.79, C11=4.38, C12=2.86, C13=1.22, C14=0.00, C15=1.61, C16=5.94, C17=8.30
+- C15: Depot=3.20, C1=1.10, C2=2.58, C3=3.47, C4=5.54, C5=5.19, C6=5.80, C7=6.32, C8=5.93, C9=6.86, C10=6.33, C11=5.15, C12=3.71, C13=2.26, C14=1.61, C15=0.00, C16=4.36, C17=7.71
+- C16: Depot=4.53, C1=3.28, C2=1.79, C3=1.60, C4=2.55, C5=3.75, C6=4.91, C7=6.19, C8=6.59, C9=8.30, C10=8.49, C11=7.99, C12=7.00, C13=6.18, C14=5.94, C15=4.36, C16=0.00, C17=6.80
+- C17: Depot=4.60, C1=7.43, C2=6.74, C3=5.61, C4=4.47, C5=3.09, C6=2.02, C7=1.60, C8=2.65, C9=4.02, C10=5.24, C11=6.16, C12=6.61, C13=7.44, C14=8.30, C15=7.71, C16=6.80, C17=0.00
+
+Decision variables:
+- x[i,j,v] in {0,1}: equals 1 if vehicle v directly travels from node i to node j
+- u[i] >= 0: MTZ-style continuous helper variable for customer i
+
+Objective:
+- Minimize total routing cost.
+
+Constraints:
+- Every customer has exactly one outgoing service arc across the fleet.
+- Every customer has exactly one incoming service arc across the fleet.
+- For each vehicle, flow is conserved at every customer.
+- For each vehicle, depot departure and return are balanced and limited to at most one route.
+- The total demand served by each vehicle does not exceed the common capacity Q.
+- MTZ-style load constraints eliminate disconnected subtours and encode capacity-consistent route order.
+
+Metadata:
+- number_customers=17
+- number_vehicles=4
+- total_demand=43
+- vehicle_capacity=13
+- demand_regime=mixed_low_high_demands
+- layout_type=radial_layout_with_outliers
+- cluster_count=1
+- outlier_flag=True
+- capacity_binding_flag=True
+- near_optimal_partition_flag=True
+- vehicle_fixed_cost_flag=False
+- seed=7203
+- group=A
+- cost_matrix_type=euclidean_rounded_2dp
+- visual_type=composite_map_and_matrix_visual
+- candidate_edge_k=0
+- formulation_size=1665

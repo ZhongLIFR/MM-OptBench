@@ -1,0 +1,156 @@
+{
+  "instance_id": "pmc_e_006",
+  "problem_type": "p_median_center",
+  "variant_type": "p_median",
+  "difficulty": "easy",
+  "objective_sense": "minimize",
+  "distance_metric": "euclidean_rounded_2dp",
+  "visual_type": "single_visual_spatial_map_with_inline_node_attributes",
+  "p_value": 2,
+  "geometry_type": "two_clusters_with_middle_outlier",
+  "demand_weight_regime": "mild_heterogeneous",
+  "random_seed": 1006,
+  "sets": {
+    "I": [
+      "D1",
+      "D2",
+      "D3",
+      "D4",
+      "D5",
+      "D6"
+    ],
+    "J": [
+      "F1",
+      "F2",
+      "F3",
+      "F4",
+      "F5"
+    ]
+  },
+  "indices": {
+    "demand_points": "I",
+    "candidate_sites": "J"
+  },
+  "candidate_sites": {
+    "F1": {
+      "xy": [
+        1.6,
+        8.1
+      ]
+    },
+    "F2": {
+      "xy": [
+        4.4,
+        7.0
+      ]
+    },
+    "F3": {
+      "xy": [
+        7.9,
+        7.8
+      ]
+    },
+    "F4": {
+      "xy": [
+        2.5,
+        2.0
+      ]
+    },
+    "F5": {
+      "xy": [
+        7.0,
+        2.4
+      ]
+    }
+  },
+  "demand_points": {
+    "D1": {
+      "xy": [
+        1.2,
+        8.7
+      ]
+    },
+    "D2": {
+      "xy": [
+        3.3,
+        7.6
+      ]
+    },
+    "D3": {
+      "xy": [
+        8.4,
+        8.6
+      ]
+    },
+    "D4": {
+      "xy": [
+        2.0,
+        1.2
+      ]
+    },
+    "D5": {
+      "xy": [
+        6.6,
+        2.0
+      ]
+    },
+    "D6": {
+      "xy": [
+        8.8,
+        4.9
+      ]
+    }
+  },
+  "distance_matrix": {
+    "D1": {
+      "F1": 0.72,
+      "F2": 3.62,
+      "F3": 6.76,
+      "F4": 6.82,
+      "F5": 8.56
+    },
+    "D2": {
+      "F1": 1.77,
+      "F2": 1.25,
+      "F3": 4.6,
+      "F4": 5.66,
+      "F5": 6.38
+    },
+    "D3": {
+      "F1": 6.82,
+      "F2": 4.31,
+      "F3": 0.94,
+      "F4": 8.85,
+      "F5": 6.36
+    },
+    "D4": {
+      "F1": 6.91,
+      "F2": 6.28,
+      "F3": 8.85,
+      "F4": 0.94,
+      "F5": 5.14
+    },
+    "D5": {
+      "F1": 7.89,
+      "F2": 5.46,
+      "F3": 5.94,
+      "F4": 4.1,
+      "F5": 0.57
+    },
+    "D6": {
+      "F1": 7.88,
+      "F2": 4.88,
+      "F3": 3.04,
+      "F4": 6.94,
+      "F5": 3.08
+    }
+  },
+  "demand_weights": {
+    "D1": 2,
+    "D2": 3,
+    "D3": 4,
+    "D4": 5,
+    "D5": 2,
+    "D6": 3
+  }
+}

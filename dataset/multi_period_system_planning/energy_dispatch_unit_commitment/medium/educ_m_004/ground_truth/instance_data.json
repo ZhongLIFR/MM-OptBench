@@ -1,0 +1,132 @@
+{
+  "instance_id": "educ_m_004",
+  "variant": "energy_dispatch_unit_commitment",
+  "scenario": "energy_dispatch_unit_commitment",
+  "difficulty": "medium",
+  "sets": {
+    "generators": [
+      "G1",
+      "G2",
+      "G3",
+      "G4",
+      "G5"
+    ],
+    "periods": [
+      "t1",
+      "t2",
+      "t3",
+      "t4",
+      "t5",
+      "t6",
+      "t7",
+      "t8",
+      "t9",
+      "t10",
+      "t11",
+      "t12"
+    ]
+  },
+  "demand": {
+    "t1": 44,
+    "t2": 52,
+    "t3": 60,
+    "t4": 68,
+    "t5": 74,
+    "t6": 70,
+    "t7": 62,
+    "t8": 54,
+    "t9": 48,
+    "t10": 58,
+    "t11": 64,
+    "t12": 50
+  },
+  "cost": {
+    "G1": 7,
+    "G2": 9,
+    "G3": 12,
+    "G4": 18,
+    "G5": 26
+  },
+  "startup_cost": {
+    "G1": 130,
+    "G2": 95,
+    "G3": 50,
+    "G4": 24,
+    "G5": 8
+  },
+  "shutdown_cost": {
+    "G1": 10,
+    "G2": 8,
+    "G3": 6,
+    "G4": 3,
+    "G5": 2
+  },
+  "pmin": {
+    "G1": 18,
+    "G2": 12,
+    "G3": 8,
+    "G4": 0,
+    "G5": 0
+  },
+  "pmax": {
+    "G1": 32,
+    "G2": 24,
+    "G3": 18,
+    "G4": 16,
+    "G5": 12
+  },
+  "ramp_up": {
+    "G1": 18,
+    "G2": 16,
+    "G3": 14,
+    "G4": 14,
+    "G5": 12
+  },
+  "ramp_down": {
+    "G1": 18,
+    "G2": 16,
+    "G3": 14,
+    "G4": 14,
+    "G5": 12
+  },
+  "min_up": {
+    "G1": 2,
+    "G2": 2,
+    "G3": 2,
+    "G4": 1,
+    "G5": 1
+  },
+  "min_down": {
+    "G1": 1,
+    "G2": 1,
+    "G3": 1,
+    "G4": 1,
+    "G5": 1
+  },
+  "initial_status": {
+    "G1": 0,
+    "G2": 0,
+    "G3": 0,
+    "G4": 0,
+    "G5": 0
+  },
+  "initial_output": {
+    "G1": 0,
+    "G2": 0,
+    "G3": 0,
+    "G4": 0,
+    "G5": 0
+  },
+  "meta_parameters": {
+    "number_periods": 12,
+    "number_units": 5,
+    "demand_regime": "multi_peak",
+    "ramping_regime": "mixed_moderate",
+    "minimum_up_down_flag": true,
+    "capacity_regime": "near_capacity_peak",
+    "peak_load_flag": true,
+    "visual_type": "economics_table_plus_demand_timeline_and_capacity_ranges",
+    "seed": 904,
+    "formulation_size": 612
+  }
+}

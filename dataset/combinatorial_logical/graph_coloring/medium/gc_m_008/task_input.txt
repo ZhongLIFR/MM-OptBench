@@ -1,0 +1,20 @@
+A discrete vertex-labeling feasibility instance with fixed assignments is specified by the accompanying figure.
+
+The figure provides the full adjacency pattern of an undirected simple graph:
+- a square adjacency matrix whose rows and columns correspond to numeric vertex identifiers,
+- black off-diagonal cells indicate adjacent vertex pairs,
+- white off-diagonal cells indicate non-adjacent pairs,
+- grey diagonal cells used only to mark self-reference positions,
+- and a side legend gives the fixed vertex-color assignments that must be respected.
+
+For this instance:
+- the graph has 23 vertices,
+- colors 1..5 are available,
+- each vertex must receive exactly one color,
+- adjacent vertices may not share a color,
+- the fixed assignments shown in the side legend must be enforced,
+- and there are no weighted colors, directed edges, hyperedges, or extra logical side constraints beyond those fixed assignments.
+
+Task:
+1) Write a mathematical optimization model for this exact instance.
+2) Provide solver-executable code implementing the model.

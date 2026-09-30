@@ -1,0 +1,290 @@
+{
+  "instance_id": "wpss_e_008",
+  "variant": "workforce_planning_shift_scheduling",
+  "scenario": "workforce_planning_shift_scheduling",
+  "difficulty": "easy",
+  "sets": {
+    "workers": [
+      "W1",
+      "W2",
+      "W3",
+      "W4",
+      "W5",
+      "W6",
+      "W7",
+      "W8",
+      "W9"
+    ],
+    "days": [
+      "Mon1",
+      "Tue1",
+      "Wed1",
+      "Thu1",
+      "Fri1",
+      "Sat1",
+      "Sun1",
+      "Mon2"
+    ],
+    "shifts": [
+      "D",
+      "E",
+      "N"
+    ]
+  },
+  "indices": {
+    "worker_index": {
+      "W1": 0,
+      "W2": 1,
+      "W3": 2,
+      "W4": 3,
+      "W5": 4,
+      "W6": 5,
+      "W7": 6,
+      "W8": 7,
+      "W9": 8
+    },
+    "day_index": {
+      "Mon1": 0,
+      "Tue1": 1,
+      "Wed1": 2,
+      "Thu1": 3,
+      "Fri1": 4,
+      "Sat1": 5,
+      "Sun1": 6,
+      "Mon2": 7
+    },
+    "shift_index": {
+      "D": 0,
+      "E": 1,
+      "N": 2
+    }
+  },
+  "shift_labels": {
+    "D": "Day",
+    "E": "Evening",
+    "N": "Night"
+  },
+  "shift_time_window": {
+    "D": "07:00-15:00",
+    "E": "15:00-23:00",
+    "N": "23:00-07:00"
+  },
+  "availability_legend": {
+    "OFF": [],
+    "D": [
+      "D"
+    ],
+    "E": [
+      "E"
+    ],
+    "N": [
+      "N"
+    ],
+    "DE": [
+      "D",
+      "E"
+    ],
+    "EN": [
+      "E",
+      "N"
+    ],
+    "DEN": [
+      "D",
+      "E",
+      "N"
+    ]
+  },
+  "availability_code": {
+    "W1": {
+      "Mon1": "DEN",
+      "Tue1": "DEN",
+      "Wed1": "DEN",
+      "Thu1": "DEN",
+      "Fri1": "DEN",
+      "Sat1": "DEN",
+      "Sun1": "DEN",
+      "Mon2": "DEN"
+    },
+    "W2": {
+      "Mon1": "DE",
+      "Tue1": "DE",
+      "Wed1": "DE",
+      "Thu1": "DE",
+      "Fri1": "DE",
+      "Sat1": "D",
+      "Sun1": "OFF",
+      "Mon2": "DE"
+    },
+    "W3": {
+      "Mon1": "N",
+      "Tue1": "EN",
+      "Wed1": "N",
+      "Thu1": "EN",
+      "Fri1": "N",
+      "Sat1": "N",
+      "Sun1": "N",
+      "Mon2": "EN"
+    },
+    "W4": {
+      "Mon1": "DEN",
+      "Tue1": "DEN",
+      "Wed1": "DEN",
+      "Thu1": "DEN",
+      "Fri1": "DEN",
+      "Sat1": "DEN",
+      "Sun1": "DEN",
+      "Mon2": "DEN"
+    },
+    "W5": {
+      "Mon1": "D",
+      "Tue1": "D",
+      "Wed1": "OFF",
+      "Thu1": "D",
+      "Fri1": "D",
+      "Sat1": "DE",
+      "Sun1": "DE",
+      "Mon2": "D"
+    },
+    "W6": {
+      "Mon1": "EN",
+      "Tue1": "EN",
+      "Wed1": "EN",
+      "Thu1": "EN",
+      "Fri1": "EN",
+      "Sat1": "EN",
+      "Sun1": "N",
+      "Mon2": "EN"
+    },
+    "W7": {
+      "Mon1": "DEN",
+      "Tue1": "OFF",
+      "Wed1": "DEN",
+      "Thu1": "DEN",
+      "Fri1": "OFF",
+      "Sat1": "DEN",
+      "Sun1": "DEN",
+      "Mon2": "DEN"
+    },
+    "W8": {
+      "Mon1": "OFF",
+      "Tue1": "DEN",
+      "Wed1": "OFF",
+      "Thu1": "DEN",
+      "Fri1": "DEN",
+      "Sat1": "DEN",
+      "Sun1": "DEN",
+      "Mon2": "DEN"
+    },
+    "W9": {
+      "Mon1": "N",
+      "Tue1": "N",
+      "Wed1": "EN",
+      "Thu1": "N",
+      "Fri1": "N",
+      "Sat1": "EN",
+      "Sun1": "N",
+      "Mon2": "N"
+    }
+  },
+  "demand": {
+    "Mon1": {
+      "D": 2,
+      "E": 1,
+      "N": 1
+    },
+    "Tue1": {
+      "D": 2,
+      "E": 1,
+      "N": 1
+    },
+    "Wed1": {
+      "D": 2,
+      "E": 1,
+      "N": 1
+    },
+    "Thu1": {
+      "D": 2,
+      "E": 1,
+      "N": 1
+    },
+    "Fri1": {
+      "D": 2,
+      "E": 1,
+      "N": 2
+    },
+    "Sat1": {
+      "D": 3,
+      "E": 2,
+      "N": 2
+    },
+    "Sun1": {
+      "D": 2,
+      "E": 1,
+      "N": 2
+    },
+    "Mon2": {
+      "D": 2,
+      "E": 1,
+      "N": 1
+    }
+  },
+  "shift_cost": {
+    "W1": {
+      "D": 7,
+      "E": 10,
+      "N": 15
+    },
+    "W2": {
+      "D": 8,
+      "E": 8,
+      "N": 99
+    },
+    "W3": {
+      "D": 99,
+      "E": 9,
+      "N": 7
+    },
+    "W4": {
+      "D": 9,
+      "E": 11,
+      "N": 12
+    },
+    "W5": {
+      "D": 6,
+      "E": 12,
+      "N": 99
+    },
+    "W6": {
+      "D": 10,
+      "E": 10,
+      "N": 8
+    },
+    "W7": {
+      "D": 11,
+      "E": 11,
+      "N": 11
+    },
+    "W8": {
+      "D": 12,
+      "E": 9,
+      "N": 9
+    },
+    "W9": {
+      "D": 13,
+      "E": 12,
+      "N": 7
+    }
+  },
+  "meta_parameters": {
+    "number_periods": 8,
+    "number_workers": 9,
+    "number_shift_types": 3,
+    "coverage_regime": "weekend_night_and_day_peak",
+    "cost_regime": "night_specialists_with_generalists",
+    "availability_regime": "heterogeneous_weekend_patterns",
+    "peak_demand_flag": true,
+    "visual_type": "staffing_heatmap_plus_worker_profile_availability_matrix",
+    "seed": 908,
+    "formulation_size": 528
+  }
+}

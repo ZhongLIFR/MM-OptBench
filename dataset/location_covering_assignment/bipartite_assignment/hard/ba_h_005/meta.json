@@ -1,0 +1,21 @@
+{
+  "variant_type": "assignment",
+  "number_left_nodes": 60,
+  "number_right_nodes": 60,
+  "graph_density": 0.46,
+  "cost_regime": "sparse_low_cost_corridors",
+  "connectivity_pattern": "structured_sparse",
+  "sparsity_pattern": "cross_cluster_forbidden",
+  "symmetry_flag": false,
+  "seed": 305,
+  "visual_mode": "table_only",
+  "status": "optimal",
+  "objective_exact": 408.0,
+  "objective_value": 408.0,
+  "solver_policy": "prefer_gurobi_else_exact_fallback",
+  "solver_used": "gurobi",
+  "formulation_size": {
+    "variables": 1656,
+    "constraints": 120
+  }
+}

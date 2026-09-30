@@ -1,0 +1,68 @@
+Canonical specification for a deterministic single-zone hard-level energy dispatch and unit commitment instance.
+
+Interpretation:
+- The system operator chooses generator commitment and dispatch decisions across a multi-period planning horizon.
+- If a generator is off in a period, its output must be zero in that period.
+- If a generator is on in a period, its output must lie between its minimum and maximum output limits.
+- In every period, total generation across all generators must exactly equal system demand.
+- A startup cost is incurred whenever a generator changes from off in the previous period to on in the current period.
+- Generator output changes are restricted by ramp-up and ramp-down limits between consecutive periods.
+- Minimum up-time and minimum down-time constraints apply to each generator.
+- The initial commitment status and initial output before the first period are specified explicitly below.
+- No transmission network, reserve, stochastic, load-shedding, or multi-zone constraints are included.
+
+Sets:
+- Generators G = ['G1', 'G2', 'G3', 'G4', 'G5', 'G6', 'G7', 'G8', 'G9']
+- Periods T = ['t1', 't2', 't3', 't4', 't5', 't6', 't7', 't8', 't9', 't10', 't11', 't12', 't13', 't14', 't15', 't16', 't17', 't18', 't19', 't20', 't21', 't22', 't23', 't24', 't25', 't26']
+
+System demand by period:
+- t1=98, t2=102, t3=106, t4=112, t5=120, t6=132, t7=146, t8=156, t9=162, t10=158, t11=146, t12=130, t13=120, t14=126, t15=138, t16=152, t17=166, t18=174, t19=170, t20=156, t21=138, t22=124, t23=116, t24=110, t25=104, t26=98
+
+Generator parameters:
+- G1: marginal_cost=8, startup_cost=140, min_output=24, max_output=44, ramp_up=12, ramp_down=12, min_up=4, min_down=3, initial_status=1, initial_output=28
+- G2: marginal_cost=9, startup_cost=116, min_output=18, max_output=34, ramp_up=10, ramp_down=10, min_up=4, min_down=3, initial_status=1, initial_output=22
+- G3: marginal_cost=11, startup_cost=88, min_output=14, max_output=28, ramp_up=10, ramp_down=10, min_up=3, min_down=2, initial_status=1, initial_output=16
+- G4: marginal_cost=13, startup_cost=66, min_output=10, max_output=22, ramp_up=10, ramp_down=10, min_up=3, min_down=2, initial_status=1, initial_output=10
+- G5: marginal_cost=17, startup_cost=42, min_output=8, max_output=20, ramp_up=10, ramp_down=10, min_up=2, min_down=2, initial_status=0, initial_output=0
+- G6: marginal_cost=21, startup_cost=26, min_output=0, max_output=18, ramp_up=14, ramp_down=14, min_up=2, min_down=1, initial_status=0, initial_output=0
+- G7: marginal_cost=24, startup_cost=18, min_output=0, max_output=16, ramp_up=16, ramp_down=16, min_up=1, min_down=1, initial_status=0, initial_output=0
+- G8: marginal_cost=28, startup_cost=14, min_output=0, max_output=14, ramp_up=18, ramp_down=18, min_up=1, min_down=1, initial_status=0, initial_output=0
+- G9: marginal_cost=32, startup_cost=12, min_output=0, max_output=12, ramp_up=18, ramp_down=18, min_up=1, min_down=1, initial_status=0, initial_output=0
+
+Decision variables:
+- p[g,t] >= 0: generation output of generator g in period t
+- u[g,t] in {0,1}: equals 1 if generator g is on in period t
+- v[g,t] in {0,1}: equals 1 if generator g starts up in period t
+
+Objective:
+- Minimize the total marginal generation cost plus total startup cost across all generators and periods.
+
+Constraints:
+- Demand balance for every period: sum_g p[g,t] = D[t].
+- Minimum output for every generator-period: p[g,t] >= Pmin[g] * u[g,t].
+- Maximum output for every generator-period: p[g,t] <= Pmax[g] * u[g,t].
+- Startup definition for every generator-period: v[g,t] >= u[g,t] - u[g,t-1], with u[g,t0] equal to the given initial status.
+- Ramp-up and ramp-down constraints between consecutive periods, with the first period linked to the given initial output.
+- Minimum up-time constraints requiring commitment persistence after startup.
+- Minimum down-time constraints requiring off-status persistence after shutdown.
+- Nonnegativity of generation and binary commitment/startup variables.
+
+Metadata:
+- number_periods=26
+- number_units=9
+- demand_regime=extended_multi_peak
+- ramping_regime=mixed_with_slow_baseload
+- up_down_time_regime=strong_base_unit_persistence
+- capacity_regime=near_capacity_clusters
+- peak_load_flag=True
+- symmetry_flag=False
+- visual_type=economics_table_demand_timeline_capacity_ranges_separate
+- seed=1208
+- formulation_size=2366
+
+Visual interpretation:
+- visual_0.png shows generator-level economic parameters only: marginal generation cost and startup cost.
+- visual_1.png shows the exact demand value in every period.
+- visual_2.png shows each generator's minimum and maximum output range.
+- Temporal coupling parameters (ramp limits, minimum up/down times, initial conditions) are provided in the textual task statement and recorded in instance_data.json.
+- The visuals do not reveal the optimal commitment schedule, dispatch plan, startup pattern, or objective value.

@@ -1,0 +1,28 @@
+A power-system operations instance is specified by the accompanying visual artifacts.
+
+The instance uses two visual files.
+
+visual_0.png:
+- a generator economics table listing each generator together with its marginal generation cost and startup cost.
+
+visual_1.png:
+- a demand timeline showing the exact system demand in every period,
+- and a generator-capacity chart showing the minimum and maximum output range of each generator.
+
+Operational rules:
+- Each generator may be either off or on in each period.
+- If a generator is on, its output must lie between its minimum and maximum capacity.
+- If a generator is off, its output must be zero.
+- Total generation in each period must exactly match the demand shown in the figure.
+- Turning a generator on in a period incurs its startup cost if it was off in the immediately preceding period.
+- Ramping limits apply between consecutive periods: the increase in output cannot exceed the generator's ramp-up limit, and the decrease in output cannot exceed the generator's ramp-down limit.
+- Minimum up-time and minimum down-time requirements apply to each generator.
+- The initial on/off status before the first period is: G1=off, G2=off, G3=off, G4=off.
+- The generator ramp-up limits are: G1=20, G2=16, G3=18, G4=14.
+- The generator ramp-down limits are: G1=20, G2=16, G3=18, G4=14.
+- The generator minimum up-times are: G1=2, G2=2, G3=1, G4=1.
+- The generator minimum down-times are: G1=1, G2=1, G3=1, G4=1.
+- No transmission constraints, reserve constraints, load shedding, renewable uncertainty, or stochastic effects are included.
+
+Task:
+Build a mathematical optimization model for this exact instance and provide executable solver code.

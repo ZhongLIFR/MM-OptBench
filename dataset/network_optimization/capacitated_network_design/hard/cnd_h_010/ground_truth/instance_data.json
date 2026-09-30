@@ -1,0 +1,731 @@
+{
+  "instance_id": "cnd_h_010",
+  "family": "network_optimization",
+  "subtype": "capacitated_network_design",
+  "problem_type": "capacitated_network_design",
+  "variant": "single_visual_single_commodity_cnd",
+  "difficulty": "hard",
+  "topology_name": "cross_bridge_16",
+  "graph_type": "cross_bridge_16",
+  "scenario_name": "freight_bridge_contingency_plan",
+  "capacity_regime": "cross_bridge_and_direct_path_act_as_substitutes_under_high_demand",
+  "cost_regime": "small_bridge_activation_avoids_expensive_upper_routing_chain",
+  "design_pattern": "substitute_bridge_lane_with_staggered_tail_merges",
+  "binding_pattern": "bridge_entry_and_downstream_merge_binding",
+  "tradeoff_pattern": "open_bridge_shortcut_or_overpay_on_direct_upper_tail",
+  "structural_variant": "layered_network_with_cross_bridge_shortcuts",
+  "source": 1,
+  "sink": 16,
+  "required_flow": 12,
+  "shipment_amount": 12,
+  "nodes": [
+    1,
+    2,
+    3,
+    4,
+    5,
+    6,
+    7,
+    8,
+    9,
+    10,
+    11,
+    12,
+    13,
+    14,
+    15,
+    16
+  ],
+  "arc_ids": [
+    "e1",
+    "e2",
+    "e3",
+    "e4",
+    "e5",
+    "e6",
+    "e7",
+    "e8",
+    "e9",
+    "e10",
+    "e11",
+    "e12",
+    "e13",
+    "e14",
+    "e15",
+    "e16",
+    "e17",
+    "e18",
+    "e19",
+    "e20",
+    "e21",
+    "e22",
+    "e23",
+    "e24",
+    "e25"
+  ],
+  "node_roles": {
+    "source": 1,
+    "sink": 16,
+    "transshipment_nodes": [
+      2,
+      3,
+      4,
+      5,
+      6,
+      7,
+      8,
+      9,
+      10,
+      11,
+      12,
+      13,
+      14,
+      15
+    ]
+  },
+  "sets": {
+    "nodes": [
+      1,
+      2,
+      3,
+      4,
+      5,
+      6,
+      7,
+      8,
+      9,
+      10,
+      11,
+      12,
+      13,
+      14,
+      15,
+      16
+    ],
+    "arcs": [
+      "e1",
+      "e2",
+      "e3",
+      "e4",
+      "e5",
+      "e6",
+      "e7",
+      "e8",
+      "e9",
+      "e10",
+      "e11",
+      "e12",
+      "e13",
+      "e14",
+      "e15",
+      "e16",
+      "e17",
+      "e18",
+      "e19",
+      "e20",
+      "e21",
+      "e22",
+      "e23",
+      "e24",
+      "e25"
+    ]
+  },
+  "indices": {
+    "arc_to_endpoints": {
+      "e1": [
+        1,
+        2
+      ],
+      "e2": [
+        1,
+        3
+      ],
+      "e3": [
+        1,
+        4
+      ],
+      "e4": [
+        2,
+        5
+      ],
+      "e5": [
+        2,
+        6
+      ],
+      "e6": [
+        3,
+        6
+      ],
+      "e7": [
+        3,
+        7
+      ],
+      "e8": [
+        4,
+        7
+      ],
+      "e9": [
+        4,
+        8
+      ],
+      "e10": [
+        5,
+        10
+      ],
+      "e11": [
+        6,
+        9
+      ],
+      "e12": [
+        6,
+        10
+      ],
+      "e13": [
+        6,
+        11
+      ],
+      "e14": [
+        7,
+        10
+      ],
+      "e15": [
+        7,
+        11
+      ],
+      "e16": [
+        8,
+        11
+      ],
+      "e17": [
+        8,
+        12
+      ],
+      "e18": [
+        9,
+        13
+      ],
+      "e19": [
+        10,
+        14
+      ],
+      "e20": [
+        11,
+        14
+      ],
+      "e21": [
+        11,
+        15
+      ],
+      "e22": [
+        12,
+        15
+      ],
+      "e23": [
+        13,
+        16
+      ],
+      "e24": [
+        14,
+        16
+      ],
+      "e25": [
+        15,
+        16
+      ]
+    },
+    "source_node": 1,
+    "sink_node": 16
+  },
+  "positions": {
+    "1": [
+      0.0,
+      0.0
+    ],
+    "2": [
+      3.0,
+      4.0
+    ],
+    "3": [
+      3.0,
+      0.4
+    ],
+    "4": [
+      3.0,
+      -3.2
+    ],
+    "5": [
+      6.6,
+      5.0
+    ],
+    "6": [
+      6.6,
+      2.0
+    ],
+    "7": [
+      6.6,
+      -1.0
+    ],
+    "8": [
+      6.6,
+      -4.0
+    ],
+    "9": [
+      10.4,
+      4.4
+    ],
+    "10": [
+      10.4,
+      1.6
+    ],
+    "11": [
+      10.4,
+      -1.2
+    ],
+    "12": [
+      10.4,
+      -4.0
+    ],
+    "13": [
+      14.2,
+      3.6
+    ],
+    "14": [
+      14.2,
+      0.4
+    ],
+    "15": [
+      14.2,
+      -2.8
+    ],
+    "16": [
+      18.1,
+      0.0
+    ]
+  },
+  "coordinates": {
+    "1": {
+      "x": 0.0,
+      "y": 0.0
+    },
+    "2": {
+      "x": 3.0,
+      "y": 4.0
+    },
+    "3": {
+      "x": 3.0,
+      "y": 0.4
+    },
+    "4": {
+      "x": 3.0,
+      "y": -3.2
+    },
+    "5": {
+      "x": 6.6,
+      "y": 5.0
+    },
+    "6": {
+      "x": 6.6,
+      "y": 2.0
+    },
+    "7": {
+      "x": 6.6,
+      "y": -1.0
+    },
+    "8": {
+      "x": 6.6,
+      "y": -4.0
+    },
+    "9": {
+      "x": 10.4,
+      "y": 4.4
+    },
+    "10": {
+      "x": 10.4,
+      "y": 1.6
+    },
+    "11": {
+      "x": 10.4,
+      "y": -1.2
+    },
+    "12": {
+      "x": 10.4,
+      "y": -4.0
+    },
+    "13": {
+      "x": 14.2,
+      "y": 3.6
+    },
+    "14": {
+      "x": 14.2,
+      "y": 0.4
+    },
+    "15": {
+      "x": 14.2,
+      "y": -2.8
+    },
+    "16": {
+      "x": 18.1,
+      "y": 0.0
+    }
+  },
+  "demands": {
+    "required_flow": 12,
+    "node_balance": {
+      "1": 12,
+      "2": 0,
+      "3": 0,
+      "4": 0,
+      "5": 0,
+      "6": 0,
+      "7": 0,
+      "8": 0,
+      "9": 0,
+      "10": 0,
+      "11": 0,
+      "12": 0,
+      "13": 0,
+      "14": 0,
+      "15": 0,
+      "16": -12
+    }
+  },
+  "capacities": {
+    "e1": 13,
+    "e2": 13,
+    "e3": 5,
+    "e4": 11,
+    "e5": 7,
+    "e6": 8,
+    "e7": 14,
+    "e8": 9,
+    "e9": 3,
+    "e10": 4,
+    "e11": 11,
+    "e12": 8,
+    "e13": 11,
+    "e14": 4,
+    "e15": 11,
+    "e16": 11,
+    "e17": 8,
+    "e18": 12,
+    "e19": 4,
+    "e20": 5,
+    "e21": 12,
+    "e22": 14,
+    "e23": 11,
+    "e24": 11,
+    "e25": 5
+  },
+  "fixed_costs": {
+    "e1": 5,
+    "e2": 6,
+    "e3": 12,
+    "e4": 2,
+    "e5": 5,
+    "e6": 12,
+    "e7": 10,
+    "e8": 11,
+    "e9": 6,
+    "e10": 7,
+    "e11": 8,
+    "e12": 4,
+    "e13": 5,
+    "e14": 7,
+    "e15": 6,
+    "e16": 1,
+    "e17": 10,
+    "e18": 12,
+    "e19": 7,
+    "e20": 3,
+    "e21": 4,
+    "e22": 11,
+    "e23": 8,
+    "e24": 3,
+    "e25": 2
+  },
+  "variable_costs": {
+    "e1": 6,
+    "e2": 2,
+    "e3": 10,
+    "e4": 8,
+    "e5": 4,
+    "e6": 4,
+    "e7": 12,
+    "e8": 5,
+    "e9": 12,
+    "e10": 1,
+    "e11": 5,
+    "e12": 2,
+    "e13": 10,
+    "e14": 11,
+    "e15": 12,
+    "e16": 1,
+    "e17": 10,
+    "e18": 2,
+    "e19": 2,
+    "e20": 1,
+    "e21": 9,
+    "e22": 9,
+    "e23": 4,
+    "e24": 11,
+    "e25": 3
+  },
+  "arcs": [
+    {
+      "id": "e1",
+      "from": 1,
+      "to": 2,
+      "capacity": 13,
+      "fixed_cost": 5,
+      "variable_cost": 6
+    },
+    {
+      "id": "e2",
+      "from": 1,
+      "to": 3,
+      "capacity": 13,
+      "fixed_cost": 6,
+      "variable_cost": 2
+    },
+    {
+      "id": "e3",
+      "from": 1,
+      "to": 4,
+      "capacity": 5,
+      "fixed_cost": 12,
+      "variable_cost": 10
+    },
+    {
+      "id": "e4",
+      "from": 2,
+      "to": 5,
+      "capacity": 11,
+      "fixed_cost": 2,
+      "variable_cost": 8
+    },
+    {
+      "id": "e5",
+      "from": 2,
+      "to": 6,
+      "capacity": 7,
+      "fixed_cost": 5,
+      "variable_cost": 4
+    },
+    {
+      "id": "e6",
+      "from": 3,
+      "to": 6,
+      "capacity": 8,
+      "fixed_cost": 12,
+      "variable_cost": 4
+    },
+    {
+      "id": "e7",
+      "from": 3,
+      "to": 7,
+      "capacity": 14,
+      "fixed_cost": 10,
+      "variable_cost": 12
+    },
+    {
+      "id": "e8",
+      "from": 4,
+      "to": 7,
+      "capacity": 9,
+      "fixed_cost": 11,
+      "variable_cost": 5
+    },
+    {
+      "id": "e9",
+      "from": 4,
+      "to": 8,
+      "capacity": 3,
+      "fixed_cost": 6,
+      "variable_cost": 12
+    },
+    {
+      "id": "e10",
+      "from": 5,
+      "to": 10,
+      "capacity": 4,
+      "fixed_cost": 7,
+      "variable_cost": 1
+    },
+    {
+      "id": "e11",
+      "from": 6,
+      "to": 9,
+      "capacity": 11,
+      "fixed_cost": 8,
+      "variable_cost": 5
+    },
+    {
+      "id": "e12",
+      "from": 6,
+      "to": 10,
+      "capacity": 8,
+      "fixed_cost": 4,
+      "variable_cost": 2
+    },
+    {
+      "id": "e13",
+      "from": 6,
+      "to": 11,
+      "capacity": 11,
+      "fixed_cost": 5,
+      "variable_cost": 10
+    },
+    {
+      "id": "e14",
+      "from": 7,
+      "to": 10,
+      "capacity": 4,
+      "fixed_cost": 7,
+      "variable_cost": 11
+    },
+    {
+      "id": "e15",
+      "from": 7,
+      "to": 11,
+      "capacity": 11,
+      "fixed_cost": 6,
+      "variable_cost": 12
+    },
+    {
+      "id": "e16",
+      "from": 8,
+      "to": 11,
+      "capacity": 11,
+      "fixed_cost": 1,
+      "variable_cost": 1
+    },
+    {
+      "id": "e17",
+      "from": 8,
+      "to": 12,
+      "capacity": 8,
+      "fixed_cost": 10,
+      "variable_cost": 10
+    },
+    {
+      "id": "e18",
+      "from": 9,
+      "to": 13,
+      "capacity": 12,
+      "fixed_cost": 12,
+      "variable_cost": 2
+    },
+    {
+      "id": "e19",
+      "from": 10,
+      "to": 14,
+      "capacity": 4,
+      "fixed_cost": 7,
+      "variable_cost": 2
+    },
+    {
+      "id": "e20",
+      "from": 11,
+      "to": 14,
+      "capacity": 5,
+      "fixed_cost": 3,
+      "variable_cost": 1
+    },
+    {
+      "id": "e21",
+      "from": 11,
+      "to": 15,
+      "capacity": 12,
+      "fixed_cost": 4,
+      "variable_cost": 9
+    },
+    {
+      "id": "e22",
+      "from": 12,
+      "to": 15,
+      "capacity": 14,
+      "fixed_cost": 11,
+      "variable_cost": 9
+    },
+    {
+      "id": "e23",
+      "from": 13,
+      "to": 16,
+      "capacity": 11,
+      "fixed_cost": 8,
+      "variable_cost": 4
+    },
+    {
+      "id": "e24",
+      "from": 14,
+      "to": 16,
+      "capacity": 11,
+      "fixed_cost": 3,
+      "variable_cost": 11
+    },
+    {
+      "id": "e25",
+      "from": 15,
+      "to": 16,
+      "capacity": 5,
+      "fixed_cost": 2,
+      "variable_cost": 3
+    }
+  ],
+  "visual_settings": {
+    "curve_by_arc": {
+      "e10": 0.16
+    },
+    "label_t_by_arc": {
+      "e10": 0.58,
+      "e12": 0.44,
+      "e13": 0.6,
+      "e14": 0.4,
+      "e19": 0.44,
+      "e20": 0.56,
+      "e21": 0.42,
+      "e22": 0.58
+    },
+    "label_shift_by_arc": {
+      "e10": [
+        0.0,
+        0.12
+      ],
+      "e12": [
+        -0.1,
+        0.08
+      ],
+      "e13": [
+        0.1,
+        0.1
+      ],
+      "e14": [
+        -0.1,
+        -0.08
+      ],
+      "e19": [
+        -0.1,
+        0.08
+      ],
+      "e20": [
+        0.1,
+        -0.08
+      ],
+      "e21": [
+        -0.1,
+        0.08
+      ],
+      "e22": [
+        0.1,
+        -0.08
+      ]
+    },
+    "edge_shift_by_arc": {}
+  },
+  "visual_encoding": {
+    "title": "Planning Network Diagram",
+    "arc_label_format": "[capacity, fixed_cost, variable_cost]",
+    "banner_template": "Ship exactly 12 units from S to T",
+    "visual_type": "single_visual_topology_with_inline_arc_triplets"
+  }
+}

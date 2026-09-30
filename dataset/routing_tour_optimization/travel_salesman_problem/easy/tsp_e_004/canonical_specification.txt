@@ -1,0 +1,59 @@
+Canonical specification for a deterministic Traveling Salesman Problem instance.
+
+Interpretation:
+- A single closed tour must visit every city exactly once and return to its starting city.
+- Travel between every pair of distinct cities is allowed, so the graph is complete.
+- Travel costs are symmetric: c[i,j] = c[j,i].
+- The displayed city coordinates determine the geometric layout shown in the visual map.
+- The optimization goal is to minimize the total tour length.
+
+Sets:
+- Cities N = ['A', 'B', 'C', 'D', 'E', 'F']
+- Directed arcs A = [(i,j) for i,j in N, i != j]
+- Reference city for symmetry breaking in the MTZ model: s = A
+
+Coordinates by city:
+- A: (1.3, 2.0)
+- B: (2.4, 3.5)
+- C: (2.0, 5.6)
+- D: (7.0, 1.7)
+- E: (7.8, 3.9)
+- F: (8.5, 6.0)
+
+Complete symmetric travel-cost matrix:
+- A: A=0.0000, B=1.8601, C=3.6674, D=5.7079, E=6.7720, F=8.2365
+- B: A=1.8601, B=0.0000, C=2.1378, D=4.9396, E=5.4148, F=6.5924
+- C: A=3.6674, B=2.1378, C=0.0000, D=6.3411, E=6.0440, F=6.5123
+- D: A=5.7079, B=4.9396, C=6.3411, D=0.0000, E=2.3409, F=4.5541
+- E: A=6.7720, B=5.4148, C=6.0440, D=2.3409, E=0.0000, F=2.2136
+- F: A=8.2365, B=6.5924, C=6.5123, D=4.5541, E=2.2136, F=0.0000
+
+Decision variables:
+- x[i,j] in {0,1}: equals 1 if the tour directly travels from city i to city j
+- u[i]: visit-order variable for MTZ subtour elimination, defined for all cities except the reference city
+
+Objective:
+- Minimize total travel cost sum_{i != j} c[i,j] * x[i,j].
+
+Constraints:
+- Exactly one outgoing arc from every city.
+- Exactly one incoming arc to every city.
+- MTZ subtour elimination constraints over all non-reference cities.
+- Binary arc variables and bounded order variables.
+
+Metadata:
+- number_nodes=6
+- layout_type=clustered_euclidean
+- cost_matrix_type=euclidean_exact
+- symmetry_flag=false
+- visual_type=euclidean_city_map_with_cost_rule_box
+- seed=1404
+- group=B
+- formulation_size=77
+
+Visual interpretation:
+- The figure shows one marker per city on a two-dimensional Euclidean map.
+- Each city label includes its exact coordinate pair.
+- A cost-rule box states how pairwise travel costs are derived from the plotted coordinates.
+- The complete graph edges are intentionally omitted to avoid clutter.
+- The visual does not reveal the optimal tour, selected arcs, or objective value.

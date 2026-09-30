@@ -1,0 +1,14 @@
+A collection of candidate groups is specified by the accompanying figure.
+
+The figure provides all instance-specific data needed for the optimization problem.
+
+How to read the figure:
+- each row corresponds to one candidate group,
+- each column corresponds to one item,
+- a filled cell means that the item belongs to that group,
+- an empty cell means that the item does not belong to that group,
+- and the horizontal bar with its adjacent integer gives that group's value.
+
+Using exactly the data shown in the figure, build a discrete selection model in which groups may be selected or not selected, no item may appear in more than one selected group, and the total selected value is maximized.
+
+Return a mathematical optimization model and solver-executable code for this exact instance.

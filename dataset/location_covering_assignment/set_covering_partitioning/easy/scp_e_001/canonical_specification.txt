@@ -1,0 +1,55 @@
+This is a single-period abstract subset-selection instance.
+
+Instance ID: scp_e_001
+Variant: set_covering
+Difficulty: easy
+Incidence structure: local_overlap_chain
+Cost regime: size_correlated_with_small_shortcuts
+
+Elements:
+- E1
+- E2
+- E3
+- E4
+- E5
+- E6
+- E7
+- E8
+
+Candidate subsets and subset costs:
+- S1: cost=4, contains E1, E2, E3
+- S2: cost=5, contains E3, E4, E5
+- S3: cost=5, contains E5, E6, E7
+- S4: cost=3, contains E7, E8
+- S5: cost=3, contains E1, E4
+- S6: cost=4, contains E2, E5, E8
+- S7: cost=2, contains E4, E6
+
+Coverage options by element:
+- E1: S1, S5
+- E2: S1, S6
+- E3: S1, S2
+- E4: S2, S5, S7
+- E5: S2, S3, S6
+- E6: S3, S7
+- E7: S3, S4
+- E8: S4, S6
+
+Objective:
+- Minimize total subset cost.
+
+Constraints:
+- Every element must be covered by at least one selected subset.
+- All subset-selection variables are binary.
+
+Metadata summary:
+- number_of_elements = 8
+- number_of_candidate_subsets = 7
+- average_subset_size = 2.5714
+- incidence_density = 0.3214
+- critical_elements = E1, E2, E3, E6, E7, E8
+
+Visual interpretation:
+- The visual is a single exact candidate-subset table.
+- Rows correspond to candidate subsets and columns correspond to elements.
+- Filled cells indicate membership and the left bars show exact subset costs.

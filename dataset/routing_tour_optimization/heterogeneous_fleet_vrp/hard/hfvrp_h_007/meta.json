@@ -1,0 +1,66 @@
+{
+  "number_customers": 21,
+  "number_vehicle_types": 4,
+  "number_available_vehicles": 6,
+  "total_demand": 46,
+  "aggregate_capacity": 54,
+  "utilization_ratio": 0.8519,
+  "vehicle_type_summary": [
+    {
+      "type_id": "MI",
+      "available_count": 1,
+      "capacity": 6,
+      "fixed_activation_cost": 0.7,
+      "distance_multiplier": 1.34
+    },
+    {
+      "type_id": "SM",
+      "available_count": 2,
+      "capacity": 8,
+      "fixed_activation_cost": 1.45,
+      "distance_multiplier": 1.19
+    },
+    {
+      "type_id": "MD",
+      "available_count": 2,
+      "capacity": 10,
+      "fixed_activation_cost": 3.05,
+      "distance_multiplier": 1.01
+    },
+    {
+      "type_id": "LG",
+      "available_count": 1,
+      "capacity": 12,
+      "fixed_activation_cost": 6.9,
+      "distance_multiplier": 0.82
+    }
+  ],
+  "layout_type": "dense_core_plus_outliers",
+  "demand_regime": "mixed_low_high_demands",
+  "fleet_tradeoff_pattern": "four_type_interpretable_tradeoff",
+  "heterogeneity_pattern": "four_type_interpretable_tradeoff",
+  "scarce_type_flag": false,
+  "fixed_cost_flag": true,
+  "distance_multiplier_flag": true,
+  "capacity_binding_target": true,
+  "capacity_binding_flag": true,
+  "near_optimal_partition_flag": true,
+  "hard_readability_format": "large_map_with_embedded_exact_node_annotations_and_fleet_table",
+  "visual_type": "composite_map_embedded_node_annotations_and_fleet_table_visual",
+  "base_distance_type": "rounded_euclidean_2dp",
+  "seed": 5407,
+  "group": "B",
+  "formulation_size": 5862,
+  "instance_id": "hfvrp_h_007",
+  "variant": "heterogeneous_fleet_vrp",
+  "scenario": "heterogeneous_fleet_vrp",
+  "difficulty": "hard",
+  "objective_value": 61.7928,
+  "objective_exact": 61.7928,
+  "status": "optimal",
+  "runtime_seconds": 12.810961791081354,
+  "num_routes_used": 5,
+  "solve_method": "exact_route_set_dp_hfvrp",
+  "solver": "Exact route-set DP (custom Python)",
+  "visual_checksum_md5": "b00f46610950fe44ed38a2c65e224319"
+}

@@ -1,0 +1,196 @@
+{
+  "status": "optimal",
+  "objective": 219,
+  "objective_exact": 219.0,
+  "runtime_seconds": 0.0038886249531060457,
+  "assignment_cost": 219.0,
+  "assignments_by_day": {
+    "Mon": {
+      "D": [
+        "W1",
+        "W4"
+      ],
+      "E": [
+        "W3"
+      ],
+      "N": [
+        "W5"
+      ]
+    },
+    "Tue": {
+      "D": [
+        "W1",
+        "W4"
+      ],
+      "E": [
+        "W3"
+      ],
+      "N": [
+        "W5"
+      ]
+    },
+    "Wed": {
+      "D": [
+        "W1",
+        "W4"
+      ],
+      "E": [
+        "W3"
+      ],
+      "N": [
+        "W5"
+      ]
+    },
+    "Thu": {
+      "D": [
+        "W1",
+        "W4"
+      ],
+      "E": [
+        "W3"
+      ],
+      "N": [
+        "W5"
+      ]
+    },
+    "Fri": {
+      "D": [
+        "W1",
+        "W4"
+      ],
+      "E": [
+        "W3"
+      ],
+      "N": [
+        "W5"
+      ]
+    },
+    "Sat": {
+      "D": [
+        "W1",
+        "W4"
+      ],
+      "E": [
+        "W2",
+        "W3"
+      ],
+      "N": [
+        "W5"
+      ]
+    },
+    "Sun": {
+      "D": [
+        "W1",
+        "W4"
+      ],
+      "E": [
+        "W3"
+      ],
+      "N": [
+        "W5"
+      ]
+    }
+  },
+  "coverage_realized": {
+    "Mon": {
+      "D": 2,
+      "E": 1,
+      "N": 1
+    },
+    "Tue": {
+      "D": 2,
+      "E": 1,
+      "N": 1
+    },
+    "Wed": {
+      "D": 2,
+      "E": 1,
+      "N": 1
+    },
+    "Thu": {
+      "D": 2,
+      "E": 1,
+      "N": 1
+    },
+    "Fri": {
+      "D": 2,
+      "E": 1,
+      "N": 1
+    },
+    "Sat": {
+      "D": 2,
+      "E": 2,
+      "N": 1
+    },
+    "Sun": {
+      "D": 2,
+      "E": 1,
+      "N": 1
+    }
+  },
+  "worker_schedule": {
+    "W1": {
+      "Mon": "D",
+      "Tue": "D",
+      "Wed": "D",
+      "Thu": "D",
+      "Fri": "D",
+      "Sat": "D",
+      "Sun": "D"
+    },
+    "W2": {
+      "Mon": "OFF",
+      "Tue": "OFF",
+      "Wed": "OFF",
+      "Thu": "OFF",
+      "Fri": "OFF",
+      "Sat": "E",
+      "Sun": "OFF"
+    },
+    "W3": {
+      "Mon": "E",
+      "Tue": "E",
+      "Wed": "E",
+      "Thu": "E",
+      "Fri": "E",
+      "Sat": "E",
+      "Sun": "E"
+    },
+    "W4": {
+      "Mon": "D",
+      "Tue": "D",
+      "Wed": "D",
+      "Thu": "D",
+      "Fri": "D",
+      "Sat": "D",
+      "Sun": "D"
+    },
+    "W5": {
+      "Mon": "N",
+      "Tue": "N",
+      "Wed": "N",
+      "Thu": "N",
+      "Fri": "N",
+      "Sat": "N",
+      "Sun": "N"
+    },
+    "W6": {
+      "Mon": "OFF",
+      "Tue": "OFF",
+      "Wed": "OFF",
+      "Thu": "OFF",
+      "Fri": "OFF",
+      "Sat": "OFF",
+      "Sun": "OFF"
+    }
+  },
+  "worker_total_assignments": {
+    "W1": 7,
+    "W2": 1,
+    "W3": 7,
+    "W4": 7,
+    "W5": 7,
+    "W6": 0
+  },
+  "solve_method": "gurobi_milp_wpss_easy"
+}

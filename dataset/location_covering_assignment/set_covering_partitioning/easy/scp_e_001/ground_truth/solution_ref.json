@@ -1,0 +1,42 @@
+{
+  "instance_id": "scp_e_001",
+  "status": "optimal",
+  "is_feasible": true,
+  "objective_exact": 13.0,
+  "objective_value": 13.0,
+  "solver_policy": "prefer_gurobi_else_exact_fallback",
+  "solver_used": "gurobi",
+  "solve_method": "gurobi_binary_set_covering_mip",
+  "optimality_proof": "gurobi_mip_optimal_status",
+  "runtime_seconds": 0.018647,
+  "selected_subsets": [
+    "S1",
+    "S4",
+    "S6",
+    "S7"
+  ],
+  "selected_subset_count": 4,
+  "coverage_count_by_element": {
+    "E1": 1,
+    "E2": 2,
+    "E3": 1,
+    "E4": 1,
+    "E5": 1,
+    "E6": 1,
+    "E7": 1,
+    "E8": 2
+  },
+  "constraint_style": "cover_at_least_once",
+  "binding_elements": [
+    "E1",
+    "E3",
+    "E4",
+    "E5",
+    "E6",
+    "E7"
+  ],
+  "redundantly_covered_elements": [
+    "E2",
+    "E8"
+  ]
+}

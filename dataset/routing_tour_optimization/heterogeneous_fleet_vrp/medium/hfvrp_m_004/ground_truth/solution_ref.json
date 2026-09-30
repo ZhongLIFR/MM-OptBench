@@ -1,0 +1,185 @@
+{
+  "status": "optimal",
+  "objective": 54.601,
+  "objective_exact": 54.601000000000006,
+  "runtime_seconds": 7.161355042015202,
+  "solve_method": "gurobi_mtz_hfvrp",
+  "routes": [
+    [
+      "Depot",
+      "C6",
+      "Depot"
+    ],
+    [
+      "Depot",
+      "C14",
+      "C11",
+      "C9",
+      "Depot"
+    ],
+    [
+      "Depot",
+      "C2",
+      "C3",
+      "C1",
+      "Depot"
+    ],
+    [
+      "Depot",
+      "C4",
+      "C5",
+      "C8",
+      "C7",
+      "C13",
+      "C12",
+      "C10",
+      "Depot"
+    ]
+  ],
+  "route_vehicle_ids": [
+    "SM1",
+    "MD1",
+    "MD2",
+    "LG1"
+  ],
+  "route_vehicle_types": [
+    "SM",
+    "MD",
+    "MD",
+    "LG"
+  ],
+  "route_loads": [
+    5,
+    7,
+    7,
+    11
+  ],
+  "route_capacities": [
+    5,
+    7,
+    7,
+    11
+  ],
+  "route_base_distances": [
+    4.5,
+    11.05,
+    8.95,
+    19.35
+  ],
+  "route_variable_costs": [
+    5.76,
+    11.492,
+    9.308,
+    16.641
+  ],
+  "route_total_costs": [
+    6.46,
+    13.892,
+    11.708,
+    22.541
+  ],
+  "activated_vehicles": [
+    "SM1",
+    "MD1",
+    "MD2",
+    "LG1"
+  ],
+  "unused_vehicles": [
+    "SM2"
+  ],
+  "active_arcs": [
+    [
+      "Depot",
+      "C6",
+      "SM1"
+    ],
+    [
+      "C6",
+      "Depot",
+      "SM1"
+    ],
+    [
+      "Depot",
+      "C14",
+      "MD1"
+    ],
+    [
+      "C14",
+      "C11",
+      "MD1"
+    ],
+    [
+      "C11",
+      "C9",
+      "MD1"
+    ],
+    [
+      "C9",
+      "Depot",
+      "MD1"
+    ],
+    [
+      "Depot",
+      "C2",
+      "MD2"
+    ],
+    [
+      "C2",
+      "C3",
+      "MD2"
+    ],
+    [
+      "C3",
+      "C1",
+      "MD2"
+    ],
+    [
+      "C1",
+      "Depot",
+      "MD2"
+    ],
+    [
+      "Depot",
+      "C4",
+      "LG1"
+    ],
+    [
+      "C4",
+      "C5",
+      "LG1"
+    ],
+    [
+      "C5",
+      "C8",
+      "LG1"
+    ],
+    [
+      "C8",
+      "C7",
+      "LG1"
+    ],
+    [
+      "C7",
+      "C13",
+      "LG1"
+    ],
+    [
+      "C13",
+      "C12",
+      "LG1"
+    ],
+    [
+      "C12",
+      "C10",
+      "LG1"
+    ],
+    [
+      "C10",
+      "Depot",
+      "LG1"
+    ]
+  ],
+  "num_routes_used": 4,
+  "capacity_binding_flag": true,
+  "objective_from_routes": 54.601
+}

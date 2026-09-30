@@ -1,0 +1,147 @@
+Canonical specification for a deterministic 0-1 multi-dimensional knapsack instance.
+
+Interpretation:
+- Each candidate item may either be selected or not selected.
+- Selecting item i contributes its item-specific value.
+- Selecting item i consumes resource in every displayed resource dimension according to the instance-specific coefficients.
+- For each resource dimension, total consumption of selected items must not exceed the corresponding resource limit.
+- There are no fractional selections, logical dependencies between items, stochastic parameters, time-indexed extensions, or nonlinear terms.
+- The optimization goal is to maximize the total value of selected items.
+
+Sets:
+- Items I = [1, 2, 3, 4, 5, 6, 7, 8, 9, 10, 11, 12, 13, 14, 15, 16, 17, 18, 19, 20, 21, 22, 23, 24, 25, 26, 27, 28, 29, 30, 31, 32, 33, 34, 35, 36, 37, 38, 39, 40, 41, 42, 43, 44, 45, 46]
+- Resource dimensions R = ['R1', 'R2', 'R3', 'R4', 'R5']
+
+Parameters:
+- value[1] = 92
+- value[2] = 85
+- value[3] = 67
+- value[4] = 61
+- value[5] = 80
+- value[6] = 84
+- value[7] = 77
+- value[8] = 72
+- value[9] = 64
+- value[10] = 78
+- value[11] = 87
+- value[12] = 87
+- value[13] = 61
+- value[14] = 69
+- value[15] = 84
+- value[16] = 89
+- value[17] = 89
+- value[18] = 64
+- value[19] = 66
+- value[20] = 83
+- value[21] = 87
+- value[22] = 84
+- value[23] = 74
+- value[24] = 58
+- value[25] = 79
+- value[26] = 84
+- value[27] = 81
+- value[28] = 64
+- value[29] = 68
+- value[30] = 77
+- value[31] = 92
+- value[32] = 86
+- value[33] = 58
+- value[34] = 58
+- value[35] = 80
+- value[36] = 92
+- value[37] = 80
+- value[38] = 67
+- value[39] = 75
+- value[40] = 82
+- value[41] = 92
+- value[42] = 92
+- value[43] = 73
+- value[44] = 70
+- value[45] = 82
+- value[46] = 92
+
+Resource-consumption matrix by item:
+- item 1: R1=7, R2=9, R3=10, R4=11, R5=8
+- item 2: R1=3, R2=4, R3=11, R4=5, R5=9
+- item 3: R1=10, R2=5, R3=2, R4=6, R5=7
+- item 4: R1=8, R2=12, R3=3, R4=10, R5=7
+- item 5: R1=5, R2=9, R3=8, R4=6, R5=9
+- item 6: R1=8, R2=10, R3=8, R4=10, R5=8
+- item 7: R1=2, R2=4, R3=10, R4=3, R5=11
+- item 8: R1=10, R2=6, R3=4, R4=6, R5=8
+- item 9: R1=8, R2=10, R3=3, R4=10, R5=8
+- item 10: R1=3, R2=9, R3=9, R4=7, R5=11
+- item 11: R1=7, R2=8, R3=10, R4=12, R5=7
+- item 12: R1=3, R2=4, R3=12, R4=5, R5=10
+- item 13: R1=8, R2=6, R3=4, R4=5, R5=7
+- item 14: R1=7, R2=11, R3=4, R4=10, R5=8
+- item 15: R1=4, R2=10, R3=9, R4=8, R5=11
+- item 16: R1=8, R2=9, R3=10, R4=11, R5=7
+- item 17: R1=4, R2=6, R3=11, R4=3, R5=11
+- item 18: R1=8, R2=5, R3=2, R4=6, R5=7
+- item 19: R1=7, R2=10, R3=4, R4=9, R5=8
+- item 20: R1=3, R2=11, R3=8, R4=7, R5=11
+- item 21: R1=8, R2=8, R3=8, R4=11, R5=8
+- item 22: R1=3, R2=6, R3=12, R4=4, R5=9
+- item 23: R1=10, R2=6, R3=3, R4=4, R5=8
+- item 24: R1=7, R2=12, R3=3, R4=8, R5=7
+- item 25: R1=4, R2=11, R3=8, R4=8, R5=10
+- item 26: R1=8, R2=9, R3=10, R4=10, R5=7
+- item 27: R1=3, R2=4, R3=10, R4=5, R5=9
+- item 28: R1=10, R2=6, R3=2, R4=4, R5=6
+- item 29: R1=8, R2=11, R3=3, R4=9, R5=8
+- item 30: R1=4, R2=10, R3=7, R4=8, R5=10
+- item 31: R1=9, R2=8, R3=8, R4=11, R5=9
+- item 32: R1=4, R2=6, R3=11, R4=3, R5=10
+- item 33: R1=9, R2=5, R3=2, R4=6, R5=6
+- item 34: R1=7, R2=12, R3=3, R4=10, R5=8
+- item 35: R1=3, R2=11, R3=7, R4=7, R5=11
+- item 36: R1=9, R2=8, R3=10, R4=10, R5=7
+- item 37: R1=4, R2=4, R3=10, R4=5, R5=9
+- item 38: R1=9, R2=7, R3=3, R4=4, R5=6
+- item 39: R1=7, R2=10, R3=5, R4=10, R5=7
+- item 40: R1=3, R2=11, R3=9, R4=8, R5=11
+- item 41: R1=9, R2=9, R3=10, R4=11, R5=9
+- item 42: R1=4, R2=4, R3=12, R4=3, R5=11
+- item 43: R1=10, R2=5, R3=2, R4=6, R5=8
+- item 44: R1=7, R2=11, R3=4, R4=9, R5=9
+- item 45: R1=5, R2=11, R3=8, R4=6, R5=10
+- item 46: R1=9, R2=9, R3=10, R4=10, R5=9
+
+Resource limits:
+- limit[R1] = 77
+- limit[R2] = 99
+- limit[R3] = 88
+- limit[R4] = 98
+- limit[R5] = 121
+
+Decision variables:
+- x[i] in {0,1}: equals 1 if item i is selected and 0 otherwise.
+
+Objective:
+- Maximize total value sum_i value[i] * x[i].
+
+Constraints:
+- For every resource dimension r, sum_i weight[i,r] * x[i] <= limit[r].
+- Binary decision domains for all selection variables.
+
+Metadata:
+- number_items=46
+- number_dimensions=5
+- total_capacity_per_dimension=[77, 99, 88, 98, 121]
+- capacity_tightness_type=multi_tight
+- profit_weight_correlation_type=mixed_correlation
+- weight_distribution_type=near_duplicate_items
+- binding_constraint_count=3
+- near_critical_flag=False
+- seed=4404
+- group=B
+- visual_type=bars_resource_usage_chart
+- formulation_size=51
+
+Visual interpretation:
+- The figure shows one row per item and uses numeric item identifiers only.
+- The orange box in each row gives the item value.
+- Colored segments in the row encode per-resource consumption for that item.
+- Resource-limit bars at the bottom encode the capacity of each resource dimension.
+- The visual does not reveal the selected subset, the optimal objective value, or any feasibility status.

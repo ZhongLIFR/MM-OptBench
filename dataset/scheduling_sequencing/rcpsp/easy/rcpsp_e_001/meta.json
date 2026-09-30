@@ -1,0 +1,33 @@
+{
+  "number_activities": 8,
+  "number_real_activities": 6,
+  "number_resources": 2,
+  "precedence_density": 0.3571,
+  "resource_capacity_regime": "tight",
+  "duration_regime": "mixed_with_single_long_activity",
+  "bottleneck_resource_flag": true,
+  "graph_pattern": "branch_merge_diamond",
+  "group": "A",
+  "visual_type": "dual_visual_precedence_network_plus_resource_matrix",
+  "seed": 1301,
+  "formulation_size": 138,
+  "instance_id": "rcpsp_e_001",
+  "variant": "single_project_renewable_rcpsp",
+  "scenario": "resource_constrained_project_scheduling",
+  "difficulty": "easy",
+  "objective": "minimize_makespan",
+  "objective_value": 12,
+  "objective_exact": 12.0,
+  "optimal_makespan": 12,
+  "status": "optimal",
+  "runtime_seconds": 0.019681875128298998,
+  "solve_method": "gurobi_time_indexed_rcpsp_easy",
+  "solver": "Gurobi",
+  "binding_resources": [
+    "R1",
+    "R2"
+  ],
+  "binding_resource_count": 2,
+  "visual_0_checksum_md5": "48d48401dc1b69f2a796f3e54347f653",
+  "visual_1_checksum_md5": "7764bdeb0ab4a2fa1549661c47d60998"
+}

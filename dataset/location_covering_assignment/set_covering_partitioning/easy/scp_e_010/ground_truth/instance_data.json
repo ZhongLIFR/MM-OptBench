@@ -1,0 +1,564 @@
+{
+  "instance_id": "scp_e_010",
+  "problem_type": "set_covering_partitioning",
+  "variant_type": "set_partitioning",
+  "difficulty": "easy",
+  "objective_sense": "minimize",
+  "visual_type": "single_visual_incidence_matrix_with_subset_cost_bars",
+  "incidence_structure": "staggered_exact_cover_with_singleton_tail",
+  "cost_regime": "mixed_pair_and_triplet_costs",
+  "random_seed": 2010,
+  "sets": {
+    "E": [
+      "E1",
+      "E2",
+      "E3",
+      "E4",
+      "E5",
+      "E6",
+      "E7",
+      "E8",
+      "E9",
+      "E10",
+      "E11"
+    ],
+    "S": [
+      "S1",
+      "S2",
+      "S3",
+      "S4",
+      "S5",
+      "S6",
+      "S7",
+      "S8",
+      "S9",
+      "S10"
+    ]
+  },
+  "indices": {
+    "elements": "E",
+    "candidate_subsets": "S"
+  },
+  "candidate_subsets": {
+    "S1": {
+      "covered_elements": [
+        "E1",
+        "E2"
+      ],
+      "cost": 3,
+      "cardinality": 2
+    },
+    "S2": {
+      "covered_elements": [
+        "E1",
+        "E2",
+        "E3"
+      ],
+      "cost": 4,
+      "cardinality": 3
+    },
+    "S3": {
+      "covered_elements": [
+        "E3",
+        "E4"
+      ],
+      "cost": 3,
+      "cardinality": 2
+    },
+    "S4": {
+      "covered_elements": [
+        "E5",
+        "E6"
+      ],
+      "cost": 3,
+      "cardinality": 2
+    },
+    "S5": {
+      "covered_elements": [
+        "E4",
+        "E5",
+        "E6"
+      ],
+      "cost": 4,
+      "cardinality": 3
+    },
+    "S6": {
+      "covered_elements": [
+        "E7",
+        "E8"
+      ],
+      "cost": 3,
+      "cardinality": 2
+    },
+    "S7": {
+      "covered_elements": [
+        "E9",
+        "E10"
+      ],
+      "cost": 3,
+      "cardinality": 2
+    },
+    "S8": {
+      "covered_elements": [
+        "E9",
+        "E10",
+        "E11"
+      ],
+      "cost": 4,
+      "cardinality": 3
+    },
+    "S9": {
+      "covered_elements": [
+        "E11"
+      ],
+      "cost": 3,
+      "cardinality": 1
+    },
+    "S10": {
+      "covered_elements": [
+        "E2",
+        "E7",
+        "E9"
+      ],
+      "cost": 5,
+      "cardinality": 3
+    }
+  },
+  "subset_costs": {
+    "S1": 3,
+    "S2": 4,
+    "S3": 3,
+    "S4": 3,
+    "S5": 4,
+    "S6": 3,
+    "S7": 3,
+    "S8": 4,
+    "S9": 3,
+    "S10": 5
+  },
+  "subset_cost_vector": [
+    3,
+    4,
+    3,
+    3,
+    4,
+    3,
+    3,
+    4,
+    3,
+    5
+  ],
+  "element_to_subsets": {
+    "E1": [
+      "S1",
+      "S2"
+    ],
+    "E2": [
+      "S1",
+      "S2",
+      "S10"
+    ],
+    "E3": [
+      "S2",
+      "S3"
+    ],
+    "E4": [
+      "S3",
+      "S5"
+    ],
+    "E5": [
+      "S4",
+      "S5"
+    ],
+    "E6": [
+      "S4",
+      "S5"
+    ],
+    "E7": [
+      "S6",
+      "S10"
+    ],
+    "E8": [
+      "S6"
+    ],
+    "E9": [
+      "S7",
+      "S8",
+      "S10"
+    ],
+    "E10": [
+      "S7",
+      "S8"
+    ],
+    "E11": [
+      "S8",
+      "S9"
+    ]
+  },
+  "incidence_matrix": {
+    "E1": {
+      "S1": 1,
+      "S2": 1,
+      "S3": 0,
+      "S4": 0,
+      "S5": 0,
+      "S6": 0,
+      "S7": 0,
+      "S8": 0,
+      "S9": 0,
+      "S10": 0
+    },
+    "E2": {
+      "S1": 1,
+      "S2": 1,
+      "S3": 0,
+      "S4": 0,
+      "S5": 0,
+      "S6": 0,
+      "S7": 0,
+      "S8": 0,
+      "S9": 0,
+      "S10": 1
+    },
+    "E3": {
+      "S1": 0,
+      "S2": 1,
+      "S3": 1,
+      "S4": 0,
+      "S5": 0,
+      "S6": 0,
+      "S7": 0,
+      "S8": 0,
+      "S9": 0,
+      "S10": 0
+    },
+    "E4": {
+      "S1": 0,
+      "S2": 0,
+      "S3": 1,
+      "S4": 0,
+      "S5": 1,
+      "S6": 0,
+      "S7": 0,
+      "S8": 0,
+      "S9": 0,
+      "S10": 0
+    },
+    "E5": {
+      "S1": 0,
+      "S2": 0,
+      "S3": 0,
+      "S4": 1,
+      "S5": 1,
+      "S6": 0,
+      "S7": 0,
+      "S8": 0,
+      "S9": 0,
+      "S10": 0
+    },
+    "E6": {
+      "S1": 0,
+      "S2": 0,
+      "S3": 0,
+      "S4": 1,
+      "S5": 1,
+      "S6": 0,
+      "S7": 0,
+      "S8": 0,
+      "S9": 0,
+      "S10": 0
+    },
+    "E7": {
+      "S1": 0,
+      "S2": 0,
+      "S3": 0,
+      "S4": 0,
+      "S5": 0,
+      "S6": 1,
+      "S7": 0,
+      "S8": 0,
+      "S9": 0,
+      "S10": 1
+    },
+    "E8": {
+      "S1": 0,
+      "S2": 0,
+      "S3": 0,
+      "S4": 0,
+      "S5": 0,
+      "S6": 1,
+      "S7": 0,
+      "S8": 0,
+      "S9": 0,
+      "S10": 0
+    },
+    "E9": {
+      "S1": 0,
+      "S2": 0,
+      "S3": 0,
+      "S4": 0,
+      "S5": 0,
+      "S6": 0,
+      "S7": 1,
+      "S8": 1,
+      "S9": 0,
+      "S10": 1
+    },
+    "E10": {
+      "S1": 0,
+      "S2": 0,
+      "S3": 0,
+      "S4": 0,
+      "S5": 0,
+      "S6": 0,
+      "S7": 1,
+      "S8": 1,
+      "S9": 0,
+      "S10": 0
+    },
+    "E11": {
+      "S1": 0,
+      "S2": 0,
+      "S3": 0,
+      "S4": 0,
+      "S5": 0,
+      "S6": 0,
+      "S7": 0,
+      "S8": 1,
+      "S9": 1,
+      "S10": 0
+    }
+  },
+  "incidence_matrix_dense": [
+    [
+      1,
+      1,
+      0,
+      0,
+      0,
+      0,
+      0,
+      0,
+      0,
+      0
+    ],
+    [
+      1,
+      1,
+      0,
+      0,
+      0,
+      0,
+      0,
+      0,
+      0,
+      1
+    ],
+    [
+      0,
+      1,
+      1,
+      0,
+      0,
+      0,
+      0,
+      0,
+      0,
+      0
+    ],
+    [
+      0,
+      0,
+      1,
+      0,
+      1,
+      0,
+      0,
+      0,
+      0,
+      0
+    ],
+    [
+      0,
+      0,
+      0,
+      1,
+      1,
+      0,
+      0,
+      0,
+      0,
+      0
+    ],
+    [
+      0,
+      0,
+      0,
+      1,
+      1,
+      0,
+      0,
+      0,
+      0,
+      0
+    ],
+    [
+      0,
+      0,
+      0,
+      0,
+      0,
+      1,
+      0,
+      0,
+      0,
+      1
+    ],
+    [
+      0,
+      0,
+      0,
+      0,
+      0,
+      1,
+      0,
+      0,
+      0,
+      0
+    ],
+    [
+      0,
+      0,
+      0,
+      0,
+      0,
+      0,
+      1,
+      1,
+      0,
+      1
+    ],
+    [
+      0,
+      0,
+      0,
+      0,
+      0,
+      0,
+      1,
+      1,
+      0,
+      0
+    ],
+    [
+      0,
+      0,
+      0,
+      0,
+      0,
+      0,
+      0,
+      1,
+      1,
+      0
+    ]
+  ],
+  "visual_layout": {
+    "row_order": [
+      "S1",
+      "S2",
+      "S3",
+      "S4",
+      "S5",
+      "S6",
+      "S7",
+      "S8",
+      "S9",
+      "S10"
+    ],
+    "column_order": [
+      "E1",
+      "E2",
+      "E3",
+      "E4",
+      "E5",
+      "E6",
+      "E7",
+      "E8",
+      "E9",
+      "E10",
+      "E11"
+    ],
+    "subset_row_index": {
+      "S1": 0,
+      "S2": 1,
+      "S3": 2,
+      "S4": 3,
+      "S5": 4,
+      "S6": 5,
+      "S7": 6,
+      "S8": 7,
+      "S9": 8,
+      "S10": 9
+    },
+    "element_column_index": {
+      "E1": 0,
+      "E2": 1,
+      "E3": 2,
+      "E4": 3,
+      "E5": 4,
+      "E6": 5,
+      "E7": 6,
+      "E8": 7,
+      "E9": 8,
+      "E10": 9,
+      "E11": 10
+    }
+  },
+  "statistics": {
+    "number_of_elements": 11,
+    "number_of_candidate_subsets": 10,
+    "number_of_incidence_ones": 23,
+    "matrix_density": 0.2091,
+    "average_subset_size": 2.3,
+    "subset_sizes": {
+      "S1": 2,
+      "S2": 3,
+      "S3": 2,
+      "S4": 2,
+      "S5": 3,
+      "S6": 2,
+      "S7": 2,
+      "S8": 3,
+      "S9": 1,
+      "S10": 3
+    },
+    "coverage_frequency_by_element": {
+      "E1": 2,
+      "E2": 3,
+      "E3": 2,
+      "E4": 2,
+      "E5": 2,
+      "E6": 2,
+      "E7": 2,
+      "E8": 1,
+      "E9": 3,
+      "E10": 2,
+      "E11": 2
+    },
+    "minimum_coverage_frequency": 1,
+    "maximum_coverage_frequency": 3,
+    "critical_elements": [
+      "E1",
+      "E3",
+      "E4",
+      "E5",
+      "E6",
+      "E7",
+      "E8",
+      "E10",
+      "E11"
+    ],
+    "critical_element_fraction": 0.8182
+  }
+}

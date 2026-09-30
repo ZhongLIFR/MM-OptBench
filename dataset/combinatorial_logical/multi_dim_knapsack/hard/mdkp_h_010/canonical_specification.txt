@@ -1,0 +1,176 @@
+Canonical specification for a deterministic 0-1 multi-dimensional knapsack instance.
+
+Interpretation:
+- Each candidate item may either be selected or not selected.
+- Selecting item i contributes its item-specific value.
+- Selecting item i consumes resource in every displayed resource dimension according to the instance-specific coefficients.
+- For each resource dimension, total consumption of selected items must not exceed the corresponding resource limit.
+- There are no fractional selections, logical dependencies between items, stochastic parameters, time-indexed extensions, or nonlinear terms.
+- The optimization goal is to maximize the total value of selected items.
+
+Sets:
+- Items I = [1, 2, 3, 4, 5, 6, 7, 8, 9, 10, 11, 12, 13, 14, 15, 16, 17, 18, 19, 20, 21, 22, 23, 24, 25, 26, 27, 28, 29, 30, 31, 32, 33, 34, 35, 36, 37, 38, 39, 40, 41, 42, 43, 44, 45, 46, 47, 48, 49, 50, 51, 52, 53, 54, 55, 56, 57, 58, 59, 60]
+- Resource dimensions R = ['R1', 'R2', 'R3', 'R4', 'R5', 'R6']
+
+Parameters:
+- value[1] = 72
+- value[2] = 74
+- value[3] = 65
+- value[4] = 66
+- value[5] = 70
+- value[6] = 77
+- value[7] = 86
+- value[8] = 90
+- value[9] = 59
+- value[10] = 61
+- value[11] = 49
+- value[12] = 66
+- value[13] = 36
+- value[14] = 78
+- value[15] = 67
+- value[16] = 64
+- value[17] = 75
+- value[18] = 63
+- value[19] = 65
+- value[20] = 72
+- value[21] = 88
+- value[22] = 102
+- value[23] = 65
+- value[24] = 55
+- value[25] = 66
+- value[26] = 60
+- value[27] = 65
+- value[28] = 65
+- value[29] = 63
+- value[30] = 53
+- value[31] = 68
+- value[32] = 58
+- value[33] = 57
+- value[34] = 43
+- value[35] = 102
+- value[36] = 102
+- value[37] = 62
+- value[38] = 60
+- value[39] = 60
+- value[40] = 82
+- value[41] = 62
+- value[42] = 37
+- value[43] = 102
+- value[44] = 73
+- value[45] = 56
+- value[46] = 60
+- value[47] = 54
+- value[48] = 62
+- value[49] = 81
+- value[50] = 50
+- value[51] = 84
+- value[52] = 74
+- value[53] = 57
+- value[54] = 72
+- value[55] = 53
+- value[56] = 78
+- value[57] = 64
+- value[58] = 51
+- value[59] = 59
+- value[60] = 102
+
+Resource-consumption matrix by item:
+- item 1: R1=8, R2=11, R3=5, R4=5, R5=7, R6=7
+- item 2: R1=9, R2=8, R3=11, R4=5, R5=3, R6=9
+- item 3: R1=7, R2=5, R3=7, R4=11, R5=3, R6=6
+- item 4: R1=9, R2=3, R3=3, R4=7, R5=9, R6=11
+- item 5: R1=2, R2=7, R3=11, R4=10, R5=4, R6=6
+- item 6: R1=8, R2=8, R3=8, R4=8, R5=8, R6=10
+- item 7: R1=5, R2=8, R3=11, R4=10, R5=11, R6=8
+- item 8: R1=9, R2=6, R3=3, R4=9, R5=7, R6=8
+- item 9: R1=2, R2=5, R3=7, R4=7, R5=8, R6=7
+- item 10: R1=11, R2=2, R3=2, R4=7, R5=7, R6=9
+- item 11: R1=6, R2=11, R3=4, R4=4, R5=2, R6=3
+- item 12: R1=9, R2=3, R3=3, R4=8, R5=8, R6=10
+- item 13: R1=4, R2=2, R3=8, R4=3, R5=3, R6=3
+- item 14: R1=8, R2=11, R3=6, R4=7, R5=5, R6=11
+- item 15: R1=11, R2=2, R3=8, R4=7, R5=3, R6=10
+- item 16: R1=4, R2=9, R3=4, R4=6, R5=9, R6=7
+- item 17: R1=6, R2=7, R3=7, R4=10, R5=11, R6=9
+- item 18: R1=8, R2=5, R3=3, R4=6, R5=9, R6=6
+- item 19: R1=5, R2=3, R3=5, R4=8, R5=2, R6=9
+- item 20: R1=5, R2=10, R3=9, R4=2, R5=8, R6=9
+- item 21: R1=11, R2=7, R3=8, R4=9, R5=11, R6=9
+- item 22: R1=14, R2=13, R3=13, R4=13, R5=14, R6=14
+- item 23: R1=8, R2=4, R3=7, R4=8, R5=7, R6=9
+- item 24: R1=3, R2=2, R3=11, R4=5, R5=10, R6=6
+- item 25: R1=7, R2=7, R3=8, R4=3, R5=9, R6=6
+- item 26: R1=3, R2=4, R3=9, R4=10, R5=4, R6=8
+- item 27: R1=10, R2=2, R3=10, R4=8, R5=3, R6=10
+- item 28: R1=10, R2=7, R3=8, R4=4, R5=9, R6=2
+- item 29: R1=8, R2=10, R3=3, R4=3, R5=9, R6=7
+- item 30: R1=11, R2=4, R3=4, R4=4, R5=8, R6=3
+- item 31: R1=10, R2=5, R3=2, R4=9, R5=7, R6=11
+- item 32: R1=10, R2=4, R3=2, R4=9, R5=5, R6=6
+- item 33: R1=4, R2=9, R3=7, R4=6, R5=3, R6=8
+- item 34: R1=10, R2=4, R3=2, R4=4, R5=4, R6=3
+- item 35: R1=14, R2=14, R3=14, R4=14, R5=13, R6=14
+- item 36: R1=14, R2=13, R3=13, R4=14, R5=13, R6=14
+- item 37: R1=7, R2=10, R3=5, R4=6, R5=10, R6=2
+- item 38: R1=2, R2=9, R3=7, R4=9, R5=8, R6=2
+- item 39: R1=9, R2=9, R3=4, R4=2, R5=3, R6=10
+- item 40: R1=11, R2=11, R3=4, R4=3, R5=2, R6=8
+- item 41: R1=9, R2=8, R3=3, R4=7, R5=3, R6=8
+- item 42: R1=2, R2=2, R3=2, R4=8, R5=4, R6=6
+- item 43: R1=14, R2=13, R3=13, R4=13, R5=13, R6=14
+- item 44: R1=10, R2=10, R3=7, R4=4, R5=4, R6=11
+- item 45: R1=6, R2=11, R3=2, R4=5, R5=2, R6=7
+- item 46: R1=9, R2=5, R3=6, R4=7, R5=4, R6=6
+- item 47: R1=8, R2=4, R3=9, R4=6, R5=5, R6=4
+- item 48: R1=8, R2=9, R3=3, R4=6, R5=6, R6=6
+- item 49: R1=8, R2=8, R3=9, R4=6, R5=11, R6=4
+- item 50: R1=3, R2=7, R3=3, R4=8, R5=3, R6=7
+- item 51: R1=4, R2=4, R3=8, R4=2, R5=4, R6=10
+- item 52: R1=9, R2=10, R3=8, R4=3, R5=3, R6=8
+- item 53: R1=8, R2=10, R3=5, R4=6, R5=6, R6=3
+- item 54: R1=10, R2=8, R3=8, R4=9, R5=2, R6=8
+- item 55: R1=10, R2=6, R3=6, R4=4, R5=3, R6=4
+- item 56: R1=8, R2=4, R3=11, R4=11, R5=3, R6=10
+- item 57: R1=9, R2=6, R3=4, R4=10, R5=3, R6=7
+- item 58: R1=2, R2=5, R3=8, R4=2, R5=10, R6=5
+- item 59: R1=10, R2=6, R3=5, R4=6, R5=6, R6=6
+- item 60: R1=13, R2=13, R3=14, R4=13, R5=13, R6=13
+
+Resource limits:
+- limit[R1] = 111
+- limit[R2] = 114
+- limit[R3] = 97
+- limit[R4] = 100
+- limit[R5] = 93
+- limit[R6] = 122
+
+Decision variables:
+- x[i] in {0,1}: equals 1 if item i is selected and 0 otherwise.
+
+Objective:
+- Maximize total value sum_i value[i] * x[i].
+
+Constraints:
+- For every resource dimension r, sum_i weight[i,r] * x[i] <= limit[r].
+- Binary decision domains for all selection variables.
+
+Metadata:
+- number_items=60
+- number_dimensions=6
+- total_capacity_per_dimension=[111, 114, 97, 100, 93, 122]
+- capacity_tightness_type=thin_frontier
+- profit_weight_correlation_type=heavy_tailed_values
+- weight_distribution_type=rare_critical_items
+- binding_constraint_count=4
+- near_critical_flag=True
+- seed=4410
+- group=C
+- visual_type=bars_resource_usage_chart
+- formulation_size=66
+
+Visual interpretation:
+- The figure shows one row per item and uses numeric item identifiers only.
+- The orange box in each row gives the item value.
+- Colored segments in the row encode per-resource consumption for that item.
+- Resource-limit bars at the bottom encode the capacity of each resource dimension.
+- The visual does not reveal the selected subset, the optimal objective value, or any feasibility status.

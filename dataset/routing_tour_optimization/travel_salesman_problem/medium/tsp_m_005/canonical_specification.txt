@@ -1,0 +1,73 @@
+Canonical specification for a deterministic Traveling Salesman Problem instance.
+
+Interpretation:
+- A single closed tour must visit every city exactly once and return to its starting city.
+- Travel between every pair of distinct cities is allowed, so the graph is complete.
+- Travel costs are symmetric: c[i,j] = c[j,i].
+- The displayed city coordinates determine the geometric layout shown in the visual map.
+- The optimization goal is to minimize the total tour length.
+
+Sets:
+- Cities N = ['A', 'B', 'C', 'D', 'E', 'F', 'G', 'H', 'I', 'J', 'K', 'L']
+- Directed arcs A = [(i,j) for i,j in N, i != j]
+- Reference city for symmetry breaking in the MTZ model: s = A
+
+Coordinates by city:
+- A: (1.0, 3.0)
+- B: (1.8, 7.2)
+- C: (3.1, 5.1)
+- D: (6.2, 2.0)
+- E: (7.0, 6.5)
+- F: (8.2, 3.8)
+- G: (11.8, 1.5)
+- H: (12.6, 5.7)
+- I: (13.9, 8.0)
+- J: (15.4, 3.0)
+- K: (16.0, 6.2)
+- L: (17.5, 4.5)
+
+Complete symmetric travel-cost matrix:
+- A: A=0.0000, B=4.2800, C=2.9700, D=5.3000, E=6.9500, F=7.2400, G=10.9000, H=11.9100, I=13.8400, J=14.4000, K=15.3400, L=16.5700
+- B: A=4.2800, B=0.0000, C=2.4700, D=6.8100, E=5.2500, F=7.2500, G=11.5100, H=10.9000, I=12.1300, J=14.2300, K=14.2400, L=15.9300
+- C: A=2.9700, B=2.4700, C=0.0000, D=4.3800, E=4.1400, F=5.2600, G=9.4200, H=9.5200, I=11.1800, J=12.4800, K=12.9500, L=14.4100
+- D: A=5.3000, B=6.8100, C=4.3800, D=0.0000, E=4.5700, F=2.6900, G=5.6200, H=7.3900, I=9.7600, J=9.2500, K=10.6600, L=11.5700
+- E: A=6.9500, B=5.2500, C=4.1400, D=4.5700, E=0.0000, F=2.9500, G=6.9300, H=5.6600, I=7.0600, J=9.1000, K=9.0000, L=10.6900
+- F: A=7.2400, B=7.2500, C=5.2600, D=2.6900, E=2.9500, F=0.0000, G=4.2700, H=4.7900, I=7.0800, J=7.2400, K=8.1600, L=9.3300
+- G: A=10.9000, B=11.5100, C=9.4200, D=5.6200, E=6.9300, F=4.2700, G=0.0000, H=4.2800, I=6.8300, J=3.9000, K=6.3000, L=6.4400
+- H: A=11.9100, B=10.9000, C=9.5200, D=7.3900, E=5.6600, F=4.7900, G=4.2800, H=0.0000, I=2.6400, J=3.8900, K=3.4400, L=5.0400
+- I: A=13.8400, B=12.1300, C=11.1800, D=9.7600, E=7.0600, F=7.0800, G=6.8300, H=2.6400, I=0.0000, J=5.2200, K=2.7700, L=5.0200
+- J: A=14.4000, B=14.2300, C=12.4800, D=9.2500, E=9.1000, F=7.2400, G=3.9000, H=3.8900, I=5.2200, J=0.0000, K=3.2600, L=2.5800
+- K: A=15.3400, B=14.2400, C=12.9500, D=10.6600, E=9.0000, F=8.1600, G=6.3000, H=3.4400, I=2.7700, J=3.2600, K=0.0000, L=2.2700
+- L: A=16.5700, B=15.9300, C=14.4100, D=11.5700, E=10.6900, F=9.3300, G=6.4400, H=5.0400, I=5.0200, J=2.5800, K=2.2700, L=0.0000
+
+Decision variables:
+- x[i,j] in {0,1}: equals 1 if the tour directly travels from city i to city j
+- u[i]: visit-order variable for MTZ subtour elimination, defined for all cities except the reference city
+
+Objective:
+- Minimize total travel cost sum_{i != j} c[i,j] * x[i,j].
+
+Constraints:
+- Exactly one outgoing arc from every city.
+- Exactly one incoming arc to every city.
+- MTZ subtour elimination constraints over all non-reference cities.
+- Binary arc variables and bounded order variables.
+
+Metadata:
+- number_nodes=12
+- layout_type=multi_cluster_euclidean
+- cluster_count=3
+- cost_matrix_type=euclidean_rounded_2dp
+- symmetry_flag=false
+- near_optimal_tour_flag=true
+- visual_type=euclidean_city_map_with_cost_rule_box
+- seed=2405
+- group=B
+- formulation_size=299
+
+Visual interpretation:
+- The figure shows one marker per city on a two-dimensional Euclidean map.
+- Each city label includes its exact coordinate pair.
+- A cost-rule box states how pairwise travel costs are derived from the plotted coordinates.
+- The complete graph edges are intentionally omitted to avoid clutter.
+- The visual does not reveal the optimal tour, selected arcs, or objective value.

@@ -1,0 +1,22 @@
+{
+  "number_periods": 4,
+  "number_units": 3,
+  "demand_pattern": "peak_load_middle",
+  "startup_cost_regime": "high_startup_baseload_vs_peaker",
+  "capacity_regime": "tight_selected_periods",
+  "peak_load_flag": true,
+  "visual_type": "economics_table_demand_timeline_capacity_ranges",
+  "seed": 808,
+  "formulation_size": 76,
+  "instance_id": "educ_e_008",
+  "variant": "energy_dispatch_unit_commitment",
+  "scenario": "energy_dispatch_unit_commitment",
+  "difficulty": "easy",
+  "objective_value": 1988,
+  "objective_exact": 1988.0,
+  "status": "optimal",
+  "runtime_seconds": 0.0026423330418765545,
+  "solve_method": "gurobi_milp_educ",
+  "solver": "Gurobi",
+  "visual_checksum_md5": "aaa99233a03a111d4e029e25a6dabed7"
+}

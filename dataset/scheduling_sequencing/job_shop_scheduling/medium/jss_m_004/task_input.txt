@@ -1,0 +1,19 @@
+A scheduling diagram is provided for a machine-processing scheduling instance.
+
+The visual shows each job as an ordered sequence of operations.
+Each operation block is labeled by its job-operation identifier, required machine, and processing duration.
+The left-to-right order of blocks within a row gives the precedence order for that job.
+
+Interpretation:
+- Each job consists of an ordered sequence of operations that must be processed in the listed order.
+- Each operation requires the machine shown in its block.
+- The duration shown in the block is the processing time of that operation.
+- Each machine can process at most one operation at a time.
+- Operations are non-preemptive.
+
+Task:
+1) Write a mathematical optimization model for this instance.
+2) Provide solver-executable code implementing the model.
+
+Objective:
+Minimize the makespan.

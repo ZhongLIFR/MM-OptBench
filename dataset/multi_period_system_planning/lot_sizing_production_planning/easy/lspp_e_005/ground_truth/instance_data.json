@@ -1,0 +1,159 @@
+{
+  "instance_id": "lspp_e_005",
+  "variant": "lot_sizing_production_planning",
+  "scenario": "lot_sizing_production_planning",
+  "difficulty": "easy",
+  "sets": {
+    "products": [
+      "P1",
+      "P2"
+    ],
+    "periods": [
+      "t1",
+      "t2",
+      "t3",
+      "t4",
+      "t5",
+      "t6",
+      "t7",
+      "t8",
+      "t9",
+      "t10"
+    ]
+  },
+  "demand": {
+    "P1": {
+      "t1": 10,
+      "t2": 9,
+      "t3": 8,
+      "t4": 8,
+      "t5": 7,
+      "t6": 6,
+      "t7": 6,
+      "t8": 5,
+      "t9": 4,
+      "t10": 4
+    },
+    "P2": {
+      "t1": 4,
+      "t2": 6,
+      "t3": 5,
+      "t4": 7,
+      "t5": 6,
+      "t6": 5,
+      "t7": 7,
+      "t8": 6,
+      "t9": 5,
+      "t10": 4
+    }
+  },
+  "production_cost": {
+    "P1": {
+      "t1": 5,
+      "t2": 5,
+      "t3": 5,
+      "t4": 5,
+      "t5": 4,
+      "t6": 4,
+      "t7": 4,
+      "t8": 4,
+      "t9": 4,
+      "t10": 4
+    },
+    "P2": {
+      "t1": 4,
+      "t2": 4,
+      "t3": 4,
+      "t4": 4,
+      "t5": 4,
+      "t6": 4,
+      "t7": 5,
+      "t8": 5,
+      "t9": 5,
+      "t10": 5
+    }
+  },
+  "holding_cost": {
+    "P1": {
+      "t1": 1,
+      "t2": 1,
+      "t3": 1,
+      "t4": 1,
+      "t5": 1,
+      "t6": 1,
+      "t7": 1,
+      "t8": 1,
+      "t9": 1,
+      "t10": 0
+    },
+    "P2": {
+      "t1": 1,
+      "t2": 1,
+      "t3": 1,
+      "t4": 1,
+      "t5": 1,
+      "t6": 1,
+      "t7": 1,
+      "t8": 1,
+      "t9": 1,
+      "t10": 0
+    }
+  },
+  "setup_cost": {
+    "P1": {
+      "t1": 14,
+      "t2": 14,
+      "t3": 14,
+      "t4": 14,
+      "t5": 14,
+      "t6": 14,
+      "t7": 14,
+      "t8": 14,
+      "t9": 14,
+      "t10": 14
+    },
+    "P2": {
+      "t1": 18,
+      "t2": 18,
+      "t3": 18,
+      "t4": 18,
+      "t5": 18,
+      "t6": 18,
+      "t7": 18,
+      "t8": 18,
+      "t9": 18,
+      "t10": 18
+    }
+  },
+  "initial_inventory": {
+    "P1": 0,
+    "P2": 0
+  },
+  "capacity": {
+    "t1": 26,
+    "t2": 26,
+    "t3": 26,
+    "t4": 26,
+    "t5": 26,
+    "t6": 26,
+    "t7": 26,
+    "t8": 26,
+    "t9": 26,
+    "t10": 26
+  },
+  "big_m": {
+    "P1": 67,
+    "P2": 55
+  },
+  "meta_parameters": {
+    "number_periods": 10,
+    "number_products": 2,
+    "demand_pattern": "decreasing_plus_moderate_variation",
+    "setup_cost_regime": "low_setup_product_dependent",
+    "capacity_regime": "nonbinding_large",
+    "multi_product_flag": true,
+    "visual_type": "timeline_demand_grid",
+    "seed": 505,
+    "formulation_size": 110
+  }
+}

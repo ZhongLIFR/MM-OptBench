@@ -1,0 +1,264 @@
+{
+  "instance_id": "rcpsp_e_001",
+  "variant": "single_project_renewable_rcpsp",
+  "scenario": "resource_constrained_project_scheduling",
+  "difficulty": "easy",
+  "sets": {
+    "activities": [
+      "Start",
+      "A1",
+      "A2",
+      "A3",
+      "A4",
+      "A5",
+      "A6",
+      "End"
+    ],
+    "real_activities": [
+      "A1",
+      "A2",
+      "A3",
+      "A4",
+      "A5",
+      "A6"
+    ],
+    "resources": [
+      "R1",
+      "R2"
+    ]
+  },
+  "precedence_arcs": [
+    [
+      "Start",
+      "A1"
+    ],
+    [
+      "Start",
+      "A2"
+    ],
+    [
+      "A1",
+      "A3"
+    ],
+    [
+      "A1",
+      "A4"
+    ],
+    [
+      "A2",
+      "A4"
+    ],
+    [
+      "A2",
+      "A5"
+    ],
+    [
+      "A3",
+      "A6"
+    ],
+    [
+      "A4",
+      "A6"
+    ],
+    [
+      "A5",
+      "A6"
+    ],
+    [
+      "A6",
+      "End"
+    ]
+  ],
+  "duration": {
+    "Start": 0,
+    "A1": 3,
+    "A2": 2,
+    "A3": 4,
+    "A4": 3,
+    "A5": 2,
+    "A6": 2,
+    "End": 0
+  },
+  "resource_capacity": {
+    "R1": 4,
+    "R2": 3
+  },
+  "resource_demand": {
+    "Start": {
+      "R1": 0,
+      "R2": 0
+    },
+    "A1": {
+      "R1": 2,
+      "R2": 1
+    },
+    "A2": {
+      "R1": 1,
+      "R2": 2
+    },
+    "A3": {
+      "R1": 3,
+      "R2": 1
+    },
+    "A4": {
+      "R1": 2,
+      "R2": 2
+    },
+    "A5": {
+      "R1": 2,
+      "R2": 1
+    },
+    "A6": {
+      "R1": 3,
+      "R2": 2
+    },
+    "End": {
+      "R1": 0,
+      "R2": 0
+    }
+  },
+  "activity_records": [
+    {
+      "activity": "Start",
+      "duration": 0,
+      "resource_demand": {
+        "R1": 0,
+        "R2": 0
+      },
+      "layer": 0
+    },
+    {
+      "activity": "A1",
+      "duration": 3,
+      "resource_demand": {
+        "R1": 2,
+        "R2": 1
+      },
+      "layer": 1
+    },
+    {
+      "activity": "A2",
+      "duration": 2,
+      "resource_demand": {
+        "R1": 1,
+        "R2": 2
+      },
+      "layer": 1
+    },
+    {
+      "activity": "A3",
+      "duration": 4,
+      "resource_demand": {
+        "R1": 3,
+        "R2": 1
+      },
+      "layer": 2
+    },
+    {
+      "activity": "A4",
+      "duration": 3,
+      "resource_demand": {
+        "R1": 2,
+        "R2": 2
+      },
+      "layer": 2
+    },
+    {
+      "activity": "A5",
+      "duration": 2,
+      "resource_demand": {
+        "R1": 2,
+        "R2": 1
+      },
+      "layer": 2
+    },
+    {
+      "activity": "A6",
+      "duration": 2,
+      "resource_demand": {
+        "R1": 3,
+        "R2": 2
+      },
+      "layer": 3
+    },
+    {
+      "activity": "End",
+      "duration": 0,
+      "resource_demand": {
+        "R1": 0,
+        "R2": 0
+      },
+      "layer": 4
+    }
+  ],
+  "visual_layout": {
+    "layers": [
+      [
+        "Start"
+      ],
+      [
+        "A1",
+        "A2"
+      ],
+      [
+        "A3",
+        "A4",
+        "A5"
+      ],
+      [
+        "A6"
+      ],
+      [
+        "End"
+      ]
+    ],
+    "positions": {
+      "Start": [
+        0.5,
+        1.6
+      ],
+      "A1": [
+        1.85,
+        2.8
+      ],
+      "A2": [
+        1.85,
+        0.4
+      ],
+      "A3": [
+        3.2,
+        2.8
+      ],
+      "A4": [
+        3.2,
+        1.6
+      ],
+      "A5": [
+        3.2,
+        0.4
+      ],
+      "A6": [
+        4.55,
+        1.6
+      ],
+      "End": [
+        5.9,
+        1.6
+      ]
+    }
+  },
+  "meta_parameters": {
+    "number_activities": 8,
+    "number_real_activities": 6,
+    "number_resources": 2,
+    "precedence_density": 0.3571,
+    "resource_capacity_regime": "tight",
+    "duration_regime": "mixed_with_single_long_activity",
+    "bottleneck_resource_flag": true,
+    "graph_pattern": "branch_merge_diamond",
+    "group": "A",
+    "visual_type": "dual_visual_precedence_network_plus_resource_matrix",
+    "seed": 1301,
+    "formulation_size": 138
+  }
+}

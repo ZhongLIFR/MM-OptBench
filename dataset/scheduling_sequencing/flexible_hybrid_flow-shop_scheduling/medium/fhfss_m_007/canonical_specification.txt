@@ -1,0 +1,55 @@
+This is a deterministic medium-level Flexible / Hybrid Flow-Shop Scheduling problem.
+
+Instance ID: fhfss_m_007
+Variant: flexible_hybrid_flow_shop_scheduling
+Scenario: flexible_hybrid_flow_shop_scheduling
+Difficulty: medium
+
+Common ordered stage chain:
+- S1 -> S2 -> S3 -> S4 -> S5
+
+Machine inventory by stage:
+- S1: ['S1M1', 'S1M2']
+- S2: ['S2M1', 'S2M2']
+- S3: ['S3M1']
+- S4: ['S4M1']
+- S5: ['S5M1', 'S5M2']
+
+Job-stage processing times:
+- J1: S1=5, S2=4, S3=7, S4=8, S5=4
+- J2: S1=6, S2=5, S3=8, S4=7, S5=5
+- J3: S1=4, S2=6, S3=7, S4=9, S5=4
+- J4: S1=5, S2=5, S3=9, S4=8, S5=5
+- J5: S1=6, S2=4, S3=8, S4=7, S5=4
+- J6: S1=5, S2=6, S3=7, S4=8, S5=5
+- J7: S1=7, S2=5, S3=8, S4=9, S5=4
+- J8: S1=4, S2=6, S3=9, S4=7, S5=5
+- J9: S1=5, S2=4, S3=8, S4=8, S5=4
+- J10: S1=6, S2=5, S3=7, S4=9, S5=5
+- J11: S1=5, S2=6, S3=8, S4=7, S5=4
+- J12: S1=7, S2=4, S3=9, S4=8, S5=5
+
+Decision structure:
+- Every job must visit all stages in the listed order.
+- At each stage, a job must be assigned to exactly one machine from that stage.
+- Machines within a stage are identical with respect to processing duration.
+- Each machine can process at most one job at a time.
+- Jobs are non-preemptive.
+
+Objective:
+- Minimize the makespan.
+
+Metadata:
+- number_jobs=12
+- number_stages=5
+- machines_per_stage=[2, 2, 1, 1, 2]
+- bottleneck_pattern=adjacent_single_machine_stages_three_and_four
+- processing_time_regime=adjacent_tight_late_middle_stages
+- flexibility_level=mixed_2_2_1_1_2
+- seed=5407
+- formulation_size=1861
+
+Visual interpretation:
+- The upper section shows the ordered stage chain and the exact machine inventory at each stage.
+- The lower section shows the exact processing duration of each job at each stage.
+- The visual does not reveal any machine assignment, stage start time, sequence decision, or optimal objective value.

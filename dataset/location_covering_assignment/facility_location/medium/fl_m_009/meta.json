@@ -1,0 +1,22 @@
+{
+  "instance_id": "fl_m_009",
+  "difficulty": "medium",
+  "variant_type": "UFL",
+  "number_of_facilities": 5,
+  "number_of_customers": 8,
+  "total_demand": 15,
+  "opening_cost_regime": "moderately_asymmetric_opening_costs",
+  "assignment_cost_regime": "euclidean_spatial_distance",
+  "demand_pattern": "heterogeneous_demands",
+  "assignment_graph_density": 0.425,
+  "seed": 209,
+  "formulation_size": {
+    "num_binary_y": 5,
+    "num_binary_x": 17,
+    "num_variables_total": 22,
+    "num_constraints_total": 42
+  },
+  "optimal_objective_value": 140.1241,
+  "reference_solver_policy": "prefer_gurobi_else_exact_fallback",
+  "reference_solver_used": "gurobi"
+}

@@ -1,0 +1,78 @@
+Canonical specification for a deterministic 0-1 multi-dimensional knapsack instance.
+
+Interpretation:
+- Each candidate item may either be selected or not selected.
+- Selecting item i contributes its item-specific value.
+- Selecting item i consumes resource in every displayed resource dimension according to the instance-specific coefficients.
+- For each resource dimension, total consumption of selected items must not exceed the corresponding resource limit.
+- There are no fractional selections, logical dependencies between items, stochastic parameters, or time-indexed extensions.
+- The optimization goal is to maximize the total value of selected items.
+
+Sets:
+- Items I = [1, 2, 3, 4, 5, 6, 7, 8, 9, 10, 11, 12, 13, 14]
+- Resource dimensions R = ['R1', 'R2']
+
+Parameters:
+- value[1] = 22
+- value[2] = 15
+- value[3] = 12
+- value[4] = 22
+- value[5] = 22
+- value[6] = 18
+- value[7] = 10
+- value[8] = 10
+- value[9] = 12
+- value[10] = 22
+- value[11] = 14
+- value[12] = 16
+- value[13] = 27
+- value[14] = 18
+
+Resource-consumption matrix by item:
+- item 1: R1=3, R2=10
+- item 2: R1=10, R2=2
+- item 3: R1=3, R2=4
+- item 4: R1=7, R2=7
+- item 5: R1=4, R2=9
+- item 6: R1=9, R2=4
+- item 7: R1=2, R2=4
+- item 8: R1=4, R2=4
+- item 9: R1=2, R2=5
+- item 10: R1=5, R2=9
+- item 11: R1=4, R2=5
+- item 12: R1=4, R2=8
+- item 13: R1=10, R2=7
+- item 14: R1=7, R2=2
+
+Resource limits:
+- limit[R1] = 28
+- limit[R2] = 31
+
+Decision variables:
+- x[i] in {0,1}: equals 1 if item i is selected and 0 otherwise.
+
+Objective:
+- Maximize total value sum_i value[i] * x[i].
+
+Constraints:
+- For every resource dimension r, sum_i weight[i,r] * x[i] <= limit[r].
+- Binary decision domains for all selection variables.
+
+Metadata:
+- number_items=14
+- number_dimensions=2
+- capacity_tightness_type=moderate
+- profit_weight_correlation_type=weakly_correlated
+- weight_distribution_type=balanced_value_to_weight_ratios
+- binding_constraint_count=2
+- seed=2402
+- group=A
+- visual_type=bars_resource_usage_chart
+- formulation_size=16
+
+Visual interpretation:
+- The figure shows one row per item and uses numeric item identifiers only.
+- The orange box in each row gives the item value.
+- Colored segments in the row encode per-resource consumption for that item.
+- Resource-limit bars at the bottom encode the capacity of each resource dimension.
+- The visual does not reveal the selected subset, the optimal objective value, or any feasibility status.

@@ -1,0 +1,118 @@
+{
+  "instance_id": "mdkp_e_002",
+  "variant": "multi_dimensional_knapsack",
+  "scenario": "multi_dimensional_knapsack",
+  "difficulty": "easy",
+  "sets": {
+    "items": [
+      1,
+      2,
+      3,
+      4,
+      5,
+      6,
+      7,
+      8,
+      9,
+      10,
+      11,
+      12,
+      13,
+      14
+    ],
+    "resources": [
+      "R1",
+      "R2"
+    ]
+  },
+  "values": [
+    22,
+    15,
+    12,
+    22,
+    22,
+    18,
+    10,
+    10,
+    12,
+    22,
+    14,
+    16,
+    27,
+    18
+  ],
+  "weights": [
+    [
+      3,
+      10
+    ],
+    [
+      10,
+      2
+    ],
+    [
+      3,
+      4
+    ],
+    [
+      7,
+      7
+    ],
+    [
+      4,
+      9
+    ],
+    [
+      9,
+      4
+    ],
+    [
+      2,
+      4
+    ],
+    [
+      4,
+      4
+    ],
+    [
+      2,
+      5
+    ],
+    [
+      5,
+      9
+    ],
+    [
+      4,
+      5
+    ],
+    [
+      4,
+      8
+    ],
+    [
+      10,
+      7
+    ],
+    [
+      7,
+      2
+    ]
+  ],
+  "capacities": [
+    28,
+    31
+  ],
+  "meta_parameters": {
+    "number_items": 14,
+    "number_dimensions": 2,
+    "capacity_tightness_type": "moderate",
+    "profit_weight_correlation_type": "weakly_correlated",
+    "weight_distribution_type": "balanced_value_to_weight_ratios",
+    "seed": 2402,
+    "group": "A",
+    "visual_type": "bars_resource_usage_chart",
+    "formulation_size": 16,
+    "binding_constraint_count": 2
+  }
+}

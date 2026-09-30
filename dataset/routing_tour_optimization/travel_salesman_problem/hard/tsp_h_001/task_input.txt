@@ -1,0 +1,20 @@
+A route-planning task is defined on a set of cities shown in the accompanying figure.
+
+The figure provides all instance-specific data required for the optimization problem.
+
+The figure includes:
+- the labeled location of every city in a two-dimensional map,
+- the exact coordinate pair shown next to each city label,
+- the exact rule used to convert displayed coordinates into pairwise travel costs,
+- and a light Cartesian grid to support spatial interpretation.
+
+Interpretation:
+- The tour must visit every city exactly once.
+- The tour must return to the starting city after visiting all cities.
+- The travel cost between two cities is determined by the cost rule shown in the figure.
+- The graph is complete, so travel between every pair of distinct cities is allowed.
+- There are no capacities, time windows, multiple depots, forbidden edges, or stochastic costs.
+
+Task:
+1) Write a mathematical optimization model for this instance.
+2) Provide solver-executable code implementing the model.

@@ -1,0 +1,14 @@
+A planning diagram is provided.
+
+- Candidate facilities are shown as circles. Facility labels and public parameters are provided in the diagram.
+- Customers are shown as squares with their labels and demands.
+- A customer may only be assigned to an open facility whose coverage circle contains that customer.
+- Each facility's coverage radius is also shown by a same-colored line segment from the facility center to the coverage circle, labeled with the radius value.
+- Assignment cost per unit demand is the Euclidean distance between the customer and the facility, based on the displayed coordinates.
+- The total opening cost of the selected facilities must not exceed 65.
+
+Task:
+1) Write a mathematical optimization model that decides which facilities to open and assigns each customer to exactly one open feasible facility.
+2) Provide solver-executable code implementing the model.
+
+Objective: minimize total facility opening cost plus demand-weighted assignment cost.

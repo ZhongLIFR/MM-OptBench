@@ -1,0 +1,157 @@
+This is a single-period abstract subset-selection instance.
+
+Instance ID: scp_h_004
+Variant: set_covering
+Difficulty: hard
+Incidence structure: twelve_block_chain_with_tail_dependency
+Cost regime: balanced_diagonals_with_costly_bridges
+
+Elements:
+- E1
+- E2
+- E3
+- E4
+- E5
+- E6
+- E7
+- E8
+- E9
+- E10
+- E11
+- E12
+- E13
+- E14
+- E15
+- E16
+- E17
+- E18
+- E19
+- E20
+- E21
+- E22
+- E23
+- E24
+- E25
+- E26
+- E27
+- E28
+- E29
+- E30
+- E31
+- E32
+- E33
+- E34
+- E35
+- E36
+- E37
+- E38
+- E39
+- E40
+- E41
+- E42
+- E43
+- E44
+- E45
+- E46
+- E47
+- E48
+
+Candidate subsets and subset costs:
+- S1: cost=11, contains E1, E2, E3, E4
+- S2: cost=12, contains E5, E6, E7, E8
+- S3: cost=11, contains E9, E10, E11, E12
+- S4: cost=12, contains E13, E14, E15, E16
+- S5: cost=11, contains E17, E18, E19, E20
+- S6: cost=12, contains E21, E22, E23, E24
+- S7: cost=11, contains E25, E26, E27, E28
+- S8: cost=12, contains E29, E30, E31, E32
+- S9: cost=11, contains E33, E34, E35, E36
+- S10: cost=12, contains E37, E38, E39, E40
+- S11: cost=11, contains E41, E42, E43, E44
+- S12: cost=12, contains E45, E46, E47, E48
+- S13: cost=9, contains E3, E4, E5, E6
+- S14: cost=10, contains E7, E8, E9, E10
+- S15: cost=9, contains E11, E12, E13, E14
+- S16: cost=9, contains E15, E16, E17, E18
+- S17: cost=10, contains E19, E20, E21, E22
+- S18: cost=9, contains E23, E24, E25, E26
+- S19: cost=9, contains E27, E28, E29, E30
+- S20: cost=10, contains E31, E32, E33, E34
+- S21: cost=9, contains E35, E36, E37, E38
+- S22: cost=9, contains E39, E40, E41, E42
+- S23: cost=10, contains E43, E44, E45, E46
+- S24: cost=8, contains E1, E6, E11, E16, E21, E26, E31, E36, E41, E46
+- S25: cost=8, contains E2, E7, E12, E17, E22, E27, E32, E37, E42, E47
+- S26: cost=9, contains E3, E8, E13, E18, E23, E28, E33, E38, E43, E48
+- S27: cost=9, contains E4, E9, E14, E19, E24, E29, E34, E39, E44
+- S28: cost=7, contains E5, E10, E15, E20, E25, E30, E35, E40, E45
+
+Coverage options by element:
+- E1: S1, S24
+- E2: S1, S25
+- E3: S1, S13, S26
+- E4: S1, S13, S27
+- E5: S2, S13, S28
+- E6: S2, S13, S24
+- E7: S2, S14, S25
+- E8: S2, S14, S26
+- E9: S3, S14, S27
+- E10: S3, S14, S28
+- E11: S3, S15, S24
+- E12: S3, S15, S25
+- E13: S4, S15, S26
+- E14: S4, S15, S27
+- E15: S4, S16, S28
+- E16: S4, S16, S24
+- E17: S5, S16, S25
+- E18: S5, S16, S26
+- E19: S5, S17, S27
+- E20: S5, S17, S28
+- E21: S6, S17, S24
+- E22: S6, S17, S25
+- E23: S6, S18, S26
+- E24: S6, S18, S27
+- E25: S7, S18, S28
+- E26: S7, S18, S24
+- E27: S7, S19, S25
+- E28: S7, S19, S26
+- E29: S8, S19, S27
+- E30: S8, S19, S28
+- E31: S8, S20, S24
+- E32: S8, S20, S25
+- E33: S9, S20, S26
+- E34: S9, S20, S27
+- E35: S9, S21, S28
+- E36: S9, S21, S24
+- E37: S10, S21, S25
+- E38: S10, S21, S26
+- E39: S10, S22, S27
+- E40: S10, S22, S28
+- E41: S11, S22, S24
+- E42: S11, S22, S25
+- E43: S11, S23, S26
+- E44: S11, S23, S27
+- E45: S12, S23, S28
+- E46: S12, S23, S24
+- E47: S12, S25
+- E48: S12, S26
+
+Objective:
+- Minimize total subset cost.
+
+Constraints:
+- Every element must be covered by at least one selected subset.
+- All subset-selection variables are binary.
+
+Metadata summary:
+- number_of_elements = 48
+- number_of_candidate_subsets = 28
+- average_subset_size = 5.0
+- incidence_density = 0.1042
+- critical_elements = E1, E2, E47, E48
+- visual_panel_count = 2
+
+Visual interpretation:
+- The visual is split into two aligned exact panels that share the same candidate-subset rows.
+- Rows correspond to candidate subsets and columns correspond to elements.
+- Filled cells indicate membership and the left bars show exact subset costs.

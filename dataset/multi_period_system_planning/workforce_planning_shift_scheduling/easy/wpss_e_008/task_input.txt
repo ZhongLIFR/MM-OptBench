@@ -1,0 +1,27 @@
+A single service unit must assign workers to daily shifts using the exact data shown in the accompanying visual artifacts.
+
+This instance uses two visual files.
+
+visual_0.png:
+- a shift-definitions panel,
+- a total-staff bar chart showing the exact total number of workers required on each day,
+- and a shift-by-day staffing table showing the exact requirement for every displayed day-shift pair.
+
+visual_1.png:
+- a worker profile table listing, for each worker, the exact assignment cost for each shift type used in this instance,
+- and a worker-by-day availability matrix whose cells show explicit daily availability codes.
+
+Operational rules:
+- At least the required number of workers must be assigned to every day-shift pair.
+- Each worker may be assigned to at most one shift on any day.
+- A worker may be assigned only to shifts allowed by that worker's daily availability code.
+- Assignment cost depends on the worker and the shift type exactly as listed in the worker profile table.
+- No overtime variables, fairness terms, rest-transition rules, consecutive-day limits, skill-substitution rules, or multi-location assignments are included in this instance.
+
+Shift definitions:
+- D (Day): 07:00-15:00
+- E (Evening): 15:00-23:00
+- N (Night): 23:00-07:00
+
+Task:
+Build a mathematical optimization model for this exact instance and provide executable solver code.

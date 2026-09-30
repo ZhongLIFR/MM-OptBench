@@ -1,0 +1,45 @@
+{
+  "family": "network_optimization",
+  "subtype": "maximum_flow",
+  "variant": "maximum_flow_minimum_cut_single",
+  "difficulty": "hard",
+  "graph_type": "deep_layered_multi_corridor_with_scc",
+  "supply_pattern": "three_source_three_sink",
+  "capacity_regime": "interacting_multi_layer_bottlenecks",
+  "cost_regime": "cycle_vs_junction_tradeoff",
+  "num_nodes": 18,
+  "num_arcs": 35,
+  "num_variables": 35,
+  "num_constraints": 51,
+  "formulation_size": 53,
+  "seed": 36006,
+  "files": {
+    "canonical_specification": "canonical_specification.txt",
+    "task_input": "task_input.txt",
+    "visuals": [
+      "visuals/visual_0.png"
+    ],
+    "ground_truth": {
+      "instance_data": "ground_truth/instance_data.json",
+      "math_model": "ground_truth/math_model.md",
+      "solver_ref": "ground_truth/solver_ref.py",
+      "solution_ref": "ground_truth/solution_ref.json"
+    }
+  },
+  "coupling_level": "high",
+  "cut_structure": "distributed_multi_arc_cut_across_layers",
+  "flow_pattern": "split_across_many_corridors_with_redistribution",
+  "num_layers": 7,
+  "num_bottlenecks": 2,
+  "min_cut_size": 7,
+  "status": "optimal",
+  "optimal_max_flow_value": 40.0,
+  "optimal_min_cut_value": 40.0,
+  "objective_exact": 40.0,
+  "runtime_seconds": 0.029104948043823242,
+  "solve_method": "gurobi_lp_max_flow",
+  "solver_used": "Gurobi",
+  "solver": "Gurobi",
+  "solver_policy": "gurobi_first_then_exact_scipy_linprog",
+  "visual_0_checksum_md5": "cfe3e219cdb7d3cd378a6bc16a913e61"
+}

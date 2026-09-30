@@ -1,0 +1,124 @@
+{
+  "instance_id": "pms_e_001",
+  "variant": "parallel_machine_scheduling",
+  "scenario": "parallel_machine_scheduling",
+  "difficulty": "easy",
+  "sets": {
+    "jobs": [
+      "J1",
+      "J2",
+      "J3",
+      "J4",
+      "J5",
+      "J6",
+      "J7",
+      "J8"
+    ],
+    "machines": [
+      "M1",
+      "M2"
+    ]
+  },
+  "base_processing_time": {
+    "J1": 4,
+    "J2": 7,
+    "J3": 3,
+    "J4": 6,
+    "J5": 5,
+    "J6": 2,
+    "J7": 8,
+    "J8": 4
+  },
+  "machine_speed": {
+    "M1": 1.0,
+    "M2": 1.0
+  },
+  "eligibility": {
+    "J1": [
+      "M1",
+      "M2"
+    ],
+    "J2": [
+      "M1",
+      "M2"
+    ],
+    "J3": [
+      "M1",
+      "M2"
+    ],
+    "J4": [
+      "M1",
+      "M2"
+    ],
+    "J5": [
+      "M1",
+      "M2"
+    ],
+    "J6": [
+      "M1",
+      "M2"
+    ],
+    "J7": [
+      "M1",
+      "M2"
+    ],
+    "J8": [
+      "M1",
+      "M2"
+    ]
+  },
+  "effective_processing_time": {
+    "J1": {
+      "M1": 4,
+      "M2": 4
+    },
+    "J2": {
+      "M1": 7,
+      "M2": 7
+    },
+    "J3": {
+      "M1": 3,
+      "M2": 3
+    },
+    "J4": {
+      "M1": 6,
+      "M2": 6
+    },
+    "J5": {
+      "M1": 5,
+      "M2": 5
+    },
+    "J6": {
+      "M1": 2,
+      "M2": 2
+    },
+    "J7": {
+      "M1": 8,
+      "M2": 8
+    },
+    "J8": {
+      "M1": 4,
+      "M2": 4
+    }
+  },
+  "weights": {
+    "J1": 1,
+    "J2": 1,
+    "J3": 1,
+    "J4": 1,
+    "J5": 1,
+    "J6": 1,
+    "J7": 1,
+    "J8": 1
+  },
+  "meta_parameters": {
+    "number_jobs": 8,
+    "number_machines": 2,
+    "machine_type": "identical",
+    "objective_type": "makespan",
+    "processing_time_regime": "uniform_small",
+    "long_job_flag": false,
+    "seed": 401,
+    "formulation_size": 34
+  }
+}

@@ -1,0 +1,141 @@
+{
+  "instance_id": "pms_e_010",
+  "variant": "parallel_machine_scheduling",
+  "scenario": "parallel_machine_scheduling",
+  "difficulty": "easy",
+  "sets": {
+    "jobs": [
+      "J1",
+      "J2",
+      "J3",
+      "J4",
+      "J5",
+      "J6",
+      "J7",
+      "J8",
+      "J9"
+    ],
+    "machines": [
+      "M1",
+      "M2",
+      "M3"
+    ]
+  },
+  "base_processing_time": {
+    "J1": 7,
+    "J2": 3,
+    "J3": 6,
+    "J4": 4,
+    "J5": 8,
+    "J6": 2,
+    "J7": 5,
+    "J8": 9,
+    "J9": 3
+  },
+  "machine_speed": {
+    "M1": 1.0,
+    "M2": 1.0,
+    "M3": 1.0
+  },
+  "eligibility": {
+    "J1": [
+      "M1",
+      "M2"
+    ],
+    "J2": [
+      "M1",
+      "M3"
+    ],
+    "J3": [
+      "M2",
+      "M3"
+    ],
+    "J4": [
+      "M1",
+      "M2",
+      "M3"
+    ],
+    "J5": [
+      "M1",
+      "M3"
+    ],
+    "J6": [
+      "M1",
+      "M2"
+    ],
+    "J7": [
+      "M2",
+      "M3"
+    ],
+    "J8": [
+      "M1",
+      "M2",
+      "M3"
+    ],
+    "J9": [
+      "M1",
+      "M3"
+    ]
+  },
+  "effective_processing_time": {
+    "J1": {
+      "M1": 7,
+      "M2": 7
+    },
+    "J2": {
+      "M1": 3,
+      "M3": 3
+    },
+    "J3": {
+      "M2": 6,
+      "M3": 6
+    },
+    "J4": {
+      "M1": 4,
+      "M2": 4,
+      "M3": 4
+    },
+    "J5": {
+      "M1": 8,
+      "M3": 8
+    },
+    "J6": {
+      "M1": 2,
+      "M2": 2
+    },
+    "J7": {
+      "M2": 5,
+      "M3": 5
+    },
+    "J8": {
+      "M1": 9,
+      "M2": 9,
+      "M3": 9
+    },
+    "J9": {
+      "M1": 3,
+      "M3": 3
+    }
+  },
+  "weights": {
+    "J1": 2,
+    "J2": 5,
+    "J3": 3,
+    "J4": 4,
+    "J5": 1,
+    "J6": 6,
+    "J7": 2,
+    "J8": 1,
+    "J9": 4
+  },
+  "meta_parameters": {
+    "number_jobs": 9,
+    "number_machines": 3,
+    "machine_type": "identical",
+    "objective_type": "weighted_completion",
+    "processing_time_regime": "heterogeneous_weighted",
+    "long_job_flag": false,
+    "seed": 410,
+    "formulation_size": 59
+  }
+}

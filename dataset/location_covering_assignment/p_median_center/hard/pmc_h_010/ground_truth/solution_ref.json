@@ -1,0 +1,118 @@
+{
+  "instance_id": "pmc_h_010",
+  "status": "optimal",
+  "objective_exact": 6.66,
+  "objective_value": 6.66,
+  "solver_policy": "prefer_gurobi_else_exact_fallback",
+  "solver_used": "gurobi",
+  "solve_method": "gurobi_mip",
+  "optimality_proof": "gurobi_mip_optimal_status",
+  "runtime_seconds": 0.033596,
+  "open_sites": [
+    "F1",
+    "F11",
+    "F13",
+    "F14",
+    "F3",
+    "F9"
+  ],
+  "assignments": {
+    "D1": {
+      "assigned_site": "F1",
+      "distance": 1.13
+    },
+    "D2": {
+      "assigned_site": "F1",
+      "distance": 2.09
+    },
+    "D3": {
+      "assigned_site": "F1",
+      "distance": 5.25
+    },
+    "D4": {
+      "assigned_site": "F3",
+      "distance": 0.85
+    },
+    "D5": {
+      "assigned_site": "F3",
+      "distance": 4.49
+    },
+    "D6": {
+      "assigned_site": "F9",
+      "distance": 5.73
+    },
+    "D7": {
+      "assigned_site": "F11",
+      "distance": 6.66
+    },
+    "D8": {
+      "assigned_site": "F1",
+      "distance": 6.44
+    },
+    "D9": {
+      "assigned_site": "F3",
+      "distance": 4.56
+    },
+    "D10": {
+      "assigned_site": "F9",
+      "distance": 4.42
+    },
+    "D11": {
+      "assigned_site": "F9",
+      "distance": 0.82
+    },
+    "D12": {
+      "assigned_site": "F9",
+      "distance": 4.62
+    },
+    "D13": {
+      "assigned_site": "F11",
+      "distance": 1.2
+    },
+    "D14": {
+      "assigned_site": "F11",
+      "distance": 2.33
+    },
+    "D15": {
+      "assigned_site": "F13",
+      "distance": 5.23
+    },
+    "D16": {
+      "assigned_site": "F13",
+      "distance": 1.97
+    },
+    "D17": {
+      "assigned_site": "F13",
+      "distance": 1.72
+    },
+    "D18": {
+      "assigned_site": "F13",
+      "distance": 4.62
+    },
+    "D19": {
+      "assigned_site": "F14",
+      "distance": 1.13
+    },
+    "D20": {
+      "assigned_site": "F14",
+      "distance": 2.6
+    },
+    "D21": {
+      "assigned_site": "F13",
+      "distance": 6.65
+    },
+    "D22": {
+      "assigned_site": "F13",
+      "distance": 6.4
+    },
+    "D23": {
+      "assigned_site": "F11",
+      "distance": 4.96
+    },
+    "D24": {
+      "assigned_site": "F1",
+      "distance": 3.2
+    }
+  },
+  "max_assignment_distance": 6.66
+}

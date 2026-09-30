@@ -1,0 +1,113 @@
+Canonical specification for a deterministic single-depot Capacitated Vehicle Routing Problem instance.
+
+Interpretation:
+- A fleet of identical vehicles starts at the depot, serves customers, and returns to the depot.
+- Each customer must be visited exactly once by exactly one vehicle.
+- Travel between every pair of distinct nodes is allowed, so the routing graph is complete.
+- Vehicle capacity is binding and the total demand served on each route must not exceed the common vehicle capacity.
+- There are no time windows, multiple depots, forbidden arcs, stochastic demands, or heterogeneous vehicle capacities.
+- The optimization goal is to minimize total routing cost across all used vehicles.
+
+Sets:
+- Nodes N = ['Depot', 'C1', 'C2', 'C3', 'C4', 'C5', 'C6', 'C7', 'C8', 'C9', 'C10', 'C11', 'C12', 'C13', 'C14']
+- Customer subset C = ['C1', 'C2', 'C3', 'C4', 'C5', 'C6', 'C7', 'C8', 'C9', 'C10', 'C11', 'C12', 'C13', 'C14']
+- Depot node = Depot
+- Vehicles V = ['V1', 'V2', 'V3']
+- Directed arcs A = [(i,j) for i,j in N, i != j]
+
+Coordinates by node:
+- Depot: (5.00, 5.00)
+- C1: (2.64, 7.02)
+- C2: (1.87, 7.87)
+- C3: (2.20, 6.16)
+- C4: (2.30, 7.46)
+- C5: (1.94, 7.02)
+- C6: (7.61, 7.01)
+- C7: (7.85, 6.23)
+- C8: (6.17, 6.42)
+- C9: (7.13, 6.28)
+- C10: (7.68, 5.17)
+- C11: (4.74, 1.59)
+- C12: (5.93, 2.38)
+- C13: (3.88, 1.97)
+- C14: (4.66, 3.83)
+
+Customer demands:
+- Depot: 0
+- C1: 1
+- C2: 1
+- C3: 2
+- C4: 2
+- C5: 3
+- C6: 3
+- C7: 3
+- C8: 3
+- C9: 1
+- C10: 1
+- C11: 3
+- C12: 1
+- C13: 3
+- C14: 3
+
+Fleet parameters:
+- number_vehicles = 3
+- vehicle_capacity = 12
+- vehicle_fixed_cost = 0
+- vehicles are identical and may be unused
+
+Complete travel-cost matrix:
+- Depot: Depot=0.00, C1=3.10, C2=4.25, C3=3.03, C4=3.65, C5=3.66, C6=3.30, C7=3.11, C8=1.85, C9=2.49, C10=2.68, C11=3.42, C12=2.78, C13=3.23, C14=1.22
+- C1: Depot=3.10, C1=0.00, C2=1.15, C3=0.97, C4=0.56, C5=0.70, C6=4.97, C7=5.27, C8=3.58, C9=4.55, C10=5.36, C11=5.82, C12=5.69, C13=5.20, C14=3.78
+- C2: Depot=4.25, C1=1.15, C2=0.00, C3=1.75, C4=0.60, C5=0.86, C6=5.81, C7=6.21, C8=4.54, C9=5.50, C10=6.41, C11=6.90, C12=6.83, C13=6.23, C14=4.92
+- C3: Depot=3.03, C1=0.97, C2=1.75, C3=0.00, C4=1.31, C5=0.90, C6=5.48, C7=5.65, C8=3.98, C9=4.93, C10=5.56, C11=5.22, C12=5.31, C13=4.51, C14=3.39
+- C4: Depot=3.65, C1=0.56, C2=0.60, C3=1.31, C4=0.00, C5=0.57, C6=5.33, C7=5.68, C8=4.01, C9=4.97, C10=5.84, C11=6.35, C12=6.24, C13=5.71, C14=4.33
+- C5: Depot=3.66, C1=0.70, C2=0.86, C3=0.90, C4=0.57, C5=0.00, C6=5.67, C7=5.96, C8=4.27, C9=5.24, C10=6.03, C11=6.10, C12=6.12, C13=5.41, C14=4.19
+- C6: Depot=3.30, C1=4.97, C2=5.81, C3=5.48, C4=5.33, C5=5.67, C6=0.00, C7=0.81, C8=1.55, C9=0.87, C10=1.84, C11=6.13, C12=4.93, C13=6.27, C14=4.34
+- C7: Depot=3.11, C1=5.27, C2=6.21, C3=5.65, C4=5.68, C5=5.96, C6=0.81, C7=0.00, C8=1.69, C9=0.72, C10=1.07, C11=5.59, C12=4.31, C13=5.82, C14=4.00
+- C8: Depot=1.85, C1=3.58, C2=4.54, C3=3.98, C4=4.01, C5=4.27, C6=1.55, C7=1.69, C8=0.00, C9=0.97, C10=1.96, C11=5.04, C12=4.06, C13=5.01, C14=3.01
+- C9: Depot=2.49, C1=4.55, C2=5.50, C3=4.93, C4=4.97, C5=5.24, C6=0.87, C7=0.72, C8=0.97, C9=0.00, C10=1.24, C11=5.27, C12=4.09, C13=5.40, C14=3.48
+- C10: Depot=2.68, C1=5.36, C2=6.41, C3=5.56, C4=5.84, C5=6.03, C6=1.84, C7=1.07, C8=1.96, C9=1.24, C10=0.00, C11=4.63, C12=3.30, C13=4.96, C14=3.30
+- C11: Depot=3.42, C1=5.82, C2=6.90, C3=5.22, C4=6.35, C5=6.10, C6=6.13, C7=5.59, C8=5.04, C9=5.27, C10=4.63, C11=0.00, C12=1.42, C13=0.93, C14=2.23
+- C12: Depot=2.78, C1=5.69, C2=6.83, C3=5.31, C4=6.24, C5=6.12, C6=4.93, C7=4.31, C8=4.06, C9=4.09, C10=3.30, C11=1.42, C12=0.00, C13=2.08, C14=1.92
+- C13: Depot=3.23, C1=5.20, C2=6.23, C3=4.51, C4=5.71, C5=5.41, C6=6.27, C7=5.82, C8=5.01, C9=5.40, C10=4.96, C11=0.93, C12=2.08, C13=0.00, C14=2.01
+- C14: Depot=1.22, C1=3.78, C2=4.92, C3=3.39, C4=4.33, C5=4.19, C6=4.34, C7=4.00, C8=3.01, C9=3.48, C10=3.30, C11=2.23, C12=1.92, C13=2.01, C14=0.00
+
+Decision variables:
+- x[i,j,v] in {0,1}: equals 1 if vehicle v directly travels from node i to node j
+- u[i]: cumulative load/order helper variable for customer i used in MTZ-style capacity subtour elimination
+
+Objective:
+- Minimize total routing cost sum_v sum_{i != j} c[i,j] * x[i,j,v] plus optional fleet fixed costs when present.
+
+Constraints:
+- Every customer has exactly one outgoing service arc across the fleet.
+- Every customer has exactly one incoming service arc across the fleet.
+- For each vehicle, flow is conserved at every node it visits.
+- Each vehicle can leave the depot at most once and return at most once.
+- The total demand served by each vehicle does not exceed the common capacity.
+- MTZ-style load constraints eliminate subtours and enforce capacity-consistent route order.
+- Arc variables are binary and load/order variables are continuous.
+
+Metadata:
+- number_customers=14
+- number_vehicles=3
+- total_demand=30
+- vehicle_capacity=12
+- demand_regime=uniform_small_demands
+- layout_type=multi_cluster_layout
+- cluster_count=3
+- outlier_flag=false
+- capacity_binding_flag=true
+- near_optimal_partition_flag=false
+- vehicle_fixed_cost_flag=false
+- visual_type=composite_map_and_matrix_visual
+- seed=3401
+- group=A
+- formulation_size=936
+
+Visual interpretation:
+- The composite visual contains the full instance data in a single image.
+- The left panel shows the depot, customers, exact node coordinates, and demand annotations on a coordinate plane.
+- The right panel provides the fleet parameters and the complete travel-cost matrix.
+- The complete routing graph is defined by the travel-cost matrix.
+- The visual does not reveal the selected vehicle routes, customer-to-vehicle assignment, route order, or objective value.

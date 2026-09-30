@@ -1,0 +1,60 @@
+This is a single-period task-assignment planning instance with capacity-limited agents.
+
+Instance ID: gap_m_003
+Variant: generalized_assignment_problem
+Scenario: regional_task_assignment
+
+Agents and capacities:
+- A1: capacity=5, role=heavy
+- A2: capacity=13, role=heavy
+- A3: capacity=5, role=specialist
+- A4: capacity=18, role=specialist
+- A5: capacity=14, role=specialist
+- A6: capacity=8, role=specialist
+- A7: capacity=6, role=specialist
+- A8: capacity=10, role=reserve
+
+Tasks:
+- T1: family=F1
+- T2: family=F2
+- T3: family=F3
+- T4: family=F4
+- T5: family=F1
+- T6: family=F2
+- T7: family=F3
+- T8: family=F4
+- T9: family=F1
+- T10: family=F2
+- T11: family=F3
+- T12: family=F4
+- T13: family=F1
+- T14: family=F2
+
+Feasible task-agent pairs with exact parameters:
+- T1: A1 -> cost 13, resource 4; A2 -> cost 12, resource 3; A6 -> cost 11, resource 6; A8 -> cost 17, resource 4
+- T2: A3 -> cost 12, resource 8; A4 -> cost 7, resource 6; A5 -> cost 13, resource 8; A6 -> cost 13, resource 8; A7 -> cost 8, resource 7
+- T3: A3 -> cost 11, resource 4; A6 -> cost 12, resource 5; A7 -> cost 13, resource 6; A8 -> cost 18, resource 4
+- T4: A1 -> cost 11, resource 8; A4 -> cost 10, resource 9; A5 -> cost 6, resource 7; A6 -> cost 11, resource 9; A8 -> cost 12, resource 8
+- T5: A1 -> cost 12, resource 4; A2 -> cost 11, resource 3; A5 -> cost 12, resource 6; A6 -> cost 13, resource 6; A8 -> cost 17, resource 4
+- T6: A1 -> cost 12, resource 7; A4 -> cost 7, resource 6; A7 -> cost 11, resource 7
+- T7: A3 -> cost 10, resource 5; A4 -> cost 13, resource 6; A6 -> cost 12, resource 4; A8 -> cost 17, resource 4
+- T8: A5 -> cost 6, resource 7; A7 -> cost 11, resource 9; A8 -> cost 13, resource 8
+- T9: A1 -> cost 12, resource 4; A2 -> cost 10, resource 3; A8 -> cost 16, resource 4
+- T10: A4 -> cost 10, resource 6; A7 -> cost 10, resource 7; A8 -> cost 13, resource 6
+- T11: A1 -> cost 13, resource 5; A2 -> cost 15, resource 5; A3 -> cost 12, resource 5; A6 -> cost 9, resource 4; A8 -> cost 15, resource 4
+- T12: A1 -> cost 10, resource 8; A2 -> cost 13, resource 8; A3 -> cost 12, resource 9; A5 -> cost 9, resource 8; A8 -> cost 8, resource 7
+- T13: A1 -> cost 14, resource 4; A2 -> cost 13, resource 3; A3 -> cost 12, resource 6; A8 -> cost 15, resource 4
+- T14: A2 -> cost 11, resource 7; A4 -> cost 9, resource 7; A7 -> cost 9, resource 6; A8 -> cost 13, resource 6
+
+Objective:
+- Minimize total assignment cost.
+
+Constraints:
+- Each task must be assigned to exactly one feasible agent.
+- The total resource consumption assigned to each agent cannot exceed that agent's capacity.
+- Forbidden task-agent pairs are not allowed.
+
+Visual interpretation:
+- The upper table reports exact assignment costs and feasibility.
+- The lower table reports exact resource consumption and agent capacities.
+- Entries shown as "—" are forbidden assignments.

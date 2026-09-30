@@ -1,0 +1,54 @@
+{
+  "number_customers": 10,
+  "number_vehicle_types": 3,
+  "number_available_vehicles": 4,
+  "total_demand": 28,
+  "aggregate_capacity": 33,
+  "vehicle_type_summary": [
+    {
+      "type_id": "SM",
+      "available_count": 1,
+      "capacity": 6,
+      "fixed_activation_cost": 0.9,
+      "distance_multiplier": 1.18
+    },
+    {
+      "type_id": "MD",
+      "available_count": 2,
+      "capacity": 8,
+      "fixed_activation_cost": 2.4,
+      "distance_multiplier": 1.05
+    },
+    {
+      "type_id": "LG",
+      "available_count": 1,
+      "capacity": 11,
+      "fixed_activation_cost": 4.9,
+      "distance_multiplier": 0.92
+    }
+  ],
+  "layout_type": "uniform_random_layout",
+  "demand_regime": "random_moderate_variation",
+  "heterogeneity_pattern": "three_type_tradeoff",
+  "fixed_cost_flag": true,
+  "distance_multiplier_flag": true,
+  "capacity_binding_flag": true,
+  "near_optimal_partition_flag": false,
+  "visual_type": "composite_map_embedded_node_annotations_and_fleet_table_visual",
+  "base_distance_type": "rounded_euclidean_2dp",
+  "seed": 3407,
+  "group": "B",
+  "formulation_size": 996,
+  "instance_id": "hfvrp_e_007",
+  "variant": "heterogeneous_fleet_vrp",
+  "scenario": "heterogeneous_fleet_vrp",
+  "difficulty": "easy",
+  "objective_value": 47.5862,
+  "objective_exact": 47.58620000000001,
+  "status": "optimal",
+  "runtime_seconds": 0.09917566704098135,
+  "num_routes_used": 4,
+  "solve_method": "gurobi_mtz_hfvrp",
+  "solver": "Gurobi",
+  "visual_checksum_md5": "6018d4d1e417c5bc45932736810d492b"
+}

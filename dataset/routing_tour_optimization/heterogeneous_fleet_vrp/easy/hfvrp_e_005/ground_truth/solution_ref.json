@@ -1,0 +1,142 @@
+{
+  "status": "optimal",
+  "objective": 40.9752,
+  "objective_exact": 40.9752,
+  "runtime_seconds": 0.23611149995122105,
+  "solve_method": "gurobi_mtz_hfvrp",
+  "routes": [
+    [
+      "Depot",
+      "C10",
+      "C8",
+      "C6",
+      "Depot"
+    ],
+    [
+      "Depot",
+      "C7",
+      "C9",
+      "Depot"
+    ],
+    [
+      "Depot",
+      "C4",
+      "C2",
+      "C1",
+      "C3",
+      "C5",
+      "Depot"
+    ]
+  ],
+  "route_vehicle_ids": [
+    "SM1",
+    "SM2",
+    "LG1"
+  ],
+  "route_vehicle_types": [
+    "SM",
+    "SM",
+    "LG"
+  ],
+  "route_loads": [
+    6,
+    6,
+    13
+  ],
+  "route_capacities": [
+    7,
+    7,
+    15
+  ],
+  "route_base_distances": [
+    9.7,
+    9.48,
+    12.38
+  ],
+  "route_variable_costs": [
+    11.155,
+    10.902,
+    11.0182
+  ],
+  "route_total_costs": [
+    12.355,
+    12.102,
+    16.5182
+  ],
+  "activated_vehicles": [
+    "SM1",
+    "SM2",
+    "LG1"
+  ],
+  "unused_vehicles": [],
+  "active_arcs": [
+    [
+      "Depot",
+      "C10",
+      "SM1"
+    ],
+    [
+      "C10",
+      "C8",
+      "SM1"
+    ],
+    [
+      "C8",
+      "C6",
+      "SM1"
+    ],
+    [
+      "C6",
+      "Depot",
+      "SM1"
+    ],
+    [
+      "Depot",
+      "C7",
+      "SM2"
+    ],
+    [
+      "C7",
+      "C9",
+      "SM2"
+    ],
+    [
+      "C9",
+      "Depot",
+      "SM2"
+    ],
+    [
+      "Depot",
+      "C4",
+      "LG1"
+    ],
+    [
+      "C4",
+      "C2",
+      "LG1"
+    ],
+    [
+      "C2",
+      "C1",
+      "LG1"
+    ],
+    [
+      "C1",
+      "C3",
+      "LG1"
+    ],
+    [
+      "C3",
+      "C5",
+      "LG1"
+    ],
+    [
+      "C5",
+      "Depot",
+      "LG1"
+    ]
+  ],
+  "num_routes_used": 3,
+  "capacity_binding_flag": false,
+  "objective_from_routes": 40.9752
+}

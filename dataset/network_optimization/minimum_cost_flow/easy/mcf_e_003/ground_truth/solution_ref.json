@@ -1,0 +1,19 @@
+{
+  "status": "optimal",
+  "objective_value": 20.0,
+  "objective_exact": 20.0,
+  "flows": {
+    "1_2": 10.0,
+    "2_5": 10.0,
+    "1_3": 0.0,
+    "3_4": 0.0,
+    "4_5": 0.0,
+    "2_3": 0.0,
+    "1_4": 0.0
+  },
+  "runtime_seconds": 0.02955794334411621,
+  "solve_method": "gurobi_lp_mcf",
+  "solver_used": "Gurobi",
+  "solver": "Gurobi",
+  "solver_policy": "gurobi_first_then_exact_scipy_linprog"
+}

@@ -1,0 +1,82 @@
+This is a single-period task-assignment planning instance with capacity-limited agents.
+
+Instance ID: gap_h_010
+Variant: generalized_assignment_problem
+Scenario: regional_task_assignment
+
+Agents and capacities:
+- A1: capacity=17, role=heavy
+- A2: capacity=13, role=heavy
+- A3: capacity=12, role=specialist
+- A4: capacity=8, role=specialist
+- A5: capacity=9, role=specialist
+- A6: capacity=8, role=specialist
+- A7: capacity=9, role=specialist
+- A8: capacity=5, role=specialist
+- A9: capacity=6, role=specialist
+- A10: capacity=8, role=specialist
+- A11: capacity=14, role=specialist
+- A12: capacity=5, role=specialist
+- A13: capacity=12, role=specialist
+- A14: capacity=14, role=specialist
+
+Tasks:
+- T1: family=F1
+- T2: family=F2
+- T3: family=F3
+- T4: family=F4
+- T5: family=F1
+- T6: family=F2
+- T7: family=F3
+- T8: family=F4
+- T9: family=F1
+- T10: family=F2
+- T11: family=F3
+- T12: family=F4
+- T13: family=F1
+- T14: family=F2
+- T15: family=F3
+- T16: family=F4
+- T17: family=F1
+- T18: family=F2
+- T19: family=F3
+- T20: family=F4
+- T21: family=F1
+- T22: family=F2
+
+Feasible task-agent pairs with exact parameters:
+- T1: A1 -> cost 12, resource 5; A4 -> cost 12, resource 4; A6 -> cost 13, resource 5; A7 -> cost 11, resource 5; A8 -> cost 14, resource 6; A10 -> cost 14, resource 6
+- T2: A1 -> cost 13, resource 6; A2 -> cost 14, resource 7; A3 -> cost 15, resource 7; A11 -> cost 16, resource 8; A13 -> cost 14, resource 6
+- T3: A4 -> cost 18, resource 6; A5 -> cost 16, resource 5; A6 -> cost 18, resource 6; A7 -> cost 18, resource 6; A8 -> cost 15, resource 4; A12 -> cost 17, resource 6
+- T4: A2 -> cost 14, resource 7; A4 -> cost 17, resource 9; A7 -> cost 17, resource 9; A11 -> cost 16, resource 8; A14 -> cost 15, resource 7
+- T5: A2 -> cost 13, resource 5; A4 -> cost 13, resource 5; A6 -> cost 12, resource 4; A7 -> cost 14, resource 5; A12 -> cost 15, resource 5; A13 -> cost 15, resource 6
+- T6: A1 -> cost 15, resource 6; A2 -> cost 15, resource 7; A3 -> cost 14, resource 6; A8 -> cost 17, resource 8; A9 -> cost 17, resource 7; A13 -> cost 16, resource 7
+- T7: A4 -> cost 16, resource 6; A5 -> cost 13, resource 4; A8 -> cost 14, resource 5; A10 -> cost 15, resource 5; A11 -> cost 16, resource 6
+- T8: A1 -> cost 16, resource 8; A2 -> cost 16, resource 7; A8 -> cost 18, resource 9; A11 -> cost 15, resource 7; A14 -> cost 16, resource 8
+- T9: A1 -> cost 14, resource 5; A4 -> cost 14, resource 5; A5 -> cost 16, resource 6; A6 -> cost 13, resource 4; A7 -> cost 15, resource 5
+- T10: A1 -> cost 12, resource 6; A7 -> cost 15, resource 8; A9 -> cost 14, resource 7; A11 -> cost 15, resource 8; A13 -> cost 13, resource 6
+- T11: A1 -> cost 15, resource 5; A5 -> cost 16, resource 5; A8 -> cost 15, resource 5; A10 -> cost 14, resource 4; A12 -> cost 17, resource 6; A14 -> cost 17, resource 6
+- T12: A3 -> cost 19, resource 9; A6 -> cost 18, resource 9; A11 -> cost 16, resource 7; A14 -> cost 17, resource 8
+- T13: A2 -> cost 12, resource 5; A3 -> cost 14, resource 6; A7 -> cost 11, resource 4; A8 -> cost 14, resource 6; A10 -> cost 14, resource 6; A12 -> cost 12, resource 5
+- T14: A1 -> cost 14, resource 6; A3 -> cost 13, resource 6; A6 -> cost 16, resource 8; A9 -> cost 16, resource 7; A13 -> cost 15, resource 7
+- T15: A2 -> cost 16, resource 5; A3 -> cost 18, resource 6; A4 -> cost 18, resource 6; A5 -> cost 16, resource 5; A10 -> cost 15, resource 4
+- T16: A2 -> cost 15, resource 7; A3 -> cost 17, resource 9; A6 -> cost 17, resource 9; A9 -> cost 17, resource 9; A13 -> cost 16, resource 9; A14 -> cost 14, resource 7
+- T17: A2 -> cost 13, resource 5; A4 -> cost 12, resource 4; A7 -> cost 13, resource 5; A12 -> cost 15, resource 5
+- T18: A1 -> cost 14, resource 5; A3 -> cost 16, resource 7; A5 -> cost 17, resource 8; A7 -> cost 17, resource 8; A13 -> cost 15, resource 7
+- T19: A2 -> cost 14, resource 5; A5 -> cost 13, resource 4; A8 -> cost 16, resource 5; A9 -> cost 16, resource 6; A10 -> cost 14, resource 5
+- T20: A2 -> cost 15, resource 6; A5 -> cost 18, resource 9; A8 -> cost 18, resource 9; A11 -> cost 16, resource 8; A12 -> cost 18, resource 9; A14 -> cost 17, resource 8
+- T21: A4 -> cost 13, resource 5; A6 -> cost 14, resource 5; A7 -> cost 15, resource 4; A10 -> cost 16, resource 6; A12 -> cost 16, resource 5
+- T22: A1 -> cost 13, resource 6; A2 -> cost 13, resource 7; A3 -> cost 13, resource 7; A5 -> cost 15, resource 8; A9 -> cost 12, resource 6; A13 -> cost 15, resource 7
+
+Objective:
+- Minimize total assignment cost.
+
+Constraints:
+- Each task must be assigned to exactly one feasible agent.
+- The total resource consumption assigned to each agent cannot exceed that agent's capacity.
+- Forbidden task-agent pairs are not allowed.
+
+Visual interpretation:
+- The upper table reports exact assignment costs and feasibility.
+- The lower table reports exact resource consumption and agent capacities.
+- Entries shown as "—" are forbidden assignments.

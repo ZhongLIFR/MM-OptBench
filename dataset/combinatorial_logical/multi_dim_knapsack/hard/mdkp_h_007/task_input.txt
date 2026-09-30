@@ -1,0 +1,20 @@
+A resource-allocation instance is specified by the accompanying visual artifact.
+
+The visual provides all instance-specific numerical data required for the optimization problem.
+
+The visual includes:
+- numeric item identifiers,
+- one value for each item,
+- segmented horizontal bars encoding each item's resource usage across the displayed resource dimensions,
+- and separate resource-limit bars at the bottom of the figure.
+
+How to read the visual:
+- Each row corresponds to one candidate item.
+- The orange box in a row gives that item's value.
+- The colored segments and printed numbers in the row give that item's resource usage in each displayed resource dimension.
+- The bars at the bottom give the capacity of each resource dimension.
+
+Task:
+Write a mathematical optimization model for the exact instance shown in the visual and provide executable optimization code.
+
+Do not assume fractional selections, hidden side constraints, logical dependencies, or any parameters not displayed in the visual.

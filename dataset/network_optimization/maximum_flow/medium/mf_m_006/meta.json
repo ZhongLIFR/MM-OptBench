@@ -1,0 +1,45 @@
+{
+  "family": "network_optimization",
+  "subtype": "maximum_flow",
+  "variant": "maximum_flow_minimum_cut_single",
+  "difficulty": "medium",
+  "graph_type": "layered_with_skip_layer_crosslinks",
+  "supply_pattern": "three_source_three_sink",
+  "capacity_regime": "distributed_mid_bottlenecks_balanced_inlets",
+  "cost_regime": "cycle_vs_junction_tradeoff",
+  "num_nodes": 14,
+  "num_arcs": 25,
+  "num_variables": 25,
+  "num_constraints": 37,
+  "formulation_size": 39,
+  "seed": 3006,
+  "files": {
+    "canonical_specification": "canonical_specification.txt",
+    "task_input": "task_input.txt",
+    "visuals": [
+      "visuals/visual_0.png"
+    ],
+    "ground_truth": {
+      "instance_data": "ground_truth/instance_data.json",
+      "math_model": "ground_truth/math_model.md",
+      "solver_ref": "ground_truth/solver_ref.py",
+      "solution_ref": "ground_truth/solution_ref.json"
+    }
+  },
+  "coupling_level": "medium",
+  "cut_structure": "distributed_cut_across_pre_sink_and_inlets",
+  "flow_pattern": "three_way_split_two_stage_merge_parallel_inlets",
+  "num_layers": 5,
+  "num_bottlenecks": 4,
+  "min_cut_size": 2,
+  "status": "optimal",
+  "optimal_max_flow_value": 13.0,
+  "optimal_min_cut_value": 13.0,
+  "objective_exact": 13.0,
+  "runtime_seconds": 0.035655975341796875,
+  "solve_method": "gurobi_lp_max_flow",
+  "solver_used": "Gurobi",
+  "solver": "Gurobi",
+  "solver_policy": "gurobi_first_then_exact_scipy_linprog",
+  "visual_0_checksum_md5": "6d2588dad2770525c6e519a7b58d32bb"
+}

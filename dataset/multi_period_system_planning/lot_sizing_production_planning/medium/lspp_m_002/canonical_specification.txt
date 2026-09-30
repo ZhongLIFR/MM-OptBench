@@ -1,0 +1,70 @@
+Canonical specification for a deterministic medium-level multi-product lot-sizing and production planning instance.
+
+Interpretation:
+- For each product and period, a production quantity may be chosen.
+- Production completed in a period is immediately available to satisfy that period's demand.
+- Unsatisfied demand is not allowed; therefore inventory balance must hold in every period.
+- End-of-period inventory may be carried into the next period and incurs a holding cost.
+- If positive production is chosen for a product in a period, a fixed setup cost is incurred for that product-period.
+- Total production across all products in a period is limited by the shared capacity of that period.
+
+Sets:
+- Products P = ['P1', 'P2', 'P3']
+- Periods T = ['t1', 't2', 't3', 't4', 't5', 't6', 't7', 't8', 't9', 't10', 't11', 't12', 't13', 't14']
+
+Initial inventory:
+- P1: 0
+- P2: 0
+- P3: 0
+
+Per-product parameter tables:
+- P1 demand by period: t1=6, t2=7, t3=8, t4=7, t5=6, t6=8, t7=7, t8=8, t9=9, t10=8, t11=7, t12=9, t13=8, t14=10
+- P1 unit production cost by period: t1=3, t2=3, t3=3, t4=3, t5=4, t6=4, t7=4, t8=4, t9=5, t10=5, t11=5, t12=5, t13=3, t14=3
+- P1 unit holding cost by period: t1=1, t2=1, t3=1, t4=1, t5=1, t6=1, t7=1, t8=1, t9=1, t10=1, t11=1, t12=1, t13=1, t14=0
+- P1 fixed setup cost by period: t1=24, t2=24, t3=24, t4=24, t5=24, t6=24, t7=24, t8=24, t9=24, t10=24, t11=24, t12=24, t13=24, t14=24
+- P1 setup-linking constant M: 108
+- P2 demand by period: t1=8, t2=9, t3=10, t4=9, t5=8, t6=10, t7=9, t8=10, t9=11, t10=10, t11=9, t12=11, t13=10, t14=12
+- P2 unit production cost by period: t1=4, t2=4, t3=4, t4=4, t5=5, t6=5, t7=5, t8=5, t9=6, t10=6, t11=6, t12=6, t13=4, t14=4
+- P2 unit holding cost by period: t1=2, t2=2, t3=2, t4=2, t5=2, t6=2, t7=2, t8=2, t9=2, t10=2, t11=2, t12=2, t13=2, t14=0
+- P2 fixed setup cost by period: t1=36, t2=36, t3=36, t4=36, t5=36, t6=36, t7=36, t8=36, t9=36, t10=36, t11=36, t12=36, t13=36, t14=36
+- P2 setup-linking constant M: 136
+- P3 demand by period: t1=10, t2=11, t3=12, t4=11, t5=10, t6=12, t7=10, t8=11, t9=12, t10=11, t11=10, t12=12, t13=11, t14=13
+- P3 unit production cost by period: t1=5, t2=5, t3=5, t4=5, t5=6, t6=6, t7=6, t8=6, t9=7, t10=7, t11=7, t12=7, t13=5, t14=5
+- P3 unit holding cost by period: t1=1, t2=1, t3=1, t4=1, t5=1, t6=1, t7=1, t8=1, t9=1, t10=1, t11=1, t12=1, t13=1, t14=0
+- P3 fixed setup cost by period: t1=20, t2=20, t3=20, t4=20, t5=20, t6=20, t7=20, t8=20, t9=20, t10=20, t11=20, t12=20, t13=20, t14=20
+- P3 setup-linking constant M: 156
+
+Shared capacity by period:
+- t1=30, t2=31, t3=33, t4=30, t5=29, t6=34, t7=30, t8=32, t9=35, t10=32, t11=29, t12=35, t13=31, t14=38
+
+Decision variables:
+- x[p,t] >= 0: production quantity of product p in period t
+- I[p,t] >= 0: ending inventory of product p after period t
+- y[p,t] in {0,1}: equals 1 if product p is produced in period t
+
+Objective:
+- Minimize total production cost + total inventory holding cost + total fixed setup cost.
+
+Constraints:
+- Inventory balance for every product and period: I[p,t-1] + x[p,t] = d[p,t] + I[p,t], with the given initial inventory at the start of t1.
+- Setup linking for every product and period: x[p,t] <= M[p] * y[p,t].
+- Shared capacity for every period: sum_p x[p,t] <= C[t].
+- Nonnegativity of production and inventory, binary setup variables, and no backlogging.
+
+Metadata:
+- number_periods=14
+- number_products=3
+- demand_regime=strong_seasonality
+- setup_cost_regime=mixed_high_low_setup_products
+- capacity_regime=period_specific_bottlenecks
+- seasonality_flag=true
+- inventory_pressure_flag=false
+- multi_product_flag=true
+- visual_type=timeline_demand_grid_dual_visual
+- seed=602
+- formulation_size=224
+
+Visual interpretation:
+- visual_0.png shows one capacity bar per period plus the demand matrix with exact numeric demand values.
+- visual_1.png shows the production-cost, holding-cost, and setup-cost matrices with exact numeric parameter values.
+- The visuals do not reveal the optimal production plan, setup pattern, or objective value.

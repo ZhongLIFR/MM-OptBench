@@ -1,0 +1,52 @@
+{
+  "instance_id": "tempnf_e_001",
+  "family": "network_optimization",
+  "subtype": "time-expanded_multi-period_network_flow",
+  "variant": "single_visual_single_commodity_mpnf",
+  "difficulty": "easy",
+  "graph_type": "branch_merge_with_single_warehouse_6",
+  "scenario_name": "early_stock_build_for_late_pull",
+  "special_node_pattern": "single_source_single_warehouse_single_sink",
+  "balance_pattern": "front_loaded_supply_back_loaded_demand",
+  "capacity_time_regime": "warehouse_release_expands_late",
+  "cost_time_regime": "warehouse_route_dominates_direct_bypass",
+  "holding_cost_regime": "light_uniform_holding_cost",
+  "visual_type": "single_visual_topology_with_inline_arc_time_tuples_and_right_side_special_node_table",
+  "num_nodes": 6,
+  "num_arcs": 8,
+  "num_periods": 3,
+  "num_storage_nodes": 1,
+  "num_variables": 27,
+  "num_constraints": 45,
+  "formulation_size": 72,
+  "random_seed": 9101,
+  "seed": 9101,
+  "status": "optimal",
+  "optimal_objective_value": 30.4,
+  "objective_exact": 30.4,
+  "routing_cost_total": 28,
+  "holding_cost_total": 2.4,
+  "binding_arc_period_count": 8,
+  "positive_inventory_period_count": 2,
+  "storage_binding_period_count": 2,
+  "runtime_seconds": 0.01319671,
+  "solve_method": "gurobi_lp_multi_period_network_flow",
+  "solver_used": "Gurobi",
+  "solver": "Gurobi",
+  "solver_policy": "gurobi_first_then_scipy_highs_exact_lp",
+  "verification_method": "direct_gurobi_optimal_lp_solution",
+  "visual_0_checksum_md5": "c362a4bb87950186255052781b047a29",
+  "files": {
+    "canonical_specification": "canonical_specification.txt",
+    "task_input": "task_input.txt",
+    "visuals": [
+      "visuals/visual_0.png"
+    ],
+    "ground_truth": {
+      "instance_data": "ground_truth/instance_data.json",
+      "math_model": "ground_truth/math_model.md",
+      "solver_ref": "ground_truth/solver_ref.py",
+      "solution_ref": "ground_truth/solution_ref.json"
+    }
+  }
+}

@@ -1,0 +1,34 @@
+This is a single-commodity directed path selection problem with two additive resource constraints.
+
+Nodes: {1,2,3,4,5,6,7,8,9,10,11}
+Start node: 1
+Destination node: 11
+
+Displayed resources (in order): fuel, exposure
+Resource bounds:
+- fuel: 9
+- exposure: 8
+
+Directed arcs (i,j) with (cost, fuel, exposure):
+
+(1,2): (1,3,1)
+(1,3): (2,2,2)
+(1,4): (1,1,3)
+(2,5): (1,4,1)
+(2,6): (1,4,6)
+(3,6): (1,2,2)
+(3,7): (2,2,3)
+(4,6): (1,1,4)
+(4,7): (1,1,4)
+(5,8): (1,2,1)
+(5,9): (1,2,3)
+(6,8): (1,2,2)
+(6,9): (1,2,2)
+(7,9): (1,2,1)
+(7,10): (1,2,1)
+(8,11): (1,1,1)
+(9,11): (1,1,1)
+(10,11): (1,1,1)
+
+Goal: Select exactly one directed route from the start node to the destination node,
+minimizing total cost while keeping total fuel and total exposure within their bounds.

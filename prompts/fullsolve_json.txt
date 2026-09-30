@@ -1,0 +1,33 @@
+Return valid JSON only, without markdown fences.
+
+Use this schema exactly:
+{
+  "case_id": "<case id>",
+  "problem_type": "<brief canonical problem type>",
+  "extracted_data": {
+    "structured_instance": {},
+    "assumptions": ["<only if necessary>"],
+    "uncertain_or_missing": ["<empty if none>"]
+  },
+  "mathematical_model": {
+    "decision_variables": [{"name": "<name>", "domain": "<domain>", "description": "<meaning>"}],
+    "objective": "<objective in words or notation>",
+    "constraints": ["<one constraint family per item>"]
+  },
+  "math_model_markdown": "<clear mathematical formulation in markdown>",
+  "solving_approach": {
+    "method": "<exact_mip|exact_cp|dynamic_programming|graph_algorithm|heuristic|other>",
+    "exact": true,
+    "reason": "<brief rationale>"
+  },
+  "solver_code_python": "<complete runnable Python code as one JSON string>",
+  "validation_checks": ["<checks to diagnose extraction / modeling / coding errors>"]
+}
+
+Rules:
+- Use all provided materials faithfully.
+- First extract instance-specific data faithfully. Then formulate the model. Then choose a solution method and write code.
+- Copy the top-level JSON structure exactly.
+- Never invent unreadable or missing data.
+- The Python code must be self-contained and print a final JSON object.
+- Use English only.

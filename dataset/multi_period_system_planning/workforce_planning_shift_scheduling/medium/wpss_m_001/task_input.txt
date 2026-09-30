@@ -1,0 +1,40 @@
+A hospital ward must create a multi-day workforce roster using the exact data shown in the accompanying visual artifacts.
+
+This instance uses two visual files.
+
+visual_0.png:
+- a total-staff bar chart showing the exact total number of workers required on each day,
+- and a shift-by-day staffing table showing the exact demand for Day (D), Evening (E), and Night (N) shifts.
+
+visual_1.png:
+- a worker profile table listing, for each worker,
+- the exact Day / Evening / Night assignment cost
+- the regular shift cap over the full horizon
+- the overtime cost charged per extra shift above the regular cap
+- the maximum allowed number of Night shifts
+- and a worker-by-day availability matrix
+
+Availability code legend in visual_1:
+- OFF means the worker is unavailable that day.
+- D means the worker may work only the Day shift.
+- E means the worker may work only the Evening shift.
+- N means the worker may work only the Night shift.
+- DE means the worker may work Day or Evening.
+- EN means the worker may work Evening or Night.
+- DEN means the worker may work any of the three shifts.
+
+Operational rules:
+- At least the required number of workers must be assigned to every day-shift pair.
+- Each worker may be assigned to at most one shift on any day.
+- A worker may be assigned only to shifts allowed by that worker's daily availability code.
+- If the total number of assigned shifts for worker w exceeds that worker's regular shift cap, the excess is counted as overtime and incurs the listed overtime cost per extra shift.
+- The total number of Night assignments for each worker must not exceed that worker's listed Night limit.
+- There are no multi-location assignments, no stochastic demand effects, and no skill-substitution rules beyond the availability codes shown in the figure.
+
+Shift definitions:
+- Day (D): 07:00-15:00
+- Evening (E): 15:00-23:00
+- Night (N): 23:00-07:00
+
+Task:
+Build a mathematical optimization model for this exact instance and provide executable solver code.

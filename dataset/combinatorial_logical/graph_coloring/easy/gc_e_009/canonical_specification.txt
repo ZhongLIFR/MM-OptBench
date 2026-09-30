@@ -1,0 +1,107 @@
+Canonical specification for a deterministic easy-level graph coloring instance.
+
+Interpretation:
+- The graph is undirected and simple.
+- Each vertex must receive exactly one color.
+- Adjacent vertices must not share the same color.
+- The task is a feasibility version of graph coloring using exactly the available color set K.
+- There are no weighted colors, pre-colored vertices, directed edges, hyperedges, logical side constraints, or symmetry-breaking constraints.
+
+Sets:
+- Vertices V = [1, 2, 3, 4, 5, 6, 7, 8, 9, 10, 11, 12, 13, 14, 15]
+- Colors K = [1, 2, 3, 4, 5]
+
+Parameters:
+- number_of_vertices = 15
+- number_of_colors = 5
+- chromatic_number = 5
+- graph_density = 0.2667
+- topology_type = structured_random_graph
+
+Edge set E:
+- (1, 2)
+- (1, 3)
+- (1, 4)
+- (1, 5)
+- (1, 9)
+- (1, 15)
+- (2, 3)
+- (2, 4)
+- (2, 5)
+- (2, 10)
+- (3, 4)
+- (3, 5)
+- (3, 9)
+- (4, 5)
+- (4, 6)
+- (5, 8)
+- (5, 14)
+- (6, 14)
+- (7, 11)
+- (8, 9)
+- (8, 14)
+- (8, 15)
+- (9, 11)
+- (10, 12)
+- (10, 14)
+- (11, 15)
+- (12, 13)
+- (13, 14)
+
+Adjacency list:
+- N(1) = [2, 3, 4, 5, 9, 15]
+- N(2) = [1, 3, 4, 5, 10]
+- N(3) = [1, 2, 4, 5, 9]
+- N(4) = [1, 2, 3, 5, 6]
+- N(5) = [1, 2, 3, 4, 8, 14]
+- N(6) = [4, 14]
+- N(7) = [11]
+- N(8) = [5, 9, 14, 15]
+- N(9) = [1, 3, 8, 11]
+- N(10) = [2, 12, 14]
+- N(11) = [7, 9, 15]
+- N(12) = [10, 13]
+- N(13) = [12, 14]
+- N(14) = [5, 6, 8, 10, 13]
+- N(15) = [1, 8, 11]
+
+Adjacency matrix rows (0/1 form, with diagonal omitted from constraints):
+- row 1: [0, 1, 1, 1, 1, 0, 0, 0, 1, 0, 0, 0, 0, 0, 1]
+- row 2: [1, 0, 1, 1, 1, 0, 0, 0, 0, 1, 0, 0, 0, 0, 0]
+- row 3: [1, 1, 0, 1, 1, 0, 0, 0, 1, 0, 0, 0, 0, 0, 0]
+- row 4: [1, 1, 1, 0, 1, 1, 0, 0, 0, 0, 0, 0, 0, 0, 0]
+- row 5: [1, 1, 1, 1, 0, 0, 0, 1, 0, 0, 0, 0, 0, 1, 0]
+- row 6: [0, 0, 0, 1, 0, 0, 0, 0, 0, 0, 0, 0, 0, 1, 0]
+- row 7: [0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 1, 0, 0, 0, 0]
+- row 8: [0, 0, 0, 0, 1, 0, 0, 0, 1, 0, 0, 0, 0, 1, 1]
+- row 9: [1, 0, 1, 0, 0, 0, 0, 1, 0, 0, 1, 0, 0, 0, 0]
+- row 10: [0, 1, 0, 0, 0, 0, 0, 0, 0, 0, 0, 1, 0, 1, 0]
+- row 11: [0, 0, 0, 0, 0, 0, 1, 0, 1, 0, 0, 0, 0, 0, 1]
+- row 12: [0, 0, 0, 0, 0, 0, 0, 0, 0, 1, 0, 0, 1, 0, 0]
+- row 13: [0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 1, 0, 1, 0]
+- row 14: [0, 0, 0, 0, 1, 1, 0, 1, 0, 1, 0, 0, 1, 0, 0]
+- row 15: [1, 0, 0, 0, 0, 0, 0, 1, 0, 0, 1, 0, 0, 0, 0]
+
+Decision variables:
+- x[v,k] in {0,1}: equals 1 if vertex v is assigned color k, and 0 otherwise.
+
+Objective:
+- Find any feasible coloring that uses the available colors in K.
+
+Constraints:
+- For every vertex v in V, exactly one color must be assigned: sum_k x[v,k] = 1.
+- For every edge (u,v) in E and every color k in K, adjacent vertices cannot share the same color: x[u,k] + x[v,k] <= 1.
+- All assignment variables are binary.
+
+Metadata:
+- seed=5109
+- group=C
+- graph_generator=planted_coloring_random
+- visual_type=adjacency_matrix
+- formulation_size=230
+
+Visual interpretation:
+- The figure is a square adjacency matrix indexed by numeric vertex identifiers.
+- Black off-diagonal cells indicate edges and white off-diagonal cells indicate non-edges.
+- Grey diagonal cells only mark self-reference positions and do not represent constraints.
+- The visual reveals the full graph structure and the available vertex identifiers, but it does not reveal a valid coloring assignment.

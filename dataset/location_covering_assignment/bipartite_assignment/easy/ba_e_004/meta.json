@@ -1,0 +1,18 @@
+{
+  "variant_type": "assignment",
+  "number_left_nodes": 6,
+  "number_right_nodes": 6,
+  "graph_density": 0.4444,
+  "cost_regime": "one_high_cost_column",
+  "connectivity_pattern": "structured_sparse",
+  "seed": 104,
+  "status": "optimal",
+  "objective_exact": 32.0,
+  "objective_value": 32.0,
+  "solver_policy": "prefer_gurobi_else_exact_fallback",
+  "solver_used": "gurobi",
+  "formulation_size": {
+    "variables": 16,
+    "constraints": 12
+  }
+}

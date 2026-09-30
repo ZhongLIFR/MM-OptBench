@@ -1,0 +1,164 @@
+{
+  "instance_id": "pmc_h_003",
+  "status": "optimal",
+  "objective_exact": 377.09,
+  "objective_value": 377.09,
+  "solver_policy": "prefer_gurobi_else_exact_fallback",
+  "solver_used": "gurobi",
+  "solve_method": "gurobi_mip",
+  "optimality_proof": "gurobi_mip_optimal_status",
+  "runtime_seconds": 0.043637,
+  "open_sites": [
+    "F10",
+    "F13",
+    "F5",
+    "F7"
+  ],
+  "assignments": {
+    "D1": {
+      "assigned_site": "F7",
+      "distance": 10.47,
+      "weight": 2,
+      "weighted_distance": 20.94
+    },
+    "D2": {
+      "assigned_site": "F7",
+      "distance": 7.36,
+      "weight": 2,
+      "weighted_distance": 14.72
+    },
+    "D3": {
+      "assigned_site": "F7",
+      "distance": 8.1,
+      "weight": 3,
+      "weighted_distance": 24.3
+    },
+    "D4": {
+      "assigned_site": "F7",
+      "distance": 5.25,
+      "weight": 2,
+      "weighted_distance": 10.5
+    },
+    "D5": {
+      "assigned_site": "F5",
+      "distance": 7.35,
+      "weight": 3,
+      "weighted_distance": 22.05
+    },
+    "D6": {
+      "assigned_site": "F5",
+      "distance": 2.47,
+      "weight": 5,
+      "weighted_distance": 12.35
+    },
+    "D7": {
+      "assigned_site": "F5",
+      "distance": 2.06,
+      "weight": 6,
+      "weighted_distance": 12.36
+    },
+    "D8": {
+      "assigned_site": "F7",
+      "distance": 6.32,
+      "weight": 2,
+      "weighted_distance": 12.64
+    },
+    "D9": {
+      "assigned_site": "F7",
+      "distance": 3.21,
+      "weight": 2,
+      "weighted_distance": 6.42
+    },
+    "D10": {
+      "assigned_site": "F7",
+      "distance": 0.82,
+      "weight": 3,
+      "weighted_distance": 2.46
+    },
+    "D11": {
+      "assigned_site": "F7",
+      "distance": 4.02,
+      "weight": 4,
+      "weighted_distance": 16.08
+    },
+    "D12": {
+      "assigned_site": "F5",
+      "distance": 6.81,
+      "weight": 5,
+      "weighted_distance": 34.05
+    },
+    "D13": {
+      "assigned_site": "F5",
+      "distance": 4.08,
+      "weight": 5,
+      "weighted_distance": 20.4
+    },
+    "D14": {
+      "assigned_site": "F10",
+      "distance": 1.44,
+      "weight": 4,
+      "weighted_distance": 5.76
+    },
+    "D15": {
+      "assigned_site": "F7",
+      "distance": 9.77,
+      "weight": 2,
+      "weighted_distance": 19.54
+    },
+    "D16": {
+      "assigned_site": "F7",
+      "distance": 7.07,
+      "weight": 3,
+      "weighted_distance": 21.21
+    },
+    "D17": {
+      "assigned_site": "F13",
+      "distance": 6.6,
+      "weight": 2,
+      "weighted_distance": 13.2
+    },
+    "D18": {
+      "assigned_site": "F13",
+      "distance": 4.57,
+      "weight": 3,
+      "weighted_distance": 13.71
+    },
+    "D19": {
+      "assigned_site": "F13",
+      "distance": 1.0,
+      "weight": 4,
+      "weighted_distance": 4.0
+    },
+    "D20": {
+      "assigned_site": "F13",
+      "distance": 3.3,
+      "weight": 5,
+      "weighted_distance": 16.5
+    },
+    "D21": {
+      "assigned_site": "F13",
+      "distance": 6.9,
+      "weight": 4,
+      "weighted_distance": 27.6
+    },
+    "D22": {
+      "assigned_site": "F10",
+      "distance": 2.61,
+      "weight": 6,
+      "weighted_distance": 15.66
+    },
+    "D23": {
+      "assigned_site": "F13",
+      "distance": 4.18,
+      "weight": 5,
+      "weighted_distance": 20.9
+    },
+    "D24": {
+      "assigned_site": "F7",
+      "distance": 4.87,
+      "weight": 2,
+      "weighted_distance": 9.74
+    }
+  },
+  "total_weighted_assignment_distance": 377.09
+}

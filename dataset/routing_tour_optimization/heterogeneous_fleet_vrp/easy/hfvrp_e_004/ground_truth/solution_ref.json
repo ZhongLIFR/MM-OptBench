@@ -1,0 +1,130 @@
+{
+  "status": "optimal",
+  "objective": 44.4296,
+  "objective_exact": 44.42960000000001,
+  "runtime_seconds": 0.0324740830110386,
+  "solve_method": "gurobi_mtz_hfvrp",
+  "routes": [
+    [
+      "Depot",
+      "C3",
+      "Depot"
+    ],
+    [
+      "Depot",
+      "C2",
+      "C1",
+      "Depot"
+    ],
+    [
+      "Depot",
+      "C4",
+      "C5",
+      "C6",
+      "C7",
+      "C8",
+      "Depot"
+    ]
+  ],
+  "route_vehicle_ids": [
+    "VAN1",
+    "VAN2",
+    "TRK1"
+  ],
+  "route_vehicle_types": [
+    "VAN",
+    "VAN",
+    "TRK"
+  ],
+  "route_loads": [
+    3,
+    6,
+    13
+  ],
+  "route_capacities": [
+    7,
+    7,
+    13
+  ],
+  "route_base_distances": [
+    8.06,
+    9.86,
+    17.7
+  ],
+  "route_variable_costs": [
+    9.5108,
+    11.6348,
+    16.284
+  ],
+  "route_total_costs": [
+    10.5108,
+    12.6348,
+    21.284
+  ],
+  "activated_vehicles": [
+    "VAN1",
+    "VAN2",
+    "TRK1"
+  ],
+  "unused_vehicles": [],
+  "active_arcs": [
+    [
+      "Depot",
+      "C3",
+      "VAN1"
+    ],
+    [
+      "C3",
+      "Depot",
+      "VAN1"
+    ],
+    [
+      "Depot",
+      "C2",
+      "VAN2"
+    ],
+    [
+      "C2",
+      "C1",
+      "VAN2"
+    ],
+    [
+      "C1",
+      "Depot",
+      "VAN2"
+    ],
+    [
+      "Depot",
+      "C4",
+      "TRK1"
+    ],
+    [
+      "C4",
+      "C5",
+      "TRK1"
+    ],
+    [
+      "C5",
+      "C6",
+      "TRK1"
+    ],
+    [
+      "C6",
+      "C7",
+      "TRK1"
+    ],
+    [
+      "C7",
+      "C8",
+      "TRK1"
+    ],
+    [
+      "C8",
+      "Depot",
+      "TRK1"
+    ]
+  ],
+  "num_routes_used": 3,
+  "capacity_binding_flag": true,
+  "objective_from_routes": 44.4296
+}

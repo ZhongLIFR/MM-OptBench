@@ -1,0 +1,77 @@
+Canonical specification for a deterministic Traveling Salesman Problem instance.
+
+Interpretation:
+- A single closed tour must visit every city exactly once and return to its starting city.
+- Travel between every pair of distinct cities is allowed, so the graph is complete.
+- Travel costs are symmetric: c[i,j] = c[j,i].
+- The displayed city coordinates determine the geometric layout shown in the visual map.
+- The optimization goal is to minimize the total tour length.
+
+Sets:
+- Cities N = ['A', 'B', 'C', 'D', 'E', 'F', 'G', 'H', 'I', 'J', 'K', 'L', 'M', 'N']
+- Directed arcs A = [(i,j) for i,j in N, i != j]
+- Reference city for symmetry breaking in the MTZ model: s = A
+
+Coordinates by city:
+- A: (1.5, 9.8)
+- B: (2.5, 14.8)
+- C: (5.9, 18.0)
+- D: (10.0, 19.0)
+- E: (14.1, 18.1)
+- F: (17.4, 14.9)
+- G: (18.5, 10.2)
+- H: (17.2, 5.1)
+- I: (14.0, 2.0)
+- J: (10.0, 1.2)
+- K: (6.0, 2.1)
+- L: (2.8, 5.0)
+- M: (7.8, 10.8)
+- N: (12.2, 10.6)
+
+Complete symmetric travel-cost matrix:
+- A: A=0.0000, B=5.0990, C=9.3059, D=12.5256, E=15.0881, F=16.6979, G=17.0047, H=16.3884, I=14.7340, J=12.0917, K=8.9185, L=4.9729, M=6.3789, N=10.7299
+- B: A=5.0990, B=0.0000, C=4.6690, D=8.5959, E=12.0603, F=14.9003, G=16.6481, H=17.6119, I=17.2073, J=15.5309, K=13.1735, L=9.8046, M=6.6400, N=10.5702
+- C: A=9.3059, B=4.6690, C=0.0000, D=4.2202, E=8.2006, F=11.9105, G=14.8189, H=17.1493, I=17.9335, J=17.2931, K=15.9003, L=13.3645, M=7.4465, N=9.7185
+- D: A=12.5256, B=8.5959, C=4.2202, D=0.0000, E=4.1976, F=8.4599, G=12.2348, H=15.6541, I=17.4642, J=17.8000, K=17.3669, L=15.7429, M=8.4900, N=8.6833
+- E: A=15.0881, B=12.0603, C=8.2006, D=4.1976, E=0.0000, F=4.5967, G=9.0427, H=13.3645, I=16.1003, J=17.3902, K=17.9335, L=17.3003, M=9.6426, N=7.7369
+- F: A=16.6979, B=14.9003, C=11.9105, D=8.4599, E=4.5967, F=0.0000, G=4.8270, H=9.8020, I=13.3405, J=15.5708, K=17.1406, L=17.6400, M=10.4389, N=6.7476
+- G: A=17.0047, B=16.6481, C=14.8189, D=12.2348, E=9.0427, F=4.8270, G=0.0000, H=5.2631, I=9.3536, J=12.3794, K=14.8950, L=16.5387, M=10.7168, N=6.3127
+- H: A=16.3884, B=17.6119, C=17.1493, D=15.6541, E=13.3645, F=9.8020, G=5.2631, H=0.0000, I=4.4553, J=8.1884, K=11.5948, L=14.4003, M=10.9932, N=7.4330
+- I: A=14.7340, B=17.2073, C=17.9335, D=17.4642, E=16.1003, F=13.3405, G=9.3536, H=4.4553, I=0.0000, J=4.0792, K=8.0006, L=11.5948, M=10.7648, N=8.7864
+- J: A=12.0917, B=15.5309, C=17.2931, D=17.8000, E=17.3902, F=15.5708, G=12.3794, H=8.1884, I=4.0792, J=0.0000, K=4.1000, L=8.1413, M=9.8489, N=9.6540
+- K: A=8.9185, B=13.1735, C=15.9003, D=17.3669, E=17.9335, F=17.1406, G=14.8950, H=11.5948, I=8.0006, J=4.1000, K=0.0000, L=4.3186, M=8.8843, N=10.5209
+- L: A=4.9729, B=9.8046, C=13.3645, D=15.7429, E=17.3003, F=17.6400, G=16.5387, H=14.4003, I=11.5948, J=8.1413, K=4.3186, L=0.0000, M=7.6577, N=10.9417
+- M: A=6.3789, B=6.6400, C=7.4465, D=8.4900, E=9.6426, F=10.4389, G=10.7168, H=10.9932, I=10.7648, J=9.8489, K=8.8843, L=7.6577, M=0.0000, N=4.4045
+- N: A=10.7299, B=10.5702, C=9.7185, D=8.6833, E=7.7369, F=6.7476, G=6.3127, H=7.4330, I=8.7864, J=9.6540, K=10.5209, L=10.9417, M=4.4045, N=0.0000
+
+Decision variables:
+- x[i,j] in {0,1}: equals 1 if the tour directly travels from city i to city j
+- u[i]: visit-order variable for MTZ subtour elimination, defined for all cities except the reference city
+
+Objective:
+- Minimize total travel cost sum_{i != j} c[i,j] * x[i,j].
+
+Constraints:
+- Exactly one outgoing arc from every city.
+- Exactly one incoming arc to every city.
+- MTZ subtour elimination constraints over all non-reference cities.
+- Binary arc variables and bounded order variables.
+
+Metadata:
+- number_nodes=14
+- layout_type=near_rotational_symmetry
+- cluster_count=1
+- cost_matrix_type=euclidean_exact
+- symmetry_flag=true
+- near_optimal_tour_flag=true
+- visual_type=euclidean_city_map_with_cost_rule_box
+- seed=2410
+- group=C
+- formulation_size=405
+
+Visual interpretation:
+- The figure shows one marker per city on a two-dimensional Euclidean map.
+- Each city label includes its exact coordinate pair.
+- A cost-rule box states how pairwise travel costs are derived from the plotted coordinates.
+- The complete graph edges are intentionally omitted to avoid clutter.
+- The visual does not reveal the optimal tour, selected arcs, or objective value.

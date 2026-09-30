@@ -1,0 +1,60 @@
+{
+  "status": "optimal",
+  "objective": 521,
+  "objective_exact": 521.0,
+  "runtime_seconds": 0.017086790991015732,
+  "production": {
+    "P1": {
+      "t1": 7,
+      "t2": 10,
+      "t3": 10,
+      "t4": 10,
+      "t5": 10,
+      "t6": 10,
+      "t7": 0,
+      "t8": 13
+    }
+  },
+  "inventory": {
+    "P1": {
+      "t1": 2,
+      "t2": 1,
+      "t3": 6,
+      "t4": 4,
+      "t5": 8,
+      "t6": 6,
+      "t7": 0,
+      "t8": 0
+    }
+  },
+  "setup": {
+    "P1": {
+      "t1": 1,
+      "t2": 1,
+      "t3": 1,
+      "t4": 1,
+      "t5": 1,
+      "t6": 1,
+      "t7": 0,
+      "t8": 1
+    }
+  },
+  "capacity_usage": {
+    "t1": 7,
+    "t2": 10,
+    "t3": 10,
+    "t4": 10,
+    "t5": 10,
+    "t6": 10,
+    "t7": 0,
+    "t8": 13
+  },
+  "capacity_binding_periods": [
+    "t2",
+    "t3",
+    "t4",
+    "t5",
+    "t6"
+  ],
+  "solve_method": "gurobi_milp_lspp"
+}

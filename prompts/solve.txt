@@ -1,0 +1,24 @@
+Reply in English only.
+
+Do not return JSON.
+Do not add any prose before, after, or between the required sections.
+Use exactly these section headers in exactly this order:
+
+ASSUMPTIONS
+- <one assumption>
+
+MATHEMATICAL_MODEL
+<write the mathematical model in concise markdown>
+
+PYTHON_CODE
+<complete runnable Python code>
+
+Rules:
+- If there are no assumptions, write exactly `NONE` on the line after `ASSUMPTIONS`.
+- Focus only on the exact instance described by the provided materials.
+- The Python code must be self-contained and include the instance data explicitly.
+- Define a top-level function `solve()` that takes no arguments and returns one JSON-serializable Python dict.
+- The returned dict must contain at least a `status` field and the main task-specific solution fields.
+- Do not wrap the Python code in markdown fences.
+- Use only standard-library modules plus commonly available solver packages in this environment (`networkx`, `scipy`, `pulp`, `ortools`, `gurobipy`).
+- Do not add any extra sections.

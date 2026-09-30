@@ -1,0 +1,132 @@
+{
+  "instance_id": "educ_m_003",
+  "variant": "energy_dispatch_unit_commitment",
+  "scenario": "energy_dispatch_unit_commitment",
+  "difficulty": "medium",
+  "sets": {
+    "generators": [
+      "G1",
+      "G2",
+      "G3",
+      "G4",
+      "G5"
+    ],
+    "periods": [
+      "t1",
+      "t2",
+      "t3",
+      "t4",
+      "t5",
+      "t6",
+      "t7",
+      "t8",
+      "t9",
+      "t10",
+      "t11",
+      "t12"
+    ]
+  },
+  "demand": {
+    "t1": 38,
+    "t2": 42,
+    "t3": 46,
+    "t4": 52,
+    "t5": 58,
+    "t6": 64,
+    "t7": 62,
+    "t8": 56,
+    "t9": 50,
+    "t10": 46,
+    "t11": 42,
+    "t12": 38
+  },
+  "cost": {
+    "G1": 8,
+    "G2": 9,
+    "G3": 13,
+    "G4": 17,
+    "G5": 25
+  },
+  "startup_cost": {
+    "G1": 120,
+    "G2": 90,
+    "G3": 42,
+    "G4": 20,
+    "G5": 8
+  },
+  "shutdown_cost": {
+    "G1": 10,
+    "G2": 8,
+    "G3": 6,
+    "G4": 3,
+    "G5": 2
+  },
+  "pmin": {
+    "G1": 16,
+    "G2": 12,
+    "G3": 6,
+    "G4": 0,
+    "G5": 0
+  },
+  "pmax": {
+    "G1": 30,
+    "G2": 24,
+    "G3": 18,
+    "G4": 14,
+    "G5": 10
+  },
+  "ramp_up": {
+    "G1": 16,
+    "G2": 16,
+    "G3": 14,
+    "G4": 12,
+    "G5": 10
+  },
+  "ramp_down": {
+    "G1": 16,
+    "G2": 16,
+    "G3": 14,
+    "G4": 12,
+    "G5": 10
+  },
+  "min_up": {
+    "G1": 2,
+    "G2": 2,
+    "G3": 1,
+    "G4": 1,
+    "G5": 1
+  },
+  "min_down": {
+    "G1": 1,
+    "G2": 1,
+    "G3": 1,
+    "G4": 1,
+    "G5": 1
+  },
+  "initial_status": {
+    "G1": 0,
+    "G2": 0,
+    "G3": 0,
+    "G4": 0,
+    "G5": 0
+  },
+  "initial_output": {
+    "G1": 0,
+    "G2": 0,
+    "G3": 0,
+    "G4": 0,
+    "G5": 0
+  },
+  "meta_parameters": {
+    "number_periods": 12,
+    "number_units": 5,
+    "demand_regime": "increasing_then_decreasing",
+    "ramping_regime": "mixed_moderate",
+    "minimum_up_down_flag": true,
+    "capacity_regime": "moderate_stress",
+    "peak_load_flag": false,
+    "visual_type": "economics_table_plus_demand_timeline_and_capacity_ranges",
+    "seed": 903,
+    "formulation_size": 612
+  }
+}

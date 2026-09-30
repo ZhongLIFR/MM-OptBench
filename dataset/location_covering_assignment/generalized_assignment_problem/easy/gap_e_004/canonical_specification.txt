@@ -1,0 +1,48 @@
+This is a single-period task-assignment planning instance with capacity-limited agents.
+
+Instance ID: gap_e_004
+Variant: generalized_assignment_problem
+Scenario: regional_task_assignment
+
+Agents and capacities:
+- A1: capacity=5, role=heavy
+- A2: capacity=3, role=heavy
+- A3: capacity=3, role=specialist
+- A4: capacity=9, role=specialist
+- A5: capacity=10, role=specialist
+- A6: capacity=6, role=specialist
+
+Tasks:
+- T1: family=F1
+- T2: family=F2
+- T3: family=F3
+- T4: family=F1
+- T5: family=F2
+- T6: family=F3
+- T7: family=F1
+- T8: family=F2
+- T9: family=F3
+
+Feasible task-agent pairs with exact parameters:
+- T1: A2 -> cost 10, resource 4; A3 -> cost 8, resource 4; A4 -> cost 9, resource 5; A5 -> cost 7, resource 3
+- T2: A2 -> cost 7, resource 2; A4 -> cost 11, resource 4; A5 -> cost 9, resource 4; A6 -> cost 7, resource 2
+- T3: A1 -> cost 9, resource 4; A4 -> cost 8, resource 4
+- T4: A1 -> cost 11, resource 4; A2 -> cost 11, resource 4; A3 -> cost 9, resource 4; A5 -> cost 6, resource 3
+- T5: A2 -> cost 8, resource 2; A5 -> cost 9, resource 4; A6 -> cost 7, resource 2
+- T6: A1 -> cost 10, resource 4; A2 -> cost 10, resource 5; A3 -> cost 11, resource 6; A4 -> cost 8, resource 4
+- T7: A3 -> cost 8, resource 4; A5 -> cost 5, resource 3
+- T8: A2 -> cost 4, resource 1; A3 -> cost 10, resource 4; A4 -> cost 11, resource 4; A6 -> cost 8, resource 3
+- T9: A1 -> cost 6, resource 3; A3 -> cost 10, resource 6; A4 -> cost 8, resource 5
+
+Objective:
+- Minimize total assignment cost.
+
+Constraints:
+- Each task must be assigned to exactly one feasible agent.
+- The total resource consumption assigned to each agent cannot exceed that agent's capacity.
+- Forbidden task-agent pairs are not allowed.
+
+Visual interpretation:
+- The upper table reports exact assignment costs and feasibility.
+- The lower table reports exact resource consumption and agent capacities.
+- Cells shown as "—" are forbidden assignments.

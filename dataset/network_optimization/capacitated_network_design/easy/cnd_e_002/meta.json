@@ -1,0 +1,48 @@
+{
+  "instance_id": "cnd_e_002",
+  "family": "network_optimization",
+  "subtype": "capacitated_network_design",
+  "variant": "single_visual_single_commodity_cnd",
+  "difficulty": "easy",
+  "graph_type": "parallel_hub_7",
+  "shipment_amount": 8,
+  "capacity_regime": "sink_side_bottleneck_requires_backup_route",
+  "cost_regime": "cheap_install_supports_expensive_routing_core",
+  "design_pattern": "main_corridor_plus_limited_backup_capacity",
+  "visual_type": "single_visual_topology_with_inline_arc_triplets",
+  "num_nodes": 7,
+  "num_arcs": 11,
+  "num_variables": 22,
+  "num_constraints": 18,
+  "formulation_size": 40,
+  "random_seed": 8102,
+  "seed": 8102,
+  "status": "optimal",
+  "optimal_objective_value": 111,
+  "objective_exact": 111,
+  "fixed_cost_total": 26,
+  "variable_cost_total": 85,
+  "installed_arc_count": 7,
+  "used_arc_count": 7,
+  "binding_capacity_arc_count": 2,
+  "runtime_seconds": 0.03775597,
+  "solve_method": "gurobi_mip_cnd_single_commodity",
+  "solver_used": "Gurobi",
+  "solver": "Gurobi",
+  "solver_policy": "gurobi_first_then_exact_installation_enumeration",
+  "verification_method": "exact_installation_enumeration",
+  "visual_0_checksum_md5": "6c5d61ecf096a69fbeb9927b5bdc0010",
+  "files": {
+    "canonical_specification": "canonical_specification.txt",
+    "task_input": "task_input.txt",
+    "visuals": [
+      "visuals/visual_0.png"
+    ],
+    "ground_truth": {
+      "instance_data": "ground_truth/instance_data.json",
+      "math_model": "ground_truth/math_model.md",
+      "solver_ref": "ground_truth/solver_ref.py",
+      "solution_ref": "ground_truth/solution_ref.json"
+    }
+  }
+}

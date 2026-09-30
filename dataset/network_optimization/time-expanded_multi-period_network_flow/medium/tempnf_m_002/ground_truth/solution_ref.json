@@ -1,0 +1,137 @@
+{
+  "status": "optimal",
+  "objective_value": 62.2,
+  "objective_exact": 62.2,
+  "routing_cost_total": 57,
+  "holding_cost_total": 5.2,
+  "flows_by_period": {
+    "t1": {
+      "e1": 2,
+      "e2": 2,
+      "e3": 0,
+      "e4": 2,
+      "e5": 0,
+      "e6": 2,
+      "e7": 0,
+      "e8": 0,
+      "e9": 0,
+      "e10": 0,
+      "e11": 1,
+      "e12": 0
+    },
+    "t2": {
+      "e1": 2,
+      "e2": 2,
+      "e3": 0,
+      "e4": 2,
+      "e5": 0,
+      "e6": 2,
+      "e7": 0,
+      "e8": 0,
+      "e9": 0,
+      "e10": 0,
+      "e11": 2,
+      "e12": 0
+    },
+    "t3": {
+      "e1": 2,
+      "e2": 1,
+      "e3": 0,
+      "e4": 2,
+      "e5": 0,
+      "e6": 1,
+      "e7": 0,
+      "e8": 0,
+      "e9": 2,
+      "e10": 0,
+      "e11": 2,
+      "e12": 2
+    },
+    "t4": {
+      "e1": 1,
+      "e2": 1,
+      "e3": 0,
+      "e4": 1,
+      "e5": 0,
+      "e6": 1,
+      "e7": 0,
+      "e8": 0,
+      "e9": 3,
+      "e10": 0,
+      "e11": 3,
+      "e12": 3
+    }
+  },
+  "inventory_by_node": {
+    "5": {
+      "t1": 3,
+      "t2": 5,
+      "t3": 4,
+      "t4": 0
+    }
+  },
+  "nonzero_arc_periods": [
+    "e1@t1",
+    "e2@t1",
+    "e4@t1",
+    "e6@t1",
+    "e11@t1",
+    "e1@t2",
+    "e2@t2",
+    "e4@t2",
+    "e6@t2",
+    "e11@t2",
+    "e1@t3",
+    "e2@t3",
+    "e4@t3",
+    "e6@t3",
+    "e9@t3",
+    "e11@t3",
+    "e12@t3",
+    "e1@t4",
+    "e2@t4",
+    "e4@t4",
+    "e6@t4",
+    "e9@t4",
+    "e11@t4",
+    "e12@t4"
+  ],
+  "binding_arc_periods": [
+    "e1@t1",
+    "e2@t1",
+    "e4@t1",
+    "e6@t1",
+    "e11@t1",
+    "e2@t2",
+    "e6@t2",
+    "e11@t2",
+    "e1@t3",
+    "e4@t3",
+    "e6@t3",
+    "e11@t3",
+    "e1@t4",
+    "e2@t4",
+    "e4@t4",
+    "e6@t4",
+    "e11@t4"
+  ],
+  "positive_inventory_periods": {
+    "5": [
+      "t1",
+      "t2",
+      "t3"
+    ]
+  },
+  "storage_binding_periods": {
+    "5": [
+      "t2"
+    ]
+  },
+  "runtime_seconds": 0.00294321,
+  "solve_method": "gurobi_lp_multi_period_network_flow",
+  "solver_used": "Gurobi",
+  "solver": "Gurobi",
+  "solver_policy": "gurobi_first_then_scipy_highs_exact_lp",
+  "verification_method": "direct_gurobi_optimal_lp_solution",
+  "fallback_used": false
+}

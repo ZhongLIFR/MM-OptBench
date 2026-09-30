@@ -1,0 +1,153 @@
+{
+  "instance_id": "educ_h_002",
+  "variant": "energy_dispatch_unit_commitment",
+  "scenario": "energy_dispatch_unit_commitment",
+  "difficulty": "hard",
+  "sets": {
+    "generators": [
+      "G1",
+      "G2",
+      "G3",
+      "G4",
+      "G5",
+      "G6"
+    ],
+    "periods": [
+      "t1",
+      "t2",
+      "t3",
+      "t4",
+      "t5",
+      "t6",
+      "t7",
+      "t8",
+      "t9",
+      "t10",
+      "t11",
+      "t12",
+      "t13",
+      "t14",
+      "t15",
+      "t16",
+      "t17",
+      "t18",
+      "t19",
+      "t20"
+    ]
+  },
+  "demand": {
+    "t1": 82,
+    "t2": 84,
+    "t3": 88,
+    "t4": 92,
+    "t5": 96,
+    "t6": 100,
+    "t7": 104,
+    "t8": 108,
+    "t9": 112,
+    "t10": 116,
+    "t11": 120,
+    "t12": 124,
+    "t13": 130,
+    "t14": 136,
+    "t15": 142,
+    "t16": 148,
+    "t17": 152,
+    "t18": 146,
+    "t19": 126,
+    "t20": 98
+  },
+  "cost": {
+    "G1": 8,
+    "G2": 10,
+    "G3": 13,
+    "G4": 17,
+    "G5": 22,
+    "G6": 30
+  },
+  "startup_cost": {
+    "G1": 130,
+    "G2": 100,
+    "G3": 72,
+    "G4": 42,
+    "G5": 20,
+    "G6": 12
+  },
+  "pmin": {
+    "G1": 24,
+    "G2": 18,
+    "G3": 12,
+    "G4": 0,
+    "G5": 0,
+    "G6": 0
+  },
+  "pmax": {
+    "G1": 52,
+    "G2": 42,
+    "G3": 30,
+    "G4": 24,
+    "G5": 18,
+    "G6": 16
+  },
+  "ramp_up": {
+    "G1": 14,
+    "G2": 12,
+    "G3": 10,
+    "G4": 12,
+    "G5": 16,
+    "G6": 16
+  },
+  "ramp_down": {
+    "G1": 14,
+    "G2": 12,
+    "G3": 10,
+    "G4": 12,
+    "G5": 16,
+    "G6": 16
+  },
+  "min_up": {
+    "G1": 4,
+    "G2": 3,
+    "G3": 3,
+    "G4": 2,
+    "G5": 1,
+    "G6": 1
+  },
+  "min_down": {
+    "G1": 3,
+    "G2": 2,
+    "G3": 2,
+    "G4": 2,
+    "G5": 1,
+    "G6": 1
+  },
+  "initial_status": {
+    "G1": 1,
+    "G2": 1,
+    "G3": 1,
+    "G4": 0,
+    "G5": 0,
+    "G6": 0
+  },
+  "initial_output": {
+    "G1": 32,
+    "G2": 24,
+    "G3": 18,
+    "G4": 0,
+    "G5": 0,
+    "G6": 0
+  },
+  "meta_parameters": {
+    "number_periods": 20,
+    "number_units": 6,
+    "demand_regime": "late_horizon_peak",
+    "ramping_regime": "mixed_flexible_and_slow",
+    "up_down_time_regime": "binding_medium_persistence",
+    "capacity_regime": "persistent_stress",
+    "peak_load_flag": true,
+    "symmetry_flag": false,
+    "visual_type": "economics_table_demand_timeline_capacity_ranges_separate",
+    "seed": 1202,
+    "formulation_size": 1220
+  }
+}

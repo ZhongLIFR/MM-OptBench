@@ -1,0 +1,21 @@
+A spatial service-planning visual is provided.
+
+The visual is a single map:
+- Candidate service sites and demand points are shown on the same spatial layout.
+- Candidate sites are shown as squares.
+- Demand points are shown as circles.
+- The same-colored boxes attached below the nodes report each node's public attributes.
+- The node-attached boxes provide the exact coordinates.
+
+Interpretation:
+- Exactly 2 candidate sites must be selected.
+- Each demand point must be assigned to exactly one selected site.
+- Assignment distance is the Euclidean distance implied by the displayed coordinates.
+- There are no capacities, fixed opening costs, assignment prohibitions, multiple periods, or stochastic elements.
+
+Task:
+1) Write a mathematical optimization model for this exact instance.
+2) Provide solver-executable code implementing the model.
+
+Objective:
+Minimize the maximum assignment distance over all demand points.

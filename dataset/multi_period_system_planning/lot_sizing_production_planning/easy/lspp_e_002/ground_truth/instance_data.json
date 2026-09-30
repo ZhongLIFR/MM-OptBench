@@ -1,0 +1,96 @@
+{
+  "instance_id": "lspp_e_002",
+  "variant": "lot_sizing_production_planning",
+  "scenario": "lot_sizing_production_planning",
+  "difficulty": "easy",
+  "sets": {
+    "products": [
+      "P1"
+    ],
+    "periods": [
+      "t1",
+      "t2",
+      "t3",
+      "t4",
+      "t5",
+      "t6",
+      "t7",
+      "t8"
+    ]
+  },
+  "demand": {
+    "P1": {
+      "t1": 4,
+      "t2": 5,
+      "t3": 6,
+      "t4": 7,
+      "t5": 8,
+      "t6": 9,
+      "t7": 10,
+      "t8": 11
+    }
+  },
+  "production_cost": {
+    "P1": {
+      "t1": 3,
+      "t2": 3,
+      "t3": 4,
+      "t4": 4,
+      "t5": 5,
+      "t6": 5,
+      "t7": 6,
+      "t8": 6
+    }
+  },
+  "holding_cost": {
+    "P1": {
+      "t1": 1,
+      "t2": 1,
+      "t3": 1,
+      "t4": 1,
+      "t5": 1,
+      "t6": 1,
+      "t7": 1,
+      "t8": 0
+    }
+  },
+  "setup_cost": {
+    "P1": {
+      "t1": 42,
+      "t2": 42,
+      "t3": 42,
+      "t4": 42,
+      "t5": 42,
+      "t6": 42,
+      "t7": 42,
+      "t8": 42
+    }
+  },
+  "initial_inventory": {
+    "P1": 0
+  },
+  "capacity": {
+    "t1": 22,
+    "t2": 22,
+    "t3": 22,
+    "t4": 22,
+    "t5": 22,
+    "t6": 22,
+    "t7": 22,
+    "t8": 22
+  },
+  "big_m": {
+    "P1": 60
+  },
+  "meta_parameters": {
+    "number_periods": 8,
+    "number_products": 1,
+    "demand_pattern": "increasing",
+    "setup_cost_regime": "high_setup_uniform",
+    "capacity_regime": "nonbinding_large",
+    "multi_product_flag": false,
+    "visual_type": "timeline_demand_grid",
+    "seed": 502,
+    "formulation_size": 48
+  }
+}

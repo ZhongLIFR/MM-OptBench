@@ -1,0 +1,90 @@
+Canonical specification for a deterministic easy-level single-project renewable RCPSP instance.
+
+Interpretation:
+- A single project must schedule all listed activities while satisfying precedence and renewable resource constraints.
+- Dummy activity Start has zero duration and is fixed at time 0.
+- Dummy activity End has zero duration and marks project completion.
+- Every real activity is non-preemptive and must be executed exactly once.
+- A successor activity may start only after all of its predecessor activities have finished.
+- Renewable resource capacities apply at every time period to the set of simultaneously active real activities.
+- No release dates, deadlines, calendars, setup times, stochastic durations, non-renewable resources, or multi-project coupling are included.
+
+Instance ID: rcpsp_e_002
+Variant: single_project_renewable_rcpsp
+Scenario: resource_constrained_project_scheduling
+
+Activities V = ['Start', 'A1', 'A2', 'A3', 'A4', 'A5', 'A6', 'A7', 'End']
+Real activities I = ['A1', 'A2', 'A3', 'A4', 'A5', 'A6', 'A7']
+Renewable resources R = ['R1']
+
+Precedence arcs E:
+- (Start, A1)
+- (Start, A2)
+- (A1, A3)
+- (A1, A4)
+- (A2, A4)
+- (A2, A5)
+- (A3, A6)
+- (A4, A6)
+- (A4, A7)
+- (A5, A7)
+- (A6, End)
+- (A7, End)
+
+Activity durations:
+- Start: duration=0
+- A1: duration=2
+- A2: duration=3
+- A3: duration=3
+- A4: duration=2
+- A5: duration=4
+- A6: duration=2
+- A7: duration=3
+- End: duration=0
+
+Renewable resource capacities:
+- R1: capacity=4
+
+Activity-resource demand matrix:
+- Start: R1=0
+- A1: R1=2
+- A2: R1=2
+- A3: R1=1
+- A4: R1=2
+- A5: R1=3
+- A6: R1=2
+- A7: R1=2
+- End: R1=0
+
+Decision variables:
+- x[i,t] in {0,1}: equals 1 if real activity i starts at discrete time t
+- C_max >= 0: project makespan
+
+Objective:
+- Minimize the project makespan.
+
+Constraints:
+- Every real activity starts exactly once.
+- Precedence constraints hold for every precedence arc between real activities.
+- Start is fixed at time 0.
+- End occurs no earlier than the finish time of its predecessor activities.
+- Renewable resource usage of overlapping real activities cannot exceed the capacity of any resource at any time.
+
+Metadata:
+- number_activities=9
+- number_real_activities=7
+- number_resources=1
+- precedence_density=0.3333
+- resource_capacity_regime=moderate
+- duration_regime=balanced_short
+- bottleneck_resource_flag=false
+- graph_pattern=two_branch_parallel_finish
+- group=A
+- visual_type=dual_visual_precedence_network_plus_resource_matrix
+- seed=1302
+- formulation_size=163
+
+Visual interpretation:
+- visual_0.png contains the exact precedence network and exact activity durations.
+- visual_1.png contains the exact renewable capacities, exact real-activity durations, and exact activity-resource demand matrix.
+- The visual files do not reveal the solved schedule, activity start times, or the optimal makespan.

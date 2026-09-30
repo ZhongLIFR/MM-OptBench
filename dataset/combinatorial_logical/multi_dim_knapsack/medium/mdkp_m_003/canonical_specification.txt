@@ -1,0 +1,111 @@
+Canonical specification for a deterministic 0-1 multi-dimensional knapsack instance.
+
+Interpretation:
+- Each candidate item may either be selected or not selected.
+- Selecting item i contributes its item-specific value.
+- Selecting item i consumes resource in every displayed resource dimension according to the instance-specific coefficients.
+- For each resource dimension, total consumption of selected items must not exceed the corresponding resource limit.
+- There are no fractional selections, logical dependencies between items, stochastic parameters, precedence relations, or time-indexed extensions.
+- The optimization goal is to maximize the total value of selected items.
+
+Sets:
+- Items I = [1, 2, 3, 4, 5, 6, 7, 8, 9, 10, 11, 12, 13, 14, 15, 16, 17, 18, 19, 20, 21, 22, 23, 24, 25, 26, 27, 28, 29, 30]
+- Resource dimensions R = ['R1', 'R2', 'R3']
+
+Parameters:
+- value[1] = 46
+- value[2] = 46
+- value[3] = 44
+- value[4] = 46
+- value[5] = 32
+- value[6] = 42
+- value[7] = 46
+- value[8] = 28
+- value[9] = 46
+- value[10] = 41
+- value[11] = 46
+- value[12] = 46
+- value[13] = 46
+- value[14] = 46
+- value[15] = 37
+- value[16] = 46
+- value[17] = 46
+- value[18] = 46
+- value[19] = 46
+- value[20] = 39
+- value[21] = 46
+- value[22] = 46
+- value[23] = 46
+- value[24] = 43
+- value[25] = 46
+- value[26] = 46
+- value[27] = 23
+- value[28] = 46
+- value[29] = 46
+- value[30] = 46
+
+Resource-consumption matrix by item:
+- item 1: R1=6, R2=8, R3=3
+- item 2: R1=8, R2=3, R3=3
+- item 3: R1=8, R2=6, R3=4
+- item 4: R1=8, R2=6, R3=4
+- item 5: R1=2, R2=4, R3=2
+- item 6: R1=2, R2=12, R3=6
+- item 7: R1=6, R2=2, R3=7
+- item 8: R1=2, R2=7, R3=2
+- item 9: R1=5, R2=9, R3=4
+- item 10: R1=2, R2=7, R3=4
+- item 11: R1=8, R2=2, R3=7
+- item 12: R1=11, R2=3, R3=9
+- item 13: R1=7, R2=2, R3=6
+- item 14: R1=2, R2=8, R3=6
+- item 15: R1=5, R2=6, R3=3
+- item 16: R1=9, R2=3, R3=8
+- item 17: R1=8, R2=4, R3=8
+- item 18: R1=5, R2=7, R3=9
+- item 19: R1=2, R2=5, R3=8
+- item 20: R1=2, R2=9, R3=8
+- item 21: R1=9, R2=4, R3=9
+- item 22: R1=3, R2=11, R3=6
+- item 23: R1=6, R2=5, R3=6
+- item 24: R1=7, R2=9, R3=2
+- item 25: R1=4, R2=5, R3=5
+- item 26: R1=3, R2=8, R3=8
+- item 27: R1=2, R2=2, R3=2
+- item 28: R1=3, R2=2, R3=9
+- item 29: R1=11, R2=9, R3=4
+- item 30: R1=8, R2=5, R3=6
+
+Resource limits:
+- limit[R1] = 78
+- limit[R2] = 72
+- limit[R3] = 76
+
+Decision variables:
+- x[i] in {0,1}: equals 1 if item i is selected and 0 otherwise.
+
+Objective:
+- Maximize total value sum_i value[i] * x[i].
+
+Constraints:
+- For every resource dimension r, sum_i weight[i,r] * x[i] <= limit[r].
+- Binary decision domains for all selection variables.
+
+Metadata:
+- number_items=30
+- number_dimensions=3
+- capacity_tightness_type=moderate_slack
+- profit_weight_correlation_type=mixed_correlation_across_dimensions
+- weight_distribution_type=sparse_high_value_high_weight_items
+- binding_constraint_count=3
+- seed=3403
+- group=A
+- visual_type=bars_resource_usage_chart
+- formulation_size=33
+
+Visual interpretation:
+- The figure shows one row per item and uses numeric item identifiers only.
+- The orange box in each row gives the item value.
+- Colored segments in the row encode per-resource consumption for that item.
+- Resource-limit bars at the bottom encode the capacity of each resource dimension.
+- The visual does not reveal the selected subset, the optimal objective value, or any feasibility status.

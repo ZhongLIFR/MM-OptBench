@@ -1,0 +1,176 @@
+{
+  "instance_id": "mdkp_e_007",
+  "variant": "multi_dimensional_knapsack",
+  "scenario": "multi_dimensional_knapsack",
+  "difficulty": "easy",
+  "sets": {
+    "items": [
+      1,
+      2,
+      3,
+      4,
+      5,
+      6,
+      7,
+      8,
+      9,
+      10,
+      11,
+      12,
+      13,
+      14,
+      15,
+      16,
+      17,
+      18,
+      19,
+      20
+    ],
+    "resources": [
+      "R1",
+      "R2",
+      "R3"
+    ]
+  },
+  "values": [
+    46,
+    51,
+    50,
+    46,
+    32,
+    26,
+    42,
+    42,
+    25,
+    30,
+    50,
+    46,
+    42,
+    25,
+    39,
+    44,
+    26,
+    37,
+    43,
+    35
+  ],
+  "weights": [
+    [
+      10,
+      9,
+      9
+    ],
+    [
+      10,
+      11,
+      9
+    ],
+    [
+      11,
+      9,
+      11
+    ],
+    [
+      5,
+      11,
+      10
+    ],
+    [
+      10,
+      6,
+      2
+    ],
+    [
+      5,
+      3,
+      7
+    ],
+    [
+      5,
+      11,
+      7
+    ],
+    [
+      3,
+      8,
+      10
+    ],
+    [
+      2,
+      4,
+      7
+    ],
+    [
+      2,
+      5,
+      8
+    ],
+    [
+      9,
+      10,
+      11
+    ],
+    [
+      7,
+      8,
+      10
+    ],
+    [
+      9,
+      3,
+      9
+    ],
+    [
+      2,
+      3,
+      8
+    ],
+    [
+      7,
+      11,
+      2
+    ],
+    [
+      11,
+      2,
+      10
+    ],
+    [
+      4,
+      6,
+      3
+    ],
+    [
+      4,
+      7,
+      8
+    ],
+    [
+      3,
+      11,
+      8
+    ],
+    [
+      8,
+      5,
+      5
+    ]
+  ],
+  "capacities": [
+    44,
+    41,
+    47
+  ],
+  "meta_parameters": {
+    "number_items": 20,
+    "number_dimensions": 3,
+    "capacity_tightness_type": "tight",
+    "profit_weight_correlation_type": "strongly_correlated",
+    "weight_distribution_type": "dominant_high_value_heavy_items",
+    "seed": 2407,
+    "group": "B",
+    "visual_type": "bars_resource_usage_chart",
+    "formulation_size": 23,
+    "binding_constraint_count": 2
+  }
+}

@@ -1,0 +1,84 @@
+{
+  "instance_id": "pmc_m_009",
+  "status": "optimal",
+  "objective_exact": 5.39,
+  "objective_value": 5.39,
+  "solver_policy": "prefer_gurobi_else_exact_fallback",
+  "solver_used": "gurobi",
+  "solve_method": "gurobi_mip",
+  "optimality_proof": "gurobi_mip_optimal_status",
+  "runtime_seconds": 0.02227,
+  "open_sites": [
+    "F10",
+    "F2",
+    "F4",
+    "F8"
+  ],
+  "assignments": {
+    "D1": {
+      "assigned_site": "F2",
+      "distance": 3.8
+    },
+    "D2": {
+      "assigned_site": "F2",
+      "distance": 2.0
+    },
+    "D3": {
+      "assigned_site": "F2",
+      "distance": 1.28
+    },
+    "D4": {
+      "assigned_site": "F4",
+      "distance": 3.68
+    },
+    "D5": {
+      "assigned_site": "F4",
+      "distance": 0.82
+    },
+    "D6": {
+      "assigned_site": "F4",
+      "distance": 3.61
+    },
+    "D7": {
+      "assigned_site": "F10",
+      "distance": 5.25
+    },
+    "D8": {
+      "assigned_site": "F10",
+      "distance": 5.0
+    },
+    "D9": {
+      "assigned_site": "F8",
+      "distance": 3.4
+    },
+    "D10": {
+      "assigned_site": "F8",
+      "distance": 0.8
+    },
+    "D11": {
+      "assigned_site": "F8",
+      "distance": 3.35
+    },
+    "D12": {
+      "assigned_site": "F8",
+      "distance": 5.39
+    },
+    "D13": {
+      "assigned_site": "F10",
+      "distance": 1.44
+    },
+    "D14": {
+      "assigned_site": "F10",
+      "distance": 1.44
+    },
+    "D15": {
+      "assigned_site": "F10",
+      "distance": 4.87
+    },
+    "D16": {
+      "assigned_site": "F10",
+      "distance": 3.61
+    }
+  },
+  "max_assignment_distance": 5.39
+}

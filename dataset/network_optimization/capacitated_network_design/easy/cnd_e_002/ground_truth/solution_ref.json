@@ -1,0 +1,116 @@
+{
+  "status": "optimal",
+  "objective_value": 111,
+  "objective_exact": 111,
+  "fixed_cost_total": 26,
+  "variable_cost_total": 85,
+  "installed_arc_ids": [
+    "e1",
+    "e3",
+    "e4",
+    "e8",
+    "e9",
+    "e10",
+    "e11"
+  ],
+  "installation_indicator": {
+    "e1": 1,
+    "e2": 0,
+    "e3": 1,
+    "e4": 1,
+    "e5": 0,
+    "e6": 0,
+    "e7": 0,
+    "e8": 1,
+    "e9": 1,
+    "e10": 1,
+    "e11": 1
+  },
+  "arc_flow_by_id": {
+    "e1": 5,
+    "e2": 0,
+    "e3": 3,
+    "e4": 5,
+    "e5": 0,
+    "e6": 0,
+    "e7": 0,
+    "e8": 1,
+    "e9": 2,
+    "e10": 6,
+    "e11": 2
+  },
+  "arc_flows": {
+    "e1": 5,
+    "e3": 3,
+    "e4": 5,
+    "e8": 1,
+    "e9": 2,
+    "e10": 6,
+    "e11": 2
+  },
+  "used_arc_ids": [
+    "e1",
+    "e3",
+    "e4",
+    "e8",
+    "e9",
+    "e10",
+    "e11"
+  ],
+  "binding_capacity_arcs": [
+    "e4",
+    "e11"
+  ],
+  "path_decomposition": [
+    {
+      "path_nodes": [
+        1,
+        2,
+        5,
+        7
+      ],
+      "path_arc_ids": [
+        "e1",
+        "e4",
+        "e10"
+      ],
+      "flow": 5
+    },
+    {
+      "path_nodes": [
+        1,
+        4,
+        5,
+        7
+      ],
+      "path_arc_ids": [
+        "e3",
+        "e8",
+        "e10"
+      ],
+      "flow": 1
+    },
+    {
+      "path_nodes": [
+        1,
+        4,
+        6,
+        7
+      ],
+      "path_arc_ids": [
+        "e3",
+        "e9",
+        "e11"
+      ],
+      "flow": 2
+    }
+  ],
+  "runtime_seconds": 0.03775597,
+  "solve_method": "gurobi_mip_cnd_single_commodity",
+  "solver_used": "Gurobi",
+  "solver": "Gurobi",
+  "solver_policy": "gurobi_first_then_exact_installation_enumeration",
+  "verification_method": "exact_installation_enumeration",
+  "fallback_used": false,
+  "optimality_proof": "gurobi_optimal_mip_solution_verified_against_global_installation_enumeration"
+}

@@ -1,0 +1,421 @@
+{
+  "instance_id": "sp_e_008",
+  "variant": "set_packing",
+  "scenario": "set_packing",
+  "difficulty": "easy",
+  "problem_type": "set_packing",
+  "objective_type": "maximize_total_weight",
+  "sets": {
+    "items": [
+      "A",
+      "B",
+      "C",
+      "D",
+      "E",
+      "F",
+      "G",
+      "H",
+      "I",
+      "J",
+      "K"
+    ],
+    "candidate_groups": [
+      "G1",
+      "G2",
+      "G3",
+      "G4",
+      "G5",
+      "G6",
+      "G7",
+      "G8",
+      "G9",
+      "G10",
+      "G11",
+      "G12",
+      "G13",
+      "G14",
+      "G15",
+      "G16"
+    ]
+  },
+  "weights": [
+    6,
+    6,
+    7,
+    8,
+    10,
+    10,
+    7,
+    8,
+    8,
+    9,
+    10,
+    8,
+    7,
+    9,
+    8,
+    9
+  ],
+  "subsets": {
+    "G1": {
+      "elements": [
+        "A",
+        "J"
+      ],
+      "weight": 6
+    },
+    "G2": {
+      "elements": [
+        "D",
+        "K"
+      ],
+      "weight": 6
+    },
+    "G3": {
+      "elements": [
+        "B",
+        "C",
+        "E"
+      ],
+      "weight": 7
+    },
+    "G4": {
+      "elements": [
+        "F",
+        "G",
+        "H",
+        "I"
+      ],
+      "weight": 8
+    },
+    "G5": {
+      "elements": [
+        "A",
+        "D",
+        "J",
+        "K"
+      ],
+      "weight": 10
+    },
+    "G6": {
+      "elements": [
+        "B",
+        "E",
+        "F",
+        "I",
+        "J"
+      ],
+      "weight": 10
+    },
+    "G7": {
+      "elements": [
+        "B",
+        "E"
+      ],
+      "weight": 7
+    },
+    "G8": {
+      "elements": [
+        "A",
+        "B",
+        "E",
+        "J"
+      ],
+      "weight": 8
+    },
+    "G9": {
+      "elements": [
+        "A",
+        "H",
+        "I"
+      ],
+      "weight": 8
+    },
+    "G10": {
+      "elements": [
+        "D",
+        "G",
+        "I",
+        "K"
+      ],
+      "weight": 9
+    },
+    "G11": {
+      "elements": [
+        "A",
+        "B",
+        "C",
+        "E"
+      ],
+      "weight": 10
+    },
+    "G12": {
+      "elements": [
+        "A",
+        "C",
+        "E"
+      ],
+      "weight": 8
+    },
+    "G13": {
+      "elements": [
+        "A",
+        "G",
+        "J"
+      ],
+      "weight": 7
+    },
+    "G14": {
+      "elements": [
+        "A",
+        "F",
+        "H",
+        "J",
+        "K"
+      ],
+      "weight": 9
+    },
+    "G15": {
+      "elements": [
+        "A",
+        "J",
+        "K"
+      ],
+      "weight": 8
+    },
+    "G16": {
+      "elements": [
+        "E",
+        "F",
+        "G"
+      ],
+      "weight": 9
+    }
+  },
+  "incidence_matrix": [
+    [
+      1,
+      0,
+      0,
+      0,
+      1,
+      0,
+      0,
+      1,
+      1,
+      0,
+      1,
+      1,
+      1,
+      1,
+      1,
+      0
+    ],
+    [
+      0,
+      0,
+      1,
+      0,
+      0,
+      1,
+      1,
+      1,
+      0,
+      0,
+      1,
+      0,
+      0,
+      0,
+      0,
+      0
+    ],
+    [
+      0,
+      0,
+      1,
+      0,
+      0,
+      0,
+      0,
+      0,
+      0,
+      0,
+      1,
+      1,
+      0,
+      0,
+      0,
+      0
+    ],
+    [
+      0,
+      1,
+      0,
+      0,
+      1,
+      0,
+      0,
+      0,
+      0,
+      1,
+      0,
+      0,
+      0,
+      0,
+      0,
+      0
+    ],
+    [
+      0,
+      0,
+      1,
+      0,
+      0,
+      1,
+      1,
+      1,
+      0,
+      0,
+      1,
+      1,
+      0,
+      0,
+      0,
+      1
+    ],
+    [
+      0,
+      0,
+      0,
+      1,
+      0,
+      1,
+      0,
+      0,
+      0,
+      0,
+      0,
+      0,
+      0,
+      1,
+      0,
+      1
+    ],
+    [
+      0,
+      0,
+      0,
+      1,
+      0,
+      0,
+      0,
+      0,
+      0,
+      1,
+      0,
+      0,
+      1,
+      0,
+      0,
+      1
+    ],
+    [
+      0,
+      0,
+      0,
+      1,
+      0,
+      0,
+      0,
+      0,
+      1,
+      0,
+      0,
+      0,
+      0,
+      1,
+      0,
+      0
+    ],
+    [
+      0,
+      0,
+      0,
+      1,
+      0,
+      1,
+      0,
+      0,
+      1,
+      1,
+      0,
+      0,
+      0,
+      0,
+      0,
+      0
+    ],
+    [
+      1,
+      0,
+      0,
+      0,
+      1,
+      1,
+      0,
+      1,
+      0,
+      0,
+      0,
+      0,
+      1,
+      1,
+      1,
+      0
+    ],
+    [
+      0,
+      1,
+      0,
+      0,
+      1,
+      0,
+      0,
+      0,
+      0,
+      1,
+      0,
+      0,
+      0,
+      1,
+      1,
+      0
+    ]
+  ],
+  "meta_parameters": {
+    "number_of_elements": 11,
+    "number_of_subsets": 16,
+    "average_subset_size": 3.375,
+    "overlap_density": 0.6583,
+    "weight_distribution_type": "size_correlated",
+    "subset_size_regime": "mixed_with_larger",
+    "overlap_regime": "slightly_dense",
+    "group": "C",
+    "seed": 6108,
+    "visual_type": "incidence_matrix_with_value_bars",
+    "formulation_size": 27,
+    "element_frequency": {
+      "A": 9,
+      "B": 5,
+      "C": 3,
+      "D": 3,
+      "E": 7,
+      "F": 4,
+      "G": 4,
+      "H": 3,
+      "I": 4,
+      "J": 7,
+      "K": 5
+    }
+  }
+}

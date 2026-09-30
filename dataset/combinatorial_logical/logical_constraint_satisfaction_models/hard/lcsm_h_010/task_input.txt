@@ -1,0 +1,26 @@
+A Boolean row-constraint instance is defined by the accompanying figure.
+
+The figure provides all instance-specific data needed for the problem.
+
+The figure includes:
+- one column for each Boolean decision variable,
+- one row for each original CNF clause in the clause-variable matrix,
+- additional matrix rows for implication constraints,
+- additional matrix rows for pairwise exclusions induced by at-most-one groups,
+- additional matrix rows for small cardinality constraints,
+- a '+' symbol if a variable appears positively in a row,
+- a '−' symbol if a variable appears negatively in a row,
+- and a '.' symbol if a variable does not appear in a row.
+
+Interpretation:
+- Each decision variable is binary and takes value 0 or 1.
+- Rows labeled C* are original CNF clauses and must be satisfied.
+- Rows labeled I* are implication rows; each such row encodes an implication and is equivalent to a clause of the form (¬u ∨ v).
+- Rows labeled A* are pairwise exclusion rows induced by at-most-one groups; each such row is equivalent to a clause of the form (¬u ∨ ¬v).
+- Rows labeled K* are cardinality rows; each such row marks a subset of variables and the row label specifies an upper bound of the form <= k.
+- This is a pure feasibility problem; the objective is simply to find any assignment satisfying all logical constraints.
+- There are no weighted penalties, time indices, routing constraints, flow-balance equations, or multi-stage decisions.
+
+Using exactly the information shown in the figure, build a binary decision model that enforces every displayed logical row and returns any satisfying assignment.
+
+Provide a mathematical model and executable solver code for this exact instance.

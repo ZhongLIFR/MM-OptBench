@@ -1,0 +1,71 @@
+{
+  "problem_type": "minimum_cost_flow",
+  "variant": "minimum_cost_flow_single",
+  "difficulty": "easy",
+  "nodes": [
+    1,
+    2,
+    3,
+    4,
+    5,
+    6
+  ],
+  "supply": {
+    "1": 6,
+    "2": 4,
+    "3": 0,
+    "4": 0,
+    "5": 0,
+    "6": -10
+  },
+  "arcs": [
+    {
+      "from": 1,
+      "to": 3,
+      "capacity": 10,
+      "cost": 1
+    },
+    {
+      "from": 2,
+      "to": 3,
+      "capacity": 10,
+      "cost": 1
+    },
+    {
+      "from": 3,
+      "to": 6,
+      "capacity": 10,
+      "cost": 1
+    },
+    {
+      "from": 1,
+      "to": 4,
+      "capacity": 10,
+      "cost": 2
+    },
+    {
+      "from": 4,
+      "to": 6,
+      "capacity": 10,
+      "cost": 2
+    },
+    {
+      "from": 2,
+      "to": 5,
+      "capacity": 10,
+      "cost": 2
+    },
+    {
+      "from": 5,
+      "to": 6,
+      "capacity": 10,
+      "cost": 2
+    },
+    {
+      "from": 3,
+      "to": 4,
+      "capacity": 10,
+      "cost": 3
+    }
+  ]
+}

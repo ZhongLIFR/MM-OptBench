@@ -1,0 +1,37 @@
+A delivery-planning instance is specified by a single accompanying visual artifact.
+
+The visual jointly provides all instance-specific numerical data required for the optimization problem.
+
+The visual includes:
+- the depot location,
+- the labeled position of every customer in a two-dimensional map,
+- the exact coordinate pair and demand value associated with each customer, written directly on the map next to that customer,
+- the exact coordinate pair for the depot,
+- a fleet table describing the available vehicle categories, vehicle counts, capacities, fixed activation costs, and distance multipliers,
+- and the exact rule used to convert coordinates into travel cost.
+
+Interpretation:
+- Each activated vehicle starts from the depot, serves a subset of customers, and returns to the depot.
+- Each customer must be visited exactly once by exactly one activated vehicle.
+- The routing graph is complete: travel between every pair of distinct nodes is allowed.
+- Each available vehicle has its own capacity, fixed activation cost, and per-distance multiplier inherited from its category.
+- If a vehicle is activated, its fixed activation cost is incurred exactly once.
+- Variable travel cost equals the vehicle-specific distance multiplier times the base distance defined in the visual.
+- The total demand assigned to a vehicle must not exceed that vehicle's capacity.
+- There are no time windows, multiple depots, split deliveries, stochastic demands, or customer-vehicle incompatibilities.
+
+Task:
+1) Write a mathematical optimization model for this exact instance.
+2) Provide solver-executable code implementing the model.
+
+How to read the visual:
+- The left panel shows the depot and customer locations on a coordinate plane.
+- Each colored customer annotation on the map gives that customer's exact demand and coordinates.
+- The depot label on the map also shows the depot's exact coordinates.
+- The upper-right table lists each vehicle category's available count, capacity, fixed activation cost, and per-distance multiplier.
+- The lower-right box states the exact base-distance and travel-cost rules.
+
+Output requirement:
+- Construct an exact optimization model for the instance encoded by the visual.
+- Use the depot, customer, fleet, demand, coordinate, and travel-cost information shown in the figure.
+- Do not introduce assumptions that are not supported by the visual artifact.

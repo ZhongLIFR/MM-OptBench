@@ -1,0 +1,47 @@
+{
+  "number_customers": 8,
+  "number_vehicle_types": 2,
+  "number_available_vehicles": 3,
+  "total_demand": 24,
+  "aggregate_capacity": 28,
+  "vehicle_type_summary": [
+    {
+      "type_id": "VAN",
+      "available_count": 2,
+      "capacity": 7,
+      "fixed_activation_cost": 1.2,
+      "distance_multiplier": 1.16
+    },
+    {
+      "type_id": "TRK",
+      "available_count": 1,
+      "capacity": 14,
+      "fixed_activation_cost": 5.2,
+      "distance_multiplier": 0.91
+    }
+  ],
+  "layout_type": "uniform_random_layout",
+  "demand_regime": "random_moderate_variation",
+  "heterogeneity_pattern": "one_large_truck_two_compact_vans",
+  "fixed_cost_flag": true,
+  "distance_multiplier_flag": true,
+  "capacity_binding_flag": true,
+  "near_optimal_partition_flag": false,
+  "visual_type": "composite_map_embedded_node_annotations_and_fleet_table_visual",
+  "base_distance_type": "rounded_euclidean_2dp",
+  "seed": 3402,
+  "group": "A",
+  "formulation_size": 508,
+  "instance_id": "hfvrp_e_002",
+  "variant": "heterogeneous_fleet_vrp",
+  "scenario": "heterogeneous_fleet_vrp",
+  "difficulty": "easy",
+  "objective_value": 40.2817,
+  "objective_exact": 40.2817,
+  "status": "optimal",
+  "runtime_seconds": 0.04737687506712973,
+  "num_routes_used": 3,
+  "solve_method": "gurobi_mtz_hfvrp",
+  "solver": "Gurobi",
+  "visual_checksum_md5": "e8c2290f97a9485c778b1afea2a4bdff"
+}

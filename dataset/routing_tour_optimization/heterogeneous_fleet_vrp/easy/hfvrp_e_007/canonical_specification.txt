@@ -1,0 +1,120 @@
+Canonical specification for a deterministic single-depot Heterogeneous Fleet Vehicle Routing Problem instance.
+
+Interpretation:
+- Each activated vehicle starts at the depot, serves a subset of customers, and returns to the depot.
+- Each customer must be visited exactly once by exactly one activated vehicle.
+- Travel between every pair of distinct nodes is allowed, so the routing graph is complete.
+- Vehicle capacities, fixed activation costs, and per-distance cost multipliers depend on the chosen vehicle.
+- If a vehicle is activated, its fixed activation cost is incurred exactly once.
+- Variable travel cost on arc (i,j) for vehicle k equals alpha_k times the base distance delta[i,j].
+- There are no time windows, multiple depots, split deliveries, stochastic demands, or customer-vehicle incompatibilities.
+- The optimization goal is to minimize total fixed-plus-variable routing cost.
+
+Sets:
+- Nodes N = ['Depot', 'C1', 'C2', 'C3', 'C4', 'C5', 'C6', 'C7', 'C8', 'C9', 'C10']
+- Customer subset C = ['C1', 'C2', 'C3', 'C4', 'C5', 'C6', 'C7', 'C8', 'C9', 'C10']
+- Depot node = Depot
+- Vehicle categories T = ['SM', 'MD', 'LG']
+- Available vehicles K = ['SM1', 'MD1', 'MD2', 'LG1']
+- Directed arcs A = [(i,j) for i,j in N, i != j]
+
+Coordinates by node:
+- Depot: (5.0, 5.0)
+- C1: (1.4, 7.0)
+- C2: (2.4, 3.0)
+- C3: (3.5, 8.0)
+- C4: (4.4, 1.4)
+- C5: (5.8, 7.5)
+- C6: (6.5, 2.0)
+- C7: (7.5, 6.7)
+- C8: (8.6, 3.5)
+- C9: (2.2, 5.2)
+- C10: (7.0, 4.7)
+
+Customer demands:
+- Depot: 0
+- C1: 3
+- C2: 3
+- C3: 2
+- C4: 3
+- C5: 3
+- C6: 2
+- C7: 3
+- C8: 3
+- C9: 3
+- C10: 3
+
+Base-distance rule:
+- Base distance between two nodes equals the Euclidean distance between their coordinates, rounded to 2 decimals.
+
+Complete base-distance matrix:
+- Depot: Depot=0.00, C1=4.12, C2=3.28, C3=3.35, C4=3.65, C5=2.62, C6=3.35, C7=3.02, C8=3.90, C9=2.81, C10=2.02
+- C1: Depot=4.12, C1=0.00, C2=4.12, C3=2.33, C4=6.35, C5=4.43, C6=7.14, C7=6.11, C8=8.01, C9=1.97, C10=6.05
+- C2: Depot=3.28, C1=4.12, C2=0.00, C3=5.12, C4=2.56, C5=5.64, C6=4.22, C7=6.30, C8=6.22, C9=2.21, C10=4.90
+- C3: Depot=3.35, C1=2.33, C2=5.12, C3=0.00, C4=6.66, C5=2.35, C6=6.71, C7=4.21, C8=6.80, C9=3.09, C10=4.81
+- C4: Depot=3.65, C1=6.35, C2=2.56, C3=6.66, C4=0.00, C5=6.26, C6=2.18, C7=6.14, C8=4.70, C9=4.39, C10=4.20
+- C5: Depot=2.62, C1=4.43, C2=5.64, C3=2.35, C4=6.26, C5=0.00, C6=5.54, C7=1.88, C8=4.88, C9=4.27, C10=3.05
+- C6: Depot=3.35, C1=7.14, C2=4.22, C3=6.71, C4=2.18, C5=5.54, C6=0.00, C7=4.81, C8=2.58, C9=5.36, C10=2.75
+- C7: Depot=3.02, C1=6.11, C2=6.30, C3=4.21, C4=6.14, C5=1.88, C6=4.81, C7=0.00, C8=3.38, C9=5.51, C10=2.06
+- C8: Depot=3.90, C1=8.01, C2=6.22, C3=6.80, C4=4.70, C5=4.88, C6=2.58, C7=3.38, C8=0.00, C9=6.62, C10=2.00
+- C9: Depot=2.81, C1=1.97, C2=2.21, C3=3.09, C4=4.39, C5=4.27, C6=5.36, C7=5.51, C8=6.62, C9=0.00, C10=4.83
+- C10: Depot=2.02, C1=6.05, C2=4.90, C3=4.81, C4=4.20, C5=3.05, C6=2.75, C7=2.06, C8=2.00, C9=4.83, C10=0.00
+
+Vehicle-category parameters:
+- SM: available_count=1, capacity=6, fixed_activation_cost=0.90, distance_multiplier=1.18
+- MD: available_count=2, capacity=8, fixed_activation_cost=2.40, distance_multiplier=1.05
+- LG: available_count=1, capacity=11, fixed_activation_cost=4.90, distance_multiplier=0.92
+
+Explicit vehicle parameters:
+- SM1: type=SM, capacity=6, fixed_activation_cost=0.90, distance_multiplier=1.18
+- MD1: type=MD, capacity=8, fixed_activation_cost=2.40, distance_multiplier=1.05
+- MD2: type=MD, capacity=8, fixed_activation_cost=2.40, distance_multiplier=1.05
+- LG1: type=LG, capacity=11, fixed_activation_cost=4.90, distance_multiplier=0.92
+
+Travel-cost definition:
+- For every vehicle k and ordered pair of distinct nodes (i,j), travel_cost[i,j,k] = distance_multiplier[k] * base_distance[i,j].
+
+Decision variables:
+- x[i,j,k] in {0,1}: equals 1 if vehicle k directly travels from node i to node j
+- y[k] in {0,1}: equals 1 if vehicle k is activated
+- u[i,k] >= 0: vehicle-specific MTZ/load helper variable for customer i and vehicle k
+
+Objective:
+- Minimize total fixed activation cost plus total variable travel cost across all activated vehicles.
+
+Constraints:
+- Each customer has exactly one outgoing service arc across the fleet.
+- Each customer has exactly one incoming service arc across the fleet.
+- For each vehicle, flow is conserved at every customer it visits.
+- Depot departure and depot return are each equal to the vehicle-activation variable.
+- The total demand assigned to a vehicle cannot exceed that vehicle's capacity.
+- Vehicle-specific MTZ-style constraints eliminate subtours and enforce capacity-consistent route order.
+- Arc and activation variables are binary; load/helper variables are continuous.
+
+Metadata:
+- number_customers=10
+- number_vehicle_types=3
+- number_available_vehicles=4
+- total_demand=28
+- aggregate_capacity=33
+- layout_type=uniform_random_layout
+- demand_regime=random_moderate_variation
+- heterogeneity_pattern=three_type_tradeoff
+- fixed_cost_flag=true
+- distance_multiplier_flag=true
+- capacity_binding_target=true
+- near_optimal_partition_flag=false
+- visual_type=composite_map_embedded_node_annotations_and_fleet_table_visual
+- base_distance_type=rounded_euclidean_2dp
+- seed=3407
+- group=B
+- formulation_size=996
+
+Visual interpretation:
+- The single composite visual is numerically complete.
+- The left panel shows the depot and customer locations on a coordinate plane together with embedded exact node annotations.
+- Each customer annotation on the map provides that customer's exact demand and coordinates.
+- The depot annotation provides the depot coordinates.
+- The upper-right table lists the available vehicle categories and their cost/capacity parameters.
+- The lower-right box states the base-distance and travel-cost rule.
+- The visual does not reveal the selected routes, activated vehicles, objective value, or customer-to-vehicle assignment.

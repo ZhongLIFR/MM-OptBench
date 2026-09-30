@@ -1,0 +1,19 @@
+A single visual artifact describes a multi-stage processing instance.
+
+The upper part of the visual shows an ordered chain of processing stages and the machines available at each stage.
+The lower part of the visual shows the exact processing duration of each job at each stage.
+
+Interpretation:
+- Every job must pass through all displayed stages in the shown order.
+- At each stage, a job must be assigned to exactly one of the machines shown for that stage.
+- Machines within the same stage are interchangeable with respect to processing duration, so the duration depends only on the job and the stage.
+- Each machine can process at most one job at a time.
+- Jobs are non-preemptive.
+- There are no release dates, due dates, stage skipping, setup times, transport times, or unrelated global resource constraints.
+
+Task:
+1) Write a mathematical optimization model for this instance.
+2) Provide solver-executable code implementing the model.
+
+Objective:
+Minimize the makespan.

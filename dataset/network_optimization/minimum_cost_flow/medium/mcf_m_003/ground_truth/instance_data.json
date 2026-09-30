@@ -1,0 +1,165 @@
+{
+  "problem_type": "minimum_cost_flow",
+  "variant": "minimum_cost_flow_single",
+  "difficulty": "medium",
+  "nodes": [
+    1,
+    2,
+    3,
+    4,
+    5,
+    6,
+    7,
+    8,
+    9,
+    10,
+    11
+  ],
+  "supply": {
+    "1": 25,
+    "2": 15,
+    "3": 10,
+    "4": 0,
+    "5": 0,
+    "6": 0,
+    "7": 0,
+    "8": 0,
+    "9": 0,
+    "10": -30,
+    "11": -20
+  },
+  "arcs": [
+    {
+      "from": 1,
+      "to": 4,
+      "capacity": 20,
+      "cost": 2
+    },
+    {
+      "from": 1,
+      "to": 5,
+      "capacity": 15,
+      "cost": 3
+    },
+    {
+      "from": 2,
+      "to": 4,
+      "capacity": 15,
+      "cost": 2
+    },
+    {
+      "from": 2,
+      "to": 5,
+      "capacity": 10,
+      "cost": 4
+    },
+    {
+      "from": 3,
+      "to": 5,
+      "capacity": 10,
+      "cost": 2
+    },
+    {
+      "from": 3,
+      "to": 6,
+      "capacity": 10,
+      "cost": 3
+    },
+    {
+      "from": 4,
+      "to": 6,
+      "capacity": 20,
+      "cost": 2
+    },
+    {
+      "from": 4,
+      "to": 7,
+      "capacity": 10,
+      "cost": 4
+    },
+    {
+      "from": 5,
+      "to": 6,
+      "capacity": 10,
+      "cost": 1
+    },
+    {
+      "from": 5,
+      "to": 7,
+      "capacity": 15,
+      "cost": 2
+    },
+    {
+      "from": 5,
+      "to": 8,
+      "capacity": 10,
+      "cost": 3
+    },
+    {
+      "from": 6,
+      "to": 9,
+      "capacity": 25,
+      "cost": 2
+    },
+    {
+      "from": 7,
+      "to": 9,
+      "capacity": 15,
+      "cost": 1
+    },
+    {
+      "from": 8,
+      "to": 9,
+      "capacity": 10,
+      "cost": 2
+    },
+    {
+      "from": 6,
+      "to": 10,
+      "capacity": 10,
+      "cost": 6
+    },
+    {
+      "from": 7,
+      "to": 10,
+      "capacity": 10,
+      "cost": 5
+    },
+    {
+      "from": 7,
+      "to": 11,
+      "capacity": 8,
+      "cost": 6
+    },
+    {
+      "from": 8,
+      "to": 11,
+      "capacity": 10,
+      "cost": 5
+    },
+    {
+      "from": 9,
+      "to": 10,
+      "capacity": 30,
+      "cost": 2
+    },
+    {
+      "from": 9,
+      "to": 11,
+      "capacity": 25,
+      "cost": 3
+    },
+    {
+      "from": 7,
+      "to": 8,
+      "capacity": 8,
+      "cost": 2
+    },
+    {
+      "from": 8,
+      "to": 7,
+      "capacity": 6,
+      "cost": 3
+    }
+  ]
+}

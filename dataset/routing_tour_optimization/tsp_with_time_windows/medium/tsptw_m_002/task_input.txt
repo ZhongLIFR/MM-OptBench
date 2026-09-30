@@ -1,0 +1,29 @@
+A route-planning task is defined on a set of locations shown in the accompanying figure.
+
+The figure provides all instance-specific data required for the optimization problem.
+
+The figure includes:
+- one depot and a set of customer locations placed on a Cartesian map,
+- the exact coordinate pair shown next to each node,
+- a compact label next to each node that shows the exact time window, the node service time, and the exact coordinate pair,
+- the exact rule used to convert displayed coordinates into pairwise travel times,
+- and a light grid to support spatial interpretation.
+
+Notation in the compact node labels:
+- `[a, b]` denotes the exact time window.
+- `svc=` denotes the exact service time at that node.
+
+Interpretation:
+- A single vehicle starts at the depot.
+- Every customer must be visited exactly once.
+- After all customers are visited, the vehicle must return to the depot.
+- Travel between every pair of distinct nodes is allowed.
+- Travel times are determined by the cost rule shown in the figure.
+- Service times at nodes are deterministic and instance-specific.
+- Service at each customer must begin within that customer's time window.
+- If the vehicle arrives before a customer's time window opens, it may wait.
+- There are no capacities, no multiple vehicles, no forbidden arcs, and no stochastic travel times.
+
+Task:
+1) Write a mathematical optimization model for this instance.
+2) Provide solver-executable code implementing the model.

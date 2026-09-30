@@ -1,0 +1,23 @@
+This is a single-period facility location problem (CFL).
+
+Facilities:
+F1: location=(3,15), opening cost=17, capacity=5, coverage radius=7.6
+F2: location=(12,16), opening cost=18, capacity=4, coverage radius=7.6
+F3: location=(6,7), opening cost=14, capacity=4, coverage radius=7.6
+F4: location=(15,7), opening cost=19, capacity=4, coverage radius=7.6
+
+Customers:
+C1: location=(5,14), demand=2
+C2: location=(9,15), demand=2
+C3: location=(12,12), demand=2
+C4: location=(8,9), demand=2
+C5: location=(13,8), demand=1
+
+Feasible facility options for each customer:
+C1: F1,F2,F3
+C2: F1,F2
+C3: F2,F4
+C4: F3,F4
+C5: F3,F4
+
+Objective: Minimize facility opening cost plus demand-weighted assignment cost.

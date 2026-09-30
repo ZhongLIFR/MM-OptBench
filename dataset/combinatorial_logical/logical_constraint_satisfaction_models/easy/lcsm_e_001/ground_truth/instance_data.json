@@ -1,0 +1,494 @@
+{
+  "instance_id": "lcsm_e_001",
+  "variant": "logical_constraint_satisfaction",
+  "scenario": "logical_constraint_satisfaction",
+  "difficulty": "easy",
+  "problem_type": "logical_constraint_satisfaction",
+  "objective_type": "pure_feasibility",
+  "sets": {
+    "variables": [
+      "x1",
+      "x2",
+      "x3",
+      "x4",
+      "x5",
+      "x6",
+      "x7",
+      "x8",
+      "x9",
+      "x10"
+    ],
+    "clauses": [
+      "C1",
+      "C2",
+      "C3",
+      "C4",
+      "C5",
+      "C6",
+      "C7",
+      "C8",
+      "C9",
+      "C10",
+      "C11",
+      "C12",
+      "C13",
+      "C14",
+      "C15",
+      "C16"
+    ]
+  },
+  "clauses": [
+    {
+      "name": "C1",
+      "literals": [
+        {
+          "variable": "x3",
+          "sign": "+"
+        },
+        {
+          "variable": "x4",
+          "sign": "+"
+        }
+      ]
+    },
+    {
+      "name": "C2",
+      "literals": [
+        {
+          "variable": "x6",
+          "sign": "\u2212"
+        },
+        {
+          "variable": "x7",
+          "sign": "\u2212"
+        }
+      ]
+    },
+    {
+      "name": "C3",
+      "literals": [
+        {
+          "variable": "x8",
+          "sign": "\u2212"
+        },
+        {
+          "variable": "x10",
+          "sign": "\u2212"
+        }
+      ]
+    },
+    {
+      "name": "C4",
+      "literals": [
+        {
+          "variable": "x3",
+          "sign": "\u2212"
+        },
+        {
+          "variable": "x5",
+          "sign": "\u2212"
+        }
+      ]
+    },
+    {
+      "name": "C5",
+      "literals": [
+        {
+          "variable": "x7",
+          "sign": "+"
+        },
+        {
+          "variable": "x10",
+          "sign": "\u2212"
+        }
+      ]
+    },
+    {
+      "name": "C6",
+      "literals": [
+        {
+          "variable": "x6",
+          "sign": "+"
+        },
+        {
+          "variable": "x7",
+          "sign": "\u2212"
+        }
+      ]
+    },
+    {
+      "name": "C7",
+      "literals": [
+        {
+          "variable": "x1",
+          "sign": "+"
+        },
+        {
+          "variable": "x2",
+          "sign": "+"
+        }
+      ]
+    },
+    {
+      "name": "C8",
+      "literals": [
+        {
+          "variable": "x1",
+          "sign": "+"
+        },
+        {
+          "variable": "x5",
+          "sign": "\u2212"
+        }
+      ]
+    },
+    {
+      "name": "C9",
+      "literals": [
+        {
+          "variable": "x7",
+          "sign": "\u2212"
+        },
+        {
+          "variable": "x9",
+          "sign": "+"
+        }
+      ]
+    },
+    {
+      "name": "C10",
+      "literals": [
+        {
+          "variable": "x3",
+          "sign": "+"
+        },
+        {
+          "variable": "x4",
+          "sign": "\u2212"
+        }
+      ]
+    },
+    {
+      "name": "C11",
+      "literals": [
+        {
+          "variable": "x9",
+          "sign": "+"
+        },
+        {
+          "variable": "x10",
+          "sign": "+"
+        }
+      ]
+    },
+    {
+      "name": "C12",
+      "literals": [
+        {
+          "variable": "x1",
+          "sign": "\u2212"
+        },
+        {
+          "variable": "x5",
+          "sign": "\u2212"
+        }
+      ]
+    },
+    {
+      "name": "C13",
+      "literals": [
+        {
+          "variable": "x2",
+          "sign": "+"
+        },
+        {
+          "variable": "x8",
+          "sign": "\u2212"
+        }
+      ]
+    },
+    {
+      "name": "C14",
+      "literals": [
+        {
+          "variable": "x2",
+          "sign": "+"
+        },
+        {
+          "variable": "x3",
+          "sign": "+"
+        }
+      ]
+    },
+    {
+      "name": "C15",
+      "literals": [
+        {
+          "variable": "x6",
+          "sign": "\u2212"
+        },
+        {
+          "variable": "x9",
+          "sign": "+"
+        }
+      ]
+    },
+    {
+      "name": "C16",
+      "literals": [
+        {
+          "variable": "x2",
+          "sign": "\u2212"
+        },
+        {
+          "variable": "x5",
+          "sign": "+"
+        }
+      ]
+    }
+  ],
+  "implications": [
+    {
+      "name": "I1",
+      "if_variable": "x4",
+      "then_variable": "x9"
+    },
+    {
+      "name": "I2",
+      "if_variable": "x3",
+      "then_variable": "x1"
+    }
+  ],
+  "at_most_one_groups": [
+    {
+      "name": "A1",
+      "variables": [
+        "x3",
+        "x5"
+      ]
+    }
+  ],
+  "clause_variable_matrix": [
+    [
+      0,
+      0,
+      1,
+      1,
+      0,
+      0,
+      0,
+      0,
+      0,
+      0
+    ],
+    [
+      0,
+      0,
+      0,
+      0,
+      0,
+      -1,
+      -1,
+      0,
+      0,
+      0
+    ],
+    [
+      0,
+      0,
+      0,
+      0,
+      0,
+      0,
+      0,
+      -1,
+      0,
+      -1
+    ],
+    [
+      0,
+      0,
+      -1,
+      0,
+      -1,
+      0,
+      0,
+      0,
+      0,
+      0
+    ],
+    [
+      0,
+      0,
+      0,
+      0,
+      0,
+      0,
+      1,
+      0,
+      0,
+      -1
+    ],
+    [
+      0,
+      0,
+      0,
+      0,
+      0,
+      1,
+      -1,
+      0,
+      0,
+      0
+    ],
+    [
+      1,
+      1,
+      0,
+      0,
+      0,
+      0,
+      0,
+      0,
+      0,
+      0
+    ],
+    [
+      1,
+      0,
+      0,
+      0,
+      -1,
+      0,
+      0,
+      0,
+      0,
+      0
+    ],
+    [
+      0,
+      0,
+      0,
+      0,
+      0,
+      0,
+      -1,
+      0,
+      1,
+      0
+    ],
+    [
+      0,
+      0,
+      1,
+      -1,
+      0,
+      0,
+      0,
+      0,
+      0,
+      0
+    ],
+    [
+      0,
+      0,
+      0,
+      0,
+      0,
+      0,
+      0,
+      0,
+      1,
+      1
+    ],
+    [
+      -1,
+      0,
+      0,
+      0,
+      -1,
+      0,
+      0,
+      0,
+      0,
+      0
+    ],
+    [
+      0,
+      1,
+      0,
+      0,
+      0,
+      0,
+      0,
+      -1,
+      0,
+      0
+    ],
+    [
+      0,
+      1,
+      1,
+      0,
+      0,
+      0,
+      0,
+      0,
+      0,
+      0
+    ],
+    [
+      0,
+      0,
+      0,
+      0,
+      0,
+      -1,
+      0,
+      0,
+      1,
+      0
+    ],
+    [
+      0,
+      -1,
+      0,
+      0,
+      1,
+      0,
+      0,
+      0,
+      0,
+      0
+    ]
+  ],
+  "meta_parameters": {
+    "number_of_variables": 10,
+    "number_of_clauses": 19,
+    "clause_count": 16,
+    "implication_count": 2,
+    "at_most_one_group_count": 1,
+    "clause_density": 1.9,
+    "clause_type_distribution": {
+      "2_sat": 16,
+      "3_sat": 0,
+      "4_sat": 0
+    },
+    "satisfiable_flag": true,
+    "seed": 7101,
+    "formulation_size": 29,
+    "visual_type": "clause_variable_matrix",
+    "matrix_height": 16,
+    "matrix_width": 10,
+    "matrix_fill_ratio": 0.2,
+    "visual_group_structure": "clustered_light",
+    "cluster_count": 2,
+    "cross_cluster_ratio": 0.1,
+    "group": "A",
+    "clause_mix": "pure_2sat"
+  },
+  "reference_solution_summary": {
+    "true_variable_count": 3,
+    "false_variable_count": 7
+  }
+}

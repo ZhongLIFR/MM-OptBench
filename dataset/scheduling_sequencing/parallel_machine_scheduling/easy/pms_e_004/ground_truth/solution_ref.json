@@ -1,0 +1,139 @@
+{
+  "status": "optimal",
+  "objective_type": "makespan",
+  "objective": 25,
+  "objective_exact": 25.0,
+  "makespan": 25,
+  "assignment": {
+    "J1": "M1",
+    "J2": "M3",
+    "J3": "M3",
+    "J4": "M2",
+    "J5": "M1",
+    "J6": "M1",
+    "J7": "M1",
+    "J8": "M3",
+    "J9": "M2",
+    "J10": "M2",
+    "J11": "M3",
+    "J12": "M2"
+  },
+  "machine_load": {
+    "M1": 24,
+    "M2": 25,
+    "M3": 25
+  },
+  "schedule": [
+    {
+      "job": "J6",
+      "machine": "M1",
+      "start": 0,
+      "finish": 10,
+      "duration": 10,
+      "base_duration": 10,
+      "weight": 1
+    },
+    {
+      "job": "J7",
+      "machine": "M1",
+      "start": 10,
+      "finish": 16,
+      "duration": 6,
+      "base_duration": 6,
+      "weight": 1
+    },
+    {
+      "job": "J5",
+      "machine": "M1",
+      "start": 16,
+      "finish": 21,
+      "duration": 5,
+      "base_duration": 5,
+      "weight": 1
+    },
+    {
+      "job": "J1",
+      "machine": "M1",
+      "start": 21,
+      "finish": 24,
+      "duration": 3,
+      "base_duration": 3,
+      "weight": 1
+    },
+    {
+      "job": "J10",
+      "machine": "M2",
+      "start": 0,
+      "finish": 11,
+      "duration": 11,
+      "base_duration": 11,
+      "weight": 1
+    },
+    {
+      "job": "J4",
+      "machine": "M2",
+      "start": 11,
+      "finish": 18,
+      "duration": 7,
+      "base_duration": 7,
+      "weight": 1
+    },
+    {
+      "job": "J12",
+      "machine": "M2",
+      "start": 18,
+      "finish": 23,
+      "duration": 5,
+      "base_duration": 5,
+      "weight": 1
+    },
+    {
+      "job": "J9",
+      "machine": "M2",
+      "start": 23,
+      "finish": 25,
+      "duration": 2,
+      "base_duration": 2,
+      "weight": 1
+    },
+    {
+      "job": "J2",
+      "machine": "M3",
+      "start": 0,
+      "finish": 9,
+      "duration": 9,
+      "base_duration": 9,
+      "weight": 1
+    },
+    {
+      "job": "J8",
+      "machine": "M3",
+      "start": 9,
+      "finish": 17,
+      "duration": 8,
+      "base_duration": 8,
+      "weight": 1
+    },
+    {
+      "job": "J11",
+      "machine": "M3",
+      "start": 17,
+      "finish": 21,
+      "duration": 4,
+      "base_duration": 4,
+      "weight": 1
+    },
+    {
+      "job": "J3",
+      "machine": "M3",
+      "start": 21,
+      "finish": 25,
+      "duration": 4,
+      "base_duration": 4,
+      "weight": 1
+    }
+  ],
+  "solve_method": "gurobi_milp_assignment_load",
+  "solver": "Gurobi",
+  "runtime_seconds": 0.001544952392578125
+}

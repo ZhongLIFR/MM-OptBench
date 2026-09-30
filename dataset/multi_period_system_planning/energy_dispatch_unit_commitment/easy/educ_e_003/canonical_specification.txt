@@ -1,0 +1,54 @@
+Canonical specification for a deterministic single-zone energy dispatch and unit commitment instance.
+
+Interpretation:
+- For each generator and period, a commitment decision determines whether the generator is off or on.
+- If a generator is off in a period, its output must be zero in that period.
+- If a generator is on in a period, its output must lie between its minimum and maximum output limits.
+- In every period, total generation across all generators must exactly equal the system demand of that period.
+- A startup cost is incurred whenever a generator changes from off in the previous period to on in the current period.
+- The initial commitment status before the first period is given explicitly below for every generator.
+- No ramping, minimum up-time, minimum down-time, reserve, transmission, load shedding, or stochastic constraints are present.
+
+Sets:
+- Generators G = ['G1', 'G2', 'G3']
+- Periods T = ['t1', 't2', 't3', 't4', 't5']
+
+System demand by period:
+- t1=60, t2=54, t3=48, t4=42, t5=36
+
+Generator parameters:
+- G1: marginal_cost=9, startup_cost=28, min_output=16, max_output=34, initial_status=0
+- G2: marginal_cost=12, startup_cost=24, min_output=8, max_output=24, initial_status=0
+- G3: marginal_cost=15, startup_cost=18, min_output=0, max_output=20, initial_status=0
+
+Decision variables:
+- p[g,t] >= 0: generation output of generator g in period t
+- u[g,t] in {0,1}: equals 1 if generator g is on in period t
+- v[g,t] in {0,1}: equals 1 if generator g starts up in period t
+
+Objective:
+- Minimize the total marginal generation cost plus total startup cost across all generators and periods.
+
+Constraints:
+- Demand balance for every period: sum_g p[g,t] = D[t].
+- Minimum output for every generator-period: p[g,t] >= Pmin[g] * u[g,t].
+- Maximum output for every generator-period: p[g,t] <= Pmax[g] * u[g,t].
+- Startup definition for every generator-period: v[g,t] >= u[g,t] - u[g,t-1], with u[g,t0] equal to the given initial status.
+- Nonnegativity of generation and binary commitment/startup variables.
+
+Metadata:
+- number_periods=5
+- number_units=3
+- demand_pattern=decreasing
+- startup_cost_regime=low_startup_symmetric
+- capacity_regime=loose_capacity
+- peak_load_flag=false
+- visual_type=economics_table_demand_timeline_capacity_ranges
+- seed=803
+- formulation_size=95
+
+Visual interpretation:
+- The top panel shows generator-level economic parameters only: marginal generation cost and startup cost.
+- The middle panel shows the exact demand value for every period.
+- The bottom panel shows each generator's minimum and maximum output range.
+- The visual does not reveal the optimal commitment pattern, dispatch solution, startup pattern, or objective value.

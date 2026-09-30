@@ -1,0 +1,122 @@
+{
+  "problem_type": "maximum_flow_minimum_cut",
+  "nodes": [
+    1,
+    2,
+    3,
+    4,
+    5,
+    6,
+    7,
+    8,
+    9,
+    10,
+    11,
+    12,
+    13
+  ],
+  "source": 1,
+  "sink": 13,
+  "arcs": [
+    {
+      "from": 1,
+      "to": 2,
+      "capacity": 15
+    },
+    {
+      "from": 1,
+      "to": 3,
+      "capacity": 13
+    },
+    {
+      "from": 1,
+      "to": 4,
+      "capacity": 11
+    },
+    {
+      "from": 2,
+      "to": 5,
+      "capacity": 7
+    },
+    {
+      "from": 3,
+      "to": 6,
+      "capacity": 7
+    },
+    {
+      "from": 4,
+      "to": 7,
+      "capacity": 6
+    },
+    {
+      "from": 2,
+      "to": 6,
+      "capacity": 4
+    },
+    {
+      "from": 3,
+      "to": 7,
+      "capacity": 4
+    },
+    {
+      "from": 5,
+      "to": 6,
+      "capacity": 3
+    },
+    {
+      "from": 6,
+      "to": 8,
+      "capacity": 5
+    },
+    {
+      "from": 8,
+      "to": 5,
+      "capacity": 2
+    },
+    {
+      "from": 5,
+      "to": 9,
+      "capacity": 6
+    },
+    {
+      "from": 6,
+      "to": 9,
+      "capacity": 4
+    },
+    {
+      "from": 7,
+      "to": 10,
+      "capacity": 5
+    },
+    {
+      "from": 9,
+      "to": 11,
+      "capacity": 6
+    },
+    {
+      "from": 10,
+      "to": 11,
+      "capacity": 5
+    },
+    {
+      "from": 11,
+      "to": 12,
+      "capacity": 3
+    },
+    {
+      "from": 9,
+      "to": 12,
+      "capacity": 3
+    },
+    {
+      "from": 10,
+      "to": 12,
+      "capacity": 3
+    },
+    {
+      "from": 12,
+      "to": 13,
+      "capacity": 8
+    }
+  ]
+}

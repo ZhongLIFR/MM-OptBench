@@ -1,0 +1,91 @@
+{
+  "status": "optimal",
+  "objective": 25.34,
+  "objective_exact": 25.339999999999996,
+  "runtime_seconds": 0.08841812505852431,
+  "routes": [
+    [
+      "Depot",
+      "C4",
+      "C2",
+      "C1",
+      "C3",
+      "Depot"
+    ],
+    [
+      "Depot",
+      "C5",
+      "C7",
+      "C6",
+      "C8",
+      "Depot"
+    ]
+  ],
+  "route_vehicle_ids": [
+    "V1",
+    "V2"
+  ],
+  "route_loads": [
+    13,
+    12
+  ],
+  "route_costs": [
+    11.77,
+    13.57
+  ],
+  "num_routes_used": 2,
+  "active_arcs": [
+    [
+      "Depot",
+      "C4",
+      "V1"
+    ],
+    [
+      "C4",
+      "C2",
+      "V1"
+    ],
+    [
+      "C2",
+      "C1",
+      "V1"
+    ],
+    [
+      "C1",
+      "C3",
+      "V1"
+    ],
+    [
+      "C3",
+      "Depot",
+      "V1"
+    ],
+    [
+      "Depot",
+      "C5",
+      "V2"
+    ],
+    [
+      "C5",
+      "C7",
+      "V2"
+    ],
+    [
+      "C7",
+      "C6",
+      "V2"
+    ],
+    [
+      "C6",
+      "C8",
+      "V2"
+    ],
+    [
+      "C8",
+      "Depot",
+      "V2"
+    ]
+  ],
+  "capacity_binding_flag": false,
+  "solve_method": "gurobi_mtz_cvrp"
+}

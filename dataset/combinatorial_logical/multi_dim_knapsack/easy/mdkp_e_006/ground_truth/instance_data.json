@@ -1,0 +1,169 @@
+{
+  "instance_id": "mdkp_e_006",
+  "variant": "multi_dimensional_knapsack",
+  "scenario": "multi_dimensional_knapsack",
+  "difficulty": "easy",
+  "sets": {
+    "items": [
+      1,
+      2,
+      3,
+      4,
+      5,
+      6,
+      7,
+      8,
+      9,
+      10,
+      11,
+      12,
+      13,
+      14,
+      15,
+      16,
+      17,
+      18,
+      19
+    ],
+    "resources": [
+      "R1",
+      "R2",
+      "R3"
+    ]
+  },
+  "values": [
+    22,
+    25,
+    32,
+    17,
+    35,
+    25,
+    20,
+    19,
+    19,
+    37,
+    21,
+    26,
+    21,
+    31,
+    31,
+    28,
+    26,
+    30,
+    27
+  ],
+  "weights": [
+    [
+      6,
+      2,
+      8
+    ],
+    [
+      2,
+      7,
+      10
+    ],
+    [
+      8,
+      6,
+      9
+    ],
+    [
+      3,
+      4,
+      3
+    ],
+    [
+      10,
+      10,
+      6
+    ],
+    [
+      4,
+      6,
+      4
+    ],
+    [
+      4,
+      5,
+      2
+    ],
+    [
+      7,
+      2,
+      6
+    ],
+    [
+      10,
+      2,
+      2
+    ],
+    [
+      6,
+      7,
+      9
+    ],
+    [
+      5,
+      6,
+      2
+    ],
+    [
+      6,
+      4,
+      9
+    ],
+    [
+      7,
+      6,
+      2
+    ],
+    [
+      9,
+      3,
+      7
+    ],
+    [
+      5,
+      4,
+      10
+    ],
+    [
+      6,
+      6,
+      8
+    ],
+    [
+      8,
+      9,
+      3
+    ],
+    [
+      8,
+      10,
+      3
+    ],
+    [
+      8,
+      6,
+      5
+    ]
+  ],
+  "capacities": [
+    57,
+    41,
+    45
+  ],
+  "meta_parameters": {
+    "number_items": 19,
+    "number_dimensions": 3,
+    "capacity_tightness_type": "moderate",
+    "profit_weight_correlation_type": "weakly_correlated",
+    "weight_distribution_type": "balanced_value_to_weight_ratios",
+    "seed": 2406,
+    "group": "B",
+    "visual_type": "bars_resource_usage_chart",
+    "formulation_size": 22,
+    "binding_constraint_count": 2
+  }
+}

@@ -1,0 +1,89 @@
+Canonical specification for a deterministic hard-level multi-product lot-sizing and production planning instance.
+
+Interpretation:
+- For each product and period, a production quantity may be chosen.
+- Production completed in a period is immediately available to satisfy that period's demand.
+- Unsatisfied demand is not allowed; therefore inventory balance must hold in every period.
+- End-of-period inventory may be carried into the next period and incurs a holding cost.
+- If positive production is chosen for a product in a period, a fixed setup cost is incurred for that product-period.
+- Total production across all products in a period is limited by the shared capacity of that period.
+
+Sets:
+- Products P = ['P1', 'P2', 'P3', 'P4', 'P5', 'P6']
+- Periods T = ['t1', 't2', 't3', 't4', 't5', 't6', 't7', 't8', 't9', 't10', 't11', 't12', 't13', 't14', 't15', 't16', 't17', 't18', 't19', 't20', 't21', 't22', 't23', 't24', 't25', 't26', 't27', 't28', 't29', 't30', 't31', 't32', 't33', 't34', 't35', 't36', 't37', 't38', 't39', 't40', 't41', 't42', 't43', 't44', 't45', 't46', 't47', 't48']
+
+Initial inventory:
+- P1: 0
+- P2: 0
+- P3: 0
+- P4: 0
+- P5: 0
+- P6: 0
+
+Per-product parameter tables:
+- P1 demand by period: t1=5, t2=6, t3=8, t4=7, t5=6, t6=8, t7=7, t8=6, t9=9, t10=8, t11=7, t12=7, t13=6, t14=7, t15=9, t16=8, t17=9, t18=9, t19=8, t20=7, t21=9, t22=8, t23=7, t24=8, t25=7, t26=8, t27=9, t28=9, t29=8, t30=9, t31=8, t32=8, t33=13, t34=9, t35=8, t36=9, t37=8, t38=8, t39=10, t40=9, t41=9, t42=10, t43=9, t44=9, t45=11, t46=9, t47=9, t48=9
+- P1 unit production cost by period: t1=3, t2=3, t3=3, t4=3, t5=3, t6=3, t7=4, t8=4, t9=4, t10=4, t11=4, t12=4, t13=5, t14=5, t15=5, t16=5, t17=5, t18=5, t19=3, t20=3, t21=3, t22=3, t23=3, t24=3, t25=4, t26=4, t27=4, t28=4, t29=4, t30=4, t31=5, t32=5, t33=5, t34=5, t35=5, t36=5, t37=3, t38=3, t39=3, t40=3, t41=3, t42=3, t43=4, t44=4, t45=4, t46=4, t47=4, t48=4
+- P1 unit holding cost by period: t1=1, t2=1, t3=1, t4=1, t5=1, t6=1, t7=1, t8=1, t9=1, t10=1, t11=1, t12=1, t13=1, t14=1, t15=1, t16=1, t17=1, t18=1, t19=1, t20=1, t21=1, t22=1, t23=1, t24=1, t25=2, t26=2, t27=2, t28=2, t29=2, t30=2, t31=2, t32=2, t33=2, t34=2, t35=2, t36=2, t37=2, t38=2, t39=2, t40=2, t41=2, t42=2, t43=2, t44=2, t45=2, t46=2, t47=2, t48=0
+- P1 fixed setup cost by period: t1=16, t2=16, t3=16, t4=16, t5=16, t6=16, t7=16, t8=16, t9=16, t10=16, t11=16, t12=16, t13=16, t14=16, t15=16, t16=16, t17=16, t18=16, t19=16, t20=16, t21=16, t22=16, t23=16, t24=16, t25=16, t26=16, t27=16, t28=16, t29=16, t30=16, t31=16, t32=16, t33=16, t34=16, t35=16, t36=16, t37=16, t38=16, t39=16, t40=16, t41=16, t42=16, t43=16, t44=16, t45=16, t46=16, t47=16, t48=16
+- P1 setup-linking constants by period: t1=394, t2=389, t3=383, t4=375, t5=368, t6=362, t7=354, t8=347, t9=341, t10=332, t11=324, t12=317, t13=310, t14=304, t15=297, t16=288, t17=280, t18=271, t19=262, t20=254, t21=247, t22=238, t23=230, t24=223, t25=215, t26=208, t27=200, t28=191, t29=182, t30=174, t31=165, t32=157, t33=149, t34=136, t35=127, t36=119, t37=110, t38=102, t39=94, t40=84, t41=75, t42=66, t43=56, t44=47, t45=38, t46=27, t47=18, t48=9
+- P2 demand by period: t1=6, t2=7, t3=9, t4=8, t5=7, t6=8, t7=7, t8=7, t9=9, t10=8, t11=7, t12=8, t13=7, t14=7, t15=9, t16=8, t17=9, t18=9, t19=8, t20=8, t21=9, t22=9, t23=8, t24=8, t25=8, t26=8, t27=10, t28=9, t29=8, t30=9, t31=9, t32=8, t33=15, t34=9, t35=9, t36=9, t37=8, t38=9, t39=11, t40=9, t41=9, t42=11, t43=9, t44=9, t45=12, t46=10, t47=9, t48=9
+- P2 unit production cost by period: t1=4, t2=4, t3=4, t4=4, t5=4, t6=4, t7=5, t8=5, t9=5, t10=5, t11=5, t12=5, t13=6, t14=6, t15=6, t16=6, t17=6, t18=6, t19=4, t20=4, t21=4, t22=4, t23=4, t24=4, t25=5, t26=5, t27=5, t28=5, t29=5, t30=5, t31=6, t32=6, t33=6, t34=6, t35=6, t36=6, t37=4, t38=4, t39=4, t40=4, t41=4, t42=4, t43=5, t44=5, t45=5, t46=5, t47=5, t48=5
+- P2 unit holding cost by period: t1=2, t2=2, t3=2, t4=2, t5=2, t6=2, t7=2, t8=2, t9=2, t10=2, t11=2, t12=2, t13=2, t14=2, t15=2, t16=2, t17=2, t18=2, t19=2, t20=2, t21=2, t22=2, t23=2, t24=2, t25=3, t26=3, t27=3, t28=3, t29=3, t30=3, t31=3, t32=3, t33=3, t34=3, t35=3, t36=3, t37=3, t38=3, t39=3, t40=3, t41=3, t42=3, t43=3, t44=3, t45=3, t46=3, t47=3, t48=0
+- P2 fixed setup cost by period: t1=30, t2=30, t3=30, t4=30, t5=30, t6=30, t7=30, t8=30, t9=30, t10=30, t11=30, t12=30, t13=30, t14=30, t15=30, t16=30, t17=30, t18=30, t19=30, t20=30, t21=30, t22=30, t23=30, t24=30, t25=30, t26=30, t27=30, t28=30, t29=30, t30=30, t31=30, t32=30, t33=30, t34=30, t35=30, t36=30, t37=30, t38=30, t39=30, t40=30, t41=30, t42=30, t43=30, t44=30, t45=30, t46=30, t47=30, t48=30
+- P2 setup-linking constants by period: t1=416, t2=410, t3=403, t4=394, t5=386, t6=379, t7=371, t8=364, t9=357, t10=348, t11=340, t12=333, t13=325, t14=318, t15=311, t16=302, t17=294, t18=285, t19=276, t20=268, t21=260, t22=251, t23=242, t24=234, t25=226, t26=218, t27=210, t28=200, t29=191, t30=183, t31=174, t32=165, t33=157, t34=142, t35=133, t36=124, t37=115, t38=107, t39=98, t40=87, t41=78, t42=69, t43=58, t44=49, t45=40, t46=28, t47=18, t48=9
+- P3 demand by period: t1=7, t2=7, t3=9, t4=8, t5=7, t6=9, t7=8, t8=7, t9=9, t10=9, t11=8, t12=8, t13=7, t14=8, t15=9, t16=9, t17=9, t18=9, t19=9, t20=8, t21=10, t22=9, t23=8, t24=9, t25=8, t26=9, t27=11, t28=9, t29=9, t30=10, t31=9, t32=9, t33=15, t34=10, t35=9, t36=9, t37=9, t38=9, t39=12, t40=10, t41=9, t42=12, t43=10, t44=9, t45=13, t46=11, t47=9, t48=10
+- P3 unit production cost by period: t1=5, t2=5, t3=5, t4=5, t5=5, t6=5, t7=6, t8=6, t9=6, t10=6, t11=6, t12=6, t13=7, t14=7, t15=7, t16=7, t17=7, t18=7, t19=5, t20=5, t21=5, t22=5, t23=5, t24=5, t25=6, t26=6, t27=6, t28=6, t29=6, t30=6, t31=7, t32=7, t33=7, t34=7, t35=7, t36=7, t37=5, t38=5, t39=5, t40=5, t41=5, t42=5, t43=6, t44=6, t45=6, t46=6, t47=6, t48=6
+- P3 unit holding cost by period: t1=1, t2=1, t3=1, t4=1, t5=1, t6=1, t7=1, t8=1, t9=1, t10=1, t11=1, t12=1, t13=1, t14=1, t15=1, t16=1, t17=1, t18=1, t19=1, t20=1, t21=1, t22=1, t23=1, t24=1, t25=2, t26=2, t27=2, t28=2, t29=2, t30=2, t31=2, t32=2, t33=2, t34=2, t35=2, t36=2, t37=2, t38=2, t39=2, t40=2, t41=2, t42=2, t43=2, t44=2, t45=2, t46=2, t47=2, t48=0
+- P3 fixed setup cost by period: t1=15, t2=15, t3=15, t4=15, t5=15, t6=15, t7=15, t8=15, t9=15, t10=15, t11=15, t12=15, t13=15, t14=15, t15=15, t16=15, t17=15, t18=15, t19=15, t20=15, t21=15, t22=15, t23=15, t24=15, t25=15, t26=15, t27=15, t28=15, t29=15, t30=15, t31=15, t32=15, t33=15, t34=15, t35=15, t36=15, t37=15, t38=15, t39=15, t40=15, t41=15, t42=15, t43=15, t44=15, t45=15, t46=15, t47=15, t48=15
+- P3 setup-linking constants by period: t1=440, t2=433, t3=426, t4=417, t5=409, t6=402, t7=393, t8=385, t9=378, t10=369, t11=360, t12=352, t13=344, t14=337, t15=329, t16=320, t17=311, t18=302, t19=293, t20=284, t21=276, t22=266, t23=257, t24=249, t25=240, t26=232, t27=223, t28=212, t29=203, t30=194, t31=184, t32=175, t33=166, t34=151, t35=141, t36=132, t37=123, t38=114, t39=105, t40=93, t41=83, t42=74, t43=62, t44=52, t45=43, t46=30, t47=19, t48=10
+- P4 demand by period: t1=8, t2=8, t3=10, t4=9, t5=8, t6=9, t7=9, t8=8, t9=11, t10=9, t11=9, t12=9, t13=8, t14=9, t15=11, t16=9, t17=12, t18=11, t19=9, t20=9, t21=12, t22=10, t23=9, t24=9, t25=9, t26=9, t27=13, t28=11, t29=9, t30=12, t31=10, t32=9, t33=18, t34=12, t35=10, t36=11, t37=9, t38=10, t39=14, t40=12, t41=11, t42=14, t43=12, t44=11, t45=15, t46=13, t47=11, t48=12
+- P4 unit production cost by period: t1=6, t2=6, t3=6, t4=6, t5=6, t6=6, t7=7, t8=7, t9=7, t10=7, t11=7, t12=7, t13=8, t14=8, t15=8, t16=8, t17=8, t18=8, t19=6, t20=6, t21=6, t22=6, t23=6, t24=6, t25=7, t26=7, t27=7, t28=7, t29=7, t30=7, t31=8, t32=8, t33=8, t34=8, t35=8, t36=8, t37=6, t38=6, t39=6, t40=6, t41=6, t42=6, t43=7, t44=7, t45=7, t46=7, t47=7, t48=7
+- P4 unit holding cost by period: t1=2, t2=2, t3=2, t4=2, t5=2, t6=2, t7=2, t8=2, t9=2, t10=2, t11=2, t12=2, t13=2, t14=2, t15=2, t16=2, t17=2, t18=2, t19=2, t20=2, t21=2, t22=2, t23=2, t24=2, t25=2, t26=2, t27=2, t28=2, t29=2, t30=2, t31=2, t32=2, t33=2, t34=2, t35=2, t36=2, t37=2, t38=2, t39=2, t40=2, t41=2, t42=2, t43=2, t44=2, t45=2, t46=2, t47=2, t48=0
+- P4 fixed setup cost by period: t1=27, t2=27, t3=27, t4=27, t5=27, t6=27, t7=27, t8=27, t9=27, t10=27, t11=27, t12=27, t13=27, t14=27, t15=27, t16=27, t17=27, t18=27, t19=27, t20=27, t21=27, t22=27, t23=27, t24=27, t25=27, t26=27, t27=27, t28=27, t29=27, t30=27, t31=27, t32=27, t33=27, t34=27, t35=27, t36=27, t37=27, t38=27, t39=27, t40=27, t41=27, t42=27, t43=27, t44=27, t45=27, t46=27, t47=27, t48=27
+- P4 setup-linking constants by period: t1=502, t2=494, t3=486, t4=476, t5=467, t6=459, t7=450, t8=441, t9=433, t10=422, t11=413, t12=404, t13=395, t14=387, t15=378, t16=367, t17=358, t18=346, t19=335, t20=326, t21=317, t22=305, t23=295, t24=286, t25=277, t26=268, t27=259, t28=246, t29=235, t30=226, t31=214, t32=204, t33=195, t34=177, t35=165, t36=155, t37=144, t38=135, t39=125, t40=111, t41=99, t42=88, t43=74, t44=62, t45=51, t46=36, t47=23, t48=12
+- P5 demand by period: t1=6, t2=7, t3=9, t4=8, t5=7, t6=8, t7=7, t8=7, t9=9, t10=8, t11=7, t12=8, t13=7, t14=7, t15=9, t16=8, t17=9, t18=9, t19=8, t20=8, t21=9, t22=9, t23=8, t24=8, t25=8, t26=8, t27=10, t28=9, t29=8, t30=9, t31=9, t32=8, t33=14, t34=9, t35=9, t36=9, t37=8, t38=9, t39=11, t40=9, t41=9, t42=11, t43=9, t44=9, t45=12, t46=10, t47=9, t48=9
+- P5 unit production cost by period: t1=3, t2=3, t3=3, t4=3, t5=3, t6=3, t7=4, t8=4, t9=4, t10=4, t11=4, t12=4, t13=5, t14=5, t15=5, t16=5, t17=5, t18=5, t19=3, t20=3, t21=3, t22=3, t23=3, t24=3, t25=4, t26=4, t27=4, t28=4, t29=4, t30=4, t31=5, t32=5, t33=5, t34=5, t35=5, t36=5, t37=3, t38=3, t39=3, t40=3, t41=3, t42=3, t43=4, t44=4, t45=4, t46=4, t47=4, t48=4
+- P5 unit holding cost by period: t1=1, t2=1, t3=1, t4=1, t5=1, t6=1, t7=1, t8=1, t9=1, t10=1, t11=1, t12=1, t13=1, t14=1, t15=1, t16=1, t17=1, t18=1, t19=1, t20=1, t21=1, t22=1, t23=1, t24=1, t25=1, t26=1, t27=1, t28=1, t29=1, t30=1, t31=1, t32=1, t33=1, t34=1, t35=1, t36=1, t37=1, t38=1, t39=1, t40=1, t41=1, t42=1, t43=1, t44=1, t45=1, t46=1, t47=1, t48=0
+- P5 fixed setup cost by period: t1=18, t2=18, t3=18, t4=18, t5=18, t6=18, t7=18, t8=18, t9=18, t10=18, t11=18, t12=18, t13=18, t14=18, t15=18, t16=18, t17=18, t18=18, t19=18, t20=18, t21=18, t22=18, t23=18, t24=18, t25=18, t26=18, t27=18, t28=18, t29=18, t30=18, t31=18, t32=18, t33=18, t34=18, t35=18, t36=18, t37=18, t38=18, t39=18, t40=18, t41=18, t42=18, t43=18, t44=18, t45=18, t46=18, t47=18, t48=18
+- P5 setup-linking constants by period: t1=415, t2=409, t3=402, t4=393, t5=385, t6=378, t7=370, t8=363, t9=356, t10=347, t11=339, t12=332, t13=324, t14=317, t15=310, t16=301, t17=293, t18=284, t19=275, t20=267, t21=259, t22=250, t23=241, t24=233, t25=225, t26=217, t27=209, t28=199, t29=190, t30=182, t31=173, t32=164, t33=156, t34=142, t35=133, t36=124, t37=115, t38=107, t39=98, t40=87, t41=78, t42=69, t43=58, t44=49, t45=40, t46=28, t47=18, t48=9
+- P6 demand by period: t1=7, t2=7, t3=9, t4=8, t5=7, t6=9, t7=8, t8=7, t9=9, t10=9, t11=8, t12=8, t13=7, t14=8, t15=9, t16=9, t17=10, t18=9, t19=9, t20=8, t21=10, t22=9, t23=8, t24=9, t25=8, t26=9, t27=11, t28=9, t29=9, t30=10, t31=9, t32=9, t33=16, t34=10, t35=9, t36=9, t37=9, t38=9, t39=12, t40=10, t41=9, t42=12, t43=10, t44=9, t45=13, t46=11, t47=9, t48=10
+- P6 unit production cost by period: t1=4, t2=4, t3=4, t4=4, t5=4, t6=4, t7=5, t8=5, t9=5, t10=5, t11=5, t12=5, t13=6, t14=6, t15=6, t16=6, t17=6, t18=6, t19=4, t20=4, t21=4, t22=4, t23=4, t24=4, t25=5, t26=5, t27=5, t28=5, t29=5, t30=5, t31=6, t32=6, t33=6, t34=6, t35=6, t36=6, t37=4, t38=4, t39=4, t40=4, t41=4, t42=4, t43=5, t44=5, t45=5, t46=5, t47=5, t48=5
+- P6 unit holding cost by period: t1=2, t2=2, t3=2, t4=2, t5=2, t6=2, t7=2, t8=2, t9=2, t10=2, t11=2, t12=2, t13=2, t14=2, t15=2, t16=2, t17=2, t18=2, t19=2, t20=2, t21=2, t22=2, t23=2, t24=2, t25=2, t26=2, t27=2, t28=2, t29=2, t30=2, t31=2, t32=2, t33=2, t34=2, t35=2, t36=2, t37=2, t38=2, t39=2, t40=2, t41=2, t42=2, t43=2, t44=2, t45=2, t46=2, t47=2, t48=0
+- P6 fixed setup cost by period: t1=31, t2=31, t3=31, t4=31, t5=31, t6=31, t7=31, t8=31, t9=31, t10=31, t11=31, t12=31, t13=31, t14=31, t15=31, t16=31, t17=31, t18=31, t19=31, t20=31, t21=31, t22=31, t23=31, t24=31, t25=31, t26=31, t27=31, t28=31, t29=31, t30=31, t31=31, t32=31, t33=31, t34=31, t35=31, t36=31, t37=31, t38=31, t39=31, t40=31, t41=31, t42=31, t43=31, t44=31, t45=31, t46=31, t47=31, t48=31
+- P6 setup-linking constants by period: t1=442, t2=435, t3=428, t4=419, t5=411, t6=404, t7=395, t8=387, t9=380, t10=371, t11=362, t12=354, t13=346, t14=339, t15=331, t16=322, t17=313, t18=303, t19=294, t20=285, t21=277, t22=267, t23=258, t24=250, t25=241, t26=233, t27=224, t28=213, t29=204, t30=195, t31=185, t32=176, t33=167, t34=151, t35=141, t36=132, t37=123, t38=114, t39=105, t40=93, t41=83, t42=74, t43=62, t44=52, t45=43, t46=30, t47=19, t48=10
+
+Shared capacity by period:
+- t1=51, t2=54, t3=66, t4=60, t5=54, t6=63, t7=58, t8=54, t9=68, t10=63, t11=58, t12=60, t13=54, t14=58, t15=68, t16=63, t17=70, t18=68, t19=63, t20=60, t21=71, t22=66, t23=60, t24=63, t25=60, t26=63, t27=76, t28=68, t29=63, t30=71, t31=66, t32=63, t33=103, t34=71, t35=66, t36=68, t37=63, t38=66, t39=82, t40=71, t41=68, t42=82, t43=71, t44=68, t45=88, t46=76, t47=68, t48=71
+
+Decision variables:
+- x[p,t] >= 0: production quantity of product p in period t
+- I[p,t] >= 0: ending inventory of product p after period t
+- y[p,t] in {0,1}: equals 1 if product p is produced in period t
+
+Objective:
+- Minimize total production cost + total inventory holding cost + total fixed setup cost.
+
+Constraints:
+- Inventory balance for every product and period: I[p,t-1] + x[p,t] = d[p,t] + I[p,t], with the given initial inventory at the start of t1.
+- Setup linking for every product and period: x[p,t] <= M[p,t] * y[p,t].
+- Shared capacity for every period: sum_p x[p,t] <= C[t].
+- Nonnegativity of production and inventory, binary setup variables, and no backlogging.
+
+Metadata:
+- number_periods=48
+- number_products=6
+- demand_regime=very_mild_structured_multi_peak
+- setup_cost_regime=very_mild_mixed_high_low_setup_products
+- capacity_regime=very_mild_persistent_tight_capacity
+- seasonality_flag=true
+- inventory_pressure_flag=true
+- symmetry_flag=false
+- multi_product_flag=true
+- visual_type=timeline_demand_grid_dual_visual
+- seed=710
+- formulation_size=1488
+
+Visual interpretation:
+- visual_0.png shows one capacity bar per period plus the demand matrix with exact numeric demand values.
+- visual_1.png shows the production-cost, holding-cost, and setup-cost matrices with exact numeric parameter values.
+- The visuals do not reveal the optimal production plan, setup pattern, or objective value.

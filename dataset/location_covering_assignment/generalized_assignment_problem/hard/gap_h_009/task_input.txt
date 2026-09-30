@@ -1,0 +1,24 @@
+A task-assignment planning visual is provided.
+
+The visual contains two coordinated parts within the same figure:
+- The upper table is an assignment-cost matrix.
+- The lower table is a resource-consumption matrix with aligned capacity bars.
+- In both tables, rows correspond to agents and columns correspond to tasks.
+- A dark cell marked with "—" means that the corresponding task-agent pair is forbidden.
+- Every numeric entry shown in the figure is an exact public parameter of the instance.
+
+Interpretation:
+- Each task must be assigned to exactly one feasible agent.
+- If task j is assigned to agent i, the upper table contributes the displayed assignment cost.
+- If task j is assigned to agent i, the lower table contributes the displayed resource consumption
+  against that agent's capacity.
+- Each agent's total available capacity is shown on the right side of the lower table.
+- Tasks are indivisible and may not be split across agents.
+- There are no time periods, opening decisions, setup decisions, penalties, or stochastic elements.
+
+Task:
+1) Write a mathematical optimization model for this exact instance.
+2) Provide solver-executable code implementing the model.
+
+Objective:
+Minimize total assignment cost.

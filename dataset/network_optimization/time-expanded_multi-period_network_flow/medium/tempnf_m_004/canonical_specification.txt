@@ -1,0 +1,114 @@
+Instance ID: tempnf_m_004
+Scenario: large_mid_horizon_storage_fill_with_dual_release
+Family: time-expanded_multi-period_network_flow
+Variant: single_visual_single_commodity_mpnf
+
+Interpretation
+--------------
+This is a deterministic single-commodity multi-period network flow
+instance with carry-over inventory allowed only at the listed
+storage-enabled warehouse nodes.
+
+Time periods:
+  t1, t2, t3, t4
+
+Nodes:
+  1, 2, 3, 4, 5, 6, 7, 8, 9
+
+Node roles:
+  1 = source
+  2 = upper_inbound
+  3 = middle_inbound
+  4 = lower_inbound
+  5 = upper_connector
+  6 = warehouse
+  7 = lower_connector
+  8 = pre_sink_hub
+  9 = sink
+
+Directed arcs:
+  e1: 1 -> 2
+  e2: 1 -> 3
+  e3: 1 -> 4
+  e4: 2 -> 5
+  e5: 2 -> 6
+  e6: 3 -> 5
+  e7: 3 -> 6
+  e8: 3 -> 7
+  e9: 4 -> 6
+  e10: 4 -> 7
+  e11: 5 -> 8
+  e12: 6 -> 8
+  e13: 7 -> 9
+  e14: 8 -> 9
+  e15: 6 -> 9
+
+Node-period net supply / demand values
+--------------------------------------
+Positive values represent net supply.
+Negative values represent net demand.
+
+  Node 1: t1=+6, t2=+4, t3=+2, t4=+2
+  Node 2: t1=+0, t2=+0, t3=+0, t4=+0
+  Node 3: t1=+0, t2=+0, t3=+0, t4=+0
+  Node 4: t1=+0, t2=+0, t3=+0, t4=+0
+  Node 5: t1=+0, t2=+0, t3=+0, t4=+0
+  Node 6: t1=+0, t2=+0, t3=+0, t4=+0
+  Node 7: t1=+0, t2=+0, t3=+0, t4=+0
+  Node 8: t1=+0, t2=+0, t3=+0, t4=+0
+  Node 9: t1=-1, t2=-2, t3=-5, t4=-6
+
+Storage parameters
+------------------
+Storage is allowed only at the listed warehouse nodes.
+
+  initial_inventory(6) = 0
+  max_inventory(6) = 7
+  holding_cost(6,t1) = 0.3
+  holding_cost(6,t2) = 0.4
+  holding_cost(6,t3) = 0.2
+  holding_cost(6,t4) = 0
+
+Arc-period parameters
+---------------------
+Every arc is labeled in the period order t1, t2, t3, t4.
+Each period-specific pair is written as u/c = capacity/unit_cost.
+
+  e1 (1 -> 2): [3/1|2/1|1/2|1/2]
+  e2 (1 -> 3): [2/1|2/1|1/2|1/2]
+  e3 (1 -> 4): [2/2|2/2|1/2|1/3]
+  e4 (2 -> 5): [2/3|1/3|1/4|1/5]
+  e5 (2 -> 6): [2/1|2/1|1/1|1/2]
+  e6 (3 -> 5): [2/2|1/2|1/3|1/4]
+  e7 (3 -> 6): [2/1|2/1|1/1|1/2]
+  e8 (3 -> 7): [1/3|1/3|1/3|1/4]
+  e9 (4 -> 6): [2/1|2/1|1/1|1/2]
+  e10 (4 -> 7): [1/2|1/2|1/3|1/3]
+  e11 (5 -> 8): [2/2|2/2|1/2|1/2]
+  e12 (6 -> 8): [1/1|2/1|3/1|3/1]
+  e13 (7 -> 9): [1/2|1/2|2/3|2/3]
+  e14 (8 -> 9): [2/1|2/1|3/1|3/1]
+  e15 (6 -> 9): [1/1|2/1|4/1|5/1]
+
+Problem statement
+-----------------
+For each period, decide how much single-commodity flow to send on each
+directed arc. Flow must satisfy the exact node-period net supply /
+demand values. Inventory may be carried only at the listed
+storage-enabled nodes across consecutive periods, subject to the
+displayed node-specific storage capacities.
+
+Objective:
+  minimize total arc routing cost plus warehouse holding cost.
+
+Visual interpretation
+---------------------
+This medium-level release uses one exact network figure:
+
+- Arc labels contain all time-indexed routing parameters.
+- A right-side role table contains the source row, one or two
+  warehouse rows, and the sink row.
+- That table provides the exact node-level data for all special nodes.
+
+Nodes not listed in the role table have zero net supply / demand in
+every period and no storage capability.

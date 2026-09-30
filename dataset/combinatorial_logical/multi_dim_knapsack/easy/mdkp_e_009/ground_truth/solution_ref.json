@@ -1,0 +1,62 @@
+{
+  "status": "optimal",
+  "objective": 229,
+  "objective_exact": 229,
+  "selected_items": [
+    3,
+    4,
+    6,
+    7,
+    8,
+    10,
+    11,
+    14,
+    22
+  ],
+  "decision_variables": {
+    "x_1": 0,
+    "x_2": 0,
+    "x_3": 1,
+    "x_4": 1,
+    "x_5": 0,
+    "x_6": 1,
+    "x_7": 1,
+    "x_8": 1,
+    "x_9": 0,
+    "x_10": 1,
+    "x_11": 1,
+    "x_12": 0,
+    "x_13": 0,
+    "x_14": 1,
+    "x_15": 0,
+    "x_16": 0,
+    "x_17": 0,
+    "x_18": 0,
+    "x_19": 0,
+    "x_20": 0,
+    "x_21": 0,
+    "x_22": 1,
+    "x_23": 0
+  },
+  "resource_usage": {
+    "R1": 42,
+    "R2": 46,
+    "R3": 51
+  },
+  "resource_limits": {
+    "R1": 43,
+    "R2": 47,
+    "R3": 51
+  },
+  "resource_slack": {
+    "R1": 1,
+    "R2": 1,
+    "R3": 0
+  },
+  "binding_constraints": [
+    3
+  ],
+  "binding_constraint_count": 1,
+  "solve_method": "gurobi_milp_mdkp",
+  "runtime_seconds": 0.022844749968498945
+}

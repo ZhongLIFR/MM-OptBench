@@ -1,0 +1,143 @@
+Canonical specification for a deterministic medium-level graph coloring instance.
+
+Interpretation:
+- The graph is undirected and simple.
+- Each vertex must receive exactly one color.
+- Adjacent vertices must not share the same color.
+- This is a decision K-colorability instance with a fixed number of available colors.
+- There are no directed edges, hyperedges, or symmetry-breaking constraints.
+
+Sets:
+- Vertices V = [1, 2, 3, 4, 5, 6, 7, 8, 9, 10, 11, 12, 13, 14, 15, 16]
+- Colors K = [1, 2, 3, 4, 5]
+
+Parameters:
+- number_of_vertices = 16
+- number_of_colors_available = 5
+- chromatic_number = 5
+- graph_density = 0.4917
+- topology_type = overlapping_clique_graph
+
+Edge set E:
+- (1, 2)
+- (1, 3)
+- (1, 5)
+- (1, 9)
+- (1, 15)
+- (1, 16)
+- (2, 3)
+- (2, 6)
+- (2, 9)
+- (2, 10)
+- (2, 11)
+- (2, 14)
+- (2, 15)
+- (2, 16)
+- (3, 4)
+- (3, 6)
+- (3, 7)
+- (3, 8)
+- (3, 9)
+- (3, 11)
+- (3, 12)
+- (4, 6)
+- (4, 11)
+- (4, 12)
+- (4, 13)
+- (4, 14)
+- (4, 15)
+- (5, 6)
+- (5, 7)
+- (5, 8)
+- (5, 11)
+- (5, 13)
+- (5, 15)
+- (5, 16)
+- (6, 7)
+- (6, 9)
+- (6, 12)
+- (6, 14)
+- (6, 16)
+- (7, 8)
+- (7, 13)
+- (7, 15)
+- (7, 16)
+- (8, 10)
+- (8, 13)
+- (8, 15)
+- (9, 11)
+- (9, 14)
+- (9, 16)
+- (10, 15)
+- (10, 16)
+- (11, 12)
+- (11, 13)
+- (11, 15)
+- (12, 13)
+- (12, 15)
+- (13, 15)
+- (13, 16)
+- (14, 16)
+
+Adjacency list:
+- N(1) = [2, 3, 5, 9, 15, 16]
+- N(2) = [1, 3, 6, 9, 10, 11, 14, 15, 16]
+- N(3) = [1, 2, 4, 6, 7, 8, 9, 11, 12]
+- N(4) = [3, 6, 11, 12, 13, 14, 15]
+- N(5) = [1, 6, 7, 8, 11, 13, 15, 16]
+- N(6) = [2, 3, 4, 5, 7, 9, 12, 14, 16]
+- N(7) = [3, 5, 6, 8, 13, 15, 16]
+- N(8) = [3, 5, 7, 10, 13, 15]
+- N(9) = [1, 2, 3, 6, 11, 14, 16]
+- N(10) = [2, 8, 15, 16]
+- N(11) = [2, 3, 4, 5, 9, 12, 13, 15]
+- N(12) = [3, 4, 6, 11, 13, 15]
+- N(13) = [4, 5, 7, 8, 11, 12, 15, 16]
+- N(14) = [2, 4, 6, 9, 16]
+- N(15) = [1, 2, 4, 5, 7, 8, 10, 11, 12, 13]
+- N(16) = [1, 2, 5, 6, 7, 9, 10, 13, 14]
+
+Adjacency matrix rows (0/1 form, with diagonal omitted from constraints):
+- row 1: [0, 1, 1, 0, 1, 0, 0, 0, 1, 0, 0, 0, 0, 0, 1, 1]
+- row 2: [1, 0, 1, 0, 0, 1, 0, 0, 1, 1, 1, 0, 0, 1, 1, 1]
+- row 3: [1, 1, 0, 1, 0, 1, 1, 1, 1, 0, 1, 1, 0, 0, 0, 0]
+- row 4: [0, 0, 1, 0, 0, 1, 0, 0, 0, 0, 1, 1, 1, 1, 1, 0]
+- row 5: [1, 0, 0, 0, 0, 1, 1, 1, 0, 0, 1, 0, 1, 0, 1, 1]
+- row 6: [0, 1, 1, 1, 1, 0, 1, 0, 1, 0, 0, 1, 0, 1, 0, 1]
+- row 7: [0, 0, 1, 0, 1, 1, 0, 1, 0, 0, 0, 0, 1, 0, 1, 1]
+- row 8: [0, 0, 1, 0, 1, 0, 1, 0, 0, 1, 0, 0, 1, 0, 1, 0]
+- row 9: [1, 1, 1, 0, 0, 1, 0, 0, 0, 0, 1, 0, 0, 1, 0, 1]
+- row 10: [0, 1, 0, 0, 0, 0, 0, 1, 0, 0, 0, 0, 0, 0, 1, 1]
+- row 11: [0, 1, 1, 1, 1, 0, 0, 0, 1, 0, 0, 1, 1, 0, 1, 0]
+- row 12: [0, 0, 1, 1, 0, 1, 0, 0, 0, 0, 1, 0, 1, 0, 1, 0]
+- row 13: [0, 0, 0, 1, 1, 0, 1, 1, 0, 0, 1, 1, 0, 0, 1, 1]
+- row 14: [0, 1, 0, 1, 0, 1, 0, 0, 1, 0, 0, 0, 0, 0, 0, 1]
+- row 15: [1, 1, 0, 1, 1, 0, 1, 1, 0, 1, 1, 1, 1, 0, 0, 0]
+- row 16: [1, 1, 0, 0, 1, 1, 1, 0, 1, 1, 0, 0, 1, 1, 0, 0]
+
+Decision variables:
+- x[v,k] in {0,1}: equals 1 if vertex v is assigned color k, and 0 otherwise.
+
+Objective:
+- Determine whether a feasible coloring exists using at most K = 5 colors.
+
+Constraints:
+- For every vertex v in V, exactly one color must be assigned: sum_k x[v,k] = 1.
+- For every edge (u,v) in E and every color k in K, adjacent vertices cannot share the same color: x[u,k] + x[v,k] <= 1.
+- All decision variables are binary.
+
+Metadata:
+- seed=6203
+- group=1
+- graph_generator=overlap_clique_feasible
+- visual_type=adjacency_matrix
+- formulation_size=391
+- task_variant=decision
+- max_clique_size=5
+- degeneracy=6
+
+Visual interpretation:
+- The figure is a square adjacency matrix indexed by numeric vertex identifiers.
+- Black off-diagonal cells indicate edges and white off-diagonal cells indicate non-edges.
+- Grey diagonal cells only mark self-reference positions and do not represent constraints.
+- The visual reveals the full graph structure and all variant-specific public parameters, but it does not reveal a valid coloring assignment.

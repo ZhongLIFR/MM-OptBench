@@ -1,0 +1,168 @@
+{
+  "instance_id": "educ_h_004",
+  "variant": "energy_dispatch_unit_commitment",
+  "scenario": "energy_dispatch_unit_commitment",
+  "difficulty": "hard",
+  "sets": {
+    "generators": [
+      "G1",
+      "G2",
+      "G3",
+      "G4",
+      "G5",
+      "G6",
+      "G7"
+    ],
+    "periods": [
+      "t1",
+      "t2",
+      "t3",
+      "t4",
+      "t5",
+      "t6",
+      "t7",
+      "t8",
+      "t9",
+      "t10",
+      "t11",
+      "t12",
+      "t13",
+      "t14",
+      "t15",
+      "t16",
+      "t17",
+      "t18",
+      "t19",
+      "t20",
+      "t21",
+      "t22"
+    ]
+  },
+  "demand": {
+    "t1": 84,
+    "t2": 88,
+    "t3": 92,
+    "t4": 98,
+    "t5": 108,
+    "t6": 122,
+    "t7": 136,
+    "t8": 144,
+    "t9": 138,
+    "t10": 126,
+    "t11": 114,
+    "t12": 104,
+    "t13": 110,
+    "t14": 124,
+    "t15": 138,
+    "t16": 150,
+    "t17": 154,
+    "t18": 146,
+    "t19": 130,
+    "t20": 114,
+    "t21": 98,
+    "t22": 88
+  },
+  "cost": {
+    "G1": 8,
+    "G2": 10,
+    "G3": 12,
+    "G4": 16,
+    "G5": 20,
+    "G6": 24,
+    "G7": 30
+  },
+  "startup_cost": {
+    "G1": 126,
+    "G2": 96,
+    "G3": 72,
+    "G4": 48,
+    "G5": 28,
+    "G6": 18,
+    "G7": 12
+  },
+  "pmin": {
+    "G1": 22,
+    "G2": 16,
+    "G3": 12,
+    "G4": 8,
+    "G5": 0,
+    "G6": 0,
+    "G7": 0
+  },
+  "pmax": {
+    "G1": 46,
+    "G2": 34,
+    "G3": 28,
+    "G4": 22,
+    "G5": 18,
+    "G6": 16,
+    "G7": 14
+  },
+  "ramp_up": {
+    "G1": 12,
+    "G2": 10,
+    "G3": 10,
+    "G4": 10,
+    "G5": 14,
+    "G6": 16,
+    "G7": 18
+  },
+  "ramp_down": {
+    "G1": 12,
+    "G2": 10,
+    "G3": 10,
+    "G4": 10,
+    "G5": 14,
+    "G6": 16,
+    "G7": 18
+  },
+  "min_up": {
+    "G1": 4,
+    "G2": 3,
+    "G3": 3,
+    "G4": 2,
+    "G5": 2,
+    "G6": 1,
+    "G7": 1
+  },
+  "min_down": {
+    "G1": 3,
+    "G2": 2,
+    "G3": 2,
+    "G4": 2,
+    "G5": 1,
+    "G6": 1,
+    "G7": 1
+  },
+  "initial_status": {
+    "G1": 1,
+    "G2": 1,
+    "G3": 1,
+    "G4": 0,
+    "G5": 0,
+    "G6": 0,
+    "G7": 0
+  },
+  "initial_output": {
+    "G1": 30,
+    "G2": 22,
+    "G3": 16,
+    "G4": 0,
+    "G5": 0,
+    "G6": 0,
+    "G7": 0
+  },
+  "meta_parameters": {
+    "number_periods": 22,
+    "number_units": 7,
+    "demand_regime": "two_peak_profile",
+    "ramping_regime": "heterogeneous_tight_ramping",
+    "up_down_time_regime": "binding_persistence",
+    "capacity_regime": "tight_peak_periods",
+    "peak_load_flag": true,
+    "symmetry_flag": false,
+    "visual_type": "economics_table_demand_timeline_capacity_ranges_separate",
+    "seed": 1204,
+    "formulation_size": 1562
+  }
+}

@@ -1,0 +1,14 @@
+A directed network is shown in the figure.
+
+Each directed arc is labeled with its capacity.
+
+Let node 1 be the source and node 11 be the sink.
+
+Construct:
+(i) the mathematical source-to-sink throughput model, and
+(ii) solver-executable code implementing the model.
+
+Your solver should output:
+- the maximum feasible throughput value,
+- one optimal flow on each arc, and
+- one certifying source-side/sink-side partition (S,T) achieving the throughput certificate value.

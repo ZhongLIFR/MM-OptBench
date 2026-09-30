@@ -1,0 +1,43 @@
+A multi-period planning network is shown in the figure.
+
+Visual interpretation:
+- Node 1 is the source node.
+- Node 7 is the sink node.
+- Node 5 is the only storage-enabled node.
+- Every directed arc is labeled using the exact format
+  `[u1/c1|u2/c2|u3/c3]`,
+  where each `u/c` pair gives `(capacity, unit_cost)` in that period.
+- The period order in every arc label is exactly `t1,t2,t3`.
+- A role table on the right lists the source node, sink node, and
+  storage-enabled node together with their exact node-level data.
+- In that table, `b:[...]` gives the exact node-period net supply /
+  demand values in the same period order.
+- The warehouse row also gives the exact storage capacity `S` and the
+  holding-cost vector `h:[...]`.
+- Nodes not listed in the role table have zero net supply / demand in
+  every period and have no storage capability.
+
+Interpretation:
+- This is a deterministic single-commodity multi-period planning
+  problem.
+- In each period, flow may be routed only on the directed arcs shown in
+  the figure.
+- Arc flow in a period may not exceed the displayed period-specific
+  capacity.
+- Sending one unit on an arc in a period incurs the displayed
+  period-specific routing cost.
+- Only node 5 may carry end-of-period inventory from one
+  period to the next.
+- End-of-period inventory at node 5 may not exceed the
+  displayed storage capacity.
+- The displayed holding cost is charged per unit of end-of-period
+  inventory at node 5.
+- There are no binary installation decisions, multiple commodities,
+  stochastic effects, backlogging, or nonlinear congestion terms.
+
+Task:
+1) Write a mathematical optimization model for this exact instance.
+2) Provide solver-executable code implementing the model.
+
+Objective:
+Minimize total routing cost plus total inventory holding cost.

@@ -1,0 +1,175 @@
+{
+  "instance_id": "gc_e_001",
+  "variant": "graph_coloring",
+  "scenario": "graph_coloring",
+  "difficulty": "easy",
+  "problem_type": "vertex_coloring",
+  "objective_type": "feasibility",
+  "sets": {
+    "vertices": [
+      1,
+      2,
+      3,
+      4,
+      5,
+      6,
+      7,
+      8
+    ],
+    "colors": [
+      1,
+      2
+    ]
+  },
+  "edges": [
+    [
+      1,
+      5
+    ],
+    [
+      1,
+      8
+    ],
+    [
+      2,
+      5
+    ],
+    [
+      2,
+      6
+    ],
+    [
+      2,
+      8
+    ],
+    [
+      3,
+      6
+    ],
+    [
+      3,
+      7
+    ],
+    [
+      4,
+      5
+    ],
+    [
+      4,
+      7
+    ],
+    [
+      4,
+      8
+    ]
+  ],
+  "adjacency_matrix": [
+    [
+      0,
+      0,
+      0,
+      0,
+      1,
+      0,
+      0,
+      1
+    ],
+    [
+      0,
+      0,
+      0,
+      0,
+      1,
+      1,
+      0,
+      1
+    ],
+    [
+      0,
+      0,
+      0,
+      0,
+      0,
+      1,
+      1,
+      0
+    ],
+    [
+      0,
+      0,
+      0,
+      0,
+      1,
+      0,
+      1,
+      1
+    ],
+    [
+      1,
+      1,
+      0,
+      1,
+      0,
+      0,
+      0,
+      0
+    ],
+    [
+      0,
+      1,
+      1,
+      0,
+      0,
+      0,
+      0,
+      0
+    ],
+    [
+      0,
+      0,
+      1,
+      1,
+      0,
+      0,
+      0,
+      0
+    ],
+    [
+      1,
+      1,
+      0,
+      1,
+      0,
+      0,
+      0,
+      0
+    ]
+  ],
+  "meta_parameters": {
+    "number_of_vertices": 8,
+    "number_of_edges": 10,
+    "number_of_colors": 2,
+    "graph_density": 0.3571,
+    "chromatic_number": 2,
+    "topology_type": "bipartite_like_graph",
+    "graph_generator": "bipartite_community",
+    "seed": 5101,
+    "group": "A",
+    "visual_type": "adjacency_matrix",
+    "formulation_size": 44,
+    "planted_color_groups": [
+      [
+        1,
+        2,
+        3,
+        4
+      ],
+      [
+        5,
+        6,
+        7,
+        8
+      ]
+    ]
+  }
+}

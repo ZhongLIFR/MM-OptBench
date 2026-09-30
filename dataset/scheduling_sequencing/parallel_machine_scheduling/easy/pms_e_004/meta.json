@@ -1,0 +1,22 @@
+{
+  "number_jobs": 12,
+  "number_machines": 3,
+  "machine_type": "identical",
+  "objective_type": "makespan",
+  "processing_time_regime": "heterogeneous",
+  "long_job_flag": false,
+  "seed": 404,
+  "formulation_size": 75,
+  "instance_id": "pms_e_004",
+  "variant": "parallel_machine_scheduling",
+  "scenario": "parallel_machine_scheduling",
+  "difficulty": "easy",
+  "objective_value": 25,
+  "objective_exact": 25.0,
+  "status": "optimal",
+  "makespan": 25,
+  "runtime_seconds": 0.001544952392578125,
+  "solve_method": "gurobi_milp_assignment_load",
+  "solver": "Gurobi",
+  "visual_0_checksum_md5": "6fb4177db00a0ad0e55eb3667967d9cb"
+}

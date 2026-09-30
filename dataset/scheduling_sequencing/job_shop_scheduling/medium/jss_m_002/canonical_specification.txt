@@ -1,0 +1,49 @@
+This is a single-period classical Job-Shop Scheduling problem.
+
+Instance ID: jss_m_002
+Variant: classical_jssp
+Scenario: job_shop_scheduling
+
+Jobs and ordered operations:
+- J1: O1 on M1 (duration=8) -> O2 on M2 (duration=9) -> O3 on M3 (duration=7) -> O4 on M4 (duration=6) -> O5 on M5 (duration=5)
+- J2: O1 on M1 (duration=7) -> O2 on M3 (duration=8) -> O3 on M2 (duration=8) -> O4 on M4 (duration=5) -> O5 on M5 (duration=6)
+- J3: O1 on M2 (duration=6) -> O2 on M1 (duration=7) -> O3 on M3 (duration=9) -> O4 on M5 (duration=5) -> O5 on M4 (duration=5)
+- J4: O1 on M2 (duration=7) -> O2 on M3 (duration=6) -> O3 on M1 (duration=8) -> O4 on M5 (duration=6) -> O5 on M4 (duration=5)
+- J5: O1 on M3 (duration=5) -> O2 on M2 (duration=6) -> O3 on M4 (duration=7) -> O4 on M1 (duration=8) -> O5 on M5 (duration=6)
+- J6: O1 on M3 (duration=6) -> O2 on M4 (duration=5) -> O3 on M2 (duration=8) -> O4 on M1 (duration=7) -> O5 on M5 (duration=6)
+- J7: O1 on M4 (duration=5) -> O2 on M3 (duration=7) -> O3 on M5 (duration=6) -> O4 on M2 (duration=8) -> O5 on M1 (duration=7)
+- J8: O1 on M5 (duration=6) -> O2 on M4 (duration=6) -> O3 on M3 (duration=7) -> O4 on M2 (duration=7) -> O5 on M1 (duration=8)
+- J9: O1 on M1 (duration=8) -> O2 on M2 (duration=7) -> O3 on M4 (duration=6) -> O4 on M3 (duration=7) -> O5 on M5 (duration=5)
+
+Machines:
+- M1: J1-O1 (8), J2-O1 (7), J3-O2 (7), J4-O3 (8), J5-O4 (8), J6-O4 (7), J7-O5 (7), J8-O5 (8), J9-O1 (8)
+- M2: J1-O2 (9), J2-O3 (8), J3-O1 (6), J4-O1 (7), J5-O2 (6), J6-O3 (8), J7-O4 (8), J8-O4 (7), J9-O2 (7)
+- M3: J1-O3 (7), J2-O2 (8), J3-O3 (9), J4-O2 (6), J5-O1 (5), J6-O1 (6), J7-O2 (7), J8-O3 (7), J9-O4 (7)
+- M4: J1-O4 (6), J2-O4 (5), J3-O5 (5), J4-O5 (5), J5-O3 (7), J6-O2 (5), J7-O1 (5), J8-O2 (6), J9-O3 (6)
+- M5: J1-O5 (5), J2-O5 (6), J3-O4 (5), J4-O4 (6), J5-O5 (6), J6-O5 (6), J7-O3 (6), J8-O1 (6), J9-O5 (5)
+
+Objective:
+- Minimize the makespan.
+
+Constraints:
+- Operations of each job must follow their listed order.
+- Each machine can process at most one operation at a time.
+- Operations are non-preemptive.
+- Start times are continuous nonnegative variables.
+
+Metadata:
+- number_jobs=9
+- number_machines=5
+- operations_per_job=5
+- processing_time_regime=clustered_families
+- routing_pattern=structured_blocks
+- bottleneck_machine_flag=false
+- machine_load_distribution=mildly_skewed
+- seed=302
+- formulation_size=486
+
+Visual interpretation:
+- The diagram shows one row per job.
+- Each block corresponds to one operation in the precedence chain of that job.
+- Each block reports the operation identifier, required machine, and processing duration.
+- The left-to-right order of blocks within a row encodes the job precedence structure.

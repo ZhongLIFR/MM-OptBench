@@ -1,0 +1,142 @@
+{
+  "status": "optimal",
+  "objective": 11,
+  "objective_exact": 11.0,
+  "makespan": 11,
+  "activity_start_times": {
+    "A1": 0,
+    "A2": 0,
+    "A3": 0,
+    "A4": 3,
+    "A5": 2,
+    "A6": 6,
+    "A7": 6,
+    "A8": 9,
+    "A9": 9,
+    "End": 11,
+    "Start": 0
+  },
+  "activity_finish_times": {
+    "A1": 3,
+    "A2": 2,
+    "A3": 2,
+    "A4": 6,
+    "A5": 6,
+    "A6": 8,
+    "A7": 9,
+    "A8": 11,
+    "A9": 11,
+    "End": 11,
+    "Start": 0
+  },
+  "schedule": [
+    {
+      "activity": "A1",
+      "start": 0,
+      "finish": 3,
+      "duration": 3
+    },
+    {
+      "activity": "A2",
+      "start": 0,
+      "finish": 2,
+      "duration": 2
+    },
+    {
+      "activity": "A3",
+      "start": 0,
+      "finish": 2,
+      "duration": 2
+    },
+    {
+      "activity": "A5",
+      "start": 2,
+      "finish": 6,
+      "duration": 4
+    },
+    {
+      "activity": "A4",
+      "start": 3,
+      "finish": 6,
+      "duration": 3
+    },
+    {
+      "activity": "A6",
+      "start": 6,
+      "finish": 8,
+      "duration": 2
+    },
+    {
+      "activity": "A7",
+      "start": 6,
+      "finish": 9,
+      "duration": 3
+    },
+    {
+      "activity": "A8",
+      "start": 9,
+      "finish": 11,
+      "duration": 2
+    },
+    {
+      "activity": "A9",
+      "start": 9,
+      "finish": 11,
+      "duration": 2
+    }
+  ],
+  "resource_usage_by_time": {
+    "0": {
+      "R1": 5,
+      "R2": 4
+    },
+    "1": {
+      "R1": 5,
+      "R2": 4
+    },
+    "2": {
+      "R1": 4,
+      "R2": 3
+    },
+    "3": {
+      "R1": 5,
+      "R2": 3
+    },
+    "4": {
+      "R1": 5,
+      "R2": 3
+    },
+    "5": {
+      "R1": 5,
+      "R2": 3
+    },
+    "6": {
+      "R1": 5,
+      "R2": 3
+    },
+    "7": {
+      "R1": 5,
+      "R2": 3
+    },
+    "8": {
+      "R1": 3,
+      "R2": 2
+    },
+    "9": {
+      "R1": 3,
+      "R2": 3
+    },
+    "10": {
+      "R1": 3,
+      "R2": 3
+    }
+  },
+  "binding_resources": [
+    "R1",
+    "R2"
+  ],
+  "binding_resource_count": 2,
+  "solve_method": "gurobi_time_indexed_rcpsp_easy",
+  "solver": "Gurobi",
+  "runtime_seconds": 0.005083666881546378
+}

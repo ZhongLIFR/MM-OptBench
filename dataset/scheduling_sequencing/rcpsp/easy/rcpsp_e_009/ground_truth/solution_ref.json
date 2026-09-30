@@ -1,0 +1,166 @@
+{
+  "status": "optimal",
+  "objective": 15,
+  "objective_exact": 15.0,
+  "makespan": 15,
+  "activity_start_times": {
+    "A1": 2,
+    "A10": 13,
+    "A2": 0,
+    "A3": 0,
+    "A4": 6,
+    "A5": 4,
+    "A6": 3,
+    "A7": 9,
+    "A8": 8,
+    "A9": 11,
+    "End": 15,
+    "Start": 0
+  },
+  "activity_finish_times": {
+    "A1": 4,
+    "A10": 15,
+    "A2": 3,
+    "A3": 2,
+    "A4": 9,
+    "A5": 8,
+    "A6": 6,
+    "A7": 11,
+    "A8": 11,
+    "A9": 13,
+    "End": 15,
+    "Start": 0
+  },
+  "schedule": [
+    {
+      "activity": "A2",
+      "start": 0,
+      "finish": 3,
+      "duration": 3
+    },
+    {
+      "activity": "A3",
+      "start": 0,
+      "finish": 2,
+      "duration": 2
+    },
+    {
+      "activity": "A1",
+      "start": 2,
+      "finish": 4,
+      "duration": 2
+    },
+    {
+      "activity": "A6",
+      "start": 3,
+      "finish": 6,
+      "duration": 3
+    },
+    {
+      "activity": "A5",
+      "start": 4,
+      "finish": 8,
+      "duration": 4
+    },
+    {
+      "activity": "A4",
+      "start": 6,
+      "finish": 9,
+      "duration": 3
+    },
+    {
+      "activity": "A8",
+      "start": 8,
+      "finish": 11,
+      "duration": 3
+    },
+    {
+      "activity": "A7",
+      "start": 9,
+      "finish": 11,
+      "duration": 2
+    },
+    {
+      "activity": "A9",
+      "start": 11,
+      "finish": 13,
+      "duration": 2
+    },
+    {
+      "activity": "A10",
+      "start": 13,
+      "finish": 15,
+      "duration": 2
+    }
+  ],
+  "resource_usage_by_time": {
+    "0": {
+      "R1": 3,
+      "R2": 4
+    },
+    "1": {
+      "R1": 3,
+      "R2": 4
+    },
+    "2": {
+      "R1": 4,
+      "R2": 3
+    },
+    "3": {
+      "R1": 4,
+      "R2": 2
+    },
+    "4": {
+      "R1": 4,
+      "R2": 3
+    },
+    "5": {
+      "R1": 4,
+      "R2": 3
+    },
+    "6": {
+      "R1": 5,
+      "R2": 3
+    },
+    "7": {
+      "R1": 5,
+      "R2": 3
+    },
+    "8": {
+      "R1": 5,
+      "R2": 3
+    },
+    "9": {
+      "R1": 5,
+      "R2": 3
+    },
+    "10": {
+      "R1": 5,
+      "R2": 3
+    },
+    "11": {
+      "R1": 3,
+      "R2": 1
+    },
+    "12": {
+      "R1": 3,
+      "R2": 1
+    },
+    "13": {
+      "R1": 2,
+      "R2": 1
+    },
+    "14": {
+      "R1": 2,
+      "R2": 1
+    }
+  },
+  "binding_resources": [
+    "R1",
+    "R2"
+  ],
+  "binding_resource_count": 2,
+  "solve_method": "gurobi_time_indexed_rcpsp_easy",
+  "solver": "Gurobi",
+  "runtime_seconds": 0.008733207825571299
+}

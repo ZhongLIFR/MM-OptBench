@@ -1,0 +1,44 @@
+This is a single-commodity minimum-cost flow problem.
+
+Nodes: {1,2,3,4,5,6,7,8,9,10,11,12}
+
+Supply/Demand:
+Node 1: +10
+Node 2: +10
+Node 3: +8
+Node 4: 0
+Node 5: 0
+Node 6: 0
+Node 7: 0
+Node 8: 0
+Node 9: 0
+Node 10: 0
+Node 11: -14
+Node 12: -14
+
+Directed arcs (i,j) with (capacity, cost):
+
+(1,4): (8,1)
+(1,5): (4,3)
+(2,4): (4,3)
+(2,5): (8,1)
+(2,6): (4,3)
+(3,5): (4,3)
+(3,6): (8,1)
+(4,7): (7,2)
+(4,10): (5,5)
+(5,7): (5,2)
+(5,8): (6,2)
+(5,10): (6,3)
+(6,8): (5,2)
+(6,9): (7,2)
+(7,10): (8,2)
+(8,10): (8,2)
+(9,10): (8,2)
+(10,11): (14,2)
+(10,12): (14,2)
+(7,8): (8,1)
+(8,9): (4,1)
+(8,7): (2,2)
+
+Goal: Minimize total transportation cost.

@@ -1,0 +1,249 @@
+{
+  "problem_type": "resource_constrained_shortest_path",
+  "variant": "single_visual_single_resource_rcsp",
+  "difficulty": "easy",
+  "nodes": [
+    1,
+    2,
+    3,
+    4,
+    5,
+    6,
+    7,
+    8,
+    9
+  ],
+  "source": 1,
+  "sink": 9,
+  "resource_name": "fuel",
+  "resource_bound": 9,
+  "arcs": [
+    {
+      "from": 1,
+      "to": 2,
+      "cost": 1,
+      "resource": 3
+    },
+    {
+      "from": 1,
+      "to": 3,
+      "cost": 2,
+      "resource": 2
+    },
+    {
+      "from": 1,
+      "to": 4,
+      "cost": 2,
+      "resource": 1
+    },
+    {
+      "from": 2,
+      "to": 5,
+      "cost": 1,
+      "resource": 4
+    },
+    {
+      "from": 3,
+      "to": 5,
+      "cost": 2,
+      "resource": 2
+    },
+    {
+      "from": 3,
+      "to": 6,
+      "cost": 1,
+      "resource": 2
+    },
+    {
+      "from": 4,
+      "to": 6,
+      "cost": 1,
+      "resource": 1
+    },
+    {
+      "from": 5,
+      "to": 7,
+      "cost": 1,
+      "resource": 2
+    },
+    {
+      "from": 6,
+      "to": 7,
+      "cost": 2,
+      "resource": 1
+    },
+    {
+      "from": 6,
+      "to": 8,
+      "cost": 1,
+      "resource": 1
+    },
+    {
+      "from": 7,
+      "to": 9,
+      "cost": 1,
+      "resource": 1
+    },
+    {
+      "from": 8,
+      "to": 9,
+      "cost": 2,
+      "resource": 1
+    }
+  ],
+  "positions": {
+    "1": [
+      0.0,
+      0.0
+    ],
+    "2": [
+      3.0,
+      2.8
+    ],
+    "3": [
+      3.0,
+      0.1
+    ],
+    "4": [
+      3.0,
+      -2.6
+    ],
+    "5": [
+      6.8,
+      1.9
+    ],
+    "6": [
+      6.8,
+      -1.2
+    ],
+    "7": [
+      10.2,
+      1.0
+    ],
+    "8": [
+      10.2,
+      -0.9
+    ],
+    "9": [
+      13.6,
+      0.2
+    ]
+  },
+  "edge_shift_override": {},
+  "edge_curve_override": {
+    "2_5": 0.08,
+    "4_6": -0.08
+  },
+  "label_t_override": {},
+  "label_shift_override": {},
+  "sets": {
+    "nodes": [
+      1,
+      2,
+      3,
+      4,
+      5,
+      6,
+      7,
+      8,
+      9
+    ],
+    "arcs": [
+      [
+        1,
+        2
+      ],
+      [
+        1,
+        3
+      ],
+      [
+        1,
+        4
+      ],
+      [
+        2,
+        5
+      ],
+      [
+        3,
+        5
+      ],
+      [
+        3,
+        6
+      ],
+      [
+        4,
+        6
+      ],
+      [
+        5,
+        7
+      ],
+      [
+        6,
+        7
+      ],
+      [
+        6,
+        8
+      ],
+      [
+        7,
+        9
+      ],
+      [
+        8,
+        9
+      ]
+    ]
+  },
+  "indices": {
+    "source": 1,
+    "sink": 9
+  },
+  "coordinates": {
+    "1": [
+      0.0,
+      0.0
+    ],
+    "2": [
+      3.0,
+      2.8
+    ],
+    "3": [
+      3.0,
+      0.1
+    ],
+    "4": [
+      3.0,
+      -2.6
+    ],
+    "5": [
+      6.8,
+      1.9
+    ],
+    "6": [
+      6.8,
+      -1.2
+    ],
+    "7": [
+      10.2,
+      1.0
+    ],
+    "8": [
+      10.2,
+      -0.9
+    ],
+    "9": [
+      13.6,
+      0.2
+    ]
+  },
+  "visual_encoding": {
+    "title": "Planning Network Diagram",
+    "arc_label_format": "[cost, resource]",
+    "layout_style": "layered_benchmark_network"
+  }
+}

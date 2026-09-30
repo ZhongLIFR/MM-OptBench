@@ -1,0 +1,713 @@
+{
+  "instance_id": "rcpsp_h_002",
+  "variant": "single_project_renewable_rcpsp",
+  "scenario": "resource_constrained_project_scheduling",
+  "difficulty": "hard",
+  "sets": {
+    "activities": [
+      "Start",
+      "A1",
+      "A2",
+      "A3",
+      "A4",
+      "A5",
+      "A6",
+      "A7",
+      "A8",
+      "A9",
+      "A10",
+      "A11",
+      "A12",
+      "A13",
+      "A14",
+      "A15",
+      "A16",
+      "A17",
+      "A18",
+      "A19",
+      "A20",
+      "End"
+    ],
+    "real_activities": [
+      "A1",
+      "A2",
+      "A3",
+      "A4",
+      "A5",
+      "A6",
+      "A7",
+      "A8",
+      "A9",
+      "A10",
+      "A11",
+      "A12",
+      "A13",
+      "A14",
+      "A15",
+      "A16",
+      "A17",
+      "A18",
+      "A19",
+      "A20"
+    ],
+    "resources": [
+      "R1",
+      "R2",
+      "R3"
+    ]
+  },
+  "precedence_arcs": [
+    [
+      "Start",
+      "A1"
+    ],
+    [
+      "Start",
+      "A2"
+    ],
+    [
+      "A1",
+      "A3"
+    ],
+    [
+      "A1",
+      "A4"
+    ],
+    [
+      "A2",
+      "A4"
+    ],
+    [
+      "A2",
+      "A5"
+    ],
+    [
+      "A3",
+      "A6"
+    ],
+    [
+      "A3",
+      "A7"
+    ],
+    [
+      "A4",
+      "A7"
+    ],
+    [
+      "A4",
+      "A8"
+    ],
+    [
+      "A5",
+      "A8"
+    ],
+    [
+      "A6",
+      "A9"
+    ],
+    [
+      "A7",
+      "A9"
+    ],
+    [
+      "A7",
+      "A10"
+    ],
+    [
+      "A8",
+      "A10"
+    ],
+    [
+      "A8",
+      "A11"
+    ],
+    [
+      "A9",
+      "A12"
+    ],
+    [
+      "A9",
+      "A13"
+    ],
+    [
+      "A10",
+      "A13"
+    ],
+    [
+      "A10",
+      "A14"
+    ],
+    [
+      "A11",
+      "A14"
+    ],
+    [
+      "A12",
+      "A15"
+    ],
+    [
+      "A13",
+      "A15"
+    ],
+    [
+      "A13",
+      "A16"
+    ],
+    [
+      "A14",
+      "A16"
+    ],
+    [
+      "A14",
+      "A17"
+    ],
+    [
+      "A15",
+      "A18"
+    ],
+    [
+      "A16",
+      "A18"
+    ],
+    [
+      "A16",
+      "A19"
+    ],
+    [
+      "A17",
+      "A19"
+    ],
+    [
+      "A17",
+      "A20"
+    ],
+    [
+      "A18",
+      "End"
+    ],
+    [
+      "A19",
+      "End"
+    ],
+    [
+      "A20",
+      "End"
+    ]
+  ],
+  "duration": {
+    "Start": 0,
+    "A1": 2,
+    "A2": 4,
+    "A3": 3,
+    "A4": 5,
+    "A5": 3,
+    "A6": 4,
+    "A7": 2,
+    "A8": 3,
+    "A9": 4,
+    "A10": 5,
+    "A11": 2,
+    "A12": 3,
+    "A13": 4,
+    "A14": 3,
+    "A15": 5,
+    "A16": 2,
+    "A17": 3,
+    "A18": 4,
+    "A19": 2,
+    "A20": 3,
+    "End": 0
+  },
+  "resource_capacity": {
+    "R1": 6,
+    "R2": 4,
+    "R3": 4
+  },
+  "resource_demand": {
+    "Start": {
+      "R1": 0,
+      "R2": 0,
+      "R3": 0
+    },
+    "A1": {
+      "R1": 2,
+      "R2": 1,
+      "R3": 1
+    },
+    "A2": {
+      "R1": 2,
+      "R2": 2,
+      "R3": 1
+    },
+    "A3": {
+      "R1": 1,
+      "R2": 2,
+      "R3": 1
+    },
+    "A4": {
+      "R1": 3,
+      "R2": 1,
+      "R3": 1
+    },
+    "A5": {
+      "R1": 2,
+      "R2": 2,
+      "R3": 2
+    },
+    "A6": {
+      "R1": 2,
+      "R2": 1,
+      "R3": 2
+    },
+    "A7": {
+      "R1": 2,
+      "R2": 2,
+      "R3": 1
+    },
+    "A8": {
+      "R1": 1,
+      "R2": 2,
+      "R3": 2
+    },
+    "A9": {
+      "R1": 3,
+      "R2": 1,
+      "R3": 1
+    },
+    "A10": {
+      "R1": 2,
+      "R2": 2,
+      "R3": 2
+    },
+    "A11": {
+      "R1": 2,
+      "R2": 1,
+      "R3": 2
+    },
+    "A12": {
+      "R1": 2,
+      "R2": 2,
+      "R3": 1
+    },
+    "A13": {
+      "R1": 3,
+      "R2": 1,
+      "R3": 2
+    },
+    "A14": {
+      "R1": 2,
+      "R2": 2,
+      "R3": 1
+    },
+    "A15": {
+      "R1": 3,
+      "R2": 1,
+      "R3": 1
+    },
+    "A16": {
+      "R1": 1,
+      "R2": 2,
+      "R3": 2
+    },
+    "A17": {
+      "R1": 2,
+      "R2": 1,
+      "R3": 2
+    },
+    "A18": {
+      "R1": 3,
+      "R2": 2,
+      "R3": 1
+    },
+    "A19": {
+      "R1": 2,
+      "R2": 2,
+      "R3": 1
+    },
+    "A20": {
+      "R1": 2,
+      "R2": 1,
+      "R3": 2
+    },
+    "End": {
+      "R1": 0,
+      "R2": 0,
+      "R3": 0
+    }
+  },
+  "activity_records": [
+    {
+      "activity": "Start",
+      "duration": 0,
+      "resource_demand": {
+        "R1": 0,
+        "R2": 0,
+        "R3": 0
+      },
+      "layer": 0
+    },
+    {
+      "activity": "A1",
+      "duration": 2,
+      "resource_demand": {
+        "R1": 2,
+        "R2": 1,
+        "R3": 1
+      },
+      "layer": 1
+    },
+    {
+      "activity": "A2",
+      "duration": 4,
+      "resource_demand": {
+        "R1": 2,
+        "R2": 2,
+        "R3": 1
+      },
+      "layer": 1
+    },
+    {
+      "activity": "A3",
+      "duration": 3,
+      "resource_demand": {
+        "R1": 1,
+        "R2": 2,
+        "R3": 1
+      },
+      "layer": 2
+    },
+    {
+      "activity": "A4",
+      "duration": 5,
+      "resource_demand": {
+        "R1": 3,
+        "R2": 1,
+        "R3": 1
+      },
+      "layer": 2
+    },
+    {
+      "activity": "A5",
+      "duration": 3,
+      "resource_demand": {
+        "R1": 2,
+        "R2": 2,
+        "R3": 2
+      },
+      "layer": 2
+    },
+    {
+      "activity": "A6",
+      "duration": 4,
+      "resource_demand": {
+        "R1": 2,
+        "R2": 1,
+        "R3": 2
+      },
+      "layer": 3
+    },
+    {
+      "activity": "A7",
+      "duration": 2,
+      "resource_demand": {
+        "R1": 2,
+        "R2": 2,
+        "R3": 1
+      },
+      "layer": 3
+    },
+    {
+      "activity": "A8",
+      "duration": 3,
+      "resource_demand": {
+        "R1": 1,
+        "R2": 2,
+        "R3": 2
+      },
+      "layer": 3
+    },
+    {
+      "activity": "A9",
+      "duration": 4,
+      "resource_demand": {
+        "R1": 3,
+        "R2": 1,
+        "R3": 1
+      },
+      "layer": 4
+    },
+    {
+      "activity": "A10",
+      "duration": 5,
+      "resource_demand": {
+        "R1": 2,
+        "R2": 2,
+        "R3": 2
+      },
+      "layer": 4
+    },
+    {
+      "activity": "A11",
+      "duration": 2,
+      "resource_demand": {
+        "R1": 2,
+        "R2": 1,
+        "R3": 2
+      },
+      "layer": 4
+    },
+    {
+      "activity": "A12",
+      "duration": 3,
+      "resource_demand": {
+        "R1": 2,
+        "R2": 2,
+        "R3": 1
+      },
+      "layer": 5
+    },
+    {
+      "activity": "A13",
+      "duration": 4,
+      "resource_demand": {
+        "R1": 3,
+        "R2": 1,
+        "R3": 2
+      },
+      "layer": 5
+    },
+    {
+      "activity": "A14",
+      "duration": 3,
+      "resource_demand": {
+        "R1": 2,
+        "R2": 2,
+        "R3": 1
+      },
+      "layer": 5
+    },
+    {
+      "activity": "A15",
+      "duration": 5,
+      "resource_demand": {
+        "R1": 3,
+        "R2": 1,
+        "R3": 1
+      },
+      "layer": 6
+    },
+    {
+      "activity": "A16",
+      "duration": 2,
+      "resource_demand": {
+        "R1": 1,
+        "R2": 2,
+        "R3": 2
+      },
+      "layer": 6
+    },
+    {
+      "activity": "A17",
+      "duration": 3,
+      "resource_demand": {
+        "R1": 2,
+        "R2": 1,
+        "R3": 2
+      },
+      "layer": 6
+    },
+    {
+      "activity": "A18",
+      "duration": 4,
+      "resource_demand": {
+        "R1": 3,
+        "R2": 2,
+        "R3": 1
+      },
+      "layer": 7
+    },
+    {
+      "activity": "A19",
+      "duration": 2,
+      "resource_demand": {
+        "R1": 2,
+        "R2": 2,
+        "R3": 1
+      },
+      "layer": 7
+    },
+    {
+      "activity": "A20",
+      "duration": 3,
+      "resource_demand": {
+        "R1": 2,
+        "R2": 1,
+        "R3": 2
+      },
+      "layer": 7
+    },
+    {
+      "activity": "End",
+      "duration": 0,
+      "resource_demand": {
+        "R1": 0,
+        "R2": 0,
+        "R3": 0
+      },
+      "layer": 8
+    }
+  ],
+  "visual_layout": {
+    "layers": [
+      [
+        "Start"
+      ],
+      [
+        "A1",
+        "A2"
+      ],
+      [
+        "A3",
+        "A4",
+        "A5"
+      ],
+      [
+        "A6",
+        "A7",
+        "A8"
+      ],
+      [
+        "A9",
+        "A10",
+        "A11"
+      ],
+      [
+        "A12",
+        "A13",
+        "A14"
+      ],
+      [
+        "A15",
+        "A16",
+        "A17"
+      ],
+      [
+        "A18",
+        "A19",
+        "A20"
+      ],
+      [
+        "End"
+      ]
+    ],
+    "positions": {
+      "Start": [
+        0.5,
+        1.9
+      ],
+      "A1": [
+        1.95,
+        2.29
+      ],
+      "A2": [
+        1.95,
+        1.51
+      ],
+      "A3": [
+        3.4,
+        2.68
+      ],
+      "A4": [
+        3.4,
+        1.9
+      ],
+      "A5": [
+        3.4,
+        1.12
+      ],
+      "A6": [
+        4.85,
+        2.68
+      ],
+      "A7": [
+        4.85,
+        1.9
+      ],
+      "A8": [
+        4.85,
+        1.12
+      ],
+      "A9": [
+        6.3,
+        2.68
+      ],
+      "A10": [
+        6.3,
+        1.9
+      ],
+      "A11": [
+        6.3,
+        1.12
+      ],
+      "A12": [
+        7.75,
+        2.68
+      ],
+      "A13": [
+        7.75,
+        1.9
+      ],
+      "A14": [
+        7.75,
+        1.12
+      ],
+      "A15": [
+        9.2,
+        2.68
+      ],
+      "A16": [
+        9.2,
+        1.9
+      ],
+      "A17": [
+        9.2,
+        1.12
+      ],
+      "A18": [
+        10.65,
+        2.68
+      ],
+      "A19": [
+        10.65,
+        1.9
+      ],
+      "A20": [
+        10.65,
+        1.12
+      ],
+      "End": [
+        12.1,
+        1.9
+      ]
+    }
+  },
+  "meta_parameters": {
+    "number_activities": 22,
+    "number_real_activities": 20,
+    "number_resources": 3,
+    "number_renewable_resources": 3,
+    "number_nonrenewable_resources": 0,
+    "precedence_density": 0.1472,
+    "resource_capacity_regime": "mixed",
+    "renewable_capacity_regime": "mixed",
+    "nonrenewable_regime_flag": false,
+    "duration_regime": "mixed_long_backbone",
+    "bottleneck_resource_flag": false,
+    "symmetry_flag": false,
+    "graph_pattern": "bridge_region_with_wide_finish",
+    "group": "A",
+    "visual_type": "dual_visual_precedence_network_plus_resource_matrix",
+    "seed": 3302,
+    "formulation_size": 1542
+  }
+}

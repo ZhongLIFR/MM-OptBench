@@ -1,0 +1,102 @@
+Canonical specification for a deterministic hard-level set packing instance.
+
+Interpretation:
+- Each candidate group may be either selected or not selected.
+- Every item may appear in at most one selected group.
+- The objective is to maximize the total value of the selected groups.
+- There are no covering requirements, equality constraints, time indices, logical side constraints, penalties, or multi-stage decisions.
+
+Sets:
+- Items U = ['A', 'B', 'C', 'D', 'E', 'F', 'G', 'H', 'I', 'J', 'K', 'L', 'M', 'N', 'O', 'P', 'Q', 'R', 'S', 'T', 'U', 'V', 'W', 'X']
+- Candidate groups S = ['G1', 'G2', 'G3', 'G4', 'G5', 'G6', 'G7', 'G8', 'G9', 'G10', 'G11', 'G12', 'G13', 'G14', 'G15', 'G16', 'G17', 'G18', 'G19', 'G20', 'G21', 'G22', 'G23', 'G24', 'G25', 'G26', 'G27', 'G28', 'G29', 'G30', 'G31']
+
+Parameters:
+- number_of_elements = 24
+- number_of_subsets = 31
+- average_subset_size = 6.2581
+- element_frequency_mean = 8.0833
+- overlap_density = 0.8538
+- weight_distribution_type = heavy_tailed
+
+Group definitions:
+- G1: elements = ['A', 'C', 'I', 'S'], value = 7
+- G2: elements = ['B', 'F', 'P', 'R', 'U'], value = 23
+- G3: elements = ['D', 'E', 'N', 'V', 'W'], value = 11
+- G4: elements = ['G', 'H', 'K', 'Q', 'X'], value = 11
+- G5: elements = ['J', 'L', 'M', 'O', 'T'], value = 12
+- G6: elements = ['F', 'H', 'I', 'S', 'W'], value = 12
+- G7: elements = ['A', 'G', 'M', 'R'], value = 12
+- G8: elements = ['H', 'I', 'M', 'R'], value = 7
+- G9: elements = ['C', 'G', 'I', 'L', 'Q', 'R', 'V', 'W'], value = 12
+- G10: elements = ['A', 'B', 'D', 'G', 'I', 'N', 'R'], value = 10
+- G11: elements = ['G', 'H', 'I', 'O', 'W'], value = 10
+- G12: elements = ['A', 'D', 'F', 'K', 'O'], value = 11
+- G13: elements = ['E', 'J', 'R', 'X'], value = 19
+- G14: elements = ['B', 'C', 'D', 'F', 'H', 'I', 'K', 'N', 'V'], value = 26
+- G15: elements = ['F', 'I', 'L', 'N', 'Q'], value = 26
+- G16: elements = ['C', 'G', 'N', 'P'], value = 7
+- G17: elements = ['D', 'F', 'L', 'N', 'P', 'Q', 'R', 'V', 'W'], value = 20
+- G18: elements = ['C', 'D', 'H', 'J'], value = 12
+- G19: elements = ['A', 'B', 'M', 'P', 'Q', 'U', 'V'], value = 10
+- G20: elements = ['A', 'C', 'L', 'M', 'N', 'P', 'Q', 'T', 'V'], value = 10
+- G21: elements = ['A', 'B', 'E', 'F', 'H', 'I', 'K'], value = 8
+- G22: elements = ['B', 'C', 'D', 'H', 'N', 'S', 'T', 'W', 'X'], value = 26
+- G23: elements = ['A', 'M', 'N', 'Q'], value = 11
+- G24: elements = ['A', 'G', 'I', 'J', 'L', 'S', 'T', 'W'], value = 21
+- G25: elements = ['A', 'D', 'F', 'K', 'M', 'N', 'Q', 'S', 'U'], value = 9
+- G26: elements = ['C', 'D', 'E', 'G', 'I', 'K', 'L', 'V', 'W'], value = 9
+- G27: elements = ['H', 'M', 'N', 'O', 'P', 'S', 'V'], value = 9
+- G28: elements = ['A', 'C', 'D', 'G', 'I', 'N', 'T', 'X'], value = 11
+- G29: elements = ['A', 'G', 'H', 'O', 'P', 'Q', 'S', 'X'], value = 12
+- G30: elements = ['D', 'F', 'H', 'S', 'U'], value = 8
+- G31: elements = ['B', 'F', 'I', 'J', 'K', 'M', 'S'], value = 9
+
+Incidence matrix rows by item (0/1 form, columns ordered by the candidate-group list):
+- row A: [1, 0, 0, 0, 0, 0, 1, 0, 0, 1, 0, 1, 0, 0, 0, 0, 0, 0, 1, 1, 1, 0, 1, 1, 1, 0, 0, 1, 1, 0, 0]
+- row B: [0, 1, 0, 0, 0, 0, 0, 0, 0, 1, 0, 0, 0, 1, 0, 0, 0, 0, 1, 0, 1, 1, 0, 0, 0, 0, 0, 0, 0, 0, 1]
+- row C: [1, 0, 0, 0, 0, 0, 0, 0, 1, 0, 0, 0, 0, 1, 0, 1, 0, 1, 0, 1, 0, 1, 0, 0, 0, 1, 0, 1, 0, 0, 0]
+- row D: [0, 0, 1, 0, 0, 0, 0, 0, 0, 1, 0, 1, 0, 1, 0, 0, 1, 1, 0, 0, 0, 1, 0, 0, 1, 1, 0, 1, 0, 1, 0]
+- row E: [0, 0, 1, 0, 0, 0, 0, 0, 0, 0, 0, 0, 1, 0, 0, 0, 0, 0, 0, 0, 1, 0, 0, 0, 0, 1, 0, 0, 0, 0, 0]
+- row F: [0, 1, 0, 0, 0, 1, 0, 0, 0, 0, 0, 1, 0, 1, 1, 0, 1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 0, 0, 0, 1, 1]
+- row G: [0, 0, 0, 1, 0, 0, 1, 0, 1, 1, 1, 0, 0, 0, 0, 1, 0, 0, 0, 0, 0, 0, 0, 1, 0, 1, 0, 1, 1, 0, 0]
+- row H: [0, 0, 0, 1, 0, 1, 0, 1, 0, 0, 1, 0, 0, 1, 0, 0, 0, 1, 0, 0, 1, 1, 0, 0, 0, 0, 1, 0, 1, 1, 0]
+- row I: [1, 0, 0, 0, 0, 1, 0, 1, 1, 1, 1, 0, 0, 1, 1, 0, 0, 0, 0, 0, 1, 0, 0, 1, 0, 1, 0, 1, 0, 0, 1]
+- row J: [0, 0, 0, 0, 1, 0, 0, 0, 0, 0, 0, 0, 1, 0, 0, 0, 0, 1, 0, 0, 0, 0, 0, 1, 0, 0, 0, 0, 0, 0, 1]
+- row K: [0, 0, 0, 1, 0, 0, 0, 0, 0, 0, 0, 1, 0, 1, 0, 0, 0, 0, 0, 0, 1, 0, 0, 0, 1, 1, 0, 0, 0, 0, 1]
+- row L: [0, 0, 0, 0, 1, 0, 0, 0, 1, 0, 0, 0, 0, 0, 1, 0, 1, 0, 0, 1, 0, 0, 0, 1, 0, 1, 0, 0, 0, 0, 0]
+- row M: [0, 0, 0, 0, 1, 0, 1, 1, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 1, 1, 0, 0, 1, 0, 1, 0, 1, 0, 0, 0, 1]
+- row N: [0, 0, 1, 0, 0, 0, 0, 0, 0, 1, 0, 0, 0, 1, 1, 1, 1, 0, 0, 1, 0, 1, 1, 0, 1, 0, 1, 1, 0, 0, 0]
+- row O: [0, 0, 0, 0, 1, 0, 0, 0, 0, 0, 1, 1, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 1, 0, 1, 0, 0]
+- row P: [0, 1, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 1, 1, 0, 1, 1, 0, 0, 0, 0, 0, 0, 1, 0, 1, 0, 0]
+- row Q: [0, 0, 0, 1, 0, 0, 0, 0, 1, 0, 0, 0, 0, 0, 1, 0, 1, 0, 1, 1, 0, 0, 1, 0, 1, 0, 0, 0, 1, 0, 0]
+- row R: [0, 1, 0, 0, 0, 0, 1, 1, 1, 1, 0, 0, 1, 0, 0, 0, 1, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0]
+- row S: [1, 0, 0, 0, 0, 1, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 1, 0, 1, 1, 0, 1, 0, 1, 1, 1]
+- row T: [0, 0, 0, 0, 1, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 1, 0, 1, 0, 1, 0, 0, 0, 1, 0, 0, 0]
+- row U: [0, 1, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 1, 0, 0, 0, 0, 0, 1, 0, 0, 0, 0, 1, 0]
+- row V: [0, 0, 1, 0, 0, 0, 0, 0, 1, 0, 0, 0, 0, 1, 0, 0, 1, 0, 1, 1, 0, 0, 0, 0, 0, 1, 1, 0, 0, 0, 0]
+- row W: [0, 0, 1, 0, 0, 1, 0, 0, 1, 0, 1, 0, 0, 0, 0, 0, 1, 0, 0, 0, 0, 1, 0, 1, 0, 1, 0, 0, 0, 0, 0]
+- row X: [0, 0, 0, 1, 0, 0, 0, 0, 0, 0, 0, 0, 1, 0, 0, 0, 0, 0, 0, 0, 0, 1, 0, 0, 0, 0, 0, 1, 1, 0, 0]
+
+Decision variables:
+- x[g] in {0,1}: equals 1 if candidate group g is selected, and 0 otherwise.
+
+Objective:
+- Maximize the sum of the values of the selected groups.
+
+Constraints:
+- For every item i in U, the total number of selected groups containing i must be at most 1.
+- All selection variables are binary.
+
+Metadata:
+- seed = 8308
+- group = C
+- overlap_regime = near_critical
+- subset_size_regime = wide_variance_4_9
+- visual_type = incidence_matrix_with_value_bars
+- formulation_size = 55
+
+Visual interpretation:
+- The figure uses one row per candidate group and one column per item.
+- Filled cells indicate membership of an item in a group; empty cells indicate non-membership.
+- A horizontal bar and adjacent integer at the left of each row indicate that group's value.
+- The visual reveals the complete instance data needed for optimization but does not reveal which groups belong to an optimal solution.

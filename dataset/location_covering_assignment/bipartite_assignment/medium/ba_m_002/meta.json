@@ -1,0 +1,18 @@
+{
+  "variant_type": "assignment",
+  "number_left_nodes": 24,
+  "number_right_nodes": 24,
+  "graph_density": 0.7795,
+  "cost_regime": "banded_preference",
+  "connectivity_pattern": "dense_structured",
+  "seed": 202,
+  "status": "optimal",
+  "objective_exact": 108.0,
+  "objective_value": 108.0,
+  "solver_policy": "prefer_gurobi_else_exact_fallback",
+  "solver_used": "gurobi",
+  "formulation_size": {
+    "variables": 449,
+    "constraints": 48
+  }
+}

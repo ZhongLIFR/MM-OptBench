@@ -1,0 +1,19 @@
+{
+  "variant_type": "matching",
+  "number_left_nodes": 9,
+  "number_right_nodes": 7,
+  "graph_density": 0.3651,
+  "cost_regime": "diagonal_preference",
+  "connectivity_pattern": "structured_sparse",
+  "seed": 108,
+  "status": "optimal",
+  "objective_exact": 16.0,
+  "objective_value": 16.0,
+  "solver_policy": "prefer_gurobi_else_exact_fallback",
+  "solver_used": "gurobi",
+  "formulation_size": {
+    "variables": 23,
+    "constraints": 16
+  },
+  "required_side": "routes"
+}

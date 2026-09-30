@@ -1,0 +1,27 @@
+A directed planning network is shown in the figure.
+
+Visual interpretation:
+- Node 1 is the source node.
+- Node 16 is the sink node.
+- Each directed arc is labeled using the exact format
+  [capacity, fixed_cost, variable_cost].
+- The banner at the top of the figure gives the exact required shipment
+  amount from the source to the sink.
+
+Interpretation:
+- Ship exactly the displayed amount from the source node to the sink node.
+- A candidate arc may carry flow only if that arc is installed.
+- If arc `e` is installed, its fixed installation cost is paid once.
+- If flow is sent on arc `e`, the displayed variable routing cost is paid
+  per unit of flow.
+- Arc flow may not exceed the displayed capacity of that arc.
+- Flow may split across multiple installed routes.
+- There are no multiple commodities, node opening costs, stochastic
+  effects, time periods, nonlinear congestion terms, or penalties.
+
+Task:
+1) Write a mathematical optimization model for this exact instance.
+2) Provide solver-executable code implementing the model.
+
+Objective:
+Minimize total installation cost plus total routing cost.

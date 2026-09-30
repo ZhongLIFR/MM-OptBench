@@ -1,0 +1,48 @@
+This is a single-period Parallel Machine Scheduling problem.
+
+Instance ID: pms_e_001
+Variant: parallel_machine_scheduling
+Scenario: parallel_machine_scheduling
+Difficulty: easy
+
+Sets:
+- J: set of jobs
+- M: set of machines
+
+Machines:
+- M1: speed_factor=1.0
+- M2: speed_factor=1.0
+
+Jobs:
+- J1: base_duration=4, weight=1, eligible_machines=['M1', 'M2'], effective_durations={ M1:4, M2:4 }
+- J2: base_duration=7, weight=1, eligible_machines=['M1', 'M2'], effective_durations={ M1:7, M2:7 }
+- J3: base_duration=3, weight=1, eligible_machines=['M1', 'M2'], effective_durations={ M1:3, M2:3 }
+- J4: base_duration=6, weight=1, eligible_machines=['M1', 'M2'], effective_durations={ M1:6, M2:6 }
+- J5: base_duration=5, weight=1, eligible_machines=['M1', 'M2'], effective_durations={ M1:5, M2:5 }
+- J6: base_duration=2, weight=1, eligible_machines=['M1', 'M2'], effective_durations={ M1:2, M2:2 }
+- J7: base_duration=8, weight=1, eligible_machines=['M1', 'M2'], effective_durations={ M1:8, M2:8 }
+- J8: base_duration=4, weight=1, eligible_machines=['M1', 'M2'], effective_durations={ M1:4, M2:4 }
+
+Decision structure:
+- Each job must be assigned to exactly one eligible machine.
+- Each machine processes its assigned jobs sequentially and non-preemptively.
+- No precedence, release-date, due-date, setup-time, or calendar constraints are present.
+
+Objective:
+- Minimize the makespan.
+
+Metadata:
+- number_jobs=8
+- number_machines=2
+- machine_type=identical
+- objective_type=makespan
+- processing_time_regime=uniform_small
+- long_job_flag=false
+- seed=401
+- formulation_size=34
+
+Visual interpretation:
+- Each row corresponds to one job.
+- The center matrix indicates job-machine eligibility.
+- The right-hand bar indicates the job processing duration.
+- The visual does not reveal the solved assignment, start times, completion order, or objective value.

@@ -1,0 +1,19 @@
+A visual representation is provided for a job-machine scheduling instance.
+
+The figure contains one row per job. The center of the figure shows a job--machine matrix indicating machine availability or compatibility. On the right, a duration bar summarizes one representative processing-time value for each job. For weighted-completion instances, the job weight is shown next to the job label. For uniformly related machine instances, the machine-speed factors are shown in the visual header.
+
+Interpretation:
+- Each job must be assigned to exactly one eligible machine.
+- Each machine can process at most one job at a time.
+- Jobs are non-preemptive.
+- There are no precedence constraints, release dates, due dates, setup times, or machine calendars.
+- In P-type instances, the right-hand bar gives the job processing time and all eligible machines process the job with that same duration.
+- In Q-type instances, the right-hand bar gives the base job duration, and the effective processing time on each eligible machine is obtained by dividing this base duration by the machine-speed factor shown in the visual header.
+- In R-type instances, each eligible matrix cell contains the exact machine-dependent processing time p_(j,m) for that job--machine pair. Blank cells are ineligible. The right-hand bar shows the minimum eligible processing time for that job and is included only as a compact visual summary.
+
+Task:
+1) Write a mathematical optimization model for this instance.
+2) Provide solver-executable code implementing the model.
+
+Objective:
+Minimize the weighted sum of all job completion times.

@@ -1,0 +1,77 @@
+This is a single-period service-site selection and assignment instance.
+
+Instance ID: pmc_h_001
+Variant: p_median
+Difficulty: hard
+Distance metric: euclidean_rounded_2dp
+p value: 4
+
+Candidate sites:
+- F1: location=(2, 23)
+- F2: location=(6, 22)
+- F3: location=(11, 23)
+- F4: location=(16, 22)
+- F5: location=(21, 23)
+- F6: location=(4, 15)
+- F7: location=(9, 16)
+- F8: location=(14, 15)
+- F9: location=(20, 15)
+- F10: location=(6, 7)
+- F11: location=(13, 7)
+- F12: location=(20, 6)
+
+Demand points:
+- D1: location=(1.4, 24), weight=2
+- D2: location=(3.8, 22.4), weight=4
+- D3: location=(6.8, 21.4), weight=3
+- D4: location=(10.4, 24.1), weight=2
+- D5: location=(15, 21.4), weight=5
+- D6: location=(21.6, 23.8), weight=4
+- D7: location=(3.2, 14), weight=3
+- D8: location=(6, 15.8), weight=2
+- D9: location=(9.4, 17), weight=4
+- D10: location=(13, 14), weight=3
+- D11: location=(16.8, 15.6), weight=2
+- D12: location=(20.8, 14.2), weight=5
+- D13: location=(5, 6), weight=2
+- D14: location=(7.2, 8.2), weight=3
+- D15: location=(11.6, 6.2), weight=2
+- D16: location=(14.8, 7.8), weight=4
+- D17: location=(19, 5.2), weight=3
+- D18: location=(21.8, 7), weight=2
+- D19: location=(9.2, 10.4), weight=5
+- D20: location=(16.2, 10), weight=3
+
+Distance matrix from demand points to candidate sites:
+- D1: F1=1.17, F2=5.02, F3=9.65, F4=14.74, F5=19.63, F6=9.37, F7=11.03, F8=15.48, F9=20.66, F10=17.61, F11=20.58, F12=25.88
+- D2: F1=1.90, F2=2.24, F3=7.22, F4=12.21, F5=17.21, F6=7.40, F7=8.25, F8=12.60, F9=17.81, F10=15.56, F11=17.94, F12=23.05
+- D3: F1=5.06, F2=1.00, F3=4.49, F4=9.22, F5=14.29, F6=6.99, F7=5.83, F8=9.63, F9=14.67, F10=14.42, F11=15.68, F12=20.28
+- D4: F1=8.47, F2=4.88, F3=1.25, F4=5.98, F5=10.66, F6=11.13, F7=8.22, F8=9.79, F9=13.23, F10=17.66, F11=17.30, F12=20.49
+- D5: F1=13.10, F2=9.02, F3=4.31, F4=1.17, F5=6.21, F6=12.73, F7=8.07, F8=6.48, F9=8.12, F10=16.98, F11=14.54, F12=16.19
+- D6: F1=19.62, F2=15.70, F3=10.63, F4=5.88, F5=1.00, F6=19.68, F7=14.82, F8=11.63, F9=8.94, F10=22.93, F11=18.87, F12=17.87
+- D7: F1=9.08, F2=8.48, F3=11.91, F4=15.09, F5=19.95, F6=1.28, F7=6.14, F8=10.85, F9=16.83, F10=7.54, F11=12.04, F12=18.61
+- D8: F1=8.24, F2=6.20, F3=8.77, F4=11.77, F5=16.64, F6=2.15, F7=3.01, F8=8.04, F9=14.02, F10=8.80, F11=11.24, F12=17.09
+- D9: F1=9.53, F2=6.05, F3=6.21, F4=8.28, F5=13.06, F6=5.76, F7=1.08, F8=5.02, F9=10.79, F10=10.56, F11=10.63, F12=15.28
+- D10: F1=14.21, F2=10.63, F3=9.22, F4=8.54, F5=12.04, F6=9.06, F7=4.47, F8=1.41, F9=7.07, F10=9.90, F11=7.00, F12=10.63
+- D11: F1=16.55, F2=12.55, F3=9.40, F4=6.45, F5=8.51, F6=12.81, F7=7.81, F8=2.86, F9=3.26, F10=13.81, F11=9.40, F12=10.12
+- D12: F1=20.76, F2=16.73, F3=13.17, F4=9.16, F5=8.80, F6=16.82, F7=11.94, F8=6.85, F9=1.13, F10=16.46, F11=10.62, F12=8.24
+- D13: F1=17.26, F2=16.03, F3=18.03, F4=19.42, F5=23.35, F6=9.06, F7=10.77, F8=12.73, F9=17.49, F10=1.41, F11=8.06, F12=15.00
+- D14: F1=15.69, F2=13.85, F3=15.28, F4=16.37, F5=20.24, F6=7.52, F7=8.00, F8=9.62, F9=14.49, F10=1.70, F11=5.92, F12=12.99
+- D15: F1=19.35, F2=16.76, F3=16.81, F4=16.40, F5=19.25, F6=11.63, F7=10.14, F8=9.12, F9=12.17, F10=5.66, F11=1.61, F12=8.40
+- D16: F1=19.87, F2=16.71, F3=15.67, F4=14.25, F5=16.42, F6=12.98, F7=10.04, F8=7.24, F9=8.88, F10=8.84, F11=1.97, F12=5.50
+- D17: F1=24.61, F2=21.24, F3=19.52, F4=17.07, F5=17.91, F6=17.92, F7=14.72, F8=11.00, F9=9.85, F10=13.12, F11=6.26, F12=1.28
+- D18: F1=25.46, F2=21.79, F3=19.30, F4=16.08, F5=16.02, F6=19.52, F7=15.65, F8=11.17, F9=8.20, F10=15.80, F11=8.80, F12=2.06
+- D19: F1=14.51, F2=12.03, F3=12.73, F4=13.45, F5=17.26, F6=6.94, F7=5.60, F8=6.65, F9=11.74, F10=4.67, F11=5.10, F12=11.66
+- D20: F1=19.25, F2=15.75, F3=14.00, F4=12.00, F5=13.86, F6=13.18, F7=9.37, F8=5.46, F9=6.28, F10=10.63, F11=4.39, F12=5.52
+
+Objective:
+- Minimize the total weighted assignment distance.
+
+Constraints:
+- Exactly 4 candidate sites must be selected.
+- Every demand point must be assigned to exactly one selected site.
+- Every demand point may be assigned to every candidate site.
+
+Visual interpretation:
+- The visual is a single spatial map.
+- The node-attached boxes report the exact coordinates and, when active, demand weights.

@@ -1,0 +1,224 @@
+{
+  "status": "optimal",
+  "objective": 60.1637,
+  "objective_exact": 60.1637,
+  "runtime_seconds": 0.8592982080299407,
+  "solve_method": "exact_route_set_dp_hfvrp",
+  "routes": [
+    [
+      "Depot",
+      "C5",
+      "C6",
+      "C4",
+      "C1",
+      "Depot"
+    ],
+    [
+      "Depot",
+      "C3",
+      "C2",
+      "Depot"
+    ],
+    [
+      "Depot",
+      "C9",
+      "C8",
+      "C11",
+      "C7",
+      "Depot"
+    ],
+    [
+      "Depot",
+      "C14",
+      "C10",
+      "C12",
+      "Depot"
+    ],
+    [
+      "Depot",
+      "C16",
+      "C15",
+      "C18",
+      "C13",
+      "C17",
+      "Depot"
+    ]
+  ],
+  "route_vehicle_ids": [
+    "SM1",
+    "SM2",
+    "MD1",
+    "MD2",
+    "LG1"
+  ],
+  "route_vehicle_types": [
+    "SM",
+    "SM",
+    "MD",
+    "MD",
+    "LG"
+  ],
+  "route_loads": [
+    8,
+    6,
+    8,
+    7,
+    12
+  ],
+  "route_capacities": [
+    8,
+    8,
+    10,
+    10,
+    12
+  ],
+  "route_base_distances": [
+    9.1,
+    6.17,
+    9.27,
+    8.77,
+    8.81
+  ],
+  "route_variable_costs": [
+    11.193,
+    7.5891,
+    9.5481,
+    9.0331,
+    7.4004
+  ],
+  "route_total_costs": [
+    12.543,
+    8.9391,
+    12.5981,
+    12.0831,
+    14.0004
+  ],
+  "activated_vehicles": [
+    "SM1",
+    "SM2",
+    "MD1",
+    "MD2",
+    "LG1"
+  ],
+  "unused_vehicles": [],
+  "active_arcs": [
+    [
+      "Depot",
+      "C5",
+      "SM1"
+    ],
+    [
+      "C5",
+      "C6",
+      "SM1"
+    ],
+    [
+      "C6",
+      "C4",
+      "SM1"
+    ],
+    [
+      "C4",
+      "C1",
+      "SM1"
+    ],
+    [
+      "C1",
+      "Depot",
+      "SM1"
+    ],
+    [
+      "Depot",
+      "C3",
+      "SM2"
+    ],
+    [
+      "C3",
+      "C2",
+      "SM2"
+    ],
+    [
+      "C2",
+      "Depot",
+      "SM2"
+    ],
+    [
+      "Depot",
+      "C9",
+      "MD1"
+    ],
+    [
+      "C9",
+      "C8",
+      "MD1"
+    ],
+    [
+      "C8",
+      "C11",
+      "MD1"
+    ],
+    [
+      "C11",
+      "C7",
+      "MD1"
+    ],
+    [
+      "C7",
+      "Depot",
+      "MD1"
+    ],
+    [
+      "Depot",
+      "C14",
+      "MD2"
+    ],
+    [
+      "C14",
+      "C10",
+      "MD2"
+    ],
+    [
+      "C10",
+      "C12",
+      "MD2"
+    ],
+    [
+      "C12",
+      "Depot",
+      "MD2"
+    ],
+    [
+      "Depot",
+      "C16",
+      "LG1"
+    ],
+    [
+      "C16",
+      "C15",
+      "LG1"
+    ],
+    [
+      "C15",
+      "C18",
+      "LG1"
+    ],
+    [
+      "C18",
+      "C13",
+      "LG1"
+    ],
+    [
+      "C13",
+      "C17",
+      "LG1"
+    ],
+    [
+      "C17",
+      "Depot",
+      "LG1"
+    ]
+  ],
+  "num_routes_used": 5,
+  "capacity_binding_flag": true,
+  "objective_from_routes": 60.1637
+}

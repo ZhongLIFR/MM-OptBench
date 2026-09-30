@@ -1,0 +1,19 @@
+{
+  "variant_type": "matching",
+  "number_left_nodes": 18,
+  "number_right_nodes": 24,
+  "graph_density": 0.7593,
+  "cost_regime": "hybrid_structured_noise",
+  "connectivity_pattern": "dense_structured",
+  "seed": 210,
+  "status": "optimal",
+  "objective_exact": 52.0,
+  "objective_value": 52.0,
+  "solver_policy": "prefer_gurobi_else_exact_fallback",
+  "solver_used": "gurobi",
+  "formulation_size": {
+    "variables": 328,
+    "constraints": 42
+  },
+  "required_side": "drivers"
+}

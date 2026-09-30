@@ -1,0 +1,56 @@
+Canonical specification for a deterministic multi-period lot-sizing and production planning instance.
+
+Interpretation:
+- For each product and period, a production quantity may be chosen.
+- Production completed in a period is immediately available to satisfy that period's demand.
+- Unsatisfied demand is not allowed; therefore inventory balance must hold in every period.
+- End-of-period inventory may be carried into the next period and incurs a holding cost.
+- If positive production is chosen for a product in a period, a fixed setup cost is incurred for that product-period.
+- Total production in a period is limited by the shared capacity shown for that period.
+
+Sets:
+- Products P = ['P1']
+- Periods T = ['t1', 't2', 't3', 't4', 't5', 't6', 't7', 't8']
+
+Initial inventory:
+- P1: 0
+
+Per-product parameter tables:
+- P1 demand by period: t1=5, t2=11, t3=5, t4=12, t5=6, t6=12, t7=6, t8=13
+- P1 unit production cost by period: t1=4, t2=4, t3=4, t4=5, t5=5, t6=5, t7=6, t8=6
+- P1 unit holding cost by period: t1=1, t2=1, t3=1, t4=1, t5=1, t6=1, t7=1, t8=0
+- P1 fixed setup cost by period: t1=18, t2=24, t3=18, t4=26, t5=18, t6=26, t7=18, t8=28
+- P1 setup-linking constant M: 70
+
+Shared capacity by period:
+- t1=10, t2=10, t3=10, t4=10, t5=10, t6=10, t7=10, t8=25
+
+Decision variables:
+- x[p,t] >= 0: production quantity of product p in period t
+- I[p,t] >= 0: ending inventory of product p after period t
+- y[p,t] in {0,1}: equals 1 if product p is produced in period t
+
+Objective:
+- Minimize total production cost + total inventory holding cost + total fixed setup cost.
+
+Constraints:
+- Inventory balance for every product and period: I[p,t-1] + x[p,t] = d[p,t] + I[p,t], with the given initial inventory at the start of t1.
+- Setup linking for every product and period: x[p,t] <= M[p] * y[p,t].
+- Shared capacity for every period: sum_p x[p,t] <= C[t].
+- Nonnegativity of production and inventory, binary setup variables, and no backlogging.
+
+Metadata:
+- number_periods=8
+- number_products=1
+- demand_pattern=seasonal_alternating
+- setup_cost_regime=period_dependent
+- capacity_regime=mild_binding
+- multi_product_flag=false
+- visual_type=timeline_demand_grid
+- seed=503
+- formulation_size=48
+
+Visual interpretation:
+- The top panel shows one capacity bar per period.
+- The bottom panel shows the demand matrix with exact numeric demand values in every cell.
+- The visual does not reveal the optimal production plan, setup pattern, or objective value.

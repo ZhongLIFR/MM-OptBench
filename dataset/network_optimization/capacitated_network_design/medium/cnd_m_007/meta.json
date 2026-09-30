@@ -1,0 +1,50 @@
+{
+  "instance_id": "cnd_m_007",
+  "family": "network_optimization",
+  "subtype": "capacitated_network_design",
+  "variant": "single_visual_single_commodity_cnd",
+  "difficulty": "medium",
+  "graph_type": "local_cycle_11",
+  "shipment_amount": 8,
+  "capacity_regime": "local_cycle_reuses_lower_capacity_link",
+  "cost_regime": "reverse_cycle_arc_enables_nonobvious_best_design",
+  "design_pattern": "cycle_assisted_three_path_split",
+  "binding_pattern": "cycle_support_and_sink_access_binding",
+  "structural_variant": "layered_network_with_local_two_arc_cycle",
+  "visual_type": "single_visual_topology_with_inline_arc_triplets",
+  "num_nodes": 11,
+  "num_arcs": 16,
+  "num_variables": 32,
+  "num_constraints": 27,
+  "formulation_size": 59,
+  "random_seed": 9107,
+  "seed": 9107,
+  "status": "optimal",
+  "optimal_objective_value": 143,
+  "objective_exact": 143,
+  "fixed_cost_total": 49,
+  "variable_cost_total": 94,
+  "installed_arc_count": 9,
+  "used_arc_count": 9,
+  "binding_capacity_arc_count": 3,
+  "runtime_seconds": 0.01903582,
+  "solve_method": "gurobi_mip_cnd_single_commodity",
+  "solver_used": "Gurobi",
+  "solver": "Gurobi",
+  "solver_policy": "gurobi_first_then_exact_installation_enumeration",
+  "verification_method": "gurobi_certificate",
+  "visual_0_checksum_md5": "be9d191ce2d65cd0be031b3994777fbc",
+  "files": {
+    "canonical_specification": "canonical_specification.txt",
+    "task_input": "task_input.txt",
+    "visuals": [
+      "visuals/visual_0.png"
+    ],
+    "ground_truth": {
+      "instance_data": "ground_truth/instance_data.json",
+      "math_model": "ground_truth/math_model.md",
+      "solver_ref": "ground_truth/solver_ref.py",
+      "solution_ref": "ground_truth/solution_ref.json"
+    }
+  }
+}

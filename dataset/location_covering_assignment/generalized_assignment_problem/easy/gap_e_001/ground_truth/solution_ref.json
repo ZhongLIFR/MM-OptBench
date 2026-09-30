@@ -1,0 +1,24 @@
+{
+  "status": "optimal",
+  "objective_exact": 39.0,
+  "objective_value": 39.0,
+  "runtime_seconds": 0.0151,
+  "assignments": {
+    "T1": "A3",
+    "T2": "A1",
+    "T3": "A3",
+    "T4": "A4",
+    "T5": "A3",
+    "T6": "A4"
+  },
+  "agent_loads": {
+    "A1": 1,
+    "A2": 0,
+    "A3": 9,
+    "A4": 7
+  },
+  "solver_policy": "prefer_gurobi_else_exact_fallback",
+  "solver_used": "gurobi",
+  "solve_method": "gurobi_mip",
+  "optimality_proof": "gurobi_optimal_status"
+}

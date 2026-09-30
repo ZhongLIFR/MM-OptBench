@@ -1,0 +1,381 @@
+{
+  "instance_id": "irp_e_004",
+  "variant": "inventory_routing_problem",
+  "scenario": "inventory_routing_problem",
+  "difficulty": "easy",
+  "sets": {
+    "periods": [
+      "t1",
+      "t2",
+      "t3",
+      "t4",
+      "t5"
+    ],
+    "customers": [
+      "C1",
+      "C2",
+      "C3",
+      "C4",
+      "C5"
+    ],
+    "nodes": [
+      "Depot",
+      "C1",
+      "C2",
+      "C3",
+      "C4",
+      "C5"
+    ],
+    "vehicles": [
+      "V1"
+    ],
+    "directed_arcs": [
+      [
+        "Depot",
+        "C1"
+      ],
+      [
+        "Depot",
+        "C2"
+      ],
+      [
+        "Depot",
+        "C3"
+      ],
+      [
+        "Depot",
+        "C4"
+      ],
+      [
+        "Depot",
+        "C5"
+      ],
+      [
+        "C1",
+        "Depot"
+      ],
+      [
+        "C1",
+        "C2"
+      ],
+      [
+        "C1",
+        "C3"
+      ],
+      [
+        "C1",
+        "C4"
+      ],
+      [
+        "C1",
+        "C5"
+      ],
+      [
+        "C2",
+        "Depot"
+      ],
+      [
+        "C2",
+        "C1"
+      ],
+      [
+        "C2",
+        "C3"
+      ],
+      [
+        "C2",
+        "C4"
+      ],
+      [
+        "C2",
+        "C5"
+      ],
+      [
+        "C3",
+        "Depot"
+      ],
+      [
+        "C3",
+        "C1"
+      ],
+      [
+        "C3",
+        "C2"
+      ],
+      [
+        "C3",
+        "C4"
+      ],
+      [
+        "C3",
+        "C5"
+      ],
+      [
+        "C4",
+        "Depot"
+      ],
+      [
+        "C4",
+        "C1"
+      ],
+      [
+        "C4",
+        "C2"
+      ],
+      [
+        "C4",
+        "C3"
+      ],
+      [
+        "C4",
+        "C5"
+      ],
+      [
+        "C5",
+        "Depot"
+      ],
+      [
+        "C5",
+        "C1"
+      ],
+      [
+        "C5",
+        "C2"
+      ],
+      [
+        "C5",
+        "C3"
+      ],
+      [
+        "C5",
+        "C4"
+      ]
+    ]
+  },
+  "indices": {
+    "period_index": {
+      "t1": 0,
+      "t2": 1,
+      "t3": 2,
+      "t4": 3,
+      "t5": 4
+    },
+    "customer_index": {
+      "C1": 0,
+      "C2": 1,
+      "C3": 2,
+      "C4": 3,
+      "C5": 4
+    },
+    "node_index": {
+      "Depot": 0,
+      "C1": 1,
+      "C2": 2,
+      "C3": 3,
+      "C4": 4,
+      "C5": 5
+    },
+    "vehicle_index": {
+      "V1": 0
+    }
+  },
+  "coordinates": {
+    "Depot": [
+      5.0,
+      5.0
+    ],
+    "C1": [
+      1.6,
+      7.8
+    ],
+    "C2": [
+      4.2,
+      9.0
+    ],
+    "C3": [
+      8.2,
+      7.6
+    ],
+    "C4": [
+      8.8,
+      3.3
+    ],
+    "C5": [
+      2.4,
+      1.7
+    ]
+  },
+  "demands": {
+    "C1": {
+      "t1": 1,
+      "t2": 1,
+      "t3": 2,
+      "t4": 3,
+      "t5": 1
+    },
+    "C2": {
+      "t1": 1,
+      "t2": 2,
+      "t3": 1,
+      "t4": 2,
+      "t5": 1
+    },
+    "C3": {
+      "t1": 1,
+      "t2": 1,
+      "t3": 1,
+      "t4": 3,
+      "t5": 2
+    },
+    "C4": {
+      "t1": 2,
+      "t2": 1,
+      "t3": 2,
+      "t4": 2,
+      "t5": 1
+    },
+    "C5": {
+      "t1": 1,
+      "t2": 1,
+      "t3": 2,
+      "t4": 3,
+      "t5": 1
+    }
+  },
+  "aggregate_period_demand": {
+    "t1": 6,
+    "t2": 6,
+    "t3": 8,
+    "t4": 13,
+    "t5": 6
+  },
+  "initial_inventory": {
+    "C1": 2,
+    "C2": 2,
+    "C3": 1,
+    "C4": 2,
+    "C5": 1
+  },
+  "inventory_capacity": {
+    "C1": 6,
+    "C2": 5,
+    "C3": 5,
+    "C4": 6,
+    "C5": 4
+  },
+  "holding_cost": {
+    "C1": 0.55,
+    "C2": 0.7,
+    "C3": 0.85,
+    "C4": 0.65,
+    "C5": 0.5
+  },
+  "vehicle_capacity": 9.0,
+  "fixed_dispatch_cost": 0.0,
+  "distance_matrix": {
+    "Depot": {
+      "Depot": 0.0,
+      "C1": 4.4,
+      "C2": 4.08,
+      "C3": 4.12,
+      "C4": 4.16,
+      "C5": 4.2
+    },
+    "C1": {
+      "Depot": 4.4,
+      "C1": 0.0,
+      "C2": 2.86,
+      "C3": 6.6,
+      "C4": 8.49,
+      "C5": 6.15
+    },
+    "C2": {
+      "Depot": 4.08,
+      "C1": 2.86,
+      "C2": 0.0,
+      "C3": 4.24,
+      "C4": 7.32,
+      "C5": 7.52
+    },
+    "C3": {
+      "Depot": 4.12,
+      "C1": 6.6,
+      "C2": 4.24,
+      "C3": 0.0,
+      "C4": 4.34,
+      "C5": 8.27
+    },
+    "C4": {
+      "Depot": 4.16,
+      "C1": 8.49,
+      "C2": 7.32,
+      "C3": 4.34,
+      "C4": 0.0,
+      "C5": 6.6
+    },
+    "C5": {
+      "Depot": 4.2,
+      "C1": 6.15,
+      "C2": 7.52,
+      "C3": 8.27,
+      "C4": 6.6,
+      "C5": 0.0
+    }
+  },
+  "travel_cost_rule": "euclidean_distance_rounded_to_2_decimals",
+  "delivery_upper_bound": {
+    "C1": {
+      "t1": 7,
+      "t2": 7,
+      "t3": 8,
+      "t4": 9,
+      "t5": 7
+    },
+    "C2": {
+      "t1": 6,
+      "t2": 7,
+      "t3": 6,
+      "t4": 7,
+      "t5": 6
+    },
+    "C3": {
+      "t1": 6,
+      "t2": 6,
+      "t3": 6,
+      "t4": 8,
+      "t5": 7
+    },
+    "C4": {
+      "t1": 8,
+      "t2": 7,
+      "t3": 8,
+      "t4": 8,
+      "t5": 7
+    },
+    "C5": {
+      "t1": 5,
+      "t2": 5,
+      "t3": 6,
+      "t4": 7,
+      "t5": 5
+    }
+  },
+  "meta_parameters": {
+    "number_periods": 5,
+    "number_customers": 5,
+    "number_vehicles": 1,
+    "total_demand": 39,
+    "vehicle_capacity": 9.0,
+    "layout_type": "north_peak_fan",
+    "cost_matrix_type": "euclidean_rounded_2_decimals",
+    "demand_regime": "single_mid_horizon_spike",
+    "holding_cost_regime": "low_holding_cost",
+    "vehicle_capacity_regime": "peak_binding",
+    "dispatch_cost_flag": false,
+    "peak_demand_flag": true,
+    "group": "B",
+    "visual_type": "dual_visual_map_plus_inventory_heatmap",
+    "seed": 1104,
+    "formulation_size": 595
+  }
+}

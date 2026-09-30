@@ -1,0 +1,26 @@
+{
+  "status": "feasible",
+  "is_k_colorable": true,
+  "number_of_colors_available": 5,
+  "chromatic_number": 5,
+  "color_assignment": {
+    "1": 1,
+    "2": 4,
+    "3": 5,
+    "4": 3,
+    "5": 2,
+    "6": 2,
+    "7": 4,
+    "8": 4,
+    "9": 3,
+    "10": 2,
+    "11": 5,
+    "12": 1,
+    "13": 5,
+    "14": 1,
+    "15": 5,
+    "16": 1
+  },
+  "solve_method": "gurobi_milp_graph_coloring_decision",
+  "runtime_seconds": 0.003655
+}

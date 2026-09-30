@@ -1,0 +1,133 @@
+Canonical specification for a deterministic medium-level single-project renewable RCPSP instance.
+
+Interpretation:
+- A single project must schedule all listed activities while satisfying precedence and renewable resource constraints.
+- Dummy activity Start has zero duration and is fixed at time 0.
+- Dummy activity End has zero duration and marks project completion.
+- Every real activity is non-preemptive and must be executed exactly once.
+- A successor activity may start only after all of its predecessor activities have finished.
+- Renewable resource capacities apply at every time period to the set of simultaneously active real activities.
+- No release dates, deadlines, calendars, setup times, stochastic durations, non-renewable resources, or multi-project coupling are included.
+
+Instance ID: rcpsp_m_010
+Variant: single_project_renewable_rcpsp
+Scenario: resource_constrained_project_scheduling
+
+Activities V = ['Start', 'A1', 'A2', 'A3', 'A4', 'A5', 'A6', 'A7', 'A8', 'A9', 'A10', 'A11', 'A12', 'A13', 'A14', 'A15', 'A16', 'A17', 'A18', 'End']
+Real activities I = ['A1', 'A2', 'A3', 'A4', 'A5', 'A6', 'A7', 'A8', 'A9', 'A10', 'A11', 'A12', 'A13', 'A14', 'A15', 'A16', 'A17', 'A18']
+Renewable resources R = ['R1', 'R2', 'R3']
+
+Precedence arcs E:
+- (Start, A1)
+- (Start, A2)
+- (Start, A3)
+- (A1, A4)
+- (A1, A5)
+- (A2, A5)
+- (A2, A6)
+- (A3, A6)
+- (A4, A7)
+- (A4, A8)
+- (A5, A7)
+- (A5, A8)
+- (A6, A8)
+- (A7, A9)
+- (A7, A10)
+- (A8, A10)
+- (A8, A11)
+- (A9, A12)
+- (A10, A12)
+- (A10, A13)
+- (A11, A13)
+- (A12, A14)
+- (A12, A15)
+- (A13, A15)
+- (A13, A16)
+- (A14, A17)
+- (A15, A17)
+- (A15, A18)
+- (A16, A18)
+- (A17, End)
+- (A18, End)
+
+Activity durations:
+- Start: duration=0
+- A1: duration=2
+- A2: duration=3
+- A3: duration=4
+- A4: duration=3
+- A5: duration=5
+- A6: duration=2
+- A7: duration=4
+- A8: duration=3
+- A9: duration=2
+- A10: duration=4
+- A11: duration=3
+- A12: duration=2
+- A13: duration=5
+- A14: duration=3
+- A15: duration=4
+- A16: duration=2
+- A17: duration=4
+- A18: duration=3
+- End: duration=0
+
+Renewable resource capacities:
+- R1: capacity=7
+- R2: capacity=5
+- R3: capacity=4
+
+Activity-resource demand matrix:
+- Start: R1=0, R2=0, R3=0
+- A1: R1=2, R2=1, R3=1
+- A2: R1=2, R2=2, R3=1
+- A3: R1=1, R2=2, R3=1
+- A4: R1=3, R2=1, R3=1
+- A5: R1=2, R2=2, R3=2
+- A6: R1=2, R2=1, R3=1
+- A7: R1=3, R2=2, R3=1
+- A8: R1=2, R2=2, R3=1
+- A9: R1=2, R2=1, R3=2
+- A10: R1=3, R2=2, R3=1
+- A11: R1=2, R2=1, R3=2
+- A12: R1=2, R2=2, R3=1
+- A13: R1=3, R2=1, R3=1
+- A14: R1=2, R2=2, R3=2
+- A15: R1=3, R2=1, R3=2
+- A16: R1=2, R2=2, R3=1
+- A17: R1=3, R2=1, R3=1
+- A18: R1=2, R2=2, R3=1
+- End: R1=0, R2=0, R3=0
+
+Decision variables:
+- x[i,t] in {0,1}: equals 1 if real activity i starts at discrete time t
+- C_max >= 0: project makespan
+
+Objective:
+- Minimize the project makespan.
+
+Constraints:
+- Every real activity starts exactly once.
+- Precedence constraints hold for every precedence arc between real activities.
+- Start is fixed at time 0.
+- End occurs no earlier than the finish time of its predecessor activities.
+- Renewable resource usage of overlapping real activities cannot exceed the capacity of any resource at any time.
+
+Metadata:
+- number_activities=20
+- number_real_activities=18
+- number_resources=3
+- precedence_density=0.1632
+- resource_capacity_regime=moderate_mixed
+- duration_regime=heterogeneous_large_medium
+- bottleneck_resource_flag=false
+- graph_pattern=largest_dense_readable_split
+- group=C
+- visual_type=dual_visual_precedence_network_plus_resource_matrix
+- seed=2310
+- formulation_size=1241
+
+Visual interpretation:
+- visual_0.png contains the exact precedence network and exact activity durations.
+- visual_1.png contains the exact renewable capacities, exact real-activity durations, and exact activity-resource demand matrix.
+- The visual files do not reveal the solved schedule, activity start times, or the optimal makespan.

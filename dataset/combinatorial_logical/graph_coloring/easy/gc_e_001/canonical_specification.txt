@@ -1,0 +1,75 @@
+Canonical specification for a deterministic easy-level graph coloring instance.
+
+Interpretation:
+- The graph is undirected and simple.
+- Each vertex must receive exactly one color.
+- Adjacent vertices must not share the same color.
+- The task is a feasibility version of graph coloring using exactly the available color set K.
+- There are no weighted colors, pre-colored vertices, directed edges, hyperedges, logical side constraints, or symmetry-breaking constraints.
+
+Sets:
+- Vertices V = [1, 2, 3, 4, 5, 6, 7, 8]
+- Colors K = [1, 2]
+
+Parameters:
+- number_of_vertices = 8
+- number_of_colors = 2
+- chromatic_number = 2
+- graph_density = 0.3571
+- topology_type = bipartite_like_graph
+
+Edge set E:
+- (1, 5)
+- (1, 8)
+- (2, 5)
+- (2, 6)
+- (2, 8)
+- (3, 6)
+- (3, 7)
+- (4, 5)
+- (4, 7)
+- (4, 8)
+
+Adjacency list:
+- N(1) = [5, 8]
+- N(2) = [5, 6, 8]
+- N(3) = [6, 7]
+- N(4) = [5, 7, 8]
+- N(5) = [1, 2, 4]
+- N(6) = [2, 3]
+- N(7) = [3, 4]
+- N(8) = [1, 2, 4]
+
+Adjacency matrix rows (0/1 form, with diagonal omitted from constraints):
+- row 1: [0, 0, 0, 0, 1, 0, 0, 1]
+- row 2: [0, 0, 0, 0, 1, 1, 0, 1]
+- row 3: [0, 0, 0, 0, 0, 1, 1, 0]
+- row 4: [0, 0, 0, 0, 1, 0, 1, 1]
+- row 5: [1, 1, 0, 1, 0, 0, 0, 0]
+- row 6: [0, 1, 1, 0, 0, 0, 0, 0]
+- row 7: [0, 0, 1, 1, 0, 0, 0, 0]
+- row 8: [1, 1, 0, 1, 0, 0, 0, 0]
+
+Decision variables:
+- x[v,k] in {0,1}: equals 1 if vertex v is assigned color k, and 0 otherwise.
+
+Objective:
+- Find any feasible coloring that uses the available colors in K.
+
+Constraints:
+- For every vertex v in V, exactly one color must be assigned: sum_k x[v,k] = 1.
+- For every edge (u,v) in E and every color k in K, adjacent vertices cannot share the same color: x[u,k] + x[v,k] <= 1.
+- All assignment variables are binary.
+
+Metadata:
+- seed=5101
+- group=A
+- graph_generator=bipartite_community
+- visual_type=adjacency_matrix
+- formulation_size=44
+
+Visual interpretation:
+- The figure is a square adjacency matrix indexed by numeric vertex identifiers.
+- Black off-diagonal cells indicate edges and white off-diagonal cells indicate non-edges.
+- Grey diagonal cells only mark self-reference positions and do not represent constraints.
+- The visual reveals the full graph structure and the available vertex identifiers, but it does not reveal a valid coloring assignment.

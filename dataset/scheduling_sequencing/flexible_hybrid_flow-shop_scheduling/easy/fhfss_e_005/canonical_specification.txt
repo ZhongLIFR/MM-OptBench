@@ -1,0 +1,48 @@
+This is a deterministic easy-level Flexible / Hybrid Flow-Shop Scheduling problem.
+
+Instance ID: fhfss_e_005
+Variant: flexible_hybrid_flow_shop_scheduling
+Scenario: flexible_hybrid_flow_shop_scheduling
+Difficulty: easy
+
+Common ordered stage chain:
+- S1 -> S2 -> S3 -> S4
+
+Machine inventory by stage:
+- S1: ['S1M1']
+- S2: ['S2M1', 'S2M2']
+- S3: ['S3M1']
+- S4: ['S4M1', 'S4M2']
+
+Job-stage processing times:
+- J1: S1=5, S2=4, S3=6, S4=3
+- J2: S1=4, S2=5, S3=5, S4=2
+- J3: S1=6, S2=3, S3=4, S4=4
+- J4: S1=5, S2=6, S3=5, S4=3
+- J5: S1=3, S2=4, S3=6, S4=2
+- J6: S1=4, S2=5, S3=4, S4=3
+
+Decision structure:
+- Every job must visit all stages in the listed order.
+- At each stage, a job must be assigned to exactly one machine from that stage.
+- Machines within a stage are identical with respect to processing duration.
+- Each machine can process at most one job at a time.
+- Jobs are non-preemptive.
+
+Objective:
+- Minimize the makespan.
+
+Metadata:
+- number_jobs=6
+- number_stages=4
+- machines_per_stage=[1, 2, 1, 2]
+- bottleneck_pattern=single_tight_stage_with_early_pressure
+- processing_time_regime=stage_dependent_moderate
+- flexibility_level=mixed_1_2_1_2
+- seed=4405
+- formulation_size=379
+
+Visual interpretation:
+- The upper section shows the ordered stage chain and the exact machine inventory at each stage.
+- The lower section shows the exact processing duration of each job at each stage.
+- The visual does not reveal any machine assignment, stage start time, sequence decision, or optimal objective value.

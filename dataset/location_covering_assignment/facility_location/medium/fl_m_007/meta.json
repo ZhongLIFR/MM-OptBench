@@ -1,0 +1,23 @@
+{
+  "instance_id": "fl_m_007",
+  "difficulty": "medium",
+  "variant_type": "CFL",
+  "number_of_facilities": 5,
+  "number_of_customers": 9,
+  "total_demand": 18,
+  "opening_cost_regime": "uneven_capacity_distribution",
+  "assignment_cost_regime": "euclidean_spatial_distance",
+  "demand_pattern": "correlated_demand_groups",
+  "assignment_graph_density": 0.4222,
+  "seed": 207,
+  "formulation_size": {
+    "num_binary_y": 5,
+    "num_binary_x": 19,
+    "num_variables_total": 24,
+    "num_constraints_total": 52
+  },
+  "optimal_objective_value": 165.4344,
+  "reference_solver_policy": "prefer_gurobi_else_exact_fallback",
+  "reference_solver_used": "gurobi",
+  "total_capacity": 26
+}

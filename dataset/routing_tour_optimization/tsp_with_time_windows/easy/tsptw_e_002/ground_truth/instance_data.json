@@ -1,0 +1,345 @@
+{
+  "instance_id": "tsptw_e_002",
+  "variant": "traveling_salesman_problem_with_time_windows",
+  "scenario": "traveling_salesman_problem_with_time_windows",
+  "difficulty": "easy",
+  "sets": {
+    "nodes": [
+      "Depot",
+      "C1",
+      "C2",
+      "C3",
+      "C4",
+      "C5",
+      "C6"
+    ],
+    "customers": [
+      "C1",
+      "C2",
+      "C3",
+      "C4",
+      "C5",
+      "C6"
+    ],
+    "directed_arcs": [
+      [
+        "Depot",
+        "C1"
+      ],
+      [
+        "Depot",
+        "C2"
+      ],
+      [
+        "Depot",
+        "C3"
+      ],
+      [
+        "Depot",
+        "C4"
+      ],
+      [
+        "Depot",
+        "C5"
+      ],
+      [
+        "Depot",
+        "C6"
+      ],
+      [
+        "C1",
+        "Depot"
+      ],
+      [
+        "C1",
+        "C2"
+      ],
+      [
+        "C1",
+        "C3"
+      ],
+      [
+        "C1",
+        "C4"
+      ],
+      [
+        "C1",
+        "C5"
+      ],
+      [
+        "C1",
+        "C6"
+      ],
+      [
+        "C2",
+        "Depot"
+      ],
+      [
+        "C2",
+        "C1"
+      ],
+      [
+        "C2",
+        "C3"
+      ],
+      [
+        "C2",
+        "C4"
+      ],
+      [
+        "C2",
+        "C5"
+      ],
+      [
+        "C2",
+        "C6"
+      ],
+      [
+        "C3",
+        "Depot"
+      ],
+      [
+        "C3",
+        "C1"
+      ],
+      [
+        "C3",
+        "C2"
+      ],
+      [
+        "C3",
+        "C4"
+      ],
+      [
+        "C3",
+        "C5"
+      ],
+      [
+        "C3",
+        "C6"
+      ],
+      [
+        "C4",
+        "Depot"
+      ],
+      [
+        "C4",
+        "C1"
+      ],
+      [
+        "C4",
+        "C2"
+      ],
+      [
+        "C4",
+        "C3"
+      ],
+      [
+        "C4",
+        "C5"
+      ],
+      [
+        "C4",
+        "C6"
+      ],
+      [
+        "C5",
+        "Depot"
+      ],
+      [
+        "C5",
+        "C1"
+      ],
+      [
+        "C5",
+        "C2"
+      ],
+      [
+        "C5",
+        "C3"
+      ],
+      [
+        "C5",
+        "C4"
+      ],
+      [
+        "C5",
+        "C6"
+      ],
+      [
+        "C6",
+        "Depot"
+      ],
+      [
+        "C6",
+        "C1"
+      ],
+      [
+        "C6",
+        "C2"
+      ],
+      [
+        "C6",
+        "C3"
+      ],
+      [
+        "C6",
+        "C4"
+      ],
+      [
+        "C6",
+        "C5"
+      ]
+    ]
+  },
+  "coordinates": {
+    "Depot": [
+      5.0,
+      5.0
+    ],
+    "C1": [
+      7.9,
+      5.1
+    ],
+    "C2": [
+      7.3,
+      8.4
+    ],
+    "C3": [
+      2.7,
+      8.1
+    ],
+    "C4": [
+      2.1,
+      4.8
+    ],
+    "C5": [
+      3.9,
+      1.9
+    ],
+    "C6": [
+      6.7,
+      2.3
+    ]
+  },
+  "travel_time_matrix": {
+    "Depot": {
+      "Depot": 0.0,
+      "C1": 2.9,
+      "C2": 4.1,
+      "C3": 3.86,
+      "C4": 2.91,
+      "C5": 3.29,
+      "C6": 3.19
+    },
+    "C1": {
+      "Depot": 2.9,
+      "C1": 0.0,
+      "C2": 3.35,
+      "C3": 6.0,
+      "C4": 5.81,
+      "C5": 5.12,
+      "C6": 3.05
+    },
+    "C2": {
+      "Depot": 4.1,
+      "C1": 3.35,
+      "C2": 0.0,
+      "C3": 4.61,
+      "C4": 6.32,
+      "C5": 7.34,
+      "C6": 6.13
+    },
+    "C3": {
+      "Depot": 3.86,
+      "C1": 6.0,
+      "C2": 4.61,
+      "C3": 0.0,
+      "C4": 3.35,
+      "C5": 6.32,
+      "C6": 7.05
+    },
+    "C4": {
+      "Depot": 2.91,
+      "C1": 5.81,
+      "C2": 6.32,
+      "C3": 3.35,
+      "C4": 0.0,
+      "C5": 3.41,
+      "C6": 5.24
+    },
+    "C5": {
+      "Depot": 3.29,
+      "C1": 5.12,
+      "C2": 7.34,
+      "C3": 6.32,
+      "C4": 3.41,
+      "C5": 0.0,
+      "C6": 2.83
+    },
+    "C6": {
+      "Depot": 3.19,
+      "C1": 3.05,
+      "C2": 6.13,
+      "C3": 7.05,
+      "C4": 5.24,
+      "C5": 2.83,
+      "C6": 0.0
+    }
+  },
+  "service_times": {
+    "Depot": 0.0,
+    "C1": 0.5,
+    "C2": 0.5,
+    "C3": 0.5,
+    "C4": 0.5,
+    "C5": 0.5,
+    "C6": 0.5
+  },
+  "time_windows": {
+    "Depot": [
+      0.0,
+      200.0
+    ],
+    "C1": [
+      2.1,
+      9.7
+    ],
+    "C2": [
+      3.09,
+      14.95
+    ],
+    "C3": [
+      5.4,
+      19.71
+    ],
+    "C4": [
+      11.22,
+      22.87
+    ],
+    "C5": [
+      15.25,
+      26.73
+    ],
+    "C6": [
+      19.16,
+      29.14
+    ]
+  },
+  "depot": "Depot",
+  "meta_parameters": {
+    "number_customers": 6,
+    "layout_type": "radial",
+    "window_tightness_type": "wide",
+    "service_time_type": "constant",
+    "critical_sequence_type": "early_first",
+    "binding_window_flag": false,
+    "critical_sequence_flag": true,
+    "travel_time_rule": "euclidean_rounded_2dp",
+    "visual_type": "coordinate_tw_service_node_map_with_cost_rule_box",
+    "seed": 3201,
+    "group": "A",
+    "big_m": 212.84,
+    "formulation_size": 119
+  }
+}

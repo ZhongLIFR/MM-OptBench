@@ -1,0 +1,58 @@
+This is a single-period delivery driver to delivery route assignment problem.
+
+Instance ID: ba_e_005
+Variant: assignment
+Scenario: delivery_driver_route_assignment
+
+Drivers:
+- D1
+- D2
+- D3
+- D4
+- D5
+- D6
+- D7
+- D8
+
+Routes:
+- R1
+- R2
+- R3
+- R4
+- R5
+- R6
+- R7
+- R8
+
+Feasible route options for each driver:
+- D1: R1, R2
+- D2: R1, R2, R3, R4
+- D3: R1, R2, R3, R4
+- D4: R2, R3, R4, R5
+- D5: R5, R6, R7
+- D6: R5, R6, R7
+- D7: R6, R7, R8
+- D8: R1, R7, R8
+
+Assignment costs for feasible driver-route pairs:
+- D1: R1=5, R2=5
+- D2: R1=5, R2=4, R3=4, R4=6
+- D3: R1=6, R2=5, R3=3, R4=5
+- D4: R2=5, R3=6, R4=3, R5=12
+- D5: R5=4, R6=6, R7=7
+- D6: R5=6, R6=5, R7=6
+- D7: R6=6, R7=5, R8=4
+- D8: R1=12, R7=6, R8=3
+
+Objective:
+- Minimize total assignment cost.
+
+Constraints:
+- Each driver must be assigned to exactly one route.
+- Each route must be assigned to exactly one driver.
+- Only feasible driver-route pairs listed above are allowed.
+
+Visual interpretation:
+- The graph encodes feasible driver-route pairs.
+- The matrix reports the numeric assignment costs.
+- Entries shown as "—" are forbidden assignments.

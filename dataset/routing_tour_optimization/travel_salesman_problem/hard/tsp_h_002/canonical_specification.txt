@@ -1,0 +1,79 @@
+Canonical specification for a deterministic Traveling Salesman Problem instance.
+
+Interpretation:
+- A single closed tour must visit every city exactly once and return to its starting city.
+- Travel between every pair of distinct cities is allowed, so the graph is complete.
+- Travel costs are symmetric unless an explicitly perturbed symmetric regime is specified; this instance uses the displayed complete cost matrix.
+- The displayed city coordinates determine the geometric layout shown in the visual map.
+- The optimization goal is to minimize the total tour length.
+
+Sets:
+- Cities N = ['A', 'B', 'C', 'D', 'E', 'F', 'G', 'H', 'I', 'J', 'K', 'L', 'M', 'N', 'O', 'P']
+- Directed arcs A = [(i,j) for i,j in N, i != j]
+- Reference city for tour reporting: s = A
+
+Coordinates by city:
+- A: (2.0, 5.0)
+- B: (4.0, 8.0)
+- C: (7.0, 4.0)
+- D: (10.0, 9.0)
+- E: (13.0, 5.0)
+- F: (16.0, 10.0)
+- G: (19.0, 4.0)
+- H: (22.0, 8.0)
+- I: (25.0, 5.0)
+- J: (5.0, 15.0)
+- K: (9.0, 18.0)
+- L: (14.0, 16.0)
+- M: (18.0, 19.0)
+- N: (23.0, 17.0)
+- O: (27.0, 14.0)
+- P: (29.0, 20.0)
+
+Complete symmetric travel-cost matrix:
+- A: A=0.0000, B=3.6100, C=5.1000, D=8.9400, E=11.0000, F=14.8700, G=17.0300, H=20.2200, I=23.0000, J=10.4400, K=14.7600, L=16.2800, M=21.2600, N=24.1900, O=26.5700, P=30.8900
+- B: A=3.6100, B=0.0000, C=5.0000, D=6.0800, E=9.4900, F=12.1700, G=15.5200, H=18.0000, I=21.2100, J=7.0700, K=11.1800, L=12.8100, M=17.8000, N=21.0200, O=23.7700, P=27.7300
+- C: A=5.1000, B=5.0000, C=0.0000, D=5.8300, E=6.0800, F=10.8200, G=12.0000, H=15.5200, I=18.0300, J=11.1800, K=14.1400, L=13.8900, M=18.6000, N=20.6200, O=22.3600, P=27.2000
+- D: A=8.9400, B=6.0800, C=5.8300, D=0.0000, E=5.0000, F=6.0800, G=10.3000, H=12.0400, I=15.5200, J=7.8100, K=9.0600, L=8.0600, M=12.8100, N=15.2600, O=17.7200, P=21.9500
+- E: A=11.0000, B=9.4900, C=6.0800, D=5.0000, E=0.0000, F=5.8300, G=6.0800, H=9.4900, I=12.0000, J=12.8100, K=13.6000, L=11.0500, M=14.8700, N=15.6200, O=16.6400, P=21.9300
+- F: A=14.8700, B=12.1700, C=10.8200, D=6.0800, E=5.8300, F=0.0000, G=6.7100, H=6.3200, I=10.3000, J=12.0800, K=10.6300, L=6.3200, M=9.2200, N=9.9000, O=11.7000, P=16.4000
+- G: A=17.0300, B=15.5200, C=12.0000, D=10.3000, E=6.0800, F=6.7100, G=0.0000, H=5.0000, I=6.0800, J=17.8000, K=17.2000, L=13.0000, M=15.0300, N=13.6000, O=12.8100, P=18.8700
+- H: A=20.2200, B=18.0000, C=15.5200, D=12.0400, E=9.4900, F=6.3200, G=5.0000, H=0.0000, I=4.2400, J=18.3800, K=16.4000, L=11.3100, M=11.7000, N=9.0600, O=7.8100, P=13.8900
+- I: A=23.0000, B=21.2100, C=18.0300, D=15.5200, E=12.0000, F=10.3000, G=6.0800, H=4.2400, I=0.0000, J=22.3600, K=20.6200, L=15.5600, M=15.6500, N=12.1700, O=9.2200, P=15.5200
+- J: A=10.4400, B=7.0700, C=11.1800, D=7.8100, E=12.8100, F=12.0800, G=17.8000, H=18.3800, I=22.3600, J=0.0000, K=5.0000, L=9.0600, M=13.6000, N=18.1100, O=22.0200, P=24.5200
+- K: A=14.7600, B=11.1800, C=14.1400, D=9.0600, E=13.6000, F=10.6300, G=17.2000, H=16.4000, I=20.6200, J=5.0000, K=0.0000, L=5.3900, M=9.0600, N=14.0400, O=18.4400, P=20.1000
+- L: A=16.2800, B=12.8100, C=13.8900, D=8.0600, E=11.0500, F=6.3200, G=13.0000, H=11.3100, I=15.5600, J=9.0600, K=5.3900, L=0.0000, M=5.0000, N=9.0600, O=13.1500, P=15.5200
+- M: A=21.2600, B=17.8000, C=18.6000, D=12.8100, E=14.8700, F=9.2200, G=15.0300, H=11.7000, I=15.6500, J=13.6000, K=9.0600, L=5.0000, M=0.0000, N=5.3900, O=10.3000, P=11.0500
+- N: A=24.1900, B=21.0200, C=20.6200, D=15.2600, E=15.6200, F=9.9000, G=13.6000, H=9.0600, I=12.1700, J=18.1100, K=14.0400, L=9.0600, M=5.3900, N=0.0000, O=5.0000, P=6.7100
+- O: A=26.5700, B=23.7700, C=22.3600, D=17.7200, E=16.6400, F=11.7000, G=12.8100, H=7.8100, I=9.2200, J=22.0200, K=18.4400, L=13.1500, M=10.3000, N=5.0000, O=0.0000, P=6.3200
+- P: A=30.8900, B=27.7300, C=27.2000, D=21.9500, E=21.9300, F=16.4000, G=18.8700, H=13.8900, I=15.5200, J=24.5200, K=20.1000, L=15.5200, M=11.0500, N=6.7100, O=6.3200, P=0.0000
+
+Decision variables:
+- x[i,j] in {0,1}: equals 1 if the tour directly travels from city i to city j
+
+Objective:
+- Minimize total travel cost sum_{i != j} c[i,j] * x[i,j].
+
+Constraints:
+- Exactly one outgoing arc from every city.
+- Exactly one incoming arc to every city.
+- Subtour elimination constraints are required to enforce a single Hamiltonian cycle.
+- Binary arc variables.
+
+Metadata:
+- number_nodes=16
+- layout_type=elongated_rectangular_distribution
+- cluster_count=2
+- cost_matrix_type=euclidean_rounded_2dp
+- symmetry_flag=false
+- visual_type=euclidean_city_map_with_cost_rule_box
+- seed=3402
+- group=A
+- formulation_size=527
+
+Visual interpretation:
+- The figure shows one marker per city on a two-dimensional Euclidean map.
+- Each city label includes its exact coordinate pair.
+- A cost-rule box states how pairwise travel costs are derived from the plotted coordinates.
+- The complete graph edges are intentionally omitted to avoid clutter.
+- The visual does not reveal the optimal tour, selected arcs, or objective value.

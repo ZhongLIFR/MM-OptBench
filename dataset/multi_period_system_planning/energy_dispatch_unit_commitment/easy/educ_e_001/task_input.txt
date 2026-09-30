@@ -1,0 +1,19 @@
+A power-system operations instance is specified by the accompanying visual artifact.
+
+The figure provides all instance-specific numerical data required for the planning problem.
+
+- The top panel is a generator economics table listing each generator, its marginal generation cost, and its startup cost.
+- The middle panel is a demand timeline showing the exact system demand in every period.
+- The bottom panel is a generator-capacity chart showing the minimum and maximum output range of each generator.
+
+Operational rules:
+- Each generator may be either off or on in each period.
+- If a generator is on, its output must lie between its minimum and maximum capacity.
+- If a generator is off, its output must be zero.
+- Total generation in each period must exactly match the demand shown in the figure.
+- Turning a generator on in a period incurs its startup cost if it was off in the immediately preceding period.
+- The initial on/off status before the first period is: G1=off, G2=off, G3=off.
+- No ramping constraints, minimum up-time constraints, minimum down-time constraints, transmission constraints, reserve constraints, load shedding, or stochastic effects are included.
+
+Task:
+Build a mathematical optimization model for this exact instance and provide executable solver code.

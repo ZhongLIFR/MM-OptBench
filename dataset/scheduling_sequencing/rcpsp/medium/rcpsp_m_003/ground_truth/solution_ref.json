@@ -1,0 +1,218 @@
+{
+  "status": "optimal",
+  "objective": 19,
+  "objective_exact": 19.0,
+  "makespan": 19,
+  "activity_start_times": {
+    "A1": 0,
+    "A10": 12,
+    "A11": 17,
+    "A12": 16,
+    "A2": 0,
+    "A3": 3,
+    "A4": 3,
+    "A5": 2,
+    "A6": 8,
+    "A7": 10,
+    "A8": 7,
+    "A9": 12,
+    "End": 19,
+    "Start": 0
+  },
+  "activity_finish_times": {
+    "A1": 3,
+    "A10": 16,
+    "A11": 19,
+    "A12": 19,
+    "A2": 2,
+    "A3": 7,
+    "A4": 8,
+    "A5": 5,
+    "A6": 12,
+    "A7": 12,
+    "A8": 10,
+    "A9": 17,
+    "End": 19,
+    "Start": 0
+  },
+  "schedule": [
+    {
+      "activity": "A1",
+      "start": 0,
+      "finish": 3,
+      "duration": 3
+    },
+    {
+      "activity": "A2",
+      "start": 0,
+      "finish": 2,
+      "duration": 2
+    },
+    {
+      "activity": "A5",
+      "start": 2,
+      "finish": 5,
+      "duration": 3
+    },
+    {
+      "activity": "A3",
+      "start": 3,
+      "finish": 7,
+      "duration": 4
+    },
+    {
+      "activity": "A4",
+      "start": 3,
+      "finish": 8,
+      "duration": 5
+    },
+    {
+      "activity": "A8",
+      "start": 7,
+      "finish": 10,
+      "duration": 3
+    },
+    {
+      "activity": "A6",
+      "start": 8,
+      "finish": 12,
+      "duration": 4
+    },
+    {
+      "activity": "A7",
+      "start": 10,
+      "finish": 12,
+      "duration": 2
+    },
+    {
+      "activity": "A10",
+      "start": 12,
+      "finish": 16,
+      "duration": 4
+    },
+    {
+      "activity": "A9",
+      "start": 12,
+      "finish": 17,
+      "duration": 5
+    },
+    {
+      "activity": "A12",
+      "start": 16,
+      "finish": 19,
+      "duration": 3
+    },
+    {
+      "activity": "A11",
+      "start": 17,
+      "finish": 19,
+      "duration": 2
+    }
+  ],
+  "resource_usage_by_time": {
+    "0": {
+      "R1": 4,
+      "R2": 3,
+      "R3": 2
+    },
+    "1": {
+      "R1": 4,
+      "R2": 3,
+      "R3": 2
+    },
+    "2": {
+      "R1": 3,
+      "R2": 3,
+      "R3": 3
+    },
+    "3": {
+      "R1": 6,
+      "R2": 5,
+      "R3": 4
+    },
+    "4": {
+      "R1": 6,
+      "R2": 5,
+      "R3": 4
+    },
+    "5": {
+      "R1": 5,
+      "R2": 3,
+      "R3": 2
+    },
+    "6": {
+      "R1": 5,
+      "R2": 3,
+      "R3": 2
+    },
+    "7": {
+      "R1": 4,
+      "R2": 3,
+      "R3": 3
+    },
+    "8": {
+      "R1": 5,
+      "R2": 2,
+      "R3": 4
+    },
+    "9": {
+      "R1": 5,
+      "R2": 2,
+      "R3": 4
+    },
+    "10": {
+      "R1": 5,
+      "R2": 3,
+      "R3": 3
+    },
+    "11": {
+      "R1": 5,
+      "R2": 3,
+      "R3": 3
+    },
+    "12": {
+      "R1": 5,
+      "R2": 4,
+      "R3": 3
+    },
+    "13": {
+      "R1": 5,
+      "R2": 4,
+      "R3": 3
+    },
+    "14": {
+      "R1": 5,
+      "R2": 4,
+      "R3": 3
+    },
+    "15": {
+      "R1": 5,
+      "R2": 4,
+      "R3": 3
+    },
+    "16": {
+      "R1": 5,
+      "R2": 3,
+      "R3": 3
+    },
+    "17": {
+      "R1": 5,
+      "R2": 2,
+      "R3": 3
+    },
+    "18": {
+      "R1": 5,
+      "R2": 2,
+      "R3": 3
+    }
+  },
+  "binding_resources": [
+    "R1",
+    "R2",
+    "R3"
+  ],
+  "binding_resource_count": 3,
+  "solve_method": "gurobi_time_indexed_rcpsp_medium",
+  "solver": "Gurobi",
+  "runtime_seconds": 0.01911700004711747
+}

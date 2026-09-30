@@ -1,0 +1,63 @@
+This is a single-period deterministic Parallel Machine Scheduling problem.
+
+Instance ID: pms_m_004
+Variant: parallel_machine_scheduling
+Scenario: parallel_machine_scheduling
+Difficulty: medium
+
+Sets:
+- J: set of jobs
+- M: set of machines
+
+Machine system:
+- Identical parallel machines (P||)
+- M1: speed_factor=1.0
+- M2: speed_factor=1.0
+- M3: speed_factor=1.0
+- M4: speed_factor=1.0
+
+Jobs:
+- J1: summary_duration=4, weight=1, eligible_machines=['M1', 'M2', 'M3', 'M4'], machine_times={ M1:4, M2:4, M3:4, M4:4 }
+- J2: summary_duration=5, weight=1, eligible_machines=['M1', 'M2', 'M3', 'M4'], machine_times={ M1:5, M2:5, M3:5, M4:5 }
+- J3: summary_duration=6, weight=1, eligible_machines=['M1', 'M2', 'M3', 'M4'], machine_times={ M1:6, M2:6, M3:6, M4:6 }
+- J4: summary_duration=7, weight=1, eligible_machines=['M1', 'M2', 'M3', 'M4'], machine_times={ M1:7, M2:7, M3:7, M4:7 }
+- J5: summary_duration=8, weight=1, eligible_machines=['M1', 'M2', 'M3', 'M4'], machine_times={ M1:8, M2:8, M3:8, M4:8 }
+- J6: summary_duration=9, weight=1, eligible_machines=['M1', 'M2', 'M3', 'M4'], machine_times={ M1:9, M2:9, M3:9, M4:9 }
+- J7: summary_duration=10, weight=1, eligible_machines=['M1', 'M2', 'M3', 'M4'], machine_times={ M1:10, M2:10, M3:10, M4:10 }
+- J8: summary_duration=11, weight=1, eligible_machines=['M1', 'M2', 'M3', 'M4'], machine_times={ M1:11, M2:11, M3:11, M4:11 }
+- J9: summary_duration=12, weight=1, eligible_machines=['M1', 'M2', 'M3', 'M4'], machine_times={ M1:12, M2:12, M3:12, M4:12 }
+- J10: summary_duration=13, weight=1, eligible_machines=['M1', 'M2', 'M3', 'M4'], machine_times={ M1:13, M2:13, M3:13, M4:13 }
+- J11: summary_duration=14, weight=1, eligible_machines=['M1', 'M2', 'M3', 'M4'], machine_times={ M1:14, M2:14, M3:14, M4:14 }
+- J12: summary_duration=15, weight=1, eligible_machines=['M1', 'M2', 'M3', 'M4'], machine_times={ M1:15, M2:15, M3:15, M4:15 }
+- J13: summary_duration=5, weight=1, eligible_machines=['M1', 'M2', 'M3', 'M4'], machine_times={ M1:5, M2:5, M3:5, M4:5 }
+- J14: summary_duration=6, weight=1, eligible_machines=['M1', 'M2', 'M3', 'M4'], machine_times={ M1:6, M2:6, M3:6, M4:6 }
+- J15: summary_duration=7, weight=1, eligible_machines=['M1', 'M2', 'M3', 'M4'], machine_times={ M1:7, M2:7, M3:7, M4:7 }
+- J16: summary_duration=8, weight=1, eligible_machines=['M1', 'M2', 'M3', 'M4'], machine_times={ M1:8, M2:8, M3:8, M4:8 }
+- J17: summary_duration=9, weight=1, eligible_machines=['M1', 'M2', 'M3', 'M4'], machine_times={ M1:9, M2:9, M3:9, M4:9 }
+- J18: summary_duration=10, weight=1, eligible_machines=['M1', 'M2', 'M3', 'M4'], machine_times={ M1:10, M2:10, M3:10, M4:10 }
+
+Decision structure:
+- Each job must be assigned to exactly one eligible machine.
+- Each machine processes assigned jobs sequentially and non-preemptively.
+- No precedence constraints, release dates, due dates, sequence-dependent setups, or multi-period coupling are present.
+
+Objective:
+- Minimize the total completion time.
+
+Metadata:
+- number_jobs=18
+- number_machines=4
+- machine_type=P
+- objective_type=total_completion
+- processing_time_regime=clustered_short_long
+- heterogeneity_level=moderate
+- heavy_tail_flag=false
+- seed=504
+- formulation_size=756
+
+Visual interpretation:
+- Each row corresponds to one job.
+- The center matrix indicates machine compatibility or assignment admissibility.
+- For R-type instances, numbered cells in the center matrix give the exact machine-dependent processing times and blank cells indicate ineligible assignments.
+- The right-hand bar encodes the displayed job-duration cue used in the visual input.
+- The visual does not reveal the chosen assignment, start times, completion order, or objective value.

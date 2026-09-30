@@ -1,0 +1,27 @@
+{
+  "status": "optimal",
+  "is_feasible": true,
+  "objective_value": 25,
+  "objective_exact": 25,
+  "selected_groups": [
+    "G1",
+    "G2",
+    "G3",
+    "G4"
+  ],
+  "selected_group_count": 4,
+  "binding_constraints_count": 9,
+  "binding_items": [
+    "A",
+    "B",
+    "C",
+    "D",
+    "E",
+    "F",
+    "G",
+    "H",
+    "I"
+  ],
+  "solve_method": "gurobi_milp_set_packing",
+  "runtime_seconds": 0.013848
+}

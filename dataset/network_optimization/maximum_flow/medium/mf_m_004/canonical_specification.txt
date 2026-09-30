@@ -1,0 +1,38 @@
+This is a single-commodity s-t maximum flow problem (with its corresponding minimum cut).
+
+Nodes: {1,2,3,4,5,6,7,8,9,10,11,12,13}
+Source: 1
+Sink: 13
+
+Directed arcs (i,j) with capacity u_ij:
+
+(1,2): 15
+(1,3): 13
+(1,4): 11
+(2,5): 7
+(2,6): 6
+(3,6): 7
+(3,7): 6
+(4,7): 6
+(4,8): 5
+(5,6): 3
+(6,7): 3
+(7,8): 3
+(5,7): 2
+(6,8): 2
+(5,9): 6
+(6,9): 5
+(6,10): 6
+(7,10): 5
+(8,10): 4
+(7,9): 3
+(9,11): 7
+(10,11): 5
+(10,12): 6
+(11,13): 8
+(12,13): 7
+
+Ground-truth:
+Maximum flow value = 14
+Minimum cut value = 14
+One minimum cut partition: S={1,2,3,4,5,6,7,8,9,10,11}, T={12,13}

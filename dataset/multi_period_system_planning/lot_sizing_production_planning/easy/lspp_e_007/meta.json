@@ -1,0 +1,22 @@
+{
+  "number_periods": 10,
+  "number_products": 3,
+  "demand_pattern": "moderate_random_variation",
+  "setup_cost_regime": "period_and_product_dependent",
+  "capacity_regime": "nonbinding_large",
+  "multi_product_flag": true,
+  "visual_type": "timeline_demand_grid",
+  "seed": 507,
+  "formulation_size": 160,
+  "instance_id": "lspp_e_007",
+  "variant": "lot_sizing_production_planning",
+  "scenario": "lot_sizing_production_planning",
+  "difficulty": "easy",
+  "objective_value": 1239,
+  "objective_exact": 1239.0,
+  "status": "optimal",
+  "runtime_seconds": 0.011351000051945448,
+  "solve_method": "gurobi_milp_lspp",
+  "solver": "Gurobi",
+  "visual_checksum_md5": "e9fea047d52a62e6ee7303fda122ee5f"
+}

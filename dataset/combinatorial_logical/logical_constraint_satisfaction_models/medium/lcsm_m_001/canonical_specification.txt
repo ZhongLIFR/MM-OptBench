@@ -1,0 +1,133 @@
+Canonical specification for a deterministic medium-level logical constraint satisfaction instance.
+
+Interpretation:
+- Each Boolean variable may take value 0 or 1.
+- Every listed clause must be satisfied.
+- Every listed implication must hold.
+- Every listed at-most-one group allows at most one variable to take value 1.
+- Every listed cardinality constraint allows at most the indicated number of variables in its subset to take value 1.
+- This is a pure feasibility problem; any assignment satisfying all constraints is acceptable.
+- There are no weighted objectives, routing constraints, temporal indices, flow-balance equations, or multi-stage decisions.
+
+Sets:
+- Variables V = ['x1', 'x2', 'x3', 'x4', 'x5', 'x6', 'x7', 'x8', 'x9', 'x10', 'x11', 'x12', 'x13', 'x14', 'x15']
+- Clause rows C = ['C1', 'C2', 'C3', 'C4', 'C5', 'C6', 'C7', 'C8', 'C9', 'C10', 'C11', 'C12', 'C13', 'C14', 'C15', 'C16', 'C17', 'C18', 'C19', 'C20', 'C21', 'C22', 'C23', 'C24', 'C25', 'C26', 'C27', 'C28', 'C29', 'C30', 'C31', 'C32', 'C33', 'C34', 'C35', 'C36']
+
+Parameters and clause definitions:
+- C1: (x4 ∨ x15)
+- C2: (¬x7 ∨ ¬x12)
+- C3: (¬x3 ∨ x10)
+- C4: (x14 ∨ ¬x15)
+- C5: (¬x1 ∨ x4)
+- C6: (x9 ∨ ¬x13)
+- C7: (x2 ∨ ¬x7 ∨ ¬x8)
+- C8: (¬x7 ∨ ¬x8)
+- C9: (¬x12 ∨ x13)
+- C10: (x10 ∨ ¬x13)
+- C11: (x6 ∨ ¬x9)
+- C12: (¬x3 ∨ ¬x5)
+- C13: (x9 ∨ x10 ∨ ¬x12)
+- C14: (¬x6 ∨ x15)
+- C15: (¬x2 ∨ x8)
+- C16: (x1 ∨ x9 ∨ x12)
+- C17: (¬x3 ∨ ¬x6)
+- C18: (¬x1 ∨ x9)
+- C19: (x5 ∨ ¬x8)
+- C20: (¬x2 ∨ x7)
+- C21: (¬x12 ∨ ¬x13)
+- C22: (x10 ∨ ¬x15)
+- C23: (¬x10 ∨ x15)
+- C24: (x11 ∨ x14)
+- C25: (x1 ∨ ¬x3)
+- C26: (x2 ∨ ¬x3)
+- C27: (x1 ∨ ¬x8)
+- C28: (¬x2 ∨ x3)
+- C29: (¬x1 ∨ ¬x2)
+- C30: (¬x1 ∨ ¬x6 ∨ x9)
+- C31: (x5 ∨ ¬x7)
+- C32: (x9 ∨ x11)
+- C33: (¬x9 ∨ x13)
+- C34: (¬x10 ∨ x13)
+- C35: (x9 ∨ ¬x12)
+- C36: (¬x5 ∨ x6)
+
+Implication constraints:
+- I1: x8 <= x5
+- I2: x5 <= x6
+- I3: x10 <= x6
+
+At-most-one groups:
+- A1: variables = ['x1', 'x3']
+
+Cardinality constraints:
+- None
+
+Clause-variable matrix rows by original clause only (entries in {+1, -1, 0}, columns ordered by the variable list):
+- row C1: [0, 0, 0, 1, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 1]
+- row C2: [0, 0, 0, 0, 0, 0, -1, 0, 0, 0, 0, -1, 0, 0, 0]
+- row C3: [0, 0, -1, 0, 0, 0, 0, 0, 0, 1, 0, 0, 0, 0, 0]
+- row C4: [0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 1, -1]
+- row C5: [-1, 0, 0, 1, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0]
+- row C6: [0, 0, 0, 0, 0, 0, 0, 0, 1, 0, 0, 0, -1, 0, 0]
+- row C7: [0, 1, 0, 0, 0, 0, -1, -1, 0, 0, 0, 0, 0, 0, 0]
+- row C8: [0, 0, 0, 0, 0, 0, -1, -1, 0, 0, 0, 0, 0, 0, 0]
+- row C9: [0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, -1, 1, 0, 0]
+- row C10: [0, 0, 0, 0, 0, 0, 0, 0, 0, 1, 0, 0, -1, 0, 0]
+- row C11: [0, 0, 0, 0, 0, 1, 0, 0, -1, 0, 0, 0, 0, 0, 0]
+- row C12: [0, 0, -1, 0, -1, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0]
+- row C13: [0, 0, 0, 0, 0, 0, 0, 0, 1, 1, 0, -1, 0, 0, 0]
+- row C14: [0, 0, 0, 0, 0, -1, 0, 0, 0, 0, 0, 0, 0, 0, 1]
+- row C15: [0, -1, 0, 0, 0, 0, 0, 1, 0, 0, 0, 0, 0, 0, 0]
+- row C16: [1, 0, 0, 0, 0, 0, 0, 0, 1, 0, 0, 1, 0, 0, 0]
+- row C17: [0, 0, -1, 0, 0, -1, 0, 0, 0, 0, 0, 0, 0, 0, 0]
+- row C18: [-1, 0, 0, 0, 0, 0, 0, 0, 1, 0, 0, 0, 0, 0, 0]
+- row C19: [0, 0, 0, 0, 1, 0, 0, -1, 0, 0, 0, 0, 0, 0, 0]
+- row C20: [0, -1, 0, 0, 0, 0, 1, 0, 0, 0, 0, 0, 0, 0, 0]
+- row C21: [0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, -1, -1, 0, 0]
+- row C22: [0, 0, 0, 0, 0, 0, 0, 0, 0, 1, 0, 0, 0, 0, -1]
+- row C23: [0, 0, 0, 0, 0, 0, 0, 0, 0, -1, 0, 0, 0, 0, 1]
+- row C24: [0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 1, 0, 0, 1, 0]
+- row C25: [1, 0, -1, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0]
+- row C26: [0, 1, -1, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0]
+- row C27: [1, 0, 0, 0, 0, 0, 0, -1, 0, 0, 0, 0, 0, 0, 0]
+- row C28: [0, -1, 1, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0]
+- row C29: [-1, -1, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0]
+- row C30: [-1, 0, 0, 0, 0, -1, 0, 0, 1, 0, 0, 0, 0, 0, 0]
+- row C31: [0, 0, 0, 0, 1, 0, -1, 0, 0, 0, 0, 0, 0, 0, 0]
+- row C32: [0, 0, 0, 0, 0, 0, 0, 0, 1, 0, 1, 0, 0, 0, 0]
+- row C33: [0, 0, 0, 0, 0, 0, 0, 0, -1, 0, 0, 0, 1, 0, 0]
+- row C34: [0, 0, 0, 0, 0, 0, 0, 0, 0, -1, 0, 0, 1, 0, 0]
+- row C35: [0, 0, 0, 0, 0, 0, 0, 0, 1, 0, 0, -1, 0, 0, 0]
+- row C36: [0, 0, 0, 0, -1, 1, 0, 0, 0, 0, 0, 0, 0, 0, 0]
+
+Decision variables:
+- For each variable x in V, x is binary and belongs to {0,1}.
+
+Objective:
+- Pure feasibility: find any assignment satisfying all logical constraints.
+
+Metadata:
+- number_of_variables = 15
+- number_of_logical_constraints = 40
+- clause_count = 36
+- implication_count = 3
+- at_most_one_group_count = 1
+- cardinality_constraint_count = 0
+- clause_density = 2.6667
+- clause_type_distribution = {'2_sat': 32, '3_sat': 4, '4_sat': 0}
+- implication_chain_depth = 2
+- matrix_fill_ratio = 0.14
+- seed = 8201
+- group = A
+- visual_type = clause_variable_matrix
+- variable_cluster_count = 2
+- visual_group_structure = clustered_medium
+
+Visual interpretation:
+- The figure uses one column per Boolean variable.
+- Rows labeled C* encode original CNF clauses.
+- Rows labeled I* encode implication constraints directly inside the matrix.
+- Rows labeled A* encode pairwise exclusions induced by all at-most-one groups.
+- Rows labeled K* encode cardinality constraints and include the row upper bound directly in the row label.
+- '+' indicates a positive literal, '−' indicates a negative literal, and '.' indicates absence.
+- The visual reveals the full instance data required for optimization but does not reveal a satisfying assignment.

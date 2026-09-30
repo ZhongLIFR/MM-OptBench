@@ -1,0 +1,152 @@
+{
+  "instance_id": "pms_e_002",
+  "variant": "parallel_machine_scheduling",
+  "scenario": "parallel_machine_scheduling",
+  "difficulty": "easy",
+  "sets": {
+    "jobs": [
+      "J1",
+      "J2",
+      "J3",
+      "J4",
+      "J5",
+      "J6",
+      "J7",
+      "J8",
+      "J9",
+      "J10"
+    ],
+    "machines": [
+      "M1",
+      "M2",
+      "M3"
+    ]
+  },
+  "base_processing_time": {
+    "J1": 2,
+    "J2": 3,
+    "J3": 4,
+    "J4": 5,
+    "J5": 6,
+    "J6": 7,
+    "J7": 8,
+    "J8": 3,
+    "J9": 5,
+    "J10": 6
+  },
+  "machine_speed": {
+    "M1": 1.0,
+    "M2": 1.0,
+    "M3": 1.0
+  },
+  "eligibility": {
+    "J1": [
+      "M1",
+      "M2"
+    ],
+    "J2": [
+      "M1",
+      "M3"
+    ],
+    "J3": [
+      "M2",
+      "M3"
+    ],
+    "J4": [
+      "M1",
+      "M2",
+      "M3"
+    ],
+    "J5": [
+      "M1",
+      "M2"
+    ],
+    "J6": [
+      "M2",
+      "M3"
+    ],
+    "J7": [
+      "M1",
+      "M3"
+    ],
+    "J8": [
+      "M1",
+      "M2",
+      "M3"
+    ],
+    "J9": [
+      "M1",
+      "M2"
+    ],
+    "J10": [
+      "M2",
+      "M3"
+    ]
+  },
+  "effective_processing_time": {
+    "J1": {
+      "M1": 2,
+      "M2": 2
+    },
+    "J2": {
+      "M1": 3,
+      "M3": 3
+    },
+    "J3": {
+      "M2": 4,
+      "M3": 4
+    },
+    "J4": {
+      "M1": 5,
+      "M2": 5,
+      "M3": 5
+    },
+    "J5": {
+      "M1": 6,
+      "M2": 6
+    },
+    "J6": {
+      "M2": 7,
+      "M3": 7
+    },
+    "J7": {
+      "M1": 8,
+      "M3": 8
+    },
+    "J8": {
+      "M1": 3,
+      "M2": 3,
+      "M3": 3
+    },
+    "J9": {
+      "M1": 5,
+      "M2": 5
+    },
+    "J10": {
+      "M2": 6,
+      "M3": 6
+    }
+  },
+  "weights": {
+    "J1": 1,
+    "J2": 1,
+    "J3": 1,
+    "J4": 1,
+    "J5": 1,
+    "J6": 1,
+    "J7": 1,
+    "J8": 1,
+    "J9": 1,
+    "J10": 1
+  },
+  "meta_parameters": {
+    "number_jobs": 10,
+    "number_machines": 3,
+    "machine_type": "identical",
+    "objective_type": "makespan",
+    "processing_time_regime": "clustered_small_large",
+    "long_job_flag": false,
+    "seed": 402,
+    "formulation_size": 55
+  }
+}

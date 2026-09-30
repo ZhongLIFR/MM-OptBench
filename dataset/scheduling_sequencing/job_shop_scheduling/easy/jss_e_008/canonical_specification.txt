@@ -1,0 +1,42 @@
+This is a single-period classical Job-Shop Scheduling problem.
+
+Instance ID: jss_e_008
+Variant: classical_jssp
+Scenario: job_shop_scheduling
+
+Jobs and ordered operations:
+- J1: O1 on M1 (duration=2) -> O2 on M3 (duration=7) -> O3 on M2 (duration=3)
+- J2: O1 on M2 (duration=3) -> O2 on M4 (duration=6) -> O3 on M1 (duration=2)
+- J3: O1 on M3 (duration=4) -> O2 on M1 (duration=5) -> O3 on M4 (duration=3)
+- J4: O1 on M4 (duration=3) -> O2 on M2 (duration=6) -> O3 on M3 (duration=4)
+
+Machines:
+- M1: J1-O1 (2), J2-O3 (2), J3-O2 (5)
+- M2: J1-O3 (3), J2-O1 (3), J4-O2 (6)
+- M3: J1-O2 (7), J3-O1 (4), J4-O3 (4)
+- M4: J2-O2 (6), J3-O3 (3), J4-O1 (3)
+
+Objective:
+- Minimize the makespan.
+
+Constraints:
+- Operations of each job must follow their listed order.
+- Each machine can process at most one operation at a time.
+- Operations are non-preemptive.
+- Start times are continuous nonnegative variables.
+
+Metadata:
+- number_jobs=4
+- number_machines=4
+- operations_per_job=3
+- processing_time_regime=uniform_small
+- routing_pattern=permuted
+- bottleneck_machine_flag=false
+- seed=208
+- formulation_size=56
+
+Visual interpretation:
+- Each row corresponds to one job.
+- Each block corresponds to one operation in precedence order.
+- Each block reports the required machine and processing duration.
+- The visual does not reveal any solved schedule, operation start time, or optimal makespan.

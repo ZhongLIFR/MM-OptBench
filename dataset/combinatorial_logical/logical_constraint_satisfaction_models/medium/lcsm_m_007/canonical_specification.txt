@@ -1,0 +1,173 @@
+Canonical specification for a deterministic medium-level logical constraint satisfaction instance.
+
+Interpretation:
+- Each Boolean variable may take value 0 or 1.
+- Every listed clause must be satisfied.
+- Every listed implication must hold.
+- Every listed at-most-one group allows at most one variable to take value 1.
+- Every listed cardinality constraint allows at most the indicated number of variables in its subset to take value 1.
+- This is a pure feasibility problem; any assignment satisfying all constraints is acceptable.
+- There are no weighted objectives, routing constraints, temporal indices, flow-balance equations, or multi-stage decisions.
+
+Sets:
+- Variables V = ['x1', 'x2', 'x3', 'x4', 'x5', 'x6', 'x7', 'x8', 'x9', 'x10', 'x11', 'x12', 'x13', 'x14', 'x15', 'x16', 'x17', 'x18', 'x19', 'x20', 'x21', 'x22', 'x23', 'x24']
+- Clause rows C = ['C1', 'C2', 'C3', 'C4', 'C5', 'C6', 'C7', 'C8', 'C9', 'C10', 'C11', 'C12', 'C13', 'C14', 'C15', 'C16', 'C17', 'C18', 'C19', 'C20', 'C21', 'C22', 'C23', 'C24', 'C25', 'C26', 'C27', 'C28', 'C29', 'C30', 'C31', 'C32', 'C33', 'C34', 'C35', 'C36', 'C37', 'C38', 'C39', 'C40', 'C41', 'C42', 'C43', 'C44', 'C45', 'C46', 'C47', 'C48', 'C49', 'C50', 'C51', 'C52', 'C53', 'C54']
+
+Parameters and clause definitions:
+- C1: (x9 ∨ x21)
+- C2: (¬x16 ∨ ¬x23)
+- C3: (x12 ∨ ¬x23)
+- C4: (¬x8 ∨ ¬x24)
+- C5: (x13 ∨ x17)
+- C6: (x23 ∨ ¬x24)
+- C7: (x1 ∨ x4)
+- C8: (x7 ∨ x8)
+- C9: (x7 ∨ x12 ∨ x15)
+- C10: (¬x2 ∨ ¬x4 ∨ x5)
+- C11: (¬x19 ∨ ¬x21 ∨ x24)
+- C12: (x13 ∨ x14 ∨ ¬x17)
+- C13: (x13 ∨ x18)
+- C14: (x19 ∨ x20 ∨ ¬x24)
+- C15: (x2 ∨ x4 ∨ ¬x5)
+- C16: (x9 ∨ ¬x12)
+- C17: (x17 ∨ ¬x20)
+- C18: (¬x8 ∨ ¬x11)
+- C19: (¬x13 ∨ x16 ∨ ¬x18)
+- C20: (x21 ∨ ¬x22)
+- C21: (¬x1 ∨ x4 ∨ ¬x5)
+- C22: (¬x8 ∨ ¬x10 ∨ ¬x12)
+- C23: (x8 ∨ x10 ∨ x11)
+- C24: (¬x10 ∨ x14)
+- C25: (x2 ∨ ¬x18)
+- C26: (x1 ∨ ¬x6 ∨ x21)
+- C27: (x13 ∨ ¬x15)
+- C28: (¬x21 ∨ x22 ∨ ¬x24)
+- C29: (x1 ∨ x5)
+- C30: (x2 ∨ x4)
+- C31: (¬x19 ∨ x22 ∨ x23 ∨ ¬x24)
+- C32: (x16 ∨ ¬x17)
+- C33: (¬x1 ∨ x13)
+- C34: (x14 ∨ x16 ∨ ¬x22)
+- C35: (x3 ∨ x20)
+- C36: (x2 ∨ ¬x22)
+- C37: (x15 ∨ ¬x17)
+- C38: (¬x3 ∨ x6)
+- C39: (¬x4 ∨ ¬x5 ∨ x6)
+- C40: (¬x1 ∨ x4 ∨ x6)
+- C41: (¬x13 ∨ x15)
+- C42: (x1 ∨ ¬x2 ∨ ¬x4)
+- C43: (x2 ∨ ¬x4 ∨ ¬x5)
+- C44: (x22 ∨ ¬x23)
+- C45: (x8 ∨ ¬x9)
+- C46: (¬x2 ∨ ¬x6)
+- C47: (¬x9 ∨ ¬x10 ∨ x11)
+- C48: (¬x7 ∨ ¬x8)
+- C49: (x20 ∨ ¬x21 ∨ ¬x23)
+- C50: (¬x14 ∨ ¬x16)
+- C51: (x1 ∨ ¬x4 ∨ x6)
+- C52: (¬x14 ∨ x23)
+- C53: (¬x14 ∨ ¬x15 ∨ ¬x17 ∨ ¬x18)
+- C54: (x4 ∨ ¬x6)
+
+Implication constraints:
+- I1: x21 <= x9
+- I2: x9 <= x13
+- I3: x13 <= x4
+- I4: x4 <= x6
+- I5: x6 <= x1
+- I6: x20 <= x21
+
+At-most-one groups:
+- A1: variables = ['x14', 'x15']
+- A2: variables = ['x2', 'x4']
+
+Cardinality constraints:
+- K1: variables = ['x13', 'x14', 'x15', 'x16', 'x17', 'x18'], upper_bound = 2
+
+Clause-variable matrix rows by original clause only (entries in {+1, -1, 0}, columns ordered by the variable list):
+- row C1: [0, 0, 0, 0, 0, 0, 0, 0, 1, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 1, 0, 0, 0]
+- row C2: [0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, -1, 0, 0, 0, 0, 0, 0, -1, 0]
+- row C3: [0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 1, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, -1, 0]
+- row C4: [0, 0, 0, 0, 0, 0, 0, -1, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, -1]
+- row C5: [0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 1, 0, 0, 0, 1, 0, 0, 0, 0, 0, 0, 0]
+- row C6: [0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 1, -1]
+- row C7: [1, 0, 0, 1, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0]
+- row C8: [0, 0, 0, 0, 0, 0, 1, 1, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0]
+- row C9: [0, 0, 0, 0, 0, 0, 1, 0, 0, 0, 0, 1, 0, 0, 1, 0, 0, 0, 0, 0, 0, 0, 0, 0]
+- row C10: [0, -1, 0, -1, 1, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0]
+- row C11: [0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, -1, 0, -1, 0, 0, 1]
+- row C12: [0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 1, 1, 0, 0, -1, 0, 0, 0, 0, 0, 0, 0]
+- row C13: [0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 1, 0, 0, 0, 0, 1, 0, 0, 0, 0, 0, 0]
+- row C14: [0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 1, 1, 0, 0, 0, -1]
+- row C15: [0, 1, 0, 1, -1, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0]
+- row C16: [0, 0, 0, 0, 0, 0, 0, 0, 1, 0, 0, -1, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0]
+- row C17: [0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 1, 0, 0, -1, 0, 0, 0, 0]
+- row C18: [0, 0, 0, 0, 0, 0, 0, -1, 0, 0, -1, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0]
+- row C19: [0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, -1, 0, 0, 1, 0, -1, 0, 0, 0, 0, 0, 0]
+- row C20: [0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 1, -1, 0, 0]
+- row C21: [-1, 0, 0, 1, -1, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0]
+- row C22: [0, 0, 0, 0, 0, 0, 0, -1, 0, -1, 0, -1, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0]
+- row C23: [0, 0, 0, 0, 0, 0, 0, 1, 0, 1, 1, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0]
+- row C24: [0, 0, 0, 0, 0, 0, 0, 0, 0, -1, 0, 0, 0, 1, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0]
+- row C25: [0, 1, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, -1, 0, 0, 0, 0, 0, 0]
+- row C26: [1, 0, 0, 0, 0, -1, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 1, 0, 0, 0]
+- row C27: [0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 1, 0, -1, 0, 0, 0, 0, 0, 0, 0, 0, 0]
+- row C28: [0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, -1, 1, 0, -1]
+- row C29: [1, 0, 0, 0, 1, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0]
+- row C30: [0, 1, 0, 1, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0]
+- row C31: [0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, -1, 0, 0, 1, 1, -1]
+- row C32: [0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 1, -1, 0, 0, 0, 0, 0, 0, 0]
+- row C33: [-1, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 1, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0]
+- row C34: [0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 1, 0, 1, 0, 0, 0, 0, 0, -1, 0, 0]
+- row C35: [0, 0, 1, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 1, 0, 0, 0, 0]
+- row C36: [0, 1, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, -1, 0, 0]
+- row C37: [0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 1, 0, -1, 0, 0, 0, 0, 0, 0, 0]
+- row C38: [0, 0, -1, 0, 0, 1, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0]
+- row C39: [0, 0, 0, -1, -1, 1, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0]
+- row C40: [-1, 0, 0, 1, 0, 1, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0]
+- row C41: [0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, -1, 0, 1, 0, 0, 0, 0, 0, 0, 0, 0, 0]
+- row C42: [1, -1, 0, -1, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0]
+- row C43: [0, 1, 0, -1, -1, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0]
+- row C44: [0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 1, -1, 0]
+- row C45: [0, 0, 0, 0, 0, 0, 0, 1, -1, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0]
+- row C46: [0, -1, 0, 0, 0, -1, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0]
+- row C47: [0, 0, 0, 0, 0, 0, 0, 0, -1, -1, 1, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0]
+- row C48: [0, 0, 0, 0, 0, 0, -1, -1, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0]
+- row C49: [0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 1, -1, 0, -1, 0]
+- row C50: [0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, -1, 0, -1, 0, 0, 0, 0, 0, 0, 0, 0]
+- row C51: [1, 0, 0, -1, 0, 1, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0]
+- row C52: [0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, -1, 0, 0, 0, 0, 0, 0, 0, 0, 1, 0]
+- row C53: [0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, -1, -1, 0, -1, -1, 0, 0, 0, 0, 0, 0]
+- row C54: [0, 0, 0, 1, 0, -1, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0]
+
+Decision variables:
+- For each variable x in V, x is binary and belongs to {0,1}.
+
+Objective:
+- Pure feasibility: find any assignment satisfying all logical constraints.
+
+Metadata:
+- number_of_variables = 24
+- number_of_logical_constraints = 63
+- clause_count = 54
+- implication_count = 6
+- at_most_one_group_count = 2
+- cardinality_constraint_count = 1
+- clause_density = 2.625
+- clause_type_distribution = {'2_sat': 32, '3_sat': 20, '4_sat': 2}
+- implication_chain_depth = 6
+- matrix_fill_ratio = 0.1019
+- seed = 8207
+- group = B
+- visual_type = clause_variable_matrix
+- variable_cluster_count = 4
+- visual_group_structure = clustered_overlap
+
+Visual interpretation:
+- The figure uses one column per Boolean variable.
+- Rows labeled C* encode original CNF clauses.
+- Rows labeled I* encode implication constraints directly inside the matrix.
+- Rows labeled A* encode pairwise exclusions induced by all at-most-one groups.
+- Rows labeled K* encode cardinality constraints and include the row upper bound directly in the row label.
+- '+' indicates a positive literal, '−' indicates a negative literal, and '.' indicates absence.
+- The visual reveals the full instance data required for optimization but does not reveal a satisfying assignment.

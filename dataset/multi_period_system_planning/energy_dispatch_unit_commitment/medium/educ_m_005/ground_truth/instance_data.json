@@ -1,0 +1,132 @@
+{
+  "instance_id": "educ_m_005",
+  "variant": "energy_dispatch_unit_commitment",
+  "scenario": "energy_dispatch_unit_commitment",
+  "difficulty": "medium",
+  "sets": {
+    "generators": [
+      "G1",
+      "G2",
+      "G3",
+      "G4",
+      "G5"
+    ],
+    "periods": [
+      "t1",
+      "t2",
+      "t3",
+      "t4",
+      "t5",
+      "t6",
+      "t7",
+      "t8",
+      "t9",
+      "t10",
+      "t11",
+      "t12"
+    ]
+  },
+  "demand": {
+    "t1": 60,
+    "t2": 56,
+    "t3": 52,
+    "t4": 48,
+    "t5": 44,
+    "t6": 42,
+    "t7": 46,
+    "t8": 50,
+    "t9": 58,
+    "t10": 66,
+    "t11": 62,
+    "t12": 54
+  },
+  "cost": {
+    "G1": 8,
+    "G2": 10,
+    "G3": 14,
+    "G4": 19,
+    "G5": 23
+  },
+  "startup_cost": {
+    "G1": 80,
+    "G2": 52,
+    "G3": 26,
+    "G4": 12,
+    "G5": 8
+  },
+  "shutdown_cost": {
+    "G1": 8,
+    "G2": 6,
+    "G3": 4,
+    "G4": 2,
+    "G5": 2
+  },
+  "pmin": {
+    "G1": 16,
+    "G2": 10,
+    "G3": 0,
+    "G4": 0,
+    "G5": 0
+  },
+  "pmax": {
+    "G1": 30,
+    "G2": 22,
+    "G3": 18,
+    "G4": 14,
+    "G5": 12
+  },
+  "ramp_up": {
+    "G1": 16,
+    "G2": 14,
+    "G3": 16,
+    "G4": 14,
+    "G5": 12
+  },
+  "ramp_down": {
+    "G1": 16,
+    "G2": 14,
+    "G3": 16,
+    "G4": 14,
+    "G5": 12
+  },
+  "min_up": {
+    "G1": 1,
+    "G2": 1,
+    "G3": 1,
+    "G4": 1,
+    "G5": 1
+  },
+  "min_down": {
+    "G1": 1,
+    "G2": 1,
+    "G3": 1,
+    "G4": 1,
+    "G5": 1
+  },
+  "initial_status": {
+    "G1": 0,
+    "G2": 0,
+    "G3": 0,
+    "G4": 0,
+    "G5": 0
+  },
+  "initial_output": {
+    "G1": 0,
+    "G2": 0,
+    "G3": 0,
+    "G4": 0,
+    "G5": 0
+  },
+  "meta_parameters": {
+    "number_periods": 12,
+    "number_units": 5,
+    "demand_regime": "increasing_then_decreasing",
+    "ramping_regime": "mixed_moderate",
+    "minimum_up_down_flag": true,
+    "capacity_regime": "moderate_stress",
+    "peak_load_flag": false,
+    "visual_type": "economics_table_plus_demand_timeline_and_capacity_ranges",
+    "seed": 905,
+    "formulation_size": 612
+  }
+}

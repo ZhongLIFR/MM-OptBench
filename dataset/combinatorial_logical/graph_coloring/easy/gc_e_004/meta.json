@@ -1,0 +1,41 @@
+{
+  "number_of_vertices": 11,
+  "number_of_edges": 14,
+  "number_of_colors": 3,
+  "graph_density": 0.2545,
+  "chromatic_number": 3,
+  "topology_type": "cycle_based_graph",
+  "graph_generator": "odd_cycle_augmented",
+  "seed": 5104,
+  "group": "B",
+  "visual_type": "adjacency_matrix",
+  "formulation_size": 86,
+  "planted_color_groups": [
+    [
+      1,
+      4,
+      6,
+      9
+    ],
+    [
+      2,
+      5,
+      7,
+      10
+    ],
+    [
+      3,
+      8,
+      11
+    ]
+  ],
+  "instance_id": "gc_e_004",
+  "variant": "graph_coloring",
+  "scenario": "graph_coloring",
+  "difficulty": "easy",
+  "status": "feasible",
+  "runtime_seconds": 0.004369,
+  "solve_method": "gurobi_milp_graph_coloring_decision",
+  "solver": "Gurobi (MILP)",
+  "visual_checksum_md5": "b8470d086f105c5b772f2a98faad42e4"
+}

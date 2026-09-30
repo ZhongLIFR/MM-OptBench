@@ -1,0 +1,89 @@
+Canonical specification for a deterministic easy-level workforce planning and shift scheduling instance.
+
+Interpretation:
+- A single service unit must assign workers to shifts over a finite planning horizon.
+- Every day-shift pair has a staffing requirement that must be covered.
+- Each worker may work at most one shift per day.
+- A worker may be assigned only to shifts permitted by that worker's daily availability code.
+- Each assignment incurs the worker-specific and shift-specific cost listed below.
+- No overtime, fairness terms, minimum-rest rules, consecutive-day limits, skill-substitution rules, or stochastic effects are included.
+
+Sets:
+- Workers W = ['W1', 'W2', 'W3', 'W4', 'W5', 'W6', 'W7', 'W8', 'W9']
+- Days T = ['Mon1', 'Tue1', 'Wed1', 'Thu1', 'Fri1', 'Sat1', 'Sun1', 'Mon2']
+- Shifts S = ['D', 'E', 'N']
+
+Shift labels and times:
+- D = Day = 07:00-15:00
+- E = Evening = 15:00-23:00
+- N = Night = 23:00-07:00
+
+Daily staffing requirements:
+- Mon1: D=2, E=1, N=1
+- Tue1: D=2, E=1, N=1
+- Wed1: D=2, E=1, N=1
+- Thu1: D=2, E=1, N=1
+- Fri1: D=2, E=1, N=2
+- Sat1: D=3, E=2, N=2
+- Sun1: D=2, E=1, N=2
+- Mon2: D=2, E=1, N=1
+
+Worker-specific shift costs:
+- W1: cost(D/E/N)=(7,10,15)
+- W2: cost(D/E/N)=(8,8,99)
+- W3: cost(D/E/N)=(99,9,7)
+- W4: cost(D/E/N)=(9,11,12)
+- W5: cost(D/E/N)=(6,12,99)
+- W6: cost(D/E/N)=(10,10,8)
+- W7: cost(D/E/N)=(11,11,11)
+- W8: cost(D/E/N)=(12,9,9)
+- W9: cost(D/E/N)=(13,12,7)
+
+Availability code legend:
+- OFF: no shift allowed
+- D: only Day allowed
+- E: only Evening allowed
+- N: only Night allowed
+- DE: Day or Evening allowed
+- EN: Evening or Night allowed
+- DEN: Day, Evening, or Night allowed
+
+Worker-by-day availability codes:
+- W1: Mon1=DEN, Tue1=DEN, Wed1=DEN, Thu1=DEN, Fri1=DEN, Sat1=DEN, Sun1=DEN, Mon2=DEN
+- W2: Mon1=DE, Tue1=DE, Wed1=DE, Thu1=DE, Fri1=DE, Sat1=D, Sun1=OFF, Mon2=DE
+- W3: Mon1=N, Tue1=EN, Wed1=N, Thu1=EN, Fri1=N, Sat1=N, Sun1=N, Mon2=EN
+- W4: Mon1=DEN, Tue1=DEN, Wed1=DEN, Thu1=DEN, Fri1=DEN, Sat1=DEN, Sun1=DEN, Mon2=DEN
+- W5: Mon1=D, Tue1=D, Wed1=OFF, Thu1=D, Fri1=D, Sat1=DE, Sun1=DE, Mon2=D
+- W6: Mon1=EN, Tue1=EN, Wed1=EN, Thu1=EN, Fri1=EN, Sat1=EN, Sun1=N, Mon2=EN
+- W7: Mon1=DEN, Tue1=OFF, Wed1=DEN, Thu1=DEN, Fri1=OFF, Sat1=DEN, Sun1=DEN, Mon2=DEN
+- W8: Mon1=OFF, Tue1=DEN, Wed1=OFF, Thu1=DEN, Fri1=DEN, Sat1=DEN, Sun1=DEN, Mon2=DEN
+- W9: Mon1=N, Tue1=N, Wed1=EN, Thu1=N, Fri1=N, Sat1=EN, Sun1=N, Mon2=N
+
+Decision variables:
+- x[w,t,s] in {0,1}: equals 1 if worker w is assigned to shift s on day t
+
+Objective:
+- Minimize total assignment cost: sum_{w,t,s} cost[w,s] * x[w,t,s]
+
+Constraints:
+- Coverage: for every day t and shift s, sum_w x[w,t,s] >= demand[t,s]
+- One shift per day: for every worker w and day t, sum_s x[w,t,s] <= 1
+- Availability: x[w,t,s] may be 1 only if shift s is contained in the availability code for worker w on day t
+- Binary variable domain
+
+Metadata:
+- number_periods=8
+- number_workers=9
+- number_shift_types=3
+- coverage_regime=weekend_night_and_day_peak
+- cost_regime=night_specialists_with_generalists
+- availability_regime=heterogeneous_weekend_patterns
+- peak_demand_flag=true
+- visual_type=staffing_heatmap_plus_worker_profile_availability_matrix
+- seed=908
+- formulation_size=528
+
+Visual interpretation:
+- visual_0.png shows exact day-level and shift-level staffing demand.
+- visual_1.png shows exact worker-level assignment costs and daily availability codes.
+- The visual files do not reveal the optimal assignment roster or the optimal objective value.

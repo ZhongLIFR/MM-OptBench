@@ -1,0 +1,8 @@
+A directed transportation network is shown in the figure.
+
+Each node is labeled with its supply (positive) or demand (negative).
+Each directed arc is labeled with (capacity, cost).
+
+Construct:
+(i) the mathematical transportation-flow model, and
+(ii) solver-executable code implementing the model.

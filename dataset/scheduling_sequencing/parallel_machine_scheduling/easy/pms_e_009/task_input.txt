@@ -1,0 +1,17 @@
+A visual representation is provided for a job-machine scheduling instance.
+
+The figure contains one row per job. In the center, a machine-eligibility matrix shows which machines can process each job. On the right, a duration bar indicates the processing time of each job. For weighted-completion instances, the job weight is also shown next to the row label. For uniformly related machine instances, the machine-speed factors are shown in the figure header.
+
+Interpretation:
+- Each job must be assigned to exactly one eligible machine.
+- Each machine can process at most one job at a time.
+- Jobs are non-preemptive.
+- There are no precedence constraints, release dates, due dates, setup times, or machine calendars.
+- For related-machine instances, the effective processing time of a job on a machine is determined by the machine speed shown in the visual.
+
+Task:
+1) Write a mathematical optimization model for this instance.
+2) Provide solver-executable code implementing the model.
+
+Objective:
+Minimize the sum of job completion times.

@@ -1,0 +1,33 @@
+{
+  "status": "optimal",
+  "objective_value": 189.0,
+  "objective_exact": 189.0,
+  "flows": {
+    "1_4": 8.0,
+    "1_5": 4.0,
+    "2_4": 2.0,
+    "2_5": 8.0,
+    "2_6": 0.0,
+    "3_5": 0.0,
+    "3_6": 8.0,
+    "4_7": 7.0,
+    "4_9": 3.0,
+    "5_7": 5.0,
+    "5_8": 2.0,
+    "5_9": 5.0,
+    "6_8": 7.0,
+    "6_9": 1.0,
+    "7_10": 8.0,
+    "7_11": 4.0,
+    "8_10": 1.0,
+    "8_11": 8.0,
+    "9_10": 5.0,
+    "9_11": 4.0,
+    "7_8": 0.0
+  },
+  "runtime_seconds": 0.06884980201721191,
+  "solve_method": "gurobi_lp_mcf",
+  "solver_used": "Gurobi",
+  "solver": "Gurobi",
+  "solver_policy": "gurobi_first_then_exact_scipy_linprog"
+}

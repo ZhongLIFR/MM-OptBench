@@ -1,0 +1,19 @@
+Return valid JSON only, without markdown fences.
+
+Use this schema exactly:
+{
+  "case_id": "<case id>",
+  "problem_type": "<brief canonical problem type>",
+  "extracted_data": {
+    "structured_instance": {},
+    "assumptions": ["<only if necessary>"],
+    "uncertain_or_missing": ["<empty if none>"]
+  }
+}
+
+Rules:
+- This is an extraction-only task. Do not solve the optimization problem.
+- Do not write solver code.
+- Focus on recovering or normalizing the exact instance-specific data from the provided materials.
+- Keep structured_instance concise but faithful.
+- Use English only.

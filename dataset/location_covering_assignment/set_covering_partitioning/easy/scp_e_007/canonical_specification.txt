@@ -1,0 +1,56 @@
+This is a single-period abstract subset-selection instance.
+
+Instance ID: scp_e_007
+Variant: set_partitioning
+Difficulty: easy
+Incidence structure: exact_cover_pairs_vs_longer_triples
+Cost regime: pair_favoring_small_variation
+
+Elements:
+- E1
+- E2
+- E3
+- E4
+- E5
+- E6
+- E7
+- E8
+
+Candidate subsets and subset costs:
+- S1: cost=3, contains E1, E2
+- S2: cost=5, contains E1, E2, E3
+- S3: cost=3, contains E3, E4
+- S4: cost=4, contains E4, E5
+- S5: cost=3, contains E5, E6
+- S6: cost=5, contains E6, E7, E8
+- S7: cost=3, contains E7, E8
+- S8: cost=4, contains E2, E5, E8
+
+Coverage options by element:
+- E1: S1, S2
+- E2: S1, S2, S8
+- E3: S2, S3
+- E4: S3, S4
+- E5: S4, S5, S8
+- E6: S5, S6
+- E7: S6, S7
+- E8: S6, S7, S8
+
+Objective:
+- Minimize total subset cost.
+
+Constraints:
+- Every element must be assigned to exactly one selected subset.
+- All subset-selection variables are binary.
+
+Metadata summary:
+- number_of_elements = 8
+- number_of_candidate_subsets = 8
+- average_subset_size = 2.375
+- incidence_density = 0.2969
+- critical_elements = E1, E3, E4, E6, E7
+
+Visual interpretation:
+- The visual is a single exact candidate-subset table.
+- Rows correspond to candidate subsets and columns correspond to elements.
+- Filled cells indicate membership and the left bars show exact subset costs.

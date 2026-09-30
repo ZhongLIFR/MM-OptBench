@@ -1,0 +1,29 @@
+{
+  "instance_id": "pmc_h_008",
+  "family": "2. Location, Covering, and Assignment",
+  "subtype": "p-Median and p-Center (PMC)",
+  "difficulty": "hard",
+  "variant_type": "p_center",
+  "number_of_candidates": 14,
+  "number_of_demand_points": 22,
+  "p_value": 5,
+  "geometry_type": "four_clusters_with_remote_southeast_group",
+  "demand_weight_regime": "not_used",
+  "distance_metric": "euclidean_rounded_2dp",
+  "visual_type": "single_visual_spatial_map_with_inline_node_attributes",
+  "seed": 3008,
+  "status": "optimal",
+  "objective_exact": 7.4,
+  "objective_value": 7.4,
+  "solver_policy": "prefer_gurobi_else_exact_fallback",
+  "solver_used": "gurobi",
+  "solve_method": "gurobi_mip",
+  "runtime_seconds": 0.038841,
+  "visual_checksum_sha256": "d53258d7dc1c417f771bafa341207ab52f830dbea53a29f9890176b893a75089",
+  "formulation_size": {
+    "num_binary_y": 14,
+    "num_binary_x": 308,
+    "num_variables_total": 323,
+    "num_constraints_total": 353
+  }
+}

@@ -1,0 +1,297 @@
+{
+  "instance_id": "sp_e_003",
+  "variant": "set_packing",
+  "scenario": "set_packing",
+  "difficulty": "easy",
+  "problem_type": "set_packing",
+  "objective_type": "maximize_total_weight",
+  "sets": {
+    "items": [
+      "A",
+      "B",
+      "C",
+      "D",
+      "E",
+      "F",
+      "G",
+      "H",
+      "I"
+    ],
+    "candidate_groups": [
+      "G1",
+      "G2",
+      "G3",
+      "G4",
+      "G5",
+      "G6",
+      "G7",
+      "G8",
+      "G9",
+      "G10",
+      "G11",
+      "G12"
+    ]
+  },
+  "weights": [
+    8,
+    6,
+    8,
+    8,
+    7,
+    6,
+    8,
+    5,
+    6,
+    8,
+    8,
+    7
+  ],
+  "subsets": {
+    "G1": {
+      "elements": [
+        "C",
+        "E"
+      ],
+      "weight": 8
+    },
+    "G2": {
+      "elements": [
+        "A",
+        "F"
+      ],
+      "weight": 6
+    },
+    "G3": {
+      "elements": [
+        "D",
+        "H"
+      ],
+      "weight": 8
+    },
+    "G4": {
+      "elements": [
+        "B",
+        "G",
+        "I"
+      ],
+      "weight": 8
+    },
+    "G5": {
+      "elements": [
+        "A",
+        "C",
+        "E",
+        "F"
+      ],
+      "weight": 7
+    },
+    "G6": {
+      "elements": [
+        "D",
+        "F"
+      ],
+      "weight": 6
+    },
+    "G7": {
+      "elements": [
+        "C",
+        "E",
+        "H"
+      ],
+      "weight": 8
+    },
+    "G8": {
+      "elements": [
+        "A",
+        "I"
+      ],
+      "weight": 5
+    },
+    "G9": {
+      "elements": [
+        "A",
+        "C",
+        "F"
+      ],
+      "weight": 6
+    },
+    "G10": {
+      "elements": [
+        "B",
+        "F",
+        "G",
+        "I"
+      ],
+      "weight": 8
+    },
+    "G11": {
+      "elements": [
+        "B",
+        "D",
+        "G",
+        "I"
+      ],
+      "weight": 8
+    },
+    "G12": {
+      "elements": [
+        "C",
+        "E",
+        "F"
+      ],
+      "weight": 7
+    }
+  },
+  "incidence_matrix": [
+    [
+      0,
+      1,
+      0,
+      0,
+      1,
+      0,
+      0,
+      1,
+      1,
+      0,
+      0,
+      0
+    ],
+    [
+      0,
+      0,
+      0,
+      1,
+      0,
+      0,
+      0,
+      0,
+      0,
+      1,
+      1,
+      0
+    ],
+    [
+      1,
+      0,
+      0,
+      0,
+      1,
+      0,
+      1,
+      0,
+      1,
+      0,
+      0,
+      1
+    ],
+    [
+      0,
+      0,
+      1,
+      0,
+      0,
+      1,
+      0,
+      0,
+      0,
+      0,
+      1,
+      0
+    ],
+    [
+      1,
+      0,
+      0,
+      0,
+      1,
+      0,
+      1,
+      0,
+      0,
+      0,
+      0,
+      1
+    ],
+    [
+      0,
+      1,
+      0,
+      0,
+      1,
+      1,
+      0,
+      0,
+      1,
+      1,
+      0,
+      1
+    ],
+    [
+      0,
+      0,
+      0,
+      1,
+      0,
+      0,
+      0,
+      0,
+      0,
+      1,
+      1,
+      0
+    ],
+    [
+      0,
+      0,
+      1,
+      0,
+      0,
+      0,
+      1,
+      0,
+      0,
+      0,
+      0,
+      0
+    ],
+    [
+      0,
+      0,
+      0,
+      1,
+      0,
+      0,
+      0,
+      1,
+      0,
+      1,
+      1,
+      0
+    ]
+  ],
+  "meta_parameters": {
+    "number_of_elements": 9,
+    "number_of_subsets": 12,
+    "average_subset_size": 2.8333,
+    "overlap_density": 0.5303,
+    "weight_distribution_type": "size_correlated",
+    "subset_size_regime": "mixed",
+    "overlap_regime": "sparse_plus",
+    "group": "A",
+    "seed": 6103,
+    "visual_type": "incidence_matrix_with_value_bars",
+    "formulation_size": 21,
+    "element_frequency": {
+      "A": 4,
+      "B": 3,
+      "C": 5,
+      "D": 3,
+      "E": 4,
+      "F": 6,
+      "G": 3,
+      "H": 2,
+      "I": 4
+    }
+  }
+}

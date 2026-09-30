@@ -1,0 +1,399 @@
+{
+  "instance_id": "sp_e_007",
+  "variant": "set_packing",
+  "scenario": "set_packing",
+  "difficulty": "easy",
+  "problem_type": "set_packing",
+  "objective_type": "maximize_total_weight",
+  "sets": {
+    "items": [
+      "A",
+      "B",
+      "C",
+      "D",
+      "E",
+      "F",
+      "G",
+      "H",
+      "I",
+      "J",
+      "K"
+    ],
+    "candidate_groups": [
+      "G1",
+      "G2",
+      "G3",
+      "G4",
+      "G5",
+      "G6",
+      "G7",
+      "G8",
+      "G9",
+      "G10",
+      "G11",
+      "G12",
+      "G13",
+      "G14",
+      "G15"
+    ]
+  },
+  "weights": [
+    7,
+    9,
+    8,
+    8,
+    8,
+    7,
+    6,
+    6,
+    9,
+    4,
+    4,
+    4,
+    5,
+    9,
+    7
+  ],
+  "subsets": {
+    "G1": {
+      "elements": [
+        "B",
+        "E"
+      ],
+      "weight": 7
+    },
+    "G2": {
+      "elements": [
+        "A",
+        "D",
+        "G"
+      ],
+      "weight": 9
+    },
+    "G3": {
+      "elements": [
+        "C",
+        "F",
+        "K"
+      ],
+      "weight": 8
+    },
+    "G4": {
+      "elements": [
+        "H",
+        "I",
+        "J"
+      ],
+      "weight": 8
+    },
+    "G5": {
+      "elements": [
+        "D",
+        "E",
+        "G"
+      ],
+      "weight": 8
+    },
+    "G6": {
+      "elements": [
+        "B",
+        "E",
+        "I",
+        "J"
+      ],
+      "weight": 7
+    },
+    "G7": {
+      "elements": [
+        "A",
+        "B",
+        "E",
+        "G",
+        "I"
+      ],
+      "weight": 6
+    },
+    "G8": {
+      "elements": [
+        "C",
+        "H"
+      ],
+      "weight": 6
+    },
+    "G9": {
+      "elements": [
+        "C",
+        "D",
+        "F",
+        "G"
+      ],
+      "weight": 9
+    },
+    "G10": {
+      "elements": [
+        "E",
+        "I",
+        "J"
+      ],
+      "weight": 4
+    },
+    "G11": {
+      "elements": [
+        "D",
+        "F",
+        "G",
+        "H",
+        "J"
+      ],
+      "weight": 4
+    },
+    "G12": {
+      "elements": [
+        "E",
+        "F",
+        "I",
+        "J",
+        "K"
+      ],
+      "weight": 4
+    },
+    "G13": {
+      "elements": [
+        "A",
+        "B",
+        "D"
+      ],
+      "weight": 5
+    },
+    "G14": {
+      "elements": [
+        "B",
+        "E",
+        "K"
+      ],
+      "weight": 9
+    },
+    "G15": {
+      "elements": [
+        "C",
+        "D"
+      ],
+      "weight": 7
+    }
+  },
+  "incidence_matrix": [
+    [
+      0,
+      1,
+      0,
+      0,
+      0,
+      0,
+      1,
+      0,
+      0,
+      0,
+      0,
+      0,
+      1,
+      0,
+      0
+    ],
+    [
+      1,
+      0,
+      0,
+      0,
+      0,
+      1,
+      1,
+      0,
+      0,
+      0,
+      0,
+      0,
+      1,
+      1,
+      0
+    ],
+    [
+      0,
+      0,
+      1,
+      0,
+      0,
+      0,
+      0,
+      1,
+      1,
+      0,
+      0,
+      0,
+      0,
+      0,
+      1
+    ],
+    [
+      0,
+      1,
+      0,
+      0,
+      1,
+      0,
+      0,
+      0,
+      1,
+      0,
+      1,
+      0,
+      1,
+      0,
+      1
+    ],
+    [
+      1,
+      0,
+      0,
+      0,
+      1,
+      1,
+      1,
+      0,
+      0,
+      1,
+      0,
+      1,
+      0,
+      1,
+      0
+    ],
+    [
+      0,
+      0,
+      1,
+      0,
+      0,
+      0,
+      0,
+      0,
+      1,
+      0,
+      1,
+      1,
+      0,
+      0,
+      0
+    ],
+    [
+      0,
+      1,
+      0,
+      0,
+      1,
+      0,
+      1,
+      0,
+      1,
+      0,
+      1,
+      0,
+      0,
+      0,
+      0
+    ],
+    [
+      0,
+      0,
+      0,
+      1,
+      0,
+      0,
+      0,
+      1,
+      0,
+      0,
+      1,
+      0,
+      0,
+      0,
+      0
+    ],
+    [
+      0,
+      0,
+      0,
+      1,
+      0,
+      1,
+      1,
+      0,
+      0,
+      1,
+      0,
+      1,
+      0,
+      0,
+      0
+    ],
+    [
+      0,
+      0,
+      0,
+      1,
+      0,
+      1,
+      0,
+      0,
+      0,
+      1,
+      1,
+      1,
+      0,
+      0,
+      0
+    ],
+    [
+      0,
+      0,
+      1,
+      0,
+      0,
+      0,
+      0,
+      0,
+      0,
+      0,
+      0,
+      1,
+      0,
+      1,
+      0
+    ]
+  ],
+  "meta_parameters": {
+    "number_of_elements": 11,
+    "number_of_subsets": 15,
+    "average_subset_size": 3.3333,
+    "overlap_density": 0.5905,
+    "weight_distribution_type": "random_small_range",
+    "subset_size_regime": "mixed_with_larger",
+    "overlap_regime": "moderate_plus",
+    "group": "B",
+    "seed": 6107,
+    "visual_type": "incidence_matrix_with_value_bars",
+    "formulation_size": 26,
+    "element_frequency": {
+      "A": 3,
+      "B": 5,
+      "C": 4,
+      "D": 6,
+      "E": 7,
+      "F": 4,
+      "G": 5,
+      "H": 3,
+      "I": 5,
+      "J": 5,
+      "K": 3
+    }
+  }
+}

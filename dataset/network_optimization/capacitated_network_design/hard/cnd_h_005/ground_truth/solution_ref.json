@@ -1,0 +1,175 @@
+{
+  "status": "optimal",
+  "objective_value": 329,
+  "objective_exact": 329,
+  "fixed_cost_total": 65,
+  "variable_cost_total": 264,
+  "installed_arc_ids": [
+    "e1",
+    "e3",
+    "e5",
+    "e9",
+    "e11",
+    "e14",
+    "e15",
+    "e16",
+    "e18",
+    "e21",
+    "e23",
+    "e24"
+  ],
+  "installation_indicator": {
+    "e1": 1,
+    "e2": 0,
+    "e3": 1,
+    "e4": 0,
+    "e5": 1,
+    "e6": 0,
+    "e7": 0,
+    "e8": 0,
+    "e9": 1,
+    "e10": 0,
+    "e11": 1,
+    "e12": 0,
+    "e13": 0,
+    "e14": 1,
+    "e15": 1,
+    "e16": 1,
+    "e17": 0,
+    "e18": 1,
+    "e19": 0,
+    "e20": 0,
+    "e21": 1,
+    "e22": 0,
+    "e23": 1,
+    "e24": 1,
+    "e25": 0
+  },
+  "arc_flow_by_id": {
+    "e1": 6,
+    "e2": 0,
+    "e3": 3,
+    "e4": 0,
+    "e5": 6,
+    "e6": 0,
+    "e7": 0,
+    "e8": 0,
+    "e9": 3,
+    "e10": 0,
+    "e11": 3,
+    "e12": 0,
+    "e13": 0,
+    "e14": 3,
+    "e15": 3,
+    "e16": 3,
+    "e17": 0,
+    "e18": 3,
+    "e19": 0,
+    "e20": 0,
+    "e21": 6,
+    "e22": 0,
+    "e23": 3,
+    "e24": 6,
+    "e25": 0
+  },
+  "arc_flows": {
+    "e1": 6,
+    "e3": 3,
+    "e5": 6,
+    "e9": 3,
+    "e11": 3,
+    "e14": 3,
+    "e15": 3,
+    "e16": 3,
+    "e18": 3,
+    "e21": 6,
+    "e23": 3,
+    "e24": 6
+  },
+  "used_arc_ids": [
+    "e1",
+    "e3",
+    "e5",
+    "e9",
+    "e11",
+    "e14",
+    "e15",
+    "e16",
+    "e18",
+    "e21",
+    "e23",
+    "e24"
+  ],
+  "binding_capacity_arcs": [
+    "e1",
+    "e15",
+    "e16",
+    "e24"
+  ],
+  "path_decomposition": [
+    {
+      "path_nodes": [
+        1,
+        2,
+        6,
+        9,
+        12,
+        15
+      ],
+      "path_arc_ids": [
+        "e1",
+        "e5",
+        "e11",
+        "e18",
+        "e23"
+      ],
+      "flow": 3
+    },
+    {
+      "path_nodes": [
+        1,
+        2,
+        6,
+        7,
+        11,
+        13,
+        15
+      ],
+      "path_arc_ids": [
+        "e1",
+        "e5",
+        "e16",
+        "e14",
+        "e21",
+        "e24"
+      ],
+      "flow": 3
+    },
+    {
+      "path_nodes": [
+        1,
+        4,
+        8,
+        11,
+        13,
+        15
+      ],
+      "path_arc_ids": [
+        "e3",
+        "e9",
+        "e15",
+        "e21",
+        "e24"
+      ],
+      "flow": 3
+    }
+  ],
+  "runtime_seconds": 0.02183867,
+  "solve_method": "gurobi_mip_cnd_single_commodity",
+  "solver_used": "Gurobi",
+  "solver": "Gurobi",
+  "solver_policy": "gurobi_first_then_scipy_milp_exact",
+  "verification_method": "gurobi_certificate",
+  "fallback_used": false,
+  "optimality_proof": "gurobi_optimal_mip_solution"
+}

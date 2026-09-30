@@ -1,0 +1,71 @@
+Instance ID: cnd_h_004
+Scenario: coastal_backup_detour_grid
+Family: capacitated_network_design
+Variant: single_visual_single_commodity_cnd
+
+Network
+-------
+Nodes:
+  1, 2, 3, 4, 5, 6, 7, 8, 9, 10, 11, 12, 13, 14, 15
+
+Source:
+  1
+
+Sink:
+  15
+
+Required shipment:
+  11 units
+
+Node balances
+-------------
+  Node 1: +11
+  Node 15: -11
+  All other nodes: 0
+
+Candidate directed arcs with exact parameters
+---------------------------------------------
+  e1:  1 -> 2   capacity 5   fixed_cost 12   variable_cost 7
+  e2:  1 -> 3   capacity 4   fixed_cost 11   variable_cost 5
+  e3:  1 -> 4   capacity 9   fixed_cost 11   variable_cost 9
+  e4:  2 -> 5   capacity 12   fixed_cost 1   variable_cost 12
+  e5:  2 -> 6   capacity 11   fixed_cost 4   variable_cost 12
+  e6:  3 -> 6   capacity 14   fixed_cost 12   variable_cost 3
+  e7:  3 -> 7   capacity 6   fixed_cost 8   variable_cost 2
+  e8:  4 -> 7   capacity 9   fixed_cost 7   variable_cost 11
+  e9:  4 -> 8   capacity 14   fixed_cost 7   variable_cost 8
+  e10:  5 -> 9   capacity 8   fixed_cost 6   variable_cost 12
+  e11:  6 -> 9   capacity 14   fixed_cost 1   variable_cost 6
+  e12:  6 -> 10   capacity 9   fixed_cost 3   variable_cost 5
+  e13:  7 -> 10   capacity 6   fixed_cost 2   variable_cost 7
+  e14:  7 -> 11   capacity 9   fixed_cost 6   variable_cost 6
+  e15:  8 -> 11   capacity 11   fixed_cost 2   variable_cost 8
+  e16:  5 -> 10   capacity 11   fixed_cost 2   variable_cost 3
+  e17:  9 -> 12   capacity 4   fixed_cost 3   variable_cost 10
+  e18:  10 -> 12   capacity 12   fixed_cost 6   variable_cost 3
+  e19:  10 -> 13   capacity 5   fixed_cost 1   variable_cost 11
+  e20:  11 -> 13   capacity 10   fixed_cost 9   variable_cost 5
+  e21:  11 -> 14   capacity 6   fixed_cost 5   variable_cost 5
+  e22:  12 -> 15   capacity 10   fixed_cost 7   variable_cost 1
+  e23:  13 -> 15   capacity 8   fixed_cost 6   variable_cost 8
+  e24:  14 -> 15   capacity 4   fixed_cost 4   variable_cost 1
+
+Problem statement
+-----------------
+Choose which candidate arcs to install and how to route the required
+shipment from node 1 to node 15.
+
+If arc e = (i,j) is installed:
+  - pay its fixed installation cost once;
+  - allow at most its capacity units of flow on that arc.
+
+If x units are sent on an installed arc:
+  - pay its variable routing cost times x.
+
+Flow may split across several installed routes, but total outgoing flow
+from the source and total incoming flow to the sink must match the
+required shipment exactly.
+
+Objective:
+  minimize total fixed installation cost plus total variable routing
+  cost.

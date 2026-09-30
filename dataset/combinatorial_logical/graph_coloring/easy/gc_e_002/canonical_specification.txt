@@ -1,0 +1,79 @@
+Canonical specification for a deterministic easy-level graph coloring instance.
+
+Interpretation:
+- The graph is undirected and simple.
+- Each vertex must receive exactly one color.
+- Adjacent vertices must not share the same color.
+- The task is a feasibility version of graph coloring using exactly the available color set K.
+- There are no weighted colors, pre-colored vertices, directed edges, hyperedges, logical side constraints, or symmetry-breaking constraints.
+
+Sets:
+- Vertices V = [1, 2, 3, 4, 5, 6, 7, 8, 9]
+- Colors K = [1, 2]
+
+Parameters:
+- number_of_vertices = 9
+- number_of_colors = 2
+- chromatic_number = 2
+- graph_density = 0.3333
+- topology_type = grid_like_graph
+
+Edge set E:
+- (1, 2)
+- (1, 4)
+- (2, 3)
+- (2, 5)
+- (3, 6)
+- (4, 5)
+- (4, 7)
+- (5, 6)
+- (5, 8)
+- (6, 9)
+- (7, 8)
+- (8, 9)
+
+Adjacency list:
+- N(1) = [2, 4]
+- N(2) = [1, 3, 5]
+- N(3) = [2, 6]
+- N(4) = [1, 5, 7]
+- N(5) = [2, 4, 6, 8]
+- N(6) = [3, 5, 9]
+- N(7) = [4, 8]
+- N(8) = [5, 7, 9]
+- N(9) = [6, 8]
+
+Adjacency matrix rows (0/1 form, with diagonal omitted from constraints):
+- row 1: [0, 1, 0, 1, 0, 0, 0, 0, 0]
+- row 2: [1, 0, 1, 0, 1, 0, 0, 0, 0]
+- row 3: [0, 1, 0, 0, 0, 1, 0, 0, 0]
+- row 4: [1, 0, 0, 0, 1, 0, 1, 0, 0]
+- row 5: [0, 1, 0, 1, 0, 1, 0, 1, 0]
+- row 6: [0, 0, 1, 0, 1, 0, 0, 0, 1]
+- row 7: [0, 0, 0, 1, 0, 0, 0, 1, 0]
+- row 8: [0, 0, 0, 0, 1, 0, 1, 0, 1]
+- row 9: [0, 0, 0, 0, 0, 1, 0, 1, 0]
+
+Decision variables:
+- x[v,k] in {0,1}: equals 1 if vertex v is assigned color k, and 0 otherwise.
+
+Objective:
+- Find any feasible coloring that uses the available colors in K.
+
+Constraints:
+- For every vertex v in V, exactly one color must be assigned: sum_k x[v,k] = 1.
+- For every edge (u,v) in E and every color k in K, adjacent vertices cannot share the same color: x[u,k] + x[v,k] <= 1.
+- All assignment variables are binary.
+
+Metadata:
+- seed=5102
+- group=A
+- graph_generator=grid_bipartite
+- visual_type=adjacency_matrix
+- formulation_size=51
+
+Visual interpretation:
+- The figure is a square adjacency matrix indexed by numeric vertex identifiers.
+- Black off-diagonal cells indicate edges and white off-diagonal cells indicate non-edges.
+- Grey diagonal cells only mark self-reference positions and do not represent constraints.
+- The visual reveals the full graph structure and the available vertex identifiers, but it does not reveal a valid coloring assignment.

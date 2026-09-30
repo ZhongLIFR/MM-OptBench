@@ -1,0 +1,32 @@
+{
+  "number_jobs": 11,
+  "number_stages": 6,
+  "machines_per_stage": [
+    2,
+    1,
+    2,
+    1,
+    2,
+    1
+  ],
+  "group": "B",
+  "bottleneck_pattern": "single_machine_stages_two_four_and_six",
+  "processing_time_regime": "alternating_gate_chain_with_moderate_heterogeneity",
+  "flexibility_level": "mixed_2_1_2_1_2_1",
+  "visual_type": "single_visual_combined_stage_architecture_plus_processing_matrix",
+  "seed": 6405,
+  "formulation_size": 1783,
+  "instance_id": "fhfss_h_005",
+  "variant": "flexible_hybrid_flow_shop_scheduling",
+  "scenario": "flexible_hybrid_flow_shop_scheduling",
+  "difficulty": "hard",
+  "objective": "minimize_makespan",
+  "objective_value": 121.0,
+  "objective_exact": 121.0,
+  "optimal_makespan": 121.0,
+  "status": "optimal",
+  "runtime_seconds": 22.159235,
+  "solve_method": "gurobi_disjunctive_milp_fhfss",
+  "solver": "Gurobi",
+  "visual_0_checksum_md5": "8ec9049bfb16e8d00b9bae54fc39a624"
+}

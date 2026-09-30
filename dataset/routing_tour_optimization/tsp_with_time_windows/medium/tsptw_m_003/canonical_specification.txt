@@ -1,0 +1,117 @@
+Canonical specification for a deterministic single-vehicle Traveling Salesman Problem with Time Windows (TSPTW) instance.
+
+Interpretation:
+- A single vehicle starts at the depot, visits every customer exactly once, and returns to the depot.
+- The routing graph is complete: travel between every ordered pair of distinct nodes is allowed.
+- Travel times are deterministic and equal the Euclidean distances between displayed coordinates, rounded to 2 decimals.
+- Service at each customer must begin within the customer-specific time window.
+- If the vehicle arrives before the time window opens, it may wait.
+- There are no capacities, multiple vehicles, forbidden arcs, stochastic times, or time-dependent costs.
+
+Sets:
+- Nodes N = ['Depot', 'C1', 'C2', 'C3', 'C4', 'C5', 'C6', 'C7', 'C8', 'C9', 'C10', 'C11', 'C12', 'C13']
+- Customers C = ['C1', 'C2', 'C3', 'C4', 'C5', 'C6', 'C7', 'C8', 'C9', 'C10', 'C11', 'C12', 'C13']
+- Directed arcs A = [(i,j) for i,j in N, i != j]
+
+Coordinates by node:
+- Depot: (50.0, 50.0)
+- C1: (29.8, 49.1)
+- C2: (41.5, 45.6)
+- C3: (50.8, 32.6)
+- C4: (53.3, 41.7)
+- C5: (56.1, 44.4)
+- C6: (50.6, 49.7)
+- C7: (51.4, 49.8)
+- C8: (71.8, 48.2)
+- C9: (52.0, 55.0)
+- C10: (46.9, 71.4)
+- C11: (46.7, 57.3)
+- C12: (47.3, 58.0)
+- C13: (42.4, 57.2)
+
+Service times by node:
+- Depot: 0.00
+- C1: 0.80
+- C2: 0.80
+- C3: 0.60
+- C4: 0.60
+- C5: 0.40
+- C6: 0.40
+- C7: 0.50
+- C8: 0.80
+- C9: 0.50
+- C10: 0.80
+- C11: 0.60
+- C12: 0.50
+- C13: 0.40
+
+Time windows by node [a_i, b_i]:
+- Depot: [0.00, 2000.00]
+- C1: [15.02, 32.28]
+- C2: [26.83, 46.32]
+- C3: [44.53, 62.50]
+- C4: [54.80, 69.04]
+- C5: [58.47, 77.43]
+- C6: [64.94, 86.38]
+- C7: [68.44, 88.39]
+- C8: [90.46, 102.90]
+- C9: [109.76, 128.40]
+- C10: [129.44, 148.42]
+- C11: [143.92, 164.67]
+- C12: [143.18, 159.50]
+- C13: [152.00, 165.42]
+
+Complete travel-time matrix c[i,j]:
+- Depot: Depot=0.00, C1=20.22, C2=9.57, C3=17.42, C4=8.93, C5=8.28, C6=0.67, C7=1.41, C8=21.87, C9=5.39, C10=21.62, C11=8.01, C12=8.44, C13=10.47
+- C1: Depot=20.22, C1=0.00, C2=12.21, C3=26.71, C4=24.64, C5=26.72, C6=20.81, C7=21.61, C8=42.01, C9=22.97, C10=28.10, C11=18.78, C12=19.63, C13=14.98
+- C2: Depot=9.57, C1=12.21, C2=0.00, C3=15.98, C4=12.43, C5=14.65, C6=9.98, C7=10.75, C8=30.41, C9=14.09, C10=26.36, C11=12.80, C12=13.69, C13=11.63
+- C3: Depot=17.42, C1=26.71, C2=15.98, C3=0.00, C4=9.44, C5=12.94, C6=17.10, C7=17.21, C8=26.16, C9=22.43, C10=39.00, C11=25.04, C12=25.64, C13=25.99
+- C4: Depot=8.93, C1=24.64, C2=12.43, C3=9.44, C4=0.00, C5=3.89, C6=8.44, C7=8.32, C8=19.61, C9=13.36, C10=30.38, C11=16.94, C12=17.37, C13=18.95
+- C5: Depot=8.28, C1=26.72, C2=14.65, C3=12.94, C4=3.89, C5=0.00, C6=7.64, C7=7.16, C8=16.15, C9=11.37, C10=28.52, C11=15.96, C12=16.20, C13=18.75
+- C6: Depot=0.67, C1=20.81, C2=9.98, C3=17.10, C4=8.44, C5=7.64, C6=0.00, C7=0.81, C8=21.25, C9=5.48, C10=22.01, C11=8.54, C12=8.93, C13=11.11
+- C7: Depot=1.41, C1=21.61, C2=10.75, C3=17.21, C4=8.32, C5=7.16, C6=0.81, C7=0.00, C8=20.46, C9=5.23, C10=22.06, C11=8.85, C12=9.17, C13=11.65
+- C8: Depot=21.87, C1=42.01, C2=30.41, C3=26.16, C4=19.61, C5=16.15, C6=21.25, C7=20.46, C8=0.00, C9=20.94, C10=34.03, C11=26.70, C12=26.39, C13=30.75
+- C9: Depot=5.39, C1=22.97, C2=14.09, C3=22.43, C4=13.36, C5=11.37, C6=5.48, C7=5.23, C8=20.94, C9=0.00, C10=17.17, C11=5.78, C12=5.58, C13=9.85
+- C10: Depot=21.62, C1=28.10, C2=26.36, C3=39.00, C4=30.38, C5=28.52, C6=22.01, C7=22.06, C8=34.03, C9=17.17, C10=0.00, C11=14.10, C12=13.41, C13=14.90
+- C11: Depot=8.01, C1=18.78, C2=12.80, C3=25.04, C4=16.94, C5=15.96, C6=8.54, C7=8.85, C8=26.70, C9=5.78, C10=14.10, C11=0.00, C12=0.92, C13=4.30
+- C12: Depot=8.44, C1=19.63, C2=13.69, C3=25.64, C4=17.37, C5=16.20, C6=8.93, C7=9.17, C8=26.39, C9=5.58, C10=13.41, C11=0.92, C12=0.00, C13=4.96
+- C13: Depot=10.47, C1=14.98, C2=11.63, C3=25.99, C4=18.95, C5=18.75, C6=11.11, C7=11.65, C8=30.75, C9=9.85, C10=14.90, C11=4.30, C12=4.96, C13=0.00
+
+Decision variables:
+- x[i,j] in {0,1}: equals 1 if the vehicle directly travels from node i to node j
+- t[i] >= 0: service-start time at node i
+
+Objective:
+- Minimize total travel time sum_{i != j} c[i,j] * x[i,j].
+
+Constraints:
+- Exactly one outgoing arc from every node.
+- Exactly one incoming arc to every node.
+- Time-propagation constraints linking consecutive visits.
+- Time-window bounds at every node.
+- Connectivity enforced through the time-based formulation.
+
+Big-M parameter:
+- M = 2047.81
+
+Metadata:
+- number_customers=13
+- layout_type=dense_center
+- window_tightness_type=mixed
+- service_time_type=moderate_variation
+- critical_sequence_type=overlapping_mid_route
+- binding_window_flag=false
+- critical_sequence_flag=true
+- travel_time_rule=euclidean_rounded_2dp
+- visual_type=coordinate_tw_service_node_map_with_cost_rule_box
+- seed=4301
+- group=A
+- formulation_size=434
+
+Visual interpretation:
+- The figure shows one colored marker per node on a Cartesian map.
+- Coordinates are printed next to each node.
+- Each node also shows an exact combined time-window and service-time label.
+- A cost-rule box states how travel times are derived from the plotted coordinates.
+- Complete-graph edges are intentionally omitted to avoid clutter.
+- The visual does not reveal the optimal tour, selected arcs, arrival times, or objective value.

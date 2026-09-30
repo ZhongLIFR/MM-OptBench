@@ -1,0 +1,82 @@
+This is a single-period deterministic Parallel Machine Scheduling problem.
+
+Instance ID: pms_h_007
+Variant: parallel_machine_scheduling
+Scenario: parallel_machine_scheduling
+Difficulty: hard
+
+Sets:
+- J: set of jobs
+- M: set of machines
+
+Machine system:
+- Unrelated parallel machines (R||)
+- M1: speed_factor=1.0
+- M2: speed_factor=1.0
+- M3: speed_factor=1.0
+- M4: speed_factor=1.0
+- M5: speed_factor=1.0
+- M6: speed_factor=1.0
+
+Jobs:
+- J1: summary_duration=10, weight=1, eligible_machines=['M1', 'M2', 'M3'], machine_times={ M1:10, M2:17, M3:24 }
+- J2: summary_duration=21, weight=1, eligible_machines=['M2', 'M3', 'M4'], machine_times={ M2:21, M3:23, M4:30 }
+- J3: summary_duration=21, weight=1, eligible_machines=['M3', 'M4', 'M5'], machine_times={ M3:29, M4:28, M5:21 }
+- J4: summary_duration=27, weight=1, eligible_machines=['M4', 'M5', 'M6'], machine_times={ M4:29, M5:27, M6:35 }
+- J5: summary_duration=20, weight=1, eligible_machines=['M5', 'M6', 'M1'], machine_times={ M5:28, M6:37, M1:20 }
+- J6: summary_duration=23, weight=1, eligible_machines=['M6', 'M1', 'M2'], machine_times={ M6:37, M1:23, M2:27 }
+- J7: summary_duration=25, weight=1, eligible_machines=['M1', 'M2', 'M3'], machine_times={ M1:25, M2:30, M3:37 }
+- J8: summary_duration=33, weight=1, eligible_machines=['M2', 'M3', 'M4'], machine_times={ M2:34, M3:33, M4:39 }
+- J9: summary_duration=19, weight=1, eligible_machines=['M3', 'M4', 'M5'], machine_times={ M3:23, M4:28, M5:19 }
+- J10: summary_duration=25, weight=1, eligible_machines=['M4', 'M5', 'M6'], machine_times={ M4:27, M5:25, M6:30 }
+- J11: summary_duration=20, weight=1, eligible_machines=['M5', 'M6', 'M1'], machine_times={ M5:23, M6:31, M1:20 }
+- J12: summary_duration=21, weight=1, eligible_machines=['M6', 'M1', 'M2'], machine_times={ M6:37, M1:21, M2:25 }
+- J13: summary_duration=23, weight=1, eligible_machines=['M1', 'M2', 'M3'], machine_times={ M1:23, M2:25, M3:31 }
+- J14: summary_duration=28, weight=1, eligible_machines=['M2', 'M3', 'M4'], machine_times={ M2:28, M3:33, M4:37 }
+- J15: summary_duration=29, weight=1, eligible_machines=['M3', 'M4', 'M5'], machine_times={ M3:36, M4:41, M5:29 }
+- J16: summary_duration=34, weight=1, eligible_machines=['M4', 'M5', 'M6'], machine_times={ M4:37, M5:34, M6:45 }
+- J17: summary_duration=18, weight=1, eligible_machines=['M5', 'M6', 'M1'], machine_times={ M5:23, M6:29, M1:18 }
+- J18: summary_duration=16, weight=1, eligible_machines=['M6', 'M1', 'M2'], machine_times={ M6:35, M1:16, M2:19 }
+- J19: summary_duration=17, weight=1, eligible_machines=['M1', 'M2', 'M3'], machine_times={ M1:17, M2:25, M3:29 }
+- J20: summary_duration=26, weight=1, eligible_machines=['M2', 'M3', 'M4'], machine_times={ M2:26, M3:31, M4:32 }
+- J21: summary_duration=29, weight=1, eligible_machines=['M3', 'M4', 'M5'], machine_times={ M3:31, M4:35, M5:29 }
+- J22: summary_duration=32, weight=1, eligible_machines=['M4', 'M5', 'M6'], machine_times={ M4:37, M5:32, M6:43 }
+- J23: summary_duration=27, weight=1, eligible_machines=['M5', 'M6', 'M1'], machine_times={ M5:36, M6:39, M1:27 }
+- J24: summary_duration=31, weight=1, eligible_machines=['M6', 'M1', 'M2'], machine_times={ M6:44, M1:31, M2:32 }
+- J25: summary_duration=15, weight=1, eligible_machines=['M1', 'M2', 'M3'], machine_times={ M1:15, M2:23, M3:24 }
+- J26: summary_duration=21, weight=1, eligible_machines=['M2', 'M3', 'M4'], machine_times={ M2:21, M3:25, M4:32 }
+- J27: summary_duration=27, weight=1, eligible_machines=['M3', 'M4', 'M5'], machine_times={ M3:31, M4:33, M5:27 }
+- J28: summary_duration=27, weight=1, eligible_machines=['M4', 'M5', 'M6'], machine_times={ M4:35, M5:27, M6:37 }
+- J29: summary_duration=25, weight=1, eligible_machines=['M5', 'M6', 'M1'], machine_times={ M5:30, M6:39, M1:25 }
+- J30: summary_duration=27, weight=1, eligible_machines=['M6', 'M1', 'M2'], machine_times={ M6:42, M1:29, M2:27 }
+- J31: summary_duration=25, weight=1, eligible_machines=['M1', 'M2', 'M3'], machine_times={ M1:25, M2:32, M3:39 }
+- J32: summary_duration=36, weight=1, eligible_machines=['M2', 'M3', 'M4'], machine_times={ M2:36, M3:38, M4:45 }
+- J33: summary_duration=21, weight=1, eligible_machines=['M3', 'M4', 'M5'], machine_times={ M3:29, M4:28, M5:21 }
+- J34: summary_duration=27, weight=1, eligible_machines=['M4', 'M5', 'M6'], machine_times={ M4:29, M5:27, M6:35 }
+- J35: summary_duration=20, weight=1, eligible_machines=['M5', 'M6', 'M1'], machine_times={ M5:28, M6:37, M1:20 }
+- J36: summary_duration=23, weight=1, eligible_machines=['M6', 'M1', 'M2'], machine_times={ M6:37, M1:23, M2:27 }
+
+Decision structure:
+- Each job must be assigned to exactly one eligible machine.
+- The processing time of a job on a machine is determined by the machine environment (P, Q, or R).
+- The objective is to minimize the makespan.
+- No precedence constraints, release dates, due dates, sequence-dependent setups, or multi-period coupling are present.
+
+Metadata:
+- number_jobs=36
+- number_machines=6
+- machine_type=R
+- objective_type=makespan
+- processing_time_regime=unrelated_structured
+- heterogeneity_level=high
+- heavy_tail_flag=false
+- load_stress_pattern=near_balanced_tradeoff
+- seed=807
+- formulation_size=150
+
+Visual interpretation:
+- Each row corresponds to one job.
+- The center matrix indicates machine compatibility or assignment admissibility.
+- For R-type instances, numbered cells in the center matrix give the exact machine-dependent processing times and blank cells indicate ineligible assignments.
+- The right-hand bar encodes the displayed job-duration cue used in the visual input.
+- The visual does not reveal the chosen assignment, start times, completion order, or objective value.

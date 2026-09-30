@@ -1,0 +1,116 @@
+{
+  "instance_id": "educ_m_001",
+  "variant": "energy_dispatch_unit_commitment",
+  "scenario": "energy_dispatch_unit_commitment",
+  "difficulty": "medium",
+  "sets": {
+    "generators": [
+      "G1",
+      "G2",
+      "G3",
+      "G4"
+    ],
+    "periods": [
+      "t1",
+      "t2",
+      "t3",
+      "t4",
+      "t5",
+      "t6",
+      "t7",
+      "t8",
+      "t9",
+      "t10"
+    ]
+  },
+  "demand": {
+    "t1": 50,
+    "t2": 54,
+    "t3": 58,
+    "t4": 62,
+    "t5": 60,
+    "t6": 56,
+    "t7": 52,
+    "t8": 48,
+    "t9": 46,
+    "t10": 44
+  },
+  "cost": {
+    "G1": 8,
+    "G2": 11,
+    "G3": 15,
+    "G4": 22
+  },
+  "startup_cost": {
+    "G1": 90,
+    "G2": 55,
+    "G3": 25,
+    "G4": 12
+  },
+  "shutdown_cost": {
+    "G1": 8,
+    "G2": 6,
+    "G3": 4,
+    "G4": 2
+  },
+  "pmin": {
+    "G1": 18,
+    "G2": 10,
+    "G3": 0,
+    "G4": 0
+  },
+  "pmax": {
+    "G1": 36,
+    "G2": 24,
+    "G3": 18,
+    "G4": 16
+  },
+  "ramp_up": {
+    "G1": 20,
+    "G2": 16,
+    "G3": 18,
+    "G4": 16
+  },
+  "ramp_down": {
+    "G1": 20,
+    "G2": 16,
+    "G3": 18,
+    "G4": 16
+  },
+  "min_up": {
+    "G1": 2,
+    "G2": 1,
+    "G3": 1,
+    "G4": 1
+  },
+  "min_down": {
+    "G1": 1,
+    "G2": 1,
+    "G3": 1,
+    "G4": 1
+  },
+  "initial_status": {
+    "G1": 0,
+    "G2": 0,
+    "G3": 0,
+    "G4": 0
+  },
+  "initial_output": {
+    "G1": 0,
+    "G2": 0,
+    "G3": 0,
+    "G4": 0
+  },
+  "meta_parameters": {
+    "number_periods": 10,
+    "number_units": 4,
+    "demand_regime": "mixed_variation",
+    "ramping_regime": "mixed_moderate",
+    "minimum_up_down_flag": true,
+    "capacity_regime": "moderate_stress",
+    "peak_load_flag": false,
+    "visual_type": "economics_table_plus_demand_timeline_and_capacity_ranges",
+    "seed": 901,
+    "formulation_size": 410
+  }
+}

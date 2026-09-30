@@ -1,0 +1,93 @@
+Canonical specification for a deterministic easy-level logical constraint satisfaction instance.
+
+Interpretation:
+- Each Boolean variable may take value 0 or 1.
+- Every listed clause must be satisfied.
+- Every listed implication must hold.
+- Every listed at-most-one group allows at most one variable to take value 1.
+- This is a pure feasibility problem; any assignment satisfying all constraints is acceptable.
+- There are no weighted objectives, routing constraints, temporal indices, flow-balance equations, or multi-stage decisions.
+
+Sets:
+- Variables V = ['x1', 'x2', 'x3', 'x4', 'x5', 'x6', 'x7', 'x8', 'x9', 'x10', 'x11', 'x12']
+- Clause rows C = ['C1', 'C2', 'C3', 'C4', 'C5', 'C6', 'C7', 'C8', 'C9', 'C10', 'C11', 'C12', 'C13', 'C14', 'C15', 'C16', 'C17', 'C18', 'C19', 'C20', 'C21']
+
+Parameters and clause definitions:
+- C1: (x5 ∨ x12)
+- C2: (¬x1 ∨ ¬x6)
+- C3: (x9 ∨ ¬x11)
+- C4: (¬x1 ∨ x2)
+- C5: (¬x2 ∨ ¬x3 ∨ x4)
+- C6: (¬x5 ∨ ¬x6 ∨ x7)
+- C7: (x5 ∨ x6 ∨ x8)
+- C8: (¬x5 ∨ x7 ∨ ¬x8)
+- C9: (¬x5 ∨ ¬x6)
+- C10: (¬x6 ∨ x10)
+- C11: (x9 ∨ x10 ∨ ¬x12)
+- C12: (¬x1 ∨ x4)
+- C13: (¬x11 ∨ x12)
+- C14: (x1 ∨ ¬x2 ∨ x3)
+- C15: (¬x9 ∨ ¬x10 ∨ x12)
+- C16: (x2 ∨ ¬x3 ∨ x7)
+- C17: (x5 ∨ x7 ∨ ¬x8)
+- C18: (x9 ∨ ¬x11 ∨ x12)
+- C19: (x5 ∨ x8)
+- C20: (¬x2 ∨ ¬x4)
+- C21: (x9 ∨ x10 ∨ ¬x11)
+
+Implication constraints:
+- I1: x7 <= x5
+- I2: x12 <= x3
+
+At-most-one groups:
+- A1: variables = ['x1', 'x4']
+
+Clause-variable matrix rows by clause (entries in {+1, -1, 0}, columns ordered by the variable list):
+- row C1: [0, 0, 0, 0, 1, 0, 0, 0, 0, 0, 0, 1]
+- row C2: [-1, 0, 0, 0, 0, -1, 0, 0, 0, 0, 0, 0]
+- row C3: [0, 0, 0, 0, 0, 0, 0, 0, 1, 0, -1, 0]
+- row C4: [-1, 1, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0]
+- row C5: [0, -1, -1, 1, 0, 0, 0, 0, 0, 0, 0, 0]
+- row C6: [0, 0, 0, 0, -1, -1, 1, 0, 0, 0, 0, 0]
+- row C7: [0, 0, 0, 0, 1, 1, 0, 1, 0, 0, 0, 0]
+- row C8: [0, 0, 0, 0, -1, 0, 1, -1, 0, 0, 0, 0]
+- row C9: [0, 0, 0, 0, -1, -1, 0, 0, 0, 0, 0, 0]
+- row C10: [0, 0, 0, 0, 0, -1, 0, 0, 0, 1, 0, 0]
+- row C11: [0, 0, 0, 0, 0, 0, 0, 0, 1, 1, 0, -1]
+- row C12: [-1, 0, 0, 1, 0, 0, 0, 0, 0, 0, 0, 0]
+- row C13: [0, 0, 0, 0, 0, 0, 0, 0, 0, 0, -1, 1]
+- row C14: [1, -1, 1, 0, 0, 0, 0, 0, 0, 0, 0, 0]
+- row C15: [0, 0, 0, 0, 0, 0, 0, 0, -1, -1, 0, 1]
+- row C16: [0, 1, -1, 0, 0, 0, 1, 0, 0, 0, 0, 0]
+- row C17: [0, 0, 0, 0, 1, 0, 1, -1, 0, 0, 0, 0]
+- row C18: [0, 0, 0, 0, 0, 0, 0, 0, 1, 0, -1, 1]
+- row C19: [0, 0, 0, 0, 1, 0, 0, 1, 0, 0, 0, 0]
+- row C20: [0, -1, 0, -1, 0, 0, 0, 0, 0, 0, 0, 0]
+- row C21: [0, 0, 0, 0, 0, 0, 0, 0, 1, 1, -1, 0]
+
+Decision variables:
+- For each variable x in V, x is binary and belongs to {0,1}.
+
+Objective:
+- Pure feasibility: find any assignment satisfying all logical constraints.
+
+Metadata:
+- number_of_variables = 12
+- number_of_logical_constraints = 24
+- clause_count = 21
+- implication_count = 2
+- at_most_one_group_count = 1
+- clause_density = 2.0
+- clause_type_distribution = {'2_sat': 10, '3_sat': 11, '4_sat': 0}
+- matrix_fill_ratio = 0.2103
+- seed = 7104
+- group = B
+- visual_type = clause_variable_matrix
+- visual_group_structure = clustered_mild
+
+Visual interpretation:
+- The figure uses one column per Boolean variable and one row per clause.
+- '+' indicates a positive literal, '−' indicates a negative literal, and '.' indicates absence.
+- Rows labeled I* encode all implication constraints directly inside the matrix.
+- Rows labeled A* encode pairwise exclusions induced by all at-most-one groups directly inside the matrix.
+- The visual reveals the full instance data required for optimization but does not reveal a satisfying assignment.

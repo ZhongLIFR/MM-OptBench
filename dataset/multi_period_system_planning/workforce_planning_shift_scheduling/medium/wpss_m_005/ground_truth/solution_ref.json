@@ -1,0 +1,462 @@
+{
+  "status": "optimal",
+  "objective": 1458,
+  "objective_exact": 1458.0,
+  "runtime_seconds": 0.015526167000643909,
+  "assignment_cost": 1448.0,
+  "overtime_cost": 10.0,
+  "total_overtime_shifts": 1.0,
+  "assignments_by_day": {
+    "Mon1": {
+      "D": [
+        "W2",
+        "W5",
+        "W8"
+      ],
+      "E": [
+        "W6",
+        "W7"
+      ],
+      "N": [
+        "W12"
+      ]
+    },
+    "Tue1": {
+      "D": [
+        "W2",
+        "W8",
+        "W11"
+      ],
+      "E": [
+        "W7",
+        "W9"
+      ],
+      "N": [
+        "W4"
+      ]
+    },
+    "Wed1": {
+      "D": [
+        "W1",
+        "W3",
+        "W11"
+      ],
+      "E": [
+        "W6",
+        "W10"
+      ],
+      "N": [
+        "W12"
+      ]
+    },
+    "Thu1": {
+      "D": [
+        "W2",
+        "W3",
+        "W11"
+      ],
+      "E": [
+        "W6",
+        "W10"
+      ],
+      "N": [
+        "W7"
+      ]
+    },
+    "Fri1": {
+      "D": [
+        "W1",
+        "W2",
+        "W3",
+        "W5"
+      ],
+      "E": [
+        "W8",
+        "W9"
+      ],
+      "N": [
+        "W12"
+      ]
+    },
+    "Sat1": {
+      "D": [
+        "W2",
+        "W3",
+        "W5",
+        "W11"
+      ],
+      "E": [
+        "W8",
+        "W9",
+        "W10"
+      ],
+      "N": [
+        "W4",
+        "W12"
+      ]
+    },
+    "Sun1": {
+      "D": [
+        "W2",
+        "W8",
+        "W11"
+      ],
+      "E": [
+        "W7",
+        "W10"
+      ],
+      "N": [
+        "W4",
+        "W12"
+      ]
+    },
+    "Mon2": {
+      "D": [
+        "W1",
+        "W6",
+        "W11"
+      ],
+      "E": [
+        "W4",
+        "W9"
+      ],
+      "N": [
+        "W12"
+      ]
+    },
+    "Tue2": {
+      "D": [
+        "W1",
+        "W3",
+        "W5"
+      ],
+      "E": [
+        "W4",
+        "W6"
+      ],
+      "N": [
+        "W7"
+      ]
+    },
+    "Wed2": {
+      "D": [
+        "W1",
+        "W3",
+        "W11"
+      ],
+      "E": [
+        "W6",
+        "W9"
+      ],
+      "N": [
+        "W7"
+      ]
+    },
+    "Thu2": {
+      "D": [
+        "W1",
+        "W2",
+        "W3",
+        "W5"
+      ],
+      "E": [
+        "W4",
+        "W10"
+      ],
+      "N": [
+        "W7"
+      ]
+    },
+    "Fri2": {
+      "D": [
+        "W1",
+        "W5",
+        "W8",
+        "W11"
+      ],
+      "E": [
+        "W6",
+        "W9",
+        "W12"
+      ],
+      "N": [
+        "W4"
+      ]
+    }
+  },
+  "coverage_realized": {
+    "Mon1": {
+      "D": 3,
+      "E": 2,
+      "N": 1
+    },
+    "Tue1": {
+      "D": 3,
+      "E": 2,
+      "N": 1
+    },
+    "Wed1": {
+      "D": 3,
+      "E": 2,
+      "N": 1
+    },
+    "Thu1": {
+      "D": 3,
+      "E": 2,
+      "N": 1
+    },
+    "Fri1": {
+      "D": 4,
+      "E": 2,
+      "N": 1
+    },
+    "Sat1": {
+      "D": 4,
+      "E": 3,
+      "N": 2
+    },
+    "Sun1": {
+      "D": 3,
+      "E": 2,
+      "N": 2
+    },
+    "Mon2": {
+      "D": 3,
+      "E": 2,
+      "N": 1
+    },
+    "Tue2": {
+      "D": 3,
+      "E": 2,
+      "N": 1
+    },
+    "Wed2": {
+      "D": 3,
+      "E": 2,
+      "N": 1
+    },
+    "Thu2": {
+      "D": 4,
+      "E": 2,
+      "N": 1
+    },
+    "Fri2": {
+      "D": 4,
+      "E": 3,
+      "N": 1
+    }
+  },
+  "worker_schedule": {
+    "W1": {
+      "Mon1": "OFF",
+      "Tue1": "OFF",
+      "Wed1": "D",
+      "Thu1": "OFF",
+      "Fri1": "D",
+      "Sat1": "OFF",
+      "Sun1": "OFF",
+      "Mon2": "D",
+      "Tue2": "D",
+      "Wed2": "D",
+      "Thu2": "D",
+      "Fri2": "D"
+    },
+    "W2": {
+      "Mon1": "D",
+      "Tue1": "D",
+      "Wed1": "OFF",
+      "Thu1": "D",
+      "Fri1": "D",
+      "Sat1": "D",
+      "Sun1": "D",
+      "Mon2": "OFF",
+      "Tue2": "OFF",
+      "Wed2": "OFF",
+      "Thu2": "D",
+      "Fri2": "OFF"
+    },
+    "W3": {
+      "Mon1": "OFF",
+      "Tue1": "OFF",
+      "Wed1": "D",
+      "Thu1": "D",
+      "Fri1": "D",
+      "Sat1": "D",
+      "Sun1": "OFF",
+      "Mon2": "OFF",
+      "Tue2": "D",
+      "Wed2": "D",
+      "Thu2": "D",
+      "Fri2": "OFF"
+    },
+    "W4": {
+      "Mon1": "OFF",
+      "Tue1": "N",
+      "Wed1": "OFF",
+      "Thu1": "OFF",
+      "Fri1": "OFF",
+      "Sat1": "N",
+      "Sun1": "N",
+      "Mon2": "E",
+      "Tue2": "E",
+      "Wed2": "OFF",
+      "Thu2": "E",
+      "Fri2": "N"
+    },
+    "W5": {
+      "Mon1": "D",
+      "Tue1": "OFF",
+      "Wed1": "OFF",
+      "Thu1": "OFF",
+      "Fri1": "D",
+      "Sat1": "D",
+      "Sun1": "OFF",
+      "Mon2": "OFF",
+      "Tue2": "D",
+      "Wed2": "OFF",
+      "Thu2": "D",
+      "Fri2": "D"
+    },
+    "W6": {
+      "Mon1": "E",
+      "Tue1": "OFF",
+      "Wed1": "E",
+      "Thu1": "E",
+      "Fri1": "OFF",
+      "Sat1": "OFF",
+      "Sun1": "OFF",
+      "Mon2": "D",
+      "Tue2": "E",
+      "Wed2": "E",
+      "Thu2": "OFF",
+      "Fri2": "E"
+    },
+    "W7": {
+      "Mon1": "E",
+      "Tue1": "E",
+      "Wed1": "OFF",
+      "Thu1": "N",
+      "Fri1": "OFF",
+      "Sat1": "OFF",
+      "Sun1": "E",
+      "Mon2": "OFF",
+      "Tue2": "N",
+      "Wed2": "N",
+      "Thu2": "N",
+      "Fri2": "OFF"
+    },
+    "W8": {
+      "Mon1": "D",
+      "Tue1": "D",
+      "Wed1": "OFF",
+      "Thu1": "OFF",
+      "Fri1": "E",
+      "Sat1": "E",
+      "Sun1": "D",
+      "Mon2": "OFF",
+      "Tue2": "OFF",
+      "Wed2": "OFF",
+      "Thu2": "OFF",
+      "Fri2": "D"
+    },
+    "W9": {
+      "Mon1": "OFF",
+      "Tue1": "E",
+      "Wed1": "OFF",
+      "Thu1": "OFF",
+      "Fri1": "E",
+      "Sat1": "E",
+      "Sun1": "OFF",
+      "Mon2": "E",
+      "Tue2": "OFF",
+      "Wed2": "E",
+      "Thu2": "OFF",
+      "Fri2": "E"
+    },
+    "W10": {
+      "Mon1": "OFF",
+      "Tue1": "OFF",
+      "Wed1": "E",
+      "Thu1": "E",
+      "Fri1": "OFF",
+      "Sat1": "E",
+      "Sun1": "E",
+      "Mon2": "OFF",
+      "Tue2": "OFF",
+      "Wed2": "OFF",
+      "Thu2": "E",
+      "Fri2": "OFF"
+    },
+    "W11": {
+      "Mon1": "OFF",
+      "Tue1": "D",
+      "Wed1": "D",
+      "Thu1": "D",
+      "Fri1": "OFF",
+      "Sat1": "D",
+      "Sun1": "D",
+      "Mon2": "D",
+      "Tue2": "OFF",
+      "Wed2": "D",
+      "Thu2": "OFF",
+      "Fri2": "D"
+    },
+    "W12": {
+      "Mon1": "N",
+      "Tue1": "OFF",
+      "Wed1": "N",
+      "Thu1": "OFF",
+      "Fri1": "N",
+      "Sat1": "N",
+      "Sun1": "N",
+      "Mon2": "N",
+      "Tue2": "OFF",
+      "Wed2": "OFF",
+      "Thu2": "OFF",
+      "Fri2": "E"
+    }
+  },
+  "worker_total_assignments": {
+    "W1": 7,
+    "W2": 7,
+    "W3": 7,
+    "W4": 7,
+    "W5": 6,
+    "W6": 7,
+    "W7": 7,
+    "W8": 6,
+    "W9": 6,
+    "W10": 5,
+    "W11": 8,
+    "W12": 7
+  },
+  "worker_night_assignments": {
+    "W1": 0,
+    "W2": 0,
+    "W3": 0,
+    "W4": 4,
+    "W5": 0,
+    "W6": 0,
+    "W7": 4,
+    "W8": 0,
+    "W9": 0,
+    "W10": 0,
+    "W11": 0,
+    "W12": 6
+  },
+  "worker_overtime": {
+    "W1": 0.0,
+    "W2": 0.0,
+    "W3": 0.0,
+    "W4": 0.0,
+    "W5": 0.0,
+    "W6": 0.0,
+    "W7": 0.0,
+    "W8": 0.0,
+    "W9": 0.0,
+    "W10": 0.0,
+    "W11": 1.0,
+    "W12": 0.0
+  },
+  "solve_method": "gurobi_milp_wpss_medium"
+}

@@ -1,0 +1,44 @@
+{
+  "status": "feasible",
+  "is_feasible": true,
+  "assignment": {
+    "x1": 1,
+    "x2": 0,
+    "x3": 1,
+    "x4": 0,
+    "x5": 0,
+    "x6": 1,
+    "x7": 1,
+    "x8": 1,
+    "x9": 1,
+    "x10": 0,
+    "x11": 0,
+    "x12": 0,
+    "x13": 0,
+    "x14": 0,
+    "x15": 0,
+    "x16": 0
+  },
+  "true_variables": [
+    "x1",
+    "x3",
+    "x6",
+    "x7",
+    "x8",
+    "x9"
+  ],
+  "false_variables": [
+    "x2",
+    "x4",
+    "x5",
+    "x10",
+    "x11",
+    "x12",
+    "x13",
+    "x14",
+    "x15",
+    "x16"
+  ],
+  "solve_method": "gurobi_milp_lcsm",
+  "runtime_seconds": 0.002598
+}

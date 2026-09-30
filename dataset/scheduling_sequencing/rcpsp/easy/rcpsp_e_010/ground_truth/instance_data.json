@@ -1,0 +1,376 @@
+{
+  "instance_id": "rcpsp_e_010",
+  "variant": "single_project_renewable_rcpsp",
+  "scenario": "resource_constrained_project_scheduling",
+  "difficulty": "easy",
+  "sets": {
+    "activities": [
+      "Start",
+      "A1",
+      "A2",
+      "A3",
+      "A4",
+      "A5",
+      "A6",
+      "A7",
+      "A8",
+      "A9",
+      "A10",
+      "End"
+    ],
+    "real_activities": [
+      "A1",
+      "A2",
+      "A3",
+      "A4",
+      "A5",
+      "A6",
+      "A7",
+      "A8",
+      "A9",
+      "A10"
+    ],
+    "resources": [
+      "R1",
+      "R2"
+    ]
+  },
+  "precedence_arcs": [
+    [
+      "Start",
+      "A1"
+    ],
+    [
+      "Start",
+      "A2"
+    ],
+    [
+      "A1",
+      "A3"
+    ],
+    [
+      "A1",
+      "A4"
+    ],
+    [
+      "A2",
+      "A4"
+    ],
+    [
+      "A2",
+      "A5"
+    ],
+    [
+      "A3",
+      "A6"
+    ],
+    [
+      "A4",
+      "A6"
+    ],
+    [
+      "A4",
+      "A7"
+    ],
+    [
+      "A5",
+      "A7"
+    ],
+    [
+      "A5",
+      "A8"
+    ],
+    [
+      "A6",
+      "A9"
+    ],
+    [
+      "A7",
+      "A9"
+    ],
+    [
+      "A8",
+      "A10"
+    ],
+    [
+      "A9",
+      "A10"
+    ],
+    [
+      "A10",
+      "End"
+    ]
+  ],
+  "duration": {
+    "Start": 0,
+    "A1": 3,
+    "A2": 3,
+    "A3": 2,
+    "A4": 4,
+    "A5": 2,
+    "A6": 3,
+    "A7": 2,
+    "A8": 2,
+    "A9": 3,
+    "A10": 2,
+    "End": 0
+  },
+  "resource_capacity": {
+    "R1": 5,
+    "R2": 3
+  },
+  "resource_demand": {
+    "Start": {
+      "R1": 0,
+      "R2": 0
+    },
+    "A1": {
+      "R1": 2,
+      "R2": 1
+    },
+    "A2": {
+      "R1": 2,
+      "R2": 1
+    },
+    "A3": {
+      "R1": 1,
+      "R2": 2
+    },
+    "A4": {
+      "R1": 3,
+      "R2": 1
+    },
+    "A5": {
+      "R1": 2,
+      "R2": 2
+    },
+    "A6": {
+      "R1": 2,
+      "R2": 1
+    },
+    "A7": {
+      "R1": 3,
+      "R2": 1
+    },
+    "A8": {
+      "R1": 2,
+      "R2": 1
+    },
+    "A9": {
+      "R1": 3,
+      "R2": 2
+    },
+    "A10": {
+      "R1": 2,
+      "R2": 1
+    },
+    "End": {
+      "R1": 0,
+      "R2": 0
+    }
+  },
+  "activity_records": [
+    {
+      "activity": "Start",
+      "duration": 0,
+      "resource_demand": {
+        "R1": 0,
+        "R2": 0
+      },
+      "layer": 0
+    },
+    {
+      "activity": "A1",
+      "duration": 3,
+      "resource_demand": {
+        "R1": 2,
+        "R2": 1
+      },
+      "layer": 1
+    },
+    {
+      "activity": "A2",
+      "duration": 3,
+      "resource_demand": {
+        "R1": 2,
+        "R2": 1
+      },
+      "layer": 1
+    },
+    {
+      "activity": "A3",
+      "duration": 2,
+      "resource_demand": {
+        "R1": 1,
+        "R2": 2
+      },
+      "layer": 2
+    },
+    {
+      "activity": "A4",
+      "duration": 4,
+      "resource_demand": {
+        "R1": 3,
+        "R2": 1
+      },
+      "layer": 2
+    },
+    {
+      "activity": "A5",
+      "duration": 2,
+      "resource_demand": {
+        "R1": 2,
+        "R2": 2
+      },
+      "layer": 2
+    },
+    {
+      "activity": "A6",
+      "duration": 3,
+      "resource_demand": {
+        "R1": 2,
+        "R2": 1
+      },
+      "layer": 3
+    },
+    {
+      "activity": "A7",
+      "duration": 2,
+      "resource_demand": {
+        "R1": 3,
+        "R2": 1
+      },
+      "layer": 3
+    },
+    {
+      "activity": "A8",
+      "duration": 2,
+      "resource_demand": {
+        "R1": 2,
+        "R2": 1
+      },
+      "layer": 3
+    },
+    {
+      "activity": "A9",
+      "duration": 3,
+      "resource_demand": {
+        "R1": 3,
+        "R2": 2
+      },
+      "layer": 4
+    },
+    {
+      "activity": "A10",
+      "duration": 2,
+      "resource_demand": {
+        "R1": 2,
+        "R2": 1
+      },
+      "layer": 5
+    },
+    {
+      "activity": "End",
+      "duration": 0,
+      "resource_demand": {
+        "R1": 0,
+        "R2": 0
+      },
+      "layer": 6
+    }
+  ],
+  "visual_layout": {
+    "layers": [
+      [
+        "Start"
+      ],
+      [
+        "A1",
+        "A2"
+      ],
+      [
+        "A3",
+        "A4",
+        "A5"
+      ],
+      [
+        "A6",
+        "A7",
+        "A8"
+      ],
+      [
+        "A9"
+      ],
+      [
+        "A10"
+      ],
+      [
+        "End"
+      ]
+    ],
+    "positions": {
+      "Start": [
+        0.5,
+        1.6
+      ],
+      "A1": [
+        1.85,
+        2.8
+      ],
+      "A2": [
+        1.85,
+        0.4
+      ],
+      "A3": [
+        3.2,
+        2.8
+      ],
+      "A4": [
+        3.2,
+        1.6
+      ],
+      "A5": [
+        3.2,
+        0.4
+      ],
+      "A6": [
+        4.55,
+        2.8
+      ],
+      "A7": [
+        4.55,
+        1.6
+      ],
+      "A8": [
+        4.55,
+        0.4
+      ],
+      "A9": [
+        5.9,
+        1.6
+      ],
+      "A10": [
+        7.25,
+        1.6
+      ],
+      "End": [
+        8.6,
+        1.6
+      ]
+    }
+  },
+  "meta_parameters": {
+    "number_activities": 12,
+    "number_real_activities": 10,
+    "number_resources": 2,
+    "precedence_density": 0.2424,
+    "resource_capacity_regime": "mixed",
+    "duration_regime": "balanced_with_long_mid_activity",
+    "bottleneck_resource_flag": false,
+    "graph_pattern": "near_symmetric_branch_merge",
+    "group": "C",
+    "visual_type": "dual_visual_precedence_network_plus_resource_matrix",
+    "seed": 1310,
+    "formulation_size": 330
+  }
+}

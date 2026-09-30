@@ -1,0 +1,242 @@
+{
+  "instance_id": "wpss_e_004",
+  "variant": "workforce_planning_shift_scheduling",
+  "scenario": "workforce_planning_shift_scheduling",
+  "difficulty": "easy",
+  "sets": {
+    "workers": [
+      "W1",
+      "W2",
+      "W3",
+      "W4",
+      "W5",
+      "W6",
+      "W7"
+    ],
+    "days": [
+      "Mon",
+      "Tue",
+      "Wed",
+      "Thu",
+      "Fri",
+      "Sat",
+      "Sun"
+    ],
+    "shifts": [
+      "D",
+      "E",
+      "N"
+    ]
+  },
+  "indices": {
+    "worker_index": {
+      "W1": 0,
+      "W2": 1,
+      "W3": 2,
+      "W4": 3,
+      "W5": 4,
+      "W6": 5,
+      "W7": 6
+    },
+    "day_index": {
+      "Mon": 0,
+      "Tue": 1,
+      "Wed": 2,
+      "Thu": 3,
+      "Fri": 4,
+      "Sat": 5,
+      "Sun": 6
+    },
+    "shift_index": {
+      "D": 0,
+      "E": 1,
+      "N": 2
+    }
+  },
+  "shift_labels": {
+    "D": "Day",
+    "E": "Evening",
+    "N": "Night"
+  },
+  "shift_time_window": {
+    "D": "07:00-15:00",
+    "E": "15:00-23:00",
+    "N": "23:00-07:00"
+  },
+  "availability_legend": {
+    "OFF": [],
+    "D": [
+      "D"
+    ],
+    "E": [
+      "E"
+    ],
+    "N": [
+      "N"
+    ],
+    "DE": [
+      "D",
+      "E"
+    ],
+    "EN": [
+      "E",
+      "N"
+    ],
+    "DEN": [
+      "D",
+      "E",
+      "N"
+    ]
+  },
+  "availability_code": {
+    "W1": {
+      "Mon": "DEN",
+      "Tue": "DEN",
+      "Wed": "DEN",
+      "Thu": "DEN",
+      "Fri": "DEN",
+      "Sat": "DEN",
+      "Sun": "DEN"
+    },
+    "W2": {
+      "Mon": "DE",
+      "Tue": "DE",
+      "Wed": "DE",
+      "Thu": "DE",
+      "Fri": "DE",
+      "Sat": "D",
+      "Sun": "OFF"
+    },
+    "W3": {
+      "Mon": "EN",
+      "Tue": "EN",
+      "Wed": "EN",
+      "Thu": "EN",
+      "Fri": "N",
+      "Sat": "N",
+      "Sun": "EN"
+    },
+    "W4": {
+      "Mon": "DEN",
+      "Tue": "DEN",
+      "Wed": "DEN",
+      "Thu": "DEN",
+      "Fri": "DEN",
+      "Sat": "DEN",
+      "Sun": "DEN"
+    },
+    "W5": {
+      "Mon": "D",
+      "Tue": "D",
+      "Wed": "OFF",
+      "Thu": "D",
+      "Fri": "D",
+      "Sat": "DE",
+      "Sun": "DE"
+    },
+    "W6": {
+      "Mon": "N",
+      "Tue": "EN",
+      "Wed": "N",
+      "Thu": "EN",
+      "Fri": "N",
+      "Sat": "EN",
+      "Sun": "N"
+    },
+    "W7": {
+      "Mon": "OFF",
+      "Tue": "DEN",
+      "Wed": "DEN",
+      "Thu": "OFF",
+      "Fri": "DEN",
+      "Sat": "DEN",
+      "Sun": "DEN"
+    }
+  },
+  "demand": {
+    "Mon": {
+      "D": 2,
+      "E": 1,
+      "N": 1
+    },
+    "Tue": {
+      "D": 2,
+      "E": 1,
+      "N": 1
+    },
+    "Wed": {
+      "D": 2,
+      "E": 1,
+      "N": 1
+    },
+    "Thu": {
+      "D": 2,
+      "E": 1,
+      "N": 1
+    },
+    "Fri": {
+      "D": 2,
+      "E": 1,
+      "N": 2
+    },
+    "Sat": {
+      "D": 2,
+      "E": 1,
+      "N": 2
+    },
+    "Sun": {
+      "D": 2,
+      "E": 1,
+      "N": 1
+    }
+  },
+  "shift_cost": {
+    "W1": {
+      "D": 7,
+      "E": 10,
+      "N": 15
+    },
+    "W2": {
+      "D": 8,
+      "E": 8,
+      "N": 99
+    },
+    "W3": {
+      "D": 99,
+      "E": 9,
+      "N": 7
+    },
+    "W4": {
+      "D": 9,
+      "E": 11,
+      "N": 13
+    },
+    "W5": {
+      "D": 6,
+      "E": 12,
+      "N": 99
+    },
+    "W6": {
+      "D": 99,
+      "E": 10,
+      "N": 8
+    },
+    "W7": {
+      "D": 11,
+      "E": 11,
+      "N": 11
+    }
+  },
+  "meta_parameters": {
+    "number_periods": 7,
+    "number_workers": 7,
+    "number_shift_types": 3,
+    "coverage_regime": "weekday_balanced_with_fri_sat_night_peak",
+    "cost_regime": "worker_specific_cost_mix",
+    "availability_regime": "weekend_leave_blocks_plus_night_specialists",
+    "peak_demand_flag": true,
+    "visual_type": "staffing_heatmap_plus_worker_profile_availability_matrix",
+    "seed": 904,
+    "formulation_size": 364
+  }
+}

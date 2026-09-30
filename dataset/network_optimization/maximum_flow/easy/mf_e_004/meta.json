@@ -1,0 +1,42 @@
+{
+  "instance_id": "mf_e_004",
+  "family": "network_optimization",
+  "subtype": "maximum_flow",
+  "variant": "maximum_flow_minimum_cut_single",
+  "difficulty": "easy",
+  "graph_type": "diamond_merge_with_direct_sink_bypass",
+  "capacity_regime": "merge_to_sink_bottleneck_with_bypass",
+  "cost_regime": "cycle_vs_junction_tradeoff",
+  "coupling_level": "high",
+  "cut_structure": "sink_inlet_cut_(6,7)+bypass_(4,7)",
+  "flow_pattern": "split_then_merge_then_bypass_option",
+  "num_nodes": 7,
+  "num_arcs": 10,
+  "num_variables": 10,
+  "num_constraints": 15,
+  "formulation_size": 17,
+  "seed": 1004,
+  "files": {
+    "canonical_specification": "canonical_specification.txt",
+    "task_input": "task_input.txt",
+    "visuals": [
+      "visuals/visual_0.png"
+    ],
+    "ground_truth": {
+      "instance_data": "ground_truth/instance_data.json",
+      "math_model": "ground_truth/math_model.md",
+      "solver_ref": "ground_truth/solver_ref.py",
+      "solution_ref": "ground_truth/solution_ref.json"
+    }
+  },
+  "status": "optimal",
+  "optimal_max_flow_value": 11.0,
+  "optimal_min_cut_value": 11.0,
+  "objective_exact": 11.0,
+  "runtime_seconds": 0.025806903839111328,
+  "solve_method": "gurobi_lp_max_flow",
+  "solver_used": "Gurobi",
+  "solver": "Gurobi",
+  "solver_policy": "gurobi_first_then_exact_scipy_linprog",
+  "visual_0_checksum_md5": "f9349f35937d3bbf8fb032e16836ac35"
+}

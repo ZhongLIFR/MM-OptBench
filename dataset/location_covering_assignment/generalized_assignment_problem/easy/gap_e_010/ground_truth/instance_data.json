@@ -1,0 +1,326 @@
+{
+  "instance_id": "gap_e_010",
+  "scenario_name": "regional_task_assignment",
+  "variant_type": "generalized_assignment_problem",
+  "sets": {
+    "agents": [
+      "A1",
+      "A2",
+      "A3",
+      "A4",
+      "A5",
+      "A6",
+      "A7"
+    ],
+    "tasks": [
+      "T1",
+      "T2",
+      "T3",
+      "T4",
+      "T5",
+      "T6",
+      "T7",
+      "T8",
+      "T9"
+    ]
+  },
+  "task_families": {
+    "T1": "F1",
+    "T2": "F2",
+    "T3": "F3",
+    "T4": "F1",
+    "T5": "F2",
+    "T6": "F3",
+    "T7": "F1",
+    "T8": "F2",
+    "T9": "F3"
+  },
+  "agent_roles": {
+    "A1": "specialist",
+    "A2": "specialist",
+    "A3": "specialist",
+    "A4": "specialist",
+    "A5": "specialist",
+    "A6": "specialist",
+    "A7": "reserve"
+  },
+  "agent_capacities": {
+    "A1": 3,
+    "A2": 10,
+    "A3": 3,
+    "A4": 7,
+    "A5": 5,
+    "A6": 5,
+    "A7": 10
+  },
+  "feasible_assignments": {
+    "A1": [
+      "T1",
+      "T6",
+      "T7",
+      "T8",
+      "T9"
+    ],
+    "A2": [
+      "T3",
+      "T6",
+      "T9"
+    ],
+    "A3": [
+      "T1",
+      "T2",
+      "T4",
+      "T5",
+      "T8"
+    ],
+    "A4": [
+      "T1",
+      "T2",
+      "T3",
+      "T4",
+      "T5",
+      "T7",
+      "T8"
+    ],
+    "A5": [
+      "T1",
+      "T4",
+      "T7"
+    ],
+    "A6": [
+      "T2",
+      "T3",
+      "T4",
+      "T6",
+      "T9"
+    ],
+    "A7": [
+      "T2",
+      "T3",
+      "T5",
+      "T6",
+      "T7",
+      "T8",
+      "T9"
+    ]
+  },
+  "task_feasible_agents": {
+    "T1": [
+      "A1",
+      "A3",
+      "A4",
+      "A5"
+    ],
+    "T2": [
+      "A3",
+      "A4",
+      "A6",
+      "A7"
+    ],
+    "T3": [
+      "A2",
+      "A4",
+      "A6",
+      "A7"
+    ],
+    "T4": [
+      "A3",
+      "A4",
+      "A5",
+      "A6"
+    ],
+    "T5": [
+      "A3",
+      "A4",
+      "A7"
+    ],
+    "T6": [
+      "A1",
+      "A2",
+      "A6",
+      "A7"
+    ],
+    "T7": [
+      "A1",
+      "A4",
+      "A5",
+      "A7"
+    ],
+    "T8": [
+      "A1",
+      "A3",
+      "A4",
+      "A7"
+    ],
+    "T9": [
+      "A1",
+      "A2",
+      "A6",
+      "A7"
+    ]
+  },
+  "cost_matrix": {
+    "A1": {
+      "T1": 7,
+      "T2": null,
+      "T3": null,
+      "T4": null,
+      "T5": null,
+      "T6": 7,
+      "T7": 8,
+      "T8": 8,
+      "T9": 7
+    },
+    "A2": {
+      "T1": null,
+      "T2": null,
+      "T3": 7,
+      "T4": null,
+      "T5": null,
+      "T6": 7,
+      "T7": null,
+      "T8": null,
+      "T9": 6
+    },
+    "A3": {
+      "T1": 7,
+      "T2": 9,
+      "T3": null,
+      "T4": 9,
+      "T5": 10,
+      "T6": null,
+      "T7": null,
+      "T8": 9,
+      "T9": null
+    },
+    "A4": {
+      "T1": 8,
+      "T2": 9,
+      "T3": 9,
+      "T4": 7,
+      "T5": 10,
+      "T6": null,
+      "T7": 9,
+      "T8": 8,
+      "T9": null
+    },
+    "A5": {
+      "T1": 8,
+      "T2": null,
+      "T3": null,
+      "T4": 8,
+      "T5": null,
+      "T6": null,
+      "T7": 7,
+      "T8": null,
+      "T9": null
+    },
+    "A6": {
+      "T1": null,
+      "T2": 8,
+      "T3": 6,
+      "T4": 7,
+      "T5": null,
+      "T6": 7,
+      "T7": null,
+      "T8": null,
+      "T9": 7
+    },
+    "A7": {
+      "T1": null,
+      "T2": 8,
+      "T3": 10,
+      "T4": null,
+      "T5": 8,
+      "T6": 10,
+      "T7": 11,
+      "T8": 10,
+      "T9": 10
+    }
+  },
+  "resource_matrix": {
+    "A1": {
+      "T1": 4,
+      "T2": null,
+      "T3": null,
+      "T4": null,
+      "T5": null,
+      "T6": 6,
+      "T7": 4,
+      "T8": 4,
+      "T9": 6
+    },
+    "A2": {
+      "T1": null,
+      "T2": null,
+      "T3": 5,
+      "T4": null,
+      "T5": null,
+      "T6": 4,
+      "T7": null,
+      "T8": null,
+      "T9": 4
+    },
+    "A3": {
+      "T1": 5,
+      "T2": 3,
+      "T3": null,
+      "T4": 5,
+      "T5": 3,
+      "T6": null,
+      "T7": null,
+      "T8": 3,
+      "T9": null
+    },
+    "A4": {
+      "T1": 3,
+      "T2": 4,
+      "T3": 6,
+      "T4": 3,
+      "T5": 4,
+      "T6": null,
+      "T7": 4,
+      "T8": 4,
+      "T9": null
+    },
+    "A5": {
+      "T1": 4,
+      "T2": null,
+      "T3": null,
+      "T4": 4,
+      "T5": null,
+      "T6": null,
+      "T7": 3,
+      "T8": null,
+      "T9": null
+    },
+    "A6": {
+      "T1": null,
+      "T2": 4,
+      "T3": 4,
+      "T4": 5,
+      "T5": null,
+      "T6": 5,
+      "T7": null,
+      "T8": null,
+      "T9": 5
+    },
+    "A7": {
+      "T1": null,
+      "T2": 2,
+      "T3": 4,
+      "T4": null,
+      "T5": 2,
+      "T6": 4,
+      "T7": 3,
+      "T8": 2,
+      "T9": 4
+    }
+  },
+  "generation_notes": {
+    "capacity_regime": "moderate",
+    "cost_resource_correlation_type": "negative",
+    "heterogeneity_pattern": "specialist_plus_reserve",
+    "task_family_count": 3
+  }
+}

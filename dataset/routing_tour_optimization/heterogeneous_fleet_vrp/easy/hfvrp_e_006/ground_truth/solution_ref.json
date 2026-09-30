@@ -1,0 +1,159 @@
+{
+  "status": "optimal",
+  "objective": 56.7296,
+  "objective_exact": 56.729600000000005,
+  "runtime_seconds": 0.31388654198963195,
+  "solve_method": "gurobi_mtz_hfvrp",
+  "routes": [
+    [
+      "Depot",
+      "C10",
+      "C9",
+      "Depot"
+    ],
+    [
+      "Depot",
+      "C2",
+      "C1",
+      "Depot"
+    ],
+    [
+      "Depot",
+      "C3",
+      "Depot"
+    ],
+    [
+      "Depot",
+      "C8",
+      "C7",
+      "C6",
+      "C5",
+      "C4",
+      "Depot"
+    ]
+  ],
+  "route_vehicle_ids": [
+    "SM1",
+    "SM2",
+    "SM3",
+    "LG1"
+  ],
+  "route_vehicle_types": [
+    "SM",
+    "SM",
+    "SM",
+    "LG"
+  ],
+  "route_loads": [
+    6,
+    6,
+    2,
+    12
+  ],
+  "route_capacities": [
+    6,
+    6,
+    6,
+    12
+  ],
+  "route_base_distances": [
+    10.0,
+    9.86,
+    8.06,
+    17.7
+  ],
+  "route_variable_costs": [
+    11.8,
+    11.6348,
+    9.5108,
+    16.284
+  ],
+  "route_total_costs": [
+    12.7,
+    12.5348,
+    10.4108,
+    21.084
+  ],
+  "activated_vehicles": [
+    "SM1",
+    "SM2",
+    "SM3",
+    "LG1"
+  ],
+  "unused_vehicles": [],
+  "active_arcs": [
+    [
+      "Depot",
+      "C10",
+      "SM1"
+    ],
+    [
+      "C10",
+      "C9",
+      "SM1"
+    ],
+    [
+      "C9",
+      "Depot",
+      "SM1"
+    ],
+    [
+      "Depot",
+      "C2",
+      "SM2"
+    ],
+    [
+      "C2",
+      "C1",
+      "SM2"
+    ],
+    [
+      "C1",
+      "Depot",
+      "SM2"
+    ],
+    [
+      "Depot",
+      "C3",
+      "SM3"
+    ],
+    [
+      "C3",
+      "Depot",
+      "SM3"
+    ],
+    [
+      "Depot",
+      "C8",
+      "LG1"
+    ],
+    [
+      "C8",
+      "C7",
+      "LG1"
+    ],
+    [
+      "C7",
+      "C6",
+      "LG1"
+    ],
+    [
+      "C6",
+      "C5",
+      "LG1"
+    ],
+    [
+      "C5",
+      "C4",
+      "LG1"
+    ],
+    [
+      "C4",
+      "Depot",
+      "LG1"
+    ]
+  ],
+  "num_routes_used": 4,
+  "capacity_binding_flag": true,
+  "objective_from_routes": 56.7296
+}

@@ -1,0 +1,20 @@
+A candidate-subset table is provided.
+
+The visual is a single exact table:
+- Rows correspond to candidate subsets.
+- Columns correspond to elements.
+- A filled cell means that the corresponding element belongs to that subset.
+- The horizontal bar and integer shown beside each row give the exact subset cost.
+
+Interpretation:
+- Each candidate subset may be selected or not selected.
+- If a subset is selected, its cost is paid once.
+- Every element must appear in exactly one selected subset.
+- There are no capacities, assignment variables, budgets, multiple periods, penalties, or stochastic elements.
+
+Task:
+1) Write a mathematical optimization model for this exact instance.
+2) Provide solver-executable code implementing the model.
+
+Objective:
+Minimize total subset cost.

@@ -1,0 +1,233 @@
+{
+  "problem_type": "facility_location",
+  "difficulty": "medium",
+  "variant_type": "CFL",
+  "sets": {
+    "F": [
+      "F1",
+      "F2",
+      "F3",
+      "F4",
+      "F5"
+    ],
+    "C": [
+      "C1",
+      "C2",
+      "C3",
+      "C4",
+      "C5",
+      "C6",
+      "C7",
+      "C8"
+    ]
+  },
+  "facility": {
+    "F1": {
+      "xy": [
+        3,
+        24
+      ],
+      "open_cost": 17,
+      "radius": 10.0,
+      "capacity": 6
+    },
+    "F2": {
+      "xy": [
+        12,
+        25
+      ],
+      "open_cost": 20,
+      "radius": 12.8491,
+      "capacity": 5
+    },
+    "F3": {
+      "xy": [
+        24,
+        24
+      ],
+      "open_cost": 18,
+      "radius": 13.6164,
+      "capacity": 6
+    },
+    "F4": {
+      "xy": [
+        7,
+        9
+      ],
+      "open_cost": 16,
+      "radius": 10.0,
+      "capacity": 5
+    },
+    "F5": {
+      "xy": [
+        21,
+        9
+      ],
+      "open_cost": 17,
+      "radius": 11.3803,
+      "capacity": 4
+    }
+  },
+  "customer": {
+    "C1": {
+      "xy": [
+        5,
+        22
+      ],
+      "demand": 2,
+      "allowed_facilities": [
+        "F1",
+        "F2"
+      ]
+    },
+    "C2": {
+      "xy": [
+        10,
+        21
+      ],
+      "demand": 2,
+      "allowed_facilities": [
+        "F1",
+        "F2",
+        "F4"
+      ]
+    },
+    "C3": {
+      "xy": [
+        17,
+        22
+      ],
+      "demand": 2,
+      "allowed_facilities": [
+        "F2",
+        "F3"
+      ]
+    },
+    "C4": {
+      "xy": [
+        23,
+        20
+      ],
+      "demand": 2,
+      "allowed_facilities": [
+        "F3",
+        "F5"
+      ]
+    },
+    "C5": {
+      "xy": [
+        8,
+        13
+      ],
+      "demand": 3,
+      "allowed_facilities": [
+        "F2",
+        "F4"
+      ]
+    },
+    "C6": {
+      "xy": [
+        12,
+        14
+      ],
+      "demand": 2,
+      "allowed_facilities": [
+        "F2",
+        "F4",
+        "F5"
+      ]
+    },
+    "C7": {
+      "xy": [
+        18,
+        12
+      ],
+      "demand": 2,
+      "allowed_facilities": [
+        "F3",
+        "F5"
+      ]
+    },
+    "C8": {
+      "xy": [
+        21,
+        11
+      ],
+      "demand": 2,
+      "allowed_facilities": [
+        "F3",
+        "F5"
+      ]
+    }
+  },
+  "feasible_assignments": {
+    "C1": [
+      "F1",
+      "F2"
+    ],
+    "C2": [
+      "F1",
+      "F2"
+    ],
+    "C3": [
+      "F2",
+      "F3"
+    ],
+    "C4": [
+      "F3",
+      "F5"
+    ],
+    "C5": [
+      "F2",
+      "F4"
+    ],
+    "C6": [
+      "F2",
+      "F4",
+      "F5"
+    ],
+    "C7": [
+      "F3",
+      "F5"
+    ],
+    "C8": [
+      "F3",
+      "F5"
+    ]
+  },
+  "assignment_cost_per_unit_demand": {
+    "C1": {
+      "F1": 2.8284,
+      "F2": 7.6158
+    },
+    "C2": {
+      "F1": 7.6158,
+      "F2": 4.4721
+    },
+    "C3": {
+      "F2": 5.831,
+      "F3": 7.2801
+    },
+    "C4": {
+      "F3": 4.1231,
+      "F5": 11.1803
+    },
+    "C5": {
+      "F2": 12.6491,
+      "F4": 4.1231
+    },
+    "C6": {
+      "F2": 11.0,
+      "F4": 7.0711,
+      "F5": 10.2956
+    },
+    "C7": {
+      "F3": 13.4164,
+      "F5": 4.2426
+    },
+    "C8": {
+      "F3": 13.3417,
+      "F5": 2.0
+    }
+  }
+}

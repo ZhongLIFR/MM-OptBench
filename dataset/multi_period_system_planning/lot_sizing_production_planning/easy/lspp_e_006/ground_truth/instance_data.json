@@ -1,0 +1,182 @@
+{
+  "instance_id": "lspp_e_006",
+  "variant": "lot_sizing_production_planning",
+  "scenario": "lot_sizing_production_planning",
+  "difficulty": "easy",
+  "sets": {
+    "products": [
+      "P1",
+      "P2",
+      "P3"
+    ],
+    "periods": [
+      "t1",
+      "t2",
+      "t3",
+      "t4",
+      "t5",
+      "t6",
+      "t7",
+      "t8"
+    ]
+  },
+  "demand": {
+    "P1": {
+      "t1": 6,
+      "t2": 4,
+      "t3": 7,
+      "t4": 5,
+      "t5": 8,
+      "t6": 6,
+      "t7": 9,
+      "t8": 6
+    },
+    "P2": {
+      "t1": 4,
+      "t2": 7,
+      "t3": 5,
+      "t4": 8,
+      "t5": 5,
+      "t6": 8,
+      "t7": 6,
+      "t8": 9
+    },
+    "P3": {
+      "t1": 5,
+      "t2": 5,
+      "t3": 6,
+      "t4": 6,
+      "t5": 5,
+      "t6": 7,
+      "t7": 5,
+      "t8": 8
+    }
+  },
+  "production_cost": {
+    "P1": {
+      "t1": 4,
+      "t2": 4,
+      "t3": 4,
+      "t4": 4,
+      "t5": 5,
+      "t6": 5,
+      "t7": 5,
+      "t8": 5
+    },
+    "P2": {
+      "t1": 5,
+      "t2": 5,
+      "t3": 5,
+      "t4": 5,
+      "t5": 5,
+      "t6": 6,
+      "t7": 6,
+      "t8": 6
+    },
+    "P3": {
+      "t1": 3,
+      "t2": 3,
+      "t3": 4,
+      "t4": 4,
+      "t5": 4,
+      "t6": 4,
+      "t7": 5,
+      "t8": 5
+    }
+  },
+  "holding_cost": {
+    "P1": {
+      "t1": 1,
+      "t2": 1,
+      "t3": 1,
+      "t4": 1,
+      "t5": 1,
+      "t6": 1,
+      "t7": 1,
+      "t8": 0
+    },
+    "P2": {
+      "t1": 2,
+      "t2": 2,
+      "t3": 2,
+      "t4": 2,
+      "t5": 2,
+      "t6": 2,
+      "t7": 2,
+      "t8": 0
+    },
+    "P3": {
+      "t1": 1,
+      "t2": 1,
+      "t3": 1,
+      "t4": 1,
+      "t5": 1,
+      "t6": 1,
+      "t7": 1,
+      "t8": 0
+    }
+  },
+  "setup_cost": {
+    "P1": {
+      "t1": 22,
+      "t2": 22,
+      "t3": 22,
+      "t4": 22,
+      "t5": 22,
+      "t6": 22,
+      "t7": 22,
+      "t8": 22
+    },
+    "P2": {
+      "t1": 26,
+      "t2": 26,
+      "t3": 26,
+      "t4": 26,
+      "t5": 26,
+      "t6": 26,
+      "t7": 26,
+      "t8": 26
+    },
+    "P3": {
+      "t1": 18,
+      "t2": 18,
+      "t3": 18,
+      "t4": 18,
+      "t5": 18,
+      "t6": 18,
+      "t7": 18,
+      "t8": 18
+    }
+  },
+  "initial_inventory": {
+    "P1": 0,
+    "P2": 0,
+    "P3": 0
+  },
+  "capacity": {
+    "t1": 16,
+    "t2": 17,
+    "t3": 17,
+    "t4": 18,
+    "t5": 18,
+    "t6": 21,
+    "t7": 22,
+    "t8": 25
+  },
+  "big_m": {
+    "P1": 51,
+    "P2": 52,
+    "P3": 47
+  },
+  "meta_parameters": {
+    "number_periods": 8,
+    "number_products": 3,
+    "demand_pattern": "competing_seasonal_peaks",
+    "setup_cost_regime": "product_heterogeneous",
+    "capacity_regime": "mild_binding",
+    "multi_product_flag": true,
+    "visual_type": "timeline_demand_grid",
+    "seed": 506,
+    "formulation_size": 128
+  }
+}

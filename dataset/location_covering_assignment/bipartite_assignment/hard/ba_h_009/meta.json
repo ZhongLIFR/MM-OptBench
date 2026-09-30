@@ -1,0 +1,22 @@
+{
+  "variant_type": "matching",
+  "number_left_nodes": 40,
+  "number_right_nodes": 40,
+  "graph_density": 0.6,
+  "cost_regime": "symmetric_degenerate",
+  "connectivity_pattern": "moderately_dense_structured",
+  "sparsity_pattern": "near_symmetric_dense",
+  "symmetry_flag": true,
+  "seed": 309,
+  "visual_mode": "table_only",
+  "status": "optimal",
+  "objective_exact": 246.0,
+  "objective_value": 246.0,
+  "solver_policy": "prefer_gurobi_else_exact_fallback",
+  "solver_used": "gurobi",
+  "formulation_size": {
+    "variables": 960,
+    "constraints": 80
+  },
+  "required_side": "drivers"
+}

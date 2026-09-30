@@ -1,0 +1,63 @@
+Instance ID: cnd_m_004
+Scenario: industrial_backup_lane_design
+Family: capacitated_network_design
+Variant: single_visual_single_commodity_cnd
+
+Network
+-------
+Nodes:
+  1, 2, 3, 4, 5, 6, 7, 8, 9, 10
+
+Source:
+  1
+
+Sink:
+  10
+
+Required shipment:
+  9 units
+
+Node balances
+-------------
+  Node 1: +9
+  Node 10: -9
+  All other nodes: 0
+
+Candidate directed arcs with exact parameters
+---------------------------------------------
+  e1:  1 -> 2   capacity 8   fixed_cost 5   variable_cost 5
+  e2:  1 -> 3   capacity 12   fixed_cost 4   variable_cost 10
+  e3:  1 -> 4   capacity 9   fixed_cost 4   variable_cost 5
+  e4:  2 -> 5   capacity 7   fixed_cost 4   variable_cost 9
+  e5:  2 -> 6   capacity 7   fixed_cost 9   variable_cost 5
+  e6:  3 -> 6   capacity 9   fixed_cost 7   variable_cost 9
+  e7:  3 -> 7   capacity 11   fixed_cost 6   variable_cost 3
+  e8:  4 -> 7   capacity 3   fixed_cost 10   variable_cost 2
+  e9:  5 -> 8   capacity 4   fixed_cost 10   variable_cost 4
+  e10:  6 -> 8   capacity 4   fixed_cost 8   variable_cost 8
+  e11:  6 -> 9   capacity 4   fixed_cost 9   variable_cost 10
+  e12:  7 -> 9   capacity 4   fixed_cost 3   variable_cost 7
+  e13:  5 -> 6   capacity 9   fixed_cost 6   variable_cost 3
+  e14:  7 -> 8   capacity 6   fixed_cost 4   variable_cost 1
+  e15:  8 -> 10   capacity 4   fixed_cost 5   variable_cost 5
+  e16:  9 -> 10   capacity 12   fixed_cost 6   variable_cost 8
+
+Problem statement
+-----------------
+Choose which candidate arcs to install and how to route the required
+shipment from node 1 to node 10.
+
+If arc e = (i,j) is installed:
+  - pay its fixed installation cost once;
+  - allow at most its capacity units of flow on that arc.
+
+If x units are sent on an installed arc:
+  - pay its variable routing cost times x.
+
+Flow may split across several installed routes, but total outgoing flow
+from the source and total incoming flow to the sink must match the
+required shipment exactly.
+
+Objective:
+  minimize total fixed installation cost plus total variable routing
+  cost.

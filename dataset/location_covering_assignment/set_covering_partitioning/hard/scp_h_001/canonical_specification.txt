@@ -1,0 +1,129 @@
+This is a single-period abstract subset-selection instance.
+
+Instance ID: scp_h_001
+Variant: set_covering
+Difficulty: hard
+Incidence structure: nine_block_chain_with_internal_middle_shortcuts
+Cost regime: moderate_diagonals_with_two_middle_shortcuts
+
+Elements:
+- E1
+- E2
+- E3
+- E4
+- E5
+- E6
+- E7
+- E8
+- E9
+- E10
+- E11
+- E12
+- E13
+- E14
+- E15
+- E16
+- E17
+- E18
+- E19
+- E20
+- E21
+- E22
+- E23
+- E24
+- E25
+- E26
+- E27
+- E28
+- E29
+- E30
+- E31
+- E32
+- E33
+- E34
+- E35
+- E36
+
+Candidate subsets and subset costs:
+- S1: cost=10, contains E1, E2, E3, E4
+- S2: cost=11, contains E5, E6, E7, E8
+- S3: cost=10, contains E9, E10, E11, E12
+- S4: cost=11, contains E13, E14, E15, E16
+- S5: cost=10, contains E17, E18, E19, E20
+- S6: cost=11, contains E21, E22, E23, E24
+- S7: cost=10, contains E25, E26, E27, E28
+- S8: cost=11, contains E29, E30, E31, E32
+- S9: cost=10, contains E33, E34, E35, E36
+- S10: cost=8, contains E3, E4, E5, E6
+- S11: cost=9, contains E7, E8, E9, E10
+- S12: cost=8, contains E11, E12, E13, E14
+- S13: cost=8, contains E15, E16, E17, E18
+- S14: cost=9, contains E19, E20, E21, E22
+- S15: cost=8, contains E23, E24, E25, E26
+- S16: cost=8, contains E27, E28, E29, E30
+- S17: cost=9, contains E31, E32, E33, E34
+- S18: cost=7, contains E1, E6, E11, E16, E21, E26, E31, E36
+- S19: cost=7, contains E2, E7, E12, E17, E22, E27, E32
+- S20: cost=8, contains E3, E8, E13, E18, E23, E28, E33
+- S21: cost=8, contains E4, E9, E14, E19, E24, E29, E34
+- S22: cost=6, contains E5, E10, E15, E20, E25, E30, E35
+- S23: cost=9, contains E10, E11, E18, E19, E26, E27
+- S24: cost=9, contains E6, E7, E14, E15, E22, E23, E30, E31
+
+Coverage options by element:
+- E1: S1, S18
+- E2: S1, S19
+- E3: S1, S10, S20
+- E4: S1, S10, S21
+- E5: S2, S10, S22
+- E6: S2, S10, S18, S24
+- E7: S2, S11, S19, S24
+- E8: S2, S11, S20
+- E9: S3, S11, S21
+- E10: S3, S11, S22, S23
+- E11: S3, S12, S18, S23
+- E12: S3, S12, S19
+- E13: S4, S12, S20
+- E14: S4, S12, S21, S24
+- E15: S4, S13, S22, S24
+- E16: S4, S13, S18
+- E17: S5, S13, S19
+- E18: S5, S13, S20, S23
+- E19: S5, S14, S21, S23
+- E20: S5, S14, S22
+- E21: S6, S14, S18
+- E22: S6, S14, S19, S24
+- E23: S6, S15, S20, S24
+- E24: S6, S15, S21
+- E25: S7, S15, S22
+- E26: S7, S15, S18, S23
+- E27: S7, S16, S19, S23
+- E28: S7, S16, S20
+- E29: S8, S16, S21
+- E30: S8, S16, S22, S24
+- E31: S8, S17, S18, S24
+- E32: S8, S17, S19
+- E33: S9, S17, S20
+- E34: S9, S17, S21
+- E35: S9, S22
+- E36: S9, S18
+
+Objective:
+- Minimize total subset cost.
+
+Constraints:
+- Every element must be covered by at least one selected subset.
+- All subset-selection variables are binary.
+
+Metadata summary:
+- number_of_elements = 36
+- number_of_candidate_subsets = 24
+- average_subset_size = 4.9167
+- incidence_density = 0.1366
+- critical_elements = E1, E2, E35, E36
+- visual_panel_count = 1
+
+Visual interpretation:
+- The visual is a single exact candidate-subset table.
+- Rows correspond to candidate subsets and columns correspond to elements.
+- Filled cells indicate membership and the left bars show exact subset costs.

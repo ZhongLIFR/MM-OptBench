@@ -1,0 +1,74 @@
+{
+  "number_jobs": 12,
+  "number_machines": 9,
+  "operations_per_job": 6,
+  "processing_time_regime": "dual_bottleneck_clusters",
+  "routing_pattern": "shared_core_with_diverse_tails",
+  "bottleneck_machine_count": 2,
+  "machine_load_distribution": [
+    {
+      "machine": "M1",
+      "total_processing_time": 75
+    },
+    {
+      "machine": "M2",
+      "total_processing_time": 75
+    },
+    {
+      "machine": "M3",
+      "total_processing_time": 78
+    },
+    {
+      "machine": "M4",
+      "total_processing_time": 67
+    },
+    {
+      "machine": "M5",
+      "total_processing_time": 206
+    },
+    {
+      "machine": "M6",
+      "total_processing_time": 76
+    },
+    {
+      "machine": "M7",
+      "total_processing_time": 79
+    },
+    {
+      "machine": "M8",
+      "total_processing_time": 107
+    },
+    {
+      "machine": "M9",
+      "total_processing_time": 60
+    }
+  ],
+  "symmetry_flag": false,
+  "seed": 405,
+  "formulation_size": 736,
+  "duration_scale_applied": 1.0,
+  "instance_id": "jss_h_005",
+  "variant": "classical_jssp",
+  "scenario": "job_shop_scheduling",
+  "difficulty": "hard",
+  "objective": "minimize_makespan",
+  "objective_value": 246,
+  "objective_exact": 245.99999997529977,
+  "optimal_makespan": 246,
+  "status": "optimal",
+  "runtime_seconds": 1.6229791641235352,
+  "solve_method": "gurobi_disjunctive_milp",
+  "solver": "Gurobi",
+  "binding_machines": [
+    "M1",
+    "M2",
+    "M3",
+    "M4",
+    "M5",
+    "M6",
+    "M7",
+    "M8",
+    "M9"
+  ],
+  "visual_0_checksum_md5": "1fa65391ae3147e2b40147c7e2a203fe"
+}

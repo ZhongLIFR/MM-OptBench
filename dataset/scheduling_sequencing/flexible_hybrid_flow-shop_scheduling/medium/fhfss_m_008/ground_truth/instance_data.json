@@ -1,0 +1,183 @@
+{
+  "instance_id": "fhfss_m_008",
+  "variant": "flexible_hybrid_flow_shop_scheduling",
+  "scenario": "flexible_hybrid_flow_shop_scheduling",
+  "difficulty": "medium",
+  "sets": {
+    "jobs": [
+      "J1",
+      "J2",
+      "J3",
+      "J4",
+      "J5",
+      "J6",
+      "J7",
+      "J8",
+      "J9",
+      "J10",
+      "J11",
+      "J12"
+    ],
+    "stages": [
+      "S1",
+      "S2",
+      "S3",
+      "S4",
+      "S5"
+    ],
+    "machines_by_stage": {
+      "S1": [
+        "S1M1",
+        "S1M2"
+      ],
+      "S2": [
+        "S2M1",
+        "S2M2"
+      ],
+      "S3": [
+        "S3M1"
+      ],
+      "S4": [
+        "S4M1",
+        "S4M2"
+      ],
+      "S5": [
+        "S5M1"
+      ]
+    }
+  },
+  "common_stage_order": [
+    "S1",
+    "S2",
+    "S3",
+    "S4",
+    "S5"
+  ],
+  "processing_time": {
+    "J1": {
+      "S1": 5,
+      "S2": 4,
+      "S3": 8,
+      "S4": 5,
+      "S5": 7
+    },
+    "J2": {
+      "S1": 6,
+      "S2": 5,
+      "S3": 7,
+      "S4": 4,
+      "S5": 8
+    },
+    "J3": {
+      "S1": 4,
+      "S2": 6,
+      "S3": 9,
+      "S4": 5,
+      "S5": 7
+    },
+    "J4": {
+      "S1": 5,
+      "S2": 5,
+      "S3": 8,
+      "S4": 6,
+      "S5": 8
+    },
+    "J5": {
+      "S1": 6,
+      "S2": 4,
+      "S3": 7,
+      "S4": 5,
+      "S5": 9
+    },
+    "J6": {
+      "S1": 5,
+      "S2": 6,
+      "S3": 8,
+      "S4": 4,
+      "S5": 7
+    },
+    "J7": {
+      "S1": 7,
+      "S2": 5,
+      "S3": 9,
+      "S4": 5,
+      "S5": 8
+    },
+    "J8": {
+      "S1": 4,
+      "S2": 6,
+      "S3": 8,
+      "S4": 6,
+      "S5": 7
+    },
+    "J9": {
+      "S1": 5,
+      "S2": 4,
+      "S3": 7,
+      "S4": 5,
+      "S5": 9
+    },
+    "J10": {
+      "S1": 6,
+      "S2": 5,
+      "S3": 8,
+      "S4": 4,
+      "S5": 8
+    },
+    "J11": {
+      "S1": 5,
+      "S2": 6,
+      "S3": 9,
+      "S4": 5,
+      "S5": 7
+    },
+    "J12": {
+      "S1": 7,
+      "S2": 4,
+      "S3": 8,
+      "S4": 6,
+      "S5": 8
+    }
+  },
+  "stage_total_load": {
+    "S1": 65,
+    "S2": 60,
+    "S3": 96,
+    "S4": 60,
+    "S5": 93
+  },
+  "nominal_load_per_machine": {
+    "S1": 32.5,
+    "S2": 30.0,
+    "S3": 96.0,
+    "S4": 30.0,
+    "S5": 93.0
+  },
+  "visual_layout": {
+    "stage_colors": {
+      "S1": "#dbeafe",
+      "S2": "#dff3e4",
+      "S3": "#fef3c7",
+      "S4": "#f8d8d8",
+      "S5": "#dbeafe"
+    }
+  },
+  "meta_parameters": {
+    "number_jobs": 12,
+    "number_stages": 5,
+    "machines_per_stage": [
+      2,
+      2,
+      1,
+      2,
+      1
+    ],
+    "group": "C",
+    "bottleneck_pattern": "single_machine_stages_three_and_five",
+    "processing_time_regime": "late_dual_pressure_with_heavy_center",
+    "flexibility_level": "mixed_2_2_1_2_1",
+    "visual_type": "single_visual_combined_stage_architecture_plus_processing_matrix",
+    "seed": 5408,
+    "formulation_size": 1861
+  }
+}

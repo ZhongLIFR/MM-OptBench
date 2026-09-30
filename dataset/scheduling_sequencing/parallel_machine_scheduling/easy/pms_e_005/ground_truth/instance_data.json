@@ -1,0 +1,184 @@
+{
+  "instance_id": "pms_e_005",
+  "variant": "parallel_machine_scheduling",
+  "scenario": "parallel_machine_scheduling",
+  "difficulty": "easy",
+  "sets": {
+    "jobs": [
+      "J1",
+      "J2",
+      "J3",
+      "J4",
+      "J5",
+      "J6",
+      "J7",
+      "J8",
+      "J9",
+      "J10",
+      "J11",
+      "J12"
+    ],
+    "machines": [
+      "M1",
+      "M2",
+      "M3",
+      "M4"
+    ]
+  },
+  "base_processing_time": {
+    "J1": 4,
+    "J2": 6,
+    "J3": 9,
+    "J4": 5,
+    "J5": 7,
+    "J6": 3,
+    "J7": 8,
+    "J8": 10,
+    "J9": 4,
+    "J10": 6,
+    "J11": 5,
+    "J12": 7
+  },
+  "machine_speed": {
+    "M1": 1.0,
+    "M2": 1.15,
+    "M3": 0.9,
+    "M4": 1.05
+  },
+  "eligibility": {
+    "J1": [
+      "M1",
+      "M2",
+      "M3"
+    ],
+    "J2": [
+      "M1",
+      "M4"
+    ],
+    "J3": [
+      "M2",
+      "M3",
+      "M4"
+    ],
+    "J4": [
+      "M1",
+      "M2"
+    ],
+    "J5": [
+      "M2",
+      "M4"
+    ],
+    "J6": [
+      "M1",
+      "M3"
+    ],
+    "J7": [
+      "M1",
+      "M2",
+      "M4"
+    ],
+    "J8": [
+      "M3",
+      "M4"
+    ],
+    "J9": [
+      "M1",
+      "M2",
+      "M3",
+      "M4"
+    ],
+    "J10": [
+      "M2",
+      "M3"
+    ],
+    "J11": [
+      "M1",
+      "M4"
+    ],
+    "J12": [
+      "M1",
+      "M2",
+      "M3"
+    ]
+  },
+  "effective_processing_time": {
+    "J1": {
+      "M1": 4,
+      "M2": 4,
+      "M3": 5
+    },
+    "J2": {
+      "M1": 6,
+      "M4": 6
+    },
+    "J3": {
+      "M2": 8,
+      "M3": 10,
+      "M4": 9
+    },
+    "J4": {
+      "M1": 5,
+      "M2": 5
+    },
+    "J5": {
+      "M2": 7,
+      "M4": 7
+    },
+    "J6": {
+      "M1": 3,
+      "M3": 4
+    },
+    "J7": {
+      "M1": 8,
+      "M2": 7,
+      "M4": 8
+    },
+    "J8": {
+      "M3": 12,
+      "M4": 10
+    },
+    "J9": {
+      "M1": 4,
+      "M2": 4,
+      "M3": 5,
+      "M4": 4
+    },
+    "J10": {
+      "M2": 6,
+      "M3": 7
+    },
+    "J11": {
+      "M1": 5,
+      "M4": 5
+    },
+    "J12": {
+      "M1": 7,
+      "M2": 7,
+      "M3": 8
+    }
+  },
+  "weights": {
+    "J1": 1,
+    "J2": 1,
+    "J3": 1,
+    "J4": 1,
+    "J5": 1,
+    "J6": 1,
+    "J7": 1,
+    "J8": 1,
+    "J9": 1,
+    "J10": 1,
+    "J11": 1,
+    "J12": 1
+  },
+  "meta_parameters": {
+    "number_jobs": 12,
+    "number_machines": 4,
+    "machine_type": "related",
+    "objective_type": "makespan",
+    "processing_time_regime": "heterogeneous_related",
+    "long_job_flag": false,
+    "seed": 405,
+    "formulation_size": 82
+  }
+}

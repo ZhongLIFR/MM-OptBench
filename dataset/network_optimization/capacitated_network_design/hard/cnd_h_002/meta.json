@@ -1,0 +1,51 @@
+{
+  "instance_id": "cnd_h_002",
+  "family": "network_optimization",
+  "subtype": "capacitated_network_design",
+  "variant": "single_visual_single_commodity_cnd",
+  "difficulty": "hard",
+  "graph_type": "funnel_15",
+  "shipment_amount": 12,
+  "capacity_regime": "multi_branch_feed_requires_four_path_balance",
+  "cost_regime": "cheap_tail_exit_vs_costly_inner_transfer",
+  "design_pattern": "four_path_funnel_with_dual_tail_options",
+  "binding_pattern": "source_branch_and_inner_tail_arc_binding",
+  "tradeoff_pattern": "direct_upper_lane_vs_cheaper_lower_tail_installation",
+  "structural_variant": "five_layer_funnel_merge",
+  "visual_type": "single_visual_topology_with_inline_arc_triplets",
+  "num_nodes": 15,
+  "num_arcs": 25,
+  "num_variables": 50,
+  "num_constraints": 40,
+  "formulation_size": 90,
+  "random_seed": 1010,
+  "seed": 1010,
+  "status": "optimal",
+  "optimal_objective_value": 345,
+  "objective_exact": 345,
+  "fixed_cost_total": 83,
+  "variable_cost_total": 262,
+  "installed_arc_count": 13,
+  "used_arc_count": 13,
+  "binding_capacity_arc_count": 4,
+  "runtime_seconds": 0.02239609,
+  "solve_method": "gurobi_mip_cnd_single_commodity",
+  "solver_used": "Gurobi",
+  "solver": "Gurobi",
+  "solver_policy": "gurobi_first_then_scipy_milp_exact",
+  "verification_method": "gurobi_certificate",
+  "visual_0_checksum_md5": "1b215ecc9c51c563803a4c278ec66769",
+  "files": {
+    "canonical_specification": "canonical_specification.txt",
+    "task_input": "task_input.txt",
+    "visuals": [
+      "visuals/visual_0.png"
+    ],
+    "ground_truth": {
+      "instance_data": "ground_truth/instance_data.json",
+      "math_model": "ground_truth/math_model.md",
+      "solver_ref": "ground_truth/solver_ref.py",
+      "solution_ref": "ground_truth/solution_ref.json"
+    }
+  }
+}

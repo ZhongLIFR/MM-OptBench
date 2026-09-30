@@ -1,0 +1,322 @@
+{
+  "status": "optimal",
+  "objective_type": "makespan",
+  "objective": 79,
+  "objective_exact": 79.0,
+  "makespan": 79,
+  "assignment": {
+    "J1": "M5",
+    "J2": "M5",
+    "J3": "M3",
+    "J4": "M2",
+    "J5": "M3",
+    "J6": "M1",
+    "J7": "M4",
+    "J8": "M3",
+    "J9": "M2",
+    "J10": "M5",
+    "J11": "M3",
+    "J12": "M1",
+    "J13": "M4",
+    "J14": "M6",
+    "J15": "M2",
+    "J16": "M6",
+    "J17": "M2",
+    "J18": "M4",
+    "J19": "M1",
+    "J20": "M1",
+    "J21": "M1",
+    "J22": "M2",
+    "J23": "M1",
+    "J24": "M4",
+    "J25": "M5",
+    "J26": "M6",
+    "J27": "M3",
+    "J28": "M4",
+    "J29": "M5",
+    "J30": "M6"
+  },
+  "machine_load": {
+    "M1": 79,
+    "M2": 79,
+    "M3": 78,
+    "M4": 79,
+    "M5": 79,
+    "M6": 79
+  },
+  "schedule": [
+    {
+      "job": "J12",
+      "machine": "M1",
+      "start": 0,
+      "finish": 19,
+      "duration": 19,
+      "base_duration": 19,
+      "weight": 1
+    },
+    {
+      "job": "J23",
+      "machine": "M1",
+      "start": 19,
+      "finish": 33,
+      "duration": 14,
+      "base_duration": 14,
+      "weight": 1
+    },
+    {
+      "job": "J6",
+      "machine": "M1",
+      "start": 33,
+      "finish": 46,
+      "duration": 13,
+      "base_duration": 13,
+      "weight": 1
+    },
+    {
+      "job": "J21",
+      "machine": "M1",
+      "start": 46,
+      "finish": 58,
+      "duration": 12,
+      "base_duration": 12,
+      "weight": 1
+    },
+    {
+      "job": "J20",
+      "machine": "M1",
+      "start": 58,
+      "finish": 69,
+      "duration": 11,
+      "base_duration": 11,
+      "weight": 1
+    },
+    {
+      "job": "J19",
+      "machine": "M1",
+      "start": 69,
+      "finish": 79,
+      "duration": 10,
+      "base_duration": 10,
+      "weight": 1
+    },
+    {
+      "job": "J17",
+      "machine": "M2",
+      "start": 0,
+      "finish": 22,
+      "duration": 22,
+      "base_duration": 24,
+      "weight": 1
+    },
+    {
+      "job": "J15",
+      "machine": "M2",
+      "start": 22,
+      "finish": 42,
+      "duration": 20,
+      "base_duration": 22,
+      "weight": 1
+    },
+    {
+      "job": "J9",
+      "machine": "M2",
+      "start": 42,
+      "finish": 57,
+      "duration": 15,
+      "base_duration": 16,
+      "weight": 1
+    },
+    {
+      "job": "J22",
+      "machine": "M2",
+      "start": 57,
+      "finish": 69,
+      "duration": 12,
+      "base_duration": 13,
+      "weight": 1
+    },
+    {
+      "job": "J4",
+      "machine": "M2",
+      "start": 69,
+      "finish": 79,
+      "duration": 10,
+      "base_duration": 11,
+      "weight": 1
+    },
+    {
+      "job": "J11",
+      "machine": "M3",
+      "start": 0,
+      "finish": 19,
+      "duration": 19,
+      "base_duration": 18,
+      "weight": 1
+    },
+    {
+      "job": "J27",
+      "machine": "M3",
+      "start": 19,
+      "finish": 38,
+      "duration": 19,
+      "base_duration": 18,
+      "weight": 1
+    },
+    {
+      "job": "J8",
+      "machine": "M3",
+      "start": 38,
+      "finish": 54,
+      "duration": 16,
+      "base_duration": 15,
+      "weight": 1
+    },
+    {
+      "job": "J5",
+      "machine": "M3",
+      "start": 54,
+      "finish": 67,
+      "duration": 13,
+      "base_duration": 12,
+      "weight": 1
+    },
+    {
+      "job": "J3",
+      "machine": "M3",
+      "start": 67,
+      "finish": 78,
+      "duration": 11,
+      "base_duration": 10,
+      "weight": 1
+    },
+    {
+      "job": "J18",
+      "machine": "M4",
+      "start": 0,
+      "finish": 21,
+      "duration": 21,
+      "base_duration": 25,
+      "weight": 1
+    },
+    {
+      "job": "J13",
+      "machine": "M4",
+      "start": 21,
+      "finish": 38,
+      "duration": 17,
+      "base_duration": 20,
+      "weight": 1
+    },
+    {
+      "job": "J28",
+      "machine": "M4",
+      "start": 38,
+      "finish": 54,
+      "duration": 16,
+      "base_duration": 19,
+      "weight": 1
+    },
+    {
+      "job": "J24",
+      "machine": "M4",
+      "start": 54,
+      "finish": 67,
+      "duration": 13,
+      "base_duration": 15,
+      "weight": 1
+    },
+    {
+      "job": "J7",
+      "machine": "M4",
+      "start": 67,
+      "finish": 79,
+      "duration": 12,
+      "base_duration": 14,
+      "weight": 1
+    },
+    {
+      "job": "J29",
+      "machine": "M5",
+      "start": 0,
+      "finish": 23,
+      "duration": 23,
+      "base_duration": 20,
+      "weight": 1
+    },
+    {
+      "job": "J10",
+      "machine": "M5",
+      "start": 23,
+      "finish": 42,
+      "duration": 19,
+      "base_duration": 17,
+      "weight": 1
+    },
+    {
+      "job": "J25",
+      "machine": "M5",
+      "start": 42,
+      "finish": 60,
+      "duration": 18,
+      "base_duration": 16,
+      "weight": 1
+    },
+    {
+      "job": "J2",
+      "machine": "M5",
+      "start": 60,
+      "finish": 70,
+      "duration": 10,
+      "base_duration": 9,
+      "weight": 1
+    },
+    {
+      "job": "J1",
+      "machine": "M5",
+      "start": 70,
+      "finish": 79,
+      "duration": 9,
+      "base_duration": 8,
+      "weight": 1
+    },
+    {
+      "job": "J16",
+      "machine": "M6",
+      "start": 0,
+      "finish": 22,
+      "duration": 22,
+      "base_duration": 23,
+      "weight": 1
+    },
+    {
+      "job": "J14",
+      "machine": "M6",
+      "start": 22,
+      "finish": 42,
+      "duration": 20,
+      "base_duration": 21,
+      "weight": 1
+    },
+    {
+      "job": "J30",
+      "machine": "M6",
+      "start": 42,
+      "finish": 62,
+      "duration": 20,
+      "base_duration": 21,
+      "weight": 1
+    },
+    {
+      "job": "J26",
+      "machine": "M6",
+      "start": 62,
+      "finish": 79,
+      "duration": 17,
+      "base_duration": 17,
+      "weight": 1
+    }
+  ],
+  "solve_method": "gurobi_milp_assignment_load",
+  "solver": "Gurobi",
+  "runtime_seconds": 0.047043800354003906
+}

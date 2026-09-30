@@ -1,0 +1,118 @@
+{
+  "status": "optimal",
+  "objective_value": 38.4,
+  "objective_exact": 38.4,
+  "routing_cost_total": 34,
+  "holding_cost_total": 4.4,
+  "flows_by_period": {
+    "t1": {
+      "e1": 2,
+      "e2": 2,
+      "e3": 0,
+      "e4": 2,
+      "e5": 2,
+      "e6": 0,
+      "e7": 0,
+      "e8": 1,
+      "e9": 0
+    },
+    "t2": {
+      "e1": 2,
+      "e2": 1,
+      "e3": 0,
+      "e4": 2,
+      "e5": 1,
+      "e6": 0,
+      "e7": 0,
+      "e8": 2,
+      "e9": 0
+    },
+    "t3": {
+      "e1": 1,
+      "e2": 1,
+      "e3": 0,
+      "e4": 1,
+      "e5": 1,
+      "e6": 0,
+      "e7": 0,
+      "e8": 3,
+      "e9": 0
+    },
+    "t4": {
+      "e1": 1,
+      "e2": 0,
+      "e3": 0,
+      "e4": 1,
+      "e5": 0,
+      "e6": 0,
+      "e7": 0,
+      "e8": 4,
+      "e9": 0
+    }
+  },
+  "inventory_by_node": {
+    "5": {
+      "t1": 3,
+      "t2": 4,
+      "t3": 3,
+      "t4": 0
+    }
+  },
+  "nonzero_arc_periods": [
+    "e1@t1",
+    "e2@t1",
+    "e4@t1",
+    "e5@t1",
+    "e8@t1",
+    "e1@t2",
+    "e2@t2",
+    "e4@t2",
+    "e5@t2",
+    "e8@t2",
+    "e1@t3",
+    "e2@t3",
+    "e4@t3",
+    "e5@t3",
+    "e8@t3",
+    "e1@t4",
+    "e4@t4",
+    "e8@t4"
+  ],
+  "binding_arc_periods": [
+    "e1@t1",
+    "e2@t1",
+    "e4@t1",
+    "e5@t1",
+    "e8@t1",
+    "e1@t2",
+    "e4@t2",
+    "e8@t2",
+    "e1@t3",
+    "e2@t3",
+    "e4@t3",
+    "e5@t3",
+    "e8@t3",
+    "e1@t4",
+    "e4@t4",
+    "e8@t4"
+  ],
+  "positive_inventory_periods": {
+    "5": [
+      "t1",
+      "t2",
+      "t3"
+    ]
+  },
+  "storage_binding_periods": {
+    "5": [
+      "t2"
+    ]
+  },
+  "runtime_seconds": 0.00330621,
+  "solve_method": "gurobi_lp_multi_period_network_flow",
+  "solver_used": "Gurobi",
+  "solver": "Gurobi",
+  "solver_policy": "gurobi_first_then_scipy_highs_exact_lp",
+  "verification_method": "direct_gurobi_optimal_lp_solution",
+  "fallback_used": false
+}

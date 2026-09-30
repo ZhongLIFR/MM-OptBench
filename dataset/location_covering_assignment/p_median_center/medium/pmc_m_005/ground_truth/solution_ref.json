@@ -1,0 +1,97 @@
+{
+  "instance_id": "pmc_m_005",
+  "status": "optimal",
+  "objective_exact": 108.7,
+  "objective_value": 108.7,
+  "solver_policy": "prefer_gurobi_else_exact_fallback",
+  "solver_used": "gurobi",
+  "solve_method": "gurobi_mip",
+  "optimality_proof": "gurobi_mip_optimal_status",
+  "runtime_seconds": 0.025121,
+  "open_sites": [
+    "F1",
+    "F4",
+    "F8"
+  ],
+  "assignments": {
+    "D1": {
+      "assigned_site": "F1",
+      "distance": 1.13,
+      "weight": 5,
+      "weighted_distance": 5.65
+    },
+    "D2": {
+      "assigned_site": "F1",
+      "distance": 1.0,
+      "weight": 4,
+      "weighted_distance": 4.0
+    },
+    "D3": {
+      "assigned_site": "F1",
+      "distance": 2.86,
+      "weight": 3,
+      "weighted_distance": 8.58
+    },
+    "D4": {
+      "assigned_site": "F4",
+      "distance": 5.0,
+      "weight": 2,
+      "weighted_distance": 10.0
+    },
+    "D5": {
+      "assigned_site": "F4",
+      "distance": 1.13,
+      "weight": 3,
+      "weighted_distance": 3.39
+    },
+    "D6": {
+      "assigned_site": "F4",
+      "distance": 1.56,
+      "weight": 2,
+      "weighted_distance": 3.12
+    },
+    "D7": {
+      "assigned_site": "F1",
+      "distance": 6.2,
+      "weight": 4,
+      "weighted_distance": 24.8
+    },
+    "D8": {
+      "assigned_site": "F1",
+      "distance": 5.22,
+      "weight": 2,
+      "weighted_distance": 10.44
+    },
+    "D9": {
+      "assigned_site": "F8",
+      "distance": 4.24,
+      "weight": 2,
+      "weighted_distance": 8.48
+    },
+    "D10": {
+      "assigned_site": "F4",
+      "distance": 4.75,
+      "weight": 3,
+      "weighted_distance": 14.25
+    },
+    "D11": {
+      "assigned_site": "F8",
+      "distance": 0.89,
+      "weight": 4,
+      "weighted_distance": 3.56
+    },
+    "D12": {
+      "assigned_site": "F8",
+      "distance": 1.79,
+      "weight": 2,
+      "weighted_distance": 3.58
+    },
+    "D13": {
+      "assigned_site": "F8",
+      "distance": 2.95,
+      "weight": 3,
+      "weighted_distance": 8.85
+    }
+  },
+  "total_weighted_assignment_distance": 108.7
+}

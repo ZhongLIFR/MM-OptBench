@@ -1,0 +1,117 @@
+{
+  "instance_id": "pmc_m_004",
+  "status": "optimal",
+  "objective_exact": 132.51,
+  "objective_value": 132.51,
+  "solver_policy": "prefer_gurobi_else_exact_fallback",
+  "solver_used": "gurobi",
+  "solve_method": "gurobi_mip",
+  "optimality_proof": "gurobi_mip_optimal_status",
+  "runtime_seconds": 0.020466,
+  "open_sites": [
+    "F10",
+    "F11",
+    "F3",
+    "F5",
+    "F6"
+  ],
+  "assignments": {
+    "D1": {
+      "assigned_site": "F6",
+      "distance": 6.14,
+      "weight": 2,
+      "weighted_distance": 12.28
+    },
+    "D2": {
+      "assigned_site": "F6",
+      "distance": 4.4,
+      "weight": 3,
+      "weighted_distance": 13.2
+    },
+    "D3": {
+      "assigned_site": "F3",
+      "distance": 3.64,
+      "weight": 2,
+      "weighted_distance": 7.28
+    },
+    "D4": {
+      "assigned_site": "F3",
+      "distance": 0.78,
+      "weight": 4,
+      "weighted_distance": 3.12
+    },
+    "D5": {
+      "assigned_site": "F3",
+      "distance": 2.94,
+      "weight": 3,
+      "weighted_distance": 8.82
+    },
+    "D6": {
+      "assigned_site": "F5",
+      "distance": 1.08,
+      "weight": 6,
+      "weighted_distance": 6.48
+    },
+    "D7": {
+      "assigned_site": "F6",
+      "distance": 1.0,
+      "weight": 2,
+      "weighted_distance": 2.0
+    },
+    "D8": {
+      "assigned_site": "F6",
+      "distance": 1.9,
+      "weight": 3,
+      "weighted_distance": 5.7
+    },
+    "D9": {
+      "assigned_site": "F3",
+      "distance": 3.96,
+      "weight": 2,
+      "weighted_distance": 7.92
+    },
+    "D10": {
+      "assigned_site": "F11",
+      "distance": 4.9,
+      "weight": 4,
+      "weighted_distance": 19.6
+    },
+    "D11": {
+      "assigned_site": "F5",
+      "distance": 4.37,
+      "weight": 3,
+      "weighted_distance": 13.11
+    },
+    "D12": {
+      "assigned_site": "F10",
+      "distance": 1.41,
+      "weight": 5,
+      "weighted_distance": 7.05
+    },
+    "D13": {
+      "assigned_site": "F10",
+      "distance": 1.28,
+      "weight": 2,
+      "weighted_distance": 2.56
+    },
+    "D14": {
+      "assigned_site": "F11",
+      "distance": 1.41,
+      "weight": 3,
+      "weighted_distance": 4.23
+    },
+    "D15": {
+      "assigned_site": "F11",
+      "distance": 1.71,
+      "weight": 4,
+      "weighted_distance": 6.84
+    },
+    "D16": {
+      "assigned_site": "F11",
+      "distance": 6.16,
+      "weight": 2,
+      "weighted_distance": 12.32
+    }
+  },
+  "total_weighted_assignment_distance": 132.51
+}

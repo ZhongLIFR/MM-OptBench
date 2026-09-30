@@ -1,0 +1,103 @@
+Canonical specification for a deterministic easy-level single-depot multi-period replenishment and routing instance.
+
+Interpretation:
+- A single depot replenishes customer inventories over a finite planning horizon.
+- At most one identical truck may be dispatched in each period.
+- If the truck is dispatched in a period, it must start at the depot, visit a subset of customers, and return to the depot in the same period.
+- Travel between every pair of distinct nodes is allowed.
+- Travel cost is the Euclidean distance between displayed coordinates, rounded to two decimals (euclidean_distance_rounded_to_2_decimals).
+- A customer may be skipped in a period if on-hand inventory is sufficient to cover that period's demand.
+- Delivering to a customer in a period requires visiting that customer in the same period.
+- End-of-period inventory is carried across periods and incurs customer-specific unit holding cost.
+- End-of-period inventory may not become negative and may not exceed the corresponding customer-specific inventory capacity.
+- No multiple depots, split deliveries, stochastic demand, time windows, backlogging, or lost sales are included.
+
+Sets:
+- Periods T = ['t1', 't2', 't3', 't4', 't5', 't6']
+- Customers C = ['C1', 'C2', 'C3', 'C4', 'C5', 'C6']
+- Nodes N = ['Depot', 'C1', 'C2', 'C3', 'C4', 'C5', 'C6']
+- Vehicles V = ['V1']
+- Depot node = Depot
+
+Node coordinates:
+- Depot = (5.0, 5.0)
+- C1 = (1.6, 8.2)
+- C2 = (4.4, 8.8)
+- C3 = (8.5, 7.1)
+- C4 = (8.7, 3.4)
+- C5 = (5.8, 1.3)
+- C6 = (1.9, 2.3)
+
+Fleet parameters:
+- number_vehicles = 1
+- per_period_vehicle_capacity = 9
+- fixed_dispatch_cost = 0.00
+
+Customer inventory parameters:
+- C1: initial_inventory=2, max_inventory=5, holding_cost=1.05
+- C2: initial_inventory=2, max_inventory=5, holding_cost=0.85
+- C3: initial_inventory=2, max_inventory=6, holding_cost=0.65
+- C4: initial_inventory=2, max_inventory=5, holding_cost=0.90
+- C5: initial_inventory=1, max_inventory=4, holding_cost=0.75
+- C6: initial_inventory=2, max_inventory=5, holding_cost=0.80
+
+Customer-period demand matrix:
+- C1: t1=1, t2=2, t3=1, t4=2, t5=2, t6=1
+- C2: t1=1, t2=1, t3=2, t4=1, t5=2, t6=2
+- C3: t1=2, t2=2, t3=2, t4=2, t5=2, t6=1
+- C4: t1=1, t2=2, t3=1, t4=2, t5=2, t6=2
+- C5: t1=1, t2=1, t3=2, t4=2, t5=1, t6=2
+- C6: t1=2, t2=2, t3=2, t4=1, t5=2, t6=2
+
+Aggregate demand by period:
+- t1 = 8
+- t2 = 10
+- t3 = 10
+- t4 = 10
+- t5 = 11
+- t6 = 10
+
+Decision variables:
+- x[i,j,t] in {0,1}: equals 1 if the truck directly travels from node i to node j in period t
+- z[c,t] in {0,1}: equals 1 if customer c is visited in period t
+- q[c,t] >= 0: delivery quantity sent to customer c in period t
+- I[c,t] >= 0: end-of-period inventory at customer c after period t
+- y[t] in {0,1}: equals 1 if the truck is dispatched in period t
+- u[c,t] >= 0: route-order helper variable for subtour elimination
+
+Objective:
+- Minimize total routing cost + total holding cost + fixed dispatch cost.
+
+Constraints:
+- Inventory balance for every customer and period.
+- End-of-period inventory cannot exceed the customer-specific inventory capacity.
+- Delivery quantity is zero unless the customer is visited in that period.
+- Total quantity delivered in a period cannot exceed truck capacity if the truck is used.
+- If the truck is used in a period, it leaves the depot once and returns once.
+- Every visited customer has exactly one incoming arc and one outgoing arc in that period.
+- Customer visits are not allowed when the truck is not dispatched.
+- MTZ-style subtour elimination is enforced separately for each period.
+- Binary and nonnegativity domains hold as defined above.
+
+Metadata:
+- number_periods=6
+- number_customers=6
+- number_vehicles=1
+- total_demand=59
+- vehicle_capacity=9
+- layout_type=hexagon_compact
+- cost_matrix_type=euclidean_rounded_2_decimals
+- demand_regime=stable_capacity_pressure
+- holding_cost_regime=high_for_remote_customers
+- vehicle_capacity_regime=capacity_aware_binding
+- dispatch_cost_flag=false
+- peak_demand_flag=false
+- group=C
+- visual_type=dual_visual_map_plus_inventory_heatmap
+- seed=1108
+- formulation_size=924
+
+Visual interpretation:
+- visual_0.png contains the exact routing geometry, fleet panel, and routing rule.
+- visual_1.png contains the exact customer inventory parameters and exact customer-period demands.
+- The visual files do not reveal the optimal dispatch periods, delivery quantities, route selections, or the optimal objective value.

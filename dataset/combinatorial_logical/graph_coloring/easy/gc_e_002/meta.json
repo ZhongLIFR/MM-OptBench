@@ -1,0 +1,37 @@
+{
+  "number_of_vertices": 9,
+  "number_of_edges": 12,
+  "number_of_colors": 2,
+  "graph_density": 0.3333,
+  "chromatic_number": 2,
+  "topology_type": "grid_like_graph",
+  "graph_generator": "grid_bipartite",
+  "seed": 5102,
+  "group": "A",
+  "visual_type": "adjacency_matrix",
+  "formulation_size": 51,
+  "planted_color_groups": [
+    [
+      1,
+      3,
+      5,
+      7,
+      9
+    ],
+    [
+      2,
+      4,
+      6,
+      8
+    ]
+  ],
+  "instance_id": "gc_e_002",
+  "variant": "graph_coloring",
+  "scenario": "graph_coloring",
+  "difficulty": "easy",
+  "status": "feasible",
+  "runtime_seconds": 0.011147,
+  "solve_method": "gurobi_milp_graph_coloring_decision",
+  "solver": "Gurobi (MILP)",
+  "visual_checksum_md5": "de3b40ff70636714b7191c4142f1213e"
+}

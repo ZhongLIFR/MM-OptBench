@@ -1,0 +1,23 @@
+{
+  "number_items": 20,
+  "number_dimensions": 3,
+  "capacity_tightness_type": "tight",
+  "profit_weight_correlation_type": "strongly_correlated",
+  "weight_distribution_type": "dominant_high_value_heavy_items",
+  "binding_constraint_count": 2,
+  "seed": 2407,
+  "group": "B",
+  "visual_type": "bars_resource_usage_chart",
+  "formulation_size": 23,
+  "instance_id": "mdkp_e_007",
+  "variant": "multi_dimensional_knapsack",
+  "scenario": "multi_dimensional_knapsack",
+  "difficulty": "easy",
+  "objective_value": 258,
+  "objective_exact": 258,
+  "status": "optimal",
+  "runtime_seconds": 0.0033900419948622584,
+  "solve_method": "gurobi_milp_mdkp",
+  "solver": "Gurobi",
+  "visual_checksum_md5": "a34dc9097085e5c7c4a48dc454d7cdbf"
+}

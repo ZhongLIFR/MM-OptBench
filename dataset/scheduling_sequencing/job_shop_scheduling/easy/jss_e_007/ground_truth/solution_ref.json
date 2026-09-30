@@ -1,0 +1,173 @@
+{
+  "status": "optimal",
+  "objective": 18,
+  "objective_exact": 18.0,
+  "makespan": 18,
+  "schedule": [
+    {
+      "job": "J1",
+      "operation": "O1",
+      "machine": "M1",
+      "start": 0,
+      "finish": 2,
+      "duration": 2
+    },
+    {
+      "job": "J2",
+      "operation": "O3",
+      "machine": "M1",
+      "start": 8,
+      "finish": 10,
+      "duration": 2
+    },
+    {
+      "job": "J4",
+      "operation": "O4",
+      "machine": "M1",
+      "start": 12,
+      "finish": 14,
+      "duration": 2
+    },
+    {
+      "job": "J2",
+      "operation": "O1",
+      "machine": "M2",
+      "start": 0,
+      "finish": 3,
+      "duration": 3
+    },
+    {
+      "job": "J4",
+      "operation": "O2",
+      "machine": "M2",
+      "start": 5,
+      "finish": 8,
+      "duration": 3
+    },
+    {
+      "job": "J3",
+      "operation": "O3",
+      "machine": "M2",
+      "start": 8,
+      "finish": 13,
+      "duration": 5
+    },
+    {
+      "job": "J1",
+      "operation": "O4",
+      "machine": "M2",
+      "start": 13,
+      "finish": 18,
+      "duration": 5
+    },
+    {
+      "job": "J3",
+      "operation": "O1",
+      "machine": "M3",
+      "start": 0,
+      "finish": 4,
+      "duration": 4
+    },
+    {
+      "job": "J1",
+      "operation": "O2",
+      "machine": "M3",
+      "start": 4,
+      "finish": 8,
+      "duration": 4
+    },
+    {
+      "job": "J2",
+      "operation": "O2",
+      "machine": "M4",
+      "start": 3,
+      "finish": 8,
+      "duration": 5
+    },
+    {
+      "job": "J4",
+      "operation": "O3",
+      "machine": "M4",
+      "start": 8,
+      "finish": 12,
+      "duration": 4
+    },
+    {
+      "job": "J3",
+      "operation": "O4",
+      "machine": "M4",
+      "start": 13,
+      "finish": 16,
+      "duration": 3
+    },
+    {
+      "job": "J4",
+      "operation": "O1",
+      "machine": "M5",
+      "start": 0,
+      "finish": 5,
+      "duration": 5
+    },
+    {
+      "job": "J3",
+      "operation": "O2",
+      "machine": "M5",
+      "start": 5,
+      "finish": 7,
+      "duration": 2
+    },
+    {
+      "job": "J1",
+      "operation": "O3",
+      "machine": "M5",
+      "start": 8,
+      "finish": 11,
+      "duration": 3
+    },
+    {
+      "job": "J2",
+      "operation": "O4",
+      "machine": "M5",
+      "start": 11,
+      "finish": 15,
+      "duration": 4
+    }
+  ],
+  "solve_method": "gurobi_disjunctive_milp",
+  "solver": "Gurobi",
+  "runtime_seconds": 0.0013608932495117188,
+  "binding_machines": [
+    "M2",
+    "M3",
+    "M4",
+    "M5"
+  ],
+  "machine_orders": {
+    "M1": [
+      "J1-O1",
+      "J2-O3",
+      "J4-O4"
+    ],
+    "M2": [
+      "J2-O1",
+      "J4-O2",
+      "J3-O3",
+      "J1-O4"
+    ],
+    "M3": [
+      "J3-O1",
+      "J1-O2"
+    ],
+    "M4": [
+      "J2-O2",
+      "J4-O3",
+      "J3-O4"
+    ],
+    "M5": [
+      "J4-O1",
+      "J3-O2",
+      "J1-O3",
+      "J2-O4"
+    ]
+  }
+}

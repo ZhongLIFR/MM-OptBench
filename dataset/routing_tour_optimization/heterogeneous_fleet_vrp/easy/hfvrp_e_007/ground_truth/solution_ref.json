@@ -1,0 +1,159 @@
+{
+  "status": "optimal",
+  "objective": 47.5862,
+  "objective_exact": 47.58620000000001,
+  "runtime_seconds": 0.09917566704098135,
+  "solve_method": "gurobi_mtz_hfvrp",
+  "routes": [
+    [
+      "Depot",
+      "C10",
+      "Depot"
+    ],
+    [
+      "Depot",
+      "C9",
+      "C1",
+      "C3",
+      "Depot"
+    ],
+    [
+      "Depot",
+      "C5",
+      "C7",
+      "Depot"
+    ],
+    [
+      "Depot",
+      "C8",
+      "C6",
+      "C4",
+      "C2",
+      "Depot"
+    ]
+  ],
+  "route_vehicle_ids": [
+    "SM1",
+    "MD1",
+    "MD2",
+    "LG1"
+  ],
+  "route_vehicle_types": [
+    "SM",
+    "MD",
+    "MD",
+    "LG"
+  ],
+  "route_loads": [
+    3,
+    8,
+    6,
+    11
+  ],
+  "route_capacities": [
+    6,
+    8,
+    8,
+    11
+  ],
+  "route_base_distances": [
+    4.04,
+    10.46,
+    7.52,
+    14.5
+  ],
+  "route_variable_costs": [
+    4.7672,
+    10.983,
+    7.896,
+    13.34
+  ],
+  "route_total_costs": [
+    5.6672,
+    13.383,
+    10.296,
+    18.24
+  ],
+  "activated_vehicles": [
+    "SM1",
+    "MD1",
+    "MD2",
+    "LG1"
+  ],
+  "unused_vehicles": [],
+  "active_arcs": [
+    [
+      "Depot",
+      "C10",
+      "SM1"
+    ],
+    [
+      "C10",
+      "Depot",
+      "SM1"
+    ],
+    [
+      "Depot",
+      "C9",
+      "MD1"
+    ],
+    [
+      "C9",
+      "C1",
+      "MD1"
+    ],
+    [
+      "C1",
+      "C3",
+      "MD1"
+    ],
+    [
+      "C3",
+      "Depot",
+      "MD1"
+    ],
+    [
+      "Depot",
+      "C5",
+      "MD2"
+    ],
+    [
+      "C5",
+      "C7",
+      "MD2"
+    ],
+    [
+      "C7",
+      "Depot",
+      "MD2"
+    ],
+    [
+      "Depot",
+      "C8",
+      "LG1"
+    ],
+    [
+      "C8",
+      "C6",
+      "LG1"
+    ],
+    [
+      "C6",
+      "C4",
+      "LG1"
+    ],
+    [
+      "C4",
+      "C2",
+      "LG1"
+    ],
+    [
+      "C2",
+      "Depot",
+      "LG1"
+    ]
+  ],
+  "num_routes_used": 4,
+  "capacity_binding_flag": true,
+  "objective_from_routes": 47.5862
+}

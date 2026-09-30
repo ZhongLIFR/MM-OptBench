@@ -1,0 +1,18 @@
+A discrete vertex-labeling optimization instance is specified by the accompanying figure.
+
+The figure provides the full adjacency pattern of an undirected simple graph:
+- a square adjacency matrix whose rows and columns correspond to numeric vertex identifiers,
+- black off-diagonal cells indicate adjacent vertex pairs,
+- white off-diagonal cells indicate non-adjacent pairs,
+- and grey diagonal cells used only to mark self-reference positions.
+
+For this instance:
+- the graph has 20 vertices,
+- colors are indexed by integers and an upper bound of 8 colors is available,
+- each vertex must receive exactly one color,
+- adjacent vertices may not share a color,
+- and the objective is to minimize the number of used colors.
+
+Task:
+1) Write a mathematical optimization model for this exact instance.
+2) Provide solver-executable code implementing the model.

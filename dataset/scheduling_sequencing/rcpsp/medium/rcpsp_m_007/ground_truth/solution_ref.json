@@ -1,0 +1,266 @@
+{
+  "status": "optimal",
+  "objective": 24,
+  "objective_exact": 24.0,
+  "makespan": 24,
+  "activity_start_times": {
+    "A1": 0,
+    "A10": 14,
+    "A11": 12,
+    "A12": 19,
+    "A13": 17,
+    "A14": 22,
+    "A15": 21,
+    "A2": 0,
+    "A3": 3,
+    "A4": 4,
+    "A5": 5,
+    "A6": 11,
+    "A7": 9,
+    "A8": 9,
+    "A9": 15,
+    "End": 24,
+    "Start": 0
+  },
+  "activity_finish_times": {
+    "A1": 3,
+    "A10": 17,
+    "A11": 14,
+    "A12": 22,
+    "A13": 21,
+    "A14": 24,
+    "A15": 24,
+    "A2": 4,
+    "A3": 5,
+    "A4": 9,
+    "A5": 8,
+    "A6": 15,
+    "A7": 12,
+    "A8": 11,
+    "A9": 19,
+    "End": 24,
+    "Start": 0
+  },
+  "schedule": [
+    {
+      "activity": "A1",
+      "start": 0,
+      "finish": 3,
+      "duration": 3
+    },
+    {
+      "activity": "A2",
+      "start": 0,
+      "finish": 4,
+      "duration": 4
+    },
+    {
+      "activity": "A3",
+      "start": 3,
+      "finish": 5,
+      "duration": 2
+    },
+    {
+      "activity": "A4",
+      "start": 4,
+      "finish": 9,
+      "duration": 5
+    },
+    {
+      "activity": "A5",
+      "start": 5,
+      "finish": 8,
+      "duration": 3
+    },
+    {
+      "activity": "A7",
+      "start": 9,
+      "finish": 12,
+      "duration": 3
+    },
+    {
+      "activity": "A8",
+      "start": 9,
+      "finish": 11,
+      "duration": 2
+    },
+    {
+      "activity": "A6",
+      "start": 11,
+      "finish": 15,
+      "duration": 4
+    },
+    {
+      "activity": "A11",
+      "start": 12,
+      "finish": 14,
+      "duration": 2
+    },
+    {
+      "activity": "A10",
+      "start": 14,
+      "finish": 17,
+      "duration": 3
+    },
+    {
+      "activity": "A9",
+      "start": 15,
+      "finish": 19,
+      "duration": 4
+    },
+    {
+      "activity": "A13",
+      "start": 17,
+      "finish": 21,
+      "duration": 4
+    },
+    {
+      "activity": "A12",
+      "start": 19,
+      "finish": 22,
+      "duration": 3
+    },
+    {
+      "activity": "A15",
+      "start": 21,
+      "finish": 24,
+      "duration": 3
+    },
+    {
+      "activity": "A14",
+      "start": 22,
+      "finish": 24,
+      "duration": 2
+    }
+  ],
+  "resource_usage_by_time": {
+    "0": {
+      "R1": 4,
+      "R2": 3,
+      "R3": 2
+    },
+    "1": {
+      "R1": 4,
+      "R2": 3,
+      "R3": 2
+    },
+    "2": {
+      "R1": 4,
+      "R2": 3,
+      "R3": 2
+    },
+    "3": {
+      "R1": 5,
+      "R2": 3,
+      "R3": 2
+    },
+    "4": {
+      "R1": 5,
+      "R2": 3,
+      "R3": 3
+    },
+    "5": {
+      "R1": 4,
+      "R2": 3,
+      "R3": 4
+    },
+    "6": {
+      "R1": 4,
+      "R2": 3,
+      "R3": 4
+    },
+    "7": {
+      "R1": 4,
+      "R2": 3,
+      "R3": 4
+    },
+    "8": {
+      "R1": 2,
+      "R2": 2,
+      "R3": 2
+    },
+    "9": {
+      "R1": 4,
+      "R2": 3,
+      "R3": 3
+    },
+    "10": {
+      "R1": 4,
+      "R2": 3,
+      "R3": 3
+    },
+    "11": {
+      "R1": 5,
+      "R2": 4,
+      "R3": 2
+    },
+    "12": {
+      "R1": 5,
+      "R2": 3,
+      "R3": 3
+    },
+    "13": {
+      "R1": 5,
+      "R2": 3,
+      "R3": 3
+    },
+    "14": {
+      "R1": 5,
+      "R2": 4,
+      "R3": 3
+    },
+    "15": {
+      "R1": 5,
+      "R2": 4,
+      "R3": 3
+    },
+    "16": {
+      "R1": 5,
+      "R2": 4,
+      "R3": 3
+    },
+    "17": {
+      "R1": 5,
+      "R2": 4,
+      "R3": 2
+    },
+    "18": {
+      "R1": 5,
+      "R2": 4,
+      "R3": 2
+    },
+    "19": {
+      "R1": 5,
+      "R2": 4,
+      "R3": 2
+    },
+    "20": {
+      "R1": 5,
+      "R2": 4,
+      "R3": 2
+    },
+    "21": {
+      "R1": 5,
+      "R2": 4,
+      "R3": 2
+    },
+    "22": {
+      "R1": 5,
+      "R2": 3,
+      "R3": 3
+    },
+    "23": {
+      "R1": 5,
+      "R2": 3,
+      "R3": 3
+    }
+  },
+  "binding_resources": [
+    "R2",
+    "R3"
+  ],
+  "binding_resource_count": 2,
+  "solve_method": "gurobi_time_indexed_rcpsp_medium",
+  "solver": "Gurobi",
+  "runtime_seconds": 0.032588958041742444
+}

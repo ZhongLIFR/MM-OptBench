@@ -1,0 +1,129 @@
+Canonical specification for a deterministic single-vehicle Traveling Salesman Problem with Time Windows (TSPTW) instance.
+
+Interpretation:
+- A single vehicle starts at the depot, visits every customer exactly once, and returns to the depot.
+- The routing graph is complete: travel between every ordered pair of distinct nodes is allowed.
+- Travel times are deterministic and equal the Euclidean distances between displayed coordinates, rounded to 2 decimals.
+- Service at each customer must begin within the customer-specific time window.
+- If the vehicle arrives before the time window opens, it may wait.
+- There are no capacities, multiple vehicles, forbidden arcs, stochastic times, or time-dependent costs.
+
+Sets:
+- Nodes N = ['Depot', 'C1', 'C2', 'C3', 'C4', 'C5', 'C6', 'C7', 'C8', 'C9', 'C10', 'C11', 'C12', 'C13', 'C14', 'C15', 'C16']
+- Customers C = ['C1', 'C2', 'C3', 'C4', 'C5', 'C6', 'C7', 'C8', 'C9', 'C10', 'C11', 'C12', 'C13', 'C14', 'C15', 'C16']
+- Directed arcs A = [(i,j) for i,j in N, i != j]
+
+Coordinates by node:
+- Depot: (50.0, 50.0)
+- C1: (42.2, 47.4)
+- C2: (40.9, 46.0)
+- C3: (37.0, 38.1)
+- C4: (46.7, 45.4)
+- C5: (46.1, 43.0)
+- C6: (54.1, 32.7)
+- C7: (68.5, 48.9)
+- C8: (56.8, 55.6)
+- C9: (56.1, 56.5)
+- C10: (52.5, 55.4)
+- C11: (55.3, 68.3)
+- C12: (51.6, 57.8)
+- C13: (47.2, 53.5)
+- C14: (33.7, 63.7)
+- C15: (48.5, 50.3)
+- C16: (45.2, 50.1)
+
+Service times by node:
+- Depot: 0.00
+- C1: 0.50
+- C2: 1.20
+- C3: 0.70
+- C4: 0.40
+- C5: 0.70
+- C6: 0.50
+- C7: 0.70
+- C8: 1.20
+- C9: 0.40
+- C10: 0.70
+- C11: 0.40
+- C12: 0.70
+- C13: 0.40
+- C14: 0.70
+- C15: 1.20
+- C16: 0.70
+
+Time windows by node [a_i, b_i]:
+- Depot: [0.00, 2000.00]
+- C1: [2.49, 22.58]
+- C2: [2.49, 25.15]
+- C3: [14.39, 34.24]
+- C4: [23.36, 43.12]
+- C5: [30.94, 49.47]
+- C6: [43.63, 64.47]
+- C7: [64.28, 89.15]
+- C8: [79.88, 99.64]
+- C9: [83.59, 102.07]
+- C10: [86.34, 107.34]
+- C11: [99.30, 122.90]
+- C12: [109.26, 132.83]
+- C13: [121.75, 139.26]
+- C14: [136.47, 155.20]
+- C15: [155.70, 177.23]
+- C16: [158.65, 181.33]
+
+Complete travel-time matrix c[i,j]:
+- Depot: Depot=0.00, C1=8.22, C2=9.94, C3=17.62, C4=5.66, C5=8.01, C6=17.78, C7=18.53, C8=8.81, C9=8.91, C10=5.95, C11=19.05, C12=7.96, C13=4.48, C14=21.29, C15=1.53, C16=4.80
+- C1: Depot=8.22, C1=0.00, C2=1.91, C3=10.66, C4=4.92, C5=5.88, C6=18.91, C7=26.34, C8=16.75, C9=16.61, C10=13.04, C11=24.67, C12=14.02, C13=7.89, C14=18.38, C15=6.94, C16=4.04
+- C2: Depot=9.94, C1=1.91, C2=0.00, C3=8.81, C4=5.83, C5=6.00, C6=18.74, C7=27.75, C8=18.57, C9=18.47, C10=14.93, C11=26.55, C12=15.93, C13=9.79, C14=19.11, C15=8.73, C16=5.94
+- C3: Depot=17.62, C1=10.66, C2=8.81, C3=0.00, C4=12.14, C5=10.34, C6=17.93, C7=33.30, C8=26.43, C9=26.52, C10=23.23, C11=35.31, C12=24.52, C13=18.47, C14=25.81, C15=16.77, C16=14.53
+- C4: Depot=5.66, C1=4.92, C2=5.83, C3=12.14, C4=0.00, C5=2.47, C6=14.70, C7=22.08, C8=14.35, C9=14.55, C10=11.56, C11=24.46, C12=13.33, C13=8.12, C14=22.45, C15=5.22, C16=4.93
+- C5: Depot=8.01, C1=5.88, C2=6.00, C3=10.34, C4=2.47, C5=0.00, C6=13.04, C7=23.16, C8=16.53, C9=16.80, C10=13.95, C11=26.92, C12=15.79, C13=10.56, C14=24.13, C15=7.68, C16=7.16
+- C6: Depot=17.78, C1=18.91, C2=18.74, C3=17.93, C4=14.70, C5=13.04, C6=0.00, C7=21.67, C8=23.06, C9=23.88, C10=22.76, C11=35.62, C12=25.22, C13=21.91, C14=37.11, C15=18.47, C16=19.54
+- C7: Depot=18.53, C1=26.34, C2=27.75, C3=33.30, C4=22.08, C5=23.16, C6=21.67, C7=0.00, C8=13.48, C9=14.54, C10=17.27, C11=23.46, C12=19.10, C13=21.79, C14=37.82, C15=20.05, C16=23.33
+- C8: Depot=8.81, C1=16.75, C2=18.57, C3=26.43, C4=14.35, C5=16.53, C6=23.06, C7=13.48, C8=0.00, C9=1.14, C10=4.30, C11=12.79, C12=5.65, C13=9.83, C14=24.48, C15=9.85, C16=12.84
+- C9: Depot=8.91, C1=16.61, C2=18.47, C3=26.52, C4=14.55, C5=16.80, C6=23.88, C7=14.54, C8=1.14, C9=0.00, C10=3.76, C11=11.83, C12=4.68, C13=9.39, C14=23.53, C15=9.81, C16=12.64
+- C10: Depot=5.95, C1=13.04, C2=14.93, C3=23.23, C4=11.56, C5=13.95, C6=22.76, C7=17.27, C8=4.30, C9=3.76, C10=0.00, C11=13.20, C12=2.56, C13=5.63, C14=20.55, C15=6.48, C16=9.02
+- C11: Depot=19.05, C1=24.67, C2=26.55, C3=35.31, C4=24.46, C5=26.92, C6=35.62, C7=23.46, C8=12.79, C9=11.83, C10=13.20, C11=0.00, C12=11.13, C13=16.87, C14=22.08, C15=19.24, C16=20.81
+- C12: Depot=7.96, C1=14.02, C2=15.93, C3=24.52, C4=13.33, C5=15.79, C6=25.22, C7=19.10, C8=5.65, C9=4.68, C10=2.56, C11=11.13, C12=0.00, C13=6.15, C14=18.85, C15=8.12, C16=10.01
+- C13: Depot=4.48, C1=7.89, C2=9.79, C3=18.47, C4=8.12, C5=10.56, C6=21.91, C7=21.79, C8=9.83, C9=9.39, C10=5.63, C11=16.87, C12=6.15, C13=0.00, C14=16.92, C15=3.45, C16=3.94
+- C14: Depot=21.29, C1=18.38, C2=19.11, C3=25.81, C4=22.45, C5=24.13, C6=37.11, C7=37.82, C8=24.48, C9=23.53, C10=20.55, C11=22.08, C12=18.85, C13=16.92, C14=0.00, C15=19.96, C16=17.81
+- C15: Depot=1.53, C1=6.94, C2=8.73, C3=16.77, C4=5.22, C5=7.68, C6=18.47, C7=20.05, C8=9.85, C9=9.81, C10=6.48, C11=19.24, C12=8.12, C13=3.45, C14=19.96, C15=0.00, C16=3.31
+- C16: Depot=4.80, C1=4.04, C2=5.94, C3=14.53, C4=4.93, C5=7.16, C6=19.54, C7=23.33, C8=12.84, C9=12.64, C10=9.02, C11=20.81, C12=10.01, C13=3.94, C14=17.81, C15=3.31, C16=0.00
+
+Decision variables:
+- x[i,j] in {0,1}: equals 1 if the vehicle directly travels from node i to node j
+- t[i] >= 0: service-start time at node i
+
+Objective:
+- Minimize total travel time sum_{i != j} c[i,j] * x[i,j].
+
+Constraints:
+- Exactly one outgoing arc from every node.
+- Exactly one incoming arc to every node.
+- Time-propagation constraints linking consecutive visits.
+- Time-window bounds at every node.
+- Connectivity enforced through the time-based formulation.
+
+Big-M parameter:
+- M = 2044.02
+
+Metadata:
+- number_customers=16
+- layout_type=dense_center
+- window_tightness_type=mixed
+- service_time_type=critical_nodes
+- critical_sequence_type=critical_bottleneck_nodes
+- binding_window_flag=false
+- critical_sequence_flag=true
+- travel_time_rule=euclidean_rounded_2dp
+- visual_type=coordinate_tw_service_node_map_with_cost_rule_box
+- seed=4501
+- group=B
+- formulation_size=629
+
+Visual interpretation:
+- The figure shows one colored marker per node on a Cartesian map.
+- Coordinates are printed next to each node.
+- Each node also shows an exact combined time-window and service-time label.
+- A cost-rule box states how travel times are derived from the plotted coordinates.
+- Complete-graph edges are intentionally omitted to avoid clutter.
+- The visual does not reveal the optimal tour, selected arcs, arrival times, or objective value.

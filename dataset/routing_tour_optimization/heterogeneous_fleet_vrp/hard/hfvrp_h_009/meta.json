@@ -1,0 +1,66 @@
+{
+  "number_customers": 22,
+  "number_vehicle_types": 4,
+  "number_available_vehicles": 7,
+  "total_demand": 52,
+  "aggregate_capacity": 61,
+  "utilization_ratio": 0.8525,
+  "vehicle_type_summary": [
+    {
+      "type_id": "MI",
+      "available_count": 1,
+      "capacity": 6,
+      "fixed_activation_cost": 0.65,
+      "distance_multiplier": 1.36
+    },
+    {
+      "type_id": "SM",
+      "available_count": 2,
+      "capacity": 8,
+      "fixed_activation_cost": 1.35,
+      "distance_multiplier": 1.2
+    },
+    {
+      "type_id": "MD",
+      "available_count": 3,
+      "capacity": 9,
+      "fixed_activation_cost": 2.85,
+      "distance_multiplier": 1.02
+    },
+    {
+      "type_id": "LG",
+      "available_count": 1,
+      "capacity": 12,
+      "fixed_activation_cost": 6.95,
+      "distance_multiplier": 0.81
+    }
+  ],
+  "layout_type": "depot_offset_asymmetric_layout",
+  "demand_regime": "mildly_heavy_tailed_demands",
+  "fleet_tradeoff_pattern": "using_more_small_routes_can_beat_expensive_large_route",
+  "heterogeneity_pattern": "using_more_small_routes_can_beat_expensive_large_route",
+  "scarce_type_flag": false,
+  "fixed_cost_flag": true,
+  "distance_multiplier_flag": true,
+  "capacity_binding_target": true,
+  "capacity_binding_flag": true,
+  "near_optimal_partition_flag": true,
+  "hard_readability_format": "large_map_with_embedded_exact_node_annotations_and_fleet_table",
+  "visual_type": "composite_map_embedded_node_annotations_and_fleet_table_visual",
+  "base_distance_type": "rounded_euclidean_2dp",
+  "seed": 5409,
+  "group": "C",
+  "formulation_size": 7464,
+  "instance_id": "hfvrp_h_009",
+  "variant": "heterogeneous_fleet_vrp",
+  "scenario": "heterogeneous_fleet_vrp",
+  "difficulty": "hard",
+  "objective_value": 85.5971,
+  "objective_exact": 85.59710000000001,
+  "status": "optimal",
+  "runtime_seconds": 12.24673312494997,
+  "num_routes_used": 6,
+  "solve_method": "exact_route_set_dp_hfvrp",
+  "solver": "Exact route-set DP (custom Python)",
+  "visual_checksum_md5": "fb5fefb3440a56b0b154e5c0d3a8e171"
+}

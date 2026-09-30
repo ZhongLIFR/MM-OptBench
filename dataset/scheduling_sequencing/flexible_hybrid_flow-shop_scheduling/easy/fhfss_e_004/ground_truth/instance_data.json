@@ -1,0 +1,104 @@
+{
+  "instance_id": "fhfss_e_004",
+  "variant": "flexible_hybrid_flow_shop_scheduling",
+  "scenario": "flexible_hybrid_flow_shop_scheduling",
+  "difficulty": "easy",
+  "sets": {
+    "jobs": [
+      "J1",
+      "J2",
+      "J3",
+      "J4",
+      "J5",
+      "J6"
+    ],
+    "stages": [
+      "S1",
+      "S2",
+      "S3"
+    ],
+    "machines_by_stage": {
+      "S1": [
+        "S1M1",
+        "S1M2"
+      ],
+      "S2": [
+        "S2M1"
+      ],
+      "S3": [
+        "S3M1",
+        "S3M2"
+      ]
+    }
+  },
+  "common_stage_order": [
+    "S1",
+    "S2",
+    "S3"
+  ],
+  "processing_time": {
+    "J1": {
+      "S1": 4,
+      "S2": 4,
+      "S3": 5
+    },
+    "J2": {
+      "S1": 3,
+      "S2": 6,
+      "S3": 4
+    },
+    "J3": {
+      "S1": 5,
+      "S2": 5,
+      "S3": 3
+    },
+    "J4": {
+      "S1": 4,
+      "S2": 7,
+      "S3": 2
+    },
+    "J5": {
+      "S1": 6,
+      "S2": 4,
+      "S3": 4
+    },
+    "J6": {
+      "S1": 5,
+      "S2": 6,
+      "S3": 3
+    }
+  },
+  "stage_total_load": {
+    "S1": 27,
+    "S2": 32,
+    "S3": 21
+  },
+  "nominal_load_per_machine": {
+    "S1": 13.5,
+    "S2": 32.0,
+    "S3": 10.5
+  },
+  "visual_layout": {
+    "stage_colors": {
+      "S1": "#dbeafe",
+      "S2": "#dff3e4",
+      "S3": "#fef3c7"
+    }
+  },
+  "meta_parameters": {
+    "number_jobs": 6,
+    "number_stages": 3,
+    "machines_per_stage": [
+      2,
+      1,
+      2
+    ],
+    "group": "B",
+    "bottleneck_pattern": "single_middle_bottleneck",
+    "processing_time_regime": "mixed_light_heavy",
+    "flexibility_level": "mixed_2_1_2",
+    "visual_type": "single_visual_combined_stage_architecture_plus_processing_matrix",
+    "seed": 4404,
+    "formulation_size": 310
+  }
+}

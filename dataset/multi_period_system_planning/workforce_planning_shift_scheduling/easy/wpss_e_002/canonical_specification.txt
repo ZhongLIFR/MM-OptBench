@@ -1,0 +1,78 @@
+Canonical specification for a deterministic easy-level workforce planning and shift scheduling instance.
+
+Interpretation:
+- A single service unit must assign workers to shifts over a finite planning horizon.
+- Every day-shift pair has a staffing requirement that must be covered.
+- Each worker may work at most one shift per day.
+- A worker may be assigned only to shifts permitted by that worker's daily availability code.
+- Each assignment incurs the worker-specific and shift-specific cost listed below.
+- No overtime, fairness terms, minimum-rest rules, consecutive-day limits, skill-substitution rules, or stochastic effects are included.
+
+Sets:
+- Workers W = ['W1', 'W2', 'W3', 'W4', 'W5', 'W6']
+- Days T = ['Mon', 'Tue', 'Wed', 'Thu', 'Fri', 'Sat', 'Sun']
+- Shifts S = ['D', 'N']
+
+Shift labels and times:
+- D = Day = 07:00-15:00
+- N = Night = 23:00-07:00
+
+Daily staffing requirements:
+- Mon: D=2, N=1
+- Tue: D=2, N=1
+- Wed: D=2, N=1
+- Thu: D=2, N=1
+- Fri: D=2, N=1
+- Sat: D=3, N=1
+- Sun: D=2, N=2
+
+Worker-specific shift costs:
+- W1: cost(D/N)=(7,15)
+- W2: cost(D/N)=(8,14)
+- W3: cost(D/N)=(13,7)
+- W4: cost(D/N)=(10,9)
+- W5: cost(D/N)=(9,12)
+- W6: cost(D/N)=(11,8)
+
+Availability code legend:
+- OFF: no shift allowed
+- D: only Day allowed
+- N: only Night allowed
+- DEN: any shift used in this instance (Day, Night)
+
+Worker-by-day availability codes:
+- W1: Mon=D, Tue=D, Wed=D, Thu=D, Fri=D, Sat=D, Sun=D
+- W2: Mon=DEN, Tue=DEN, Wed=DEN, Thu=DEN, Fri=DEN, Sat=D, Sun=OFF
+- W3: Mon=N, Tue=N, Wed=N, Thu=N, Fri=N, Sat=N, Sun=N
+- W4: Mon=DEN, Tue=DEN, Wed=DEN, Thu=DEN, Fri=DEN, Sat=DEN, Sun=DEN
+- W5: Mon=D, Tue=D, Wed=D, Thu=D, Fri=D, Sat=DEN, Sun=DEN
+- W6: Mon=OFF, Tue=DEN, Wed=OFF, Thu=DEN, Fri=OFF, Sat=DEN, Sun=N
+
+Decision variables:
+- x[w,t,s] in {0,1}: equals 1 if worker w is assigned to shift s on day t
+
+Objective:
+- Minimize total assignment cost: sum_{w,t,s} cost[w,s] * x[w,t,s]
+
+Constraints:
+- Coverage: for every day t and shift s, sum_w x[w,t,s] >= demand[t,s]
+- One shift per day: for every worker w and day t, sum_s x[w,t,s] <= 1
+- Availability: x[w,t,s] may be 1 only if shift s is contained in the availability code for worker w on day t
+- Binary variable domain
+
+Metadata:
+- number_periods=7
+- number_workers=6
+- number_shift_types=2
+- coverage_regime=weekday_balanced_with_weekend_peak
+- cost_regime=worker_specific_with_night_premium
+- availability_regime=weekend_off_plus_specialist_workers
+- peak_demand_flag=true
+- visual_type=staffing_heatmap_plus_worker_profile_availability_matrix
+- seed=902
+- formulation_size=224
+
+Visual interpretation:
+- visual_0.png shows exact day-level and shift-level staffing demand.
+- visual_1.png shows exact worker-level assignment costs and daily availability codes.
+- The visual files do not reveal the optimal assignment roster or the optimal objective value.

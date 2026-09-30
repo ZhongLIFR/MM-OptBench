@@ -1,0 +1,20 @@
+{
+  "instance_id": "fl_e_002",
+  "variant_type": "UFL",
+  "number_of_facilities": 4,
+  "number_of_customers": 6,
+  "total_demand": 6,
+  "opening_cost_regime": "uniform_opening_costs",
+  "assignment_cost_regime": "euclidean_spatial_distance",
+  "demand_pattern": "uniform_small_demands",
+  "random_seed": 102,
+  "formulation_size": {
+    "num_binary_y": 4,
+    "num_binary_x": 14,
+    "num_variables_total": 18,
+    "num_constraints_total": 34
+  },
+  "optimal_objective_value": 62.0628,
+  "reference_solver_policy": "prefer_gurobi_else_exact_fallback",
+  "reference_solver_used": "gurobi"
+}

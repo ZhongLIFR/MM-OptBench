@@ -1,0 +1,117 @@
+Canonical specification for a deterministic single-depot Capacitated Vehicle Routing Problem instance.
+
+Interpretation:
+- A fleet of identical vehicles starts at the depot, serves customers, and returns to the depot.
+- Each customer must be visited exactly once by exactly one vehicle.
+- Travel between every pair of distinct nodes is allowed, so the routing graph is complete.
+- Every active route must satisfy the common vehicle-capacity bound.
+- There are no time windows, multiple depots, forbidden arcs, or stochastic demands.
+- The optimization goal is to minimize total routing cost.
+
+Sets:
+- Nodes N = ['Depot', 'C1', 'C2', 'C3', 'C4', 'C5', 'C6', 'C7', 'C8', 'C9', 'C10', 'C11', 'C12', 'C13', 'C14', 'C15', 'C16', 'C17', 'C18']
+- Customer subset C = ['C1', 'C2', 'C3', 'C4', 'C5', 'C6', 'C7', 'C8', 'C9', 'C10', 'C11', 'C12', 'C13', 'C14', 'C15', 'C16', 'C17', 'C18']
+- Depot node = Depot
+- Vehicles V = ['V1', 'V2', 'V3', 'V4']
+- Directed arcs A = [(i,j) for i,j in N, i != j]
+
+Coordinates by node:
+- Depot: (5.00, 5.00)
+- C1: (2.22, 7.70)
+- C2: (2.40, 8.94)
+- C3: (1.52, 6.90)
+- C4: (2.77, 7.45)
+- C5: (4.78, 8.14)
+- C6: (5.41, 7.28)
+- C7: (5.84, 7.80)
+- C8: (4.30, 6.54)
+- C9: (8.02, 7.36)
+- C10: (8.40, 6.57)
+- C11: (6.93, 7.22)
+- C12: (7.53, 6.71)
+- C13: (2.91, 2.23)
+- C14: (3.26, 2.68)
+- C15: (3.28, 1.31)
+- C16: (7.08, 2.82)
+- C17: (8.16, 2.27)
+- C18: (7.45, 2.18)
+
+Customer demands:
+- Depot: 0
+- C1: 3
+- C2: 3
+- C3: 4
+- C4: 3
+- C5: 3
+- C6: 2
+- C7: 1
+- C8: 4
+- C9: 1
+- C10: 3
+- C11: 1
+- C12: 3
+- C13: 1
+- C14: 1
+- C15: 3
+- C16: 3
+- C17: 3
+- C18: 4
+
+Fleet parameters:
+- Number of identical vehicles: 4
+- Common vehicle capacity Q = 13
+
+Complete travel-cost matrix:
+- Depot: Depot=0.00, C1=3.88, C2=4.72, C3=3.97, C4=3.31, C5=3.15, C6=2.32, C7=2.92, C8=1.69, C9=3.83, C10=3.74, C11=2.94, C12=3.05, C13=3.47, C14=2.90, C15=4.07, C16=3.01, C17=4.17, C18=3.73
+- C1: Depot=3.88, C1=0.00, C2=1.25, C3=1.06, C4=0.61, C5=2.60, C6=3.21, C7=3.62, C8=2.38, C9=5.81, C10=6.28, C11=4.74, C12=5.40, C13=5.52, C14=5.13, C15=6.48, C16=6.89, C17=8.04, C18=7.60
+- C2: Depot=4.72, C1=1.25, C2=0.00, C3=2.22, C4=1.54, C5=2.51, C6=3.43, C7=3.62, C8=3.06, C9=5.84, C10=6.45, C11=4.85, C12=5.59, C13=6.73, C14=6.32, C15=7.68, C16=7.70, C17=8.81, C18=8.43
+- C3: Depot=3.97, C1=1.06, C2=2.22, C3=0.00, C4=1.36, C5=3.49, C6=3.91, C7=4.42, C8=2.81, C9=6.52, C10=6.89, C11=5.42, C12=6.01, C13=4.88, C14=4.57, C15=5.87, C16=6.90, C17=8.09, C18=7.58
+- C4: Depot=3.31, C1=0.61, C2=1.54, C3=1.36, C4=0.00, C5=2.13, C6=2.64, C7=3.09, C8=1.78, C9=5.25, C10=5.70, C11=4.17, C12=4.81, C13=5.22, C14=4.80, C15=6.16, C16=6.32, C17=7.47, C18=7.04
+- C5: Depot=3.15, C1=2.60, C2=2.51, C3=3.49, C4=2.13, C5=0.00, C6=1.06, C7=1.11, C8=1.67, C9=3.33, C10=3.94, C11=2.34, C12=3.09, C13=6.20, C14=5.67, C15=6.99, C16=5.79, C17=6.77, C18=6.53
+- C6: Depot=2.32, C1=3.21, C2=3.43, C3=3.91, C4=2.64, C5=1.06, C6=0.00, C7=0.68, C8=1.33, C9=2.61, C10=3.08, C11=1.53, C12=2.20, C13=5.64, C14=5.08, C15=6.34, C16=4.77, C17=5.71, C18=5.50
+- C7: Depot=2.92, C1=3.62, C2=3.62, C3=4.42, C4=3.09, C5=1.11, C6=0.68, C7=0.00, C8=1.99, C9=2.22, C10=2.84, C11=1.24, C12=2.01, C13=6.30, C14=5.74, C15=6.98, C16=5.14, C17=5.99, C18=5.85
+- C8: Depot=1.69, C1=2.38, C2=3.06, C3=2.81, C4=1.78, C5=1.67, C6=1.33, C7=1.99, C8=0.00, C9=3.81, C10=4.10, C11=2.72, C12=3.23, C13=4.53, C14=4.00, C15=5.33, C16=4.65, C17=5.75, C18=5.38
+- C9: Depot=3.83, C1=5.81, C2=5.84, C3=6.52, C4=5.25, C5=3.33, C6=2.61, C7=2.22, C8=3.81, C9=0.00, C10=0.87, C11=1.10, C12=0.81, C13=7.24, C14=6.67, C15=7.68, C16=4.64, C17=5.08, C18=5.21
+- C10: Depot=3.74, C1=6.28, C2=6.45, C3=6.89, C4=5.70, C5=3.94, C6=3.08, C7=2.84, C8=4.10, C9=0.87, C10=0.00, C11=1.60, C12=0.88, C13=7.00, C14=6.45, C15=7.34, C16=3.98, C17=4.31, C18=4.50
+- C11: Depot=2.94, C1=4.74, C2=4.85, C3=5.42, C4=4.17, C5=2.34, C6=1.53, C7=1.24, C8=2.72, C9=1.10, C10=1.60, C11=0.00, C12=0.78, C13=6.41, C14=5.84, C15=6.95, C16=4.40, C17=5.09, C18=5.07
+- C12: Depot=3.05, C1=5.40, C2=5.59, C3=6.01, C4=4.81, C5=3.09, C6=2.20, C7=2.01, C8=3.23, C9=0.81, C10=0.88, C11=0.78, C12=0.00, C13=6.43, C14=5.87, C15=6.87, C16=3.92, C17=4.48, C18=4.53
+- C13: Depot=3.47, C1=5.52, C2=6.73, C3=4.88, C4=5.22, C5=6.20, C6=5.64, C7=6.30, C8=4.53, C9=7.24, C10=7.00, C11=6.41, C12=6.43, C13=0.00, C14=0.57, C15=0.99, C16=4.20, C17=5.24, C18=4.53
+- C14: Depot=2.90, C1=5.13, C2=6.32, C3=4.57, C4=4.80, C5=5.67, C6=5.08, C7=5.74, C8=4.00, C9=6.67, C10=6.45, C11=5.84, C12=5.87, C13=0.57, C14=0.00, C15=1.37, C16=3.82, C17=4.91, C18=4.21
+- C15: Depot=4.07, C1=6.48, C2=7.68, C3=5.87, C4=6.16, C5=6.99, C6=6.34, C7=6.98, C8=5.33, C9=7.68, C10=7.34, C11=6.95, C12=6.87, C13=0.99, C14=1.37, C15=0.00, C16=4.08, C17=4.97, C18=4.25
+- C16: Depot=3.01, C1=6.89, C2=7.70, C3=6.90, C4=6.32, C5=5.79, C6=4.77, C7=5.14, C8=4.65, C9=4.64, C10=3.98, C11=4.40, C12=3.92, C13=4.20, C14=3.82, C15=4.08, C16=0.00, C17=1.21, C18=0.74
+- C17: Depot=4.17, C1=8.04, C2=8.81, C3=8.09, C4=7.47, C5=6.77, C6=5.71, C7=5.99, C8=5.75, C9=5.08, C10=4.31, C11=5.09, C12=4.48, C13=5.24, C14=4.91, C15=4.97, C16=1.21, C17=0.00, C18=0.72
+- C18: Depot=3.73, C1=7.60, C2=8.43, C3=7.58, C4=7.04, C5=6.53, C6=5.50, C7=5.85, C8=5.38, C9=5.21, C10=4.50, C11=5.07, C12=4.53, C13=4.53, C14=4.21, C15=4.25, C16=0.74, C17=0.72, C18=0.00
+
+Decision variables:
+- x[i,j,v] in {0,1}: equals 1 if vehicle v directly travels from node i to node j
+- u[i] >= 0: MTZ-style continuous helper variable for customer i
+
+Objective:
+- Minimize total routing cost.
+
+Constraints:
+- Every customer has exactly one outgoing service arc across the fleet.
+- Every customer has exactly one incoming service arc across the fleet.
+- For each vehicle, flow is conserved at every customer.
+- For each vehicle, depot departure and return are balanced and limited to at most one route.
+- The total demand served by each vehicle does not exceed the common capacity Q.
+- MTZ-style load constraints eliminate disconnected subtours and encode capacity-consistent route order.
+
+Metadata:
+- number_customers=18
+- number_vehicles=4
+- total_demand=46
+- vehicle_capacity=13
+- demand_regime=uniform_moderate_demands
+- layout_type=symmetric_partition_layout
+- cluster_count=5
+- outlier_flag=False
+- capacity_binding_flag=True
+- near_optimal_partition_flag=True
+- vehicle_fixed_cost_flag=False
+- seed=7301
+- group=C
+- cost_matrix_type=euclidean_exact
+- visual_type=composite_map_and_matrix_visual
+- candidate_edge_k=0
+- formulation_size=1852

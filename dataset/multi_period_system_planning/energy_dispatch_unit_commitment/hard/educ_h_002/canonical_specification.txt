@@ -1,0 +1,65 @@
+Canonical specification for a deterministic single-zone hard-level energy dispatch and unit commitment instance.
+
+Interpretation:
+- The system operator chooses generator commitment and dispatch decisions across a multi-period planning horizon.
+- If a generator is off in a period, its output must be zero in that period.
+- If a generator is on in a period, its output must lie between its minimum and maximum output limits.
+- In every period, total generation across all generators must exactly equal system demand.
+- A startup cost is incurred whenever a generator changes from off in the previous period to on in the current period.
+- Generator output changes are restricted by ramp-up and ramp-down limits between consecutive periods.
+- Minimum up-time and minimum down-time constraints apply to each generator.
+- The initial commitment status and initial output before the first period are specified explicitly below.
+- No transmission network, reserve, stochastic, load-shedding, or multi-zone constraints are included.
+
+Sets:
+- Generators G = ['G1', 'G2', 'G3', 'G4', 'G5', 'G6']
+- Periods T = ['t1', 't2', 't3', 't4', 't5', 't6', 't7', 't8', 't9', 't10', 't11', 't12', 't13', 't14', 't15', 't16', 't17', 't18', 't19', 't20']
+
+System demand by period:
+- t1=82, t2=84, t3=88, t4=92, t5=96, t6=100, t7=104, t8=108, t9=112, t10=116, t11=120, t12=124, t13=130, t14=136, t15=142, t16=148, t17=152, t18=146, t19=126, t20=98
+
+Generator parameters:
+- G1: marginal_cost=8, startup_cost=130, min_output=24, max_output=52, ramp_up=14, ramp_down=14, min_up=4, min_down=3, initial_status=1, initial_output=32
+- G2: marginal_cost=10, startup_cost=100, min_output=18, max_output=42, ramp_up=12, ramp_down=12, min_up=3, min_down=2, initial_status=1, initial_output=24
+- G3: marginal_cost=13, startup_cost=72, min_output=12, max_output=30, ramp_up=10, ramp_down=10, min_up=3, min_down=2, initial_status=1, initial_output=18
+- G4: marginal_cost=17, startup_cost=42, min_output=0, max_output=24, ramp_up=12, ramp_down=12, min_up=2, min_down=2, initial_status=0, initial_output=0
+- G5: marginal_cost=22, startup_cost=20, min_output=0, max_output=18, ramp_up=16, ramp_down=16, min_up=1, min_down=1, initial_status=0, initial_output=0
+- G6: marginal_cost=30, startup_cost=12, min_output=0, max_output=16, ramp_up=16, ramp_down=16, min_up=1, min_down=1, initial_status=0, initial_output=0
+
+Decision variables:
+- p[g,t] >= 0: generation output of generator g in period t
+- u[g,t] in {0,1}: equals 1 if generator g is on in period t
+- v[g,t] in {0,1}: equals 1 if generator g starts up in period t
+
+Objective:
+- Minimize the total marginal generation cost plus total startup cost across all generators and periods.
+
+Constraints:
+- Demand balance for every period: sum_g p[g,t] = D[t].
+- Minimum output for every generator-period: p[g,t] >= Pmin[g] * u[g,t].
+- Maximum output for every generator-period: p[g,t] <= Pmax[g] * u[g,t].
+- Startup definition for every generator-period: v[g,t] >= u[g,t] - u[g,t-1], with u[g,t0] equal to the given initial status.
+- Ramp-up and ramp-down constraints between consecutive periods, with the first period linked to the given initial output.
+- Minimum up-time constraints requiring commitment persistence after startup.
+- Minimum down-time constraints requiring off-status persistence after shutdown.
+- Nonnegativity of generation and binary commitment/startup variables.
+
+Metadata:
+- number_periods=20
+- number_units=6
+- demand_regime=late_horizon_peak
+- ramping_regime=mixed_flexible_and_slow
+- up_down_time_regime=binding_medium_persistence
+- capacity_regime=persistent_stress
+- peak_load_flag=True
+- symmetry_flag=False
+- visual_type=economics_table_demand_timeline_capacity_ranges_separate
+- seed=1202
+- formulation_size=1220
+
+Visual interpretation:
+- visual_0.png shows generator-level economic parameters only: marginal generation cost and startup cost.
+- visual_1.png shows the exact demand value in every period.
+- visual_2.png shows each generator's minimum and maximum output range.
+- Temporal coupling parameters (ramp limits, minimum up/down times, initial conditions) are provided in the textual task statement and recorded in instance_data.json.
+- The visuals do not reveal the optimal commitment schedule, dispatch plan, startup pattern, or objective value.

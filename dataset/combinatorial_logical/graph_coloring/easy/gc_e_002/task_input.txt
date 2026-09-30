@@ -1,0 +1,18 @@
+A discrete vertex-labeling task is specified by the accompanying figure.
+
+The figure provides the full adjacency pattern of an undirected simple graph:
+- rows and columns correspond to numeric vertex identifiers,
+- black off-diagonal cells indicate adjacent vertex pairs,
+- white off-diagonal cells indicate non-adjacent pairs,
+- and grey diagonal cells only mark self-reference positions.
+
+For this instance:
+- the graph has 9 vertices,
+- exactly 2 colors are available, indexed 1..2,
+- each vertex must receive exactly one color,
+- adjacent vertices may not share a color,
+- and there are no weighted colors, fixed assignments, directed edges, hyperedges, or extra logical side constraints.
+
+Task:
+1) Write a mathematical optimization model for this exact instance.
+2) Provide solver-executable code implementing the model.

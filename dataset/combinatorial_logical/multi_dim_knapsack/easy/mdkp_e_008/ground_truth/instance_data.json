@@ -1,0 +1,183 @@
+{
+  "instance_id": "mdkp_e_008",
+  "variant": "multi_dimensional_knapsack",
+  "scenario": "multi_dimensional_knapsack",
+  "difficulty": "easy",
+  "sets": {
+    "items": [
+      1,
+      2,
+      3,
+      4,
+      5,
+      6,
+      7,
+      8,
+      9,
+      10,
+      11,
+      12,
+      13,
+      14,
+      15,
+      16,
+      17,
+      18,
+      19,
+      20,
+      21
+    ],
+    "resources": [
+      "R1",
+      "R2",
+      "R3"
+    ]
+  },
+  "values": [
+    35,
+    30,
+    24,
+    32,
+    36,
+    27,
+    31,
+    34,
+    35,
+    29,
+    28,
+    37,
+    30,
+    31,
+    26,
+    29,
+    29,
+    31,
+    29,
+    36,
+    34
+  ],
+  "weights": [
+    [
+      5,
+      8,
+      4
+    ],
+    [
+      10,
+      6,
+      6
+    ],
+    [
+      8,
+      9,
+      8
+    ],
+    [
+      4,
+      10,
+      3
+    ],
+    [
+      6,
+      8,
+      4
+    ],
+    [
+      10,
+      8,
+      5
+    ],
+    [
+      7,
+      9,
+      7
+    ],
+    [
+      5,
+      8,
+      4
+    ],
+    [
+      5,
+      9,
+      5
+    ],
+    [
+      9,
+      7,
+      5
+    ],
+    [
+      8,
+      10,
+      8
+    ],
+    [
+      4,
+      8,
+      3
+    ],
+    [
+      5,
+      10,
+      6
+    ],
+    [
+      9,
+      8,
+      6
+    ],
+    [
+      9,
+      10,
+      6
+    ],
+    [
+      6,
+      10,
+      5
+    ],
+    [
+      4,
+      10,
+      5
+    ],
+    [
+      8,
+      8,
+      7
+    ],
+    [
+      7,
+      8,
+      7
+    ],
+    [
+      4,
+      9,
+      5
+    ],
+    [
+      6,
+      10,
+      4
+    ]
+  ],
+  "capacities": [
+    44,
+    54,
+    40
+  ],
+  "meta_parameters": {
+    "number_items": 21,
+    "number_dimensions": 3,
+    "capacity_tightness_type": "tight",
+    "profit_weight_correlation_type": "slightly_anti_correlated",
+    "weight_distribution_type": "many_near_duplicate_items",
+    "seed": 2408,
+    "group": "C",
+    "visual_type": "bars_resource_usage_chart",
+    "formulation_size": 24,
+    "binding_constraint_count": 1
+  }
+}

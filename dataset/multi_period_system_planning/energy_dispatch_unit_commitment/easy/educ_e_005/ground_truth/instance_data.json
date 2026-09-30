@@ -1,0 +1,71 @@
+{
+  "instance_id": "educ_e_005",
+  "variant": "energy_dispatch_unit_commitment",
+  "scenario": "energy_dispatch_unit_commitment",
+  "difficulty": "easy",
+  "sets": {
+    "generators": [
+      "G1",
+      "G2",
+      "G3",
+      "G4"
+    ],
+    "periods": [
+      "t1",
+      "t2",
+      "t3",
+      "t4",
+      "t5",
+      "t6"
+    ]
+  },
+  "demand": {
+    "t1": 36,
+    "t2": 40,
+    "t3": 48,
+    "t4": 70,
+    "t5": 54,
+    "t6": 38
+  },
+  "cost": {
+    "G1": 8,
+    "G2": 10,
+    "G3": 15,
+    "G4": 22
+  },
+  "startup_cost": {
+    "G1": 100,
+    "G2": 60,
+    "G3": 22,
+    "G4": 8
+  },
+  "pmin": {
+    "G1": 16,
+    "G2": 10,
+    "G3": 4,
+    "G4": 0
+  },
+  "pmax": {
+    "G1": 32,
+    "G2": 22,
+    "G3": 16,
+    "G4": 12
+  },
+  "initial_status": {
+    "G1": 0,
+    "G2": 0,
+    "G3": 0,
+    "G4": 0
+  },
+  "meta_parameters": {
+    "number_periods": 6,
+    "number_units": 4,
+    "demand_pattern": "peak_middle_periods",
+    "startup_cost_regime": "unit_specific_startup_heterogeneity",
+    "capacity_regime": "single_period_near_limit",
+    "peak_load_flag": true,
+    "visual_type": "economics_table_demand_timeline_capacity_ranges",
+    "seed": 805,
+    "formulation_size": 150
+  }
+}

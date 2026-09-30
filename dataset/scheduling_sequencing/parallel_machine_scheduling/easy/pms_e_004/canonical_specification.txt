@@ -1,0 +1,53 @@
+This is a single-period Parallel Machine Scheduling problem.
+
+Instance ID: pms_e_004
+Variant: parallel_machine_scheduling
+Scenario: parallel_machine_scheduling
+Difficulty: easy
+
+Sets:
+- J: set of jobs
+- M: set of machines
+
+Machines:
+- M1: speed_factor=1.0
+- M2: speed_factor=1.0
+- M3: speed_factor=1.0
+
+Jobs:
+- J1: base_duration=3, weight=1, eligible_machines=['M1', 'M2', 'M3'], effective_durations={ M1:3, M2:3, M3:3 }
+- J2: base_duration=9, weight=1, eligible_machines=['M1', 'M2', 'M3'], effective_durations={ M1:9, M2:9, M3:9 }
+- J3: base_duration=4, weight=1, eligible_machines=['M1', 'M2', 'M3'], effective_durations={ M1:4, M2:4, M3:4 }
+- J4: base_duration=7, weight=1, eligible_machines=['M1', 'M2', 'M3'], effective_durations={ M1:7, M2:7, M3:7 }
+- J5: base_duration=5, weight=1, eligible_machines=['M1', 'M2', 'M3'], effective_durations={ M1:5, M2:5, M3:5 }
+- J6: base_duration=10, weight=1, eligible_machines=['M1', 'M2', 'M3'], effective_durations={ M1:10, M2:10, M3:10 }
+- J7: base_duration=6, weight=1, eligible_machines=['M1', 'M2', 'M3'], effective_durations={ M1:6, M2:6, M3:6 }
+- J8: base_duration=8, weight=1, eligible_machines=['M1', 'M2', 'M3'], effective_durations={ M1:8, M2:8, M3:8 }
+- J9: base_duration=2, weight=1, eligible_machines=['M1', 'M2', 'M3'], effective_durations={ M1:2, M2:2, M3:2 }
+- J10: base_duration=11, weight=1, eligible_machines=['M1', 'M2', 'M3'], effective_durations={ M1:11, M2:11, M3:11 }
+- J11: base_duration=4, weight=1, eligible_machines=['M1', 'M2', 'M3'], effective_durations={ M1:4, M2:4, M3:4 }
+- J12: base_duration=5, weight=1, eligible_machines=['M1', 'M2', 'M3'], effective_durations={ M1:5, M2:5, M3:5 }
+
+Decision structure:
+- Each job must be assigned to exactly one eligible machine.
+- Each machine processes its assigned jobs sequentially and non-preemptively.
+- No precedence, release-date, due-date, setup-time, or calendar constraints are present.
+
+Objective:
+- Minimize the makespan.
+
+Metadata:
+- number_jobs=12
+- number_machines=3
+- machine_type=identical
+- objective_type=makespan
+- processing_time_regime=heterogeneous
+- long_job_flag=false
+- seed=404
+- formulation_size=75
+
+Visual interpretation:
+- Each row corresponds to one job.
+- The center matrix indicates job-machine eligibility.
+- The right-hand bar indicates the job processing duration.
+- The visual does not reveal the solved assignment, start times, completion order, or objective value.

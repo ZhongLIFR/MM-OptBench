@@ -1,0 +1,23 @@
+{
+  "number_nodes": 8,
+  "layout_type": "grid_with_noise",
+  "cost_matrix_type": "euclidean_rounded_2dp",
+  "symmetry_flag": false,
+  "near_optimal_tour_flag": false,
+  "unique_optimal_flag": true,
+  "visual_type": "euclidean_city_map_with_cost_rule_box",
+  "seed": 1407,
+  "group": "B",
+  "formulation_size": 135,
+  "instance_id": "tsp_e_007",
+  "variant": "traveling_salesman_problem",
+  "scenario": "traveling_salesman_problem",
+  "difficulty": "easy",
+  "objective_value": 22.22,
+  "objective_exact": 22.220000000000002,
+  "status": "optimal",
+  "runtime_seconds": 0.0028972909785807133,
+  "solve_method": "gurobi_mtz_tsp",
+  "solver": "gurobi_mtz_tsp",
+  "visual_checksum_md5": "6cad90af23b563aa520dd9744eda97c3"
+}

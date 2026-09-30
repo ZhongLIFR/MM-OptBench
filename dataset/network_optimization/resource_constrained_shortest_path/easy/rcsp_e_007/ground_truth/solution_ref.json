@@ -1,0 +1,53 @@
+{
+  "status": "optimal",
+  "objective_value": 6,
+  "objective_exact": 6,
+  "optimal_path": [
+    1,
+    3,
+    6,
+    7,
+    8
+  ],
+  "selected_arcs": [
+    [
+      1,
+      3
+    ],
+    [
+      3,
+      6
+    ],
+    [
+      6,
+      7
+    ],
+    [
+      7,
+      8
+    ]
+  ],
+  "arc_selection": {
+    "1_2": 0,
+    "1_3": 1,
+    "1_4": 0,
+    "2_5": 0,
+    "3_5": 0,
+    "3_6": 1,
+    "4_6": 0,
+    "5_7": 0,
+    "6_7": 1,
+    "6_5": 0,
+    "7_8": 1
+  },
+  "resource_name": "budget",
+  "resource_bound": 9,
+  "total_resource": 6,
+  "feasible_path_count": 5,
+  "path_count": 6,
+  "runtime_seconds": 0.04304814338684082,
+  "solve_method": "gurobi_mip_rcsp_single_resource",
+  "solver_used": "Gurobi",
+  "solver": "Gurobi",
+  "solver_policy": "gurobi_first_then_exact_path_enumeration"
+}

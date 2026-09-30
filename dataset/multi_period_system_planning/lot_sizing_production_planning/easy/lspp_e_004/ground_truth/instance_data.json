@@ -1,0 +1,139 @@
+{
+  "instance_id": "lspp_e_004",
+  "variant": "lot_sizing_production_planning",
+  "scenario": "lot_sizing_production_planning",
+  "difficulty": "easy",
+  "sets": {
+    "products": [
+      "P1",
+      "P2"
+    ],
+    "periods": [
+      "t1",
+      "t2",
+      "t3",
+      "t4",
+      "t5",
+      "t6",
+      "t7",
+      "t8"
+    ]
+  },
+  "demand": {
+    "P1": {
+      "t1": 5,
+      "t2": 6,
+      "t3": 7,
+      "t4": 8,
+      "t5": 9,
+      "t6": 10,
+      "t7": 11,
+      "t8": 12
+    },
+    "P2": {
+      "t1": 7,
+      "t2": 4,
+      "t3": 8,
+      "t4": 5,
+      "t5": 9,
+      "t6": 5,
+      "t7": 10,
+      "t8": 6
+    }
+  },
+  "production_cost": {
+    "P1": {
+      "t1": 4,
+      "t2": 4,
+      "t3": 4,
+      "t4": 5,
+      "t5": 5,
+      "t6": 5,
+      "t7": 6,
+      "t8": 6
+    },
+    "P2": {
+      "t1": 5,
+      "t2": 5,
+      "t3": 5,
+      "t4": 5,
+      "t5": 6,
+      "t6": 6,
+      "t7": 6,
+      "t8": 6
+    }
+  },
+  "holding_cost": {
+    "P1": {
+      "t1": 1,
+      "t2": 1,
+      "t3": 1,
+      "t4": 1,
+      "t5": 1,
+      "t6": 1,
+      "t7": 1,
+      "t8": 0
+    },
+    "P2": {
+      "t1": 2,
+      "t2": 2,
+      "t3": 2,
+      "t4": 2,
+      "t5": 2,
+      "t6": 2,
+      "t7": 2,
+      "t8": 0
+    }
+  },
+  "setup_cost": {
+    "P1": {
+      "t1": 20,
+      "t2": 20,
+      "t3": 20,
+      "t4": 20,
+      "t5": 20,
+      "t6": 20,
+      "t7": 20,
+      "t8": 20
+    },
+    "P2": {
+      "t1": 28,
+      "t2": 28,
+      "t3": 28,
+      "t4": 28,
+      "t5": 28,
+      "t6": 28,
+      "t7": 28,
+      "t8": 28
+    }
+  },
+  "initial_inventory": {
+    "P1": 0,
+    "P2": 0
+  },
+  "capacity": {
+    "t1": 16,
+    "t2": 12,
+    "t3": 17,
+    "t4": 13,
+    "t5": 18,
+    "t6": 15,
+    "t7": 21,
+    "t8": 24
+  },
+  "big_m": {
+    "P1": 68,
+    "P2": 54
+  },
+  "meta_parameters": {
+    "number_periods": 8,
+    "number_products": 2,
+    "demand_pattern": "mixed_increasing_and_seasonal",
+    "setup_cost_regime": "product_heterogeneous",
+    "capacity_regime": "mild_binding",
+    "multi_product_flag": true,
+    "visual_type": "timeline_demand_grid",
+    "seed": 504,
+    "formulation_size": 88
+  }
+}

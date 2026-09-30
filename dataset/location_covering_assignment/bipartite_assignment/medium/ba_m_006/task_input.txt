@@ -1,0 +1,18 @@
+A driver-route cost table is provided.
+
+Rows correspond to drivers and columns correspond to delivery routes.
+Each numeric entry gives the cost for the corresponding driver-route pair.
+An entry shown as "—" indicates that the driver-route pair is forbidden.
+
+Interpretation:
+- Each driver can be linked to at most one route.
+- If the two sides have the same size, each driver and each route must appear exactly once.
+- If the two sides have different sizes, every element on the smaller side must be paired
+  exactly once, while each element on the larger side can be used at most once.
+
+Task:
+1) Write a mathematical optimization model for this instance.
+2) Provide solver-executable code implementing the model.
+
+Objective:
+Minimize total assignment cost.

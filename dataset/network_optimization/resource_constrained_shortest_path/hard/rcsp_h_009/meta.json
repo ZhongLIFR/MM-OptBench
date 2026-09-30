@@ -1,0 +1,72 @@
+{
+  "instance_id": "rcsp_h_009",
+  "family": "network_optimization",
+  "subtype": "resource_constrained_shortest_path",
+  "variant": "single_visual_dual_resource_rcsp",
+  "difficulty": "hard",
+  "graph_type": "staggered_cycle_filtering_network",
+  "structural_variant": "four_entry_layered_network_with_local_cycle",
+  "resource_names": [
+    "time",
+    "budget"
+  ],
+  "resource_bounds": {
+    "time": 8,
+    "budget": 8
+  },
+  "binding_pattern": "both_binding",
+  "tradeoff_pattern": "cycle_enriched_hard_instance_with_budget_time_tradeoff_and_nontrivial_mid_section",
+  "visual_type": "single_visual_topology_with_inline_arc_coefficients",
+  "num_nodes": 16,
+  "num_arcs": 26,
+  "num_variables": 26,
+  "num_constraints": 18,
+  "formulation_size": 44,
+  "random_seed": 7109,
+  "seed": 7109,
+  "feasible_path_count": 7,
+  "infeasible_by_resource_1_count": 10,
+  "infeasible_by_resource_2_count": 10,
+  "infeasible_by_both_count": 5,
+  "path_count": 22,
+  "near_optimal_window": 2,
+  "near_optimal_infeasible_count": 15,
+  "binding_resources_at_optimum": [
+    "time",
+    "budget"
+  ],
+  "status": "optimal",
+  "optimal_objective_value": 6,
+  "objective_exact": 6,
+  "optimal_path": [
+    1,
+    3,
+    7,
+    11,
+    14,
+    16
+  ],
+  "optimal_resource_totals": {
+    "time": 8,
+    "budget": 8
+  },
+  "runtime_seconds": 0.018067359924316406,
+  "solve_method": "gurobi_mip_rcsp_dual_resource",
+  "solver_used": "Gurobi",
+  "solver": "Gurobi",
+  "solver_policy": "gurobi_first_then_exact_path_enumeration",
+  "visual_0_checksum_md5": "bc8f4f55858bad7d47cb511f807f8847",
+  "files": {
+    "canonical_specification": "canonical_specification.txt",
+    "task_input": "task_input.txt",
+    "visuals": [
+      "visuals/visual_0.png"
+    ],
+    "ground_truth": {
+      "instance_data": "ground_truth/instance_data.json",
+      "math_model": "ground_truth/math_model.md",
+      "solver_ref": "ground_truth/solver_ref.py",
+      "solution_ref": "ground_truth/solution_ref.json"
+    }
+  }
+}

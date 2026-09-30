@@ -1,0 +1,134 @@
+{
+  "status": "optimal",
+  "objective": 14,
+  "objective_exact": 14.0,
+  "makespan": 14,
+  "schedule": [
+    {
+      "job": "J1",
+      "operation": "O1",
+      "machine": "M1",
+      "start": 0,
+      "finish": 4,
+      "duration": 4
+    },
+    {
+      "job": "J4",
+      "operation": "O2",
+      "machine": "M1",
+      "start": 4,
+      "finish": 8,
+      "duration": 4
+    },
+    {
+      "job": "J2",
+      "operation": "O3",
+      "machine": "M1",
+      "start": 9,
+      "finish": 14,
+      "duration": 5
+    },
+    {
+      "job": "J2",
+      "operation": "O1",
+      "machine": "M2",
+      "start": 0,
+      "finish": 3,
+      "duration": 3
+    },
+    {
+      "job": "J1",
+      "operation": "O2",
+      "machine": "M2",
+      "start": 4,
+      "finish": 9,
+      "duration": 5
+    },
+    {
+      "job": "J3",
+      "operation": "O3",
+      "machine": "M2",
+      "start": 9,
+      "finish": 13,
+      "duration": 4
+    },
+    {
+      "job": "J3",
+      "operation": "O1",
+      "machine": "M3",
+      "start": 0,
+      "finish": 5,
+      "duration": 5
+    },
+    {
+      "job": "J2",
+      "operation": "O2",
+      "machine": "M3",
+      "start": 5,
+      "finish": 9,
+      "duration": 4
+    },
+    {
+      "job": "J4",
+      "operation": "O3",
+      "machine": "M3",
+      "start": 9,
+      "finish": 13,
+      "duration": 4
+    },
+    {
+      "job": "J4",
+      "operation": "O1",
+      "machine": "M4",
+      "start": 0,
+      "finish": 4,
+      "duration": 4
+    },
+    {
+      "job": "J3",
+      "operation": "O2",
+      "machine": "M4",
+      "start": 5,
+      "finish": 8,
+      "duration": 3
+    },
+    {
+      "job": "J1",
+      "operation": "O3",
+      "machine": "M4",
+      "start": 9,
+      "finish": 12,
+      "duration": 3
+    }
+  ],
+  "solve_method": "gurobi_disjunctive_milp",
+  "solver": "Gurobi",
+  "runtime_seconds": 0.0012369155883789062,
+  "binding_machines": [
+    "M1",
+    "M2",
+    "M3"
+  ],
+  "machine_orders": {
+    "M1": [
+      "J1-O1",
+      "J4-O2",
+      "J2-O3"
+    ],
+    "M2": [
+      "J2-O1",
+      "J1-O2",
+      "J3-O3"
+    ],
+    "M3": [
+      "J3-O1",
+      "J2-O2",
+      "J4-O3"
+    ],
+    "M4": [
+      "J4-O1",
+      "J3-O2",
+      "J1-O3"
+    ]
+  }
+}

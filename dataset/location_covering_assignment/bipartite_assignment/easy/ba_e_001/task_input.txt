@@ -1,0 +1,19 @@
+A driver-route compatibility visual is provided.
+
+The visual contains two coordinated parts:
+- On the left, a compatibility graph connects drivers to delivery routes.
+- On the right, a cost table gives the numeric cost for each feasible driver-route pair.
+- If a table entry is shown as "—", that driver-route pair is forbidden.
+
+Interpretation:
+- Each driver can be linked to at most one route.
+- If the two sides have the same size, each driver and each route must appear exactly once.
+- If the two sides have different sizes, every element on the smaller side must be paired
+  exactly once, while each element on the larger side can be used at most once.
+
+Task:
+1) Write a mathematical optimization model for this instance.
+2) Provide solver-executable code implementing the model.
+
+Objective:
+Minimize total assignment cost.

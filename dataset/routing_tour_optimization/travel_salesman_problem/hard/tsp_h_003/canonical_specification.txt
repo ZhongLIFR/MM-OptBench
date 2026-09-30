@@ -1,0 +1,83 @@
+Canonical specification for a deterministic Traveling Salesman Problem instance.
+
+Interpretation:
+- A single closed tour must visit every city exactly once and return to its starting city.
+- Travel between every pair of distinct cities is allowed, so the graph is complete.
+- Travel costs are symmetric unless an explicitly perturbed symmetric regime is specified; this instance uses the displayed complete cost matrix.
+- The displayed city coordinates determine the geometric layout shown in the visual map.
+- The optimization goal is to minimize the total tour length.
+
+Sets:
+- Cities N = ['A', 'B', 'C', 'D', 'E', 'F', 'G', 'H', 'I', 'J', 'K', 'L', 'M', 'N', 'O', 'P', 'Q', 'R']
+- Directed arcs A = [(i,j) for i,j in N, i != j]
+- Reference city for tour reporting: s = A
+
+Coordinates by city:
+- A: (25.0, 15.0)
+- B: (23.4, 20.4)
+- C: (20.0, 23.7)
+- D: (14.5, 25.0)
+- E: (10.0, 23.7)
+- F: (6.1, 19.6)
+- G: (5.0, 15.0)
+- H: (6.6, 9.6)
+- I: (10.0, 6.3)
+- J: (15.5, 5.0)
+- K: (20.0, 6.3)
+- L: (23.9, 10.4)
+- M: (12.0, 12.0)
+- N: (18.0, 12.0)
+- O: (12.0, 18.0)
+- P: (18.0, 18.0)
+- Q: (15.0, 9.0)
+- R: (15.0, 21.0)
+
+Complete symmetric travel-cost matrix:
+- A: A=0.0000, B=5.6321, C=10.0344, D=14.5000, E=17.3404, F=19.4517, G=20.0000, H=19.1760, I=17.3404, J=13.7931, K=10.0344, L=4.7297, M=13.3417, N=7.6158, O=13.3417, P=7.6158, Q=11.6619, R=11.6619
+- B: A=5.6321, B=0.0000, C=4.7381, D=10.0185, E=13.8004, F=17.3185, G=19.1760, H=19.9720, I=19.4517, J=17.3081, K=14.5041, L=10.0125, M=14.1605, N=9.9860, O=11.6499, P=5.9093, Q=14.1605, R=8.4214
+- C: A=10.0344, B=4.7381, C=0.0000, D=5.6515, E=10.0000, F=14.4921, G=17.3404, H=19.4517, I=20.0689, J=19.2338, K=17.4000, L=13.8600, M=14.1736, N=11.8697, O=9.8229, P=6.0407, Q=15.5271, R=5.6824
+- D: A=14.5000, B=10.0185, C=5.6515, D=0.0000, E=4.6840, F=9.9860, G=13.7931, H=17.3081, I=19.2338, J=20.0250, K=19.4920, L=17.3643, M=13.2382, N=13.4629, O=7.4330, P=7.8262, Q=16.0078, R=4.0311
+- E: A=17.3404, B=13.8004, C=10.0000, D=4.6840, E=0.0000, F=5.6586, G=10.0344, H=14.5041, I=17.4000, J=19.4920, K=20.0689, L=19.2380, M=11.8697, N=14.1736, O=6.0407, P=9.8229, Q=15.5271, R=5.6824
+- F: A=19.4517, B=17.3185, C=14.4921, D=9.9860, E=5.6586, F=0.0000, G=4.7297, H=10.0125, I=13.8600, J=17.3643, K=19.2380, L=20.0370, M=9.6213, N=14.1198, O=6.1131, P=12.0071, Q=13.8409, R=9.0094
+- G: A=20.0000, B=19.1760, C=17.3404, D=13.7931, E=10.0344, F=4.7297, G=0.0000, H=5.6321, I=10.0344, J=14.5000, K=17.3404, L=19.4517, M=7.6158, N=13.3417, O=7.6158, P=13.3417, Q=11.6619, R=11.6619
+- H: A=19.1760, B=19.9720, C=19.4517, D=17.3081, E=14.5041, F=10.0125, G=5.6321, H=0.0000, I=4.7381, J=10.0185, K=13.8004, L=17.3185, M=5.9093, N=11.6499, O=9.9860, P=14.1605, Q=8.4214, R=14.1605
+- I: A=17.3404, B=19.4517, C=20.0689, D=19.2338, E=17.4000, F=13.8600, G=10.0344, H=4.7381, I=0.0000, J=5.6515, K=10.0000, L=14.4921, M=6.0407, N=9.8229, O=11.8697, P=14.1736, Q=5.6824, R=15.5271
+- J: A=13.7931, B=17.3081, C=19.2338, D=20.0250, E=19.4920, F=17.3643, G=14.5000, H=10.0185, I=5.6515, J=0.0000, K=4.6840, L=9.9860, M=7.8262, N=7.4330, O=13.4629, P=13.2382, Q=4.0311, R=16.0078
+- K: A=10.0344, B=14.5041, C=17.4000, D=19.4920, E=20.0689, F=19.2380, G=17.3404, H=13.8004, I=10.0000, J=4.6840, K=0.0000, L=5.6586, M=9.8229, N=6.0407, O=14.1736, P=11.8697, Q=5.6824, R=15.5271
+- L: A=4.7297, B=10.0125, C=13.8600, D=17.3643, E=19.2380, F=20.0370, G=19.4517, H=17.3185, I=14.4921, J=9.9860, K=5.6586, L=0.0000, M=12.0071, N=6.1131, O=14.1198, P=9.6213, Q=9.0094, R=13.8409
+- M: A=13.3417, B=14.1605, C=14.1736, D=13.2382, E=11.8697, F=9.6213, G=7.6158, H=5.9093, I=6.0407, J=7.8262, K=9.8229, L=12.0071, M=0.0000, N=6.0000, O=6.0000, P=8.4853, Q=4.2426, R=9.4868
+- N: A=7.6158, B=9.9860, C=11.8697, D=13.4629, E=14.1736, F=14.1198, G=13.3417, H=11.6499, I=9.8229, J=7.4330, K=6.0407, L=6.1131, M=6.0000, N=0.0000, O=8.4853, P=6.0000, Q=4.2426, R=9.4868
+- O: A=13.3417, B=11.6499, C=9.8229, D=7.4330, E=6.0407, F=6.1131, G=7.6158, H=9.9860, I=11.8697, J=13.4629, K=14.1736, L=14.1198, M=6.0000, N=8.4853, O=0.0000, P=6.0000, Q=9.4868, R=4.2426
+- P: A=7.6158, B=5.9093, C=6.0407, D=7.8262, E=9.8229, F=12.0071, G=13.3417, H=14.1605, I=14.1736, J=13.2382, K=11.8697, L=9.6213, M=8.4853, N=6.0000, O=6.0000, P=0.0000, Q=9.4868, R=4.2426
+- Q: A=11.6619, B=14.1605, C=15.5271, D=16.0078, E=15.5271, F=13.8409, G=11.6619, H=8.4214, I=5.6824, J=4.0311, K=5.6824, L=9.0094, M=4.2426, N=4.2426, O=9.4868, P=9.4868, Q=0.0000, R=12.0000
+- R: A=11.6619, B=8.4214, C=5.6824, D=4.0311, E=5.6824, F=9.0094, G=11.6619, H=14.1605, I=15.5271, J=16.0078, K=15.5271, L=13.8409, M=9.4868, N=9.4868, O=4.2426, P=4.2426, Q=12.0000, R=0.0000
+
+Decision variables:
+- x[i,j] in {0,1}: equals 1 if the tour directly travels from city i to city j
+
+Objective:
+- Minimize total travel cost sum_{i != j} c[i,j] * x[i,j].
+
+Constraints:
+- Exactly one outgoing arc from every city.
+- Exactly one incoming arc to every city.
+- Subtour elimination constraints are required to enforce a single Hamiltonian cycle.
+- Binary arc variables.
+
+Metadata:
+- number_nodes=18
+- layout_type=ring_with_core_structure
+- cluster_count=2
+- cost_matrix_type=euclidean_exact
+- symmetry_flag=true
+- visual_type=euclidean_city_map_with_cost_rule_box
+- seed=3403
+- group=A
+- formulation_size=665
+
+Visual interpretation:
+- The figure shows one marker per city on a two-dimensional Euclidean map.
+- Each city label includes its exact coordinate pair.
+- A cost-rule box states how pairwise travel costs are derived from the plotted coordinates.
+- The complete graph edges are intentionally omitted to avoid clutter.
+- The visual does not reveal the optimal tour, selected arcs, or objective value.

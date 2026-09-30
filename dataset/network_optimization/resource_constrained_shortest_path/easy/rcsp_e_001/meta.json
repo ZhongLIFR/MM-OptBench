@@ -1,0 +1,53 @@
+{
+  "instance_id": "rcsp_e_001",
+  "family": "network_optimization",
+  "subtype": "resource_constrained_shortest_path",
+  "variant": "single_visual_single_resource_rcsp",
+  "difficulty": "easy",
+  "graph_type": "expanded_two_route_merge",
+  "resource_name": "time",
+  "resource_bound": 7,
+  "cost_resource_regime": "cheapest_route_exceeds_time_limit",
+  "resource_tightness": "moderate",
+  "visual_type": "single_visual_topology_with_inline_arc_coefficients",
+  "num_nodes": 7,
+  "num_arcs": 9,
+  "num_variables": 9,
+  "num_constraints": 8,
+  "formulation_size": 17,
+  "random_seed": 4201,
+  "seed": 4201,
+  "feasible_path_count": 3,
+  "infeasible_path_count": 1,
+  "path_count": 4,
+  "status": "optimal",
+  "optimal_objective_value": 6,
+  "objective_exact": 6,
+  "optimal_path": [
+    1,
+    3,
+    5,
+    6,
+    7
+  ],
+  "optimal_total_resource": 6,
+  "runtime_seconds": 0.036067962646484375,
+  "solve_method": "gurobi_mip_rcsp_single_resource",
+  "solver_used": "Gurobi",
+  "solver": "Gurobi",
+  "solver_policy": "gurobi_first_then_exact_path_enumeration",
+  "visual_0_checksum_md5": "8e971d0a6ae2b6141f755b75a3b0a3f9",
+  "files": {
+    "canonical_specification": "canonical_specification.txt",
+    "task_input": "task_input.txt",
+    "visuals": [
+      "visuals/visual_0.png"
+    ],
+    "ground_truth": {
+      "instance_data": "ground_truth/instance_data.json",
+      "math_model": "ground_truth/math_model.md",
+      "solver_ref": "ground_truth/solver_ref.py",
+      "solution_ref": "ground_truth/solution_ref.json"
+    }
+  }
+}

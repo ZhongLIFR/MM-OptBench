@@ -1,0 +1,51 @@
+This is a single-period Parallel Machine Scheduling problem.
+
+Instance ID: pms_e_003
+Variant: parallel_machine_scheduling
+Scenario: parallel_machine_scheduling
+Difficulty: easy
+
+Sets:
+- J: set of jobs
+- M: set of machines
+
+Machines:
+- M1: speed_factor=1.0
+- M2: speed_factor=1.2
+- M3: speed_factor=0.8
+
+Jobs:
+- J1: base_duration=4, weight=1, eligible_machines=['M1', 'M2', 'M3'], effective_durations={ M1:4, M2:4, M3:5 }
+- J2: base_duration=6, weight=1, eligible_machines=['M1', 'M2'], effective_durations={ M1:6, M2:5 }
+- J3: base_duration=5, weight=1, eligible_machines=['M2', 'M3'], effective_durations={ M2:5, M3:7 }
+- J4: base_duration=7, weight=1, eligible_machines=['M1', 'M3'], effective_durations={ M1:7, M3:9 }
+- J5: base_duration=3, weight=1, eligible_machines=['M1', 'M2', 'M3'], effective_durations={ M1:3, M2:3, M3:4 }
+- J6: base_duration=8, weight=1, eligible_machines=['M1', 'M3'], effective_durations={ M1:8, M3:10 }
+- J7: base_duration=5, weight=1, eligible_machines=['M2', 'M3'], effective_durations={ M2:5, M3:7 }
+- J8: base_duration=4, weight=1, eligible_machines=['M1', 'M2'], effective_durations={ M1:4, M2:4 }
+- J9: base_duration=6, weight=1, eligible_machines=['M1', 'M2', 'M3'], effective_durations={ M1:6, M2:5, M3:8 }
+- J10: base_duration=2, weight=1, eligible_machines=['M2', 'M3'], effective_durations={ M2:2, M3:3 }
+
+Decision structure:
+- Each job must be assigned to exactly one eligible machine.
+- Each machine processes its assigned jobs sequentially and non-preemptively.
+- No precedence, release-date, due-date, setup-time, or calendar constraints are present.
+
+Objective:
+- Minimize the makespan.
+
+Metadata:
+- number_jobs=10
+- number_machines=3
+- machine_type=related
+- objective_type=makespan
+- processing_time_regime=balanced_related
+- long_job_flag=false
+- seed=403
+- formulation_size=56
+
+Visual interpretation:
+- Each row corresponds to one job.
+- The center matrix indicates job-machine eligibility.
+- The right-hand bar indicates the job processing duration.
+- The visual does not reveal the solved assignment, start times, completion order, or objective value.

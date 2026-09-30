@@ -1,0 +1,98 @@
+This is a single-period abstract subset-selection instance.
+
+Instance ID: scp_m_006
+Variant: set_covering
+Difficulty: medium
+Incidence structure: six_block_chain_with_special_shortcuts
+Cost regime: large_local_blocks_with_discounted_columns
+
+Elements:
+- E1
+- E2
+- E3
+- E4
+- E5
+- E6
+- E7
+- E8
+- E9
+- E10
+- E11
+- E12
+- E13
+- E14
+- E15
+- E16
+- E17
+- E18
+- E19
+- E20
+- E21
+- E22
+- E23
+- E24
+
+Candidate subsets and subset costs:
+- S1: cost=8, contains E1, E2, E3, E4
+- S2: cost=8, contains E5, E6, E7, E8
+- S3: cost=8, contains E9, E10, E11, E12
+- S4: cost=8, contains E13, E14, E15, E16
+- S5: cost=8, contains E17, E18, E19, E20
+- S6: cost=8, contains E21, E22, E23, E24
+- S7: cost=6, contains E3, E4, E5, E6
+- S8: cost=6, contains E7, E8, E9, E10
+- S9: cost=6, contains E11, E12, E13, E14
+- S10: cost=6, contains E15, E16, E17, E18
+- S11: cost=6, contains E19, E20, E21, E22
+- S12: cost=6, contains E1, E6, E11, E16, E21
+- S13: cost=6, contains E2, E7, E12, E17, E22
+- S14: cost=6, contains E3, E8, E13, E18, E23
+- S15: cost=6, contains E4, E9, E14, E19, E24
+- S16: cost=5, contains E5, E10, E15, E20
+- S17: cost=6, contains E1, E5, E9, E13, E17, E21
+- S18: cost=5, contains E4, E8, E12, E16, E20, E24
+
+Coverage options by element:
+- E1: S1, S12, S17
+- E2: S1, S13
+- E3: S1, S7, S14
+- E4: S1, S7, S15, S18
+- E5: S2, S7, S16, S17
+- E6: S2, S7, S12
+- E7: S2, S8, S13
+- E8: S2, S8, S14, S18
+- E9: S3, S8, S15, S17
+- E10: S3, S8, S16
+- E11: S3, S9, S12
+- E12: S3, S9, S13, S18
+- E13: S4, S9, S14, S17
+- E14: S4, S9, S15
+- E15: S4, S10, S16
+- E16: S4, S10, S12, S18
+- E17: S5, S10, S13, S17
+- E18: S5, S10, S14
+- E19: S5, S11, S15
+- E20: S5, S11, S16, S18
+- E21: S6, S11, S12, S17
+- E22: S6, S11, S13
+- E23: S6, S14
+- E24: S6, S15, S18
+
+Objective:
+- Minimize total subset cost.
+
+Constraints:
+- Every element must be covered by at least one selected subset.
+- All subset-selection variables are binary.
+
+Metadata summary:
+- number_of_elements = 24
+- number_of_candidate_subsets = 18
+- average_subset_size = 4.4444
+- incidence_density = 0.1852
+- critical_elements = E2, E23
+
+Visual interpretation:
+- The visual is a single exact candidate-subset table.
+- Rows correspond to candidate subsets and columns correspond to elements.
+- Filled cells indicate membership and the left bars show exact subset costs.

@@ -1,0 +1,163 @@
+{
+  "status": "optimal",
+  "objective": 24,
+  "objective_exact": 24,
+  "optimal_makespan": 24,
+  "machine_assignment": {
+    "J1": {
+      "S1": "S1M1",
+      "S2": "S2M2",
+      "S3": "S3M1"
+    },
+    "J2": {
+      "S1": "S1M1",
+      "S2": "S2M2",
+      "S3": "S3M1"
+    },
+    "J3": {
+      "S1": "S1M1",
+      "S2": "S2M1",
+      "S3": "S3M1"
+    },
+    "J4": {
+      "S1": "S1M1",
+      "S2": "S2M1",
+      "S3": "S3M1"
+    }
+  },
+  "start_time": {
+    "J1": {
+      "S1": 12,
+      "S2": 16,
+      "S3": 19
+    },
+    "J2": {
+      "S1": 4,
+      "S2": 7,
+      "S3": 12
+    },
+    "J3": {
+      "S1": 7,
+      "S2": 12,
+      "S3": 16
+    },
+    "J4": {
+      "S1": 0,
+      "S2": 4,
+      "S3": 6
+    }
+  },
+  "completion_time": {
+    "J1": {
+      "S1": 16,
+      "S2": 19,
+      "S3": 24
+    },
+    "J2": {
+      "S1": 7,
+      "S2": 12,
+      "S3": 16
+    },
+    "J3": {
+      "S1": 12,
+      "S2": 16,
+      "S3": 19
+    },
+    "J4": {
+      "S1": 4,
+      "S2": 6,
+      "S3": 12
+    }
+  },
+  "machine_timelines": {
+    "S1": {
+      "S1M1": [
+        {
+          "job": "J4",
+          "start": 0,
+          "finish": 4,
+          "duration": 4
+        },
+        {
+          "job": "J2",
+          "start": 4,
+          "finish": 7,
+          "duration": 3
+        },
+        {
+          "job": "J3",
+          "start": 7,
+          "finish": 12,
+          "duration": 5
+        },
+        {
+          "job": "J1",
+          "start": 12,
+          "finish": 16,
+          "duration": 4
+        }
+      ]
+    },
+    "S2": {
+      "S2M1": [
+        {
+          "job": "J4",
+          "start": 4,
+          "finish": 6,
+          "duration": 2
+        },
+        {
+          "job": "J3",
+          "start": 12,
+          "finish": 16,
+          "duration": 4
+        }
+      ],
+      "S2M2": [
+        {
+          "job": "J2",
+          "start": 7,
+          "finish": 12,
+          "duration": 5
+        },
+        {
+          "job": "J1",
+          "start": 16,
+          "finish": 19,
+          "duration": 3
+        }
+      ]
+    },
+    "S3": {
+      "S3M1": [
+        {
+          "job": "J4",
+          "start": 6,
+          "finish": 12,
+          "duration": 6
+        },
+        {
+          "job": "J2",
+          "start": 12,
+          "finish": 16,
+          "duration": 4
+        },
+        {
+          "job": "J3",
+          "start": 16,
+          "finish": 19,
+          "duration": 3
+        },
+        {
+          "job": "J1",
+          "start": 19,
+          "finish": 24,
+          "duration": 5
+        }
+      ]
+    }
+  },
+  "solve_method": "gurobi_disjunctive_milp_fhfss",
+  "solver": "Gurobi",
+  "runtime_seconds": 0.013031
+}

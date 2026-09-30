@@ -1,0 +1,25 @@
+A project-scheduling instance is provided using two visual files.
+
+visual_0.png:
+- a precedence-network view showing the exact activity graph,
+- activity labels inside each node,
+- and the exact duration of every activity.
+
+visual_1.png:
+- a renewable-resource capacity panel,
+- a duration bar chart for the real activities,
+- and an activity-by-resource demand matrix showing the exact renewable resource requirement of each real activity.
+
+Interpretation:
+- Each activity may start only after all of its predecessor activities finish.
+- Activities are non-preemptive.
+- Renewable resource usage from simultaneously active real activities may not exceed the displayed capacity of each resource.
+- Dummy Start and End activities have zero duration and zero resource demand.
+- No release dates, due dates, setup times, calendars, stochastic durations, non-renewable resources, or multi-project coupling are included.
+
+Task:
+1) Write a mathematical optimization model for this exact instance.
+2) Provide solver-executable code implementing the model.
+
+Objective:
+Minimize the project makespan.

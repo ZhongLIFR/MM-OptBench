@@ -1,0 +1,64 @@
+Canonical specification for a deterministic single-zone medium-level energy dispatch and unit commitment instance.
+
+Interpretation:
+- For each generator and period, a binary commitment decision determines whether the generator is off or on.
+- If a generator is off in a period, its output must be zero in that period.
+- If a generator is on in a period, its output must lie between its minimum and maximum output limits.
+- In every period, total generation across all generators must exactly equal the system demand of that period.
+- A startup cost is incurred whenever a generator changes from off in the previous period to on in the current period.
+- A shutdown cost is incurred whenever a generator changes from on in the previous period to off in the current period.
+- Ramp-up and ramp-down limits apply between consecutive periods.
+- Minimum up-time and minimum down-time requirements apply to each generator.
+- The initial commitment status before the first period is given explicitly for every generator.
+- No transmission, reserve, stochastic, or multi-zone constraints are present.
+
+Sets:
+- Generators G = ['G1', 'G2', 'G3', 'G4', 'G5']
+- Periods T = ['t1', 't2', 't3', 't4', 't5', 't6', 't7', 't8', 't9', 't10', 't11', 't12']
+
+System demand by period:
+- t1=38, t2=42, t3=46, t4=52, t5=58, t6=64, t7=62, t8=56, t9=50, t10=46, t11=42, t12=38
+
+Generator parameters:
+- G1: marginal_cost=8, startup_cost=120, shutdown_cost=10, min_output=16, max_output=30, ramp_up=16, ramp_down=16, min_up=2, min_down=1, initial_status=0, initial_output=0
+- G2: marginal_cost=9, startup_cost=90, shutdown_cost=8, min_output=12, max_output=24, ramp_up=16, ramp_down=16, min_up=2, min_down=1, initial_status=0, initial_output=0
+- G3: marginal_cost=13, startup_cost=42, shutdown_cost=6, min_output=6, max_output=18, ramp_up=14, ramp_down=14, min_up=1, min_down=1, initial_status=0, initial_output=0
+- G4: marginal_cost=17, startup_cost=20, shutdown_cost=3, min_output=0, max_output=14, ramp_up=12, ramp_down=12, min_up=1, min_down=1, initial_status=0, initial_output=0
+- G5: marginal_cost=25, startup_cost=8, shutdown_cost=2, min_output=0, max_output=10, ramp_up=10, ramp_down=10, min_up=1, min_down=1, initial_status=0, initial_output=0
+
+Decision variables:
+- p[g,t] >= 0: generation output of generator g in period t
+- u[g,t] in {0,1}: equals 1 if generator g is on in period t
+- v[g,t] in {0,1}: equals 1 if generator g starts up in period t
+- w[g,t] in {0,1}: equals 1 if generator g shuts down in period t
+
+Objective:
+- Minimize the total marginal generation cost plus total startup and shutdown costs across all generators and periods.
+
+Constraints:
+- Demand balance for every period: sum_g p[g,t] = D[t].
+- Minimum output for every generator-period: p[g,t] >= Pmin[g] * u[g,t].
+- Maximum output for every generator-period: p[g,t] <= Pmax[g] * u[g,t].
+- Commitment transition definition: u[g,t] - u[g,t-1] = v[g,t] - w[g,t], using the stated initial status for the first period.
+- Ramp-up constraints between consecutive periods.
+- Ramp-down constraints between consecutive periods.
+- Minimum up-time constraints based on startup decisions and commitment persistence.
+- Minimum down-time constraints based on shutdown decisions and off-status persistence.
+- Nonnegativity of generation and binary domains for commitment, startup, and shutdown variables.
+
+Metadata:
+- number_periods=12
+- number_units=5
+- demand_regime=increasing_then_decreasing
+- ramping_regime=mixed_moderate
+- minimum_up_down_flag=True
+- capacity_regime=moderate_stress
+- peak_load_flag=False
+- visual_type=economics_table_plus_demand_timeline_and_capacity_ranges
+- seed=903
+- formulation_size=612
+
+Visual interpretation:
+- visual_0.png shows generator-level economic parameters only: marginal generation cost and startup cost.
+- visual_1.png shows the exact demand value in every period and the generator minimum/maximum capacity ranges.
+- The visual files do not reveal the optimal commitment schedule, dispatch plan, startup pattern, shutdown pattern, or objective value.

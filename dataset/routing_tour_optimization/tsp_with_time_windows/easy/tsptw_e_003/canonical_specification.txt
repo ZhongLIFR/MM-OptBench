@@ -1,0 +1,97 @@
+Canonical specification for a deterministic single-vehicle Traveling Salesman Problem with Time Windows (TSPTW) instance.
+
+Interpretation:
+- A single vehicle starts at the depot, visits every customer exactly once, and returns to the depot.
+- The routing graph is complete: travel between every ordered pair of distinct nodes is allowed.
+- Travel times are deterministic and equal the Euclidean distances between displayed coordinates, rounded to 2 decimals.
+- Service at each customer must begin within the customer-specific time window.
+- If the vehicle arrives before the time window opens, it may wait.
+- There are no capacities, multiple vehicles, forbidden arcs, stochastic times, or time-dependent costs.
+
+Sets:
+- Nodes N = ['Depot', 'C1', 'C2', 'C3', 'C4', 'C5', 'C6', 'C7', 'C8']
+- Customers C = ['C1', 'C2', 'C3', 'C4', 'C5', 'C6', 'C7', 'C8']
+- Directed arcs A = [(i,j) for i,j in N, i != j]
+
+Coordinates by node:
+- Depot: (5.0, 5.0)
+- C1: (2.6, 2.6)
+- C2: (9.1, 2.7)
+- C3: (7.0, 5.2)
+- C4: (8.1, 7.5)
+- C5: (4.9, 8.3)
+- C6: (4.8, 5.8)
+- C7: (4.0, 7.2)
+- C8: (2.2, 6.4)
+
+Service times by node:
+- Depot: 0.00
+- C1: 0.50
+- C2: 0.30
+- C3: 0.50
+- C4: 0.50
+- C5: 0.30
+- C6: 0.30
+- C7: 0.30
+- C8: 0.30
+
+Time windows by node [a_i, b_i]:
+- Depot: [0.00, 200.00]
+- C1: [0.45, 10.80]
+- C2: [5.58, 15.30]
+- C3: [11.03, 21.67]
+- C4: [13.48, 23.75]
+- C5: [19.16, 22.16]
+- C6: [20.23, 29.85]
+- C7: [21.64, 31.29]
+- C8: [23.49, 33.50]
+
+Complete travel-time matrix c[i,j]:
+- Depot: Depot=0.00, C1=3.39, C2=4.70, C3=2.01, C4=3.98, C5=3.30, C6=0.82, C7=2.42, C8=3.13
+- C1: Depot=3.39, C1=0.00, C2=6.50, C3=5.11, C4=7.37, C5=6.15, C6=3.88, C7=4.81, C8=3.82
+- C2: Depot=4.70, C1=6.50, C2=0.00, C3=3.26, C4=4.90, C5=7.00, C6=5.30, C7=6.80, C8=7.83
+- C3: Depot=2.01, C1=5.11, C2=3.26, C3=0.00, C4=2.55, C5=3.74, C6=2.28, C7=3.61, C8=4.95
+- C4: Depot=3.98, C1=7.37, C2=4.90, C3=2.55, C4=0.00, C5=3.30, C6=3.71, C7=4.11, C8=6.00
+- C5: Depot=3.30, C1=6.15, C2=7.00, C3=3.74, C4=3.30, C5=0.00, C6=2.50, C7=1.42, C8=3.30
+- C6: Depot=0.82, C1=3.88, C2=5.30, C3=2.28, C4=3.71, C5=2.50, C6=0.00, C7=1.61, C8=2.67
+- C7: Depot=2.42, C1=4.81, C2=6.80, C3=3.61, C4=4.11, C5=1.42, C6=1.61, C7=0.00, C8=1.97
+- C8: Depot=3.13, C1=3.82, C2=7.83, C3=4.95, C4=6.00, C5=3.30, C6=2.67, C7=1.97, C8=0.00
+
+Decision variables:
+- x[i,j] in {0,1}: equals 1 if the vehicle directly travels from node i to node j
+- t[i] >= 0: service-start time at node i
+
+Objective:
+- Minimize total travel time sum_{i != j} c[i,j] * x[i,j].
+
+Constraints:
+- Exactly one outgoing arc from every node.
+- Exactly one incoming arc to every node.
+- Time-propagation constraints linking consecutive visits.
+- Time-window bounds at every node.
+- Connectivity enforced through the time-based formulation.
+
+Big-M parameter:
+- M = 213.33
+
+Metadata:
+- number_customers=8
+- layout_type=uniform
+- window_tightness_type=moderate
+- service_time_type=small_variation
+- critical_sequence_type=late_last
+- binding_window_flag=true
+- critical_sequence_flag=true
+- travel_time_rule=euclidean_rounded_2dp
+- visual_type=coordinate_tw_service_node_map_with_cost_rule_box
+- seed=3301
+- group=A
+- formulation_size=189
+
+Visual interpretation:
+- The figure shows one colored marker per node on a Cartesian map.
+- Coordinates are printed next to each node.
+- Each node also shows an exact combined time-window and service-time label.
+- A cost-rule box states how travel times are derived from the plotted coordinates.
+- Complete-graph edges are intentionally omitted to avoid clutter.
+- The visual does not reveal the optimal tour, selected arcs, arrival times, or objective value.

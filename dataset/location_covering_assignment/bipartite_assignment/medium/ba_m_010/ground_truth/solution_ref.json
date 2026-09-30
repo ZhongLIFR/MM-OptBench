@@ -1,0 +1,28 @@
+{
+  "status": "optimal",
+  "objective_exact": 52.0,
+  "objective_value": 52.0,
+  "assignments": {
+    "D1": "R1",
+    "D2": "R2",
+    "D3": "R6",
+    "D4": "R5",
+    "D5": "R4",
+    "D6": "R3",
+    "D7": "R9",
+    "D8": "R8",
+    "D9": "R7",
+    "D10": "R10",
+    "D11": "R12",
+    "D12": "R11",
+    "D13": "R13",
+    "D14": "R14",
+    "D15": "R15",
+    "D16": "R16",
+    "D17": "R17",
+    "D18": "R18"
+  },
+  "solver_policy": "prefer_gurobi_else_exact_fallback",
+  "solver_used": "gurobi",
+  "optimality_proof": "gurobi_optimal_status"
+}

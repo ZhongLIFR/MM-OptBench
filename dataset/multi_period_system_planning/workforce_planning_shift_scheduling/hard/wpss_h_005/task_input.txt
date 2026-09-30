@@ -1,0 +1,50 @@
+A service unit must create a multi-day roster using the exact data shown in the accompanying visual artifacts.
+
+This instance uses four visual files.
+
+visual_0.png:
+- a shift-definitions panel,
+- a total-staff bar chart showing the exact total number of workers required on each day,
+- and a shift-by-day staffing table showing the exact requirement for every displayed day-shift pair.
+
+visual_1.png:
+- a worker profile table listing, for each worker, the exact Day / Evening / Night assignment cost used in this instance,
+- the regular shift cap over the full horizon,
+- the overtime cost per extra shift above the regular cap,
+- the maximum allowed number of Night shifts,
+- and the maximum allowed number of consecutive working days.
+
+visual_2.png:
+- a worker-by-day availability matrix for the first block of days: Mon1, Tue1, Wed1, Thu1, Fri1, Sat1, Sun1, Mon2, Tue2,
+- with explicit availability codes in every cell and an on-figure legend.
+
+visual_3.png:
+- a continuation availability matrix for the remaining days: Wed2, Thu2, Fri2, Sat2, Sun2, Mon3, Tue3, Wed3,
+- with the same worker order and the same availability-code legend.
+
+Availability code legend in the availability panel(s):
+- OFF means the worker is unavailable that day.
+- D means the worker may work only the Day shift.
+- E means the worker may work only the Evening shift.
+- N means the worker may work only the Night shift.
+- DE means the worker may work Day or Evening.
+- EN means the worker may work Evening or Night.
+- DEN means the worker may work any of the three shifts.
+
+Operational rules:
+- At least the required number of workers must be assigned to every day-shift pair.
+- Each worker may be assigned to at most one shift on any day.
+- A worker may be assigned only to shifts allowed by that worker's daily availability code.
+- If the total number of assigned shifts for worker w exceeds that worker's regular shift cap, the excess is counted as overtime and incurs the listed overtime cost per extra shift.
+- The total number of Night assignments for each worker must not exceed that worker's listed Night limit.
+- The total number of consecutive working days for each worker must not exceed that worker's listed consecutive-day limit.
+- If a worker is assigned to a Night shift on one day, that worker may not be assigned to a Day shift on the next day.
+- There are no fairness terms, no multi-location assignments, no stochastic demand effects, and no skill-substitution rules beyond the availability codes shown in the figures.
+
+Shift definitions:
+- Day (D): 07:00-15:00
+- Evening (E): 15:00-23:00
+- Night (N): 23:00-07:00
+
+Task:
+Build a mathematical optimization model for this exact instance and provide executable solver code.

@@ -1,0 +1,922 @@
+{
+  "status": "optimal",
+  "objective": 3544,
+  "objective_exact": 3544.0,
+  "runtime_seconds": 0.02146550000179559,
+  "assignment_cost": 3428.0,
+  "overtime_cost": 116.0,
+  "total_overtime_shifts": 11.0,
+  "assignments_by_day": {
+    "Mon1": {
+      "D": [
+        "W1",
+        "W2",
+        "W17",
+        "W18"
+      ],
+      "E": [
+        "W6",
+        "W7",
+        "W15"
+      ],
+      "N": [
+        "W4",
+        "W8"
+      ]
+    },
+    "Tue1": {
+      "D": [
+        "W1",
+        "W3",
+        "W5",
+        "W11",
+        "W18"
+      ],
+      "E": [
+        "W4",
+        "W14",
+        "W15"
+      ],
+      "N": [
+        "W8",
+        "W16"
+      ]
+    },
+    "Wed1": {
+      "D": [
+        "W1",
+        "W3",
+        "W11",
+        "W18"
+      ],
+      "E": [
+        "W8",
+        "W10",
+        "W13"
+      ],
+      "N": [
+        "W6",
+        "W7"
+      ]
+    },
+    "Thu1": {
+      "D": [
+        "W2",
+        "W3",
+        "W5",
+        "W11",
+        "W18"
+      ],
+      "E": [
+        "W9",
+        "W14",
+        "W15"
+      ],
+      "N": [
+        "W4",
+        "W7"
+      ]
+    },
+    "Fri1": {
+      "D": [
+        "W3",
+        "W5",
+        "W11",
+        "W15",
+        "W18"
+      ],
+      "E": [
+        "W6",
+        "W9",
+        "W13"
+      ],
+      "N": [
+        "W4",
+        "W8",
+        "W16"
+      ]
+    },
+    "Sat1": {
+      "D": [
+        "W3",
+        "W5",
+        "W11",
+        "W17"
+      ],
+      "E": [
+        "W9",
+        "W10",
+        "W13",
+        "W14"
+      ],
+      "N": [
+        "W4",
+        "W12",
+        "W16"
+      ]
+    },
+    "Sun1": {
+      "D": [
+        "W1",
+        "W2",
+        "W14",
+        "W18"
+      ],
+      "E": [
+        "W7",
+        "W10",
+        "W13"
+      ],
+      "N": [
+        "W4",
+        "W12",
+        "W16"
+      ]
+    },
+    "Mon2": {
+      "D": [
+        "W5",
+        "W11",
+        "W17",
+        "W18"
+      ],
+      "E": [
+        "W9",
+        "W14"
+      ],
+      "N": [
+        "W6"
+      ]
+    },
+    "Tue2": {
+      "D": [
+        "W1",
+        "W2",
+        "W11",
+        "W18"
+      ],
+      "E": [
+        "W4",
+        "W9",
+        "W15"
+      ],
+      "N": [
+        "W8"
+      ]
+    },
+    "Wed2": {
+      "D": [
+        "W3",
+        "W11",
+        "W14",
+        "W17"
+      ],
+      "E": [
+        "W6",
+        "W13"
+      ],
+      "N": [
+        "W7",
+        "W12"
+      ]
+    },
+    "Thu2": {
+      "D": [
+        "W1",
+        "W5",
+        "W11",
+        "W18"
+      ],
+      "E": [
+        "W7",
+        "W9",
+        "W14"
+      ],
+      "N": [
+        "W12",
+        "W16"
+      ]
+    },
+    "Fri2": {
+      "D": [
+        "W3",
+        "W11",
+        "W14",
+        "W17",
+        "W18"
+      ],
+      "E": [
+        "W9",
+        "W10",
+        "W16"
+      ],
+      "N": [
+        "W6",
+        "W12"
+      ]
+    },
+    "Sat2": {
+      "D": [
+        "W1",
+        "W2",
+        "W15",
+        "W17"
+      ],
+      "E": [
+        "W8",
+        "W10",
+        "W13"
+      ],
+      "N": [
+        "W4",
+        "W6",
+        "W7"
+      ]
+    },
+    "Sun2": {
+      "D": [
+        "W1",
+        "W2",
+        "W11",
+        "W18"
+      ],
+      "E": [
+        "W6",
+        "W13"
+      ],
+      "N": [
+        "W7",
+        "W12"
+      ]
+    },
+    "Mon3": {
+      "D": [
+        "W2",
+        "W11",
+        "W17",
+        "W18"
+      ],
+      "E": [
+        "W8",
+        "W9",
+        "W10"
+      ],
+      "N": [
+        "W7",
+        "W12"
+      ]
+    },
+    "Tue3": {
+      "D": [
+        "W2",
+        "W3",
+        "W5",
+        "W11",
+        "W18"
+      ],
+      "E": [
+        "W9",
+        "W15",
+        "W16"
+      ],
+      "N": [
+        "W7",
+        "W12"
+      ]
+    },
+    "Wed3": {
+      "D": [
+        "W3",
+        "W5",
+        "W11",
+        "W18"
+      ],
+      "E": [
+        "W9",
+        "W10",
+        "W14"
+      ],
+      "N": [
+        "W8",
+        "W12"
+      ]
+    },
+    "Thu3": {
+      "D": [
+        "W1",
+        "W2",
+        "W5",
+        "W11",
+        "W18"
+      ],
+      "E": [
+        "W10",
+        "W14",
+        "W15"
+      ],
+      "N": [
+        "W6",
+        "W16"
+      ]
+    },
+    "Fri3": {
+      "D": [
+        "W1",
+        "W2",
+        "W3",
+        "W5",
+        "W17"
+      ],
+      "E": [
+        "W6",
+        "W13",
+        "W15"
+      ],
+      "N": [
+        "W4",
+        "W8",
+        "W16"
+      ]
+    },
+    "Sat3": {
+      "D": [
+        "W1",
+        "W2",
+        "W11",
+        "W17"
+      ],
+      "E": [
+        "W8",
+        "W10",
+        "W13",
+        "W15"
+      ],
+      "N": [
+        "W4",
+        "W12",
+        "W16"
+      ]
+    }
+  },
+  "coverage_realized": {
+    "Mon1": {
+      "D": 4,
+      "E": 3,
+      "N": 2
+    },
+    "Tue1": {
+      "D": 5,
+      "E": 3,
+      "N": 2
+    },
+    "Wed1": {
+      "D": 4,
+      "E": 3,
+      "N": 2
+    },
+    "Thu1": {
+      "D": 5,
+      "E": 3,
+      "N": 2
+    },
+    "Fri1": {
+      "D": 5,
+      "E": 3,
+      "N": 3
+    },
+    "Sat1": {
+      "D": 4,
+      "E": 4,
+      "N": 3
+    },
+    "Sun1": {
+      "D": 4,
+      "E": 3,
+      "N": 3
+    },
+    "Mon2": {
+      "D": 4,
+      "E": 2,
+      "N": 1
+    },
+    "Tue2": {
+      "D": 4,
+      "E": 3,
+      "N": 1
+    },
+    "Wed2": {
+      "D": 4,
+      "E": 2,
+      "N": 2
+    },
+    "Thu2": {
+      "D": 4,
+      "E": 3,
+      "N": 2
+    },
+    "Fri2": {
+      "D": 5,
+      "E": 3,
+      "N": 2
+    },
+    "Sat2": {
+      "D": 4,
+      "E": 3,
+      "N": 3
+    },
+    "Sun2": {
+      "D": 4,
+      "E": 2,
+      "N": 2
+    },
+    "Mon3": {
+      "D": 4,
+      "E": 3,
+      "N": 2
+    },
+    "Tue3": {
+      "D": 5,
+      "E": 3,
+      "N": 2
+    },
+    "Wed3": {
+      "D": 4,
+      "E": 3,
+      "N": 2
+    },
+    "Thu3": {
+      "D": 5,
+      "E": 3,
+      "N": 2
+    },
+    "Fri3": {
+      "D": 5,
+      "E": 3,
+      "N": 3
+    },
+    "Sat3": {
+      "D": 4,
+      "E": 4,
+      "N": 3
+    }
+  },
+  "worker_schedule": {
+    "W1": {
+      "Mon1": "D",
+      "Tue1": "D",
+      "Wed1": "D",
+      "Thu1": "OFF",
+      "Fri1": "OFF",
+      "Sat1": "OFF",
+      "Sun1": "D",
+      "Mon2": "OFF",
+      "Tue2": "D",
+      "Wed2": "OFF",
+      "Thu2": "D",
+      "Fri2": "OFF",
+      "Sat2": "D",
+      "Sun2": "D",
+      "Mon3": "OFF",
+      "Tue3": "OFF",
+      "Wed3": "OFF",
+      "Thu3": "D",
+      "Fri3": "D",
+      "Sat3": "D"
+    },
+    "W2": {
+      "Mon1": "D",
+      "Tue1": "OFF",
+      "Wed1": "OFF",
+      "Thu1": "D",
+      "Fri1": "OFF",
+      "Sat1": "OFF",
+      "Sun1": "D",
+      "Mon2": "OFF",
+      "Tue2": "D",
+      "Wed2": "OFF",
+      "Thu2": "OFF",
+      "Fri2": "OFF",
+      "Sat2": "D",
+      "Sun2": "D",
+      "Mon3": "D",
+      "Tue3": "D",
+      "Wed3": "OFF",
+      "Thu3": "D",
+      "Fri3": "D",
+      "Sat3": "D"
+    },
+    "W3": {
+      "Mon1": "OFF",
+      "Tue1": "D",
+      "Wed1": "D",
+      "Thu1": "D",
+      "Fri1": "D",
+      "Sat1": "D",
+      "Sun1": "OFF",
+      "Mon2": "OFF",
+      "Tue2": "OFF",
+      "Wed2": "D",
+      "Thu2": "OFF",
+      "Fri2": "D",
+      "Sat2": "OFF",
+      "Sun2": "OFF",
+      "Mon3": "OFF",
+      "Tue3": "D",
+      "Wed3": "D",
+      "Thu3": "OFF",
+      "Fri3": "D",
+      "Sat3": "OFF"
+    },
+    "W4": {
+      "Mon1": "N",
+      "Tue1": "E",
+      "Wed1": "OFF",
+      "Thu1": "N",
+      "Fri1": "N",
+      "Sat1": "N",
+      "Sun1": "N",
+      "Mon2": "OFF",
+      "Tue2": "E",
+      "Wed2": "OFF",
+      "Thu2": "OFF",
+      "Fri2": "OFF",
+      "Sat2": "N",
+      "Sun2": "OFF",
+      "Mon3": "OFF",
+      "Tue3": "OFF",
+      "Wed3": "OFF",
+      "Thu3": "OFF",
+      "Fri3": "N",
+      "Sat3": "N"
+    },
+    "W5": {
+      "Mon1": "OFF",
+      "Tue1": "D",
+      "Wed1": "OFF",
+      "Thu1": "D",
+      "Fri1": "D",
+      "Sat1": "D",
+      "Sun1": "OFF",
+      "Mon2": "D",
+      "Tue2": "OFF",
+      "Wed2": "OFF",
+      "Thu2": "D",
+      "Fri2": "OFF",
+      "Sat2": "OFF",
+      "Sun2": "OFF",
+      "Mon3": "OFF",
+      "Tue3": "D",
+      "Wed3": "D",
+      "Thu3": "D",
+      "Fri3": "D",
+      "Sat3": "OFF"
+    },
+    "W6": {
+      "Mon1": "E",
+      "Tue1": "OFF",
+      "Wed1": "N",
+      "Thu1": "OFF",
+      "Fri1": "E",
+      "Sat1": "OFF",
+      "Sun1": "OFF",
+      "Mon2": "N",
+      "Tue2": "OFF",
+      "Wed2": "E",
+      "Thu2": "OFF",
+      "Fri2": "N",
+      "Sat2": "N",
+      "Sun2": "E",
+      "Mon3": "OFF",
+      "Tue3": "OFF",
+      "Wed3": "OFF",
+      "Thu3": "N",
+      "Fri3": "E",
+      "Sat3": "OFF"
+    },
+    "W7": {
+      "Mon1": "E",
+      "Tue1": "OFF",
+      "Wed1": "N",
+      "Thu1": "N",
+      "Fri1": "OFF",
+      "Sat1": "OFF",
+      "Sun1": "E",
+      "Mon2": "OFF",
+      "Tue2": "OFF",
+      "Wed2": "N",
+      "Thu2": "E",
+      "Fri2": "OFF",
+      "Sat2": "N",
+      "Sun2": "N",
+      "Mon3": "N",
+      "Tue3": "N",
+      "Wed3": "OFF",
+      "Thu3": "OFF",
+      "Fri3": "OFF",
+      "Sat3": "OFF"
+    },
+    "W8": {
+      "Mon1": "N",
+      "Tue1": "N",
+      "Wed1": "E",
+      "Thu1": "OFF",
+      "Fri1": "N",
+      "Sat1": "OFF",
+      "Sun1": "OFF",
+      "Mon2": "OFF",
+      "Tue2": "N",
+      "Wed2": "OFF",
+      "Thu2": "OFF",
+      "Fri2": "OFF",
+      "Sat2": "E",
+      "Sun2": "OFF",
+      "Mon3": "E",
+      "Tue3": "OFF",
+      "Wed3": "N",
+      "Thu3": "OFF",
+      "Fri3": "N",
+      "Sat3": "E"
+    },
+    "W9": {
+      "Mon1": "OFF",
+      "Tue1": "OFF",
+      "Wed1": "OFF",
+      "Thu1": "E",
+      "Fri1": "E",
+      "Sat1": "E",
+      "Sun1": "OFF",
+      "Mon2": "E",
+      "Tue2": "E",
+      "Wed2": "OFF",
+      "Thu2": "E",
+      "Fri2": "E",
+      "Sat2": "OFF",
+      "Sun2": "OFF",
+      "Mon3": "E",
+      "Tue3": "E",
+      "Wed3": "E",
+      "Thu3": "OFF",
+      "Fri3": "OFF",
+      "Sat3": "OFF"
+    },
+    "W10": {
+      "Mon1": "OFF",
+      "Tue1": "OFF",
+      "Wed1": "E",
+      "Thu1": "OFF",
+      "Fri1": "OFF",
+      "Sat1": "E",
+      "Sun1": "E",
+      "Mon2": "OFF",
+      "Tue2": "OFF",
+      "Wed2": "OFF",
+      "Thu2": "OFF",
+      "Fri2": "E",
+      "Sat2": "E",
+      "Sun2": "OFF",
+      "Mon3": "E",
+      "Tue3": "OFF",
+      "Wed3": "E",
+      "Thu3": "E",
+      "Fri3": "OFF",
+      "Sat3": "E"
+    },
+    "W11": {
+      "Mon1": "OFF",
+      "Tue1": "D",
+      "Wed1": "D",
+      "Thu1": "D",
+      "Fri1": "D",
+      "Sat1": "D",
+      "Sun1": "OFF",
+      "Mon2": "D",
+      "Tue2": "D",
+      "Wed2": "D",
+      "Thu2": "D",
+      "Fri2": "D",
+      "Sat2": "OFF",
+      "Sun2": "D",
+      "Mon3": "D",
+      "Tue3": "D",
+      "Wed3": "D",
+      "Thu3": "D",
+      "Fri3": "OFF",
+      "Sat3": "D"
+    },
+    "W12": {
+      "Mon1": "OFF",
+      "Tue1": "OFF",
+      "Wed1": "OFF",
+      "Thu1": "OFF",
+      "Fri1": "OFF",
+      "Sat1": "N",
+      "Sun1": "N",
+      "Mon2": "OFF",
+      "Tue2": "OFF",
+      "Wed2": "N",
+      "Thu2": "N",
+      "Fri2": "N",
+      "Sat2": "OFF",
+      "Sun2": "N",
+      "Mon3": "N",
+      "Tue3": "N",
+      "Wed3": "N",
+      "Thu3": "OFF",
+      "Fri3": "OFF",
+      "Sat3": "N"
+    },
+    "W13": {
+      "Mon1": "OFF",
+      "Tue1": "OFF",
+      "Wed1": "E",
+      "Thu1": "OFF",
+      "Fri1": "E",
+      "Sat1": "E",
+      "Sun1": "E",
+      "Mon2": "OFF",
+      "Tue2": "OFF",
+      "Wed2": "E",
+      "Thu2": "OFF",
+      "Fri2": "OFF",
+      "Sat2": "E",
+      "Sun2": "E",
+      "Mon3": "OFF",
+      "Tue3": "OFF",
+      "Wed3": "OFF",
+      "Thu3": "OFF",
+      "Fri3": "E",
+      "Sat3": "E"
+    },
+    "W14": {
+      "Mon1": "OFF",
+      "Tue1": "E",
+      "Wed1": "OFF",
+      "Thu1": "E",
+      "Fri1": "OFF",
+      "Sat1": "E",
+      "Sun1": "D",
+      "Mon2": "E",
+      "Tue2": "OFF",
+      "Wed2": "D",
+      "Thu2": "E",
+      "Fri2": "D",
+      "Sat2": "OFF",
+      "Sun2": "OFF",
+      "Mon3": "OFF",
+      "Tue3": "OFF",
+      "Wed3": "E",
+      "Thu3": "E",
+      "Fri3": "OFF",
+      "Sat3": "OFF"
+    },
+    "W15": {
+      "Mon1": "E",
+      "Tue1": "E",
+      "Wed1": "OFF",
+      "Thu1": "E",
+      "Fri1": "D",
+      "Sat1": "OFF",
+      "Sun1": "OFF",
+      "Mon2": "OFF",
+      "Tue2": "E",
+      "Wed2": "OFF",
+      "Thu2": "OFF",
+      "Fri2": "OFF",
+      "Sat2": "D",
+      "Sun2": "OFF",
+      "Mon3": "OFF",
+      "Tue3": "E",
+      "Wed3": "OFF",
+      "Thu3": "E",
+      "Fri3": "E",
+      "Sat3": "E"
+    },
+    "W16": {
+      "Mon1": "OFF",
+      "Tue1": "N",
+      "Wed1": "OFF",
+      "Thu1": "OFF",
+      "Fri1": "N",
+      "Sat1": "N",
+      "Sun1": "N",
+      "Mon2": "OFF",
+      "Tue2": "OFF",
+      "Wed2": "OFF",
+      "Thu2": "N",
+      "Fri2": "E",
+      "Sat2": "OFF",
+      "Sun2": "OFF",
+      "Mon3": "OFF",
+      "Tue3": "E",
+      "Wed3": "OFF",
+      "Thu3": "N",
+      "Fri3": "N",
+      "Sat3": "N"
+    },
+    "W17": {
+      "Mon1": "D",
+      "Tue1": "OFF",
+      "Wed1": "OFF",
+      "Thu1": "OFF",
+      "Fri1": "OFF",
+      "Sat1": "D",
+      "Sun1": "OFF",
+      "Mon2": "D",
+      "Tue2": "OFF",
+      "Wed2": "D",
+      "Thu2": "OFF",
+      "Fri2": "D",
+      "Sat2": "D",
+      "Sun2": "OFF",
+      "Mon3": "D",
+      "Tue3": "OFF",
+      "Wed3": "OFF",
+      "Thu3": "OFF",
+      "Fri3": "D",
+      "Sat3": "D"
+    },
+    "W18": {
+      "Mon1": "D",
+      "Tue1": "D",
+      "Wed1": "D",
+      "Thu1": "D",
+      "Fri1": "D",
+      "Sat1": "OFF",
+      "Sun1": "D",
+      "Mon2": "D",
+      "Tue2": "D",
+      "Wed2": "OFF",
+      "Thu2": "D",
+      "Fri2": "D",
+      "Sat2": "OFF",
+      "Sun2": "D",
+      "Mon3": "D",
+      "Tue3": "D",
+      "Wed3": "D",
+      "Thu3": "D",
+      "Fri3": "OFF",
+      "Sat3": "OFF"
+    }
+  },
+  "worker_total_assignments": {
+    "W1": 11,
+    "W2": 11,
+    "W3": 10,
+    "W4": 10,
+    "W5": 10,
+    "W6": 10,
+    "W7": 10,
+    "W8": 10,
+    "W9": 10,
+    "W10": 9,
+    "W11": 16,
+    "W12": 10,
+    "W13": 9,
+    "W14": 10,
+    "W15": 10,
+    "W16": 10,
+    "W17": 9,
+    "W18": 15
+  },
+  "worker_night_assignments": {
+    "W1": 0,
+    "W2": 0,
+    "W3": 0,
+    "W4": 8,
+    "W5": 0,
+    "W6": 5,
+    "W7": 7,
+    "W8": 6,
+    "W9": 0,
+    "W10": 0,
+    "W11": 0,
+    "W12": 10,
+    "W13": 0,
+    "W14": 0,
+    "W15": 0,
+    "W16": 8,
+    "W17": 0,
+    "W18": 0
+  },
+  "worker_overtime": {
+    "W1": 0.0,
+    "W2": 0.0,
+    "W3": 0.0,
+    "W4": 0.0,
+    "W5": 0.0,
+    "W6": 0.0,
+    "W7": 0.0,
+    "W8": 0.0,
+    "W9": 0.0,
+    "W10": 0.0,
+    "W11": 5.0,
+    "W12": 0.0,
+    "W13": 0.0,
+    "W14": 0.0,
+    "W15": 0.0,
+    "W16": 0.0,
+    "W17": 0.0,
+    "W18": 6.0
+  },
+  "solve_method": "gurobi_milp_wpss_hard"
+}

@@ -1,0 +1,8 @@
+{
+  "status": "infeasible",
+  "is_k_colorable": false,
+  "number_of_colors_available": 5,
+  "chromatic_number": 5,
+  "solve_method": "gurobi_milp_graph_coloring_decision",
+  "runtime_seconds": 0.017301
+}

@@ -1,0 +1,29 @@
+{
+  "number_jobs": 4,
+  "number_machines": 5,
+  "operations_per_job": 4,
+  "processing_time_regime": "uniform_small",
+  "routing_pattern": "randomized_no_cycles",
+  "bottleneck_machine_flag": false,
+  "seed": 207,
+  "formulation_size": 82,
+  "instance_id": "jss_e_007",
+  "variant": "classical_jssp",
+  "scenario": "job_shop_scheduling",
+  "difficulty": "easy",
+  "objective": "minimize_makespan",
+  "objective_value": 18,
+  "objective_exact": 18.0,
+  "optimal_makespan": 18,
+  "status": "optimal",
+  "runtime_seconds": 0.0013608932495117188,
+  "solve_method": "gurobi_disjunctive_milp",
+  "solver": "Gurobi",
+  "binding_machines": [
+    "M2",
+    "M3",
+    "M4",
+    "M5"
+  ],
+  "visual_0_checksum_md5": "45a967535eb9a46ddd8148146dee975c"
+}

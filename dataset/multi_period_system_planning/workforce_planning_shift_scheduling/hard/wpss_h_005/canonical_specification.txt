@@ -1,0 +1,126 @@
+Canonical specification for a deterministic hard-level workforce planning and shift scheduling instance.
+
+Interpretation:
+- A single service unit must assign workers to Day, Evening, and Night shifts over a finite planning horizon.
+- Every day-shift pair has a required staffing level that must be covered.
+- Each worker can work at most one shift per day.
+- A worker can only be assigned to shifts permitted by that worker's daily availability code.
+- Each worker has a regular shift cap across the full horizon. Assignments above that cap are allowed only through overtime and incur a worker-specific overtime cost per extra shift.
+- Each worker has a maximum number of Night shifts.
+- Each worker has a maximum number of consecutive working days.
+- A Night assignment on one day is incompatible with a Day assignment on the following day.
+- No fairness balancing term, no demand uncertainty, no multi-location coupling, and no back-up agency workers are included.
+
+Sets:
+- Workers W = ['W1', 'W2', 'W3', 'W4', 'W5', 'W6', 'W7', 'W8', 'W9', 'W10', 'W11', 'W12', 'W13', 'W14', 'W15']
+- Days T = ['Mon1', 'Tue1', 'Wed1', 'Thu1', 'Fri1', 'Sat1', 'Sun1', 'Mon2', 'Tue2', 'Wed2', 'Thu2', 'Fri2', 'Sat2', 'Sun2', 'Mon3', 'Tue3', 'Wed3']
+- Shifts S = ['D', 'E', 'N']
+
+Shift labels and times:
+- D = Day = 07:00-15:00
+- E = Evening = 15:00-23:00
+- N = Night = 23:00-07:00
+
+Daily staffing requirements:
+- Mon1: D=4, E=2, N=1
+- Tue1: D=4, E=3, N=1
+- Wed1: D=4, E=2, N=2
+- Thu1: D=4, E=3, N=2
+- Fri1: D=5, E=3, N=2
+- Sat1: D=4, E=3, N=3
+- Sun1: D=4, E=2, N=2
+- Mon2: D=4, E=3, N=2
+- Tue2: D=5, E=3, N=2
+- Wed2: D=4, E=3, N=2
+- Thu2: D=5, E=3, N=2
+- Fri2: D=5, E=3, N=3
+- Sat2: D=4, E=4, N=3
+- Sun2: D=4, E=3, N=3
+- Mon3: D=4, E=2, N=1
+- Tue3: D=4, E=3, N=1
+- Wed3: D=4, E=2, N=2
+
+Worker-specific cost and workload parameters:
+- W1: cost(D,E,N)=(18,20,25), regular_cap=10, overtime_cost=11, max_night=5, max_consecutive=5
+- W2: cost(D,E,N)=(19,21,24), regular_cap=10, overtime_cost=11, max_night=4, max_consecutive=5
+- W3: cost(D,E,N)=(16,18,99), regular_cap=9, overtime_cost=13, max_night=0, max_consecutive=5
+- W4: cost(D,E,N)=(24,19,17), regular_cap=9, overtime_cost=9, max_night=6, max_consecutive=4
+- W5: cost(D,E,N)=(15,20,99), regular_cap=8, overtime_cost=14, max_night=0, max_consecutive=5
+- W6: cost(D,E,N)=(20,21,23), regular_cap=9, overtime_cost=11, max_night=4, max_consecutive=4
+- W7: cost(D,E,N)=(22,20,18), regular_cap=9, overtime_cost=9, max_night=6, max_consecutive=4
+- W8: cost(D,E,N)=(21,22,24), regular_cap=8, overtime_cost=8, max_night=5, max_consecutive=5
+- W9: cost(D,E,N)=(20,19,22), regular_cap=8, overtime_cost=10, max_night=4, max_consecutive=4
+- W10: cost(D,E,N)=(19,18,26), regular_cap=7, overtime_cost=12, max_night=2, max_consecutive=3
+- W11: cost(D,E,N)=(17,19,23), regular_cap=10, overtime_cost=10, max_night=5, max_consecutive=5
+- W12: cost(D,E,N)=(25,20,16), regular_cap=9, overtime_cost=8, max_night=8, max_consecutive=4
+- W13: cost(D,E,N)=(17,17,99), regular_cap=7, overtime_cost=12, max_night=0, max_consecutive=4
+- W14: cost(D,E,N)=(18,19,24), regular_cap=9, overtime_cost=9, max_night=5, max_consecutive=5
+- W15: cost(D,E,N)=(18,19,23), regular_cap=9, overtime_cost=9, max_night=6, max_consecutive=5
+
+Availability code legend:
+- OFF: no shift allowed
+- D: only Day allowed
+- E: only Evening allowed
+- N: only Night allowed
+- DE: Day or Evening allowed
+- EN: Evening or Night allowed
+- DEN: Day, Evening, or Night allowed
+
+Worker-by-day availability codes:
+- W1: Mon1=DEN, Tue1=DEN, Wed1=DEN, Thu1=DEN, Fri1=DEN, Sat1=DE, Sun1=DE, Mon2=DEN, Tue2=DEN, Wed2=DEN, Thu2=DEN, Fri2=DEN, Sat2=DE, Sun2=DE, Mon3=DEN, Tue3=OFF, Wed3=OFF
+- W2: Mon1=DEN, Tue1=DEN, Wed1=OFF, Thu1=DEN, Fri1=DEN, Sat1=DE, Sun1=DE, Mon2=DEN, Tue2=DEN, Wed2=DEN, Thu2=OFF, Fri2=DEN, Sat2=DE, Sun2=DE, Mon3=DEN, Tue3=DEN, Wed3=OFF
+- W3: Mon1=DE, Tue1=DE, Wed1=DE, Thu1=DE, Fri1=DE, Sat1=D, Sun1=OFF, Mon2=DE, Tue2=DE, Wed2=DE, Thu2=DE, Fri2=DE, Sat2=D, Sun2=OFF, Mon3=DE, Tue3=DE, Wed3=DE
+- W4: Mon1=EN, Tue1=EN, Wed1=N, Thu1=EN, Fri1=N, Sat1=EN, Sun1=N, Mon2=EN, Tue2=EN, Wed2=N, Thu2=EN, Fri2=N, Sat2=EN, Sun2=N, Mon3=EN, Tue3=EN, Wed3=N
+- W5: Mon1=D, Tue1=D, Wed1=D, Thu1=D, Fri1=D, Sat1=DE, Sun1=OFF, Mon2=D, Tue2=OFF, Wed2=OFF, Thu2=D, Fri2=D, Sat2=DE, Sun2=OFF, Mon3=D, Tue3=D, Wed3=D
+- W6: Mon1=DEN, Tue1=OFF, Wed1=DEN, Thu1=DEN, Fri1=DEN, Sat1=DEN, Sun1=DE, Mon2=DEN, Tue2=OFF, Wed2=DEN, Thu2=DEN, Fri2=DEN, Sat2=DEN, Sun2=DEN, Mon3=DEN, Tue3=OFF, Wed3=DEN
+- W7: Mon1=EN, Tue1=EN, Wed1=EN, Thu1=EN, Fri1=N, Sat1=EN, Sun1=EN, Mon2=OFF, Tue2=EN, Wed2=EN, Thu2=EN, Fri2=N, Sat2=EN, Sun2=EN, Mon3=EN, Tue3=EN, Wed3=EN
+- W8: Mon1=DEN, Tue1=DEN, Wed1=DEN, Thu1=OFF, Fri1=DEN, Sat1=DEN, Sun1=DEN, Mon2=DEN, Tue2=DEN, Wed2=DEN, Thu2=OFF, Fri2=DEN, Sat2=DEN, Sun2=DEN, Mon3=DEN, Tue3=OFF, Wed3=DEN
+- W9: Mon1=DEN, Tue1=DEN, Wed1=EN, Thu1=EN, Fri1=DEN, Sat1=DEN, Sun1=OFF, Mon2=DEN, Tue2=DEN, Wed2=EN, Thu2=EN, Fri2=DEN, Sat2=DEN, Sun2=OFF, Mon3=DEN, Tue3=EN, Wed3=EN
+- W10: Mon1=DE, Tue1=OFF, Wed1=DE, Thu1=DE, Fri1=OFF, Sat1=EN, Sun1=EN, Mon2=DE, Tue2=OFF, Wed2=DE, Thu2=DE, Fri2=DE, Sat2=EN, Sun2=EN, Mon3=DE, Tue3=OFF, Wed3=DE
+- W11: Mon1=DEN, Tue1=DEN, Wed1=DEN, Thu1=DEN, Fri1=DEN, Sat1=DEN, Sun1=DE, Mon2=DEN, Tue2=DEN, Wed2=DEN, Thu2=DEN, Fri2=DEN, Sat2=DEN, Sun2=DE, Mon3=DEN, Tue3=DEN, Wed3=DEN
+- W12: Mon1=N, Tue1=EN, Wed1=N, Thu1=EN, Fri1=N, Sat1=EN, Sun1=N, Mon2=N, Tue2=EN, Wed2=N, Thu2=EN, Fri2=N, Sat2=EN, Sun2=N, Mon3=N, Tue3=EN, Wed3=N
+- W13: Mon1=OFF, Tue1=D, Wed1=DE, Thu1=D, Fri1=DE, Sat1=DE, Sun1=DE, Mon2=OFF, Tue2=D, Wed2=DE, Thu2=D, Fri2=DE, Sat2=DE, Sun2=DE, Mon3=OFF, Tue3=OFF, Wed3=D
+- W14: Mon1=DEN, Tue1=DEN, Wed1=DEN, Thu1=DEN, Fri1=DE, Sat1=DE, Sun1=DE, Mon2=DEN, Tue2=OFF, Wed2=DEN, Thu2=DEN, Fri2=DE, Sat2=DE, Sun2=DE, Mon3=DEN, Tue3=DEN, Wed3=DEN
+- W15: Mon1=DEN, Tue1=DEN, Wed1=DE, Thu1=DEN, Fri1=DEN, Sat1=DE, Sun1=DE, Mon2=DEN, Tue2=DEN, Wed2=DE, Thu2=DEN, Fri2=DEN, Sat2=DE, Sun2=DE, Mon3=DEN, Tue3=DEN, Wed3=OFF
+
+Decision variables:
+- x[w,t,s] in {0,1}: equals 1 if worker w is assigned to shift s on day t
+- o[w] >= 0: number of overtime shifts used by worker w above the regular cap
+
+Objective:
+- Minimize total assignment cost plus overtime cost:
+  sum_{w,t,s} cost[w,s] * x[w,t,s] + sum_w overtime_cost[w] * o[w]
+
+Constraints:
+- Coverage: for every day t and shift s, sum_w x[w,t,s] >= demand[t,s]
+- One shift per day: for every worker w and day t, sum_s x[w,t,s] <= 1
+- Availability: x[w,t,s] may be 1 only if shift s is contained in the availability code for worker w on day t
+- Regular workload with overtime: sum_{t,s} x[w,t,s] <= regular_cap[w] + o[w]
+- Night limit: sum_t x[w,t,N] <= max_night[w]
+- Consecutive-day limit: for every worker w and every rolling window of length max_consecutive[w] + 1, at most max_consecutive[w] assignments may appear in that window
+- Night-to-Day rest: for every worker w and each consecutive pair of days (t, t+1), x[w,t,N] + x[w,t+1,D] <= 1
+- Binary and nonnegative domains
+
+Metadata:
+- number_periods=17
+- number_workers=15
+- number_shift_types=3
+- coverage_regime=extended_cluster_with_persistent_night_pressure
+- overtime_regime=lower_worker_specific_penalties
+- availability_regime=mixed_workers_with_vacation_blocks_and_weekend_roles
+- night_limit_flag=true
+- consecutive_constraint_flag=true
+- rest_rule_flag=true
+- availability_split_flag=true
+- peak_demand_flag=true
+- visual_type=demand_profile_availability_split_visual
+- seed=1105
+- formulation_size=2309
+
+Visual interpretation:
+- visual_0.png shows exact total demand by day and the exact shift-by-day demand table.
+- visual_1.png shows the exact worker cost and workload parameters.
+- visual_2.png shows exact day-level availability codes for the first block of days: Mon1, Tue1, Wed1, Thu1, Fri1, Sat1, Sun1, Mon2, Tue2.
+- visual_3.png shows exact day-level availability codes for the remaining days: Wed2, Thu2, Fri2, Sat2, Sun2, Mon3, Tue3, Wed3.
+- The worker order is identical across both availability panels.
+- The visual files do not reveal the optimal assignment roster, overtime realization, or total objective value.

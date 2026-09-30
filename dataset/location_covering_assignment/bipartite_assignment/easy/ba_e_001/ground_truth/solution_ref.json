@@ -1,0 +1,16 @@
+{
+  "status": "optimal",
+  "objective_exact": 46.0,
+  "objective_value": 46.0,
+  "assignments": {
+    "D1": "R2",
+    "D2": "R3",
+    "D3": "R4",
+    "D4": "R6",
+    "D5": "R5",
+    "D6": "R1"
+  },
+  "solver_policy": "prefer_gurobi_else_exact_fallback",
+  "solver_used": "gurobi",
+  "optimality_proof": "gurobi_optimal_status"
+}

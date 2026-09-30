@@ -1,0 +1,31 @@
+{
+  "instance_id": "gap_m_003",
+  "family": "2. Location, Covering, and Assignment",
+  "subtype": "Generalized Assignment Problem (GAP)",
+  "difficulty": "medium",
+  "variant_type": "generalized_assignment_problem",
+  "number_agents": 8,
+  "number_tasks": 14,
+  "density_ratio": 0.5089,
+  "capacity_regime": "tight",
+  "cost_resource_correlation_type": "negative",
+  "heterogeneity_pattern": "bottleneck_specialists",
+  "sparsity_pattern": "layered_family_blocks",
+  "task_family_count": 4,
+  "visual_type": "single_visual_dual_gap_tables",
+  "seed": 2203,
+  "status": "optimal",
+  "objective_exact": 131.0,
+  "objective_value": 131.0,
+  "solver_policy": "prefer_gurobi_else_exact_fallback",
+  "solver_used": "gurobi",
+  "solve_method": "gurobi_mip",
+  "runtime_seconds": 0.003949,
+  "visual_checksum_sha256": "4e6dd02e1605d968307d2e3b90485f2341bda9e5ac42bd58b296fb733c09af96",
+  "formulation_size": {
+    "num_binary_x": 57,
+    "num_variables_total": 57,
+    "num_constraints_total": 22
+  },
+  "total_capacity": 79
+}

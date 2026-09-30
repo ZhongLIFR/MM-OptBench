@@ -1,0 +1,809 @@
+{
+  "instance_id": "wpss_h_008",
+  "variant": "workforce_planning_shift_scheduling",
+  "scenario": "workforce_planning_shift_scheduling",
+  "difficulty": "hard",
+  "sets": {
+    "workers": [
+      "W1",
+      "W2",
+      "W3",
+      "W4",
+      "W5",
+      "W6",
+      "W7",
+      "W8",
+      "W9",
+      "W10",
+      "W11",
+      "W12",
+      "W13",
+      "W14",
+      "W15",
+      "W16",
+      "W17"
+    ],
+    "days": [
+      "Mon1",
+      "Tue1",
+      "Wed1",
+      "Thu1",
+      "Fri1",
+      "Sat1",
+      "Sun1",
+      "Mon2",
+      "Tue2",
+      "Wed2",
+      "Thu2",
+      "Fri2",
+      "Sat2",
+      "Sun2",
+      "Mon3",
+      "Tue3",
+      "Wed3",
+      "Thu3",
+      "Fri3"
+    ],
+    "shifts": [
+      "D",
+      "E",
+      "N"
+    ]
+  },
+  "indices": {
+    "worker_index": {
+      "W1": 0,
+      "W2": 1,
+      "W3": 2,
+      "W4": 3,
+      "W5": 4,
+      "W6": 5,
+      "W7": 6,
+      "W8": 7,
+      "W9": 8,
+      "W10": 9,
+      "W11": 10,
+      "W12": 11,
+      "W13": 12,
+      "W14": 13,
+      "W15": 14,
+      "W16": 15,
+      "W17": 16
+    },
+    "day_index": {
+      "Mon1": 0,
+      "Tue1": 1,
+      "Wed1": 2,
+      "Thu1": 3,
+      "Fri1": 4,
+      "Sat1": 5,
+      "Sun1": 6,
+      "Mon2": 7,
+      "Tue2": 8,
+      "Wed2": 9,
+      "Thu2": 10,
+      "Fri2": 11,
+      "Sat2": 12,
+      "Sun2": 13,
+      "Mon3": 14,
+      "Tue3": 15,
+      "Wed3": 16,
+      "Thu3": 17,
+      "Fri3": 18
+    },
+    "shift_index": {
+      "D": 0,
+      "E": 1,
+      "N": 2
+    }
+  },
+  "shift_labels": {
+    "D": "Day",
+    "E": "Evening",
+    "N": "Night"
+  },
+  "shift_time_window": {
+    "D": "07:00-15:00",
+    "E": "15:00-23:00",
+    "N": "23:00-07:00"
+  },
+  "availability_legend": {
+    "OFF": [],
+    "D": [
+      "D"
+    ],
+    "E": [
+      "E"
+    ],
+    "N": [
+      "N"
+    ],
+    "DE": [
+      "D",
+      "E"
+    ],
+    "EN": [
+      "E",
+      "N"
+    ],
+    "DEN": [
+      "D",
+      "E",
+      "N"
+    ]
+  },
+  "constraint_flags": {
+    "night_limit": true,
+    "consecutive": true,
+    "rest_rule": false
+  },
+  "demand": {
+    "Mon1": {
+      "D": 4,
+      "E": 2,
+      "N": 1
+    },
+    "Tue1": {
+      "D": 4,
+      "E": 3,
+      "N": 1
+    },
+    "Wed1": {
+      "D": 4,
+      "E": 2,
+      "N": 2
+    },
+    "Thu1": {
+      "D": 4,
+      "E": 3,
+      "N": 2
+    },
+    "Fri1": {
+      "D": 5,
+      "E": 3,
+      "N": 2
+    },
+    "Sat1": {
+      "D": 4,
+      "E": 3,
+      "N": 3
+    },
+    "Sun1": {
+      "D": 4,
+      "E": 2,
+      "N": 2
+    },
+    "Mon2": {
+      "D": 4,
+      "E": 3,
+      "N": 2
+    },
+    "Tue2": {
+      "D": 5,
+      "E": 3,
+      "N": 2
+    },
+    "Wed2": {
+      "D": 4,
+      "E": 3,
+      "N": 2
+    },
+    "Thu2": {
+      "D": 5,
+      "E": 3,
+      "N": 2
+    },
+    "Fri2": {
+      "D": 5,
+      "E": 3,
+      "N": 3
+    },
+    "Sat2": {
+      "D": 4,
+      "E": 4,
+      "N": 3
+    },
+    "Sun2": {
+      "D": 4,
+      "E": 3,
+      "N": 3
+    },
+    "Mon3": {
+      "D": 4,
+      "E": 3,
+      "N": 2
+    },
+    "Tue3": {
+      "D": 5,
+      "E": 3,
+      "N": 2
+    },
+    "Wed3": {
+      "D": 4,
+      "E": 3,
+      "N": 2
+    },
+    "Thu3": {
+      "D": 5,
+      "E": 3,
+      "N": 2
+    },
+    "Fri3": {
+      "D": 5,
+      "E": 3,
+      "N": 3
+    }
+  },
+  "shift_cost": {
+    "W1": {
+      "D": 18,
+      "E": 20,
+      "N": 25
+    },
+    "W2": {
+      "D": 19,
+      "E": 21,
+      "N": 24
+    },
+    "W3": {
+      "D": 16,
+      "E": 18,
+      "N": 99
+    },
+    "W4": {
+      "D": 24,
+      "E": 19,
+      "N": 17
+    },
+    "W5": {
+      "D": 15,
+      "E": 20,
+      "N": 99
+    },
+    "W6": {
+      "D": 20,
+      "E": 21,
+      "N": 23
+    },
+    "W7": {
+      "D": 22,
+      "E": 20,
+      "N": 18
+    },
+    "W8": {
+      "D": 21,
+      "E": 22,
+      "N": 24
+    },
+    "W9": {
+      "D": 20,
+      "E": 19,
+      "N": 22
+    },
+    "W10": {
+      "D": 19,
+      "E": 18,
+      "N": 26
+    },
+    "W11": {
+      "D": 17,
+      "E": 19,
+      "N": 23
+    },
+    "W12": {
+      "D": 25,
+      "E": 20,
+      "N": 16
+    },
+    "W13": {
+      "D": 17,
+      "E": 17,
+      "N": 99
+    },
+    "W14": {
+      "D": 18,
+      "E": 19,
+      "N": 24
+    },
+    "W15": {
+      "D": 18,
+      "E": 19,
+      "N": 23
+    },
+    "W16": {
+      "D": 23,
+      "E": 20,
+      "N": 17
+    },
+    "W17": {
+      "D": 19,
+      "E": 21,
+      "N": 24
+    }
+  },
+  "regular_shift_limit": {
+    "W1": 11,
+    "W2": 11,
+    "W3": 10,
+    "W4": 10,
+    "W5": 9,
+    "W6": 10,
+    "W7": 10,
+    "W8": 9,
+    "W9": 9,
+    "W10": 8,
+    "W11": 11,
+    "W12": 10,
+    "W13": 8,
+    "W14": 10,
+    "W15": 10,
+    "W16": 9,
+    "W17": 8
+  },
+  "overtime_cost": {
+    "W1": 10,
+    "W2": 10,
+    "W3": 12,
+    "W4": 8,
+    "W5": 13,
+    "W6": 10,
+    "W7": 8,
+    "W8": 8,
+    "W9": 9,
+    "W10": 11,
+    "W11": 9,
+    "W12": 8,
+    "W13": 11,
+    "W14": 8,
+    "W15": 8,
+    "W16": 8,
+    "W17": 10
+  },
+  "max_night_shifts": {
+    "W1": 5,
+    "W2": 5,
+    "W3": 0,
+    "W4": 7,
+    "W5": 0,
+    "W6": 5,
+    "W7": 6,
+    "W8": 5,
+    "W9": 5,
+    "W10": 2,
+    "W11": 5,
+    "W12": 9,
+    "W13": 0,
+    "W14": 5,
+    "W15": 6,
+    "W16": 7,
+    "W17": 4
+  },
+  "max_consecutive_days": {
+    "W1": 5,
+    "W2": 5,
+    "W3": 5,
+    "W4": 4,
+    "W5": 5,
+    "W6": 4,
+    "W7": 4,
+    "W8": 5,
+    "W9": 4,
+    "W10": 3,
+    "W11": 5,
+    "W12": 4,
+    "W13": 4,
+    "W14": 5,
+    "W15": 5,
+    "W16": 4,
+    "W17": 4
+  },
+  "availability_code": {
+    "W1": {
+      "Mon1": "DEN",
+      "Tue1": "DEN",
+      "Wed1": "DEN",
+      "Thu1": "DEN",
+      "Fri1": "DEN",
+      "Sat1": "DE",
+      "Sun1": "DE",
+      "Mon2": "DEN",
+      "Tue2": "DEN",
+      "Wed2": "DEN",
+      "Thu2": "DEN",
+      "Fri2": "DEN",
+      "Sat2": "DE",
+      "Sun2": "DE",
+      "Mon3": "DEN",
+      "Tue3": "OFF",
+      "Wed3": "OFF",
+      "Thu3": "DEN",
+      "Fri3": "DEN"
+    },
+    "W2": {
+      "Mon1": "DEN",
+      "Tue1": "DEN",
+      "Wed1": "OFF",
+      "Thu1": "DEN",
+      "Fri1": "DEN",
+      "Sat1": "DE",
+      "Sun1": "DE",
+      "Mon2": "DEN",
+      "Tue2": "DEN",
+      "Wed2": "DEN",
+      "Thu2": "OFF",
+      "Fri2": "DEN",
+      "Sat2": "DE",
+      "Sun2": "DE",
+      "Mon3": "DEN",
+      "Tue3": "DEN",
+      "Wed3": "OFF",
+      "Thu3": "DEN",
+      "Fri3": "DEN"
+    },
+    "W3": {
+      "Mon1": "DE",
+      "Tue1": "DE",
+      "Wed1": "DE",
+      "Thu1": "DE",
+      "Fri1": "DE",
+      "Sat1": "D",
+      "Sun1": "OFF",
+      "Mon2": "DE",
+      "Tue2": "DE",
+      "Wed2": "DE",
+      "Thu2": "DE",
+      "Fri2": "DE",
+      "Sat2": "D",
+      "Sun2": "OFF",
+      "Mon3": "DE",
+      "Tue3": "DE",
+      "Wed3": "DE",
+      "Thu3": "OFF",
+      "Fri3": "DE"
+    },
+    "W4": {
+      "Mon1": "EN",
+      "Tue1": "EN",
+      "Wed1": "N",
+      "Thu1": "EN",
+      "Fri1": "N",
+      "Sat1": "EN",
+      "Sun1": "N",
+      "Mon2": "EN",
+      "Tue2": "EN",
+      "Wed2": "N",
+      "Thu2": "EN",
+      "Fri2": "N",
+      "Sat2": "EN",
+      "Sun2": "N",
+      "Mon3": "EN",
+      "Tue3": "EN",
+      "Wed3": "N",
+      "Thu3": "EN",
+      "Fri3": "N"
+    },
+    "W5": {
+      "Mon1": "D",
+      "Tue1": "D",
+      "Wed1": "D",
+      "Thu1": "D",
+      "Fri1": "D",
+      "Sat1": "DE",
+      "Sun1": "OFF",
+      "Mon2": "D",
+      "Tue2": "OFF",
+      "Wed2": "OFF",
+      "Thu2": "D",
+      "Fri2": "D",
+      "Sat2": "DE",
+      "Sun2": "OFF",
+      "Mon3": "D",
+      "Tue3": "D",
+      "Wed3": "D",
+      "Thu3": "D",
+      "Fri3": "D"
+    },
+    "W6": {
+      "Mon1": "DEN",
+      "Tue1": "OFF",
+      "Wed1": "DEN",
+      "Thu1": "DEN",
+      "Fri1": "DEN",
+      "Sat1": "DEN",
+      "Sun1": "DE",
+      "Mon2": "DEN",
+      "Tue2": "OFF",
+      "Wed2": "DEN",
+      "Thu2": "DEN",
+      "Fri2": "DEN",
+      "Sat2": "DEN",
+      "Sun2": "DEN",
+      "Mon3": "DEN",
+      "Tue3": "OFF",
+      "Wed3": "DEN",
+      "Thu3": "DEN",
+      "Fri3": "DEN"
+    },
+    "W7": {
+      "Mon1": "EN",
+      "Tue1": "EN",
+      "Wed1": "EN",
+      "Thu1": "EN",
+      "Fri1": "N",
+      "Sat1": "EN",
+      "Sun1": "EN",
+      "Mon2": "OFF",
+      "Tue2": "EN",
+      "Wed2": "EN",
+      "Thu2": "EN",
+      "Fri2": "N",
+      "Sat2": "EN",
+      "Sun2": "EN",
+      "Mon3": "EN",
+      "Tue3": "EN",
+      "Wed3": "EN",
+      "Thu3": "EN",
+      "Fri3": "N"
+    },
+    "W8": {
+      "Mon1": "DEN",
+      "Tue1": "DEN",
+      "Wed1": "DEN",
+      "Thu1": "OFF",
+      "Fri1": "DEN",
+      "Sat1": "DEN",
+      "Sun1": "DEN",
+      "Mon2": "DEN",
+      "Tue2": "DEN",
+      "Wed2": "DEN",
+      "Thu2": "OFF",
+      "Fri2": "DEN",
+      "Sat2": "DEN",
+      "Sun2": "DEN",
+      "Mon3": "DEN",
+      "Tue3": "OFF",
+      "Wed3": "DEN",
+      "Thu3": "OFF",
+      "Fri3": "DEN"
+    },
+    "W9": {
+      "Mon1": "DEN",
+      "Tue1": "DEN",
+      "Wed1": "EN",
+      "Thu1": "EN",
+      "Fri1": "DEN",
+      "Sat1": "DEN",
+      "Sun1": "OFF",
+      "Mon2": "DEN",
+      "Tue2": "DEN",
+      "Wed2": "EN",
+      "Thu2": "EN",
+      "Fri2": "DEN",
+      "Sat2": "DEN",
+      "Sun2": "OFF",
+      "Mon3": "DEN",
+      "Tue3": "EN",
+      "Wed3": "EN",
+      "Thu3": "EN",
+      "Fri3": "DEN"
+    },
+    "W10": {
+      "Mon1": "DE",
+      "Tue1": "OFF",
+      "Wed1": "DE",
+      "Thu1": "DE",
+      "Fri1": "OFF",
+      "Sat1": "EN",
+      "Sun1": "EN",
+      "Mon2": "DE",
+      "Tue2": "OFF",
+      "Wed2": "DE",
+      "Thu2": "DE",
+      "Fri2": "DE",
+      "Sat2": "EN",
+      "Sun2": "EN",
+      "Mon3": "DE",
+      "Tue3": "OFF",
+      "Wed3": "DE",
+      "Thu3": "DE",
+      "Fri3": "OFF"
+    },
+    "W11": {
+      "Mon1": "DEN",
+      "Tue1": "DEN",
+      "Wed1": "DEN",
+      "Thu1": "DEN",
+      "Fri1": "DEN",
+      "Sat1": "DEN",
+      "Sun1": "DE",
+      "Mon2": "DEN",
+      "Tue2": "DEN",
+      "Wed2": "DEN",
+      "Thu2": "DEN",
+      "Fri2": "DEN",
+      "Sat2": "DEN",
+      "Sun2": "DE",
+      "Mon3": "DEN",
+      "Tue3": "DEN",
+      "Wed3": "DEN",
+      "Thu3": "DEN",
+      "Fri3": "OFF"
+    },
+    "W12": {
+      "Mon1": "N",
+      "Tue1": "EN",
+      "Wed1": "N",
+      "Thu1": "EN",
+      "Fri1": "N",
+      "Sat1": "EN",
+      "Sun1": "N",
+      "Mon2": "N",
+      "Tue2": "EN",
+      "Wed2": "N",
+      "Thu2": "EN",
+      "Fri2": "N",
+      "Sat2": "EN",
+      "Sun2": "N",
+      "Mon3": "N",
+      "Tue3": "EN",
+      "Wed3": "N",
+      "Thu3": "EN",
+      "Fri3": "N"
+    },
+    "W13": {
+      "Mon1": "OFF",
+      "Tue1": "D",
+      "Wed1": "DE",
+      "Thu1": "D",
+      "Fri1": "DE",
+      "Sat1": "DE",
+      "Sun1": "DE",
+      "Mon2": "OFF",
+      "Tue2": "D",
+      "Wed2": "DE",
+      "Thu2": "D",
+      "Fri2": "DE",
+      "Sat2": "DE",
+      "Sun2": "DE",
+      "Mon3": "OFF",
+      "Tue3": "OFF",
+      "Wed3": "D",
+      "Thu3": "D",
+      "Fri3": "DE"
+    },
+    "W14": {
+      "Mon1": "DEN",
+      "Tue1": "DEN",
+      "Wed1": "DEN",
+      "Thu1": "DEN",
+      "Fri1": "DE",
+      "Sat1": "DE",
+      "Sun1": "DE",
+      "Mon2": "DEN",
+      "Tue2": "OFF",
+      "Wed2": "DEN",
+      "Thu2": "DEN",
+      "Fri2": "DE",
+      "Sat2": "DE",
+      "Sun2": "DE",
+      "Mon3": "DEN",
+      "Tue3": "DEN",
+      "Wed3": "DEN",
+      "Thu3": "DEN",
+      "Fri3": "DE"
+    },
+    "W15": {
+      "Mon1": "DEN",
+      "Tue1": "DEN",
+      "Wed1": "DE",
+      "Thu1": "DEN",
+      "Fri1": "DEN",
+      "Sat1": "DE",
+      "Sun1": "DE",
+      "Mon2": "DEN",
+      "Tue2": "DEN",
+      "Wed2": "DE",
+      "Thu2": "DEN",
+      "Fri2": "DEN",
+      "Sat2": "DE",
+      "Sun2": "DE",
+      "Mon3": "DEN",
+      "Tue3": "DEN",
+      "Wed3": "OFF",
+      "Thu3": "DEN",
+      "Fri3": "DEN"
+    },
+    "W16": {
+      "Mon1": "OFF",
+      "Tue1": "EN",
+      "Wed1": "EN",
+      "Thu1": "N",
+      "Fri1": "EN",
+      "Sat1": "N",
+      "Sun1": "EN",
+      "Mon2": "OFF",
+      "Tue2": "EN",
+      "Wed2": "EN",
+      "Thu2": "N",
+      "Fri2": "EN",
+      "Sat2": "N",
+      "Sun2": "EN",
+      "Mon3": "EN",
+      "Tue3": "EN",
+      "Wed3": "EN",
+      "Thu3": "N",
+      "Fri3": "EN"
+    },
+    "W17": {
+      "Mon1": "DEN",
+      "Tue1": "OFF",
+      "Wed1": "DEN",
+      "Thu1": "OFF",
+      "Fri1": "DEN",
+      "Sat1": "DEN",
+      "Sun1": "OFF",
+      "Mon2": "DEN",
+      "Tue2": "OFF",
+      "Wed2": "DEN",
+      "Thu2": "OFF",
+      "Fri2": "DEN",
+      "Sat2": "DEN",
+      "Sun2": "OFF",
+      "Mon3": "DEN",
+      "Tue3": "OFF",
+      "Wed3": "DEN",
+      "Thu3": "OFF",
+      "Fri3": "DEN"
+    }
+  },
+  "visual_layout": {
+    "availability_split": true,
+    "availability_day_blocks": [
+      [
+        "Mon1",
+        "Tue1",
+        "Wed1",
+        "Thu1",
+        "Fri1",
+        "Sat1",
+        "Sun1",
+        "Mon2",
+        "Tue2",
+        "Wed2"
+      ],
+      [
+        "Thu2",
+        "Fri2",
+        "Sat2",
+        "Sun2",
+        "Mon3",
+        "Tue3",
+        "Wed3",
+        "Thu3",
+        "Fri3"
+      ]
+    ],
+    "visual_files": [
+      "visual_0.png",
+      "visual_1.png",
+      "visual_2.png",
+      "visual_3.png"
+    ]
+  },
+  "meta_parameters": {
+    "number_periods": 19,
+    "number_workers": 17,
+    "number_shift_types": 3,
+    "coverage_regime": "longer_horizon_with_multiple_near_binding_days",
+    "overtime_regime": "low_worker_specific_penalties",
+    "availability_regime": "mild_symmetry_pairs_with_partial_time_relief_workers",
+    "night_limit_flag": true,
+    "consecutive_constraint_flag": true,
+    "rest_rule_flag": false,
+    "availability_split_flag": true,
+    "peak_demand_flag": true,
+    "visual_type": "demand_profile_availability_split_visual",
+    "seed": 1108,
+    "formulation_size": 2617
+  }
+}

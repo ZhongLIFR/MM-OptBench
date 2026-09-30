@@ -1,0 +1,54 @@
+{
+  "status": "optimal",
+  "objective": 20.99,
+  "objective_exact": 20.99,
+  "runtime_seconds": 0.002228291006758809,
+  "tour": [
+    "A",
+    "B",
+    "D",
+    "F",
+    "E",
+    "C",
+    "A"
+  ],
+  "selected_arcs": [
+    [
+      "A",
+      "B"
+    ],
+    [
+      "B",
+      "D"
+    ],
+    [
+      "D",
+      "F"
+    ],
+    [
+      "F",
+      "E"
+    ],
+    [
+      "E",
+      "C"
+    ],
+    [
+      "C",
+      "A"
+    ]
+  ],
+  "visit_order": {
+    "A": 0,
+    "B": 1,
+    "D": 2,
+    "F": 3,
+    "E": 4,
+    "C": 5
+  },
+  "unique_optimal_flag": true,
+  "near_optimal_tour_flag": false,
+  "num_optimal_tours": 1,
+  "num_tours_within_5pct": 1,
+  "solve_method": "gurobi_mtz_tsp"
+}

@@ -1,0 +1,21 @@
+{
+  "status": "optimal",
+  "objective_exact": 74.0536,
+  "objective_value": 74.0536,
+  "opening_cost": 38,
+  "assignment_cost": 36.0536,
+  "open_facilities": [
+    "F1",
+    "F4"
+  ],
+  "assignments": {
+    "C1": "F1",
+    "C2": "F1",
+    "C3": "F4",
+    "C4": "F1",
+    "C5": "F4"
+  },
+  "solver_policy": "prefer_gurobi_else_exact_fallback",
+  "solver_used": "gurobi",
+  "optimality_proof": "gurobi_mip_optimal"
+}

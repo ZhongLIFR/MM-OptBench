@@ -1,0 +1,67 @@
+Canonical specification for a deterministic easy-level set packing instance.
+
+Interpretation:
+- Each candidate group may be either selected or not selected.
+- Every item may appear in at most one selected group.
+- The objective is to maximize the total value of the selected groups.
+- There are no covering requirements, equality constraints, time indices, logical side constraints, penalties, or multi-stage decisions.
+
+Sets:
+- Items U = ['A', 'B', 'C', 'D', 'E', 'F', 'G', 'H', 'I']
+- Candidate groups S = ['G1', 'G2', 'G3', 'G4', 'G5', 'G6', 'G7', 'G8', 'G9', 'G10', 'G11', 'G12']
+
+Parameters:
+- number_of_elements = 9
+- number_of_subsets = 12
+- average_subset_size = 2.8333
+- overlap_density = 0.5303
+- weight_distribution_type = size_correlated
+
+Group definitions:
+- G1: elements = ['C', 'E'], value = 8
+- G2: elements = ['A', 'F'], value = 6
+- G3: elements = ['D', 'H'], value = 8
+- G4: elements = ['B', 'G', 'I'], value = 8
+- G5: elements = ['A', 'C', 'E', 'F'], value = 7
+- G6: elements = ['D', 'F'], value = 6
+- G7: elements = ['C', 'E', 'H'], value = 8
+- G8: elements = ['A', 'I'], value = 5
+- G9: elements = ['A', 'C', 'F'], value = 6
+- G10: elements = ['B', 'F', 'G', 'I'], value = 8
+- G11: elements = ['B', 'D', 'G', 'I'], value = 8
+- G12: elements = ['C', 'E', 'F'], value = 7
+
+Incidence matrix rows by item (0/1 form, columns ordered by the candidate-group list):
+- row A: [0, 1, 0, 0, 1, 0, 0, 1, 1, 0, 0, 0]
+- row B: [0, 0, 0, 1, 0, 0, 0, 0, 0, 1, 1, 0]
+- row C: [1, 0, 0, 0, 1, 0, 1, 0, 1, 0, 0, 1]
+- row D: [0, 0, 1, 0, 0, 1, 0, 0, 0, 0, 1, 0]
+- row E: [1, 0, 0, 0, 1, 0, 1, 0, 0, 0, 0, 1]
+- row F: [0, 1, 0, 0, 1, 1, 0, 0, 1, 1, 0, 1]
+- row G: [0, 0, 0, 1, 0, 0, 0, 0, 0, 1, 1, 0]
+- row H: [0, 0, 1, 0, 0, 0, 1, 0, 0, 0, 0, 0]
+- row I: [0, 0, 0, 1, 0, 0, 0, 1, 0, 1, 1, 0]
+
+Decision variables:
+- x[g] in {0,1}: equals 1 if candidate group g is selected, and 0 otherwise.
+
+Objective:
+- Maximize the sum of the values of the selected groups.
+
+Constraints:
+- For every item i in U, the total number of selected groups containing i must be at most 1.
+- All selection variables are binary.
+
+Metadata:
+- seed = 6103
+- group = A
+- overlap_regime = sparse_plus
+- subset_size_regime = mixed
+- visual_type = incidence_matrix_with_value_bars
+- formulation_size = 21
+
+Visual interpretation:
+- The figure uses one row per candidate group and one column per item.
+- Filled cells indicate membership of an item in a group; empty cells indicate non-membership.
+- A horizontal bar and adjacent integer at the left of each row indicate that group's value.
+- The visual reveals the complete instance data needed for optimization but does not reveal which groups belong to an optimal solution.

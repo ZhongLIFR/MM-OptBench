@@ -1,0 +1,34 @@
+A routing instance is specified by a single accompanying visual artifact.
+
+The visual jointly provides all instance-specific numerical data required for the optimization problem.
+
+The visual includes:
+- the depot location,
+- the labeled position of every customer in a two-dimensional map,
+- the exact coordinate pair and demand value associated with each customer,
+- the fleet-size and vehicle-capacity parameters,
+- and the complete travel-cost matrix for all nodes.
+
+Interpretation:
+- A fleet of identical vehicles starts from the depot and must return to the depot after service.
+- Each customer must be visited exactly once by exactly one vehicle.
+- The graph is complete: travel between every pair of distinct nodes is allowed.
+- Vehicle capacity is binding and must not be exceeded on any route.
+- There are no time windows, multiple depots, forbidden arcs, or stochastic demands.
+
+Task:
+1) Write a mathematical optimization model for this instance.
+2) Provide solver-executable code implementing the model.
+
+How to read the visual:
+- The left panel shows the depot and customer locations on a coordinate plane.
+- Each customer node is labeled directly on the map.
+- Each colored box directly below a customer gives that customer's exact demand and coordinates.
+- The right panel contains the fleet parameters and the complete travel-cost matrix.
+- The fleet-parameter box specifies the number of identical vehicles and the common vehicle capacity.
+- The matrix entries provide the exact travel cost between every ordered pair of nodes.
+
+Output requirement:
+- Construct an exact optimization model for the instance encoded by the visual.
+- Use the depot, customer, fleet, demand, coordinate, and travel-cost information shown in the figure.
+- Do not introduce assumptions that are not supported by the visual artifact.

@@ -1,0 +1,90 @@
+{
+  "status": "optimal",
+  "objective": 32.99,
+  "objective_exact": 32.99,
+  "runtime_seconds": 0.0007,
+  "tour": [
+    "Depot",
+    "C1",
+    "C3",
+    "C2",
+    "C4",
+    "C5",
+    "C6",
+    "Depot"
+  ],
+  "selected_arcs": [
+    [
+      "Depot",
+      "C1"
+    ],
+    [
+      "C1",
+      "C3"
+    ],
+    [
+      "C3",
+      "C2"
+    ],
+    [
+      "C2",
+      "C4"
+    ],
+    [
+      "C4",
+      "C5"
+    ],
+    [
+      "C5",
+      "C6"
+    ],
+    [
+      "C6",
+      "Depot"
+    ]
+  ],
+  "service_start_times": {
+    "Depot": 0.0,
+    "C1": 5.52,
+    "C3": 12.75,
+    "C2": 20.68,
+    "C4": 30.49,
+    "C5": 35.8,
+    "C6": 44.14
+  },
+  "arrival_times": {
+    "Depot": 0.0,
+    "C1": 5.52,
+    "C3": 9.44,
+    "C2": 18.85,
+    "C4": 24.63,
+    "C5": 35.8,
+    "C6": 41.77,
+    "Depot_return": 49.36
+  },
+  "waiting_times": {
+    "Depot": 0.0,
+    "C1": 0.0,
+    "C3": 3.31,
+    "C2": 1.83,
+    "C4": 5.86,
+    "C5": 0.0,
+    "C6": 2.37
+  },
+  "visit_order": {
+    "Depot": 0,
+    "C1": 1,
+    "C3": 2,
+    "C2": 3,
+    "C4": 4,
+    "C5": 5,
+    "C6": 6
+  },
+  "binding_time_window_nodes": [
+    "C2",
+    "C3",
+    "C5",
+    "C6"
+  ],
+  "solve_method": "gurobi_milp_exact"
+}

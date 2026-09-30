@@ -1,0 +1,31 @@
+{
+  "instance_id": "scp_m_008",
+  "family": "2. Location, Covering, and Assignment",
+  "subtype": "Set Covering / Set Partitioning (SC)",
+  "difficulty": "medium",
+  "variant_type": "set_partitioning",
+  "number_of_elements": 18,
+  "number_of_candidate_subsets": 20,
+  "matrix_density": 0.15,
+  "incidence_structure": "linked_triads_and_pair_segments",
+  "cost_regime": "slight_bias_toward_boundary_blocks",
+  "critical_element_fraction": 0.1111,
+  "visual_type": "single_visual_incidence_matrix_with_subset_cost_bars",
+  "seed": 3008,
+  "status": "optimal",
+  "objective_exact": 25.0,
+  "objective_value": 25.0,
+  "solver_policy": "prefer_gurobi_else_exact_fallback",
+  "solver_used": "gurobi",
+  "solve_method": "gurobi_binary_set_partitioning_mip",
+  "runtime_seconds": 0.017886,
+  "visual_checksum_sha256": "b3f00347be432467eab10eaa0a48d37124d2a5bee67b7804e7e7eb599018d908",
+  "optimal_selected_subset_count": 7,
+  "feasible_solution_count_exact": 8,
+  "formulation_size": {
+    "num_binary_x": 20,
+    "num_variables_total": 20,
+    "num_coverage_constraints": 18,
+    "num_constraints_total": 18
+  }
+}

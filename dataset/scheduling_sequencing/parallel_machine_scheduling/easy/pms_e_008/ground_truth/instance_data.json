@@ -1,0 +1,171 @@
+{
+  "instance_id": "pms_e_008",
+  "variant": "parallel_machine_scheduling",
+  "scenario": "parallel_machine_scheduling",
+  "difficulty": "easy",
+  "sets": {
+    "jobs": [
+      "J1",
+      "J2",
+      "J3",
+      "J4",
+      "J5",
+      "J6",
+      "J7",
+      "J8",
+      "J9",
+      "J10",
+      "J11"
+    ],
+    "machines": [
+      "M1",
+      "M2",
+      "M3",
+      "M4"
+    ]
+  },
+  "base_processing_time": {
+    "J1": 15,
+    "J2": 4,
+    "J3": 5,
+    "J4": 6,
+    "J5": 7,
+    "J6": 3,
+    "J7": 8,
+    "J8": 4,
+    "J9": 5,
+    "J10": 6,
+    "J11": 2
+  },
+  "machine_speed": {
+    "M1": 1.0,
+    "M2": 1.2,
+    "M3": 0.85,
+    "M4": 1.05
+  },
+  "eligibility": {
+    "J1": [
+      "M2",
+      "M4"
+    ],
+    "J2": [
+      "M1",
+      "M2"
+    ],
+    "J3": [
+      "M2",
+      "M3"
+    ],
+    "J4": [
+      "M1",
+      "M4"
+    ],
+    "J5": [
+      "M1",
+      "M2",
+      "M3"
+    ],
+    "J6": [
+      "M2",
+      "M4"
+    ],
+    "J7": [
+      "M1",
+      "M3",
+      "M4"
+    ],
+    "J8": [
+      "M1",
+      "M2",
+      "M4"
+    ],
+    "J9": [
+      "M3",
+      "M4"
+    ],
+    "J10": [
+      "M1",
+      "M2",
+      "M3",
+      "M4"
+    ],
+    "J11": [
+      "M1",
+      "M3"
+    ]
+  },
+  "effective_processing_time": {
+    "J1": {
+      "M2": 13,
+      "M4": 15
+    },
+    "J2": {
+      "M1": 4,
+      "M2": 4
+    },
+    "J3": {
+      "M2": 5,
+      "M3": 6
+    },
+    "J4": {
+      "M1": 6,
+      "M4": 6
+    },
+    "J5": {
+      "M1": 7,
+      "M2": 6,
+      "M3": 9
+    },
+    "J6": {
+      "M2": 3,
+      "M4": 3
+    },
+    "J7": {
+      "M1": 8,
+      "M3": 10,
+      "M4": 8
+    },
+    "J8": {
+      "M1": 4,
+      "M2": 4,
+      "M4": 4
+    },
+    "J9": {
+      "M3": 6,
+      "M4": 5
+    },
+    "J10": {
+      "M1": 6,
+      "M2": 5,
+      "M3": 8,
+      "M4": 6
+    },
+    "J11": {
+      "M1": 2,
+      "M3": 3
+    }
+  },
+  "weights": {
+    "J1": 1,
+    "J2": 1,
+    "J3": 1,
+    "J4": 1,
+    "J5": 1,
+    "J6": 1,
+    "J7": 1,
+    "J8": 1,
+    "J9": 1,
+    "J10": 1,
+    "J11": 1
+  },
+  "meta_parameters": {
+    "number_jobs": 11,
+    "number_machines": 4,
+    "machine_type": "related",
+    "objective_type": "makespan",
+    "processing_time_regime": "long_job_related",
+    "long_job_flag": true,
+    "seed": 408,
+    "formulation_size": 75
+  }
+}

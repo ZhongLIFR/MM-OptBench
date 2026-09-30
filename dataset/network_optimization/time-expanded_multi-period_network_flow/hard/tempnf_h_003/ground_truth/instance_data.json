@@ -1,0 +1,1028 @@
+{
+  "instance_id": "tempnf_h_003",
+  "family": "network_optimization",
+  "subtype": "time-expanded_multi-period_network_flow",
+  "problem_type": "time_expanded_multi_period_network_flow",
+  "variant": "single_visual_single_commodity_mpnf",
+  "difficulty": "hard",
+  "graph_type": "multi_sink_10_single_storage",
+  "base_graph_type": "multi_sink_10_single_storage",
+  "scenario_name": "one_source_one_warehouse_two_sink_release_pattern",
+  "source": 1,
+  "sink": 9,
+  "source_nodes": [
+    1
+  ],
+  "sink_nodes": [
+    9,
+    10
+  ],
+  "storage_nodes": [
+    7
+  ],
+  "nodes": [
+    1,
+    2,
+    3,
+    4,
+    5,
+    6,
+    7,
+    8,
+    9,
+    10
+  ],
+  "periods": [
+    "t1",
+    "t2",
+    "t3",
+    "t4"
+  ],
+  "arc_ids": [
+    "e1",
+    "e2",
+    "e3",
+    "e4",
+    "e5",
+    "e6",
+    "e7",
+    "e8",
+    "e9",
+    "e10",
+    "e11",
+    "e12",
+    "e13",
+    "e14",
+    "e15",
+    "e16"
+  ],
+  "node_roles": {
+    "1": "source",
+    "2": "upper_feed",
+    "3": "central_feed",
+    "4": "lower_feed",
+    "5": "upper_connector",
+    "6": "lower_connector",
+    "7": "warehouse",
+    "8": "distribution_hub",
+    "9": "sink_a",
+    "10": "sink_b"
+  },
+  "sets": {
+    "nodes": [
+      1,
+      2,
+      3,
+      4,
+      5,
+      6,
+      7,
+      8,
+      9,
+      10
+    ],
+    "periods": [
+      "t1",
+      "t2",
+      "t3",
+      "t4"
+    ],
+    "arcs": [
+      "e1",
+      "e2",
+      "e3",
+      "e4",
+      "e5",
+      "e6",
+      "e7",
+      "e8",
+      "e9",
+      "e10",
+      "e11",
+      "e12",
+      "e13",
+      "e14",
+      "e15",
+      "e16"
+    ],
+    "source_nodes": [
+      1
+    ],
+    "sink_nodes": [
+      9,
+      10
+    ],
+    "storage_nodes": [
+      7
+    ]
+  },
+  "indices": {
+    "source_node": 1,
+    "sink_node": 9,
+    "source_node_order": [
+      1
+    ],
+    "sink_node_order": [
+      9,
+      10
+    ],
+    "period_order": [
+      "t1",
+      "t2",
+      "t3",
+      "t4"
+    ],
+    "storage_node_order": [
+      7
+    ],
+    "arc_to_endpoints": {
+      "e1": [
+        1,
+        2
+      ],
+      "e2": [
+        1,
+        3
+      ],
+      "e3": [
+        1,
+        4
+      ],
+      "e4": [
+        2,
+        5
+      ],
+      "e5": [
+        2,
+        7
+      ],
+      "e6": [
+        3,
+        5
+      ],
+      "e7": [
+        3,
+        6
+      ],
+      "e8": [
+        4,
+        6
+      ],
+      "e9": [
+        4,
+        7
+      ],
+      "e10": [
+        5,
+        7
+      ],
+      "e11": [
+        5,
+        8
+      ],
+      "e12": [
+        6,
+        8
+      ],
+      "e13": [
+        7,
+        8
+      ],
+      "e14": [
+        7,
+        9
+      ],
+      "e15": [
+        8,
+        9
+      ],
+      "e16": [
+        8,
+        10
+      ]
+    }
+  },
+  "positions": {
+    "1": [
+      0.0,
+      0.0
+    ],
+    "2": [
+      3.0,
+      3.1
+    ],
+    "3": [
+      3.0,
+      0.6
+    ],
+    "4": [
+      3.0,
+      -2.1
+    ],
+    "5": [
+      6.5,
+      2.3
+    ],
+    "6": [
+      6.5,
+      -0.6
+    ],
+    "7": [
+      9.9,
+      1.8
+    ],
+    "8": [
+      9.9,
+      -1.2
+    ],
+    "9": [
+      14.2,
+      2.0
+    ],
+    "10": [
+      14.2,
+      -0.7
+    ]
+  },
+  "coordinates": {
+    "1": {
+      "x": 0.0,
+      "y": 0.0
+    },
+    "2": {
+      "x": 3.0,
+      "y": 3.1
+    },
+    "3": {
+      "x": 3.0,
+      "y": 0.6
+    },
+    "4": {
+      "x": 3.0,
+      "y": -2.1
+    },
+    "5": {
+      "x": 6.5,
+      "y": 2.3
+    },
+    "6": {
+      "x": 6.5,
+      "y": -0.6
+    },
+    "7": {
+      "x": 9.9,
+      "y": 1.8
+    },
+    "8": {
+      "x": 9.9,
+      "y": -1.2
+    },
+    "9": {
+      "x": 14.2,
+      "y": 2.0
+    },
+    "10": {
+      "x": 14.2,
+      "y": -0.7
+    }
+  },
+  "demands": {
+    "node_period_balance": {
+      "1": {
+        "t1": 6,
+        "t2": 5,
+        "t3": 3,
+        "t4": 1
+      },
+      "2": {
+        "t1": 0,
+        "t2": 0,
+        "t3": 0,
+        "t4": 0
+      },
+      "3": {
+        "t1": 0,
+        "t2": 0,
+        "t3": 0,
+        "t4": 0
+      },
+      "4": {
+        "t1": 0,
+        "t2": 0,
+        "t3": 0,
+        "t4": 0
+      },
+      "5": {
+        "t1": 0,
+        "t2": 0,
+        "t3": 0,
+        "t4": 0
+      },
+      "6": {
+        "t1": 0,
+        "t2": 0,
+        "t3": 0,
+        "t4": 0
+      },
+      "7": {
+        "t1": 0,
+        "t2": 0,
+        "t3": 0,
+        "t4": 0
+      },
+      "8": {
+        "t1": 0,
+        "t2": 0,
+        "t3": 0,
+        "t4": 0
+      },
+      "9": {
+        "t1": -1,
+        "t2": 0,
+        "t3": -2,
+        "t4": -3
+      },
+      "10": {
+        "t1": -1,
+        "t2": -2,
+        "t3": -4,
+        "t4": -2
+      }
+    }
+  },
+  "net_supply_by_node_period": {
+    "1": {
+      "t1": 6,
+      "t2": 5,
+      "t3": 3,
+      "t4": 1
+    },
+    "2": {
+      "t1": 0,
+      "t2": 0,
+      "t3": 0,
+      "t4": 0
+    },
+    "3": {
+      "t1": 0,
+      "t2": 0,
+      "t3": 0,
+      "t4": 0
+    },
+    "4": {
+      "t1": 0,
+      "t2": 0,
+      "t3": 0,
+      "t4": 0
+    },
+    "5": {
+      "t1": 0,
+      "t2": 0,
+      "t3": 0,
+      "t4": 0
+    },
+    "6": {
+      "t1": 0,
+      "t2": 0,
+      "t3": 0,
+      "t4": 0
+    },
+    "7": {
+      "t1": 0,
+      "t2": 0,
+      "t3": 0,
+      "t4": 0
+    },
+    "8": {
+      "t1": 0,
+      "t2": 0,
+      "t3": 0,
+      "t4": 0
+    },
+    "9": {
+      "t1": -1,
+      "t2": 0,
+      "t3": -2,
+      "t4": -3
+    },
+    "10": {
+      "t1": -1,
+      "t2": -2,
+      "t3": -4,
+      "t4": -2
+    }
+  },
+  "capacities_by_arc_period": {
+    "e1": {
+      "t1": 3,
+      "t2": 2,
+      "t3": 1,
+      "t4": 1
+    },
+    "e2": {
+      "t1": 2,
+      "t2": 2,
+      "t3": 2,
+      "t4": 1
+    },
+    "e3": {
+      "t1": 2,
+      "t2": 2,
+      "t3": 1,
+      "t4": 1
+    },
+    "e4": {
+      "t1": 2,
+      "t2": 1,
+      "t3": 1,
+      "t4": 1
+    },
+    "e5": {
+      "t1": 1,
+      "t2": 2,
+      "t3": 1,
+      "t4": 1
+    },
+    "e6": {
+      "t1": 2,
+      "t2": 2,
+      "t3": 1,
+      "t4": 1
+    },
+    "e7": {
+      "t1": 2,
+      "t2": 2,
+      "t3": 1,
+      "t4": 1
+    },
+    "e8": {
+      "t1": 1,
+      "t2": 2,
+      "t3": 1,
+      "t4": 1
+    },
+    "e9": {
+      "t1": 2,
+      "t2": 1,
+      "t3": 1,
+      "t4": 1
+    },
+    "e10": {
+      "t1": 1,
+      "t2": 2,
+      "t3": 1,
+      "t4": 1
+    },
+    "e11": {
+      "t1": 2,
+      "t2": 2,
+      "t3": 1,
+      "t4": 1
+    },
+    "e12": {
+      "t1": 2,
+      "t2": 1,
+      "t3": 1,
+      "t4": 1
+    },
+    "e13": {
+      "t1": 1,
+      "t2": 1,
+      "t3": 2,
+      "t4": 2
+    },
+    "e14": {
+      "t1": 1,
+      "t2": 2,
+      "t3": 3,
+      "t4": 3
+    },
+    "e15": {
+      "t1": 1,
+      "t2": 1,
+      "t3": 2,
+      "t4": 2
+    },
+    "e16": {
+      "t1": 1,
+      "t2": 2,
+      "t3": 4,
+      "t4": 3
+    }
+  },
+  "routing_costs_by_arc_period": {
+    "e1": {
+      "t1": 1,
+      "t2": 1,
+      "t3": 2,
+      "t4": 2
+    },
+    "e2": {
+      "t1": 1,
+      "t2": 1,
+      "t3": 1,
+      "t4": 2
+    },
+    "e3": {
+      "t1": 2,
+      "t2": 2,
+      "t3": 2,
+      "t4": 3
+    },
+    "e4": {
+      "t1": 1,
+      "t2": 1,
+      "t3": 2,
+      "t4": 2
+    },
+    "e5": {
+      "t1": 1,
+      "t2": 1,
+      "t3": 1,
+      "t4": 1
+    },
+    "e6": {
+      "t1": 1,
+      "t2": 1,
+      "t3": 1,
+      "t4": 2
+    },
+    "e7": {
+      "t1": 1,
+      "t2": 1,
+      "t3": 1,
+      "t4": 2
+    },
+    "e8": {
+      "t1": 1,
+      "t2": 1,
+      "t3": 2,
+      "t4": 2
+    },
+    "e9": {
+      "t1": 1,
+      "t2": 1,
+      "t3": 1,
+      "t4": 1
+    },
+    "e10": {
+      "t1": 1,
+      "t2": 1,
+      "t3": 1,
+      "t4": 1
+    },
+    "e11": {
+      "t1": 2,
+      "t2": 2,
+      "t3": 2,
+      "t4": 2
+    },
+    "e12": {
+      "t1": 1,
+      "t2": 1,
+      "t3": 2,
+      "t4": 2
+    },
+    "e13": {
+      "t1": 1,
+      "t2": 1,
+      "t3": 1,
+      "t4": 1
+    },
+    "e14": {
+      "t1": 1,
+      "t2": 1,
+      "t3": 1,
+      "t4": 1
+    },
+    "e15": {
+      "t1": 1,
+      "t2": 1,
+      "t3": 1,
+      "t4": 1
+    },
+    "e16": {
+      "t1": 1,
+      "t2": 1,
+      "t3": 1,
+      "t4": 1
+    }
+  },
+  "arcs": [
+    {
+      "id": "e1",
+      "from": 1,
+      "to": 2,
+      "capacity_by_period": {
+        "t1": 3,
+        "t2": 2,
+        "t3": 1,
+        "t4": 1
+      },
+      "cost_by_period": {
+        "t1": 1,
+        "t2": 1,
+        "t3": 2,
+        "t4": 2
+      }
+    },
+    {
+      "id": "e2",
+      "from": 1,
+      "to": 3,
+      "capacity_by_period": {
+        "t1": 2,
+        "t2": 2,
+        "t3": 2,
+        "t4": 1
+      },
+      "cost_by_period": {
+        "t1": 1,
+        "t2": 1,
+        "t3": 1,
+        "t4": 2
+      }
+    },
+    {
+      "id": "e3",
+      "from": 1,
+      "to": 4,
+      "capacity_by_period": {
+        "t1": 2,
+        "t2": 2,
+        "t3": 1,
+        "t4": 1
+      },
+      "cost_by_period": {
+        "t1": 2,
+        "t2": 2,
+        "t3": 2,
+        "t4": 3
+      }
+    },
+    {
+      "id": "e4",
+      "from": 2,
+      "to": 5,
+      "capacity_by_period": {
+        "t1": 2,
+        "t2": 1,
+        "t3": 1,
+        "t4": 1
+      },
+      "cost_by_period": {
+        "t1": 1,
+        "t2": 1,
+        "t3": 2,
+        "t4": 2
+      }
+    },
+    {
+      "id": "e5",
+      "from": 2,
+      "to": 7,
+      "capacity_by_period": {
+        "t1": 1,
+        "t2": 2,
+        "t3": 1,
+        "t4": 1
+      },
+      "cost_by_period": {
+        "t1": 1,
+        "t2": 1,
+        "t3": 1,
+        "t4": 1
+      }
+    },
+    {
+      "id": "e6",
+      "from": 3,
+      "to": 5,
+      "capacity_by_period": {
+        "t1": 2,
+        "t2": 2,
+        "t3": 1,
+        "t4": 1
+      },
+      "cost_by_period": {
+        "t1": 1,
+        "t2": 1,
+        "t3": 1,
+        "t4": 2
+      }
+    },
+    {
+      "id": "e7",
+      "from": 3,
+      "to": 6,
+      "capacity_by_period": {
+        "t1": 2,
+        "t2": 2,
+        "t3": 1,
+        "t4": 1
+      },
+      "cost_by_period": {
+        "t1": 1,
+        "t2": 1,
+        "t3": 1,
+        "t4": 2
+      }
+    },
+    {
+      "id": "e8",
+      "from": 4,
+      "to": 6,
+      "capacity_by_period": {
+        "t1": 1,
+        "t2": 2,
+        "t3": 1,
+        "t4": 1
+      },
+      "cost_by_period": {
+        "t1": 1,
+        "t2": 1,
+        "t3": 2,
+        "t4": 2
+      }
+    },
+    {
+      "id": "e9",
+      "from": 4,
+      "to": 7,
+      "capacity_by_period": {
+        "t1": 2,
+        "t2": 1,
+        "t3": 1,
+        "t4": 1
+      },
+      "cost_by_period": {
+        "t1": 1,
+        "t2": 1,
+        "t3": 1,
+        "t4": 1
+      }
+    },
+    {
+      "id": "e10",
+      "from": 5,
+      "to": 7,
+      "capacity_by_period": {
+        "t1": 1,
+        "t2": 2,
+        "t3": 1,
+        "t4": 1
+      },
+      "cost_by_period": {
+        "t1": 1,
+        "t2": 1,
+        "t3": 1,
+        "t4": 1
+      }
+    },
+    {
+      "id": "e11",
+      "from": 5,
+      "to": 8,
+      "capacity_by_period": {
+        "t1": 2,
+        "t2": 2,
+        "t3": 1,
+        "t4": 1
+      },
+      "cost_by_period": {
+        "t1": 2,
+        "t2": 2,
+        "t3": 2,
+        "t4": 2
+      }
+    },
+    {
+      "id": "e12",
+      "from": 6,
+      "to": 8,
+      "capacity_by_period": {
+        "t1": 2,
+        "t2": 1,
+        "t3": 1,
+        "t4": 1
+      },
+      "cost_by_period": {
+        "t1": 1,
+        "t2": 1,
+        "t3": 2,
+        "t4": 2
+      }
+    },
+    {
+      "id": "e13",
+      "from": 7,
+      "to": 8,
+      "capacity_by_period": {
+        "t1": 1,
+        "t2": 1,
+        "t3": 2,
+        "t4": 2
+      },
+      "cost_by_period": {
+        "t1": 1,
+        "t2": 1,
+        "t3": 1,
+        "t4": 1
+      }
+    },
+    {
+      "id": "e14",
+      "from": 7,
+      "to": 9,
+      "capacity_by_period": {
+        "t1": 1,
+        "t2": 2,
+        "t3": 3,
+        "t4": 3
+      },
+      "cost_by_period": {
+        "t1": 1,
+        "t2": 1,
+        "t3": 1,
+        "t4": 1
+      }
+    },
+    {
+      "id": "e15",
+      "from": 8,
+      "to": 9,
+      "capacity_by_period": {
+        "t1": 1,
+        "t2": 1,
+        "t3": 2,
+        "t4": 2
+      },
+      "cost_by_period": {
+        "t1": 1,
+        "t2": 1,
+        "t3": 1,
+        "t4": 1
+      }
+    },
+    {
+      "id": "e16",
+      "from": 8,
+      "to": 10,
+      "capacity_by_period": {
+        "t1": 1,
+        "t2": 2,
+        "t3": 4,
+        "t4": 3
+      },
+      "cost_by_period": {
+        "t1": 1,
+        "t2": 1,
+        "t3": 1,
+        "t4": 1
+      }
+    }
+  ],
+  "storage": {
+    "7": {
+      "role": "Warehouse",
+      "initial_inventory": 0,
+      "capacity": 7,
+      "holding_cost_by_period": {
+        "t1": 0.3,
+        "t2": 0.4,
+        "t3": 0.2,
+        "t4": 0
+      }
+    }
+  },
+  "special_node_pattern": "single_source_single_warehouse_two_sinks",
+  "balance_pattern": "late_split_demand_across_two_sinks",
+  "capacity_time_regime": "warehouse_and_distribution_release_both_tight_early",
+  "cost_time_regime": "warehouse_release_cheaper_than_outer_backup_corridors",
+  "holding_cost_regime": "single_warehouse_light_holding_cost",
+  "visual_settings": {
+    "curve_by_arc": {},
+    "label_t_by_arc": {
+      "e4": 0.44,
+      "e5": 0.56,
+      "e8": 0.44,
+      "e9": 0.56,
+      "e13": 0.5,
+      "e14": 0.5,
+      "e15": 0.5
+    },
+    "label_shift_by_arc": {
+      "e4": [
+        -0.08,
+        0.08
+      ],
+      "e5": [
+        0.08,
+        0.08
+      ],
+      "e8": [
+        -0.08,
+        -0.08
+      ],
+      "e9": [
+        0.08,
+        -0.08
+      ],
+      "e13": [
+        0.0,
+        0.1
+      ],
+      "e14": [
+        0.0,
+        -0.08
+      ],
+      "e15": [
+        0.0,
+        0.08
+      ]
+    },
+    "edge_shift_by_arc": {}
+  },
+  "visual_encoding": {
+    "title": "Planning Network Diagram",
+    "arc_label_format": "[u1/c1|u2/c2|u3/c3|u4/c4]",
+    "period_order": "t1,t2,t3,t4",
+    "legend_rows": [
+      "Arc labels (t1,t2,t3,t4): [u1/c1|u2/c2|u3/c3|u4/c4]",
+      "Right table lists all source, sink, and storage rows.\nOthers: b:[0,0,0,0], no storage"
+    ],
+    "special_node_rows": [
+      {
+        "role": "Source",
+        "node": 1,
+        "exact_node_data": "b:[+6,+5,+3,+1]"
+      },
+      {
+        "role": "Warehouse",
+        "node": 7,
+        "exact_node_data": "b:[0,0,0,0]\nS=7\nh:[0.3,0.4,0.2,0]"
+      },
+      {
+        "role": "Sink A",
+        "node": 9,
+        "exact_node_data": "b:[-1,+0,-2,-3]"
+      },
+      {
+        "role": "Sink B",
+        "node": 10,
+        "exact_node_data": "b:[-1,-2,-4,-2]"
+      }
+    ],
+    "special_table_order": [
+      1,
+      7,
+      9,
+      10
+    ],
+    "role_table_columns": [
+      "Role",
+      "Node",
+      "Exact node data"
+    ],
+    "visual_type": "single_visual_topology_with_inline_arc_time_tuples_and_right_side_special_node_table",
+    "node_colors": {
+      "1": "#1f77b4",
+      "2": "#d62728",
+      "3": "#2ca02c",
+      "4": "#9467bd",
+      "5": "#17becf",
+      "6": "#8c564b",
+      "7": "#e377c2",
+      "8": "#7f7f7f",
+      "9": "#ff7f0e",
+      "10": "#393b79"
+    },
+    "role_table_bbox": [
+      0.72,
+      0.09,
+      0.26,
+      0.4
+    ],
+    "note_table_bbox": [
+      0.72,
+      0.502,
+      0.26,
+      0.075
+    ]
+  },
+  "meta_parameters": {
+    "number_periods": 4,
+    "number_nodes": 10,
+    "number_arcs": 16,
+    "number_storage_nodes": 1,
+    "base_graph_type": "multi_sink_10_single_storage",
+    "special_node_pattern": "single_source_single_warehouse_two_sinks",
+    "balance_pattern": "late_split_demand_across_two_sinks",
+    "capacity_time_regime": "warehouse_and_distribution_release_both_tight_early",
+    "cost_time_regime": "warehouse_release_cheaper_than_outer_backup_corridors",
+    "holding_cost_regime": "single_warehouse_light_holding_cost",
+    "visual_type": "single_visual_topology_with_inline_arc_time_tuples_and_right_side_special_node_table",
+    "seed": 9303,
+    "formulation_size": 176
+  }
+}

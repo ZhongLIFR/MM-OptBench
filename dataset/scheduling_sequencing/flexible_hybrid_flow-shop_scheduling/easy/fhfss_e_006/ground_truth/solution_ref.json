@@ -1,0 +1,331 @@
+{
+  "status": "optimal",
+  "objective": 51,
+  "objective_exact": 51,
+  "optimal_makespan": 51,
+  "machine_assignment": {
+    "J1": {
+      "S1": "S1M2",
+      "S2": "S2M1",
+      "S3": "S3M1",
+      "S4": "S4M1"
+    },
+    "J2": {
+      "S1": "S1M2",
+      "S2": "S2M1",
+      "S3": "S3M1",
+      "S4": "S4M1"
+    },
+    "J3": {
+      "S1": "S1M2",
+      "S2": "S2M1",
+      "S3": "S3M1",
+      "S4": "S4M1"
+    },
+    "J4": {
+      "S1": "S1M1",
+      "S2": "S2M1",
+      "S3": "S3M2",
+      "S4": "S4M1"
+    },
+    "J5": {
+      "S1": "S1M1",
+      "S2": "S2M1",
+      "S3": "S3M2",
+      "S4": "S4M1"
+    },
+    "J6": {
+      "S1": "S1M1",
+      "S2": "S2M1",
+      "S3": "S3M1",
+      "S4": "S4M1"
+    },
+    "J7": {
+      "S1": "S1M1",
+      "S2": "S2M1",
+      "S3": "S3M1",
+      "S4": "S4M1"
+    }
+  },
+  "start_time": {
+    "J1": {
+      "S1": 5,
+      "S2": 14,
+      "S3": 19,
+      "S4": 24
+    },
+    "J2": {
+      "S1": 9,
+      "S2": 19,
+      "S3": 25,
+      "S4": 30
+    },
+    "J3": {
+      "S1": 0,
+      "S2": 5,
+      "S3": 9,
+      "S4": 12
+    },
+    "J4": {
+      "S1": 11,
+      "S2": 30,
+      "S3": 37,
+      "S4": 41
+    },
+    "J5": {
+      "S1": 0,
+      "S2": 9,
+      "S3": 14,
+      "S4": 19
+    },
+    "J6": {
+      "S1": 6,
+      "S2": 37,
+      "S3": 43,
+      "S4": 47
+    },
+    "J7": {
+      "S1": 15,
+      "S2": 25,
+      "S3": 30,
+      "S4": 35
+    }
+  },
+  "completion_time": {
+    "J1": {
+      "S1": 9,
+      "S2": 19,
+      "S3": 22,
+      "S4": 30
+    },
+    "J2": {
+      "S1": 12,
+      "S2": 25,
+      "S3": 29,
+      "S4": 35
+    },
+    "J3": {
+      "S1": 5,
+      "S2": 9,
+      "S3": 12,
+      "S4": 19
+    },
+    "J4": {
+      "S1": 15,
+      "S2": 37,
+      "S3": 39,
+      "S4": 47
+    },
+    "J5": {
+      "S1": 6,
+      "S2": 14,
+      "S3": 18,
+      "S4": 24
+    },
+    "J6": {
+      "S1": 11,
+      "S2": 43,
+      "S3": 46,
+      "S4": 51
+    },
+    "J7": {
+      "S1": 19,
+      "S2": 30,
+      "S3": 35,
+      "S4": 41
+    }
+  },
+  "machine_timelines": {
+    "S1": {
+      "S1M1": [
+        {
+          "job": "J5",
+          "start": 0,
+          "finish": 6,
+          "duration": 6
+        },
+        {
+          "job": "J6",
+          "start": 6,
+          "finish": 11,
+          "duration": 5
+        },
+        {
+          "job": "J4",
+          "start": 11,
+          "finish": 15,
+          "duration": 4
+        },
+        {
+          "job": "J7",
+          "start": 15,
+          "finish": 19,
+          "duration": 4
+        }
+      ],
+      "S1M2": [
+        {
+          "job": "J3",
+          "start": 0,
+          "finish": 5,
+          "duration": 5
+        },
+        {
+          "job": "J1",
+          "start": 5,
+          "finish": 9,
+          "duration": 4
+        },
+        {
+          "job": "J2",
+          "start": 9,
+          "finish": 12,
+          "duration": 3
+        }
+      ]
+    },
+    "S2": {
+      "S2M1": [
+        {
+          "job": "J3",
+          "start": 5,
+          "finish": 9,
+          "duration": 4
+        },
+        {
+          "job": "J5",
+          "start": 9,
+          "finish": 14,
+          "duration": 5
+        },
+        {
+          "job": "J1",
+          "start": 14,
+          "finish": 19,
+          "duration": 5
+        },
+        {
+          "job": "J2",
+          "start": 19,
+          "finish": 25,
+          "duration": 6
+        },
+        {
+          "job": "J7",
+          "start": 25,
+          "finish": 30,
+          "duration": 5
+        },
+        {
+          "job": "J4",
+          "start": 30,
+          "finish": 37,
+          "duration": 7
+        },
+        {
+          "job": "J6",
+          "start": 37,
+          "finish": 43,
+          "duration": 6
+        }
+      ]
+    },
+    "S3": {
+      "S3M1": [
+        {
+          "job": "J3",
+          "start": 9,
+          "finish": 12,
+          "duration": 3
+        },
+        {
+          "job": "J1",
+          "start": 19,
+          "finish": 22,
+          "duration": 3
+        },
+        {
+          "job": "J2",
+          "start": 25,
+          "finish": 29,
+          "duration": 4
+        },
+        {
+          "job": "J7",
+          "start": 30,
+          "finish": 35,
+          "duration": 5
+        },
+        {
+          "job": "J6",
+          "start": 43,
+          "finish": 46,
+          "duration": 3
+        }
+      ],
+      "S3M2": [
+        {
+          "job": "J5",
+          "start": 14,
+          "finish": 18,
+          "duration": 4
+        },
+        {
+          "job": "J4",
+          "start": 37,
+          "finish": 39,
+          "duration": 2
+        }
+      ]
+    },
+    "S4": {
+      "S4M1": [
+        {
+          "job": "J3",
+          "start": 12,
+          "finish": 19,
+          "duration": 7
+        },
+        {
+          "job": "J5",
+          "start": 19,
+          "finish": 24,
+          "duration": 5
+        },
+        {
+          "job": "J1",
+          "start": 24,
+          "finish": 30,
+          "duration": 6
+        },
+        {
+          "job": "J2",
+          "start": 30,
+          "finish": 35,
+          "duration": 5
+        },
+        {
+          "job": "J7",
+          "start": 35,
+          "finish": 41,
+          "duration": 6
+        },
+        {
+          "job": "J4",
+          "start": 41,
+          "finish": 47,
+          "duration": 6
+        },
+        {
+          "job": "J6",
+          "start": 47,
+          "finish": 51,
+          "duration": 4
+        }
+      ]
+    }
+  },
+  "solve_method": "gurobi_disjunctive_milp_fhfss",
+  "solver": "Gurobi",
+  "runtime_seconds": 0.413457
+}

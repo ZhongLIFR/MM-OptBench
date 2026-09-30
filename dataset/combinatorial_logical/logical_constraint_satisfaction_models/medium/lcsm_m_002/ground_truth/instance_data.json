@@ -1,0 +1,1517 @@
+{
+  "instance_id": "lcsm_m_002",
+  "variant": "logical_constraint_satisfaction",
+  "scenario": "logical_constraint_satisfaction",
+  "difficulty": "medium",
+  "problem_type": "logical_constraint_satisfaction",
+  "objective_type": "pure_feasibility",
+  "sets": {
+    "variables": [
+      "x1",
+      "x2",
+      "x3",
+      "x4",
+      "x5",
+      "x6",
+      "x7",
+      "x8",
+      "x9",
+      "x10",
+      "x11",
+      "x12",
+      "x13",
+      "x14",
+      "x15",
+      "x16",
+      "x17",
+      "x18"
+    ],
+    "clauses": [
+      "C1",
+      "C2",
+      "C3",
+      "C4",
+      "C5",
+      "C6",
+      "C7",
+      "C8",
+      "C9",
+      "C10",
+      "C11",
+      "C12",
+      "C13",
+      "C14",
+      "C15",
+      "C16",
+      "C17",
+      "C18",
+      "C19",
+      "C20",
+      "C21",
+      "C22",
+      "C23",
+      "C24",
+      "C25",
+      "C26",
+      "C27",
+      "C28",
+      "C29",
+      "C30",
+      "C31",
+      "C32",
+      "C33",
+      "C34",
+      "C35",
+      "C36",
+      "C37",
+      "C38",
+      "C39",
+      "C40"
+    ]
+  },
+  "clauses": [
+    {
+      "name": "C1",
+      "literals": [
+        {
+          "variable": "x1",
+          "sign": "+"
+        },
+        {
+          "variable": "x18",
+          "sign": "+"
+        }
+      ]
+    },
+    {
+      "name": "C2",
+      "literals": [
+        {
+          "variable": "x2",
+          "sign": "\u2212"
+        },
+        {
+          "variable": "x5",
+          "sign": "\u2212"
+        }
+      ]
+    },
+    {
+      "name": "C3",
+      "literals": [
+        {
+          "variable": "x7",
+          "sign": "\u2212"
+        },
+        {
+          "variable": "x16",
+          "sign": "+"
+        }
+      ]
+    },
+    {
+      "name": "C4",
+      "literals": [
+        {
+          "variable": "x7",
+          "sign": "\u2212"
+        },
+        {
+          "variable": "x8",
+          "sign": "+"
+        }
+      ]
+    },
+    {
+      "name": "C5",
+      "literals": [
+        {
+          "variable": "x1",
+          "sign": "\u2212"
+        },
+        {
+          "variable": "x11",
+          "sign": "+"
+        }
+      ]
+    },
+    {
+      "name": "C6",
+      "literals": [
+        {
+          "variable": "x1",
+          "sign": "\u2212"
+        },
+        {
+          "variable": "x2",
+          "sign": "\u2212"
+        }
+      ]
+    },
+    {
+      "name": "C7",
+      "literals": [
+        {
+          "variable": "x8",
+          "sign": "+"
+        },
+        {
+          "variable": "x10",
+          "sign": "+"
+        },
+        {
+          "variable": "x11",
+          "sign": "+"
+        }
+      ]
+    },
+    {
+      "name": "C8",
+      "literals": [
+        {
+          "variable": "x5",
+          "sign": "+"
+        },
+        {
+          "variable": "x15",
+          "sign": "+"
+        }
+      ]
+    },
+    {
+      "name": "C9",
+      "literals": [
+        {
+          "variable": "x15",
+          "sign": "\u2212"
+        },
+        {
+          "variable": "x16",
+          "sign": "+"
+        }
+      ]
+    },
+    {
+      "name": "C10",
+      "literals": [
+        {
+          "variable": "x10",
+          "sign": "\u2212"
+        },
+        {
+          "variable": "x12",
+          "sign": "+"
+        }
+      ]
+    },
+    {
+      "name": "C11",
+      "literals": [
+        {
+          "variable": "x7",
+          "sign": "+"
+        },
+        {
+          "variable": "x9",
+          "sign": "+"
+        },
+        {
+          "variable": "x10",
+          "sign": "\u2212"
+        }
+      ]
+    },
+    {
+      "name": "C12",
+      "literals": [
+        {
+          "variable": "x1",
+          "sign": "+"
+        },
+        {
+          "variable": "x8",
+          "sign": "\u2212"
+        }
+      ]
+    },
+    {
+      "name": "C13",
+      "literals": [
+        {
+          "variable": "x3",
+          "sign": "\u2212"
+        },
+        {
+          "variable": "x5",
+          "sign": "+"
+        }
+      ]
+    },
+    {
+      "name": "C14",
+      "literals": [
+        {
+          "variable": "x7",
+          "sign": "\u2212"
+        },
+        {
+          "variable": "x11",
+          "sign": "+"
+        }
+      ]
+    },
+    {
+      "name": "C15",
+      "literals": [
+        {
+          "variable": "x13",
+          "sign": "+"
+        },
+        {
+          "variable": "x17",
+          "sign": "+"
+        }
+      ]
+    },
+    {
+      "name": "C16",
+      "literals": [
+        {
+          "variable": "x9",
+          "sign": "+"
+        },
+        {
+          "variable": "x11",
+          "sign": "\u2212"
+        },
+        {
+          "variable": "x12",
+          "sign": "\u2212"
+        }
+      ]
+    },
+    {
+      "name": "C17",
+      "literals": [
+        {
+          "variable": "x5",
+          "sign": "\u2212"
+        },
+        {
+          "variable": "x6",
+          "sign": "+"
+        }
+      ]
+    },
+    {
+      "name": "C18",
+      "literals": [
+        {
+          "variable": "x16",
+          "sign": "+"
+        },
+        {
+          "variable": "x17",
+          "sign": "\u2212"
+        },
+        {
+          "variable": "x18",
+          "sign": "\u2212"
+        }
+      ]
+    },
+    {
+      "name": "C19",
+      "literals": [
+        {
+          "variable": "x4",
+          "sign": "+"
+        },
+        {
+          "variable": "x5",
+          "sign": "\u2212"
+        },
+        {
+          "variable": "x6",
+          "sign": "+"
+        }
+      ]
+    },
+    {
+      "name": "C20",
+      "literals": [
+        {
+          "variable": "x9",
+          "sign": "+"
+        },
+        {
+          "variable": "x11",
+          "sign": "\u2212"
+        },
+        {
+          "variable": "x12",
+          "sign": "+"
+        }
+      ]
+    },
+    {
+      "name": "C21",
+      "literals": [
+        {
+          "variable": "x2",
+          "sign": "\u2212"
+        },
+        {
+          "variable": "x4",
+          "sign": "\u2212"
+        },
+        {
+          "variable": "x5",
+          "sign": "+"
+        }
+      ]
+    },
+    {
+      "name": "C22",
+      "literals": [
+        {
+          "variable": "x13",
+          "sign": "\u2212"
+        },
+        {
+          "variable": "x17",
+          "sign": "+"
+        },
+        {
+          "variable": "x18",
+          "sign": "+"
+        }
+      ]
+    },
+    {
+      "name": "C23",
+      "literals": [
+        {
+          "variable": "x17",
+          "sign": "\u2212"
+        },
+        {
+          "variable": "x18",
+          "sign": "+"
+        }
+      ]
+    },
+    {
+      "name": "C24",
+      "literals": [
+        {
+          "variable": "x14",
+          "sign": "+"
+        },
+        {
+          "variable": "x15",
+          "sign": "\u2212"
+        },
+        {
+          "variable": "x16",
+          "sign": "+"
+        }
+      ]
+    },
+    {
+      "name": "C25",
+      "literals": [
+        {
+          "variable": "x10",
+          "sign": "\u2212"
+        },
+        {
+          "variable": "x18",
+          "sign": "+"
+        }
+      ]
+    },
+    {
+      "name": "C26",
+      "literals": [
+        {
+          "variable": "x1",
+          "sign": "\u2212"
+        },
+        {
+          "variable": "x4",
+          "sign": "+"
+        }
+      ]
+    },
+    {
+      "name": "C27",
+      "literals": [
+        {
+          "variable": "x8",
+          "sign": "\u2212"
+        },
+        {
+          "variable": "x10",
+          "sign": "+"
+        }
+      ]
+    },
+    {
+      "name": "C28",
+      "literals": [
+        {
+          "variable": "x13",
+          "sign": "\u2212"
+        },
+        {
+          "variable": "x18",
+          "sign": "+"
+        }
+      ]
+    },
+    {
+      "name": "C29",
+      "literals": [
+        {
+          "variable": "x1",
+          "sign": "+"
+        },
+        {
+          "variable": "x3",
+          "sign": "\u2212"
+        }
+      ]
+    },
+    {
+      "name": "C30",
+      "literals": [
+        {
+          "variable": "x13",
+          "sign": "+"
+        },
+        {
+          "variable": "x17",
+          "sign": "+"
+        },
+        {
+          "variable": "x18",
+          "sign": "\u2212"
+        }
+      ]
+    },
+    {
+      "name": "C31",
+      "literals": [
+        {
+          "variable": "x9",
+          "sign": "\u2212"
+        },
+        {
+          "variable": "x10",
+          "sign": "+"
+        }
+      ]
+    },
+    {
+      "name": "C32",
+      "literals": [
+        {
+          "variable": "x2",
+          "sign": "\u2212"
+        },
+        {
+          "variable": "x5",
+          "sign": "+"
+        }
+      ]
+    },
+    {
+      "name": "C33",
+      "literals": [
+        {
+          "variable": "x2",
+          "sign": "\u2212"
+        },
+        {
+          "variable": "x4",
+          "sign": "\u2212"
+        },
+        {
+          "variable": "x6",
+          "sign": "\u2212"
+        }
+      ]
+    },
+    {
+      "name": "C34",
+      "literals": [
+        {
+          "variable": "x15",
+          "sign": "+"
+        },
+        {
+          "variable": "x16",
+          "sign": "\u2212"
+        }
+      ]
+    },
+    {
+      "name": "C35",
+      "literals": [
+        {
+          "variable": "x1",
+          "sign": "+"
+        },
+        {
+          "variable": "x4",
+          "sign": "\u2212"
+        }
+      ]
+    },
+    {
+      "name": "C36",
+      "literals": [
+        {
+          "variable": "x7",
+          "sign": "+"
+        },
+        {
+          "variable": "x11",
+          "sign": "+"
+        },
+        {
+          "variable": "x12",
+          "sign": "+"
+        }
+      ]
+    },
+    {
+      "name": "C37",
+      "literals": [
+        {
+          "variable": "x8",
+          "sign": "\u2212"
+        },
+        {
+          "variable": "x9",
+          "sign": "+"
+        },
+        {
+          "variable": "x11",
+          "sign": "+"
+        }
+      ]
+    },
+    {
+      "name": "C38",
+      "literals": [
+        {
+          "variable": "x3",
+          "sign": "+"
+        },
+        {
+          "variable": "x4",
+          "sign": "+"
+        },
+        {
+          "variable": "x6",
+          "sign": "\u2212"
+        }
+      ]
+    },
+    {
+      "name": "C39",
+      "literals": [
+        {
+          "variable": "x12",
+          "sign": "+"
+        },
+        {
+          "variable": "x17",
+          "sign": "\u2212"
+        }
+      ]
+    },
+    {
+      "name": "C40",
+      "literals": [
+        {
+          "variable": "x4",
+          "sign": "\u2212"
+        },
+        {
+          "variable": "x6",
+          "sign": "+"
+        }
+      ]
+    }
+  ],
+  "implications": [
+    {
+      "name": "I1",
+      "if_variable": "x9",
+      "then_variable": "x8"
+    },
+    {
+      "name": "I2",
+      "if_variable": "x8",
+      "then_variable": "x11"
+    },
+    {
+      "name": "I3",
+      "if_variable": "x11",
+      "then_variable": "x10"
+    },
+    {
+      "name": "I4",
+      "if_variable": "x11",
+      "then_variable": "x16"
+    }
+  ],
+  "at_most_one_groups": [
+    {
+      "name": "A1",
+      "variables": [
+        "x5",
+        "x6"
+      ]
+    }
+  ],
+  "cardinality_constraints": [],
+  "clause_variable_matrix": [
+    [
+      1,
+      0,
+      0,
+      0,
+      0,
+      0,
+      0,
+      0,
+      0,
+      0,
+      0,
+      0,
+      0,
+      0,
+      0,
+      0,
+      0,
+      1
+    ],
+    [
+      0,
+      -1,
+      0,
+      0,
+      -1,
+      0,
+      0,
+      0,
+      0,
+      0,
+      0,
+      0,
+      0,
+      0,
+      0,
+      0,
+      0,
+      0
+    ],
+    [
+      0,
+      0,
+      0,
+      0,
+      0,
+      0,
+      -1,
+      0,
+      0,
+      0,
+      0,
+      0,
+      0,
+      0,
+      0,
+      1,
+      0,
+      0
+    ],
+    [
+      0,
+      0,
+      0,
+      0,
+      0,
+      0,
+      -1,
+      1,
+      0,
+      0,
+      0,
+      0,
+      0,
+      0,
+      0,
+      0,
+      0,
+      0
+    ],
+    [
+      -1,
+      0,
+      0,
+      0,
+      0,
+      0,
+      0,
+      0,
+      0,
+      0,
+      1,
+      0,
+      0,
+      0,
+      0,
+      0,
+      0,
+      0
+    ],
+    [
+      -1,
+      -1,
+      0,
+      0,
+      0,
+      0,
+      0,
+      0,
+      0,
+      0,
+      0,
+      0,
+      0,
+      0,
+      0,
+      0,
+      0,
+      0
+    ],
+    [
+      0,
+      0,
+      0,
+      0,
+      0,
+      0,
+      0,
+      1,
+      0,
+      1,
+      1,
+      0,
+      0,
+      0,
+      0,
+      0,
+      0,
+      0
+    ],
+    [
+      0,
+      0,
+      0,
+      0,
+      1,
+      0,
+      0,
+      0,
+      0,
+      0,
+      0,
+      0,
+      0,
+      0,
+      1,
+      0,
+      0,
+      0
+    ],
+    [
+      0,
+      0,
+      0,
+      0,
+      0,
+      0,
+      0,
+      0,
+      0,
+      0,
+      0,
+      0,
+      0,
+      0,
+      -1,
+      1,
+      0,
+      0
+    ],
+    [
+      0,
+      0,
+      0,
+      0,
+      0,
+      0,
+      0,
+      0,
+      0,
+      -1,
+      0,
+      1,
+      0,
+      0,
+      0,
+      0,
+      0,
+      0
+    ],
+    [
+      0,
+      0,
+      0,
+      0,
+      0,
+      0,
+      1,
+      0,
+      1,
+      -1,
+      0,
+      0,
+      0,
+      0,
+      0,
+      0,
+      0,
+      0
+    ],
+    [
+      1,
+      0,
+      0,
+      0,
+      0,
+      0,
+      0,
+      -1,
+      0,
+      0,
+      0,
+      0,
+      0,
+      0,
+      0,
+      0,
+      0,
+      0
+    ],
+    [
+      0,
+      0,
+      -1,
+      0,
+      1,
+      0,
+      0,
+      0,
+      0,
+      0,
+      0,
+      0,
+      0,
+      0,
+      0,
+      0,
+      0,
+      0
+    ],
+    [
+      0,
+      0,
+      0,
+      0,
+      0,
+      0,
+      -1,
+      0,
+      0,
+      0,
+      1,
+      0,
+      0,
+      0,
+      0,
+      0,
+      0,
+      0
+    ],
+    [
+      0,
+      0,
+      0,
+      0,
+      0,
+      0,
+      0,
+      0,
+      0,
+      0,
+      0,
+      0,
+      1,
+      0,
+      0,
+      0,
+      1,
+      0
+    ],
+    [
+      0,
+      0,
+      0,
+      0,
+      0,
+      0,
+      0,
+      0,
+      1,
+      0,
+      -1,
+      -1,
+      0,
+      0,
+      0,
+      0,
+      0,
+      0
+    ],
+    [
+      0,
+      0,
+      0,
+      0,
+      -1,
+      1,
+      0,
+      0,
+      0,
+      0,
+      0,
+      0,
+      0,
+      0,
+      0,
+      0,
+      0,
+      0
+    ],
+    [
+      0,
+      0,
+      0,
+      0,
+      0,
+      0,
+      0,
+      0,
+      0,
+      0,
+      0,
+      0,
+      0,
+      0,
+      0,
+      1,
+      -1,
+      -1
+    ],
+    [
+      0,
+      0,
+      0,
+      1,
+      -1,
+      1,
+      0,
+      0,
+      0,
+      0,
+      0,
+      0,
+      0,
+      0,
+      0,
+      0,
+      0,
+      0
+    ],
+    [
+      0,
+      0,
+      0,
+      0,
+      0,
+      0,
+      0,
+      0,
+      1,
+      0,
+      -1,
+      1,
+      0,
+      0,
+      0,
+      0,
+      0,
+      0
+    ],
+    [
+      0,
+      -1,
+      0,
+      -1,
+      1,
+      0,
+      0,
+      0,
+      0,
+      0,
+      0,
+      0,
+      0,
+      0,
+      0,
+      0,
+      0,
+      0
+    ],
+    [
+      0,
+      0,
+      0,
+      0,
+      0,
+      0,
+      0,
+      0,
+      0,
+      0,
+      0,
+      0,
+      -1,
+      0,
+      0,
+      0,
+      1,
+      1
+    ],
+    [
+      0,
+      0,
+      0,
+      0,
+      0,
+      0,
+      0,
+      0,
+      0,
+      0,
+      0,
+      0,
+      0,
+      0,
+      0,
+      0,
+      -1,
+      1
+    ],
+    [
+      0,
+      0,
+      0,
+      0,
+      0,
+      0,
+      0,
+      0,
+      0,
+      0,
+      0,
+      0,
+      0,
+      1,
+      -1,
+      1,
+      0,
+      0
+    ],
+    [
+      0,
+      0,
+      0,
+      0,
+      0,
+      0,
+      0,
+      0,
+      0,
+      -1,
+      0,
+      0,
+      0,
+      0,
+      0,
+      0,
+      0,
+      1
+    ],
+    [
+      -1,
+      0,
+      0,
+      1,
+      0,
+      0,
+      0,
+      0,
+      0,
+      0,
+      0,
+      0,
+      0,
+      0,
+      0,
+      0,
+      0,
+      0
+    ],
+    [
+      0,
+      0,
+      0,
+      0,
+      0,
+      0,
+      0,
+      -1,
+      0,
+      1,
+      0,
+      0,
+      0,
+      0,
+      0,
+      0,
+      0,
+      0
+    ],
+    [
+      0,
+      0,
+      0,
+      0,
+      0,
+      0,
+      0,
+      0,
+      0,
+      0,
+      0,
+      0,
+      -1,
+      0,
+      0,
+      0,
+      0,
+      1
+    ],
+    [
+      1,
+      0,
+      -1,
+      0,
+      0,
+      0,
+      0,
+      0,
+      0,
+      0,
+      0,
+      0,
+      0,
+      0,
+      0,
+      0,
+      0,
+      0
+    ],
+    [
+      0,
+      0,
+      0,
+      0,
+      0,
+      0,
+      0,
+      0,
+      0,
+      0,
+      0,
+      0,
+      1,
+      0,
+      0,
+      0,
+      1,
+      -1
+    ],
+    [
+      0,
+      0,
+      0,
+      0,
+      0,
+      0,
+      0,
+      0,
+      -1,
+      1,
+      0,
+      0,
+      0,
+      0,
+      0,
+      0,
+      0,
+      0
+    ],
+    [
+      0,
+      -1,
+      0,
+      0,
+      1,
+      0,
+      0,
+      0,
+      0,
+      0,
+      0,
+      0,
+      0,
+      0,
+      0,
+      0,
+      0,
+      0
+    ],
+    [
+      0,
+      -1,
+      0,
+      -1,
+      0,
+      -1,
+      0,
+      0,
+      0,
+      0,
+      0,
+      0,
+      0,
+      0,
+      0,
+      0,
+      0,
+      0
+    ],
+    [
+      0,
+      0,
+      0,
+      0,
+      0,
+      0,
+      0,
+      0,
+      0,
+      0,
+      0,
+      0,
+      0,
+      0,
+      1,
+      -1,
+      0,
+      0
+    ],
+    [
+      1,
+      0,
+      0,
+      -1,
+      0,
+      0,
+      0,
+      0,
+      0,
+      0,
+      0,
+      0,
+      0,
+      0,
+      0,
+      0,
+      0,
+      0
+    ],
+    [
+      0,
+      0,
+      0,
+      0,
+      0,
+      0,
+      1,
+      0,
+      0,
+      0,
+      1,
+      1,
+      0,
+      0,
+      0,
+      0,
+      0,
+      0
+    ],
+    [
+      0,
+      0,
+      0,
+      0,
+      0,
+      0,
+      0,
+      -1,
+      1,
+      0,
+      1,
+      0,
+      0,
+      0,
+      0,
+      0,
+      0,
+      0
+    ],
+    [
+      0,
+      0,
+      1,
+      1,
+      0,
+      -1,
+      0,
+      0,
+      0,
+      0,
+      0,
+      0,
+      0,
+      0,
+      0,
+      0,
+      0,
+      0
+    ],
+    [
+      0,
+      0,
+      0,
+      0,
+      0,
+      0,
+      0,
+      0,
+      0,
+      0,
+      0,
+      1,
+      0,
+      0,
+      0,
+      0,
+      -1,
+      0
+    ],
+    [
+      0,
+      0,
+      0,
+      -1,
+      0,
+      1,
+      0,
+      0,
+      0,
+      0,
+      0,
+      0,
+      0,
+      0,
+      0,
+      0,
+      0,
+      0
+    ]
+  ],
+  "meta_parameters": {
+    "number_of_variables": 18,
+    "number_of_clauses": 45,
+    "clause_count": 40,
+    "implication_count": 4,
+    "at_most_one_group_count": 1,
+    "cardinality_constraint_count": 0,
+    "clause_density": 2.5,
+    "clause_type_distribution": {
+      "2_sat": 26,
+      "3_sat": 14,
+      "4_sat": 0
+    },
+    "implication_chain_depth": 3,
+    "satisfiable_flag": true,
+    "seed": 8202,
+    "formulation_size": 63,
+    "visual_type": "clause_variable_matrix",
+    "matrix_height": 45,
+    "matrix_width": 18,
+    "matrix_fill_ratio": 0.1284,
+    "clause_group_count": 1,
+    "variable_cluster_count": 3,
+    "visual_group_structure": "clustered_medium",
+    "cluster_count": 3,
+    "cross_cluster_ratio": 0.2,
+    "group": "A",
+    "clause_mix": "mixed_2_3sat"
+  },
+  "reference_solution_summary": {
+    "true_variable_count": 12,
+    "false_variable_count": 6
+  }
+}

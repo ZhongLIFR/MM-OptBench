@@ -1,0 +1,197 @@
+{
+  "instance_id": "mdkp_e_009",
+  "variant": "multi_dimensional_knapsack",
+  "scenario": "multi_dimensional_knapsack",
+  "difficulty": "easy",
+  "sets": {
+    "items": [
+      1,
+      2,
+      3,
+      4,
+      5,
+      6,
+      7,
+      8,
+      9,
+      10,
+      11,
+      12,
+      13,
+      14,
+      15,
+      16,
+      17,
+      18,
+      19,
+      20,
+      21,
+      22,
+      23
+    ],
+    "resources": [
+      "R1",
+      "R2",
+      "R3"
+    ]
+  },
+  "values": [
+    38,
+    29,
+    31,
+    18,
+    40,
+    24,
+    29,
+    16,
+    40,
+    24,
+    18,
+    24,
+    40,
+    38,
+    23,
+    19,
+    40,
+    24,
+    25,
+    18,
+    40,
+    31,
+    18
+  ],
+  "weights": [
+    [
+      9,
+      9,
+      10
+    ],
+    [
+      3,
+      7,
+      8
+    ],
+    [
+      5,
+      6,
+      7
+    ],
+    [
+      5,
+      2,
+      2
+    ],
+    [
+      11,
+      9,
+      10
+    ],
+    [
+      3,
+      8,
+      5
+    ],
+    [
+      3,
+      7,
+      8
+    ],
+    [
+      3,
+      4,
+      5
+    ],
+    [
+      10,
+      10,
+      11
+    ],
+    [
+      4,
+      3,
+      6
+    ],
+    [
+      3,
+      2,
+      5
+    ],
+    [
+      3,
+      7,
+      6
+    ],
+    [
+      9,
+      9,
+      11
+    ],
+    [
+      8,
+      8,
+      8
+    ],
+    [
+      7,
+      2,
+      7
+    ],
+    [
+      5,
+      2,
+      7
+    ],
+    [
+      11,
+      10,
+      9
+    ],
+    [
+      3,
+      6,
+      7
+    ],
+    [
+      8,
+      4,
+      6
+    ],
+    [
+      8,
+      4,
+      2
+    ],
+    [
+      11,
+      11,
+      11
+    ],
+    [
+      8,
+      6,
+      5
+    ],
+    [
+      8,
+      5,
+      2
+    ]
+  ],
+  "capacities": [
+    43,
+    47,
+    51
+  ],
+  "meta_parameters": {
+    "number_items": 23,
+    "number_dimensions": 3,
+    "capacity_tightness_type": "tight",
+    "profit_weight_correlation_type": "weakly_correlated",
+    "weight_distribution_type": "mixture_small_and_large_items",
+    "seed": 2409,
+    "group": "C",
+    "visual_type": "bars_resource_usage_chart",
+    "formulation_size": 26,
+    "binding_constraint_count": 1
+  }
+}

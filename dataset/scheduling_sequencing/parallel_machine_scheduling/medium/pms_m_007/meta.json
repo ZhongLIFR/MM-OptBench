@@ -1,0 +1,23 @@
+{
+  "number_jobs": 18,
+  "number_machines": 4,
+  "machine_type": "Q",
+  "objective_type": "weighted_completion",
+  "processing_time_regime": "correlated_related_weighted",
+  "heterogeneity_level": "medium",
+  "heavy_tail_flag": true,
+  "seed": 507,
+  "formulation_size": 756,
+  "instance_id": "pms_m_007",
+  "variant": "parallel_machine_scheduling",
+  "scenario": "parallel_machine_scheduling",
+  "difficulty": "medium",
+  "objective_value": 2495,
+  "objective_exact": 2495.0,
+  "status": "optimal",
+  "makespan": 65,
+  "runtime_seconds": 6.221289500128478,
+  "solve_method": "exact_subset_dp_completion",
+  "solver": "Custom exact subset DP",
+  "visual_0_checksum_md5": "91822eafe2913ae65d6d608a20a10d53"
+}

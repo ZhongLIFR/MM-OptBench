@@ -1,0 +1,492 @@
+{
+  "instance_id": "wpss_m_006",
+  "variant": "workforce_planning_shift_scheduling",
+  "scenario": "workforce_planning_shift_scheduling",
+  "difficulty": "medium",
+  "sets": {
+    "workers": [
+      "W1",
+      "W2",
+      "W3",
+      "W4",
+      "W5",
+      "W6",
+      "W7",
+      "W8",
+      "W9",
+      "W10",
+      "W11"
+    ],
+    "days": [
+      "Mon1",
+      "Tue1",
+      "Wed1",
+      "Thu1",
+      "Fri1",
+      "Sat1",
+      "Sun1",
+      "Mon2",
+      "Tue2",
+      "Wed2",
+      "Thu2",
+      "Fri2",
+      "Sat2",
+      "Sun2"
+    ],
+    "shifts": [
+      "D",
+      "E",
+      "N"
+    ]
+  },
+  "indices": {
+    "worker_index": {
+      "W1": 0,
+      "W2": 1,
+      "W3": 2,
+      "W4": 3,
+      "W5": 4,
+      "W6": 5,
+      "W7": 6,
+      "W8": 7,
+      "W9": 8,
+      "W10": 9,
+      "W11": 10
+    },
+    "day_index": {
+      "Mon1": 0,
+      "Tue1": 1,
+      "Wed1": 2,
+      "Thu1": 3,
+      "Fri1": 4,
+      "Sat1": 5,
+      "Sun1": 6,
+      "Mon2": 7,
+      "Tue2": 8,
+      "Wed2": 9,
+      "Thu2": 10,
+      "Fri2": 11,
+      "Sat2": 12,
+      "Sun2": 13
+    },
+    "shift_index": {
+      "D": 0,
+      "E": 1,
+      "N": 2
+    }
+  },
+  "shift_labels": {
+    "D": "Day",
+    "E": "Evening",
+    "N": "Night"
+  },
+  "shift_time_window": {
+    "D": "07:00-15:00",
+    "E": "15:00-23:00",
+    "N": "23:00-07:00"
+  },
+  "availability_legend": {
+    "OFF": [],
+    "D": [
+      "D"
+    ],
+    "E": [
+      "E"
+    ],
+    "N": [
+      "N"
+    ],
+    "DE": [
+      "D",
+      "E"
+    ],
+    "EN": [
+      "E",
+      "N"
+    ],
+    "DEN": [
+      "D",
+      "E",
+      "N"
+    ]
+  },
+  "constraint_flags": {
+    "night_limit": true,
+    "consecutive": true,
+    "rest_rule": false
+  },
+  "demand": {
+    "Mon1": {
+      "D": 3,
+      "E": 2,
+      "N": 1
+    },
+    "Tue1": {
+      "D": 3,
+      "E": 2,
+      "N": 1
+    },
+    "Wed1": {
+      "D": 3,
+      "E": 2,
+      "N": 1
+    },
+    "Thu1": {
+      "D": 3,
+      "E": 2,
+      "N": 1
+    },
+    "Fri1": {
+      "D": 4,
+      "E": 2,
+      "N": 1
+    },
+    "Sat1": {
+      "D": 4,
+      "E": 3,
+      "N": 2
+    },
+    "Sun1": {
+      "D": 3,
+      "E": 2,
+      "N": 2
+    },
+    "Mon2": {
+      "D": 3,
+      "E": 2,
+      "N": 1
+    },
+    "Tue2": {
+      "D": 3,
+      "E": 2,
+      "N": 1
+    },
+    "Wed2": {
+      "D": 3,
+      "E": 2,
+      "N": 1
+    },
+    "Thu2": {
+      "D": 4,
+      "E": 2,
+      "N": 1
+    },
+    "Fri2": {
+      "D": 4,
+      "E": 3,
+      "N": 1
+    },
+    "Sat2": {
+      "D": 4,
+      "E": 3,
+      "N": 2
+    },
+    "Sun2": {
+      "D": 3,
+      "E": 2,
+      "N": 2
+    }
+  },
+  "shift_cost": {
+    "W1": {
+      "D": 18,
+      "E": 20,
+      "N": 25
+    },
+    "W2": {
+      "D": 19,
+      "E": 21,
+      "N": 24
+    },
+    "W3": {
+      "D": 16,
+      "E": 18,
+      "N": 99
+    },
+    "W4": {
+      "D": 24,
+      "E": 19,
+      "N": 17
+    },
+    "W5": {
+      "D": 15,
+      "E": 20,
+      "N": 99
+    },
+    "W6": {
+      "D": 20,
+      "E": 21,
+      "N": 23
+    },
+    "W7": {
+      "D": 22,
+      "E": 20,
+      "N": 18
+    },
+    "W8": {
+      "D": 21,
+      "E": 22,
+      "N": 24
+    },
+    "W9": {
+      "D": 20,
+      "E": 19,
+      "N": 22
+    },
+    "W10": {
+      "D": 19,
+      "E": 18,
+      "N": 99
+    },
+    "W11": {
+      "D": 17,
+      "E": 19,
+      "N": 23
+    }
+  },
+  "regular_shift_limit": {
+    "W1": 7,
+    "W2": 7,
+    "W3": 7,
+    "W4": 7,
+    "W5": 6,
+    "W6": 7,
+    "W7": 7,
+    "W8": 6,
+    "W9": 6,
+    "W10": 5,
+    "W11": 7
+  },
+  "overtime_cost": {
+    "W1": 12,
+    "W2": 12,
+    "W3": 14,
+    "W4": 10,
+    "W5": 15,
+    "W6": 12,
+    "W7": 10,
+    "W8": 9,
+    "W9": 11,
+    "W10": 13,
+    "W11": 11
+  },
+  "max_night_shifts": {
+    "W1": 2,
+    "W2": 2,
+    "W3": 0,
+    "W4": 5,
+    "W5": 0,
+    "W6": 2,
+    "W7": 4,
+    "W8": 3,
+    "W9": 3,
+    "W10": 0,
+    "W11": 2
+  },
+  "max_consecutive_days": {
+    "W1": 5,
+    "W2": 5,
+    "W3": 5,
+    "W4": 4,
+    "W5": 5,
+    "W6": 4,
+    "W7": 4,
+    "W8": 5,
+    "W9": 4,
+    "W10": 3,
+    "W11": 5
+  },
+  "availability_code": {
+    "W1": {
+      "Mon1": "DEN",
+      "Tue1": "DEN",
+      "Wed1": "DEN",
+      "Thu1": "DEN",
+      "Fri1": "DEN",
+      "Sat1": "DE",
+      "Sun1": "OFF",
+      "Mon2": "DEN",
+      "Tue2": "DEN",
+      "Wed2": "DEN",
+      "Thu2": "DEN",
+      "Fri2": "DE",
+      "Sat2": "OFF",
+      "Sun2": "OFF"
+    },
+    "W2": {
+      "Mon1": "DEN",
+      "Tue1": "DEN",
+      "Wed1": "OFF",
+      "Thu1": "DEN",
+      "Fri1": "DEN",
+      "Sat1": "DE",
+      "Sun1": "DE",
+      "Mon2": "DEN",
+      "Tue2": "DEN",
+      "Wed2": "OFF",
+      "Thu2": "DEN",
+      "Fri2": "DEN",
+      "Sat2": "DE",
+      "Sun2": "DE"
+    },
+    "W3": {
+      "Mon1": "DE",
+      "Tue1": "DE",
+      "Wed1": "DE",
+      "Thu1": "DE",
+      "Fri1": "DE",
+      "Sat1": "D",
+      "Sun1": "OFF",
+      "Mon2": "DE",
+      "Tue2": "DE",
+      "Wed2": "DE",
+      "Thu2": "DE",
+      "Fri2": "D",
+      "Sat2": "OFF",
+      "Sun2": "DE"
+    },
+    "W4": {
+      "Mon1": "EN",
+      "Tue1": "EN",
+      "Wed1": "N",
+      "Thu1": "EN",
+      "Fri1": "N",
+      "Sat1": "EN",
+      "Sun1": "N",
+      "Mon2": "EN",
+      "Tue2": "EN",
+      "Wed2": "N",
+      "Thu2": "EN",
+      "Fri2": "N",
+      "Sat2": "EN",
+      "Sun2": "N"
+    },
+    "W5": {
+      "Mon1": "D",
+      "Tue1": "D",
+      "Wed1": "D",
+      "Thu1": "D",
+      "Fri1": "D",
+      "Sat1": "DE",
+      "Sun1": "OFF",
+      "Mon2": "D",
+      "Tue2": "D",
+      "Wed2": "OFF",
+      "Thu2": "D",
+      "Fri2": "D",
+      "Sat2": "DE",
+      "Sun2": "OFF"
+    },
+    "W6": {
+      "Mon1": "DEN",
+      "Tue1": "OFF",
+      "Wed1": "DEN",
+      "Thu1": "DEN",
+      "Fri1": "OFF",
+      "Sat1": "DEN",
+      "Sun1": "DE",
+      "Mon2": "DEN",
+      "Tue2": "DEN",
+      "Wed2": "DEN",
+      "Thu2": "OFF",
+      "Fri2": "DEN",
+      "Sat2": "DE",
+      "Sun2": "DEN"
+    },
+    "W7": {
+      "Mon1": "EN",
+      "Tue1": "EN",
+      "Wed1": "EN",
+      "Thu1": "EN",
+      "Fri1": "N",
+      "Sat1": "EN",
+      "Sun1": "EN",
+      "Mon2": "OFF",
+      "Tue2": "EN",
+      "Wed2": "EN",
+      "Thu2": "EN",
+      "Fri2": "N",
+      "Sat2": "EN",
+      "Sun2": "EN"
+    },
+    "W8": {
+      "Mon1": "DEN",
+      "Tue1": "DEN",
+      "Wed1": "DEN",
+      "Thu1": "OFF",
+      "Fri1": "DEN",
+      "Sat1": "DEN",
+      "Sun1": "DEN",
+      "Mon2": "DEN",
+      "Tue2": "OFF",
+      "Wed2": "DEN",
+      "Thu2": "DEN",
+      "Fri2": "DEN",
+      "Sat2": "DE",
+      "Sun2": "OFF"
+    },
+    "W9": {
+      "Mon1": "DEN",
+      "Tue1": "DEN",
+      "Wed1": "EN",
+      "Thu1": "EN",
+      "Fri1": "DEN",
+      "Sat1": "DEN",
+      "Sun1": "OFF",
+      "Mon2": "DEN",
+      "Tue2": "DEN",
+      "Wed2": "EN",
+      "Thu2": "EN",
+      "Fri2": "DEN",
+      "Sat2": "DEN",
+      "Sun2": "OFF"
+    },
+    "W10": {
+      "Mon1": "DE",
+      "Tue1": "OFF",
+      "Wed1": "DE",
+      "Thu1": "DE",
+      "Fri1": "OFF",
+      "Sat1": "EN",
+      "Sun1": "EN",
+      "Mon2": "DE",
+      "Tue2": "DE",
+      "Wed2": "OFF",
+      "Thu2": "DE",
+      "Fri2": "EN",
+      "Sat2": "EN",
+      "Sun2": "DE"
+    },
+    "W11": {
+      "Mon1": "DEN",
+      "Tue1": "DEN",
+      "Wed1": "DEN",
+      "Thu1": "DEN",
+      "Fri1": "OFF",
+      "Sat1": "DEN",
+      "Sun1": "DEN",
+      "Mon2": "DEN",
+      "Tue2": "DEN",
+      "Wed2": "DEN",
+      "Thu2": "OFF",
+      "Fri2": "DEN",
+      "Sat2": "DEN",
+      "Sun2": "DEN"
+    }
+  },
+  "meta_parameters": {
+    "number_periods": 14,
+    "number_workers": 11,
+    "number_shift_types": 3,
+    "coverage_regime": "two_week_weekend_peaks",
+    "overtime_regime": "moderate_worker_specific_penalties",
+    "availability_regime": "mixed_generalists_and_part_time_day_workers",
+    "night_limit_flag": true,
+    "consecutive_constraint_flag": true,
+    "rest_rule_flag": false,
+    "peak_demand_flag": true,
+    "visual_type": "staffing_heatmap_plus_worker_profile_availability_matrix",
+    "seed": 1006,
+    "formulation_size": 1258
+  }
+}

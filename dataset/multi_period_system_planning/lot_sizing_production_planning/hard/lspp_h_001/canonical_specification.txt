@@ -1,0 +1,83 @@
+Canonical specification for a deterministic hard-level multi-product lot-sizing and production planning instance.
+
+Interpretation:
+- For each product and period, a production quantity may be chosen.
+- Production completed in a period is immediately available to satisfy that period's demand.
+- Unsatisfied demand is not allowed; therefore inventory balance must hold in every period.
+- End-of-period inventory may be carried into the next period and incurs a holding cost.
+- If positive production is chosen for a product in a period, a fixed setup cost is incurred for that product-period.
+- Total production across all products in a period is limited by the shared capacity of that period.
+
+Sets:
+- Products P = ['P1', 'P2', 'P3', 'P4', 'P5']
+- Periods T = ['t1', 't2', 't3', 't4', 't5', 't6', 't7', 't8', 't9', 't10', 't11', 't12', 't13', 't14', 't15', 't16', 't17', 't18', 't19', 't20', 't21', 't22', 't23', 't24']
+
+Initial inventory:
+- P1: 0
+- P2: 0
+- P3: 0
+- P4: 0
+- P5: 0
+
+Per-product parameter tables:
+- P1 demand by period: t1=5, t2=6, t3=10, t4=8, t5=6, t6=9, t7=7, t8=6, t9=11, t10=9, t11=7, t12=8, t13=6, t14=7, t15=11, t16=9, t17=8, t18=11, t19=9, t20=8, t21=12, t22=10, t23=8, t24=9
+- P1 unit production cost by period: t1=3, t2=3, t3=3, t4=3, t5=3, t6=3, t7=4, t8=4, t9=4, t10=4, t11=4, t12=4, t13=5, t14=5, t15=5, t16=5, t17=5, t18=5, t19=3, t20=3, t21=3, t22=3, t23=3, t24=3
+- P1 unit holding cost by period: t1=1, t2=1, t3=1, t4=1, t5=1, t6=1, t7=1, t8=1, t9=1, t10=1, t11=1, t12=1, t13=2, t14=2, t15=2, t16=2, t17=2, t18=2, t19=2, t20=2, t21=2, t22=2, t23=2, t24=0
+- P1 fixed setup cost by period: t1=24, t2=24, t3=24, t4=24, t5=24, t6=24, t7=24, t8=24, t9=24, t10=24, t11=24, t12=24, t13=24, t14=24, t15=24, t16=24, t17=24, t18=24, t19=24, t20=24, t21=24, t22=24, t23=24, t24=24
+- P1 setup-linking constants by period: t1=200, t2=195, t3=189, t4=179, t5=171, t6=165, t7=156, t8=149, t9=143, t10=132, t11=123, t12=116, t13=108, t14=102, t15=95, t16=84, t17=75, t18=67, t19=56, t20=47, t21=39, t22=27, t23=17, t24=9
+- P2 demand by period: t1=6, t2=7, t3=11, t4=9, t5=7, t6=10, t7=8, t8=7, t9=12, t10=10, t11=8, t12=9, t13=7, t14=8, t15=12, t16=10, t17=9, t18=12, t19=10, t20=9, t21=13, t22=11, t23=9, t24=10
+- P2 unit production cost by period: t1=4, t2=4, t3=4, t4=4, t5=4, t6=4, t7=5, t8=5, t9=5, t10=5, t11=5, t12=5, t13=6, t14=6, t15=6, t16=6, t17=6, t18=6, t19=4, t20=4, t21=4, t22=4, t23=4, t24=4
+- P2 unit holding cost by period: t1=2, t2=2, t3=2, t4=2, t5=2, t6=2, t7=2, t8=2, t9=2, t10=2, t11=2, t12=2, t13=2, t14=2, t15=2, t16=2, t17=2, t18=2, t19=2, t20=2, t21=2, t22=2, t23=2, t24=0
+- P2 fixed setup cost by period: t1=28, t2=28, t3=28, t4=28, t5=28, t6=28, t7=28, t8=28, t9=28, t10=28, t11=28, t12=28, t13=28, t14=28, t15=28, t16=28, t17=28, t18=28, t19=28, t20=28, t21=28, t22=28, t23=28, t24=28
+- P2 setup-linking constants by period: t1=224, t2=218, t3=211, t4=200, t5=191, t6=184, t7=174, t8=166, t9=159, t10=147, t11=137, t12=129, t13=120, t14=113, t15=105, t16=93, t17=83, t18=74, t19=62, t20=52, t21=43, t22=30, t23=19, t24=10
+- P3 demand by period: t1=7, t2=8, t3=12, t4=10, t5=8, t6=11, t7=9, t8=8, t9=13, t10=11, t11=9, t12=10, t13=8, t14=9, t15=13, t16=11, t17=10, t18=13, t19=11, t20=10, t21=14, t22=12, t23=10, t24=11
+- P3 unit production cost by period: t1=5, t2=5, t3=5, t4=5, t5=5, t6=5, t7=6, t8=6, t9=6, t10=6, t11=6, t12=6, t13=7, t14=7, t15=7, t16=7, t17=7, t18=7, t19=5, t20=5, t21=5, t22=5, t23=5, t24=5
+- P3 unit holding cost by period: t1=1, t2=1, t3=1, t4=1, t5=1, t6=1, t7=1, t8=1, t9=1, t10=1, t11=1, t12=1, t13=1, t14=1, t15=1, t16=1, t17=1, t18=1, t19=1, t20=1, t21=1, t22=1, t23=1, t24=0
+- P3 fixed setup cost by period: t1=32, t2=32, t3=32, t4=32, t5=32, t6=32, t7=32, t8=32, t9=32, t10=32, t11=32, t12=32, t13=32, t14=32, t15=32, t16=32, t17=32, t18=32, t19=32, t20=32, t21=32, t22=32, t23=32, t24=32
+- P3 setup-linking constants by period: t1=248, t2=241, t3=233, t4=221, t5=211, t6=203, t7=192, t8=183, t9=175, t10=162, t11=151, t12=142, t13=132, t14=124, t15=115, t16=102, t17=91, t18=81, t19=68, t20=57, t21=47, t22=33, t23=21, t24=11
+- P4 demand by period: t1=9, t2=10, t3=14, t4=12, t5=10, t6=13, t7=11, t8=10, t9=15, t10=13, t11=11, t12=12, t13=10, t14=11, t15=15, t16=13, t17=12, t18=15, t19=13, t20=12, t21=16, t22=14, t23=12, t24=13
+- P4 unit production cost by period: t1=6, t2=6, t3=6, t4=6, t5=6, t6=6, t7=7, t8=7, t9=7, t10=7, t11=7, t12=7, t13=8, t14=8, t15=8, t16=8, t17=8, t18=8, t19=6, t20=6, t21=6, t22=6, t23=6, t24=6
+- P4 unit holding cost by period: t1=2, t2=2, t3=2, t4=2, t5=2, t6=2, t7=2, t8=2, t9=2, t10=2, t11=2, t12=2, t13=2, t14=2, t15=2, t16=2, t17=2, t18=2, t19=2, t20=2, t21=2, t22=2, t23=2, t24=0
+- P4 fixed setup cost by period: t1=36, t2=36, t3=36, t4=36, t5=36, t6=36, t7=36, t8=36, t9=36, t10=36, t11=36, t12=36, t13=36, t14=36, t15=36, t16=36, t17=36, t18=36, t19=36, t20=36, t21=36, t22=36, t23=36, t24=36
+- P4 setup-linking constants by period: t1=296, t2=287, t3=277, t4=263, t5=251, t6=241, t7=228, t8=217, t9=207, t10=192, t11=179, t12=168, t13=156, t14=146, t15=135, t16=120, t17=107, t18=95, t19=80, t20=67, t21=55, t22=39, t23=25, t24=13
+- P5 demand by period: t1=6, t2=7, t3=11, t4=9, t5=7, t6=10, t7=8, t8=7, t9=12, t10=10, t11=8, t12=9, t13=7, t14=8, t15=12, t16=10, t17=9, t18=12, t19=10, t20=9, t21=13, t22=11, t23=9, t24=10
+- P5 unit production cost by period: t1=3, t2=3, t3=3, t4=3, t5=3, t6=3, t7=4, t8=4, t9=4, t10=4, t11=4, t12=4, t13=5, t14=5, t15=5, t16=5, t17=5, t18=5, t19=3, t20=3, t21=3, t22=3, t23=3, t24=3
+- P5 unit holding cost by period: t1=1, t2=1, t3=1, t4=1, t5=1, t6=1, t7=1, t8=1, t9=1, t10=1, t11=1, t12=1, t13=1, t14=1, t15=1, t16=1, t17=1, t18=1, t19=1, t20=1, t21=1, t22=1, t23=1, t24=0
+- P5 fixed setup cost by period: t1=40, t2=40, t3=40, t4=40, t5=40, t6=40, t7=40, t8=40, t9=40, t10=40, t11=40, t12=40, t13=40, t14=40, t15=40, t16=40, t17=40, t18=40, t19=40, t20=40, t21=40, t22=40, t23=40, t24=40
+- P5 setup-linking constants by period: t1=224, t2=218, t3=211, t4=200, t5=191, t6=184, t7=174, t8=166, t9=159, t10=147, t11=137, t12=129, t13=120, t14=113, t15=105, t16=93, t17=83, t18=74, t19=62, t20=52, t21=43, t22=30, t23=19, t24=10
+
+Shared capacity by period:
+- t1=38, t2=43, t3=63, t4=53, t5=43, t6=58, t7=48, t8=43, t9=68, t10=58, t11=48, t12=53, t13=43, t14=48, t15=68, t16=58, t17=53, t18=68, t19=58, t20=53, t21=73, t22=63, t23=53, t24=58
+
+Decision variables:
+- x[p,t] >= 0: production quantity of product p in period t
+- I[p,t] >= 0: ending inventory of product p after period t
+- y[p,t] in {0,1}: equals 1 if product p is produced in period t
+
+Objective:
+- Minimize total production cost + total inventory holding cost + total fixed setup cost.
+
+Constraints:
+- Inventory balance for every product and period: I[p,t-1] + x[p,t] = d[p,t] + I[p,t], with the given initial inventory at the start of t1.
+- Setup linking for every product and period: x[p,t] <= M[p,t] * y[p,t].
+- Shared capacity for every period: sum_p x[p,t] <= C[t].
+- Nonnegativity of production and inventory, binary setup variables, and no backlogging.
+
+Metadata:
+- number_periods=24
+- number_products=5
+- demand_regime=strong_multi_period_seasonality
+- setup_cost_regime=product_dependent_setup_scales
+- capacity_regime=moderate_capacity_stress
+- seasonality_flag=true
+- inventory_pressure_flag=true
+- symmetry_flag=false
+- multi_product_flag=true
+- visual_type=timeline_demand_grid_dual_visual
+- seed=701
+- formulation_size=624
+
+Visual interpretation:
+- visual_0.png shows one capacity bar per period plus the demand matrix with exact numeric demand values.
+- visual_1.png shows the production-cost, holding-cost, and setup-cost matrices with exact numeric parameter values.
+- The visuals do not reveal the optimal production plan, setup pattern, or objective value.

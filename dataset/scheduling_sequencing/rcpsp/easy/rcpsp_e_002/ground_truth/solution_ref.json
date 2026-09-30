@@ -1,0 +1,117 @@
+{
+  "status": "optimal",
+  "objective": 12,
+  "objective_exact": 12.0,
+  "makespan": 12,
+  "activity_start_times": {
+    "A1": 0,
+    "A2": 0,
+    "A3": 2,
+    "A4": 3,
+    "A5": 5,
+    "A6": 9,
+    "A7": 9,
+    "End": 12,
+    "Start": 0
+  },
+  "activity_finish_times": {
+    "A1": 2,
+    "A2": 3,
+    "A3": 5,
+    "A4": 5,
+    "A5": 9,
+    "A6": 11,
+    "A7": 12,
+    "End": 12,
+    "Start": 0
+  },
+  "schedule": [
+    {
+      "activity": "A1",
+      "start": 0,
+      "finish": 2,
+      "duration": 2
+    },
+    {
+      "activity": "A2",
+      "start": 0,
+      "finish": 3,
+      "duration": 3
+    },
+    {
+      "activity": "A3",
+      "start": 2,
+      "finish": 5,
+      "duration": 3
+    },
+    {
+      "activity": "A4",
+      "start": 3,
+      "finish": 5,
+      "duration": 2
+    },
+    {
+      "activity": "A5",
+      "start": 5,
+      "finish": 9,
+      "duration": 4
+    },
+    {
+      "activity": "A6",
+      "start": 9,
+      "finish": 11,
+      "duration": 2
+    },
+    {
+      "activity": "A7",
+      "start": 9,
+      "finish": 12,
+      "duration": 3
+    }
+  ],
+  "resource_usage_by_time": {
+    "0": {
+      "R1": 4
+    },
+    "1": {
+      "R1": 4
+    },
+    "2": {
+      "R1": 3
+    },
+    "3": {
+      "R1": 3
+    },
+    "4": {
+      "R1": 3
+    },
+    "5": {
+      "R1": 3
+    },
+    "6": {
+      "R1": 3
+    },
+    "7": {
+      "R1": 3
+    },
+    "8": {
+      "R1": 3
+    },
+    "9": {
+      "R1": 4
+    },
+    "10": {
+      "R1": 4
+    },
+    "11": {
+      "R1": 2
+    }
+  },
+  "binding_resources": [
+    "R1"
+  ],
+  "binding_resource_count": 1,
+  "solve_method": "gurobi_time_indexed_rcpsp_easy",
+  "solver": "Gurobi",
+  "runtime_seconds": 0.005273750051856041
+}

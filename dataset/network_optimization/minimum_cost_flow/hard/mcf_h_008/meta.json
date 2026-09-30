@@ -1,0 +1,42 @@
+{
+  "family": "network_optimization",
+  "subtype": "minimum_cost_flow",
+  "variant": "minimum_cost_flow_single",
+  "difficulty": "hard",
+  "graph_type": "coupled_dual_gate_clusters_with_core_scc",
+  "supply_pattern": "6S-5T_skewed",
+  "capacity_regime": "multi_cut_front_mid_and_gate",
+  "cost_regime": "cheap_core_cycle_with_costly_bypasses",
+  "coupling_level": "high",
+  "seed": 11008,
+  "num_layers": 6,
+  "num_cycles": 2,
+  "num_bottlenecks": 13,
+  "num_nodes": 30,
+  "num_arcs": 60,
+  "num_variables": 60,
+  "num_constraints": 30,
+  "formulation_size": 90,
+  "files": {
+    "canonical_specification": "canonical_specification.txt",
+    "task_input": "task_input.txt",
+    "visuals": [
+      "visuals/visual_0.png"
+    ],
+    "ground_truth": {
+      "instance_data": "ground_truth/instance_data.json",
+      "math_model": "ground_truth/math_model.md",
+      "solver_ref": "ground_truth/solver_ref.py",
+      "solution_ref": "ground_truth/solution_ref.json"
+    }
+  },
+  "status": "optimal",
+  "optimal_objective_value": 1918.0,
+  "objective_exact": 1918.0,
+  "runtime_seconds": 0.021432161331176758,
+  "solve_method": "gurobi_lp_mcf",
+  "solver_used": "Gurobi",
+  "solver": "Gurobi",
+  "solver_policy": "gurobi_first_then_exact_scipy_linprog",
+  "visual_0_checksum_md5": "f972de383f5a2dc1278b1b54c32e1a94"
+}

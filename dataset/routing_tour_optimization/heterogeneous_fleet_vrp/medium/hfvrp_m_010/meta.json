@@ -1,0 +1,58 @@
+{
+  "number_customers": 17,
+  "number_vehicle_types": 3,
+  "number_available_vehicles": 5,
+  "total_demand": 36,
+  "aggregate_capacity": 42,
+  "utilization_ratio": 0.8571,
+  "vehicle_type_summary": [
+    {
+      "type_id": "SM",
+      "available_count": 1,
+      "capacity": 6,
+      "fixed_activation_cost": 0.95,
+      "distance_multiplier": 1.21
+    },
+    {
+      "type_id": "MD",
+      "available_count": 3,
+      "capacity": 8,
+      "fixed_activation_cost": 2.65,
+      "distance_multiplier": 1.01
+    },
+    {
+      "type_id": "LG",
+      "available_count": 1,
+      "capacity": 12,
+      "fixed_activation_cost": 6.3,
+      "distance_multiplier": 0.82
+    }
+  ],
+  "layout_type": "depot_offset_asymmetric_layout",
+  "demand_regime": "mildly_heavy_tailed_demands",
+  "fleet_tradeoff_pattern": "large_vehicle_low_variable_cost_but_high_fixed_cost",
+  "heterogeneity_pattern": "large_vehicle_low_variable_cost_but_high_fixed_cost",
+  "scarce_type_flag": true,
+  "fixed_cost_flag": true,
+  "distance_multiplier_flag": true,
+  "capacity_binding_target": true,
+  "capacity_binding_flag": true,
+  "near_optimal_partition_flag": true,
+  "visual_type": "composite_map_embedded_node_annotations_and_fleet_table_visual",
+  "base_distance_type": "rounded_euclidean_2dp",
+  "seed": 4410,
+  "group": "C",
+  "formulation_size": 3284,
+  "instance_id": "hfvrp_m_010",
+  "variant": "heterogeneous_fleet_vrp",
+  "scenario": "heterogeneous_fleet_vrp",
+  "difficulty": "medium",
+  "objective_value": 51.1096,
+  "objective_exact": 51.1096,
+  "status": "optimal",
+  "runtime_seconds": 0.660027457983233,
+  "num_routes_used": 4,
+  "solve_method": "exact_subset_dp_hfvrp",
+  "solver": "Exact subset-DP (custom Python)",
+  "visual_checksum_md5": "673106929ea38528525c71f718c3ab20"
+}

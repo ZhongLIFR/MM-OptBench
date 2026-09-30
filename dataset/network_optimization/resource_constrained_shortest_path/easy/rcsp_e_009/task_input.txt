@@ -1,0 +1,21 @@
+A directed planning network is shown in the figure.
+
+Visual interpretation:
+- Node 1 is the start node.
+- Node 8 is the destination node.
+- Each directed arc is labeled using the exact format [cost, resource].
+- The banner at the top of the figure gives the exact upper bound on total exposure.
+
+Interpretation:
+- Select exactly one directed route from the start node to the destination node.
+- If arc (i,j) is used, its cost contributes to the objective.
+- If arc (i,j) is used, its exposure contributes to the total exposure consumption.
+- The chosen route must respect the displayed exposure limit.
+- There are no capacities, multiple commodities, stochastic effects, penalties, or time-expanded decisions.
+
+Task:
+1) Write a mathematical optimization model for this exact instance.
+2) Provide solver-executable code implementing the model.
+
+Objective:
+Minimize total path cost while respecting the displayed exposure limit.
