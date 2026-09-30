@@ -1,5 +1,3 @@
-# MM-OptBench
-
 <p align="center">
   <img src="assets/logo.png" alt="MM-OptBench" width="220" />
 </p>
