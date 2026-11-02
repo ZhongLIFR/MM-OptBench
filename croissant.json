@@ -1,0 +1,800 @@
+{
+  "@context": {
+    "@language": "en",
+    "@vocab": "https://schema.org/",
+    "arrayShape": "cr:arrayShape",
+    "citeAs": "cr:citeAs",
+    "column": "cr:column",
+    "conformsTo": "dct:conformsTo",
+    "containedIn": "cr:containedIn",
+    "cr": "http://mlcommons.org/croissant/",
+    "rai": "http://mlcommons.org/croissant/RAI/",
+    "data": {
+      "@id": "cr:data",
+      "@type": "@json"
+    },
+    "dataType": {
+      "@id": "cr:dataType",
+      "@type": "@vocab"
+    },
+    "dct": "http://purl.org/dc/terms/",
+    "description": {
+      "@container": "@language"
+    },
+    "equivalentProperty": "cr:equivalentProperty",
+    "examples": {
+      "@id": "cr:examples",
+      "@type": "@json"
+    },
+    "extract": "cr:extract",
+    "field": "cr:field",
+    "fileProperty": "cr:fileProperty",
+    "fileObject": "cr:fileObject",
+    "fileSet": "cr:fileSet",
+    "format": "cr:format",
+    "includes": "cr:includes",
+    "isArray": "cr:isArray",
+    "isLiveDataset": "cr:isLiveDataset",
+    "jsonPath": "cr:jsonPath",
+    "key": "cr:key",
+    "md5": "cr:md5",
+    "name": {
+      "@container": "@language"
+    },
+    "parentField": "cr:parentField",
+    "path": "cr:path",
+    "recordSet": "cr:recordSet",
+    "references": "cr:references",
+    "regex": "cr:regex",
+    "repeated": "cr:repeated",
+    "replace": "cr:replace",
+    "samplingRate": "cr:samplingRate",
+    "sc": "https://schema.org/",
+    "separator": "cr:separator",
+    "source": "cr:source",
+    "subField": "cr:subField",
+    "transform": "cr:transform",
+    "prov": "http://www.w3.org/ns/prov#"
+  },
+  "@type": "sc:Dataset",
+  "@id": "https://github.com/ZhongLIFR/MM-OptBench#dataset",
+  "name": "MM-OptBench",
+  "description": "MM-OptBench is a solver-grounded benchmark for multimodal optimization modeling: 780 English-language test instances spanning six optimization families and 26 problem types. Each instance combines task text with one to four rendered visual inputs, with 939 input images in total. The dataset also supplies complete textual specifications, structured instance data, mathematical formulations, reference solvers, and reference solutions. The release is a fixed test set; it does not define training or validation splits.",
+  "url": "https://github.com/ZhongLIFR/MM-OptBench",
+  "license": "https://creativecommons.org/licenses/by-sa/4.0/",
+  "conformsTo": "http://mlcommons.org/croissant/1.1",
+  "version": "1.0.0",
+  "dateModified": "2026-11-02",
+  "isLiveDataset": false,
+  "inLanguage": "en",
+  "creator": [
+    {
+      "@type": "sc:Person",
+      "name": "Zhong Li",
+      "affiliation": {
+        "@type": "sc:Organization",
+        "name": "Great Bay University"
+      }
+    },
+    {
+      "@type": "sc:Person",
+      "name": "Qi Huang",
+      "affiliation": {
+        "@type": "sc:Organization",
+        "name": "Leiden University"
+      }
+    },
+    {
+      "@type": "sc:Person",
+      "name": "Yuxuan Zhu",
+      "affiliation": {
+        "@type": "sc:Organization",
+        "name": "Rensselaer Polytechnic Institute"
+      }
+    },
+    {
+      "@type": "sc:Person",
+      "name": "Mohammad Mohammadi Amiri",
+      "affiliation": {
+        "@type": "sc:Organization",
+        "name": "Rensselaer Polytechnic Institute"
+      }
+    },
+    {
+      "@type": "sc:Person",
+      "name": "Niki van Stein",
+      "affiliation": {
+        "@type": "sc:Organization",
+        "name": "Leiden University"
+      }
+    },
+    {
+      "@type": "sc:Person",
+      "name": "Thomas Bäck",
+      "affiliation": {
+        "@type": "sc:Organization",
+        "name": "Leiden University"
+      }
+    },
+    {
+      "@type": "sc:Person",
+      "name": "Matthijs van Leeuwen",
+      "affiliation": {
+        "@type": "sc:Organization",
+        "name": "Leiden University"
+      }
+    },
+    {
+      "@type": "sc:Person",
+      "name": "Zaiwen Wen",
+      "affiliation": {
+        "@type": "sc:Organization",
+        "name": "Peking University"
+      }
+    },
+    {
+      "@type": "sc:Person",
+      "name": "Lincen Yang",
+      "affiliation": {
+        "@type": "sc:Organization",
+        "name": "Leiden University"
+      }
+    }
+  ],
+  "publisher": {
+    "@type": "sc:Organization",
+    "name": "MM-OptBench authors",
+    "url": "https://github.com/ZhongLIFR/MM-OptBench"
+  },
+  "maintainer": {
+    "@type": "sc:Person",
+    "name": "Zhong Li",
+    "url": "https://github.com/ZhongLIFR"
+  },
+  "citation": {
+    "@type": "sc:ScholarlyArticle",
+    "name": "MM-OptBench: A Solver-Grounded Benchmark for Multimodal Optimization Modeling",
+    "url": "https://openreview.net/forum?id=A3g2i6LYgQ"
+  },
+  "citeAs": "@inproceedings{li2026mmoptbench,\n  title={{MM-OptBench}: A Solver-Grounded Benchmark for Multimodal Optimization Modeling},\n  author={Li, Zhong and Huang, Qi and Zhu, Yuxuan and Amiri, Mohammad Mohammadi and van Stein, Niki and B{\\\"a}ck, Thomas and van Leeuwen, Matthijs and Wen, Zaiwen and Yang, Lincen},\n  booktitle={NeurIPS 2026 Evaluations and Datasets Track},\n  year={2026}\n}",
+  "keywords": [
+    "multimodal optimization modeling",
+    "optimization",
+    "benchmark",
+    "mathematical modeling",
+    "solver-grounded evaluation"
+  ],
+  "rai:dataLimitations": "The benchmark covers controlled, application-inspired rendered artifacts and small-to-moderate optimization instances. It does not establish generalization to naturally occurring, noisy, interactive, or industrial-scale inputs. Instance-level solution checks do not prove semantic equivalence of every generated formulation. Benchmark scores alone should not be used to approve autonomous decisions in operational or safety-critical settings.",
+  "rai:dataBiases": "Selection reflects the authors' choice of six mathematical families, 26 problem types, English task wording, generator parameters, and visual templates. Balanced difficulty groups are a benchmark design choice rather than estimates of real deployment frequencies. Other languages, artifact styles, and optimization structures may be underrepresented.",
+  "rai:personalSensitiveInformation": "The released instances are synthetic optimization problems, not records collected from people. They are not intended to contain personal or sensitive information about real individuals. Author names and affiliations in this metadata provide attribution.",
+  "rai:dataUseCases": "The intended use is research evaluation of mapping task text and visual artifacts to optimization models, executable solver code, and feasible solutions. Aligned structured inputs and solver references support evaluation on the instantiated tasks and oracle-input comparisons. Construct validity for fairness assessment, demographic evaluation, and industrial deployment has not been established.",
+  "rai:dataSocialImpact": "The benchmark may support more accessible and reliable optimization modeling tools. Misinterpreting benchmark performance as operational reliability could contribute to infeasible, unfair, unsafe, or costly decisions. The documented task scope and explicit feasibility/objective checks support careful interpretation; deployment still requires domain-specific validation and human oversight.",
+  "rai:hasSyntheticData": true,
+  "rai:dataCollection": "Authors and research colleagues with optimization expertise defined problem families, generators, reference solvers, visual templates, and validation rules. Structured instances were generated, solved, rendered, and checked for visual and cross-modal consistency. The released metadata retains generation seeds under seed or random_seed; exact structured inputs are supplied in ground_truth/instance_data.json.",
+  "rai:dataAnnotationProtocol": "Reference mathematical models and solutions are paired with the generated structured instances. Solver checks and expert review cover visual readability, cross-modal consistency, and task constraints. Construction used no paid crowdsourcing.",
+  "rai:dataReleaseMaintenancePlan": "The authors maintain the public GitHub repository. Users can report data or code issues through GitHub Issues. This Croissant file identifies an immutable dataset snapshot; later dataset changes should use a new version and updated metadata.",
+  "prov:wasDerivedFrom": {
+    "@id": "https://github.com/ZhongLIFR/MM-OptBench/tree/72519788b1fc97ff2e256d2e1f69b59e9a480e01/dataset",
+    "@type": "prov:Entity",
+    "name": "Synthetic instance parameters and generation seeds",
+    "description": "Source parameters are preserved in each ground_truth/instance_data.json; generation seeds are recorded under seed or random_seed in the corresponding meta.json. These are synthetic sources, not an external collected dataset."
+  },
+  "prov:wasGeneratedBy": {
+    "@id": "https://github.com/ZhongLIFR/MM-OptBench#dataset-construction",
+    "@type": "prov:Activity",
+    "name": "Solver-grounded multimodal instance construction",
+    "description": "Optimization experts designed a taxonomy and parameterized generators. Candidate structured instances were solved and screened; aligned mathematical models, reference solutions, task text, and static visual artifacts were produced and checked for solver, visual, and cross-modal consistency. The retained release contains 780 test instances. Construction methodology is described in the paper and repository README.",
+    "prov:wasAssociatedWith": {
+      "@id": "https://github.com/ZhongLIFR/MM-OptBench#authors",
+      "@type": "prov:Agent",
+      "name": "MM-OptBench authors and research colleagues with optimization expertise"
+    }
+  },
+  "distribution": [
+    {
+      "@type": "cr:FileObject",
+      "@id": "repository-archive",
+      "name": "MM-OptBench public dataset snapshot",
+      "description": "Public repository archive at commit 72519788b1fc97ff2e256d2e1f69b59e9a480e01. Only dataset/ files are selected by the FileSets below.",
+      "contentUrl": "https://codeload.github.com/ZhongLIFR/MM-OptBench/zip/72519788b1fc97ff2e256d2e1f69b59e9a480e01",
+      "encodingFormat": "application/zip",
+      "contentSize": "181741758 B",
+      "sha256": "5100d38c73deea08a0556825be68c876fcb63cd455034181868a753b0863162d"
+    },
+    {
+      "@type": "cr:FileSet",
+      "@id": "task-files",
+      "name": "task-files",
+      "description": "Task text and instance identifiers. Pair each task with all images sharing its instance_id.",
+      "containedIn": {
+        "@id": "repository-archive"
+      },
+      "encodingFormat": "text/plain",
+      "includes": "MM-OptBench-72519788b1fc97ff2e256d2e1f69b59e9a480e01/dataset/*/*/*/*/task_input.txt"
+    },
+    {
+      "@type": "cr:FileSet",
+      "@id": "image-files",
+      "name": "image-files",
+      "description": "Model-facing visual inputs. Each instance has one to four images.",
+      "containedIn": {
+        "@id": "repository-archive"
+      },
+      "encodingFormat": "image/png",
+      "includes": "MM-OptBench-72519788b1fc97ff2e256d2e1f69b59e9a480e01/dataset/*/*/*/*/visuals/visual_*.png"
+    },
+    {
+      "@type": "cr:FileSet",
+      "@id": "specification-files",
+      "name": "specification-files",
+      "description": "Complete textual specifications; evaluation references, not multimodal model inputs.",
+      "containedIn": {
+        "@id": "repository-archive"
+      },
+      "encodingFormat": "text/plain",
+      "includes": "MM-OptBench-72519788b1fc97ff2e256d2e1f69b59e9a480e01/dataset/*/*/*/*/canonical_specification.txt"
+    },
+    {
+      "@type": "cr:FileSet",
+      "@id": "metadata-files",
+      "name": "metadata-files",
+      "description": "Per-instance metadata, including formulation size and generation details.",
+      "containedIn": {
+        "@id": "repository-archive"
+      },
+      "encodingFormat": "application/json",
+      "includes": "MM-OptBench-72519788b1fc97ff2e256d2e1f69b59e9a480e01/dataset/*/*/*/*/meta.json"
+    },
+    {
+      "@type": "cr:FileSet",
+      "@id": "structured-data-files",
+      "name": "structured-data-files",
+      "description": "Structured optimization inputs for reference evaluation and oracle-input experiments.",
+      "containedIn": {
+        "@id": "repository-archive"
+      },
+      "encodingFormat": "application/json",
+      "includes": "MM-OptBench-72519788b1fc97ff2e256d2e1f69b59e9a480e01/dataset/*/*/*/*/ground_truth/instance_data.json"
+    },
+    {
+      "@type": "cr:FileSet",
+      "@id": "model-files",
+      "name": "model-files",
+      "description": "Reference mathematical formulations in Markdown.",
+      "containedIn": {
+        "@id": "repository-archive"
+      },
+      "encodingFormat": "text/plain",
+      "includes": "MM-OptBench-72519788b1fc97ff2e256d2e1f69b59e9a480e01/dataset/*/*/*/*/ground_truth/math_model.md"
+    },
+    {
+      "@type": "cr:FileSet",
+      "@id": "solver-files",
+      "name": "solver-files",
+      "description": "Reference Python solver programs; reading a record does not execute the code.",
+      "containedIn": {
+        "@id": "repository-archive"
+      },
+      "encodingFormat": "text/plain",
+      "includes": "MM-OptBench-72519788b1fc97ff2e256d2e1f69b59e9a480e01/dataset/*/*/*/*/ground_truth/solver_ref.py"
+    },
+    {
+      "@type": "cr:FileSet",
+      "@id": "solution-files",
+      "name": "solution-files",
+      "description": "Solver-derived reference solutions, not model-generated evaluation outputs.",
+      "containedIn": {
+        "@id": "repository-archive"
+      },
+      "encodingFormat": "application/json",
+      "includes": "MM-OptBench-72519788b1fc97ff2e256d2e1f69b59e9a480e01/dataset/*/*/*/*/ground_truth/solution_ref.json"
+    }
+  ],
+  "recordSet": [
+    {
+      "@type": "cr:RecordSet",
+      "@id": "instances",
+      "name": "instances",
+      "description": "Task text and instance identifiers. Pair each task with all images sharing its instance_id.",
+      "key": {
+        "@id": "instances/instance_id"
+      },
+      "field": [
+        {
+          "@type": "cr:Field",
+          "@id": "instances/instance_id",
+          "name": "instance_id",
+          "description": "Identifier shared by all artifacts for this instance.",
+          "dataType": "sc:Text",
+          "source": {
+            "fileSet": {
+              "@id": "task-files"
+            },
+            "extract": {
+              "fileProperty": "fullpath"
+            },
+            "transform": {
+              "regex": ".*/dataset/[^/]+/[^/]+/[^/]+/([^/]+)/.*"
+            }
+          }
+        },
+        {
+          "@type": "cr:Field",
+          "@id": "instances/path",
+          "name": "path",
+          "description": "File path relative to the repository root.",
+          "dataType": "sc:Text",
+          "source": {
+            "fileSet": {
+              "@id": "task-files"
+            },
+            "extract": {
+              "fileProperty": "fullpath"
+            },
+            "transform": {
+              "regex": ".*/(dataset/.*)"
+            }
+          }
+        },
+        {
+          "@type": "cr:Field",
+          "@id": "instances/family",
+          "name": "family",
+          "description": "Optimization family directory.",
+          "dataType": "sc:Text",
+          "source": {
+            "fileSet": {
+              "@id": "task-files"
+            },
+            "extract": {
+              "fileProperty": "fullpath"
+            },
+            "transform": {
+              "regex": ".*/dataset/([^/]+)/[^/]+/[^/]+/[^/]+/.*"
+            }
+          }
+        },
+        {
+          "@type": "cr:Field",
+          "@id": "instances/problem",
+          "name": "problem",
+          "description": "Problem-type directory.",
+          "dataType": "sc:Text",
+          "source": {
+            "fileSet": {
+              "@id": "task-files"
+            },
+            "extract": {
+              "fileProperty": "fullpath"
+            },
+            "transform": {
+              "regex": ".*/dataset/[^/]+/([^/]+)/[^/]+/[^/]+/.*"
+            }
+          }
+        },
+        {
+          "@type": "cr:Field",
+          "@id": "instances/difficulty",
+          "name": "difficulty",
+          "description": "Difficulty level: easy, medium, or hard.",
+          "dataType": "sc:Text",
+          "source": {
+            "fileSet": {
+              "@id": "task-files"
+            },
+            "extract": {
+              "fileProperty": "fullpath"
+            },
+            "transform": {
+              "regex": ".*/dataset/[^/]+/[^/]+/([^/]+)/[^/]+/.*"
+            }
+          }
+        },
+        {
+          "@type": "cr:Field",
+          "@id": "instances/content",
+          "name": "content",
+          "description": "UTF-8 file content.",
+          "dataType": "sc:Text",
+          "source": {
+            "fileSet": {
+              "@id": "task-files"
+            },
+            "extract": {
+              "fileProperty": "content"
+            }
+          }
+        }
+      ]
+    },
+    {
+      "@type": "cr:RecordSet",
+      "@id": "images",
+      "name": "images",
+      "description": "Model-facing visual inputs. Each instance has one to four images.",
+      "key": {
+        "@id": "images/path"
+      },
+      "field": [
+        {
+          "@type": "cr:Field",
+          "@id": "images/instance_id",
+          "name": "instance_id",
+          "description": "Identifier shared by all artifacts for this instance.",
+          "dataType": "sc:Text",
+          "source": {
+            "fileSet": {
+              "@id": "image-files"
+            },
+            "extract": {
+              "fileProperty": "fullpath"
+            },
+            "transform": {
+              "regex": ".*/dataset/[^/]+/[^/]+/[^/]+/([^/]+)/.*"
+            }
+          }
+        },
+        {
+          "@type": "cr:Field",
+          "@id": "images/path",
+          "name": "path",
+          "description": "File path relative to the repository root.",
+          "dataType": "sc:Text",
+          "source": {
+            "fileSet": {
+              "@id": "image-files"
+            },
+            "extract": {
+              "fileProperty": "fullpath"
+            },
+            "transform": {
+              "regex": ".*/(dataset/.*)"
+            }
+          }
+        },
+        {
+          "@type": "cr:Field",
+          "@id": "images/content",
+          "name": "content",
+          "description": "Image pixels.",
+          "dataType": "sc:ImageObject",
+          "source": {
+            "fileSet": {
+              "@id": "image-files"
+            },
+            "extract": {
+              "fileProperty": "content"
+            }
+          }
+        }
+      ]
+    },
+    {
+      "@type": "cr:RecordSet",
+      "@id": "specifications",
+      "name": "specifications",
+      "description": "Complete textual specifications; evaluation references, not multimodal model inputs.",
+      "key": {
+        "@id": "specifications/instance_id"
+      },
+      "field": [
+        {
+          "@type": "cr:Field",
+          "@id": "specifications/instance_id",
+          "name": "instance_id",
+          "description": "Identifier shared by all artifacts for this instance.",
+          "dataType": "sc:Text",
+          "source": {
+            "fileSet": {
+              "@id": "specification-files"
+            },
+            "extract": {
+              "fileProperty": "fullpath"
+            },
+            "transform": {
+              "regex": ".*/dataset/[^/]+/[^/]+/[^/]+/([^/]+)/.*"
+            }
+          }
+        },
+        {
+          "@type": "cr:Field",
+          "@id": "specifications/path",
+          "name": "path",
+          "description": "File path relative to the repository root.",
+          "dataType": "sc:Text",
+          "source": {
+            "fileSet": {
+              "@id": "specification-files"
+            },
+            "extract": {
+              "fileProperty": "fullpath"
+            },
+            "transform": {
+              "regex": ".*/(dataset/.*)"
+            }
+          }
+        },
+        {
+          "@type": "cr:Field",
+          "@id": "specifications/content",
+          "name": "content",
+          "description": "UTF-8 file content.",
+          "dataType": "sc:Text",
+          "source": {
+            "fileSet": {
+              "@id": "specification-files"
+            },
+            "extract": {
+              "fileProperty": "content"
+            }
+          }
+        }
+      ]
+    },
+    {
+      "@type": "cr:RecordSet",
+      "@id": "metadata",
+      "name": "metadata",
+      "description": "Per-instance metadata, including formulation size and generation details.",
+      "key": {
+        "@id": "metadata/instance_id"
+      },
+      "field": [
+        {
+          "@type": "cr:Field",
+          "@id": "metadata/instance_id",
+          "name": "instance_id",
+          "description": "Identifier shared by all artifacts for this instance.",
+          "dataType": "sc:Text",
+          "source": {
+            "fileSet": {
+              "@id": "metadata-files"
+            },
+            "extract": {
+              "fileProperty": "fullpath"
+            },
+            "transform": {
+              "regex": ".*/dataset/[^/]+/[^/]+/[^/]+/([^/]+)/.*"
+            }
+          }
+        },
+        {
+          "@type": "cr:Field",
+          "@id": "metadata/path",
+          "name": "path",
+          "description": "File path relative to the repository root.",
+          "dataType": "sc:Text",
+          "source": {
+            "fileSet": {
+              "@id": "metadata-files"
+            },
+            "extract": {
+              "fileProperty": "fullpath"
+            },
+            "transform": {
+              "regex": ".*/(dataset/.*)"
+            }
+          }
+        }
+      ]
+    },
+    {
+      "@type": "cr:RecordSet",
+      "@id": "structured_data",
+      "name": "structured_data",
+      "description": "Structured optimization inputs for reference evaluation and oracle-input experiments.",
+      "key": {
+        "@id": "structured_data/instance_id"
+      },
+      "field": [
+        {
+          "@type": "cr:Field",
+          "@id": "structured_data/instance_id",
+          "name": "instance_id",
+          "description": "Identifier shared by all artifacts for this instance.",
+          "dataType": "sc:Text",
+          "source": {
+            "fileSet": {
+              "@id": "structured-data-files"
+            },
+            "extract": {
+              "fileProperty": "fullpath"
+            },
+            "transform": {
+              "regex": ".*/dataset/[^/]+/[^/]+/[^/]+/([^/]+)/.*"
+            }
+          }
+        },
+        {
+          "@type": "cr:Field",
+          "@id": "structured_data/path",
+          "name": "path",
+          "description": "File path relative to the repository root.",
+          "dataType": "sc:Text",
+          "source": {
+            "fileSet": {
+              "@id": "structured-data-files"
+            },
+            "extract": {
+              "fileProperty": "fullpath"
+            },
+            "transform": {
+              "regex": ".*/(dataset/.*)"
+            }
+          }
+        }
+      ]
+    },
+    {
+      "@type": "cr:RecordSet",
+      "@id": "mathematical_models",
+      "name": "mathematical_models",
+      "description": "Reference mathematical formulations in Markdown.",
+      "key": {
+        "@id": "mathematical_models/instance_id"
+      },
+      "field": [
+        {
+          "@type": "cr:Field",
+          "@id": "mathematical_models/instance_id",
+          "name": "instance_id",
+          "description": "Identifier shared by all artifacts for this instance.",
+          "dataType": "sc:Text",
+          "source": {
+            "fileSet": {
+              "@id": "model-files"
+            },
+            "extract": {
+              "fileProperty": "fullpath"
+            },
+            "transform": {
+              "regex": ".*/dataset/[^/]+/[^/]+/[^/]+/([^/]+)/.*"
+            }
+          }
+        },
+        {
+          "@type": "cr:Field",
+          "@id": "mathematical_models/path",
+          "name": "path",
+          "description": "File path relative to the repository root.",
+          "dataType": "sc:Text",
+          "source": {
+            "fileSet": {
+              "@id": "model-files"
+            },
+            "extract": {
+              "fileProperty": "fullpath"
+            },
+            "transform": {
+              "regex": ".*/(dataset/.*)"
+            }
+          }
+        },
+        {
+          "@type": "cr:Field",
+          "@id": "mathematical_models/content",
+          "name": "content",
+          "description": "UTF-8 file content.",
+          "dataType": "sc:Text",
+          "source": {
+            "fileSet": {
+              "@id": "model-files"
+            },
+            "extract": {
+              "fileProperty": "content"
+            }
+          }
+        }
+      ]
+    },
+    {
+      "@type": "cr:RecordSet",
+      "@id": "reference_solvers",
+      "name": "reference_solvers",
+      "description": "Reference Python solver programs; reading a record does not execute the code.",
+      "key": {
+        "@id": "reference_solvers/instance_id"
+      },
+      "field": [
+        {
+          "@type": "cr:Field",
+          "@id": "reference_solvers/instance_id",
+          "name": "instance_id",
+          "description": "Identifier shared by all artifacts for this instance.",
+          "dataType": "sc:Text",
+          "source": {
+            "fileSet": {
+              "@id": "solver-files"
+            },
+            "extract": {
+              "fileProperty": "fullpath"
+            },
+            "transform": {
+              "regex": ".*/dataset/[^/]+/[^/]+/[^/]+/([^/]+)/.*"
+            }
+          }
+        },
+        {
+          "@type": "cr:Field",
+          "@id": "reference_solvers/path",
+          "name": "path",
+          "description": "File path relative to the repository root.",
+          "dataType": "sc:Text",
+          "source": {
+            "fileSet": {
+              "@id": "solver-files"
+            },
+            "extract": {
+              "fileProperty": "fullpath"
+            },
+            "transform": {
+              "regex": ".*/(dataset/.*)"
+            }
+          }
+        },
+        {
+          "@type": "cr:Field",
+          "@id": "reference_solvers/content",
+          "name": "content",
+          "description": "UTF-8 file content.",
+          "dataType": "sc:Text",
+          "source": {
+            "fileSet": {
+              "@id": "solver-files"
+            },
+            "extract": {
+              "fileProperty": "content"
+            }
+          }
+        }
+      ]
+    },
+    {
+      "@type": "cr:RecordSet",
+      "@id": "reference_solutions",
+      "name": "reference_solutions",
+      "description": "Solver-derived reference solutions, not model-generated evaluation outputs.",
+      "key": {
+        "@id": "reference_solutions/instance_id"
+      },
+      "field": [
+        {
+          "@type": "cr:Field",
+          "@id": "reference_solutions/instance_id",
+          "name": "instance_id",
+          "description": "Identifier shared by all artifacts for this instance.",
+          "dataType": "sc:Text",
+          "source": {
+            "fileSet": {
+              "@id": "solution-files"
+            },
+            "extract": {
+              "fileProperty": "fullpath"
+            },
+            "transform": {
+              "regex": ".*/dataset/[^/]+/[^/]+/[^/]+/([^/]+)/.*"
+            }
+          }
+        },
+        {
+          "@type": "cr:Field",
+          "@id": "reference_solutions/path",
+          "name": "path",
+          "description": "File path relative to the repository root.",
+          "dataType": "sc:Text",
+          "source": {
+            "fileSet": {
+              "@id": "solution-files"
+            },
+            "extract": {
+              "fileProperty": "fullpath"
+            },
+            "transform": {
+              "regex": ".*/(dataset/.*)"
+            }
+          }
+        }
+      ]
+    }
+  ]
+}

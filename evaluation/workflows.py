@@ -30,6 +30,7 @@ from .runner import (
     sanitize_name,
     save_json,
     summarize_records,
+    validate_request_options,
 )
 
 EVAL_MODE_MULTIMODAL = "multimodal"
@@ -50,10 +51,11 @@ def run_experiment(
     response_contract: str = RESPONSE_CONTRACT_MINIMAL_SECTIONS,
     temperature: float = 0.0,
     max_tokens: int = MAX_API_COMPLETION_TOKENS,
-    stage1_max_tokens: int = MAX_API_COMPLETION_TOKENS,
-    stage2_max_tokens: int = MAX_API_COMPLETION_TOKENS,
-    extraction_max_tokens: int = MAX_API_COMPLETION_TOKENS,
-    downstream_max_tokens: int = MAX_API_COMPLETION_TOKENS,
+    request_options: dict[str, Any] | None = None,
+    stage1_max_tokens: int | None = None,
+    stage2_max_tokens: int | None = None,
+    extraction_max_tokens: int | None = None,
+    downstream_max_tokens: int | None = None,
     verify_ssl: bool = True,
     output_dir: str | Path = "output/mmopt_eval",
     run_output_dir: str | Path = "output/mmopt_runs",
@@ -63,6 +65,11 @@ def run_experiment(
     tolerance: float = 1e-6,
     resume_eval_dir: str | Path | None = None,
 ) -> Path:
+    request_options = validate_request_options(request_options)
+    stage1_max_tokens = max_tokens if stage1_max_tokens is None else stage1_max_tokens
+    stage2_max_tokens = max_tokens if stage2_max_tokens is None else stage2_max_tokens
+    extraction_max_tokens = max_tokens if extraction_max_tokens is None else extraction_max_tokens
+    downstream_max_tokens = max_tokens if downstream_max_tokens is None else downstream_max_tokens
     eval_mode = mode
     instance_tuple = tuple(instances)
     if not instance_tuple:
@@ -82,6 +89,7 @@ def run_experiment(
         api_key_env=api_key_env,
         temperature=temperature,
         max_tokens=max_tokens,
+        request_options=request_options,
         stage1_max_tokens=stage1_max_tokens,
         stage2_max_tokens=stage2_max_tokens,
         extraction_max_tokens=extraction_max_tokens,
@@ -112,6 +120,7 @@ def run_experiment(
                     input_mode=INPUT_MODE_MULTIMODAL,
                     temperature=temperature,
                     max_tokens=max_tokens,
+                    request_options=request_options,
                     verify_ssl=verify_ssl,
                     output_root=run_output_dir,
                     dry_run=dry_run,
@@ -136,6 +145,7 @@ def run_experiment(
                     input_mode=INPUT_MODE_ORACLE_READING,
                     temperature=temperature,
                     max_tokens=max_tokens,
+                    request_options=request_options,
                     verify_ssl=verify_ssl,
                     output_root=run_output_dir,
                     dry_run=dry_run,
@@ -156,6 +166,7 @@ def run_experiment(
                     temperature=temperature,
                     extraction_max_tokens=extraction_max_tokens,
                     downstream_max_tokens=downstream_max_tokens,
+                    request_options=request_options,
                     verify_ssl=verify_ssl,
                     run_output_dir=run_output_dir,
                     dry_run=dry_run,
@@ -178,6 +189,7 @@ def run_experiment(
                     temperature=temperature,
                     stage1_max_tokens=stage1_max_tokens,
                     stage2_max_tokens=stage2_max_tokens,
+                    request_options=request_options,
                     verify_ssl=verify_ssl,
                     run_output_dir=run_output_dir,
                     dry_run=dry_run,
@@ -211,6 +223,7 @@ def resume_eval_dir(
     path = Path(eval_dir).expanduser().resolve()
     config = _read_json(path / "config.json")
     instances = _instances_from_config(config)
+    max_tokens = int(config.get("max_tokens", MAX_API_COMPLETION_TOKENS))
     return run_experiment(
         instances,
         models=[str(model) for model in config["models"]],
@@ -221,11 +234,12 @@ def resume_eval_dir(
         include_canonical=bool(config.get("include_canonical", False)),
         response_contract=str(config.get("response_contract", RESPONSE_CONTRACT_MINIMAL_SECTIONS)),
         temperature=float(config.get("temperature", 0.0)),
-        max_tokens=int(config.get("max_tokens", MAX_API_COMPLETION_TOKENS)),
-        stage1_max_tokens=int(config.get("stage1_max_tokens", MAX_API_COMPLETION_TOKENS)),
-        stage2_max_tokens=int(config.get("stage2_max_tokens", MAX_API_COMPLETION_TOKENS)),
-        extraction_max_tokens=int(config.get("extraction_max_tokens", MAX_API_COMPLETION_TOKENS)),
-        downstream_max_tokens=int(config.get("downstream_max_tokens", MAX_API_COMPLETION_TOKENS)),
+        max_tokens=max_tokens,
+        request_options=config.get("request_options", {}),
+        stage1_max_tokens=int(config.get("stage1_max_tokens", max_tokens)),
+        stage2_max_tokens=int(config.get("stage2_max_tokens", max_tokens)),
+        extraction_max_tokens=int(config.get("extraction_max_tokens", max_tokens)),
+        downstream_max_tokens=int(config.get("downstream_max_tokens", max_tokens)),
         verify_ssl=verify_ssl if verify_ssl is not None else bool(config.get("verify_ssl", True)),
         output_dir=path.parent,
         run_output_dir=run_output_dir if run_output_dir is not None else config.get("run_output_dir", "output/mmopt_runs"),
@@ -295,6 +309,7 @@ def _run_verified_extraction(
     temperature: float,
     extraction_max_tokens: int,
     downstream_max_tokens: int,
+    request_options: dict[str, Any],
     verify_ssl: bool,
     run_output_dir: str | Path,
     dry_run: bool,
@@ -318,6 +333,7 @@ def _run_verified_extraction(
             input_mode=INPUT_MODE_MULTIMODAL,
             temperature=temperature,
             max_tokens=extraction_max_tokens,
+            request_options=request_options,
             verify_ssl=verify_ssl,
             output_root=run_output_dir,
             dry_run=dry_run,
@@ -361,6 +377,7 @@ def _run_verified_extraction(
                     conditioning_payload=conditioning_payload,
                     temperature=temperature,
                     max_tokens=downstream_max_tokens,
+                    request_options=request_options,
                     verify_ssl=verify_ssl,
                     output_root=run_output_dir,
                     dry_run=False,
@@ -398,6 +415,7 @@ def _run_two_stage(
     temperature: float,
     stage1_max_tokens: int,
     stage2_max_tokens: int,
+    request_options: dict[str, Any],
     verify_ssl: bool,
     run_output_dir: str | Path,
     dry_run: bool,
@@ -421,6 +439,7 @@ def _run_two_stage(
             input_mode=INPUT_MODE_MULTIMODAL,
             temperature=temperature,
             max_tokens=stage1_max_tokens,
+            request_options=request_options,
             verify_ssl=verify_ssl,
             output_root=run_output_dir,
             dry_run=dry_run,
@@ -445,6 +464,7 @@ def _run_two_stage(
                 input_mode=INPUT_MODE_MULTIMODAL,
                 temperature=temperature,
                 max_tokens=stage2_max_tokens,
+                request_options=request_options,
                 verify_ssl=verify_ssl,
                 output_root=run_output_dir,
                 dry_run=dry_run,
@@ -511,6 +531,7 @@ def _build_config(
     api_key_env: str,
     temperature: float,
     max_tokens: int,
+    request_options: dict[str, Any],
     stage1_max_tokens: int,
     stage2_max_tokens: int,
     extraction_max_tokens: int,
@@ -534,6 +555,7 @@ def _build_config(
         "api_key_env": api_key_env,
         "temperature": temperature,
         "max_tokens": max_tokens,
+        "request_options": request_options,
         "stage1_max_tokens": stage1_max_tokens,
         "stage2_max_tokens": stage2_max_tokens,
         "extraction_max_tokens": extraction_max_tokens,

@@ -1,5 +1,3 @@
-# MM-OptBench
-
 <p align="center">
   <img src="assets/logo.png" alt="MM-OptBench" width="220" />
 </p>
@@ -21,7 +19,7 @@ Thomas Bäck, Matthijs van Leeuwen, Zaiwen Wen, and Lincen Yang.
 [Citation](#citation) · [Overview](#overview) · [Benchmark](#benchmark) · [Results](#results) ·
 [Dataset](#dataset) · [Quick Start](#quick-start) ·
 [Test Prompts](#test-prompts) · [Model Evaluation](#model-evaluation) ·
-[Local Evaluation](#local-evaluation) · [License](#license)
+[Local Evaluation](#local-evaluation) · [Data Access and Metadata](#data-access-and-metadata) · [License](#license)
 
 ## Citation
 
@@ -47,6 +45,12 @@ maps, schedules, and planning dashboards.
 **Task:** text + visual inputs → mathematical formulation + executable solver
 code → solution checking against solver-grounded references.
 
+Correctness is task-specific: 750 instances use solver-verified scalar objectives,
+while 30 logical constraint satisfaction instances require complete Boolean
+assignments satisfying the specified constraints. Feasible alternative optima
+are accepted; instance-level agreement does not establish full formulation
+equivalence.
+
 - **Multimodal inputs:** the text states the task and modeling rules, while the
   accompanying images carry instance-specific information.
 - **Diverse optimization structures:** 780 instances span 26 problem types,
@@ -61,7 +65,8 @@ coverage, operation precedence, and generator economics and demand.*
 
 This repository provides the complete test dataset, reference solvers, test
 prompts, model-evaluation framework, and a local solution evaluator. All instance
-files are included in [dataset/](dataset/).
+files are included in [dataset/](dataset/). Machine-readable dataset metadata
+is available in [croissant.json](croissant.json).
 
 ## Benchmark
 
@@ -211,6 +216,71 @@ references, outside the model input.
 | Job-shop scheduling | [jss_e_001](dataset/scheduling_sequencing/job_shop_scheduling/easy/jss_e_001/task_input.txt) | [Schedule](dataset/scheduling_sequencing/job_shop_scheduling/easy/jss_e_001/visuals/visual_0.png) | [Formulation](dataset/scheduling_sequencing/job_shop_scheduling/easy/jss_e_001/ground_truth/math_model.md) |
 | Energy dispatch and unit commitment | [educ_e_001](dataset/multi_period_system_planning/energy_dispatch_unit_commitment/easy/educ_e_001/task_input.txt) | [Dashboard](dataset/multi_period_system_planning/energy_dispatch_unit_commitment/easy/educ_e_001/visuals/visual_0.png) | [Formulation](dataset/multi_period_system_planning/energy_dispatch_unit_commitment/easy/educ_e_001/ground_truth/math_model.md) |
 
+## Data Access and Metadata
+
+The dataset and code are publicly available in this repository without an access
+request. [croissant.json](croissant.json) describes the dataset using Croissant
+1.1, including authorship, CC BY-SA 4.0 licensing, provenance, intended uses,
+and the Responsible AI fields required by the track.
+
+The metadata points to a [fixed dataset snapshot](https://github.com/ZhongLIFR/MM-OptBench/tree/72519788b1fc97ff2e256d2e1f69b59e9a480e01/dataset)
+and its [download archive](https://codeload.github.com/ZhongLIFR/MM-OptBench/zip/72519788b1fc97ff2e256d2e1f69b59e9a480e01),
+with a SHA-256 checksum. Its file selections include only the dataset artifacts.
+
+The Croissant record sets are:
+
+| Record set | Records | Content |
+| --- | ---: | --- |
+| `instances` | 780 | Task text, instance ID, family, problem type, difficulty, and path |
+| `images` | 939 | Image content, path, and associated instance ID |
+| `specifications` | 780 | Complete textual reference specifications |
+| `metadata` | 780 | Paths to per-instance metadata JSON files |
+| `structured_data` | 780 | Paths to structured instance JSON files |
+| `mathematical_models` | 780 | Reference formulations |
+| `reference_solvers` | 780 | Reference Python solver source |
+| `reference_solutions` | 780 | Paths to solver-generated reference solution JSON files |
+
+Join artifacts using `instance_id`; each task uses **all** its associated images.
+Paths are relative to the repository root. The complete set of 780 instances is
+the test set; there are no designated training or validation splits.
+
+Optional loading through the MLCommons library:
+
+```bash
+python -m pip install mlcroissant pillow
+```
+
+```python
+import mlcroissant as mlc
+
+dataset = mlc.Dataset(jsonld="croissant.json")
+example = next(iter(dataset.records("instances")))
+print(example["instances/instance_id"])
+print(example["instances/content"])
+```
+
+The first load downloads the public snapshot. Reference solvers are read as source
+text by this loader; they are not executed.
+
+### Provenance and Maintenance
+
+MM-OptBench contains synthetic, application-inspired optimization instances and
+rendered visual artifacts. Authors and research colleagues with optimization
+expertise designed the problem taxonomy, generators, solvers, visual templates,
+and validation rules. Generation seeds are retained under `seed` or `random_seed`
+in each `meta.json`, together with the exact structured inputs in
+`ground_truth/instance_data.json`.
+
+The test set supports controlled evaluation of multimodal optimization modeling.
+Its selected problem families, English task wording, and visual templates do not
+represent every deployment setting. The dataset's scope and intended use are
+specified in the paper and Croissant metadata.
+
+The authors maintain this repository. Please report data or code issues through
+[GitHub Issues](https://github.com/ZhongLIFR/MM-OptBench/issues), identifying the
+instance ID and file where applicable. Use the fixed snapshot above when an
+unchanging dataset version is needed.
+
 ## Quick Start
 
 Read an instance directly with Python, without installing a dataset package:
@@ -323,12 +393,59 @@ instances. `--models` accepts multiple model IDs on the same endpoint. Each
 invocation runs one attempt per selected instance and model. To follow the paper's
 five-run setting, run once at temperature 0.0 and four times at 0.4.
 
+<details>
+<summary><strong>Model versions and inference settings used in the paper</strong></summary>
+
+| Model/version | Reasoning mode | Effort or thinking budget | Token cap |
+| --- | --- | --- | ---: |
+| `gpt-5.4-2026-03-05` | Reasoning enabled | High; no numerical reasoning-token budget exposed | 32,768 |
+| `gemini-3.1-pro-preview` | Dynamic thinking enabled | High; provider-managed dynamic budget | 32,768 |
+| `claude-sonnet-4-6` | Adaptive thinking enabled | High; no manual `budget_tokens` setting | 32,768 |
+| `qwen3-vl-plus-2025-12-19` | Thinking enabled | No separate numerical thinking cap; reasoning usage recorded | 32,768 |
+| `qwen-vl-max-2025-08-13` | Non-thinking | Not applicable | 8,192 |
+| `glm-4.5v` | Thinking enabled | Forced thinking; no numerical budget exposed | 32,768 |
+
+Generated code has a 1,800-second execution limit for all models. Use
+`--max-tokens` for the generation cap and `--timeout-seconds 1800` for code
+execution. Run models with different token caps separately. Unless explicitly
+overridden by a stage-specific token limit, each stage inherits `--max-tokens`.
+
+Provider-specific reasoning/thinking options can be passed in a JSON object with
+`--request-options /path/to/provider-options.json`. Use the fields accepted by
+your selected chat-completions endpoint to express the settings above; field
+names and supported model versions depend on the provider. The runner adds these
+fields to each request and saves them in the experiment configuration for resume.
+The options file cannot override model, messages, temperature, token caps, or
+other fields controlled by the runner. Keep API credentials in environment
+variables, not in this options file.
+
+Inspect the assembled request before starting an experiment:
+
+```bash
+python run_models.py run-instance \
+  --instance network_optimization/maximum_flow/easy/mf_e_001 \
+  --model MODEL_ID \
+  --request-options /path/to/provider-options.json \
+  --max-tokens 32768 \
+  --dry-run \
+  --output-dir output/prompt-preview
+```
+
+For Qwen-VL-Max use `--max-tokens 8192`.
+
+</details>
+
 | Mode | Input and workflow |
 | --- | --- |
 | `multimodal` | Task text and images, followed by solver execution and scoring |
 | `oracle_reading` | Task wording and structured instance data |
 | `verified_extraction` | Extract data from the multimodal input, validate it, then solve from the extracted data |
-| `two_stage` | Run the multimodal task, then perform extraction-based diagnosis on failures |
+| `two_stage` | Run the multimodal task, then perform post-hoc extraction diagnosis on failures |
+
+Stage 2 is a separate extraction follow-up on failed Stage-1 outputs. It supplies
+post-hoc diagnostic evidence and does not change the Stage-1 score. The oracle
+setting evaluates downstream modeling with structured inputs; these comparisons
+do not constitute a causal decomposition of individual multimodal failures.
 
 Generated requests, responses, and summaries are written under `output/`, which
 is ignored by Git. An interrupted batch can be resumed using the experiment

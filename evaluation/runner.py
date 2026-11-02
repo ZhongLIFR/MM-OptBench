@@ -27,6 +27,24 @@ from .scoring import make_json_safe, strip_response_wrappers
 DEFAULT_BASE_URL = "https://api.openai.com/v1"
 DEFAULT_API_KEY_ENV = "OPENAI_API_KEY"
 MAX_API_COMPLETION_TOKENS = 32768
+RESERVED_REQUEST_FIELDS = frozenset({
+    "model", "messages", "temperature", "max_tokens", "max_completion_tokens",
+    "max_output_tokens", "stream", "stream_options", "n",
+})
+
+
+def validate_request_options(options: Any) -> dict[str, Any]:
+    if options is None:
+        return {}
+    if not isinstance(options, dict) or any(not isinstance(key, str) for key in options):
+        raise ValueError("Request options must be a JSON object with string keys.")
+    reserved = RESERVED_REQUEST_FIELDS.intersection(options)
+    if reserved:
+        raise ValueError("Request options cannot override framework fields: " + ", ".join(sorted(reserved)))
+    try:
+        return json.loads(json.dumps(options, allow_nan=False))
+    except (TypeError, ValueError) as exc:
+        raise ValueError("Request options must contain valid JSON values.") from exc
 
 
 def run_instance(
@@ -42,6 +60,7 @@ def run_instance(
     conditioning_payload: dict[str, Any] | None = None,
     temperature: float = 0.0,
     max_tokens: int = MAX_API_COMPLETION_TOKENS,
+    request_options: dict[str, Any] | None = None,
     verify_ssl: bool = True,
     output_root: str | Path = "output/mmopt_runs",
     dry_run: bool = False,
@@ -49,6 +68,7 @@ def run_instance(
     timeout_seconds: int = 1800,
     tolerance: float = 1e-6,
 ) -> tuple[Path, dict[str, Any]]:
+    request_options = validate_request_options(request_options)
     timestamp = dt.datetime.now().strftime("%Y%m%d_%H%M%S")
     output_dir = create_output_dir(
         output_root,
@@ -62,6 +82,7 @@ def run_instance(
         conditioning_payload=conditioning_payload,
     )
     request_payload = {
+        **request_options,
         "model": model,
         "messages": messages,
         "temperature": temperature,
@@ -138,6 +159,7 @@ def evaluate(
     input_mode: str = INPUT_MODE_MULTIMODAL,
     temperature: float = 0.0,
     max_tokens: int = MAX_API_COMPLETION_TOKENS,
+    request_options: dict[str, Any] | None = None,
     verify_ssl: bool = True,
     output_dir: str | Path = "output/mmopt_eval",
     run_output_dir: str | Path = "output/mmopt_runs",
@@ -146,6 +168,7 @@ def evaluate(
     timeout_seconds: int = 1800,
     tolerance: float = 1e-6,
 ) -> Path:
+    request_options = validate_request_options(request_options)
     instance_tuple = tuple(instances)
     if not instance_tuple:
         raise ValueError("No instances selected for evaluation.")
@@ -164,6 +187,7 @@ def evaluate(
         "input_mode": input_mode,
         "include_canonical": include_canonical,
         "dry_run": dry_run,
+        "request_options": request_options,
         "instance_origin_counts": _origin_counts(instance_tuple),
     }
     save_json(eval_dir / "config.json", config)
@@ -181,6 +205,7 @@ def evaluate(
                 input_mode=input_mode,
                 temperature=temperature,
                 max_tokens=max_tokens,
+                request_options=request_options,
                 verify_ssl=verify_ssl,
                 output_root=run_output_dir,
                 dry_run=dry_run,

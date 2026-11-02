@@ -3,9 +3,10 @@ from __future__ import annotations
 import argparse
 import json
 import sys
+from pathlib import Path
 from typing import Any
 
-from .runner import DEFAULT_BASE_URL, DEFAULT_API_KEY_ENV, run_instance
+from .runner import DEFAULT_BASE_URL, DEFAULT_API_KEY_ENV, run_instance, validate_request_options
 from .benchmarks import ArtifactBenchmark, Benchmark
 from .workflows import (
     EVAL_MODE_MULTIMODAL,
@@ -52,6 +53,7 @@ def main(argv: list[str] | None = None, *, prog: str = "mmopt-eval") -> None:
             response_contract=args.response_contract,
             temperature=args.temperature,
             max_tokens=args.max_tokens,
+            request_options=args.request_options,
             verify_ssl=not args.insecure,
             output_root=args.output_dir,
             dry_run=args.dry_run,
@@ -73,10 +75,11 @@ def main(argv: list[str] | None = None, *, prog: str = "mmopt-eval") -> None:
             response_contract=args.response_contract,
             temperature=args.temperature,
             max_tokens=args.max_tokens,
-            stage1_max_tokens=getattr(args, "stage1_max_tokens", args.max_tokens),
-            stage2_max_tokens=getattr(args, "stage2_max_tokens", args.max_tokens),
-            extraction_max_tokens=getattr(args, "extraction_max_tokens", args.max_tokens),
-            downstream_max_tokens=getattr(args, "downstream_max_tokens", args.max_tokens),
+            request_options=args.request_options,
+            stage1_max_tokens=args.stage1_max_tokens,
+            stage2_max_tokens=args.stage2_max_tokens,
+            extraction_max_tokens=args.extraction_max_tokens,
+            downstream_max_tokens=args.downstream_max_tokens,
             verify_ssl=not args.insecure,
             output_dir=args.eval_output_dir,
             run_output_dir=args.run_output_dir,
@@ -150,10 +153,10 @@ def _parser(*, prog: str = "mmopt-eval") -> argparse.ArgumentParser:
         ],
         default=EVAL_MODE_MULTIMODAL,
     )
-    experiment.add_argument("--stage1-max-tokens", type=int, default=32768)
-    experiment.add_argument("--stage2-max-tokens", type=int, default=32768)
-    experiment.add_argument("--extraction-max-tokens", type=int, default=32768)
-    experiment.add_argument("--downstream-max-tokens", type=int, default=32768)
+    experiment.add_argument("--stage1-max-tokens", type=int, help="Defaults to --max-tokens.")
+    experiment.add_argument("--stage2-max-tokens", type=int, help="Defaults to --max-tokens.")
+    experiment.add_argument("--extraction-max-tokens", type=int, help="Defaults to --max-tokens.")
+    experiment.add_argument("--downstream-max-tokens", type=int, help="Defaults to --max-tokens.")
 
     resume = sub.add_parser("resume-experiment", help="Resume an interrupted experiment directory.")
     _add_resume_args(resume)
@@ -201,6 +204,10 @@ def _add_eval_options(parser: argparse.ArgumentParser, *, default_response_contr
     )
     parser.add_argument("--temperature", type=float, default=0.0)
     parser.add_argument("--max-tokens", type=int, default=32768)
+    parser.add_argument(
+        "--request-options", type=_load_request_options, metavar="JSON_FILE",
+        help="JSON object of extra provider request fields; framework fields cannot be overridden.",
+    )
     parser.add_argument("--insecure", action="store_true")
     parser.add_argument("--dry-run", action="store_true")
     parser.add_argument("--python-cmd", default=sys.executable)
@@ -260,6 +267,16 @@ def _split_paths(raw: str | None) -> list[str] | None:
     if raw is None:
         return None
     return [item.strip() for item in raw.split(",") if item.strip()]
+
+
+def _load_request_options(path: str) -> dict[str, Any]:
+    try:
+        options = json.loads(Path(path).expanduser().read_text(encoding="utf-8"))
+        if not isinstance(options, dict):
+            raise ValueError("Request options must be a JSON object.")
+        return validate_request_options(options)
+    except (OSError, UnicodeError, ValueError) as exc:
+        raise argparse.ArgumentTypeError(f"Invalid request-options file {path}: {exc}") from exc
 
 
 def _print_json(value: Any) -> None:
